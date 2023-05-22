@@ -1,7 +1,5 @@
 # PMWG minutes?
 
-[TOC]
-
 A pad for the W3C Publishing Maintenance Working Group Minutes (if it works?)
 
 Just testing whether this could be used to take minutes, and use that in place of the IRC based mechanism. The idea is that the minute taker would take the minutes here, using more or less the same style as before, i.e,
