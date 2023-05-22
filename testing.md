@@ -1,6 +1,7 @@
 # PMWG minutes?
 
-[TOC]
+* TOC
+{:toc}
 
 A pad for the W3C Publishing Maintenance Working Group Minutes (if it works?)
 
