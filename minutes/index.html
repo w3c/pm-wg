@@ -22,7 +22,11 @@
                 let htmlString = '<ul>';
 
                 for (let file of sorted_data) {
-                    htmlString += `<li><a href="./${file.name}">${file.name.replace(/.html$/,'')}</a></li>`;
+                    if (file.name === "index.html") {
+                        continue;
+                    } else {
+                        htmlString += `<li><a href="./${file.name}">${file.name.replace(/.html$/,'')}</a></li>`;
+                    }
                 }
 
                 htmlString += '</ul>';
