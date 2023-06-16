@@ -40,7 +40,7 @@ async function getTOC(fname: string, url: string): Promise<string> {
     const cleanup_toc = (nav: string): string => {
         return nav
             // The TOC title should not be a h2
-            .replace("<h2>Contents</h2>", "<h4>Agenda</h4>")
+            .replace("<h2>Contents</h2>", "")
             // ??? wbr
             // References should not be relative
             .replace(/href="#/g,`href="./${fname}#`)
@@ -65,7 +65,7 @@ async function getTOC(fname: string, url: string): Promise<string> {
         } else {
             const nav = nav_begin.slice(0,nav_end_i + 1);
             // console.log(nav);
-            return cleanup_toc(nav.join("\n"));
+            return `${cleanup_toc(nav.join("\n"))}`;
         }
 
     }
@@ -76,7 +76,9 @@ async function getOneMinute(file: any): Promise<string> {
     let retval = "";
     const humanDate = (new Date(file.name.replace(/.html$/,''))).toDateString();
     retval += `<li><h3><a href="./${file.name}">${humanDate}</a></h3>\n`;
+    retval += "<details><summary>Agenda</summary>"
     retval += (await getTOC(file.name, file.download_url));
+    retval += "</details>";
     return retval;
 }
 

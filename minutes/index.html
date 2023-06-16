@@ -14,13 +14,12 @@
     </head>
     <body>
         <script>
-
             async function getTOC(fname, url) {
                 const empty = "<h4>(No agenda)</h4>"
                 const cleanup_toc = (nav) => {
                     return nav
                         // The TOC title should not be a h2
-                        .replace("<h2>Contents</h2>", "<h4>Agenda</h4>")
+                        .replace("<h2>Contents</h2>", "")
                         // ??? wbr
                         // References should not be relative
                         .replace(/href="#/g,`href="./${fname}#`)
@@ -45,7 +44,7 @@
                     } else {
                         const nav = nav_begin.slice(0,nav_end_i + 1);
                         // console.log(nav);
-                        return cleanup_toc(nav.join("\n"));
+                        return `${cleanup_toc(nav.join("\n"))}`;
                     }
                 }
             }
@@ -54,7 +53,9 @@
                 let retval = "";
                 const humanDate = (new Date(file.name.replace(/.html$/,''))).toDateString();
                 retval += `<li><h3><a href="./${file.name}">${humanDate}</a></h3>\n`;
+                retval += "<details><summary>Agenda</summary>"
                 retval += (await getTOC(file.name, file.download_url));
+                retval += "</details>";
                 return retval;
             }
 
@@ -107,6 +108,9 @@
                 htmlString += '</ul>';
                 document.getElementById('list-of-calls').innerHTML = htmlString;
 
+                // Separate step: update the copyright date
+                document.getElementById('year').innerHTML = (new Date()).toISOString().split('-')[0];
+
             })()
         </script>
         <header>
@@ -124,7 +128,7 @@
         </div>
 
         <footer>
-            <p class="copyright">Copyright © 2023 W3C <sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/2002/ipr-notice-20021231">Usage policies apply</a>.</p>
+            <p class="copyright">Copyright © <span id="year"></span> W3C <sup>®</sup> <a href="https://www.w3.org/Consortium/Legal/2002/ipr-notice-20021231">Usage policies apply</a>.</p>
         </footer>
     <body>
 </html>
