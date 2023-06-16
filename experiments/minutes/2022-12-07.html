@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Verifiable Credentials Working Group Telco &ndash; 07 December 2022</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+Verifiable Credentials Working Group Telco</h1>
+<h2>07 December 2022</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2022/12/07-vcwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Brian, DavidC, decentralgabe, dlehn, dmitriz, dwaite, jeremie, JoeAndrieu, markus_sabadello, mkhraisha, mprorock, Orie, Phil, przemek, selfissued, TallTed</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Brent Zundel</dd>
+<dt>Scribe</dt><dd>decentralgabe, manu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t01">Work Item status updates/PRs</a>
+<ol>
+<li><a href="#t02">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>pull/<wbr>969</a></li>
+<li><a href="#t03">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>pull/<wbr>987</a></li>
+</ol>
+</li>
+<li><a href="#t04">Status List 2020</a>
+<ol>
+<li><a href="#t05">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>issues/<wbr>974</a></li>
+</ol>
+</li>
+<li><a href="#t06">Issue Discussion</a>
+<ol>
+<li><a href="#t07">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>issues/<wbr>931</a></li>
+<li><a href="#t08">discussion</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=x020 class="phone s01"><cite>brent:</cite> starting with an agenda review...announcing the next F2F meeting. asking for status updates for work items. review PRs. bulk of the meeting: StatusList2020 as a possible work item for the group. if time..issue discussion</p>
+<p id=x021 class="phone s01"><cite>brent:</cite> any additions or changes from the group?</p>
+<p id=x025 class="phone s02"><cite>manu:</cite> don't know how to say this...we'll get to it with pull requests. related to the @context discussion. as an editor, difficult to have PRs with this out there. have a suggestion for the editors to 'get unstuck'... can talk to when we get to PRs. &quot;how do we get to progress in the face of a big unknown hanging over the group?</p>
+<p id=x026 class="phone s01"><cite>brent:</cite> any first timers, introductions or reintroductions?</p>
+<p id=x027 class="phone s03"><cite>Brian:</cite> Brian Richter. have a company Aviary Tech. in the CCG + DIF. first time here as an Invited Expert.</p>
+<p id=x028 class="phone s01"><cite>brent:</cite> f2f meeting for the VCWG. in Feb, 14-16 in recognition that Feb is still winter. planning to hold it in Miami</p>
+<p id=x029 class="phone s01"><cite>brent:</cite> ... please jump on if you have any questions, all details we have at this point</p>
+</section>
+
+<section>
+<h3 id=t01>Work Item status updates/PRs</h3>
+<p id=x033 class="phone s01"><cite>brent:</cite> Work item status updates &amp; PRs. please jump on the queue if you have an update</p>
+<p id=x034 class=irc><cite>&lt;manu&gt;</cite> <a href="https://github.com/w3c/vc-data-model/pulls">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>pulls</a></p>
+<h4 id=t02><a href="https://github.com/w3c/vc-data-model/pull/969">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>pull/<wbr>969</a></h4>
+<p id=x036 class="phone s02"><cite>manu:</cite> VCDM first. two PRs - one is nonTransferrable property. do not merge is listed on it. some discussion, but need more. chances of it making it in are fairly slim. don't know what the group should do with prs like this. can leave it open. hasn't been much progress</p>
+<h4 id=t03><a href="https://github.com/w3c/vc-data-model/pull/987">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>pull/<wbr>987</a></h4>
+<p id=x038 class="phone s02"><cite>manu:</cite> next item: 987; adds presentationSchema, by David Chadwick. good discussion. still some things being asked for. 3 people continuing to request changes. expect David to keep engaging to move it forward</p>
+<p id=x039 class=irc><cite>&lt;manu&gt;</cite> <a href="https://github.com/w3c/vc-data-integrity/pulls">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-integrity/<wbr>pulls</a></p>
+<p id=x044 class="phone s02"><cite>manu:</cite> other than that, no new PRs. VC data integrity: no new pull requests. difficult to write PRs when the topic of &quot;make @context optional&quot; hangs over the group. need to find consensus and move on<br>
+<span id=x045>… other option - if no objections from the group - let's assume we don't have consensus on making @context optional in future PRs, at least I raise, and will run on that basis until we have consensus on that item. putting that to the group - if no objections, and assuming @context is not optional, we can get back to raising PRs</span><br>
+<span id=x046>… questions on that approach?</span></p>
+<p id=x048 class=irc><cite>&lt;dlongley&gt;</cite> +1 to proceed with current PRs as if we don't have consensus on making `@context` optional (as we don't.. so just an acknowledgment of present reality)</p>
+<p id=x051 class="phone s04"><cite>DavidC:</cite> give people a heads up. a number of different issues that overlap with one. that is - what is the actual data model? what is the credential metadata? what is the proof? how are they related? quite a biggie. affects a lot of the properties, i.e. the issuanceDate - is it a property of the proof or the credential</p>
+<p id=x053 class="phone s05"><cite>Orie:</cite> agree with what DavidC said. have 2 components: core data model and securing the core data model formats. has big impacts on securing the core data model formats. coming back to Manu's point. even if we proceed with making PRs in the core data model assuming the TR looks as it is today, we will still have these issues come up in the 'securing the core data model' for reasons DavidC mentioned.</p>
+<p id=x054 class=irc><cite>&lt;mprorock&gt;</cite> +1 orie</p>
+<p id=x055 class="phone s05"><cite>Orie:</cite> helpful to have a special topic call about &quot;where metadata is present in the core data model&quot; and securing the core data model</p>
+<p id=x056 class="phone s01"><cite>brent:</cite> heard no one speak against your suggestion. clear to proceed as you intend</p>
+<p id=x057 class="phone s02"><cite>manu:</cite> thank you</p>
+<p id=x058 class="phone s01"><cite>brent:</cite> other work items to give status updates or PRs?</p>
+<p id=x059 class="phone s05"><cite>Orie:</cite> no additional prs in either of the work items that I am an editor of (JsonWebSignature2020, VC-JWT)</p>
+</section>
+
+<section>
+<h3 id=t04>Status List 2020</h3>
+<h4 id=t05><a href="https://github.com/w3c/vc-data-model/issues/974">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>issues/<wbr>974</a></h4>
+<p id=x064 class="phone s01"><cite>brent:</cite> move to remaining topic. StatusList2020. have an issue open ^</p>
+<p id=x066 class=irc><cite>&lt;Zakim&gt;</cite> manu, you wanted to provide some background for the group</p>
+<p id=x069 class="phone s02"><cite>manu:</cite> providing background. the VCDM has a property called 'credentialStatus' purpose is to tell you what the status of the credential is -- revoked, suspended, something else. this mechanism allows an issuer to issue a cred and still have the ability to say the credential is still valid or no longer valid<br>
+<span id=x070>… can think of something like an employeeId credential, issued to an employee - they have it in their mobile phone, at some point they change jobs away from that employer. the issuer then revokes the credential saying 'they are no longer at the company'</span></p>
+<p id=x071 class=irc><cite>&lt;manu&gt;</cite> Status List 2021: <a href="https://w3c-ccg.github.io/vc-status-list-2021/">https://<wbr>w3c-ccg.github.io/<wbr>vc-status-list-2021/</a></p>
+<p id=x073 class="phone s02"><cite>manu:</cite> we did not define a concrete representation to do this in v1 of the work. there is an item VCStatusList2021 incubated in the CCG link in chat. a number of implementations. people seem to be OK with the latest version of it. we do not expect drastic changes to the spec at this point. there is a test suite for the spec.<br>
+<span id=x074>… this issue suggests adopting the status list 2021 from the CCG. suggested a month ago, more depth today</span></p>
+<p id=x076 class=irc><cite>&lt;Zakim&gt;</cite> brent, you wanted to talk about how this helps us achieve one of our group goals</p>
+<p id=x083 class="phone s01"><cite>brent:</cite> properties in the VCDM that do not have a normative way to fulfill. do not love statuslist2020, but it is fine. people feel similarly. solid and basic way of providing what a credential status is. char hat off -- in full support of us considering this as a work item. chair hat on -- point of this is to decide whether it is a work item<br>
+<span id=x084>… what do you think about bringing it in, or what that means?</span></p>
+<p id=x086 class=irc><cite>&lt;dlongley&gt;</cite> just to be clear, the issue says &quot;StatusList2021&quot; (not 2020)</p>
+<p id=x087 class="phone s06"><cite>mprorock:</cite> I am in the &quot;it's fine&quot; camp, it's not ideal. have not seen anything practical, better, more widely deployed, tested. natural if we are going to bring in a status list ... this is what 2021 enables. i have to reiterate my hatred for dates in titles</p>
+<p id=x088 class=irc><cite>&lt;manu&gt;</cite> Link to current test suite: <a href="https://w3c-ccg.github.io/status-list-2021-test-suite/">https://<wbr>w3c-ccg.github.io/<wbr>status-list-2021-test-suite/</a></p>
+<p id=x089 class="phone s01"><cite>brent:</cite> apologies, it is StatusList2021</p>
+<p id=x095 class="phone s05"><cite>Orie:</cite> #1 - we have to define at least one of these things to keep the credential status property in the data model. been said, but it's important. have a number of concerns with this work item. have not seen a version that supports vc-jwt or other security assertion formats<br>
+<span id=x096>… this item like so many other items, assumes a core data that is subject to dispute. not appropriate to bring it in at this time. expands the scope of the group, new work. not sure how to resolve issues with this suite if @context being optional is handled in a different manner. appreciate Manu's comment, but do not feel comfortable until it's resolved</span></p>
+<p id=x098 class=irc><cite>&lt;Zakim&gt;</cite> manu, you wanted to agree with &quot;it's fine, it's not great&quot; :)</p>
+<p id=x099 class="phone s02"><cite>manu:</cite> supportive of what Orie said. want to roll back to &quot;it's fine but not great.&quot; everyone is lukewarm about it. we want a more aggressive privacy option. been viewed as 'adequate' not amazing. effectively good enough.</p>
+<p id=x100 class=irc><cite>&lt;dlongley&gt;</cite> +1 to StatusList2021 being &quot;adequate, but not great&quot; :)</p>
+<p id=x101 class="phone s02"><cite>manu:</cite> we could do better in the future if we were willing to do more advanced crypto. people have not reacted violently against 2021's herd privacy approach. just ok - but that's fine</p>
+<p id=x104 class="phone s07"><cite>decentralgabe:</cite> I just wanted to respond to Orie's comment, we do have an implementation that works w/ VC-JWT and I can add an example to existing draft if that's helpful.</p>
+<p id=x109 class="phone s04"><cite>DavidC:</cite> coming back to the point last time i spoke. big issue about the data model. credentialStatus should not be a part of the data model, because it's bound to a proof. cannot have it bound...the status should be a part of the proof and not bound to the core data model</p>
+<p id=x111 class=irc><cite>&lt;Zakim&gt;</cite> brent, you wanted to say the work is there for us to do regardless of whether we are bringing this in now or not</p>
+<p id=x114 class="phone s01"><cite>brent:</cite> the work is there for us to do regardless of whether we bring it in now. up to the working group whether we bring it in now. not bringing it in now doesn't mean it's not there for us to do</p>
+<p id=x117 class="phone s02"><cite>manu:</cite> to respond to DavidC: no it has nothing to do with the proof. it makes more sense...credentialStatus has to do with the credential itself, not about the proof. it is about the fact that you are issued a uni diploma, and whether it is valid or not, regardless of cryptographic protection on any of the data. business rules, not cryptography</p>
+<p id=x118 class=irc><cite>&lt;dlongley&gt;</cite> +1 to manu</p>
+<p id=x124 class="phone s05"><cite>Orie:</cite> agree current interpretation is consistent with what Manu said. DavidC may be onto something. if not to be handled as business validation logic, could be handled as part of the proof. could be relevant to the proof section, not credential metadata. comes back to &quot;what is the core data model&quot; do we have a clear understanding of the differences b/w these things.<br>
+<span id=x125>… current StatusList2021 - it is a property of the credential. after credential verification of the status list, a verifier can dereference and do checking. it is a business process the verifier could ignore (e.g. check signature, not status).</span></p>
+<p id=x126 class=irc><cite>&lt;dlongley&gt;</cite> seems the question is: &quot;are you revoking a digital signature ... or a credential?&quot; (or could there be *both* of these things? and is that too complicated?)</p>
+<p id=x127 class=irc><cite>&lt;dlongley&gt;</cite> +1 to Orie where credential status is handled the same regardless of securing format</p>
+<p id=x128 class=summary>+1</p>
+<p id=x129 class="phone s05"><cite>Orie:</cite> if checking the proof/status is a part of the verification process. in Jose/cose use the crit header. ... how are we going to address these scenarios if we have more than 1 core data model or security format? want credential status checking to be handled consistently. data integrity proofs and jose/cose formats around the same core data model. not clear the best path for the item</p>
+<p id=x131 class=irc><cite>&lt;Zakim&gt;</cite> JoeAndrieu, you wanted to talk to David's question</p>
+<p id=x132 class="phone s08"><cite>JoeAndrieu:</cite> want to elevate DavidC's point to a conversation we haven't fully engaged with yet. What is a &quot;Credential&quot; vs &quot;Verifiable Credential.&quot; we have a disconnect. my sense - a credential without a proof is a &quot;credential&quot; it is in json and maybe a proto-vc. with a proof it's a verifiable credential. there's another thing in the real world called credentials that people use VCs to represent (e.g. a bachelors degree)</p>
+<p id=x133 class=irc><cite>&lt;Orie&gt;</cite> +1 Joe</p>
+<p id=x134 class=irc><cite>&lt;dlongley&gt;</cite> +1 to Joe</p>
+<p id=x135 class="phone s08"><cite>JoeAndrieu:</cite> has nothing to with a VC. there is a weird semantic disconnect. don't know where we should come down. in the JFF plugfest, people created the id of the cred as the real id, not the id of the digital object</p>
+<p id=x137 class=irc><cite>&lt;Zakim&gt;</cite> brent, you wanted to point out that in order to decide what direction to take StatusList2021 in the group, it would need to be in the group.</p>
+<p id=x139 class="phone s01"><cite>brent:</cite> to StatusList2021 - we can decide the direction if we bring it in as a work item</p>
+<p id=x140 class=summary>yes, it's different in VCs -- VCs aren't x509s ...</p>
+<p id=x142 class="phone s04"><cite>DavidC:</cite> thanks Manu for point of CredStatus could be the status of the degree. want to point out in x509, revocation is entirely with the digital signed cert. says we need to have 2 different representations (David Longley hinted in chat). still needs to be a cryptographic revocation list, e.g. if a university lost its private key the cred could still be valid. need two separate revocation mechanisms</p>
+<p id=x145 class="phone s09"><cite>Phil:</cite> Phil Long from T3. from the edu perspective Joe described. in edu, has never been an opportunity for a cred to be shared with anybody at all. if it is an &quot;official credential.&quot; the only source of truth has been the institution itself/registrar. any time anyone has a presentation about their degree or transcript to a 3rd party it needs to come from the institution/registrar, since they're the only one's considered author</p>
+<p id=x146 class=summary>itative<br>
+<span id=x147>… credentials are making this tamper evident, which allows this interaction to change. conversation with national student clearing house. they agreed to put a signature on a degree VC which is a 'sufficient verification of truth' and does not need to come from an institution itself. distinction is important - verifiable means you can hand it to a 3rd party. treated as authentic and original</span></p>
+<p id=x148 class=irc><cite>&lt;DavidC&gt;</cite> @manu it could if there is flag to say which revocation it is referring to</p>
+<p id=x149 class=summary>That flag already exists, DavidC :)</p>
+<p id=x150 class=irc><cite>&lt;DavidC&gt;</cite> @manu. Excellent!!</p>
+<p id=x151 class=summary>It's called &quot;statusPurpose&quot; -- <a href="https://w3c-ccg.github.io/vc-status-list-2021/#statuslist2021entry">https://<wbr>w3c-ccg.github.io/<wbr>vc-status-list-2021/#statuslist2021entry</a></p>
+<p id=x153 class=summary>To be clear, I disagree that this is something that should exist in the proof, but we can have that discussion later :)</p>
+<p id=x155 class=irc><cite>&lt;Zakim&gt;</cite> manu, you wanted to note that StatusList2021 could serve both purposes! :)</p>
+<p id=x156 class="phone s02"><cite>manu:</cite> responding to DavidC question about cred or proof. StatusList2021 is agnostic to where it is placed. just a status list. could be about a credential, proof, sheep. doesn't matter where it shows up. it is just a bit field and you flip bits. though, I disagree you should put this in proof metadata. if the group wants to do this, it can serve both purposes</p>
+<p id=x158 class="phone s01"><cite>brent:</cite> is the work item in the scope of the charter? is it supported by at least 3 participants from different organizations? yet to poll. should we adopt it? does not require strong consensus. will not be taking a proposal today to bring it in as a work item. may do so during the next call. any other questions/comments/concerns?</p>
+<p id=x160 class="phone s05"><cite>Orie:</cite> we ran a proposal to adopt ecdsasignature2020 a week ago, did we follow the process then?</p>
+<p id=x161 class="phone s01"><cite>brent:</cite> 2 weeks ago. in response to the resulting conversation about that work item..resulting in the chairs establishing this process. the process just mentioned did not exist during that conversation. it came into being as a result</p>
+<p id=x166 class="phone s10"><cite>TallTed:</cite> no strong feelings on the work item. probably should be taken up. something like it will be necessary. another one will serve roughly the same purpose and we'll have to do it. abundantly clear to me and the people in this group that we have some glaring issues with the existing data model and what is really going on<br>
+<span id=x167>… as we were discussing a few weeks ago re: validFrom/until attributes, we have 4 dates instead of 2, but may be 6 or 8. tracks with crypto/payload validity. don't have a strong enough picture in my head to go down the list</span><br>
+<span id=x168>… brief back and forth with DavidC. basic stick figure diagrams of the cred metadata, the Credential, the proof, proof metadata. not the only 4 we need to talk about. need to spend some focused time on that. could be a zoom whiteboard or F2F - open to ideas. sooner we do it the better off everyone will be. the result will be breaking changes</span></p>
+</section>
+
+<section>
+<h3 id=t06>Issue Discussion</h3>
+<p id=x170 class=irc><cite>&lt;brent&gt;</cite> <a href="https://github.com/w3c/vc-data-model/issues?q=is%3Aissue+is%3Aopen+label%3Adiscuss+sort%3Aupdated-asc">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>issues?q=is%3Aissue+is%3Aopen+label%3Adiscuss+sort%3Aupdated-asc</a></p>
+<p id=x171 class="phone s01"><cite>brent:</cite> next topic, issue discussion. sorted in order we will be covering them</p>
+<h4 id=t07><a href="https://github.com/w3c/vc-data-model/issues/931">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>issues/<wbr>931</a></h4>
+<p id=x173 class="phone s01"><cite>brent:</cite> first issue #931, representing multi subjects in the data model</p>
+<p id=x176 class="phone s07"><cite>decentralgabe:</cite> may be better suited to have a discussion than an issue</p>
+<p id=x177 class="phone s10"><cite>TallTed:</cite> no please. discussion is arguable worse. could be more confusing than just reading a thread of an issue.</p>
+<p id=x179 class="phone s01"><cite>brent:</cite> completely forgot that i wanted to talk about how we wanted to start using discussions. we are planning on moving some issues to the 'discussions' tab and making more use of that. see how it goes to move those issues forward. the editors have the authority to make that decision (move to discussion). the issue should be a discussion/question, not proposing specific solutions. once a discussion develops to a certain poin</p>
+<p id=x180 class=summary>t, a related issue could be raised<br>
+<span id=x181>… to propose specific changes to the data model. should have said that earlier. considering this as a tool. let's talk about this for a couple minutes.</span><br>
+<span id=x182>… will create another sub topic to free us</span></p>
+<h4 id=t08>discussion</h4>
+<p id=x191 class="phone s10"><cite>TallTed:</cite> one of the big failures of this 'discussion' thing github made is that it is not easy to see the things added to the 'discussion' since the last time you looked at it. no useful indicator of 'i read this but not that'<br>
+<span id=x192>… in order to track the whole discussion you need to scroll down slowly and see what replied have been added. i know issues dont thread the discussion and it is challenging to keep up with that. nothing will keep up with ntp did if you had a good news reader. this is one of the worst re-inventions i've seen - and i've seen a lot. i will try to participate if things go there...will be a headache. curmudgeon out!</span></p>
+<p id=x194 class=irc><cite>&lt;Zakim&gt;</cite> manu, you wanted to support &quot;we need another place for open, non-concrete conversations&quot;</p>
+<p id=x195 class=irc><cite>&lt;TallTed&gt;</cite> &quot;meta issues&quot; == make a meta tag</p>
+<p id=x196 class=irc><cite>&lt;dlongley&gt;</cite> +1 to TallTed, was going to suggest the same thing</p>
+<p id=x197 class="phone s02"><cite>manu:</cite> I think what Ted is saying has value. issues raised aren't concrete issues on the spec. not exactly questions. more like philosophical conversations without changes in the spec. to boil it down - would you disagree with marking something as a &quot;conversation&quot; Ted? may not result in anything actionable</p>
+<p id=x199 class=irc><cite>&lt;TallTed&gt;</cite> +1 a &quot;conversation&quot; tag on some issue(s) would likely work</p>
+<p id=x200 class="phone s02"><cite>manu:</cite> the thread to date may not result in anything actionable, but people should talk until it is clear there is something actionable there. the editors have had a hard time looking at these issues, saying &quot;i want that conversation to continue, but it's so nebulous/vague, have no idea where it's going, let them keep talking...may get to some spec text changes&quot;</p>
+<p id=x201 class=irc><cite>&lt;TallTed&gt;</cite> or pushing that thread to mailing list instead of github</p>
+<p id=x202 class=irc><cite>&lt;dlongley&gt;</cite> &quot;not ready for WG review&quot; / &quot;discussion only&quot; label or something.</p>
+<p id=x203 class="phone s02"><cite>manu:</cite> category of a discussion. would you object to a label for conversation?</p>
+<p id=x204 class=irc><cite>&lt;dlongley&gt;</cite> +1 to &quot;conversation&quot; tag</p>
+<p id=x205 class="phone s10"><cite>TallTed:</cite> no objection. some things are meant for the mailing list and not github yet</p>
+<p id=x206 class=irc><cite>&lt;dmitriz&gt;</cite> +1 to conversation tag over github discussions</p>
+<p id=x208 class="phone s05"><cite>Orie:</cite> conversations should probably happen on the mailing list. from an editorial perspective. wherever conversations happen, important they happen. people should come to a shared mental model to get to concrete changes. once concrete changes then an issue should be created with a clear title and description</p>
+<p id=x209 class=irc><cite>&lt;dlongley&gt;</cite> +1 to ensuring we can mark conversations in a way that gets out of the editors' way *somehow*</p>
+<p id=x213 class="phone s05"><cite>Orie:</cite> if that happens midway through a 2000 comment thread it can be hard for the editors to pull that out. regardless need a clear issue that is easy an actionable. can happen on the mailing list or issue. the clear intention issue should refer to the discussion</p>
+<p id=x214 class=irc><cite>&lt;TallTed&gt;</cite> +1 concrete change suggestion *might* belong in an issue, or might proceed straight to PR, if there's something like consensus on &quot;this is the action we should try&quot;</p>
+<p id=x215 class=irc><cite>&lt;dlongley&gt;</cite> +1 &quot;conversation&quot;-tagged issues should produce other issues that aren't conversations but real concrete issues / proposals</p>
+<p id=x216 class="phone s05"><cite>Orie:</cite> make sure everything is linked together and clear to the editors what the action is</p>
+<p id=x218 class=irc><cite>&lt;Zakim&gt;</cite> brent, you wanted to ask if we should more strictly regulate issue creation moving forward and to ask and what would that mean</p>
+<p id=x219 class="phone s01"><cite>brent:</cite> better to more strictly regulate issue creation. do folks agree? what does it mean? try out discussions? label? mailing list? some combo? let's find agreement</p>
+<p id=x221 class=irc><cite>&lt;Zakim&gt;</cite> manu, you wanted to note that it's hard to point back to things when they're on the mailing list -- speaking as a huge fan of mailing lists from 1993-2015.</p>
+<p id=x223 class="phone s02"><cite>manu:</cite> hard to police people opening issues. need criteria and judgement calls against them. let's try to process based on what the WG feels is the priority. slight pushback on regulation and criteria. other things we need to spend our time doing.</p>
+<p id=x224 class=irc><cite>&lt;TallTed&gt;</cite> every message to the mailing list is archived, with a URL, so it shouldn't be *that* hard to point back</p>
+<p id=x225 class=irc><cite>&lt;JoeAndrieu&gt;</cite> +1 to tracking this as github issues (email record is hard to spin-up)</p>
+<p id=x226 class="phone s02"><cite>manu:</cite> also speak against putting things on the mailing list. say this as a die-hard supporter from the 90s. GitHub is great at linking and cross-linking. that has really benefitted the standards making process. don't want to lose that. mailing list conversation is fine but feels ephemeral, even if it's not. hard to point back to a 10yr old conversation. much easier in GitHub</p>
+<p id=x227 class=irc><cite>&lt;brent&gt;</cite> +1 to Manu's concerns</p>
+<p id=x228 class=irc><cite>&lt;TallTed&gt;</cite> I'd be very surprised if anyone needs to point back to a 10 year old conversation relative to this group's work</p>
+<p id=x229 class="phone s02"><cite>manu:</cite> want to make sure we keep that. can achieve all these things by having a tag 'conversation' and give chairs/editors leeway to tag things. we will get to a point in the WG where we can't address every issue. we'll have to say we've run out of time for some, and the issues will be shifted to the next version.</p>
+<p id=x234 class=irc><cite>&lt;mprorock&gt;</cite> +1 orie</p>
+<p id=x236 class="phone s05"><cite>Orie:</cite> fine as long as there is a clearly way to distinguish issues editors will take action on vs have a discussion on. could turn the discussion feature off. if we don't intend to use the mailing list, we should turn it off, or use the mailing list to send out issues..drive them to come to some resolution. conversations and clear actions needed</p>
+<p id=x237 class=irc><cite>&lt;TallTed&gt;</cite> the WG mailing lists will, and should, never go away.</p>
+<p id=x239 class="phone s01"><cite>brent:</cite> have a question label - indicates someone should jump on and answer it. have agreement to create a 'conversations' label. may or may not result in a concrete representation. will move forward</p>
+<p id=x241 class=irc><cite>&lt;Zakim&gt;</cite> JoeAndrieu, you wanted to say mailing list is great for announcements and calls, github for rehydrating</p>
+<p id=x242 class=irc><cite>&lt;Orie&gt;</cite> +1 Joe</p>
+<p id=x243 class="phone s08"><cite>JoeAndrieu:</cite> want to say the mailing list is best for announcements. Requests for feedback too. not great for long discussions</p>
+<p id=x245 class="phone s01"><cite>brent:</cite> will bring up StatusList2021 next week. please jump on issue #931 in the meantime.<br>
+<span id=x246>… see you next week and thank you to Gabe</span></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 196 (Thu Oct 27 17:06:44 2022 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Succeeded: s/changes of it making it in/chances of it making it in/</p>
+<p class=warning>Succeeded: s/next issue/next version</p>
+<p class=warning>No scribenick or scribe found. Guessed: decentralgabe</p>
+<p class=warning>Maybe present: brent, manu</p>
+<p class=warning>All speakers: brent, Brian, DavidC, decentralgabe, JoeAndrieu, manu, mprorock, Orie, Phil, TallTed</p>
+<p class=warning>Active on IRC: brent, DavidC, decentralgabe, dlehn1, dlongley, dmitriz, dwaite, jeremie, JoeAndrieu, manu, markus_sabadello, mprorock, Orie, Phil, selfissued, TallTed</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>VCWG Weekly Telecon &ndash; 07 June 2023</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+VCWG Weekly Telecon</h1>
+<h2>07 June 2023</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2023/06/07-vcwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>andres, brent, cabernet, DavidC, dlongley, dmitriz, JoeAndrieu, kristina, Orie, PhilF, shigeya, TallTed</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Brent Zundel</dd>
+<dt>Scribe</dt><dd>PhilF</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t01">Work Item status updates/PRs</a>
+<ol>
+<li><a href="#t02">w3c/<wbr>vc-data-model#1100</a></li>
+</ol>
+</li>
+<li><a href="#t03">Issue Triage</a>
+<ol>
+<li><a href="#t04">w3c/<wbr>vc-data-model#1019</a></li>
+<li><a href="#t05">w3c/<wbr>vc-data-model#908</a></li>
+<li><a href="#t06">w3c/<wbr>vc-data-model#938</a></li>
+<li><a href="#t07">w3c/<wbr>vc-data-model#1102</a></li>
+<li><a href="#t08">w3c/<wbr>vc-data-model#1102</a></li>
+<li><a href="#t09">w3c/<wbr>vc-data-model#959</a></li>
+<li><a href="#t10">w3c/<wbr>vc-data-model#1009</a></li>
+<li><a href="#t11">w3c/<wbr>vc-data-model#981</a></li>
+<li><a href="#t12">w3c/<wbr>vc-data-model#991</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=x018 class="phone s01"><cite>brent:</cite> Agenda today: Work item status updates, PRs, Triage issues<br>
+<span id=x019>… Categorize items as before or after CR or closed</span></p>
+</section>
+
+<section>
+<h3 id=t01>Work Item status updates/PRs</h3>
+<p id=x021 class=irc><cite>&lt;brent&gt;</cite> <a href="https://github.com/w3c/vc-data-model/pulls?q=is%3Apr+is%3Aopen+label%3Adiscuss">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>pulls?q=is%3Apr+is%3Aopen+label%3Adiscuss</a></p>
+<p id=x025 class="phone s01"><cite>brent:</cite> Question for the group, do we feel that consensus is possible here?<br>
+<span id=x026>… on issues 1100 and 1101</span></p>
+<h4 id=t02><a href="https://github.com/w3c/vc-data-model/pull/1100">w3c/<wbr>vc-data-model#1100</a></h4>
+<p id=x030 class="phone s02"><cite>dlongley:</cite> We are missing key players to discuss today.  Probably should not discuss today.</p>
+<p id=x031 class=irc><cite>&lt;Orie&gt;</cite> +1 people are not here.</p>
+<p id=x033 class="phone s01"><cite>brent:</cite> Agreed we are missing key players, moving on<br>
+<span id=x034>… beginning the HR process.  Preparing documents to engage other groups.</span></p>
+<p id=x035 class=irc><cite>&lt;Orie&gt;</cite> <a href="https://github.com/w3c/vc-jwt/pull/103">w3c/<wbr>vc-jwt#103</a></p>
+<p id=x036 class=irc><cite>&lt;TallTed&gt;</cite> I don't know why those key players are absent today, but I might suggest including mention of these PRs in the next agenda, so there's advance warning that they will be discussed (and so encouraging those folks to prioritize attendance)?</p>
+<p id=x037 class=irc><cite>&lt;Orie&gt;</cite> <a href="https://github.com/w3c/vc-jwt/pull/104">w3c/<wbr>vc-jwt#104</a></p>
+<p id=x038 class="phone s03"><cite>Orie:</cite> There are 2 new PRs on VC-JWT, 103 and 104</p>
+<p id=x039 class=irc><cite>&lt;Orie&gt;</cite> <a href="https://github.com/w3c/vc-data-model/pull/1144">w3c/<wbr>vc-data-model#1144</a></p>
+<p id=x040 class="phone s03"><cite>Orie:</cite> PRs up in the core data model 1144</p>
+<p id=x046 class="phone s04"><cite>JoeAndrieu:</cite> Added a comment to 103.  Would it be useful to reuse the pattern for VCs.  A base media type plus securing?<br>
+<span id=x047>… both securing mechanisms will need a payload with a common basis</span></p>
+<p id=x048 class=irc><cite>&lt;dmitriz&gt;</cite> +1 Joe, I was wondering about that as well</p>
+<p id=x049 class=irc><cite>&lt;Orie&gt;</cite> correct, that is what it is doing.</p>
+<p id=x050 class="phone s02"><cite>dlongley:</cite> agrees it is following the same pattern</p>
+<p id=x051 class="phone s03"><cite>Orie:</cite> talking about confidence method in registry</p>
+<p id=x052 class=irc><cite>&lt;dlongley&gt;</cite> +1 to adding confidence method to the reserved terms table + v2 context, sounds good.</p>
+<p id=x056 class="phone s01"><cite>brent:</cite> 9 open PRs, please review and look thru them<br>
+<span id=x057>… moving on to final topic, issues</span></p>
+<p id=x058 class="phone s05"><cite>TallTed:</cite> suggest that we call out specific issues and PRs in agenda ahead of time.</p>
+<p id=x059 class=irc><cite>&lt;Orie&gt;</cite> There are also several open PRs here: <a href="https://github.com/w3c/vc-status-list-2021/pulls">https://<wbr>github.com/<wbr>w3c/<wbr>vc-status-list-2021/<wbr>pulls</a> which can be discussed.</p>
+</section>
+
+<section>
+<h3 id=t03>Issue Triage</h3>
+<p id=x061 class=irc><cite>&lt;brent&gt;</cite> <a href="https://github.com/w3c/vc-data-model/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-asc">https://<wbr>github.com/<wbr>w3c/<wbr>vc-data-model/<wbr>issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-asc</a></p>
+<h4 id=t04><a href="https://github.com/w3c/vc-data-model/issues/1019">w3c/<wbr>vc-data-model#1019</a></h4>
+<p id=x063 class="phone s01"><cite>brent:</cite> Discuss issue 1019</p>
+<p id=x067 class="phone s04"><cite>JoeAndrieu:</cite> Thinks it would be hard to discuss this without Kristina's input</p>
+<p id=x070 class=irc><cite>&lt;Orie&gt;</cite> +1 to closing the issue, it's being resolved elsewhere.</p>
+<p id=x071 class="phone s06"><cite>DavidC:</cite> Has this been superseded by Oliver's email requesting this has been moved to a work item with some positive replies on the working group.</p>
+<p id=x072 class="phone s01"><cite>brent:</cite> talking into mute</p>
+<p id=x073 class=irc><cite>&lt;andres&gt;</cite> +1 to close as well</p>
+<p id=x074 class="phone s01"><cite>brent:</cite> agreement that this needs to be done but not here.  So should be pending close as its being done elsewhere</p>
+<p id=x075 class="phone s06"><cite>DavidC:</cite> I'm happy with it being pending closed</p>
+<p id=x076 class=irc><cite>&lt;pdl-ASU&gt;</cite> +1 to mark it pending closed</p>
+<p id=x077 class=irc><cite>&lt;JoeAndrieu&gt;</cite> +1 to close</p>
+<p id=x078 class=irc><cite>&lt;Orie&gt;</cite> +1 David</p>
+<p id=x079 class="phone s01"><cite>brent:</cite> Marking issue as pending closed.</p>
+<h4 id=t05><a href="https://github.com/w3c/vc-data-model/issues/908">w3c/<wbr>vc-data-model#908</a></h4>
+<p id=x081 class=irc><cite>&lt;DavidC&gt;</cite> Please add a reference to Oliver's proposed work item</p>
+<p id=x082 class="phone s01"><cite>brent:</cite> Issue raised by Sebastian, current assigned to Kristina.  Is this work that should be done before we go into CR?</p>
+<p id=x083 class=irc><cite>&lt;Orie&gt;</cite> Suggest this issue be closed, that work is happening in other working groups.</p>
+<p id=x086 class=irc><cite>&lt;Zakim&gt;</cite> JoeAndrieu, you wanted to suggest the directory</p>
+<p id=x087 class="phone s04"><cite>JoeAndrieu:</cite> since the W3C isn't doing this work, we should move this into the directory of related work and mark pending close</p>
+<p id=x088 class="phone s01"><cite>brent:</cite> Going to mark issue pending close</p>
+<p id=x089 class="phone s04"><cite>JoeAndrieu:</cite> Someone has to move it, right.  Have to capture that task</p>
+<p id=x090 class=irc><cite>&lt;Orie&gt;</cite> nobody needs to add it though... people can list their work there... if they want to.</p>
+<p id=x091 class=irc><cite>&lt;JoeAndrieu&gt;</cite> agreed, Orie. Just seemed like the right resolution of the issue.</p>
+<h4 id=t06><a href="https://github.com/w3c/vc-data-model/issues/938">w3c/<wbr>vc-data-model#938</a></h4>
+<p id=x095 class="phone s01"><cite>brent:</cite> Issue 938 raised by and assigned to DavidC</p>
+<p id=x097 class="phone s06"><cite>DavidC:</cite> what are people wanting here?<br>
+<span id=x098>… what i want is some way to indicate to the recipient that the VCs are actually encrypted and maybe how</span></p>
+<p id=x099 class=irc><cite>&lt;Orie&gt;</cite> encryption is out of scope for this working group.</p>
+<p id=x100 class="phone s06"><cite>DavidC:</cite> helpful hint</p>
+<p id=x101 class=irc><cite>&lt;Orie&gt;</cite> or has been... to date.</p>
+<p id=x104 class=irc><cite>&lt;Zakim&gt;</cite> JoeAndrieu, you wanted to say it seems like a credential design issue</p>
+<p id=x105 class="phone s04"><cite>JoeAndrieu:</cite> there are many different ways to do this.  That makes it a claim design issue.  Either claim by claim or entire VC</p>
+<p id=x106 class=irc><cite>&lt;andres&gt;</cite> Also having the entire VP encrypted</p>
+<p id=x107 class="phone s06"><cite>DavidC:</cite> This is for the entire VC being encrypted.</p>
+<p id=x108 class=irc><cite>&lt;Orie&gt;</cite> In JWTs, you check the header for that information.</p>
+<p id=x109 class="phone s06"><cite>DavidC:</cite> talking about app to app encryption.  We should define one recognized best way to do this.</p>
+<p id=x112 class="phone s01"><cite>brent:</cite> sounds like interest in pursuing this.  May require some normative guidance.  Mark this as before CR</p>
+<p id=x115 class="phone s04"><cite>JoeAndrieu:</cite> Want to suggest quick fix.  What if we add a pattern that has a &quot;encryptedCredential&quot; property and define that in the context.</p>
+<p id=x116 class=irc><cite>&lt;Orie&gt;</cite> suggest not doing anything with this... we don't need to add more JSON-LD terms.</p>
+<p id=x117 class="phone s04"><cite>JoeAndrieu:</cite> But that's not a valid VC, nevermind</p>
+<p id=x120 class=irc><cite>&lt;Orie&gt;</cite> encrypting a presentation is different than encrypting a credential.</p>
+<p id=x121 class="phone s06"><cite>DavidC:</cite> any VC in your wallet may be encrypted.  When you send it to the verifier that it is encrypted and be able to present in the Presentation</p>
+<p id=x122 class=irc><cite>&lt;JoeAndrieu&gt;</cite> +1 to that approach</p>
+<p id=x124 class="phone s02"><cite>dlongley:</cite> Add a property that indicates an encrypted VC referencing JWE.  Expected payload would be JWEs<br>
+<span id=x125>… Add a PR to add that property</span></p>
+<p id=x128 class="phone s01"><cite>brent:</cite> Mark as before CR and move on<br>
+<span id=x129>… looking at 959</span></p>
+<p id=x130 class="phone s06"><cite>DavidC:</cite> asking to talk about 1102 which is now marked pending close</p>
+<h4 id=t07><a href="https://github.com/w3c/vc-data-model/issues/1102">w3c/<wbr>vc-data-model#1102</a></h4>
+<p id=x132 class="phone s01"><cite>brent:</cite> now talking about 1102.  Was discussed and no one liked the idea so it was marked pending close</p>
+<p id=x137 class="phone s06"><cite>DavidC:</cite> Each of the extension points only get in if there are implementations but that the definitions could change<br>
+<span id=x138>… we already have a class of extension which have impls and have a unique URI</span><br>
+<span id=x139>… if we have the concept of a single extension point and all others have their own URI but be under the single extension point.</span></p>
+<p id=x140 class=irc><cite>&lt;Orie&gt;</cite> We kinda already do have the concept of a single extension point... its called @context, and nobody understands it, and its values are not normative.</p>
+<p id=x142 class="phone s06"><cite>DavidC:</cite> don't need the outer wrapper.<br>
+<span id=x143>… if you have vague extensions that don't fit specific items like &quot;TermsOfUse&quot; you don't know where to put it.</span></p>
+<p id=x144 class=irc><cite>&lt;Orie&gt;</cite> David, we've made this easy for developers by bundling everything into the JSON-LD context.</p>
+<p id=x145 class="phone s06"><cite>DavidC:</cite> a single pot makes it easier for developers to propose future extensions</p>
+<p id=x147 class=irc><cite>&lt;Zakim&gt;</cite> brent, you wanted to note recorded opposition</p>
+<p id=x148 class=irc><cite>&lt;Orie&gt;</cite> You just need to learn how to use JSON-LD to write conformant extensions, which is super easy.</p>
+<p id=x152 class="phone s01"><cite>brent:</cite> chair hat off, I would not be in favor of this change.  It is not less confusing.  Implementers have a small set of extension points that are well define is the better option.<br>
+<span id=x153>… chair hat on, we have recorded that several members have said they would not be in favor of the change.  Likely no consensus.</span></p>
+<p id=x155 class=irc><cite>&lt;Zakim&gt;</cite> JoeAndrieu, you wanted to say that it is useful constrain the meaning of the extension points and use @context for open ended</p>
+<p id=x160 class="phone s04"><cite>JoeAndrieu:</cite> +1 to all that, would also be opposed.  Open ended extension mechanism exists in @context<br>
+<span id=x161>… agree with Mike Jones it feels more complicated having them all in one bucket</span></p>
+<p id=x163 class="phone s06"><cite>DavidC:</cite> looking for technical reasons and haven't heard any.<br>
+<span id=x164>… just that people don't like it.</span></p>
+<p id=x168 class=irc><cite>&lt;Orie&gt;</cite> technical reason, we already have an open ended json-ld way to do this, adding another makes our spec even harder for people to understand or use.</p>
+<p id=x169 class=irc><cite>&lt;Orie&gt;</cite> +1 joe.</p>
+<p id=x170 class="phone s04"><cite>JoeAndrieu:</cite> one of the technical arguments is that this mechanism already exists in @context</p>
+<p id=x172 class=irc><cite>&lt;Zakim&gt;</cite> brent, you wanted to ask about FO</p>
+<p id=x173 class=irc><cite>&lt;Orie&gt;</cite> the fact that its not obvious that json-ld solves this, is shocking to me, given our entire data model assumes we are experts at JSON-LD.</p>
+<p id=x175 class="phone s01"><cite>brent:</cite> it is clear, there is no path to consensus.  Question to DavidC:  do you plan to formally object is we close the issue?</p>
+<p id=x177 class="phone s06"><cite>DavidC:</cite> No I would not<br>
+<span id=x178>… would appreciate more technical arguments.</span></p>
+<p id=x181 class="phone s02"><cite>dlongley:</cite> If you want some incubation for your idea, create an extension in the @context that is a generic extension</p>
+<p id=x182 class="phone s06"><cite>DavidC:</cite> Thank you Dave, that is a good idea</p>
+<h4 id=t08><a href="https://github.com/w3c/vc-data-model/issues/1102">w3c/<wbr>vc-data-model#1102</a></h4>
+<p id=x184 class="phone s01"><cite>brent:</cite> Issue 959 back on the table</p>
+<h4 id=t09><a href="https://github.com/w3c/vc-data-model/issues/959">w3c/<wbr>vc-data-model#959</a></h4>
+<p id=x188 class="phone s01"><cite>brent:</cite> current assigned to Orie<br>
+<span id=x189>… it is marked ready for PR, Orie what is the status?</span></p>
+<p id=x191 class="phone s03"><cite>Orie:</cite> Joe pointed out that we already have this in a section in the spec.  Willing to compare current section with this issue.  Should be current CR work.</p>
+<p id=x192 class="phone s01"><cite>brent:</cite> Adding before CR label to issue</p>
+<h4 id=t10><a href="https://github.com/w3c/vc-data-model/issues/1009">w3c/<wbr>vc-data-model#1009</a></h4>
+<p id=x194 class="phone s01"><cite>brent:</cite> moving to issue 1009, assigned to Manu, DavidC and Kristina.</p>
+<p id=x195 class=irc><cite>&lt;Orie&gt;</cite> Suggest closing this, the group has essentially resovled there is no difference</p>
+<p id=x196 class="phone s01"><cite>brent:</cite> wonder if this has been overtaken by events.  How should we mark before or post CR?</p>
+<p id=x200 class=irc><cite>&lt;Orie&gt;</cite> There is not spec legal way to distinguish between credential and verifiable credential.</p>
+<p id=x201 class="phone s06"><cite>DavidC:</cite> this needs someone to carefully go through current version and ensure use of credential or verifiable credential are proper and submit editorial change.</p>
+<p id=x204 class=irc><cite>&lt;Orie&gt;</cite> indeed, the base media type explains that you never know.</p>
+<p id=x205 class="phone s04"><cite>JoeAndrieu:</cite> Appreciate the clarification.  Agrees the language in the spec is confusing.</p>
+<p id=x207 class="phone s03"><cite>Orie:</cite> +1 to what Joe said.  Base media type does not talk about securing mechanism.</p>
+<p id=x208 class="phone s01"><cite>brent:</cite> suggests to make this as post CR</p>
+<p id=x211 class="phone s03"><cite>Orie:</cite> this may effect normative statements.  esp the definition of what a proof is.  Must be addressed before CR</p>
+<p id=x212 class="phone s01"><cite>brent:</cite> adding before CR label</p>
+<h4 id=t11><a href="https://github.com/w3c/vc-data-model/issues/981">w3c/<wbr>vc-data-model#981</a></h4>
+<p id=x214 class="phone s01"><cite>brent:</cite> moving on to 981, assigned to Manu, marked as ready for PR</p>
+<p id=x215 class=irc><cite>&lt;Orie&gt;</cite> I tried fixing this, Manu need to fix : /</p>
+<p id=x216 class=irc><cite>&lt;dlongley&gt;</cite> +1 for Manu to fix</p>
+<p id=x218 class="phone s01"><cite>brent:</cite> will leave it for Manu to fix.  Editorial so can add post CR label<br>
+<span id=x219>… marking issue as post CR</span></p>
+<h4 id=t12><a href="https://github.com/w3c/vc-data-model/issues/991">w3c/<wbr>vc-data-model#991</a></h4>
+<p id=x222 class="phone s01"><cite>brent:</cite> next issue 991, to discuss label. raised by and assigned to DavidC</p>
+<p id=x224 class="phone s03"><cite>Orie:</cite> We have a separate work item for credential status.  This issue seems overtaken by events with open PRs.  Close this PR and go over to that work item</p>
+<p id=x225 class=irc><cite>&lt;Orie&gt;</cite> I suggest closing this issue</p>
+<p id=x226 class="phone s01"><cite>brent:</cite> suggestion is to move this item to status list repo</p>
+<p id=x227 class=irc><cite>&lt;Orie&gt;</cite> and instead reviewing the open PRs on that work item</p>
+<p id=x229 class=irc><cite>&lt;Orie&gt;</cite> (you don't)</p>
+<p id=x230 class="phone s04"><cite>JoeAndrieu:</cite> that is not correct.  Does seem to be about a specific status mechanism.</p>
+<p id=x232 class=irc><cite>&lt;Orie&gt;</cite> there are not 2 objects, we spent over month on this.</p>
+<p id=x233 class=irc><cite>&lt;dlongley&gt;</cite> +1 just one object</p>
+<p id=x234 class="phone s06"><cite>DavidC:</cite> There are 2 objects, credential and verifiable credential and now talking about the status is &quot;mixed up&quot; as well.</p>
+<p id=x235 class=irc><cite>&lt;brent&gt;</cite> +1 just one object</p>
+<p id=x236 class=irc><cite>&lt;JoeAndrieu&gt;</cite> +1 just one object, but this is the layering problem</p>
+<p id=x238 class=irc><cite>&lt;Orie&gt;</cite> It seems http range 14 is yet again, disrupting our ability to communicate.</p>
+<p id=x239 class="phone s06"><cite>DavidC:</cite> one could be valid while the other is invalid and vice versa.</p>
+<p id=x241 class=irc><cite>&lt;Zakim&gt;</cite> dlongley, you wanted to say key revocation is a security layer problem</p>
+<p id=x246 class="phone s02"><cite>dlongley:</cite> key revocation at the crypto layer is different than at the credential layer.<br>
+<span id=x247>… key revocation and credential revocation are different things.</span></p>
+<p id=x250 class="phone s04"><cite>JoeAndrieu:</cite> We don't have separate items in our work.  We have just one digital thing</p>
+<p id=x252 class=irc><cite>&lt;Orie&gt;</cite> joe is correct, and the digital thing, may or may not have any integrity protection.</p>
+<p id=x253 class="phone s06"><cite>DavidC:</cite> Driver's license is my credential (and I've been driving for a long time).</p>
+<p id=x255 class="phone s04"><cite>JoeAndrieu:</cite> There are three layers here.  Different between having driven, the physical license and a digital thing.<br>
+<span id=x256>… we don't have good language differentiating these three things.</span></p>
+<p id=x257 class="phone s06"><cite>DavidC:</cite> Yes it is difficult to talk about</p>
+<p id=x262 class=irc><cite>&lt;dlongley&gt;</cite> there can a validity period on a proof (expressed via internal / external proof securing mechanism), a validity period on the VC, and a validity period expressed in a claim about a license that someone possesses ... all different things</p>
+<p id=x263 class=irc><cite>&lt;dlongley&gt;</cite> all works with 1 VC object.</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 210 (Wed Jan 11 19:21:32 2023 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Succeeded: s/be be/not be/</p>
+<p class=warning>No scribenick or scribe found. Guessed: PhilF</p>
+<p class=warning>All speakers: brent, DavidC, dlongley, JoeAndrieu, Orie, TallTed</p>
+<p class=warning>Active on IRC: andres, brent, cabernet, DavidC, dlongley, dmitriz, JoeAndrieu, Orie, pdl-ASU, PhilF, shigeya, TallTed</p>
+</div>
+</body>
+</html>
