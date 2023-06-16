@@ -84,7 +84,7 @@ async function getOneMinute(file: any): Promise<string> {
 
 // deno-lint-ignore-file no-explicit-any no-explicit-any no-explicit-any
 async function main(): Promise<void> {
-    const response = await fetch('https://api.github.com/repos/iherman/pmwg/contents/experiments/minutes');
+    const response = await fetch('https://api.github.com/repos/iherman/pmwg/contents/.experiments/minutes');
     // const response = await fetch('https://api.github.com/repos/iherman/pmwg/contents/minutes');
     const data = await response.json();
 
