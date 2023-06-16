@@ -61,8 +61,8 @@
 
 
             (async () => {
-                const response = await fetch('https://api.github.com/repos/iherman/pmwg/contents/experiments/minutes');
-                // const response = await fetch('https://api.github.com/repos/iherman/pmwg/contents/minutes');
+                // const response = await fetch('https://api.github.com/repos/iherman/pmwg/contents/experiments/minutes');
+                const response = await fetch('https://api.github.com/repos/iherman/pmwg/contents/minutes');
                 const data = await response.json();
 
                 const sorted_data = data.sort((a,b) => {
