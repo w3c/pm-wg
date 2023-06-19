@@ -9,8 +9,9 @@ The list or other github repositories, maintained by this Working Group, is also
 
 ## Minutes
 
-The minutes of the Working Group calls or F2F meetings are stored in the `minutes` folder on this repository. There is
-an [index page](https://w3c.github.io/pm-wg/minutes/index.html) that can be used to access the individual minutes in a readable form.
+Minutes are taken using the [W3C Bots on IRC](https://www.w3.org/2008/04/scribe.html), namely [RRSAgent](https://www.w3.org/2002/03/RRSAgent) and [Zakim](https://www.w3.org/2001/12/zakim-irc-bot.html). See also the separate page on [IRC](https://www.w3.org/Project/IRC/) for further details on how to access the W3C IRC servers. The PM Working Group uses the `#pmwg` IRC Channel.
+
+By default, the minutes are stored as `https://www.w3.org/YYYY/MM/DD-pmwg-minutes.html`. Modifying/updating those minutes require W3C team privileges, though. To make them more easily manageable to the Working Group, these minutes are copied on the `minutes` folder on this repository under the name `YYYY-MM-DD.html`. There is also an [index page](https://w3c.github.io/pmwg/minutes/index.html) that can be used to access the individual minutes in a readable form.
 
 ## Contributing to the Publishing Maintenance Working Group Repositories
 
