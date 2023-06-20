@@ -84,8 +84,8 @@ async function getOneMinute(file: any): Promise<string> {
 
 // deno-lint-ignore-file no-explicit-any no-explicit-any no-explicit-any
 async function main(): Promise<void> {
-    const response = await fetch('https://api.github.com/repos/w3c/pmwg/contents/.experiments/minutes');
-    // const response = await fetch('https://api.github.com/repos/w3c/pmwg/contents/minutes');
+    const response = await fetch('https://api.github.com/repos/w3c/pm-wg/contents/.experiments/minutes');
+    // const response = await fetch('https://api.github.com/repos/w3c/pm-wg/contents/minutes');
     const data = await response.json();
 
     const sorted_data = data.sort((a,b) => {
