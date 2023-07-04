@@ -5,7 +5,7 @@
 
 This is the repository used for the everyday operation of the [W3C Publishing Maintenance Working Group](https://www.w3.org/groups/wg/pm). See also [charter of the Working Group](https://www.w3.org/2023/06/pmwg-charter.html) for further details.
 
-The list or other github repositories, maintained by this Working Group, is also available [on-line](https://beta.w3.org/groups/wg/pm/tools/).
+The list or other github repositories, maintained by this Working Group, is also available [on-line](https://www.w3.org/groups/wg/pm/tools/).
 
 ## Minutes
 
