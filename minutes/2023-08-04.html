@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 04 August 2023</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>04 August 2023</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2023Aug/0000.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2023/08/04-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, brady, CharlesL, dauwhe, duga, George, ivan_, MasakazuKitahara, mgarrish, shiestyle, toshiakikoike, tzviya, wendy, wendyreid</dd>
+<dt>Regrets</dt><dd>gregorio</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=x005 class=irc><cite>&lt;ivan_&gt;</cite> Date: 2023-08-04</p>
+<p id=x025 class="phone s01"><cite>wendyreid:</cite> Welcome back! We have a big agenda</p>
+<p id=x027 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/orgs/w3c/projects/37/views/1">https://<wbr>github.com/<wbr>orgs/<wbr>w3c/<wbr>projects/<wbr>37/<wbr>views/<wbr>1</a></p>
+<p id=x031 class="phone s01"><cite>wendyreid:</cite> we have to maintain all our doucments<br>
+<span id=x032>… they are spread out over multiple repos, and we have carried over issues from previous groups</span><br>
+<span id=x033>… we can make errata, and some new changes on some types of docs</span></p>
+<p id=x034 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/pm-wg/wiki/Publication-steps">https://<wbr>github.com/<wbr>w3c/<wbr>pm-wg/<wbr>wiki/<wbr>Publication-steps</a></p>
+<p id=x037 class="phone s01"><cite>wendyreid:</cite> We need to agree on the classification of changes<br>
+<span id=x038>… some of the issues have been assigned a class, but we need to make sure there is agreement on those</span></p>
+<p id=x051 class="phone s02"><cite>ivan_:</cite> Short summary<br>
+<span id=x052>… class 1 and 2 are insignificant changes, no big difference between the two</span><br>
+<span id=x053>… markup, css, metadata, spelling, etc</span><br>
+<span id=x054>… jump to class 4, this is new features</span><br>
+<span id=x055>… we cannot do this for class 4, but we can for audiobooks and pub manifest</span><br>
+<span id=x056>… class 3 is more vague, signinficant changes in the document</span><br>
+<span id=x057>… e.g. maybe we need new tests, and RS may need to think about whether the implementation will change</span><br>
+<span id=x058>… If it doesn't really force that, then we can consider it class 2</span><br>
+<span id=x059>… bad thing is we don't have a great algorithm for class 3 vs 2, it is up to the WG to determine</span><br>
+<span id=x060>… issue 2560 is an example. There was a report of referencing webp, and we need the final ref to it</span><br>
+<span id=x061>… so is that 2 or 3? Text changed, so definitely 2, but what about 3? Are there significant changes to webp that make people look at implementations</span><br>
+<span id=x062>… Just one example of a borderline</span></p>
+<p id=x068 class="phone s01"><cite>wendyreid:</cite> Need to keep this short (lots of agenda items)<br>
+<span id=x069>… so let's jump to those and see if we agree on the assigned classes</span><br>
+<span id=x070>… Next item, pub schedule</span><br>
+<span id=x071>… Matt and Ivan have been busy with prep work for class 1 and 2</span><br>
+<span id=x072>… If we move to merge those, we should republish</span><br>
+<span id=x073>… But going forward we should consider timing and cadence</span></p>
+<p id=x078 class="phone s02"><cite>ivan_:</cite> Need to understand that when we make a change it does not mean we change a WD and go through the original process of publishing<br>
+<span id=x079>… instead we publish a new rec, not a big deal for small things</span><br>
+<span id=x080>… but bigger things need a little more work</span><br>
+<span id=x081>… but what we publish is immediately a new rec</span><br>
+<span id=x082>… too frequently might be burdensome</span></p>
+<p id=x083 class=irc><cite>&lt;AvneeshSingh_&gt;</cite> +1 to 6 months interval</p>
+<p id=x086 class="phone s02"><cite>ivan_:</cite> we should not publish more than quarterly, and maybe even every 6 months<br>
+<span id=x087>… Publishing now may not be a good idea, since we will discuss things at TPAC</span><br>
+<span id=x088>… for instance issue 2412 (webtoons) may need more discussion at TPAC</span></p>
+<p id=x089 class=irc><cite>&lt;tzviya&gt;</cite> +1 to wait to publish until we have more issues</p>
+<p id=x090 class="phone s02"><cite>ivan_:</cite> so probably better to pile up, and publish in Oct or Nov</p>
+<p id=x094 class="phone s01"><cite>wendyreid:</cite> Our community is change averse<br>
+<span id=x095>… so let's do fewer</span><br>
+<span id=x096>… 6 months is predictable</span></p>
+<p id=x101 class="phone s03"><cite>CharlesL:</cite> I agree generally<br>
+<span id=x102>… but editorial changes maybe go out sooner?</span><br>
+<span id=x103>… just to make the doc as accurate as possible</span><br>
+<span id=x104>… For instance, a bad link that is causing confusion may want to be updated quickly</span></p>
+<p id=x105 class="phone s01"><cite>wendyreid:</cite> By end of year seems to hit those points</p>
+<p id=x106 class="phone s01"><cite>wendyreid:</cite> any oppo to 6 month cadence? &lt;crickets&gt;</p>
+<p id=x107 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/pm-wg/issues/4">w3c/<wbr>pm-wg#4</a></p>
+<p id=x112 class="phone s01"><cite>wendyreid:</cite> On to TPAC agenda planning<br>
+<span id=x113>… We have 2 sessions over 2 days, ~7 hours</span><br>
+<span id=x114>… would like input on topics</span><br>
+<span id=x115>… speak up now or add it to the issue</span></p>
+<p id=x118 class="phone s02"><cite>ivan_:</cite> Will we have enough info to make the ISO decision?</p>
+<p id=x120 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to ask about BG.CG</p>
+<p id=x121 class="phone s01"><cite>wendyreid:</cite> Still waiting on the European commision</p>
+<p id=x125 class="phone s04"><cite>tzviya:</cite> We need to ask Cristina directly<br>
+<span id=x126>… We need more coordination between business, cg, and this group</span><br>
+<span id=x127>… we need more cross coords</span></p>
+<p id=x129 class="phone s05"><cite>shiestyle:</cite> Gregorio suggested a11y</p>
+<p id=x130 class=irc><cite>&lt;CharlesL&gt;</cite> Charles is attending TPAC in person</p>
+<p id=x131 class="phone s01"><cite>wendyreid:</cite> Yes, I will handle that</p>
+<p id=x132 class=irc><cite>&lt;George&gt;</cite> George virtually</p>
+<p id=x133 class=irc><cite>&lt;toshiakikoike&gt;</cite> koike virtually</p>
+<p id=x134 class="phone s01"><cite>wendyreid:</cite> [summarizing who is attending TPAC physically/virtually]</p>
+<p id=x137 class="phone s04"><cite>tzviya:</cite> Anything on audiobooks or pub manifest?<br>
+<span id=x138>… invite Laurent to discuss his work on TDM</span><br>
+<span id=x139>… what about Hadrien?</span></p>
+<p id=x141 class="phone s01"><cite>wendyreid:</cite> We will do some reach out</p>
+<p id=x142 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/orgs/w3c/projects/37/views/1">https://<wbr>github.com/<wbr>orgs/<wbr>w3c/<wbr>projects/<wbr>37/<wbr>views/<wbr>1</a></p>
+<p id=x145 class="phone s01"><cite>wendyreid:</cite> Let's go through issues<br>
+<span id=x146>… mostly epub issues due to carryover</span><br>
+<span id=x147>… Matt or Ivan, do you want to go over things?</span></p>
+<p id=x148 class="phone s02"><cite>ivan_:</cite> I leave it to Matt</p>
+<p id=x151 class="phone s06"><cite>mgarrish:</cite> I have put in pull requests for everything in epub that could be fixed<br>
+<span id=x152>… just webp left, due to timing issues</span><br>
+<span id=x153>… do we want to go over them one at a time? Or something else?</span></p>
+<p id=x154 class="phone s01"><cite>wendyreid:</cite> Let's do one at a time</p>
+<p id=x155 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2578">w3c/<wbr>epub-specs#2578</a></p>
+<p id=x156 class="phone s01"><cite>wendyreid:</cite> 2578 looks easy</p>
+<p id=x157 class="phone s02"><cite>ivan_:</cite> For each one we have to officially decide if it is an errate</p>
+<p id=x158 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=x159 class="phone s01"><cite>wendyreid:</cite> This looks like errata, forgot to remove a note when we published</p>
+<p id=x160 class=irc><cite>&lt;tzviya&gt;</cite> +1</p>
+<p id=x161 class="phone s02"><cite>ivan_:</cite> This is on record, that is fine</p>
+<p id=x163 class="phone s01"><cite>wendyreid:</cite> Oppo to calling it errata? &lt;no&gt;<br>
+<span id=x164>… reolved it is errata</span></p>
+<p id=x165 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2567">w3c/<wbr>epub-specs#2567</a></p>
+<p id=x166 class="phone s01"><cite>wendyreid:</cite> 2567 looks like an obvious error, class 1, make it errata</p>
+<p id=x167 class=irc><cite>&lt;tzviya&gt;</cite> errata</p>
+<p id=x170 class=irc><cite>&lt;wendyreid&gt;</cite> duga: Raising this on GH and in issues, it's been reviewed by the group.</p>
+<p id=x171 class="phone s07"><cite>duga:</cite> Github is bringing it to the group</p>
+<p id=x172 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2556">w3c/<wbr>epub-specs#2556</a></p>
+<p id=x173 class="phone s04"><cite>tzviya:</cite> Is there anything on the list we need to discuss?</p>
+<p id=x175 class="phone s01"><cite>wendyreid:</cite> 2556 is class 3 (maybe), there is currently a restricton on epub:type in svg content docs for anchors<br>
+<span id=x176>… this should be better defined</span></p>
+<p id=x178 class="phone s06"><cite>mgarrish:</cite> We have 3 classes in svg where it is allowed<br>
+<span id=x179>… but it turns out there is another element that also needs it</span></p>
+<p id=x181 class="phone s02"><cite>ivan_:</cite> But it is an obvious example of class 3, e.g. epubcheck at least will need to change<br>
+<span id=x182>… is it ok to be errata?</span></p>
+<p id=x183 class="phone s06"><cite>mgarrish:</cite> Should we leave these open or close them?</p>
+<p id=x184 class="phone s02"><cite>ivan_:</cite> depends</p>
+<p id=x187 class="phone s01"><cite>wendyreid:</cite> Editorially it is hard to keep things open due to merge conflicts<br>
+<span id=x188>… if we are accepting the PRs we don't need to leave things open</span><br>
+<span id=x189>… The editors draft will just be more up to date</span></p>
+<p id=x190 class="phone s02"><cite>ivan_:</cite> Are the PRs changes directly, or updates to the text?</p>
+<p id=x191 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2569">w3c/<wbr>epub-specs#2569</a></p>
+<p id=x192 class="phone s06"><cite>mgarrish:</cite> class 1 and 2 are direct, class 3 has full edits (ins/del/etc)</p>
+<p id=x193 class="phone s02"><cite>ivan_:</cite> Ok, lets merge</p>
+<p id=x194 class="phone s01"><cite>wendyreid:</cite> 2569 summary</p>
+<p id=x196 class="phone s06"><cite>mgarrish:</cite> 2569 and 2570 are similar<br>
+<span id=x197>… Just need a note to say use &quot;none&quot; for a11y</span></p>
+<p id=x198 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2570">w3c/<wbr>epub-specs#2570</a></p>
+<p id=x203 class="phone s06"><cite>mgarrish:</cite> and the other change is to note exemptions<br>
+<span id=x204>… mainly for data tracking to identify which allows for tracking a11y exemptions and understand why</span><br>
+<span id=x205>… so this is class 2 clarification and suggestions</span><br>
+<span id=x206>… The exemption value can live in a note, don't need to add it to the spec itself</span><br>
+<span id=x207>… We can decide if we do a 1.1 or 1.2. WG note is fine now</span></p>
+<p id=x208 class="phone s01"><cite>wendyreid:</cite> Comments or oppo?</p>
+<p id=x209 class="phone s02"><cite>ivan_:</cite> That means we need to define a new WG note</p>
+<p id=x210 class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1 from me</p>
+<p id=x211 class="phone s06"><cite>mgarrish:</cite> Yes</p>
+<p id=x214 class="phone s03"><cite>CharlesL:</cite> Do we need to point to the note from 1.1?</p>
+<p id=x215 class="phone s06"><cite>mgarrish:</cite> Yes, the informative section needs to ref the note, so we need to get the note out first</p>
+<p id=x219 class="phone s08"><cite>AvneeshSingh:</cite> Just want to say this was incubated in the CG and brought to the WG<br>
+<span id=x220>… want to encourage more of that</span></p>
+<p id=x223 class="phone s09"><cite>George:</cite> Anything that would trigger an epubcheck change would be class 3, right?</p>
+<p id=x224 class="phone s02"><cite>ivan_:</cite> Yes</p>
+<p id=x225 class=irc><cite>&lt;AvneeshSingh&gt;</cite> anything that will trigeer error in EPUBCheck or remove an error from EPUBCheck</p>
+<p id=x226 class="phone s04"><cite>tzviya:</cite> It has to be, anything that triggers a change in epubcheck changes our must/may statements, so that is a real functionality change</p>
+<p id=x227 class="phone s03"><cite>CharlesL:</cite> With some other things like webp that is being updated which is just changing the ref, couldn't this cause a functional change?</p>
+<p id=x230 class="phone s06"><cite>mgarrish:</cite> We need to wait for the RFC change first<br>
+<span id=x231>… How much changes in the RFC will impact how substantive our change is (2 or 3)</span></p>
+<p id=x233 class="phone s10"><cite>dauwhe:</cite> But unlikely they will break the web with updates to webp</p>
+<p id=x238 class="phone s02"><cite>ivan_:</cite> In the current spec we ref a Google dev page, the only thing we had at the time<br>
+<span id=x239>… It is an odd normative reference</span><br>
+<span id=x240>… this means we move to an ietf ref</span><br>
+<span id=x241>… slightly more than have a good ref to a format</span><br>
+<span id=x242>… it is also removing a company doc reference out of a standard</span></p>
+<p id=x243 class="phone s01"><cite>wendyreid:</cite> Actual doc changes are still minimal</p>
+<p id=x246 class="phone s02"><cite>ivan_:</cite> But it has symbolic meaning<br>
+<span id=x247>… so we might want to make it class 3 to call attention to it as an important change</span><br>
+<span id=x248>… probably implementations don't change, but would support class 3 to call attention to it</span></p>
+<p id=x250 class="phone s01"><cite>wendyreid:</cite> Don't mind be prudent to call attention when it could be signficant</p>
+<p id=x253 class="phone s03"><cite>CharlesL:</cite> It will be in the change logs<br>
+<span id=x254>… so could call out the importance in the change logs</span></p>
+<p id=x258 class="phone s02"><cite>ivan_:</cite> You are right, but there is a little more to it<br>
+<span id=x259>… publishing a rec with class 3 changes is a several change process, there is an AC review</span><br>
+<span id=x260>… editorially it is a pain, esp for Matt</span><br>
+<span id=x261>… it needs to be presented with the changes marked clearly to the AC</span></p>
+<p id=x263 class="phone s06"><cite>mgarrish:</cite> Draws people attention<br>
+<span id=x264>… not sure how to even do it</span></p>
+<p id=x267 class=irc><cite>&lt;wendyreid&gt;</cite> duga: One thing to consider, if we're going to point this out, it will call people's attention to it, and people might spend half a day reading WebP RFCs they don't need to.</p>
+<p id=x268 class=irc><cite>&lt;tzviya&gt;</cite> +1 to duga</p>
+<p id=x270 class=irc><cite>&lt;dauwhe&gt;</cite> +1000 to Brady</p>
+<p id=x271 class=irc><cite>&lt;wendyreid&gt;</cite> ... I understand it's an important change to the spec, but not necessarily to implementers.</p>
+<p id=x272 class=irc><cite>&lt;wendyreid&gt;</cite> ... I would suggest caution</p>
+<p id=x274 class="phone s02"><cite>ivan_:</cite> I personally have no idea if there is a difference to the ietf version vs google one</p>
+<p id=x275 class=irc><cite>&lt;wendyreid&gt;</cite> duga: Agreed, but we can be cautious, someone here could spend that day and we could highlight that. Or we might look and say it's identical, it's not a big deal</p>
+<p id=x276 class=irc><cite>&lt;wendyreid&gt;</cite> ... not highlight it as much</p>
+<p id=x277 class=irc><cite>&lt;wendyreid&gt;</cite> ... we don't need to tell every implementer to read it</p>
+<p id=x278 class=irc><cite>&lt;wendyreid&gt;</cite> ivan_: Action item for Brady?</p>
+<p id=x279 class=irc><cite>&lt;wendyreid&gt;</cite> duga: I am happy to ask someone from google to review it</p>
+<p id=x280 class="phone s03"><cite>CharlesL:</cite> If epubcheck reports an error, will it ref the RFC??</p>
+<p id=x281 class="phone s06"><cite>mgarrish:</cite> No, it won't point people at specs</p>
+<p id=x283 class="phone s01"><cite>wendyreid:</cite> Let's leave it where it is now<br>
+<span id=x284>… and we can leave it to Brady to tell us if anything significant has changed?</span></p>
+<p id=x285 class="phone s02"><cite>ivan_:</cite> editors job is different for class 2 and class 3</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 221 (Fri Jul 21 14:01:30 2023 UTC).</address>
+
+
+</body>
+</html>
