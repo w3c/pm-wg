@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>PMWG TPAC F2F Day 1 &ndash; 11 September 2023</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+PMWG TPAC F2F Day 1</h1>
+<h2>11 September 2023</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2023/09/11-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd><details><summary>Avneesh Singh</summary> Bill_Kasdorf_, billk, CharlesL, Daihei, dauwhe, duga, GautierC, george, gpellegrino, ivan, Ken_Jones, kristina, laurent, leonardr, liisamk_, makoto, MasakazuKitahara, mgarrish, MURATA, RickJ, romain, shiestyle, toshiakikoike, tzviya, wendy, wendyreid, wolfgang, sebastian, alicia, shadi</details></dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>dauwhe, shiestyle, tzviya, wendyreid</dd>
+<dt>Scribe</dt><dd>CharlesL, duga, gpellegrino</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t01">Open PRs</a>
+<ol>
+<li><a href="#t02">PR 2572</a></li>
+<li><a href="#t03">w3c/<wbr>epub-specs#2572</a></li>
+<li><a href="#t04">w3c/<wbr>epub-specs#2571</a></li>
+<li><a href="#t05">w3c/<wbr>epub-specs#2527</a></li>
+</ol>
+</li>
+<li><a href="#t06">Anti-counterfeiting</a></li>
+<li><a href="#t07">EPUB/A</a></li>
+<li><a href="#t08">EPUB to ISO</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section>
+<h3 id=t01>Publishing process</h3>
+
+<p id=x026 class="phone s01"><cite>wendyreid:</cite> Welcome!</p>
+<p id=x031 class="phone s01"><cite>wendyreid:</cite> 2 days of meetings, we do have a decent amount on the agenda<br>
+<span id=x032>… We also have some guests joining us</span><br>
+<span id=x033>… Hopefully we can be productive</span></p>
+<p id=x038 class="phone s02"><cite>duga:</cite> this is a WG meeting, isn't it?<br>
+<span id=x039>… so do we have same rules for IP and non-disclosoure?</span></p>
+<p id=x041 class="phone s01"><cite>wendyreid:</cite> yes</p>
+<p id=x045 class="phone s01"><cite>wendyreid:</cite> Boring stuff first<br>
+<span id=x046>… Talk about publishing process, there are some questions from the last meeting</span><br>
+<span id=x047>… [link to slide deck coming]</span></p>
+<p id=x067 class="phone s03"><cite>mgarrish:</cite> Going over the W3C process for how we make changes<br>
+<span id=x068>… There are 4 classes of changes</span><br>
+<span id=x069>… Class 1 - no content change (maybe CSS, etc)</span><br>
+<span id=x070>… easy, just publish when you want, no W3C approval needed</span><br>
+<span id=x071>… Class 2 modifies the text in  some way, but with no normative change</span><br>
+<span id=x072>… Things like typos, punctuation, maybe remove a note</span><br>
+<span id=x073>… Also does not require approval from w3c</span><br>
+<span id=x074>… Class 3 updates/clarifies/changes normative statements</span><br>
+<span id=x075>… for example epub:type clarification of elements it applies to</span><br>
+<span id=x076>… mgarrish has lost audio</span><br>
+<span id=x077>… This requires approval</span><br>
+<span id=x078>… Class 4 adds new features</span><br>
+<span id=x079>… This is pub manifest and audiobooks only, not epub</span></p>
+<p id=x080 class=irc><cite>&lt;mgarrish&gt;</cite> <a href="https://w3c.github.io/epub-specs/epub33/errata.html">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub33/<wbr>errata.html</a></p>
+<p id=x085 class="phone s03"><cite>mgarrish:</cite> There is a list of substantial and non-substantial changes<br>
+<span id=x086>… we need to tag every change with these levels</span><br>
+<span id=x087>… After it is tagged everything works automatically</span><br>
+<span id=x088>… for class 3 and 4 changes, they need to be annotate (change log isn't enough)</span><br>
+<span id=x089>… Need to make a diff with ins and del tags</span></p>
+<p id=x090 class=irc><cite>&lt;mgarrish&gt;</cite> <a href="https://w3c.github.io/epub-specs/epub33/core/#sec-xhtml-svg">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub33/<wbr>core/#sec-xhtml-svg</a></p>
+<p id=x103 class="phone s03"><cite>mgarrish:</cite> See link for an example<br>
+<span id=x104>… Change logs need to detail substantive changes</span><br>
+<span id=x105>… Only current changes are expanded, the rest are collapsed</span><br>
+<span id=x106>… Class 3 and 4 needs approval, but CR and PR, etc stages</span><br>
+<span id=x107>… Basically do an AC review, AC votes, then we remove the diff markup and publish the new text</span><br>
+<span id=x108>… WG decides when to publish</span><br>
+<span id=x109>… Looking at every 6 months</span><br>
+<span id=x110>… If we need to we can release faster</span><br>
+<span id=x111>… Notes are unchanged, same process as before</span><br>
+<span id=x112>… changes are just done</span><br>
+<span id=x113>… new notes still require approval</span></p>
+<p id=x116 class=irc><cite>&lt;Zakim&gt;</cite> ivan, you wanted to add to the way changes are published</p>
+<p id=x119 class="phone s04"><cite>ivan:</cite> There is a long chain of current and previous recs, this needs to be done for various legal reasons<br>
+<span id=x120>… tooling is missing at the moment so it is a chore</span></p>
+<p id=x121 class="phone s05"><cite>tzviya:</cite> The sound is awful</p>
+<p id=x123 class="phone s01"><cite>wendyreid:</cite> Do you have PRs open for us to review</p>
+<p id=x124 class="phone s03"><cite>mgarrish:</cite> There are a couple</p>
+<p id=x125 class=irc><cite>&lt;mgarrish&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2572">w3c/<wbr>epub-specs#2572</a></p>
+</section>
+
+<section>
+<h3 id=t01>Open PRs</h3>
+<h4 id=t03><a href="https://github.com/w3c/epub-specs/pull/2572">w3c/<wbr>epub-specs#2572</a></h4>
+<p id=x134 class="phone s03"><cite>mgarrish:</cite> Add &quot;none&quot; as an option for a11y<br>
+<span id=x135>… Better than just missing statement, since it has a clearer intent</span><br>
+<span id=x136>… This is a class 2 change</span><br>
+<span id=x137>… combines informative pieces into new informative section</span></p>
+<p id=x138 class="phone s06"><cite>leonardr:</cite> Can someone clarify the change from &quot;may&quot; to &quot;can&quot;? Does it matter?</p>
+<p id=x140 class="phone s03"><cite>mgarrish:</cite> This is a lowercase &quot;may&quot;, so it is not considered a normative statement in our spec</p>
+<p id=x141 class=irc><cite>&lt;MURATA&gt;</cite> I have to leave now, since I have to attend the plenary meeting of ISO/IEC JTC1/SC34.  I will be back at 15:00 UTC.</p>
+<p id=x147 class="phone s07"><cite>gpellegrino:</cite> The issue was raised by the federation of European publishers<br>
+<span id=x148>… We can say several things about the a11y of the publication</span><br>
+<span id=x149>… It can be 1. Checked and it is ok, 2, checked and it is broken, 3. did not check</span><br>
+<span id=x150>… Adding this information allows us to better understand whether the file was checked or not</span><br>
+<span id=x151>… This is important for statistics to report to lawmakers</span><br>
+<span id=x152>… Also needed to align with onix</span></p>
+<p id=x154 class="phone s01"><cite>wendyreid:</cite> Any other comments?</p>
+<p id=x155 class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: Merge PR 2572</p>
+<p id=x156 class=summary>+1</p>
+<p id=x157 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=x158 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=x159 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=x160 class=summary>+1</p>
+<p id=x161 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=x162 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=x163 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=x164 class=irc><cite>&lt;tzviya&gt;</cite> +1</p>
+<p id=x165 class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1</p>
+<p id=x166 class=irc><cite>&lt;wolfgang&gt;</cite> +1</p>
+<p id=x167 class=irc><cite>&lt;Ken_Jones&gt;</cite> +1</p>
+<p id=r01 class=resolution><strong>RESOLUTION:</strong> Merge PR 2572</p>
+<p id=x170 class=irc><cite>&lt;dauwhe&gt;</cite> +1</p>
+<p id=x172 class=irc><cite>&lt;mgarrish&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2571">w3c/<wbr>epub-specs#2571</a></p>
+<h4 id=t04><a href="https://github.com/w3c/epub-specs/pull/2571">w3c/<wbr>epub-specs#2571</a></h4>
+<p id=x179 class="phone s03"><cite>mgarrish:</cite> EAA has 3 exemptions<br>
+<span id=x180>… onix has 3 values for these exemptions</span><br>
+<span id=x181>… We want to match onix</span><br>
+<span id=x182>… New note with metadata field that can be used for EAA</span><br>
+<span id=x183>… but also works for other jurisdictions</span></p>
+<p id=x184 class=irc><cite>&lt;Bill_Kasdorf_&gt;</cite> Could you repeat the three values, please?</p>
+<p id=x190 class="phone s07"><cite>gpellegrino:</cite> These are less technical and more legal<br>
+<span id=x191>… The three values are good to cover these</span><br>
+<span id=x192>… There was a request to add annotations to the values, you are free to do that but we are not adding anything specifically</span><br>
+<span id=x193>… There could be a much larger quantity of these reasons</span></p>
+<p id=x194 class="phone s01"><cite>wendyreid:</cite> Librarians might need that, but we probably don'tt that much for epub</p>
+<p id=x195 class="phone s03"><cite>mgarrish:</cite> Doesn't seem that important to add now, we address as needed in the future</p>
+<p id=x197 class="phone s07"><cite>gpellegrino:</cite> Just want to add that Christina has reviewed the note and has given her endorsement (she is very involved in EAA)</p>
+<p id=x198 class=irc><cite>&lt;Ken_Jones&gt;</cite> @bill three values are The official names of the EAA exceptions are: Microenterprise, Disproportionate burden, Fundamental alteration.</p>
+<p id=x199 class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: Merge PR 2571</p>
+<p id=x200 class=irc><cite>&lt;Bill_Kasdorf_&gt;</cite> Thanks</p>
+<p id=x203 class="phone s04"><cite>ivan:</cite> For the publication of this note, we have to wait for TPAC to settle<br>
+<span id=x204>… And there is a week when I am on vacation</span><br>
+<span id=x205>… We should set Oct 3 as pub date</span></p>
+<p id=x206 class="phone s03"><cite>mgarrish:</cite> Do we have to decide if we are using echidna?</p>
+<p id=x207 class="phone s04"><cite>ivan:</cite> We already decided to use echidna</p>
+<p id=x210 class=irc><cite>&lt;mgarrish&gt;</cite> epub-a11y-exemption</p>
+<p id=x211 class=irc><cite>&lt;ivan&gt;</cite> shortname: epub-a11y-exemption/</p>
+<p id=x212 class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: Merge PR 2571, publish a new note for the Exemption property on oct 3, short name will be &quot;epub-a11y-exemption&quot;</p>
+<p id=x213 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=x214 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=x215 class=summary>+1</p>
+<p id=x216 class=irc><cite>&lt;tzviya&gt;</cite> +1</p>
+<p id=x217 class=summary>+1</p>
+<p id=x218 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=x219 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=x220 class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1</p>
+<p id=x221 class=irc><cite>&lt;Ken_Jones&gt;</cite> +1</p>
+<p id=x222 class=irc><cite>&lt;wolfgang&gt;</cite> +1</p>
+<p id=x223 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=x224 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=x225 class=irc><cite>&lt;Bill_Kasdorf_&gt;</cite> +1</p>
+<p id=x226 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=r02 class=resolution><strong>RESOLUTION:</strong> Merge PR 2571, publish a new note for the Exemption property on oct 3, short name will be &quot;epub-a11y-exemption&quot;</p>
+<p id=x228 class=irc><cite>&lt;George&gt;</cite> +1</p>
+<p id=x229 class="phone s01"><cite>wendyreid:</cite> Do we want to do the third one?</p>
+<h4 id=t05><a href="https://github.com/w3c/epub-specs/pull/2527">w3c/<wbr>epub-specs#2527</a></h4>
+<p id=x232 class="phone s03"><cite>mgarrish:</cite> That is old IDPF stuff, and we discussed bumping something down<br>
+<span id=x233>… Not sure if we can do that</span></p>
+<p id=x234 class="phone s04"><cite>ivan:</cite> It is still hanging in the air</p>
+<p id=x235 class="phone s03"><cite>mgarrish:</cite> First we need to resolve whether we can change old docs</p>
+<p id=x236 class="phone s01"><cite>wendyreid:</cite> Sounds like we need to talk to the system team?</p>
+<p id=x241 class="phone s01"><cite>wendyreid:</cite> Unless we have further publish process comments we can break early<br>
+<span id=x242>… in 25 minutes we will have the next session</span><br>
+<span id=x243>… we will start ON TIME for the next session ( we have an invited guest)</span><br>
+<span id=x244>… reconvene at 3:45 Seville time</span></p>
+<p id=x247 class=irc><cite>&lt;ivan&gt;</cite> guest+ sebastian</p>
+</section>
+
+<section>
+<h3 id=t06>Anti-counterfeiting</h3>
+<p id=x255 class="phone s08"><cite>Sebastian:</cite> growing concern fraud retail platforms print and ebooks<br>
+<span id=x256>… fake accounts may sell content they dont have the rights to.</span><br>
+<span id=x257>… possible approaches were reviewed.</span></p>
+<p id=x259 class=irc><cite>&lt;Bill_Kasdorf_&gt;</cite> Will these slides be available?</p>
+<p id=x288 class="phone s08"><cite>Sebastian:</cite> tried to dev. a structured approach. will share the results.<br>
+<span id=x289>… not any legal evaluations, just the technical specifics.</span><br>
+<span id=x290>… news reports from publishers in local markets, italy, germany and usa</span><br>
+<span id=x291>… entire books republished with fake accounts, attach fake metadata, author info etc.</span><br>
+<span id=x292>… there is paywalls to get additional content.</span><br>
+<span id=x293>… repos fake accounts offer own content, but use the authors data, best sellers</span><br>
+<span id=x294>… original content is modified from the author's version</span><br>
+<span id=x295>… fake accounts, book promoted as a best seller but the book contains empty pages but had the same cover author etc.</span><br>
+<span id=x296>… selling reprints was another issue.</span><br>
+<span id=x297>… publishers had to identify multiple platforms, why should the publishers do this, not the retailers?</span><br>
+<span id=x298>… we need to identify these fake books and be proactive to remove these fake items.</span><br>
+<span id=x299>… if we can identify a similar cover image could be a red flak.  we need to determine the original version.  Make public and verifiable reference to aid in identification of the fake items.</span><br>
+<span id=x300>… Human generated vs. AI generated is another concern.</span><br>
+<span id=x301>… visible or invisible messages into the media file.  Manifest embedding, certificates, into assets metadata C2PA initiative.</span><br>
+<span id=x302>… verifiable identification, metadata, these compliment each other and if used in combination can be a benefit</span><br>
+<span id=x303>… funded by the EU commision.</span><br>
+<span id=x304>… support our work on verifiable credentials. this just recently started 1 month ago.</span><br>
+<span id=x305>… verifiable content, metadata and rights to the work.  2nd reinforcces this with public credentials.  cryptographic identification.</span><br>
+<span id=x306>… ICC originated in German Book market in 2017.</span><br>
+<span id=x307>… ICC drafted , ISO publishing early next year.</span><br>
+<span id=x308>… example of ICC, created directly from the digital media file</span><br>
+<span id=x309>… generating an ICC can be done by anyone with access to the file and uses cryptography.</span><br>
+<span id=x310>… different versions or file formats, or content with metadata, will be similar crypto hash but will be able to deterine they are different but somewhat similar.</span><br>
+<span id=x311>… changing the color of an image will still be able to find a match cryptographic hash,</span><br>
+<span id=x312>… near duplicate versions / clusters can be deterined even if the content is changed slightly.  this will help to find these fake digital files.</span><br>
+<span id=x313>… decenteralized registries can be used to look up these original rights holders.</span><br>
+<span id=x314>… Publishers can contribute to a robust network to help detect fake media files, and submit their own ICC hash codes for authentic original covers, metadata etc to these decentralized repositories.</span><br>
+<span id=x315>… we ask you to join the anti-counterfeit task force to help us with this effort</span></p>
+<p id=x324 class="phone s09"><cite>dauwhe:</cite> I bought a book from Norton, I realized it was counterfeit because of the quality. the one displayed was the cheeper version.</p>
+<p id=x328 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to ask how realistic publishing on blockchain is</p>
+<p id=x329 class="phone s08"><cite>Sebastian:</cite> this comes up often.  I don't know what to say.  best solution would be content recognition, if the same cover is used by two accounts and choose the correct book publisher.</p>
+<p id=x334 class="phone s10"><cite>liisamk_:</cite> Amazon is trying to resolve this.  they are finding things but this is spreading fast.<br>
+<span id=x335>… building a trust chain from end to end.</span><br>
+<span id=x336>… we need to programmatically fight this.</span></p>
+<p id=x341 class="phone s05"><cite>tzviya:</cite> 1. blockchain is complicated. Most book publishers are slow moving,  2. generative AI is a big problem.<br>
+<span id=x342>… detecting that is very difficult.</span></p>
+<p id=x347 class="phone s02"><cite>duga:</cite> We did think about blockchain to break out of walled gardens, was very complex, privacy issues we decided not to go that route.<br>
+<span id=x348>… Dave and Liisa wish you were here to continue this.  Sebastian, this seems very technical, hackers will figure out how to circumvent anything you do.</span><br>
+<span id=x349>… this is a complicated as there may be multiple versions all being similar trying to determine fakes from the original, but hard with multi nation entities with multiple imprints who may also have the rights.</span></p>
+<p id=x356 class="phone s01"><cite>wendyreid:</cite> who owns the rights, easier from Penguin Random House, vs some random@gmail.com publisher.<br>
+<span id=x357>… we need retailers to step up when two items come in with the same name red flags should be raised.</span><br>
+<span id=x358>… we do have to think about the self publishers, we need it simple for them to use as well.  CORESOURCE would be a part of the solution here.</span><br>
+<span id=x359>… cover can be unique, images in the book can be stolen.</span></p>
+<p id=x361 class="phone s06"><cite>leonardr:</cite> other assets, 3D, video, mp3 etc. looking to figure out generative AI. multiple groups involved. to determine parts of text to the entire publication being AI generated.</p>
+<p id=x366 class="phone s04"><cite>ivan:</cite> we are the publication Maintenance WG, is there something that the EPUB standard has to adapt itself to changes/additions to work with any of these various solution.  Or is there more we need to do technically.  I am worried that EPUB file as 1 major binary file, its more complicated than that.  how do you apply the whole coding env. with all the files inside the EPUB. What this WG should do vs. laywers need to do ect.</p>
+<p id=x367 class=irc><cite>&lt;liisamk_&gt;</cite> <a href="https://www.amazon.com/L%CD%8F%D6%BC%CE%95%CD%8F%D0%85%CD%8F%D0%85%CD%8F%CE%9F%CD%8F%CE%9D%D6%BC%CD%8F%D0%85-%CE%99%CE%9D-%D0%A1%CD%8F%D6%BC%D0%9D%CD%8F%CE%95%CE%9C%CD%8F%CE%99%D6%BC%CD%8F%D0%85%CD%8F%D0%A2%CD%8FR%CD%8F%CE%A5-S%D1%96gned-Ed%D1%96tion-ebook/dp/B0BXYG9Y98/ref=sr_1_20?crid=ZMJN1RVLRF2W&amp;keywords=lessons+in+chemistry&amp;qid=1694441424&amp;sprefix=lessons+in+chemistry%2Caps%2C317&amp;sr=8-20">https://<wbr>www.amazon.com/<wbr>L%CD%8F%D6%BC%CE%95%CD%8F%D0%85%CD%8F%D0%85%CD%8F%CE%9F%CD%8F%CE%9D%D6%BC%CD%8F%D0%85-%CE%99%CE%9D-%D0%A1%CD%8F%D6%BC%D0%9D%CD%8F%CE%95%CE%9C%CD%8F%CE%99%D6%BC%CD%8F%D0%85%CD%8F%D0%A2%CD%8FR%CD%8F%CE%A5-S%D1%96gned-Ed%D1%96tion-ebook/<wbr>dp/<wbr>B0BXYG9Y98/<wbr>ref=sr_1_20?crid=ZMJN1RVLRF2W&amp;keywords=lessons+in+chemistry&amp;qid=1694441424&amp;sprefix=lessons+in+chemistry%2Caps%2C317&amp;sr=8-20</a></p>
+<p id=x374 class="phone s10"><cite>liisamk_:</cite> Shows an example.<br>
+<span id=x375>… metadata is slightly changed. cover may be changed</span><br>
+<span id=x376>… but this is not PRH selling this book.</span><br>
+<span id=x377>… either we will tell Amazon this is a fake, or Amazon will find this and remove this title.</span><br>
+<span id=x378>… would be easy for a small publishing house to consider this. the blockchain is used for immutable verifiable transactions.</span></p>
+<p id=x380 class=irc><cite>&lt;dauwhe&gt;</cite> MD5 (9780774867740.epub) = 761ef29ed57c3d01101d660c9d46ef3d</p>
+<p id=x384 class="phone s06"><cite>leonardr:</cite> To Ivan, Maybe, whatever solution we come up with or multiple solutions we could require changes to EPUB we leveraged certain file formats and may require changes to bring to those groups.  yes there are changes are required but where that happens is another conversation.</p>
+<p id=x387 class="phone s08"><cite>Sebastian:</cite> these codes can be generated from the EPUB files, and we are working with creating these hash codes that make it easy to do and very fast.  Huge amount of development make it to utilize the block chain without the need for crypto currencies / wallets / NFTs etc.  so you wouldn't even know you are using the blockchain.<br>
+<span id=x388>… verifiable credentials has a lot of use cases.</span><br>
+<span id=x389>… we need to see what that technology can do for us.</span></p>
+<p id=x391 class="phone s01"><cite>wendyreid:</cite> What does it mean for this WG?  either ICC / C2PA codes etc. how do we express them in EPUB.  Is it even appropriate or is this outside of EPUB.  Content creator and content reseller.  WE need to consider that.  if we want it in EPUB does it make sense.  how would this work in publishing.  Are retailers willing to do this.  Are they going to implement this.</p>
+<p id=x393 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to ask who hosts the blockchain</p>
+<p id=x397 class="phone s05"><cite>tzviya:</cite> Who is hosting the blockchain, what is footprint of the blockchain.<br>
+<span id=x398>… is there an expense to this.</span></p>
+<p id=x400 class=irc><cite>&lt;leonardr&gt;</cite> ^^ Thanks @wendyreid</p>
+<p id=x406 class="phone s08"><cite>Sebastian:</cite> there is no need to embed ISCC codes in the EPUB.  the interesting part is ICC code is external / no code/ id/hash into the EPUB.  you just use an ICC generator.  We discussed using ICC codes from publisher to retailers, to aid in deduplication, etc.  we didn't use any blockchain it was just peer to peer.<br>
+<span id=x407>… everything is proof of steak, not proof of work so no env. impact.</span><br>
+<span id=x408>… provides a timestamp and your signature and you can sign your public key and your wallet address can be certified.</span></p>
+<p id=x410 class=summary>digital signature is a huge deal, and you can digitally sign your creative works and others can verify it is really you.</p>
+<p id=x417 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to say that I'm missing something</p>
+<p id=x418 class="phone s02"><cite>duga:</cite> I worry the issue here is source of proof of rights of publications are private contracts and as long as that is true, how can you make verifiable claims.  author gave the rights to another entity who may also have the rights to sell that book.  there are n number of private contracts</p>
+<p id=x420 class="phone s05"><cite>tzviya:</cite> we must be missing something. a demo would be helpful.</p>
+<p id=x422 class=irc><cite>&lt;liisamk_&gt;</cite> only since the dawn of ONIX...</p>
+<p id=x424 class="phone s09"><cite>dauwhe:</cite> expressing digital rights is complicated.</p>
+<p id=x429 class="phone s08"><cite>Sebastian:</cite> demo 1 min.  contracts representing the rights holders, and they have the address / wallets.<br>
+<span id=x430>… Shows an example. I generate the ICC code and can be tested.A plugin can be used to generate the ICC code and the fake image found on X, shows the original with the real credentials vs. a fake one</span></p>
+<p id=x432 class=irc><cite>&lt;Zakim&gt;</cite> ivan, you wanted to ask what next as PM?</p>
+<p id=x433 class="phone s04"><cite>ivan:</cite> what is the next step for Publishing Maintenance WG?</p>
+</section>
+
+<section>
+<h3 id=t07>EPUB/A</h3>
+<p id=x439 class="phone s05"><cite>tzviya:</cite> I now introduce Alicia Wise for this proposal on EPUB/A</p>
+<p id=x458 class="phone s11"><cite>alicia:</cite> I have a background in libraries and archive<br>
+<span id=x459>… we collect publications from all around the world and our goal is to archive content for future</span><br>
+<span id=x460>… I would like to speak about long-term preservation</span><br>
+<span id=x461>… it's important to preserve publications, in history we've seen cases of burning books to &quot;delete&quot; history of people and cultures</span><br>
+<span id=x462>… ISO maintains standard for preservation of different formats of digital publications</span><br>
+<span id=x463>… I've been asked to join a group in ISO for thinking about a standard for archiving EPUBs</span><br>
+<span id=x464>… these ISO standards are important internationally, because there're trusted by organization all around the world</span><br>
+<span id=x465>… there are different kind of audits for publishing the spec</span><br>
+<span id=x466>… a trusted archive needs clear specs, open, transparent</span><br>
+<span id=x467>… we also have registries for knowing what content is stored where</span><br>
+<span id=x468>… this is the context in which we're thinking about an EPUB archival format</span><br>
+<span id=x469>… in ISO/IEC JTC 1/SC 34/JWG 7 we have a working group that is creating a subset of EPUB 3</span><br>
+<span id=x470>… with features that are suitable for long-term digital preservation</span><br>
+<span id=x471>… identifying metadata elements for catalogs</span><br>
+<span id=x472>… we are a rational document, we have a candidate statement for EPUB/A</span><br>
+<span id=x473>… the preparatory work of EPUB/A has been done on old version of EPUB</span><br>
+<span id=x474>… so I think it's important to stay in touch do align with the latest version of EPUB</span></p>
+<p id=x479 class="phone s12"><cite>shiestyle:</cite> who is the target of the EPUB/A format? end-users?</p>
+<p id=x484 class="phone s11"><cite>alicia:</cite> the users are the trusted archives</p>
+<p id=x485 class="phone s12"><cite>shiestyle:</cite> so publishers should produce both &quot;normal&quot; EPUB and EPUB/A</p>
+<p id=x488 class=irc><cite>&lt;Zakim&gt;</cite> wendyreid, you wanted to react to ivan</p>
+<p id=x491 class="phone s11"><cite>alicia:</cite> yes, publishers normally deposit publications in trusted archives<br>
+<span id=x492>… so they should produce an EPUB/A for deposit</span></p>
+<p id=x494 class="phone s01"><cite>wendyreid:</cite> what we see as problems for EPUB/A are external links (images, video, audio, etc.)<br>
+<span id=x495>… if a publisher creates an EPUB without external resources should be ok for EPUB/A</span></p>
+<p id=x498 class="phone s04"><cite>ivan:</cite> what you are defining are general guidelines on how to produce EPUB files to be archived<br>
+<span id=x499>… and not a new format, is it correct?</span></p>
+<p id=x500 class="phone s11"><cite>alicia:</cite> it'll be a subset of an EPUB</p>
+<p id=x504 class="phone s04"><cite>ivan:</cite> I understand, but there is a difference between defining a list of features you can use to create an EPUB/A, that is different of taking the spec a remove contents<br>
+<span id=x505>… the second option is more difficult, because the docs are structured differently</span><br>
+<span id=x506>… from 3.0.1, it would me more simpler if you list the features to avoid in the EPUBs</span></p>
+<p id=x509 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to react to ivan</p>
+<p id=x510 class="phone s05"><cite>tzviya:</cite> with wendy we started the discussion, for what we've seen the document should be quite different form a spec, it'll be compatible with EPUB 3.0.1 and EPUB 3.3</p>
+<p id=x511 class="phone s11"><cite>alicia:</cite> your group is an important stakeholder in this process</p>
+<p id=x515 class="phone s10"><cite>liisamk_:</cite> we've published the first ebook 25 years ago (before EPUB), we've republished it multiple times; it's a software: we update it<br>
+<span id=x516>… from an archival point of view, do you pick these publications multiple times? do you take the first? do you take the latest?</span></p>
+<p id=x517 class="phone s11"><cite>alicia:</cite> it really depends from archive to archive (based on national legislation)</p>
+<p id=x518 class=irc><cite>&lt;MURATA&gt;</cite> I can explain what JWG7 is.  I have been involved in it from the beginning.</p>
+<p id=x523 class="phone s02"><cite>duga:</cite> please don't call &quot;subset&quot;, I think is better &quot;EPUB with additional requirements&quot;</p>
+<p id=x524 class=irc><cite>&lt;wendyreid&gt;</cite> +1 duga</p>
+<p id=x527 class="phone s13"><cite>Bill_Kasdorf_:</cite> I understand that you're creating a format for a &quot;dark&quot; archive, that is not public<br>
+<span id=x528>… that is not available to libraries</span></p>
+<p id=x531 class="phone s11"><cite>alicia:</cite> the content that has been deposit is inaccessible to everyone<br>
+<span id=x532>… this is for preserving content for the future</span></p>
+<p id=x536 class=irc><cite>&lt;tzviya&gt;</cite> +1 to a11y metadata in archives</p>
+<p id=x537 class="phone s14"><cite>George:</cite> EPUB 3.3 includes accessibility, I think we have the possibility here for the first time to include accessibility metadata in archived documents</p>
+<p id=x538 class="phone s11"><cite>alicia:</cite> what kind of accessibility metadata?</p>
+<p id=x540 class="phone s14"><cite>George:</cite> these metadata are not required by EPUB 3.3, but in EPUB Accessibility 1.1 requires acccessibility metadata in the publications (e.g. conforms to WCAG, etc.)<br>
+<span id=x541>… we're seeing retailers displaying these metadata</span></p>
+<p id=x545 class="phone s15"><cite>AvneeshSingh:</cite> EPUB Accessibility applies constraints to EPUB, so that tells how to make an EPUB accessible<br>
+<span id=x546>… it applies to different versions (EPUB 2, EPUB 3.0.1, EPUB 3.3)</span><br>
+<span id=x547>… we'll be the EPUB/A written in the same way?</span></p>
+<p id=x548 class=summary>here is the ISO spec for the EPUB Accessibility 1.0 - <a href="https://www.iso.org/standard/76860.html">https://<wbr>www.iso.org/<wbr>standard/<wbr>76860.html</a></p>
+<p id=x550 class=irc><cite>&lt;wolfgang&gt;</cite> s/writtern/written/</p>
+<p id=x552 class=irc><cite>&lt;ivan&gt;</cite> qq</p>
+<p id=x553 class="phone s11"><cite>alicia:</cite> I think ISO we'll be based on the latests version available as ISO</p>
+<p id=x555 class="phone s16"><cite>MURATA:</cite> I've been involved in JWG7 WG for many years</p>
+<p id=x556 class=summary>Most recent EPUB Accessibility 1.1</p>
+<p id=x557 class=summary>Conformance and Discoverability Requirements for EPUB publications <a href="https://www.w3.org/TR/2023/REC-epub-a11y-11-20230525/">https://<wbr>www.w3.org/<wbr>TR/<wbr>2023/<wbr>REC-epub-a11y-11-20230525/</a></p>
+<p id=x566 class="phone s16"><cite>MURATA:</cite> when IDPF developed EPUB 3, they decided to spread the format through ISO<br>
+<span id=x567>… using different standards (please Makoto fill in the numbers :) )</span><br>
+<span id=x568>… I think that a lot of other people are interested in EPUB/A</span><br>
+<span id=x569>… this impacts other formats like SGML, XML and OPF</span><br>
+<span id=x570>… all these are maintained in ISO</span><br>
+<span id=x571>… tomorrow we'll have a WG meeting to discuss this in ISO, with EPUB 3.3, EPUB RS 3.3, etc.</span></p>
+<p id=x574 class="phone s07"><cite>gpellegrino:</cite> One from the side of the industry, it might be difficult or too expensive to make 2 epubs</p>
+<p id=x579 class="phone s11"><cite>alicia:</cite> No intent to force both versions</p>
+<p id=x586 class="phone s04"><cite>ivan:</cite> Alicia you said &quot;we'll refer to any EPUB version is recognized by ISO&quot;<br>
+<span id=x587>… creating a document that will fit to EPUB 3.3 may not be that simple</span><br>
+<span id=x588>… I don't know if you have something similar for websites</span></p>
+<p id=x590 class="phone s11"><cite>alicia:</cite> in the document we've requirements for avoiding scripting in EPUBs<br>
+<span id=x591>… but we're doing R&amp;D on this</span></p>
+<p id=x593 class="phone s05"><cite>tzviya:</cite> thank you alicia</p>
+<p id=x598 class=summary>can someone else take the scribing? :)</p>
+<p id=x599 class="phone s05"><cite>tzviya:</cite> we know that there are concerns for taking EPUB 3.3 to ISO for EAA</p>
+<p id=x600 class=irc><cite>&lt;tzviya&gt;</cite> scribe?</p>
+</section>
+
+<section>
+<h3 id=t08>EPUB to ISO</h3>
+<p id=x605 class=summary>two cañas for duga</p>
+<p id=x606 class="phone s05"><cite>tzviya:</cite> Pro and anti ISO move forward</p>
+<p id=x618 class="phone s16"><cite>MURATA:</cite> Korea is an important player here, they have (???) and 3.01 as national standards<br>
+<span id=x619>… (3.0)</span><br>
+<span id=x620>… This was based on an agreement with IDPF</span><br>
+<span id=x621>… They are concerned and some joint WGs will be discussing this shortly</span><br>
+<span id=x622>… the day after tomorrow</span><br>
+<span id=x623>… And we hope they will send a statement to pub @ w3c</span><br>
+<span id=x624>… I think it is important we listen to Korea</span></p>
+<p id=x635 class="phone s01"><cite>wendyreid:</cite> To contextualize, this is less pro and anti<br>
+<span id=x636>… It is more a timing problem</span><br>
+<span id=x637>… hopefully that problem will go away</span><br>
+<span id=x638>… We want to have the best standard as we approach EAA</span><br>
+<span id=x639>… It is really important the EAA move ahead</span><br>
+<span id=x640>… But there are also many countries outside the EU that rely on ISO as the standards body to define things</span><br>
+<span id=x641>… We want to put this decision to bed today so we have a plan</span><br>
+<span id=x642>… the question isn't if we will send this to ISO, it is when</span><br>
+<span id=x643>… Currently we are stuck in a grey area where we don't know dates and timelines</span></p>
+<p id=x645 class="phone s12"><cite>shiestyle:</cite> Who is the Korean that asked for this?</p>
+<p id=x646 class="phone s16"><cite>MURATA:</cite> (some name, I didn't catch)</p>
+<p id=x648 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to ask about korean members</p>
+<p id=x649 class="phone s12"><cite>shiestyle:</cite> Is he a member of w3c?</p>
+<p id=x650 class="phone s16"><cite>MURATA:</cite> No</p>
+<p id=x651 class="phone s05"><cite>tzviya:</cite> It would be nice to have them present so we can discuss</p>
+<p id=x654 class="phone s16"><cite>MURATA:</cite> It might be good to have a joint session between JWG7 and us</p>
+<p id=x655 class=irc><cite>&lt;MURATA&gt;</cite> 3.0: TS; 3.0.1: IS</p>
+<p id=x658 class="phone s14"><cite>George:</cite> 3.0.1 was submitted as a technical spec. In terms of signed agreements, we only required that the spec would be public (no payment required)<br>
+<span id=x659>… at least that is my recollection</span></p>
+<p id=x664 class="phone s16"><cite>MURATA:</cite> 3.0 became ts, 3.0.1 became an international standard<br>
+<span id=x665>… both were fast tracked by Korea</span></p>
+<p id=x668 class="phone s17"><cite>CharlesL:</cite> As far a timing, I assume we have to accept all the outstanding PRs<br>
+<span id=x669>… and make sure that there are no outstanding issues</span></p>
+<p id=x670 class="phone s04"><cite>ivan:</cite> Yes</p>
+<p id=x671 class=irc><cite>&lt;MURATA&gt;</cite> Agree with &lt;duga&gt;</p>
+<p id=x679 class="phone s04"><cite>ivan:</cite> 3.0.1 is an international standard<br>
+<span id=x680>… it is very out of date</span><br>
+<span id=x681>… we must use the w3c process to get to ISO</span><br>
+<span id=x682>… Do we or do we not have information that publishing epub 3.3 as ISO standard is harmful to EAA</span><br>
+<span id=x683>… My problem is the EAA process, it is all the bothers me</span></p>
+<p id=x684 class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1 main question is EAA</p>
+<p id=x686 class="phone s16"><cite>MURATA:</cite> I would like to point out outdated ISO standard is harmful to countries that rely on it</p>
+<p id=x688 class="phone s16"><cite>MURATA:</cite> WCAG 2.1 is unusable in Japan, I don't want that to happen for epub</p>
+<p id=x693 class="phone s18"><cite>Christina:</cite> It is not just Europe<br>
+<span id=x694>… Publishers can work now on a11y without further requirement</span><br>
+<span id=x695>… In my opinion is wait until the law is in effect, June 2025</span><br>
+<span id=x696>… Changing the standards now will create a lot of confusion in the industry as to which one to adhere to</span></p>
+<p id=x698 class=irc><cite>&lt;shadi&gt;</cite> +1 to Cristina</p>
+<p id=x705 class="phone s18"><cite>Christina:</cite> the commission can accept the w3c standard<br>
+<span id=x706>… If it is not absolutely mandatory, then we should wait for EAA is in place to avoid confusion</span></p>
+<p id=x714 class="phone s04"><cite>ivan:</cite> The date for EAA is beyond our charter<br>
+<span id=x715>… The 3.3 standard will remain a w3c standard for the foreseable future</span><br>
+<span id=x716>… The document isn't transferred to ISO</span><br>
+<span id=x717>… Is this differentiation meaningful to the EU?</span><br>
+<span id=x718>… If they suddenly disregard the w3c standard because of the ISO, it seems stupid,</span></p>
+<p id=x725 class="phone s01"><cite>wendyreid:</cite> Agree with Ivan<br>
+<span id=x726>… It seems unfair to countries to say &quot;wait 2 years to start&quot;</span><br>
+<span id=x727>… It impacts people like Alicia and others, and seems unfair</span><br>
+<span id=x728>… Need to find a sensible resolution between EAA and other people</span></p>
+<p id=x731 class="phone s15"><cite>AvneeshSingh:</cite> Want to highlight there are epub 3.3 and a a11y 1.1<br>
+<span id=x732>… The bottom line is the main reason epub a11y 1.1 exists is to support EAA</span></p>
+<p id=x734 class=irc><cite>&lt;Zakim&gt;</cite> shadi, you wanted to say likely before June 2025 if W3C is ready with PRs, clean-up, and other technicalities and to say likely before June 2025 if W3C is ready with PRs, clean-up, and other technicalities; and to respond to Ivan on EC requirements</p>
+<p id=x740 class="phone s19"><cite>shadi:</cite> 2025 is the furthest out<br>
+<span id=x741>… If ISO standard exists it means the commission cannot reference a w3c standard</span><br>
+<span id=x742>… If an ISO standard exists it *must* be referenced</span><br>
+<span id=x743>… the best way forward is to have consensus</span></p>
+<p id=x745 class=irc><cite>&lt;MURATA&gt;</cite> Sounds great to me.</p>
+<p id=x749 class="phone s19"><cite>shadi:</cite> We should invite the EAA as proposed<br>
+<span id=x750>… the process is relatively simple, it is possible for the commision to issue delegated acts</span><br>
+<span id=x751>… So when are we ready to say he is a11y 1.1, when will FXL be covered, then put out that timeline</span><br>
+<span id=x752>… The commission will not act by itself, it needs us to push forward</span></p>
+<p id=x753 class="phone s05"><cite>tzviya:</cite> I don't understand</p>
+<p id=x755 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to propose a straw poll</p>
+<p id=x757 class="phone s05"><cite>tzviya:</cite> what is the timeline?<br>
+<span id=x758>… is this just an intent to move forward?</span></p>
+<p id=x762 class="phone s19"><cite>shadi:</cite> That is just an input to the commission to move forward ASAP<br>
+<span id=x763>… We have a good case to have them expedite the process.</span><br>
+<span id=x764>… June 2025 is when they start policing. We have a good case for them to move forward quickly</span></p>
+<p id=x765 class="phone s05"><cite>tzviya:</cite> This is more than just a11y</p>
+<p id=x772 class="phone s04"><cite>ivan:</cite> I am trying to understand what we need to do<br>
+<span id=x773>… 1. need to finalize the document for fxl a11y issues</span><br>
+<span id=x774>… That is the first step, need to publish as a note</span><br>
+<span id=x775>… Maybe 2 months?</span></p>
+<p id=x776 class="phone s01"><cite>wendyreid:</cite> [laughs]</p>
+<p id=x782 class="phone s04"><cite>ivan:</cite> Then we go to the EU with 3 recs, plus 2 notes.<br>
+<span id=x783>… This should be considered the oracle for what we need</span><br>
+<span id=x784>… If we get the nod from EAA then we can move forward with ISO</span></p>
+<p id=x786 class=irc><cite>&lt;Zakim&gt;</cite> shadi, you wanted to respond on some possibilities for parallel processing these steps</p>
+<p id=x787 class="phone s04"><cite>ivan:</cite> Is that the correct timeline</p>
+<p id=x792 class="phone s19"><cite>shadi:</cite> It doesn't have to be that sequential<br>
+<span id=x793>… we can already start</span><br>
+<span id=x794>… We can start the process for a delegated act now</span><br>
+<span id=x795>… even without the fxl doc</span><br>
+<span id=x796>… We don't have to wait until the note is done to talk to the EAA</span></p>
+<p id=x797 class="phone s04"><cite>ivan:</cite> It seems like we are all waiting for each other</p>
+<p id=x802 class="phone s18"><cite>christina:</cite> We can start with the mapping, and also say that we are also working on the metadata display, etc<br>
+<span id=x803>… Start with what we have, then add fxl</span><br>
+<span id=x804>… Since that is one case of what is already in the mapping</span></p>
+<p id=x805 class=irc><cite>&lt;shadi&gt;</cite> +1 to Cristina</p>
+<p id=x809 class="phone s01"><cite>wendyreid:</cite> We will discuss at a11y tomorrow<br>
+<span id=x810>… We, as a taskforce, did not know the gravity of the fxl note</span><br>
+<span id=x811>… Can we do it in a reasonable amount of time? Probably, but we need to look at the schedule for that</span></p>
+<p id=x812 class="phone s05"><cite>tzviya:</cite> I think given the state of fxl, is it possible to submit without it? There isn't even a draft</p>
+<p id=x815 class="phone s20"><cite>several:</cite> there is!</p>
+<p id=x817 class="phone s04"><cite>ivan:</cite> Closing the discussion, is there general agreement in the group to publish as ISO providing it doesn't jeopardize the EAA</p>
+<p id=x819 class=irc><cite>&lt;MURATA&gt;</cite> Sounds good to me.</p>
+<p id=x822 class="phone s04"><cite>ivan:</cite> We should have an agreement on whether we will ever move forward with ISO</p>
+<p id=x827 class="phone s15"><cite>AvneeshSingh:</cite> Regarding the discussion with EAA, the starting point is the mapping<br>
+<span id=x828>… from there we can expand to other documents</span><br>
+<span id=x829>… we can start there, then add fxl</span></p>
+<p id=x833 class="phone s14"><cite>George:</cite> My understanding is that if we can get the delegated doc (delegates to our a11y spec), then we can move ahead with ISO<br>
+<span id=x834>… and it won't jeopardize Europe</span></p>
+<p id=x835 class="phone s19"><cite>shadi:</cite> Yes, once we have the delegated doc we can move forward with ISO</p>
+<p id=x837 class="phone s04"><cite>ivan:</cite> We need a formal resolution</p>
+<p id=x838 class=irc><cite>&lt;tzviya&gt;</cite> proposal: WG agrees to publish the 3 recs as ISO standard under PAS process once the European Process is completed</p>
+<p id=x839 class=irc><cite>&lt;tzviya&gt;</cite> +1</p>
+<p id=x840 class=irc><cite>&lt;shiestyle&gt;</cite> -1</p>
+<p id=x841 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=x842 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=x843 class=irc><cite>&lt;shadi&gt;</cite> +1</p>
+<p id=x844 class=irc><cite>&lt;Bill_Kasdorf_&gt;</cite> +1</p>
+<p id=x845 class=irc><cite>&lt;liisamk_&gt;</cite> +1</p>
+<p id=x846 class=irc><cite>&lt;wolfgang&gt;</cite> +1</p>
+<p id=x847 class=summary>+1</p>
+<p id=x848 class=irc><cite>&lt;laurent_&gt;</cite> +1</p>
+<p id=x849 class=irc><cite>&lt;MURATA&gt;</cite> +1</p>
+<p id=x850 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=x851 class="phone s01"><cite>wendyreid:</cite> Shinya, do you formally object to ISO?</p>
+<p id=x852 class="phone s12"><cite>shiestyle:</cite> Yes. We do not need it</p>
+<p id=x853 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> Sorry.  0</p>
+<p id=x854 class="phone s12"><cite>shiestyle:</cite> I don't think there is a negative impact if we do not have it</p>
+<p id=x855 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=x856 class="phone s01"><cite>wendyreid:</cite> Do you really formally object, or can you live with it?</p>
+<p id=x857 class=summary>0</p>
+<p id=x858 class=irc><cite>&lt;MURATA&gt;</cite> The JP government has not adopted WCAG 2.1.</p>
+<p id=x859 class="phone s12"><cite>shiestyle:</cite> There is a problem with moving a11y 1.1 to ISO, which has a negative impact</p>
+<p id=x860 class="phone s01"><cite>wendyreid:</cite> 1.1 adopts the current version wcag</p>
+<p id=x862 class=irc><cite>&lt;George&gt;</cite> +1</p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#r01">Merge PR 2572</a></li>
+<li><a href="#r02">Merge PR 2571, publish a new note for the Exemption property on oct 3, short name will be &quot;epub-a11y-exemption&quot;</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 221 (Fri Jul 21 14:01:30 2023 UTC).</address>
+
+</body>
+</html>
