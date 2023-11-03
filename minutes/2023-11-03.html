@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 03 November 2023</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+Publishing Maintenance Working Group Telco</h1>
+<h2>03 November 2023</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2023Nov/0000.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2023/11/03-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, cristina, gpellegrino, ivan, LaurentLM, mgarrish, rickj, shiestyle, toshiakikoike, tzviya, wendy, Yong-Sang_Cho</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>wendy</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t000">WebToons</a></li>
+<li><a href="#t01">ISO</a></li>
+<li><a href="#t02">Misc</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section>
+<h3 id=t000>WebToons</h3>
+
+<p id=x024 class="phone s01"><cite>wendyreid:</cite> Change of plan, let's discuss publishing<br>
+<span id=x025>… we wanted to be on a six month schedule</span><br>
+<span id=x026>… do we want to do webtoons later</span></p>
+<p id=x033 class="phone s02"><cite>ivan:</cite> There's an advice or request in the process to not publish more often than six months<br>
+<span id=x034>… if we publish now without webtoons, we might need to wait another 6 months to incorporate that</span><br>
+<span id=x035>… there's nothing urgent to publish now</span><br>
+<span id=x036>… everything is relatively harmless</span><br>
+<span id=x037>… webtoons is the most complex and relevant thing</span><br>
+<span id=x038>… we can wait until we finally say yea or nay on the webtoon changes</span></p>
+<p id=x043 class="phone s03"><cite>mattgarrish:</cite> We don't have anything critical, we have one class three already, if we need to do that approval we might as well wait for webtoons<br>
+<span id=x044>… I don't know if it affects for just core or RS</span><br>
+<span id=x045>… do we need to publish all together, or one doc at a time</span></p>
+<p id=x050 class="phone s04"><cite>shiestyle:</cite> We might need to discuss webtoons, it could take a while<br>
+<span id=x051>… to resolve the topic</span><br>
+<span id=x052>… I have a proposal, to regulate the restriction on rendition:flow</span><br>
+<span id=x053>… we can add a note on this restriction not just for webtoons</span></p>
+<p id=x058 class="phone s02"><cite>ivan:</cite> Just to answer Matt, my personal preference would be to take the 3 recs together<br>
+<span id=x059>… it's a unit in three documents</span><br>
+<span id=x060>… keeping them aligned is better message-wise</span></p>
+<p id=x066 class="phone s01"><cite>wendyreid:</cite> To Matt, it's a change to both, to Shinya, it might not take as long</p>
+<p id=x069 class="phone s02"><cite>ivan:</cite> For class 3 we go to a AC review<br>
+<span id=x070>… same way as CR, we must have tests, and implementations to back up the test</span><br>
+<span id=x071>… it's important to have the feedback we need, if it won't pass the testing phase we shouldn't do it</span></p>
+<p id=x079 class="phone s05"><cite>LaurentLM:</cite> +1 Ivan, it's not only allowing rendition:flow for FXL, it's also specifying in reading systems when two images should be placed one after another, in HTML, they won't be naturally put border on border<br>
+<span id=x080>… it's a need for specific implementations in RS</span><br>
+<span id=x081>… it's an important modification</span><br>
+<span id=x082>… not just one line in the spec</span></p>
+<p id=x084 class=irc><cite>&lt;ivan&gt;</cite> +1 to LaurentLM</p>
+<p id=x088 class="phone s04"><cite>shiestyle:</cite> In 3.3, rendition:flow can be used in FXL and reflow, only in RS is it forbidden<br>
+<span id=x089>… maybe we need another test, we already allow the use in the package, we may not need a new test</span></p>
+<p id=x092 class="phone s01"><cite>wendyreid:</cite> We need to look at the existing tests, and the language, we're usually not that strict with language</p>
+<p id=x103 class="phone s02"><cite>ivan:</cite> I don't have the test suite in my head<br>
+<span id=x104>… even if we have a test with rendition:flow</span><br>
+<span id=x105>… then the test today should say it's not allowed</span><br>
+<span id=x106>… either we don't have a test, or we have a test where we need to change the criteria</span><br>
+<span id=x107>… long term, we need the feedback of an engineer</span><br>
+<span id=x108>… feedback on implementation, how it went</span><br>
+<span id=x109>… noting that for the CR lines, we would need a test suite that meets the criteria</span><br>
+<span id=x110>… we need 2 implementations</span></p>
+<p id=x118 class="phone s05"><cite>LaurentLM:</cite> Just to add, even if reading systems on FXL support scrolled-continuous, they will put the pages one below the other<br>
+<span id=x119>… most of the reading systems will add margins</span><br>
+<span id=x120>… the RS will have followed the riles</span><br>
+<span id=x121>… but the user experience will be poor</span><br>
+<span id=x122>… we need further further specification</span><br>
+<span id=x123>… it's complex</span></p>
+<p id=x126 class="phone s01"><cite>wendyreid:</cite> We're working on a lot of assumptions, let's look at what is currently there.</p>
+<p id=x129 class="phone s04"><cite>shiestyle:</cite> I wonder if we change the restriction in reading systems, RS don't have to implement the ???<br>
+<span id=x130>… reading systems don't have to implement the feature</span></p>
+<p id=x134 class="phone s05"><cite>LaurentLM:</cite> I'm not saying if it was allowed that RS must do it, but they would not pass the tes<br>
+<span id=x135>… the systems not implementing would look bad</span><br>
+<span id=x136>… most RS would do it correctly in regards to the spec, not what webtoons are</span></p>
+<p id=x141 class="phone s06"><cite>mgarrish:</cite> I was just going to say we're spinning our wheels, we need to know the specifics<br>
+<span id=x142>… FXL is generally SHOULDs, if we get into MUST that is tricky</span><br>
+<span id=x143>… we need to get what is further into what is needed</span><br>
+<span id=x144>… let's focus on getting this specced out, then build the tests.</span></p>
+<p id=x147 class="phone s02"><cite>ivan:</cite> Someone should come up with a PR<br>
+<span id=x148>… knowing it's a class 3 change</span><br>
+<span id=x149>… changes marked up in the text</span></p>
+<p id=x150 class="phone s01"><cite>wendyreid:</cite> I'll take a crack at it</p>
+<p id=x151 class="phone s06"><cite>mgarrish:</cite> Might be better to get the text finalized then do the formal diff</p>
+<p id=x152 class=irc><cite>&lt;ivan&gt;</cite> +1 to wendyreid</p>
+<p id=x155 class=summary><a
+        href="https://w3c.github.io/epub-specs/epub33/fxl-a11y/">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub33/<wbr>fxl-a11y/</a>
+</p>
+</section>
+
+<section>
+<h3 id=t01>ISO</h3>
+
+<p id=x179 class="phone s02"><cite>ivan:</cite> Just to add more info, we will have a call, Gregorio, Cristina, and I, with the EU Commission in a week<br>
+<span id=x180>… to put an end to the discussion on if we publish through ISO does it jeopardize the acceptance of our docs in the EU</span><br>
+<span id=x181>… we'll make a presentation to them</span><br>
+<span id=x182>… hopefully this issue will be resolved by the end of the year</span><br>
+<span id=x183>… we'll know for sure if ISO is a yes or no</span><br>
+<span id=x184>… the other problem is that W3C and JTC1 have discussed the practical details of the PAS process</span><br>
+<span id=x185>… up until last year, my information was, the PAS process was simple, the documents themselves stay as W3C docuemtns</span><br>
+<span id=x186>… HTML format with the styling</span><br>
+<span id=x187>… only thing we'd need to produce is a cover letter of sorts</span><br>
+<span id=x188>… referring to the W3C documents</span><br>
+<span id=x189>… this means we don't have a lot of editorial work</span><br>
+<span id=x190>… the latest round says, JTC1 requires us to turn the documents to ISO format</span><br>
+<span id=x191>… convert to MS Word, change the styling and layout</span><br>
+<span id=x192>… change some of the language</span><br>
+<span id=x193>… huge amount of editorial work</span><br>
+<span id=x194>… I don't know if it's required or not</span><br>
+<span id=x195>… at the moment there are discussions, we're not the guinea pigs, since WAI has published WCAG 2.2</span><br>
+<span id=x196>… previous versions had an ISO stamp, now they want to push WCAG 2.2 to ISO</span><br>
+<span id=x197>… WCAG 2.2 is more complex than EPUB, maybe JTC1 will come back on their requirements</span><br>
+<span id=x198>… it's an unknown</span><br>
+<span id=x199>… I just expressed our unhappiness about this, hopefully WCAG paves the way for us</span></p>
+<p id=x204 class="phone s07"><cite>Yong-SangCho:</cite> Question, does JTC1 emphasize document format is the most important issue?</p>
+<p id=x207 class="phone s02"><cite>ivan:</cite> I was not at the discussion, I saw a presentation on PAS in general, no discussion with ISO on EPUB specifically<br>
+<span id=x208>… there may be some other issues, I'm waiting to see if the formatting problem is there or a non-issue</span></p>
+<p id=x217 class="phone s07"><cite>Yong-SangCho:</cite> JTC1 and ISO have the same document directives<br>
+<span id=x218>… part 2 has normative guidance on writing standards</span><br>
+<span id=x219>… in case of editing, I have experience in converting EPUB to Korean National Standard</span><br>
+<span id=x220>… its a heavy effort, maybe I can volunteer or people from my group can support this conversion</span><br>
+<span id=x221>… aside from formatting, are there other issues in the procedure?</span><br>
+<span id=x222>… if there are, I can volunteer to communicate</span><br>
+<span id=x223>… we'd like to keep the technical side in balance</span><br>
+<span id=x224>… want to keep EPUB an international standard</span><br>
+<span id=x225>… we'd like to adopt it as is if we can</span></p>
+<p id=x232 class="phone s02"><cite>ivan:</cite> First of all, thank you, Matt and I, and the other editors, I have not tried to do the conversion before<br>
+<span id=x233>… I have edited an ISO standard, but it was a while ago</span><br>
+<span id=x234>… there's a terminology review that is more worrisome than word formatting</span><br>
+<span id=x235>… make sure meanings are the same</span><br>
+<span id=x236>… I think the PAS process means we enter a late stage of the process in ISO</span><br>
+<span id=x237>… PAS process also includes original documents would be the same</span><br>
+<span id=x238>… W3C docs are free, ISO are paid</span></p>
+<p id=x239 class="phone s07"><cite>Yong-SangCho:</cite> Since W3C docs are available for free, the same content on ISO is also freely available</p>
+<p id=x243 class="phone s02"><cite>ivan:</cite> That's good news<br>
+<span id=x244>… for the timing, we need to wait on the other problem</span><br>
+<span id=x245>… from our POV, that's the major challenge</span><br>
+<span id=x246>… we should also begin the process after we get the class 3 changes through, we should use that version</span></p>
+<p id=x248 class="phone s07"><cite>Yong-SangCho:</cite> If we have any concerns you want to check with JTC1, please let me know, I can check and communicate, I'll do my best to keep the original content</p>
+<p id=x252 class="phone s08"><cite>tzviya:</cite> I don't know Yong-Sang if you know, what about EPUB for archiving?<br>
+<span id=x253>… any ideas on how we can coordinate our work with them, they're using an old version</span></p>
+<p id=x256 class="phone s07"><cite>Yong-SangCho:</cite> It's just standing on preliminary work items, not yet a formal standard, there's a lot of comments referencing the latest version<br>
+<span id=x257>… EPUB Archiving, not sure, we didn't decide the format, there's lots of other document types, we haven't decided yet which document type is appropriate for it</span><br>
+<span id=x258>… it should reference EPUB 3.3</span></p>
+<p id=x259 class="phone s08"><cite>tzviya:</cite> It should reference the latest W3C version, not ISO?</p>
+<p id=x264 class="phone s07"><cite>Yong-SangCho:</cite> Since there's no ISO standard, they can point to W3C's standards<br>
+<span id=x265>… EPUB 3.3 need to be in the bibliography, not normative references</span><br>
+<span id=x266>… since it's outside ISO right now</span><br>
+<span id=x267>… that's my understanding</span><br>
+<span id=x268>… we need to discuss more details</span></p>
+<p id=x270 class="phone s02"><cite>ivan:</cite> If EPUB 3.3 gets to ISO<br>
+<span id=x271>… it would probably become an ISO standard before archiving</span></p>
+<p id=x273 class="phone s07"><cite>Yong-SangCho:</cite> It'll be at least 36 months, + 3 or 6 months<br>
+<span id=x274>… if EPUB 3.3 gets through PAS track, if EPUB Archive is released after</span></p>
+<p id=x275 class="phone s02"><cite>ivan:</cite> then the archive will refer to the latest ISO spec, which would be 3.3</p>
+<p id=x278 class="phone s07"><cite>Yong-SangCho:</cite> We'd like to share the latest update on EPUB/A<br>
+<span id=x279>… it's not isolated or a different specification, it's based on EPUB</span><br>
+<span id=x280>… we'll share the latest when it's ready</span></p>
+<p id=x282 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to mention archiving</p>
+<p id=x286 class="phone s04"><cite>shiestyle:</cite> Thanks for coming today Yong-Sang, question about Korean ebook industry<br>
+<span id=x287>… does it want to bring EPUB 3.3 to ISO, is there a problem if it doesn't?</span></p>
+<p id=x292 class="phone s07"><cite>Yong-SangCho:</cite> The industry is flexible, its been operating with what is the latest, but the public sector, the government, will only adapt to ISO<br>
+<span id=x293>… textbooks and such. Public sector has stronger regulations</span><br>
+<span id=x294>… needs to use Korean Standards or international standards</span><br>
+<span id=x295>… industry is favoured to taking international standards, since the standards are clearer, more consistent</span><br>
+<span id=x296>… software follows regulations</span></p>
+<p id=x298 class=irc><cite>&lt;Zakim&gt;</cite> AvneeshSingh, you wanted to comment on EPUB archive</p>
+<p id=x301 class="phone s09"><cite>AvneeshSingh:</cite> Comment on EPUB Archive, I'm concerned about two international standards, it seems confusing<br>
+<span id=x302>… my recommendation would be that EPUB 3.3 is the international standard, and EPUB Archive is a technical specification</span><br>
+<span id=x303>… more clarity</span></p>
+<p id=x304 class="phone s07"><cite>Yong-SangCho:</cite> I'll deliver your comment to the lead, we don't want to be trouble makers</p>
+</section>
+
+<section>
+<h3 id=t02>Misc</h3>
+<p id=x309 class="phone s10"><cite>gpellegrino:</cite> Just to tell you that we are updating the note with the mapping<br>
+<span id=x310>… in view of the meeting we're having with the commission, I'll post a PR over the weekend</span><br>
+<span id=x311>… having you all double check the changes would be helpful</span><br>
+<span id=x312>… if we can approve the mapping, and publish an updated version that would be great</span></p>
+<p id=x313 class="phone s10"><cite>gpellegrino:</cite> Does it need a vote to be updated?</p>
+<p id=x314 class="phone s01"><cite>wendyreid:</cite> Is it published to TR?</p>
+<p id=x317 class="phone s02"><cite>ivan:</cite> If we follow the procedure, it will autopublished via echidna<br>
+<span id=x318>… if there is enough reviewers, we can merge and it will update TR</span><br>
+<span id=x319>… not as formal</span></p>
+<p id=x322 class="phone s06"><cite>mgarrish:</cite> We've not had formal calls on notes<br>
+<span id=x323>… we've tried to make sure everyone is on board</span><br>
+<span id=x324>… even just sending an email to make sure everyone sees it</span></p>
+<p id=x325 class="phone s01"><cite>wendyreid:</cite> We'll make sure there are approvals on the PR</p>
+<p id=x326 class="phone s10"><cite>gpellegrino:</cite> I'll post the PR and we can proceed from there.</p>
+<p id=x327 class="phone s01"><cite>wendyreid:</cite> AOB?</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 221 (Fri Jul 21 14:01:30 2023 UTC).</address>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+To: webmaster, Cc: jennyliang@w3.org, EPUB WG Chairs
+
+Denis
+
+This is an official publication request for the publication of the PM WG's "The EPUB Accessibility exemption property" as First Public Working Group Note. The publication date is the 3 of October, 2023. The transition request for the Note has been issued in:
+
+	https://github.com/w3c/transitions/issues/567
+
+TiLT's approval is in:
+
+	https://github.com/w3c/transitions/issues/567#issuecomment-1737617088
+
+Document Title and URL
+======================
+
+The EPUB Accessibility exemption property
+	https://www.w3.org/TR/2023/NOTE-epub-a11y-exemption-20231003/
+
+
+Abstract and Status Sections
+----------------------------
+
+See the previous URL.
+
+The document should be placed in the "Digital Publishing" bucket on the /TR page.
+
+The documents is already in place and went through pubrules' checker, except for the special copyright checking step.
+
+Thanks!
+
+Ivan
