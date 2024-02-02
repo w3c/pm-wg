@@ -2,7 +2,7 @@
 <html lang=en>
 <head>
 <meta charset=utf-8>
-<title>Publishing Maintenance Working Group Telco &ndash; 05 January 2024</title>
+<title>Publishing Maintenance Working Group &ndash; 02 February 2024</title>
 <meta name=viewport content="width=device-width">
 <link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
 <link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
@@ -16,13 +16,12 @@
 <header>
 <p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
 
-<h1>&ndash; DRAFT &ndash;<br>
-Publishing Maintenance Working Group Telco</h1>
-<h2>05 January 2024</h2>
+<h1><br>
+Publishing Maintenance Working Group</h1>
+<h2>02 February 2024</h2>
 
 <nav id=links>
-<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2024Jan/0000.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
-<a href="https://www.w3.org/2024/01/05-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+<a href="https://www.w3.org/2024/02/02-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
 </nav>
 </header>
 
@@ -30,70 +29,104 @@ Publishing Maintenance Working Group Telco</h1>
 <div id=attendees>
 <h2>Attendees</h2>
 <dl class=intro>
-<dt>Present</dt><dd>AvneeshSingh, brady, dhall, duga, gautierchomel, george, ivan, JamesY, leonardr, shiestyle, toshiakikoike, tzviya, wendyreid</dd>
+<dt>Present</dt><dd>dhall, duga, gpellegrino, Hadrien, ivan, shiestyle, tzviya, Wendy</dd>
 <dt>Regrets</dt><dd>-</dd>
-<dt>Chair</dt><dd>wendy</dd>
-<dt>Scribe</dt><dd>gautierchomel</dd>
+<dt>Chair</dt><dd>shiestyle</dd>
+<dt>Scribe</dt><dd>gpellegrino</dd>
 </dl>
 </div>
 
 <nav id=toc>
 <h2>Contents</h2>
 <ol>
+    <li>Webtoons' proposal (PR #2602)</li>
 </ol>
 </nav>
 </div>
 
 <main id=meeting class=meeting>
 <h2>Meeting minutes</h2>
-<h3>TDM Protocol reference in EPUB</h3>
-<section><p id=x005 class=irc><cite>&lt;ivan&gt;</cite> Date: 2024-01-05</p>
-<p id=x023 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/tdm-reservation-protocol/issues/33">w3c/<wbr>tdm-reservation-protocol#33</a></p>
-<p id=x024 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/tdm-reservation-protocol/spec/tdmrep-epub.html#sec-epub">https://<wbr>w3c.github.io/<wbr>tdm-reservation-protocol/<wbr>spec/<wbr>tdmrep-epub.html#sec-epub</a></p>
-<p id=x025 class="phone s01"><cite>wendyreid:</cite> there's a proposal to have tdm in EPUB files.</p>
-<p id=x026 class=irc><cite>&lt;ivan&gt;</cite> guest+ James_Yanchak</p>
-<p id=x027 class="phone s02"><cite>James_Yanchak:</cite> tdm working group has covered many formats, EPUB is the final primory format to deal with. Do we do it a book level, file level? File level is easy as it's HTML, book levl would be more accurate, but it's adding a namespace in the OPF.</p>
-<p id=x030 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to ask if this for rdm or ai or both</p>
-<p id=x031 class=irc><cite>&lt;ivan&gt;</cite> This is how it would look side on the EPUB side:</p>
-<pre>
-&lt;meta property=&quot;tdm:reservation&quot;&gt;1&lt;/meta&gt;
-&lt;meta property=&quot;tdm:policy&quot;&gt;<a href="https://provider.com/policies/policy.json">https://provider.com/policies/policy.json</a>&lt;/meta&gt;
-</pre>
-<p id=x034 class="phone s03"><cite>tzviya:</cite> what's he urgency?</p>
-<p id=x038 class="phone s02"><cite>James_Yanchak:</cite> it's related to the EU directive. More and more complains appears about files used for AI training. So it's important now.</p>
-<p id=x041 class="phone s04"><cite>duga:</cite> lot of different groups are working of the subject, what are the interactions?</p>
-<p id=x042 class="phone s02"><cite>James_Yanchak:</cite> I would say we are focusing about publishing in the EU, I hope the other groups will follow us when it comes to EPUB.</p>
-<p id=x046 class="phone s02"><cite>James_Yanchak:</cite> the main question, is about can we add a namespace? It causes EPUBs to be invalids. Original TDM is adding a namespace. But we can have a Prefix without adding a namespace (like DC:.</p>
-<p id=x048 class="phone s05"><cite>leonardr:</cite> I represent C2PA wich also work on the subject. C2PA supports EPUB. Regarding others industries (images, videos, audios), are not going the way to add something to the file. Also to know, many countries are working on legislations, the paysage is changing.</p>
-<p id=x050 class=irc><cite>&lt;leonardr&gt;</cite> EPUB support in C2PA - <a href="https://c2pa.org/specifications/specifications/1.4/specs/C2PA_Specification.html#_embedding_manifests_into_zip_based_formats">https://<wbr>c2pa.org/<wbr>specifications/<wbr>specifications/<wbr>1.4/<wbr>specs/<wbr>C2PA_Specification.html#_embedding_manifests_into_zip_based_formats</a></p>
-<p id=x051 class="phone s06"><cite>ivan:</cite> back to the original question, prefix mecanism on the package document is easy because we have nothing to do. The question is do we need to add something to spec but it's not urgent.</p>
-<p id=x055 class="phone s03"><cite>tzviya:</cite> the question is would RS support one or another method. What will happen at the RS level? Can they process this information?</p>
-<p id=x059 class="phone s01"><cite>wendyreid:</cite> reatilers and distributors will be looking at this information. OPF level looks the easier method to process this information. On the retail side, contracts are also playing a role, we won't do anything without a previous discussion with publishers.</p>
-<p id=x063 class="phone s06"><cite>ivan:</cite> in the standards we do not define what RS may should or must do with the metadatas. So we don't have to change anything in the standard.</p>
-<p id=x065 class="phone s06"><cite>ivan:</cite> if you choose the HTML level, you have to also consider media resources.</p>
-<p id=x070 class="phone s07"><cite>dhall:</cite> there could be implications for what RS are allowed to do with the content. Specifically we may have to prevent usages depending on the specification of the restriction.</p>
-<p id=x074 class="phone s04"><cite>duga:</cite> we don't have any control of what the TDM group doesthis sounds like managing digital rights. It sounds like DRM to me.</p>
-<p id=x076 class="phone s05"><cite>leonardr:</cite> the line is fine, true. part of the issue is we are not speaking about copy rights. We are responding to legislations, trying to technicaly solve a legislative process. Still it's usage restriction.</p>
-<p id=x078 class="phone s04"><cite>duga:</cite> we don't do DRM in the manifest, can we do TDM reservation?</p>
-<p id=x082 class="phone s01"><cite>wendyreid:</cite> EPUB ecosystem is not only the file, we also have ONIX associated metadata. When we get to the content, that's where EPUB should be able to reflect the publisher request negociated in the contracts.</p>
-<p id=x084 class="phone s06"><cite>ivan:</cite> prefix respects the charter. We only acknowledge that another group does something which is doable in EPUB.</p>
-<p id=x087 class="phone s04"><cite>duga:</cite> looking at the third choice, maybe we can just say don't do anything to the manifest.</p>
-<p id=x088 class="phone s04"><cite>duga:</cite> contracts and agrements with publishers don't allow you to break the law. the TDM implementation is over publishers arangements because it's legal.</p>
-<p id=x093 class="phone s03"><cite>tzviya:</cite> it's important to meet with others people working on TDM. Maybe schedule a joint meeting.</p>
-<p id=x094 class="phone s03"><cite>tzviya:</cite> there may be a strong interest from publishers to have TDM not separated.</p>
-<p id=x096 class="phone s05"><cite>leonardr:</cite> C2PA does not modify the structure.</p>
-<p id=x098 class="phone s05"><cite>leonardr:</cite> C2PA or TDM don't adress translation. There's a clear technical difference between translation or recomandation algorithms and training an AI.</p>
-<p id=x103 class="phone s08"><cite>George:</cite> some possible accessibility implications. Cognitive disability may request a simplified version of the text than can be offered by an AI. A blind person may want a more accurate description generated by AI.</p>
-<p id=x105 class="phone s06"><cite>ivan:</cite> parts of our discussions are relevant to the TDM group. Our focus should be how we answer the TDM communtity.</p>
-<p id=x109 class="phone s01"><cite>wendyreid:</cite> to respond the TDM group we need to talk with them. In the current state we don't have nothing to do but we may want to add a note to the EPUB spec.</p>
-<p id=x112 class="phone s06"><cite>ivan:</cite> we don't take side about the best protocol, we are only responding to the question of the TDM group. Is it ok for us to have something added to the manifest or no?</p>
-<p id=x117 class="phone s05"><cite>leonardr:</cite> I agree with the group remaining agnostic to technical solutions.</p>
-<p id=x121 class="phone s03"><cite>tzviya:</cite> as we have questions and concerns about how solutions will be implemented we should discuss with the TDM group in one of their meetings</p>
-<p id=x123 class="phone s04"><cite>duga:</cite> it looks like we see no problem with the prefix approach proposed by the TDM group</p>
-<p id=x125 class="phone s06"><cite>ivan:</cite> my proposal is to say the TDM group yes, it works.</p>
-<p id=x127 class="phone s09"><cite>AvneeshSingh:</cite> maybe the Community Group will want to adress the side discussions.</p>
-<p id=x128 class="phone s01"><cite>wendyreid:</cite> we'll discuss with the TDM group to point our concerns and comment that the proposition is doable.</p>
-<p id=x129 class="phone s01"><cite>wendyreid:</cite> there's no blocker.</p>
+<h3>Webtoons' proposal (PR #2602)</h3>
+<section><p id=x010 class=irc><cite>&lt;tzviya&gt;</cite> Date: 2024-02-02</p>
+<p id=x015 class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2602">w3c/<wbr>epub-specs#2602</a></p>
+<p id=x024 class="phone s01"><cite>Shinya:</cite> We have a PR<br>
+<span id=x025>… can someone explain the PR?</span></p>
+<p id=x029 class="phone s02"><cite>wendy:</cite> we both change the EPUB core and EPUB RS documents, in both documents we creating a new heading for telling that renditions flow metadata apply to both FXL and reflowable EPUB<br>
+<span id=x030>… we also created diagrams to explain the behaviour we expect when rendition flow is applied</span><br>
+<span id=x031>… we also change a MUST to a MAIN when we say about RSs that may ignore renditions flow</span></p>
+<p id=x036 class="phone s03"><cite>ivan:</cite> is it correct that this change reflexts what is happening with webtoons?<br>
+<span id=x037>… are we documenting existing practices?</span></p>
+<p id=x042 class="phone s04"><cite>shiestyle:</cite> It depends: we're using rendition-flow = continuos, Apple is using it in their apps</p>
+<p id=x043 class="phone s05"><cite>gpellegrino:</cite> did we discuss it at last two TPACs? Didn't we agree to move to the CG for experimenting?</p>
+<p id=x046 class="phone s03"><cite>ivan:</cite> We the last WG there was not enough time, I don't remember with CG</p>
+<p id=x047 class=summary>CG*</p>
+<p id=x048 class="phone s06"><cite>dhall:</cite> Yes, we are using it in FXLs EPUBs</p>
+<p id=x059 class="phone s07"><cite>Hadrien:</cite> I think it really depends on what we agree it is a webtoon<br>
+<span id=x060>… the division is not structurale, the vertical image is split just for distribution</span><br>
+<span id=x061>… this helps also for optimization in loading</span><br>
+<span id=x062>… this content is consumed in specialized platforms outside the generic EPUB ecosystem</span><br>
+<span id=x063>… I think that instead of discussing about webtoons, we're misusing an existing property</span><br>
+<span id=x064>… that may hurt other use cases, I think there is place for a broader discussion</span></p>
+<p id=x065 class="phone s08"><cite>duga:</cite> about optimization: you can scroll the images natively, instead of using images in HTML</p>
+<p id=x066 class="phone s04"><cite>shiestyle:</cite> In Japan many publishers are using EPUB as an interchange format, more then for a B2C format</p>
+<p id=x067 class="phone s03"><cite>ivan:</cite> I'm trying to remember how it started: Japan publishers where worried of having a new big market (webtoons) outside the EPUB ecosystem</p>
+<p id=x073 class="phone s02"><cite>wendy:</cite> I discussed with Hadrien offline, I think his comments are valid, at the same time I think we have to respond to this emerging market<br>
+<span id=x074>… for the comment about the &quot;logistic&quot; (series, episodes, etc.) I think this is a metadata issue</span></p>
+<p id=x077 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to add to Hadrien</p>
+<p id=x079 class="phone s09"><cite>tzviya:</cite> I'm feeling like I felt when FXL came out<br>
+<span id=x080>… we had an implementer who implemented it in a way and we adapted the format in that way</span></p>
+<p id=x083 class="phone s06"><cite>dhall:</cite> content specification for a true webtoon may be more performant<br>
+<span id=x084>… I would split this PR from &quot;webtoons&quot;, this is about how FXLs should be displayed with rendition-flow: continuos</span></p>
+<p id=x089 class="phone s08"><cite>duga:</cite> we raised this issue two years ago and suggested to move it to the CG<br>
+<span id=x090>… we should have done it two years ago</span><br>
+<span id=x091>… I think also that webtoons is a trademark and we should not use it</span></p>
+<p id=x102 class="phone s07"><cite>Hadrien:</cite> to respond to David, no one asked for continuos scrolling outside of webtoons<br>
+<span id=x103>… continuos scrolling is difficult to get with EPUBs, and even more with EPUB FXLs</span><br>
+<span id=x104>… what I see that happen around the world is to tweak the format for doing things that are outside of the standard</span><br>
+<span id=x105>… I don't think that hacking something is a good approch</span><br>
+<span id=x106>… I think is better just to say &quot;this is a webtoon&quot;</span><br>
+<span id=x107>… and manage that publication in a specific way</span><br>
+<span id=x108>… instead of tweaking a metadata that was intended for other stuff</span></p>
+<p id=x112 class="phone s04"><cite>shiestyle:</cite> In Japan we what to find a simple way to make comics in EPUBs<br>
+<span id=x113>… we want to separate this PR with minor changes to the spec</span></p>
+<p id=x116 class="phone s02"><cite>wendy:</cite> I think it is important to speak with Amazon (Kindle) on this<br>
+<span id=x117>… to understand if this solution is good enough</span></p>
+<p id=x121 class="phone s03"><cite>ivan:</cite> Hadrien propose to add a new metadata to say that the publication is a &quot;webtoon&quot;</p>
+<p id=x122 class="phone s04"><cite>shiestyle:</cite> actually we already have special metadata for webtoons</p>
+<p id=x128 class="phone s07"><cite>Hadrien:</cite> in Japan there are a lot of profiles<br>
+<span id=x129>… with XML prefixes to add information</span><br>
+<span id=x130>… personally I don't think it is the way to move to metadata</span><br>
+<span id=x131>… we have metadata conformsTo metadata (used for accessibility), we may use it for telling the publication conforms to webtoon</span><br>
+<span id=x132>… it doesn't break anything</span></p>
+<p id=x138 class="phone s05"><cite>gpellegrino:</cite> for adding metadata to EPUB is not required to change the specs, you can use the meta tag<br>
+<span id=x139>… other comment about process, I think is better to move trough the CG, as we're doing for accessible FXL</span></p>
+<p id=x142 class="phone s08"><cite>duga:</cite> I don't like the conformsTo approach, in any cases we need a spec to say what to do, in both cases we'll end up with RSs that will display broken webtoons</p>
+<p id=x146 class="phone s09"><cite>tzviya:</cite> I agree with Brady, if we have to create a new profile, we don't have the charter to do this, we can only maintain the spec that is already published<br>
+<span id=x147>… I think we should have everything in the main spec</span></p>
+<p id=x151 class="phone s07"><cite>Hadrien:</cite> to respond to Brady, I think that implementing vertical scroll is very expensive, specialized RSs are extracting images from the HTML and display them in canvas or similar<br>
+<span id=x152>… no matter what we do, it will be broken in most of reading systems</span><br>
+<span id=x153>… or we may suggest them a simpler way to ingest the EPUB and display only images</span></p>
+<p id=x158 class="phone s04"><cite>shiestyle:</cite> I understand the performance issue, I think we should separate this discussion from the PR and wait for the Amazon comment</p>
+<p id=x159 class="phone s03"><cite>ivan:</cite> Hadrien, do you think the additional metadata is in addition to the PR?</p>
+<p id=x160 class="phone s07"><cite>Hadrien:</cite> no, it is instead of the PR</p>
+<p id=x163 class=irc><cite>&lt;tzviya&gt;</cite> +1 to wendy</p>
+<p id=x166 class="phone s02"><cite>wendy:</cite> I understand Hadrien's point, a new metadata may lead to exotic values<br>
+<span id=x167>… where publisher expect some type of rendition</span></p>
+<p id=x174 class="phone s03"><cite>ivan:</cite> I think for the moment we'll not merge the PR<br>
+<span id=x175>… in the meantime I think we may work on test cases</span><br>
+<span id=x176>… and implementations, to be sure that it is feasible</span></p>
+<p id=x178 class="phone s06"><cite>dhall:</cite> does the PR specify a MUST or MAY conformance?</p>
+<p id=x181 class="phone s02"><cite>wendy:</cite> a MAY, before that rendition-flows was not available for reflowable<br>
+<span id=x182>… not you can use that value for fixed layout</span></p>
+<p id=x185 class="phone s06"><cite>dhall:</cite> so a RS that does not support webtoons will display the publication in separated pages</p>
+<p id=x189 class="phone s07"><cite>Hadrien:</cite> In Japan there are already different profiles that create stuff on top of EPUBs<br>
+<span id=x190>… I think we should look at them</span><br>
+<span id=x191>… at the same time I think webtoons are quite different from the other type of publications, and requires some extra research</span></p>
+<p id=x193 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to remind about dictionaries</p>
+<p id=x196 class="phone s06"><cite>dhall:</cite> I think we are not in line with the semantic of the content... webtoons are different from web comics<br>
+<span id=x197>… so having a demo may be useful</span></p>
+<p id=x198 class="phone s02"><cite>wendy:</cite> I'll make a video</p>
+<p id=x199 class="phone s04"><cite>shiestyle:</cite> I'll contact Amazon for partecipating to the next meeting</p>
 </section>
 </main>
 
@@ -101,7 +134,6 @@ Publishing Maintenance Working Group Telco</h1>
 <address>Minutes manually created (not a transcript), formatted by <a
 href="https://w3c.github.io/scribe2/scribedoc.html"
 >scribe.perl</a> version 221 (Fri Jul 21 14:01:30 2023 UTC).</address>
-
 
 </body>
 </html>
