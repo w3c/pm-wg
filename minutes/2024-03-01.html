@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 01 March 2024</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>01 March 2024</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2024Feb/0011.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2024/03/01-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, david_hall, duga, gautierchomel, George, gpellegrino, Hadrien, ivan, MasakazuKitahara_, shiestyle, toshiakikoike, tzviya</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>tzviya</dd>
+<dt>Scribe</dt><dd>CharlesL, gautierchomel</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+    <li><a href="#t01">Webtoon PR</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=x005 class=irc><cite>&lt;ivan&gt;</cite> Date: 2024-03-01</p>
+    <h3 id=t01>Webtoon PR</h3>
+<p id=x021 class=irc><cite>&lt;tzviya&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2602">w3c/<wbr>epub-specs#2602</a></p>
+<p id=x022 class="phone s01"><cite>shiestyle:</cite> we contacted amazon on the issue, they responded being neutral.</p>
+<p id=x034 class="phone s02"><cite>ivan:</cite> i have a quetsion after last week discussion. I understand the technical proposal in the PR may not be the best approach. Does the solution in the PR reflects current practices in implemetation or not? It is an important argument</p>
+<p id=x036 class="phone s03"><cite>david_hall:</cite> I think yes</p>
+<p id=x037 class="phone s01"><cite>shiestyle:</cite> in japan, not only amazon, also major Reading system vendors.</p>
+<p id=x038 class="phone s03"><cite>david_hall:</cite> what would be process to write a new specification?</p>
+<p id=x039 class="phone s02"><cite>ivan:</cite> that would mean a new charter.</p>
+<p id=x043 class="phone s04"><cite>Hadrien:</cite> originaly webtoons were invented in Korea, then adopted in Japan, China, and elsewhere. In France they meet with traditional &quot;Bande Dessine&quot; who are not using EPUB, they prefer other formats. I would like to have someone from Korea in this discussion. I know that there's a new format being used there, for an ISBN related issue, they considered EPUB and went on another solution. We are missing the overall picture.</p>
+<p id=x045 class="phone s01"><cite>shiestyle:</cite> this PR approach is not the best one to me, but as japan is the biggest market for webtoons, EPUB based webtoon is used.</p>
+<p id=x046 class=summary>br</p>
+<p id=x048 class="phone s05"><cite>duga:</cite> this is a change to allow EPUB to be used for webtoon. Using different format is a great option, but if someone distrbutes webtoons as EPUB. We shall accept different formats.</p>
+<p id=x050 class="phone s06"><cite>gpellegrino:</cite> we are not getting to consensus. As previously suggested, should'nt we move to community group to get more incubation work?</p>
+<p id=x054 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to talk about business needs v technical needs</p>
+<p id=x057 class="phone s02"><cite>ivan:</cite> the change proposed offer an aditional way of displaying fixed layout. We may see that angle, not a webtoon specific one.</p>
+<p id=x061 class="phone s07"><cite>AvneeshSingh:</cite> is it so important to get it in the rec now? we could start with a community report with what's inside the PR as a starting point to further collect feedback on uses. Would it be an acceptable proposal?</p>
+<p id=x063 class="phone s04"><cite>Hadrien:</cite> I agree with Gregorio and Avneesh propoasl, a wider group discussion would be good.</p>
+<p id=x065 class="phone s04"><cite>Hadrien:</cite> it's problematic for reading system implemtation as it may break things. we're introducing complexity not necesary. That complexity will be on reading system developpers shoulders.</p>
+<p id=x068 class="phone s05"><cite>duga:</cite> we went community group one year ago, nothing happened. Japan moved, they are producing and consuming that way. It's late for incubation.</p>
+<p id=x070 class="phone s05"><cite>duga:</cite> I agree this is not the best property to use, it was not designed for it, but it works.</p>
+<p id=x072 class="phone s03"><cite>david_hall:</cite> i see uses out of the webtoon context</p>
+<p id=x073 class=irc><cite>&lt;tzviya&gt;</cite> 1 to david_hall</p>
+<p id=x074 class=irc><cite>&lt;tzviya&gt;</cite> s/1 to david_hall /+1 to david_hall</p>
+<p id=x075 class="phone s01"><cite>shiestyle:</cite> if we don't have any approach, maybe even japanese market will not accept EPUB for webtoons. Time is important.</p>
+<p id=x081 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to ask shiestyle to clarify who he represents</p>
+<p id=x082 class="phone s04"><cite>Hadrien:</cite> if EPUB is not the right format and we need to twist it's arm for that, it's not a good option. Again, we need a larger group. Different extensions and property have been used in the past, I see no difference today. It can still be used withou being in the specification. Is it because Apple or Amazone will use them?</p>
+<p id=x085 class="phone s08"><cite>tzviya:</cite> for consensus, the question is can you live with it.</p>
+<p id=x088 class="phone s05"><cite>duga:</cite> we need to do that because actually the way they use this property is illegal, we have to fix that.</p>
+<p id=x089 class=irc><cite>&lt;tzviya&gt;</cite> Proposal: Adopt PR #2602</p>
+<p id=x090 class=irc><cite>&lt;tzviya&gt;</cite> +1</p>
+<p id=x091 class=irc><cite>&lt;david_hall&gt;</cite> +1</p>
+<p id=x092 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=x093 class=irc><cite>&lt;George&gt;</cite> 0</p>
+<p id=x094 class=irc><cite>&lt;gpellegrino&gt;</cite> 0</p>
+<p id=x095 class=irc><cite>&lt;Hadrien&gt;</cite> -1</p>
+<p id=x096 class=irc><cite>&lt;toshiakikoike&gt;</cite> 0</p>
+<p id=x097 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=x098 class=irc><cite>&lt;CharlesL&gt;</cite> 0</p>
+<p id=x099 class=irc><cite>&lt;ivan&gt;</cite> 0.5</p>
+<p id=x100 class=irc><cite>&lt;MasakazuKitahara_&gt;</cite> 0</p>
+<p id=x101 class=irc><cite>&lt;AvneeshSingh&gt;</cite> 0</p>
+<p id=x102 class=summary>-1</p>
+<p id=x104 class="phone s09"><cite>gautierchomel:</cite> I don't have enough information. I need more time / information.</p>
+<p id=x105 class="phone s08"><cite>tzviya:</cite> it is a &quot;May&quot;</p>
+<p id=x107 class="phone s09"><cite>gautierchomel:</cite> I feel it may block a solution.<br>
+<span id=x108>… this is 1/2 a solution.</span></p>
+<p id=x111 class="phone s04"><cite>Hadrien:</cite> I agree as described by the folks in Japan, I don't think this is any different from what others have done.<br>
+<span id=x112>… even &quot;may&quot; solution</span></p>
+<p id=x115 class="phone s08"><cite>tzviya:</cite> we are not trying to create a new specification.<br>
+<span id=x116>… so so you think we don't need to change the spec to package webtoons.</span></p>
+<p id=x120 class="phone s05"><cite>duga:</cite> suggesting that we should go back to Japaneses publishers to come up with some new metadata?<br>
+<span id=x121>… similar to this but would not cause epubcheck to complain.</span></p>
+<p id=x123 class=irc><cite>&lt;tzviya&gt;</cite> acl shiestyle</p>
+<p id=x124 class="phone s04"><cite>Hadrien:</cite> even in Japan there isn't any consensus. maybe status quo is acceptable.</p>
+<p id=x127 class="phone s01"><cite>shiestyle:</cite> this will not define a new webtoon format.<br>
+<span id=x128>… current spec is prohibited for fixed layout for reading system.  current epub spec allow to use for fixed layout for content creators but not allowed for reading systems. we want to improve for Japanese market.</span></p>
+<p id=x131 class="phone s02"><cite>ivan:</cite> I find it difficult to accept.  in Japan there are a number of different publishers their own way with metadata to solve this issue.  argument is this is already done we might as well just leave this alone since they have already done it, but we are a standards company and there will be zero interoperability.  We should have a larger community to work together to develop webtoons.<br>
+<span id=x132>… but this is not the group to do that.</span></p>
+<p id=x133 class=irc><cite>&lt;tzviya&gt;</cite> +1 to Ivan</p>
+<p id=x136 class="phone s02"><cite>ivan:</cite> but if this makes things illegal -&gt; legal then I am for it.<br>
+<span id=x137>… year ago talked about setting up a CG, but we haven't done anything to do that, but I don't know the players.</span><br>
+<span id=x138>… no membership fee to join the CG.</span></p>
+<p id=x144 class="phone s08"><cite>tzviya:</cite> we have heard that W3C must figure out relevance to prevent fracturing.<br>
+<span id=x145>… getting into EPUBCheck is important.</span></p>
+<p id=x146 class="phone s04"><cite>Hadrien:</cite> We are trying to reframe it but useful for fixed layout but if we have to justify it we go back to webtoons.</p>
+<p id=x150 class="phone s05"><cite>duga:</cite> I dont this we agree, this is about webtoons.  how you do webtoons in epub.<br>
+<span id=x151>… webtoons in epub is what we are doing, we are not doing webtoons just how to get webtoons into EPUB.</span></p>
+<p id=x153 class="phone s08"><cite>tzviya:</cite> we are at an impasse.<br>
+<span id=x154>… we are waiting for feedback from Amazon.</span></p>
+<p id=x158 class="phone s02"><cite>ivan:</cite> I would like to have feedback from other publishers / RS in or outside of W3C.<br>
+<span id=x159>… where we are today we should not publish it.  we must get other publishers reactions to this.  emphasizing webtoons IN EPUB specifically.</span><br>
+<span id=x160>… we were discussing PRH and there may be others we need to reach out to.</span></p>
+<p id=x161 class="phone s04"><cite>Hadrien:</cite> I can reach out to Média on our side manga publisher in Europe.</p>
+<p id=x162 class="phone s02"><cite>ivan:</cite> we can talk to PRH.</p>
+<p id=x163 class="phone s08"><cite>tzviya:</cite> I have an email out to Liisa.</p>
+<p id=x165 class=summary>Ivan, we need more feedback.</p>
+<p id=x169 class=irc><cite>&lt;CharlesL&gt;</cite> s/xyz/Média Participations</p>
+<p id=x171 class="phone s08"><cite>tzviya:</cite> PRH is dealing with this, once Liisa responses.  She will know who to reach out to.</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 221 (Fri Jul 21 14:01:30 2023 UTC).</address>
+
+
+</body>
+</html>
