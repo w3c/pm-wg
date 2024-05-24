@@ -1,22 +1,22 @@
 To: webreq@w3.org
 Cc: xueyuan@w3.org, w3t-comm@w3.org, matt.garrish@gmail.com, public-pm-wg@w3.org
-Subject: Publication Request: EPUB Fixed Layout Accessibility as a Draft Working Group Note
+Subject: Publication Request: EPUB Fixed Layout Accessibility as a Working Group Note
 
 Denis,
 
-This is an official publication request for the publication of the PM WG's "EEPUB Fixed Layout Accessibility" as Draft Working Group Note. The publication date is the 14 April, 2024. The transition request for the Note has been issued in:
+This is an official publication request for the publication of the PM WG's "EPUB Fixed Layout Accessibility" as Working Group Note. The publication date is the30 May, 2024. The transition request for the Note has been issued in:
 
-	https://github.com/w3c/transitions/issues/@@@
+	https://github.com/w3c/transitions/issues/613
 
 the Director's approval is in:
 
-	https://github.com/w3c/transitions/issues/@@@#issuecomment-948577851
+	https://github.com/w3c/transitions/issues/613#issuecomment-2127673545
 
 Document Title and URL
 ======================
 
 	EPUB Fixed Layout Accessibility
-	https://www.w3.org/TR/DNOTE-epub-fxl-a11y-20240418/
+	https://www.w3.org/TR/2024/NOTE-epub-fxl-a11y-20240530/
 
 
 Abstract and Status Sections
@@ -24,9 +24,10 @@ Abstract and Status Sections
 
 See the previous URL.
 
-The document should be placed in the "Digital Publishing" bucket on the /TR page.
+The document should be placed in the "Digital Publishing" and "Accessibility" buckets on the /TR page.
 
-The documents is already in place and went through pubrules' checker. 
+The documents is already in place and went through pubrules' checker. The link checker reports 'https://www.kobo.com/'
+as broken, but the link works from a browser, so it is checker problem.
 
 Thanks!
 

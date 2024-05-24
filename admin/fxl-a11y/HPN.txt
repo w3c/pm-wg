@@ -6,8 +6,8 @@ Subject: [DRAFT HPN] Draft Working Group Note: EPUB Fixed Layout Accessibility
 
 <p>
 The <a href="Home Page">Publishing Maintenance Working Group</a> 
-has just published the Draft Working Group Note
-<a href="https://www.w3.org/TR/DNOTE-epub-fxl-a11y-20240418/">EPUB Fixed Layout Accessibility</a>.
+has just published the Working Group Note
+<a href="https://www.w3.org/TR/2024/NOTE-epub-fxl-a11y-20240530/">EPUB Fixed Layout Accessibility</a>.
 This document outlines the goals for EPUB accessible fixed layout ebooks while acknowledging the 
 challenges unique to the EPUB Fixed Layout format.
 </p>
