@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 06 September 2024</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>06 September 2024</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2024/09/06-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, brady, CharlesL, davehall, gautierchomel, gpellegrino, Hadrien, ivan, Laurent, MasakazuKitahara, matt, rickj, shiestyle, toshiakikoike, tzviya, wendy</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>TPAC Agenda</h2>
+<section>
+<p id=x022 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/pm-wg/wiki/TPAC-2024-Agenda-(Draft)">https://<wbr>github.com/<wbr>w3c/<wbr>pm-wg/<wbr>wiki/<wbr>TPAC-2024-Agenda-(Draft)</a></p>
+<p id=x027 class="phone s01"><cite>wendyreid:</cite> Meeting is coming up!<br>
+<span id=x028>… there are pointers to some topics, but want feedback (on existing items and missing items)</span></p>
+<p id=x031 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/2024/09/TPAC/registration.html">https://<wbr>www.w3.org/<wbr>2024/<wbr>09/<wbr>TPAC/<wbr>registration.html</a></p>
+<p id=x038 class="phone s01"><cite>wendyreid:</cite> Also please register if you plan to attend - even if remote!<br>
+<span id=x039>… we will start with scrolled content/webtoons</span><br>
+<span id=x040>… would like to get as much implementation stuff as possible</span><br>
+<span id=x041>… next is substantive changes to epub</span><br>
+<span id=x042>… mostly xhtml stuff</span></p>
+<p id=x048 class="phone s02"><cite>duga:</cite> I asked for the making changes discussion to be first because it might impact the web toons discussion<br>
+<span id=x049>… depending on the direction we choose and the type of change it is</span></p>
+<p id=x050 class="phone s03"><cite>CharlesL:</cite> Having webtoons first might push the next meeting</p>
+<p id=x051 class=irc><cite>&lt;Hadrien&gt;</cite> +1 for substantive changes as the first item</p>
+<p id=x056 class="phone s04"><cite>ivan:</cite> Order is due to timing concerns</p>
+<p id=x058 class="phone s02"><cite>duga:</cite> We did discuss that at the last meeting, we asked, we got a lot of &quot;that's a bad time but we'll be there&quot;</p>
+<p id=x061 class="phone s05"><cite>shiestyle:</cite> Asking about timezone in Japanese</p>
+<p id=x063 class="phone s01"><cite>wendyreid:</cite> Alternate proposal: do webtoons at the end of the day, early morning Japan time</p>
+<p id=x066 class="phone s06"><cite>AvneeshSingh:</cite> Maybe discuss at TPAC but not make a final decision<br>
+<span id=x067>… Gives us some wiggle room to discuss at the WG meeting</span></p>
+<p id=x069 class="phone s01"><cite>wendyreid:</cite> Agreed, we don't have to decide<br>
+<span id=x070>… But it would be great to decide on webtoons</span></p>
+<p id=x074 class="phone s04"><cite>ivan:</cite> Would prefer to make a final decision at TPAC<br>
+<span id=x075>… this has been dragging for too long</span></p>
+<p id=x077 class="phone s01"><cite>wendyreid:</cite> If we open the issues and we have pre-discussion<br>
+<span id=x078>… would that help?</span></p>
+<p id=x079 class="phone s04"><cite>ivan:</cite> Yes, but we should aim to close at TPAC</p>
+<p id=x083 class="phone s01"><cite>wendyreid:</cite> [continues to review current agenda]<br>
+<span id=x084>… if there are any links missing for annotations please let me know, Then on to legistlation</span></p>
+<p id=x085 class="phone s04"><cite>ivan:</cite> Back to annotations, I wonder if Laurent can talk more about their project</p>
+<p id=x089 class="phone s07"><cite>LaurentLM:</cite> No, not too early<br>
+<span id=x090>… we will be able to put it on github and discuss before TPAC</span><br>
+<span id=x091>… Main issue is identifiers and locators</span></p>
+<p id=x095 class="phone s01"><cite>wendyreid:</cite> EU a11y act, and ADA was updated (Title 2 requires WCAG 2.1 stuff)<br>
+<span id=x096>… Title 3 will likely also be updated</span><br>
+<span id=x097>… then audio book a11y and text to speech</span><br>
+<span id=x098>… Hadrien, maybe you can talk to this?</span></p>
+<p id=x099 class="phone s08"><cite>Hadrien:</cite> yes, I will be remote, but I will attend and discuss</p>
+<p id=x100 class="phone s01"><cite>wendyreid:</cite> Last bit is any other business</p>
+<p id=x103 class="phone s04"><cite>ivan:</cite> Depends on Matt being there, since he knows what has changed</p>
+<p id=x104 class="phone s09"><cite>matt:</cite> I will be there</p>
+<p id=x107 class="phone s02"><cite>duga:</cite> For webtoons, homework for people is to look at the existing issue and the proposals</p>
+<p id=x108 class=summary><a href="https://github.com/w3c/epub-specs/pull/2602">w3c/<wbr>epub-specs#2602</a></p>
+<p id=x114 class="phone s02"><cite>duga:</cite> Precomment before TPAC, is there any homework for the changes to EPUB topic<br>
+<span id=x115>… what are the process requirements?</span><br>
+<span id=x116>… is there any documentation we need before Anaheim</span></p>
+<p id=x122 class="phone s04"><cite>ivan:</cite> I won't make you read the process doc, but for any major changes we need to recharter<br>
+<span id=x123>… we're close-ish to the end of our charter, so we may be helping ourselves</span><br>
+<span id=x124>… we need to define what we want to do clearly</span></p>
+<p id=x132 class="phone s10"><cite>tzviya_:</cite> We met back in 2019 in Toronto where we talked about this, we may need to dig up the minutes<br>
+<span id=x133>… serializing HTML</span><br>
+<span id=x134>… many of us were there, we talked a lot about the pros and cons</span><br>
+<span id=x135>… we don't need to repeat ourselves, so we should review ahead</span><br>
+<span id=x136>… I don't know if it's good or bad to review them, things have changed, but it may give people perspective</span><br>
+<span id=x137>… the question now is what can reading systems handle</span><br>
+<span id=x138>… publishers will adapt</span></p>
+<p id=x146 class="phone s08"><cite>Hadrien:</cite> Want to mention something else<br>
+<span id=x147>… I have been working in accessible comics, how it is produced today and what could be done to make them truely accessible</span><br>
+<span id=x148>… right now it is just a script and no more</span><br>
+<span id=x149>… created some alternate examples, what is different about comics, etc</span><br>
+<span id=x150>… may apply to fixed layout content and a11y</span><br>
+<span id=x151>… may also apply to webtoons</span><br>
+<span id=x152>… could also apply to regulation, depending on what happens with legistlation around a11y and comics</span></p>
+<p id=x158 class="phone s06"><cite>AvneeshSingh:</cite> Commenting on charter - before we even think about the charter we have to tackle the problem Tzviya mentioned<br>
+<span id=x159>… We need to discuss strategy so we don't end up writing a spec and no one comes</span><br>
+<span id=x160>… we should figure out what the plan is for epub next, which should be the focus</span></p>
+<p id=x163 class="phone s04"><cite>ivan:</cite> I agree, and as part of the charter this is necessary<br>
+<span id=x164>… But under the current charter, our hands are very tied</span><br>
+<span id=x165>… back to html5 - it became a little more urgent because the XHTML is no longer going forward</span></p>
+<p id=x169 class="phone s03"><cite>CharlesL:</cite> I am testing a bunch of fixed layout books and found some interesting results<br>
+<span id=x170>… Looking at several readers</span><br>
+<span id=x171>… would love to get this example comic and share results</span></p>
+<p id=x173 class="phone s10"><cite>tzviya_:</cite> We had a website that had all the minutes from the IG<br>
+<span id=x174>… I will look for the minutes</span></p>
+<p id=x177 class="phone s04"><cite>ivan:</cite> I will look as well<br>
+<span id=x178>… maybe it was the Digital Publishing Working Group</span></p>
+<p id=x181 class="phone s06"><cite>AvneeshSingh:</cite> And it was discussed in the epubwg<br>
+<span id=x182>… Would it be possible to create an xhtml-&gt;html task force headed by someone who understands the problems</span></p>
+<p id=x186 class="phone s01"><cite>wendyreid:</cite> There are two issues - impact to RS and publishers<br>
+<span id=x187>… Mostly the tooling side</span></p>
+<p id=x188 class=irc><cite>&lt;tzviya_&gt;</cite> <a href="https://www.w3.org/publishing/groups/publ-wg/Meetings/Minutes/2018/2018-05-30-pwg.html">https://<wbr>www.w3.org/<wbr>publishing/<wbr>groups/<wbr>publ-wg/<wbr>Meetings/<wbr>Minutes/<wbr>2018/<wbr>2018-05-30-pwg.html</a></p>
+<p id=x189 class=irc><cite>&lt;tzviya_&gt;</cite> <a href="https://www.w3.org/publishing/groups/publ-wg/Meetings/Minutes/2018/2018-05-31-pwg.html">https://<wbr>www.w3.org/<wbr>publishing/<wbr>groups/<wbr>publ-wg/<wbr>Meetings/<wbr>Minutes/<wbr>2018/<wbr>2018-05-31-pwg.html</a></p>
+<p id=x190 class="phone s04"><cite>ivan:</cite> We need something like that even for the recharter</p>
+<p id=x191 class="phone s01"><cite>wendyreid:</cite> Other side is, what version of epub do we mean? Probably not 3.3</p>
+<p id=x195 class="phone s04"><cite>ivan:</cite> Introducing the new and improved Tzviya!<br>
+<span id=x196>… She has a new job and she is now on W3C staff</span><br>
+<span id=x197>… staff can't chair, which is why she is no longer a chair</span><br>
+<span id=x198>… Thank you Tzviya for everything, and we hope you will stay in the group!</span></p>
+<p id=x200 class="phone s10"><cite>tzviya_:</cite> I am the Sustainability Lead, working on member engagement in NA<br>
+<span id=x201>… And I will be sticking around the group</span></p>
+<p id=x202 class=summary><a href="https://www.w3.org/2024/09/TPAC/registration.html">https://<wbr>www.w3.org/<wbr>2024/<wbr>09/<wbr>TPAC/<wbr>registration.html</a></p>
+<p id=x204 class="phone s01"><cite>wendyreid:</cite> We can end a little early, but *please* register for TPAC if you are coming<br>
+<span id=x205>… Also please do the survey</span></p>
+<p id=x206 class=summary><a href="https://www.irccloud.com/pastebin/2AWUdzTO/">https://<wbr>www.irccloud.com/<wbr>pastebin/<wbr>2AWUdzTO/</a></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 229 (Thu Jul 25 08:38:54 2024 UTC).</address>
+
+</body>
+</html>
