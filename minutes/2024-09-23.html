@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco @TPAC2024 &ndash; 23 September 2024</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group F2F @TPAC2024</h1>
+<h2>23 September 2024</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2024/09/23-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, Daihei, Daihei3, davidhall, dlazin, gautierchomel, George, gpellegrino, Hadrien, ikkwong, ivan, janina1, Laurent, ldriussi, MasakazuKitahara, mgarrish, shiestyle, swjoo, toshiakikoike, tzviya8, wendyreid, laurent</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>-</dd>
+<dt>Scribe</dt><dd>mgarrish, wendyreid, dlazin, CharlesL, duga, rickj</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#t01">Making substantial changes to EPUB</a></li>
+<li><a href="#t02">Scrolled content / webtoons</a></li>
+<li><a href="#t03">Locators and Annotations</a></li>
+<li><a href="#t04">CSSWG Update</a></li>
+<li><a href="#t05">Legislation and Accessibility</a></li>
+<li><a href="#t06">Audiobooks Accessibility, TTS</a></li>
+<li><a href="#t07">Text to Speech</a></li>
+<li><a href="#t08">ISO</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+
+
+<section>
+<h3 id=t01>Making substantial changes to EPUB</h3>
+<p id=x029 class="phone s01"><cite>wendyreid:</cite> first topic is about substantial changes to epub - we have been maintaining the spec since we published it last year - 3.3 was mainly a maintenance update</p>
+<p id=x031 class="phone s01"><cite>wendyreid:</cite> we are looking at one change around webtoons but there are other things like using html syntax, annotations, updates to make the format more modern and adaptable</p>
+<p id=x032 class="phone s01"><cite>wendyreid:</cite> our charter expires next june so we were going to have to have this discussion anyway</p>
+<p id=x033 class="phone s01"><cite>wendyreid:</cite> our current charter locks us into maintenance - we can correct errors, typos, small tweaks to existing features, but cannot add new features</p>
+<p id=x034 class="phone s01"><cite>wendyreid:</cite> we need to talk about the future of epub - we can look beyond epub 3</p>
+<p id=x037 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/pm-wg/issues/6">w3c/<wbr>pm-wg#6</a></p>
+<p id=x040 class="phone s02"><cite>duga:</cite> I see that there are at least two broad categories of changes we can do - reimagine things as epub 4, and then little things like webtoons where we want to add metadata that doesn't break backwards compatibility</p>
+<p id=x041 class="phone s02"><cite>duga:</cite> we need a way to do the smaller things without necessarily doing the big</p>
+<p id=x043 class=irc><cite>&lt;gpellegrino&gt;</cite> +1 to Brady</p>
+<p id=x044 class=irc><cite>&lt;tzviya8&gt;</cite> +1 to duga</p>
+<p id=x045 class="phone s02"><cite>duga:</cite> need a way to get two implementations and get a feature in the spec quickly</p>
+<p id=x050 class="phone s03"><cite>ivan:</cite> a little bit the same as what Brady said - we need to separate what we're thinking of doing - epub 4 is a big step that may not be worth the trouble<br>
+<span id=x051>… there are some things that we can dream up that sound good - for every item we should have a clear statement showing this is what the industry needs</span><br>
+<span id=x052>… industry is also not uniform - reading systems and publishers needs can differ, but it should still influence what we do</span></p>
+<p id=x053 class=irc><cite>&lt;gpellegrino&gt;</cite> +1 to Ìvan</p>
+<p id=x055 class="phone s04"><cite>rickj:</cite> the concept of an epub 4 is scary because of adoption time, but we need to do some things<br>
+<span id=x056>… we don't want to break backwards compatibility  but I have no way to know what differs between versions of epub 3 we do produce</span></p>
+<p id=x059 class=irc><cite>&lt;liisamk&gt;</cite> +1 to knowing what each thing is</p>
+<p id=x065 class="phone s01"><cite>wendyreid:</cite> I agree with Brady and think in the short term we look at necessary changes to 3.3 and then in the longer term consider an epub 4<br>
+<span id=x066>… epub 4 is going to be a five year project and that's not even including adoption into the real world</span><br>
+<span id=x067>… I don't want to get too fixed into only working on 3 or only moving to 4</span></p>
+<p id=x070 class="phone s02"><cite>duga:</cite> it would be interesting to see if there's an easier way to do maintenance - to add features in addition to the minor changes<br>
+<span id=x071>… maybe instead of profiles we can flag new features that may not work</span></p>
+<p id=x073 class="phone s03"><cite>ivan:</cite> administratively speaking class 4 changes are not allowed and we have to recharter for that</p>
+<p id=x080 class="phone s05"><cite>tzviya8:</cite> historically we haven't had good success with profiles - but we do have ways of calling out content like mathml in documents<br>
+<span id=x081>… in terms of business v technical needs we can't do one without the other</span><br>
+<span id=x082>… we had tdm (text and data mining) community group note and it's had a lot of uptake but as a note it didn't go through testing - as a result it didn't go through the W3C AC and get feedback that could have been useful</span></p>
+<p id=x083 class=irc><cite>&lt;tzviya8&gt;</cite> +1 to rickj</p>
+<p id=x084 class=irc><cite>&lt;gpellegrino&gt;</cite> EDUPUB!</p>
+<p id=x085 class="phone s04"><cite>rickj:</cite> education market has dramatically changed in the last 20 years - we put learning materials into the system now only books - is that part of the conversation</p>
+<p id=x088 class="phone s06"><cite>liisamk:</cite> we've always wanted to look at multiple marketplaces - are people willing to come have that conversation<br>
+<span id=x089>… last 20 years of epub has worked in the marketplace but has been dumbed down to work for the lowest common denominator</span><br>
+<span id=x090>… we need the nicer features but also have the fallbacks work</span></p>
+<p id=x094 class="phone s01"><cite>wendyreid:</cite> if we were to think up design principles for epub adaptability and flexibility would need to be top<br>
+<span id=x095>… the same format is for a text-only novel as for a textbook as for a manga</span><br>
+<span id=x096>… we want them all to be well produced and accessible</span></p>
+<p id=x102 class="phone s07"><cite>George:</cite> I want to echo what Rick said about education - epub content is being integrated into an LMS but also with testing and quizzes so moving beyond epub sphere<br>
+<span id=x103>… we're not testing reading systems that are integrated into LMS because they are not fully epub</span><br>
+<span id=x104>… it's also influencing what is happening in libraries</span><br>
+<span id=x105>… we also have accessibility and the evolving legal frameworks and the problems with fixed layouts that need addressing</span></p>
+<p id=x108 class="phone s03"><cite>ivan:</cite> I would like to understand what it means technically for epub to be into the educational space<br>
+<span id=x109>… what are the possible changes need to better fit the educational space</span></p>
+<p id=x117 class="phone s08"><cite>dlazin:</cite> I want to go back the question about what we're chartering as - bug fix or to develop new features<br>
+<span id=x118>… one of the things I see as someone who hasn't built a reading system is this group has a lot of history in background but the next generation won't have this info</span><br>
+<span id=x119>… there is a limited opportunity to do an epub 4 right with that knowledge</span><br>
+<span id=x120>… ebooks is a growing space and looking 50 years in the future I can't believe we'll still be on xhtml</span></p>
+<p id=x121 class=irc><cite>&lt;tzviya8&gt;</cite> +1 to dlazin</p>
+<p id=x123 class="phone s08"><cite>dlazin:</cite> I'm in favour of chartering for an epub 4 and doing this now</p>
+<p id=x128 class="phone s09"><cite>LaurentLM:</cite> everything comes back to business needs - only one I see is to replace every textbook by reflowable for all students<br>
+<span id=x129>… they want to have quizzes and pass information to a server - they are using pseudo-epub with html inside, not xhtml</span><br>
+<span id=x130>… as long as most reading systems don't accept post requests from content I don't think this will go anywhere</span></p>
+<p id=x134 class="phone s01"><cite>wendyreid:</cite> we all agree that we want to continue to evolve epub - is there anyone who has concerns or objections to us rechartering on developing epub 4 or adding new features</p>
+<p id=x141 class="phone s03"><cite>ivan:</cite> the fact that we have put ourselves in the position of not allowing class 4 changes I don't think we can recharter by just taking that clause out<br>
+<span id=x142>… if we recharter we need to list very specific goals that we hope to achieve and create a new working group</span><br>
+<span id=x143>… we need to make sure we don't make this mistake again of not allowing additional changes</span><br>
+<span id=x144>… it's never too early to start the rechartering process</span></p>
+<p id=x145 class=summary>is it correct that what is required is to think again what the attitude is? javascript is grudgingly accepted, for example. Scripting is understandably insecure but they are also important - we need to rethink how we formulate scripting support<br>
+<span id=x146>… are there other things beyong scripting that education will need?</span></p>
+<p id=x152 class="phone s09"><cite>LaurentLM:</cite> if we move to html syntax this is a major evolution as many reading systems won't handle non-xml formats<br>
+<span id=x153>… if we put epub 4 in a charter it will make the publishing industry anxious</span></p>
+<p id=x156 class="phone s10"><cite>gpellegrino:</cite> for me it's okay to go for a new charter if we split the track between big and small changes - we need to improve semantics for education</p>
+<p id=x158 class=irc><cite>&lt;CharlesL&gt;</cite> +1 to two tracks for new charter/ 1=EPUB New, 2=Small new features / fixes</p>
+<p id=x159 class="phone s11"><cite>ikkwong:</cite> why did we stop at 3.3?</p>
+<p id=x160 class="phone s04"><cite>rickj:</cite> 3.1 had breaking changes</p>
+<p id=x162 class="phone s03"><cite>ivan:</cite> fear of rejection if we left things open to change</p>
+<p id=x165 class="phone s12"><cite>AvneeshSingh:</cite> worried we should not be scaring the industry - we should keep backwards compatibility even if we add incremental features<br>
+<span id=x166>… the education field is continuously evolving - we should ensure the changes are incubated in the community group</span></p>
+<p id=x170 class=irc><cite>&lt;Hadrien&gt;</cite> +1 for incubating in CG before moving to a WG</p>
+<p id=x173 class="phone s04"><cite>rickj:</cite> from our perspective, there are three integration points: LMSes, courseware (homework system), and textbooks - the latter is epub<br>
+<span id=x174>… every system has a reader so we're down to the lowest common denominator - need a way to announce what is supported</span></p>
+<p id=x176 class=irc><cite>&lt;Makoto3&gt;</cite> I will go to bed and come back in the last session to discuss the PAS submission of 3.3, RS 3.3, and A11Y 1.1.</p>
+<p id=x179 class="phone s02"><cite>duga:</cite> I didn't propose two tracks but two types of changes we need - two tracks we might have a tough time staffing and maintaining<br>
+<span id=x180>… it feels like the CG is not getting to ideas we pass to them</span></p>
+<p id=x181 class=irc><cite>&lt;tzviya8&gt;</cite> +1 to duga</p>
+<p id=x183 class=irc><cite>&lt;ivan&gt;</cite> +1 to bduga (alas!)</p>
+<p id=x184 class="phone s02"><cite>duga:</cite> if we don't get the process right we're going to end up with big efforts that don't go anywhere, like edupub, etc.</p>
+<p id=x188 class="phone s01"><cite>wendyreid:</cite> I think the two streams idea came from me but it's more like a roadmap in chartering - one stream is things we want to incubate<br>
+<span id=x189>… I've been doing some internal research on html and it's not a big deal to us in terms of how our reading system is constructed or renders content</span></p>
+<p id=x191 class=irc><cite>&lt;tzviya8&gt;</cite> +1 to wendyreid</p>
+<p id=x192 class="phone s01"><cite>wendyreid:</cite> we're always going to support whatever is thrown at us - we still support epub 2</p>
+<p id=x194 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to comment on lessons from 3.2</p>
+<p id=x195 class="phone s01"><cite>wendyreid:</cite> we aren't going to drop support for xhtml because we add support for html</p>
+<p id=x196 class=irc><cite>&lt;dlazin&gt;</cite> +1 to wendyreid</p>
+<p id=x199 class="phone s05"><cite>tzviya8:</cite> we need to look at what went wrong with 3.1<br>
+<span id=x200>… very few business people were involved in the decisions - the workflow ended up being problematic</span><br>
+<span id=x201>… we have not had an effective chair of the CG for some time so we need to look at how everything gets supported</span></p>
+<p id=x202 class="phone s01"><cite>wendyreid:</cite> action item: what should a roadmap for the future look like - not focus on the current charter but what we want to do</p>
+<p id=x203 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/pm-wg/issues/6">w3c/<wbr>pm-wg#6</a></p>
+<p id=x204 class="phone s01"><cite>wendyreid:</cite> we need the use cases and needs for education</p>
+<p id=x205 class="phone s03"><cite>ivan:</cite> I will look into the sweetest and shortest way to recharter - to see if we unbind ourselves from the current lock on features</p>
+</section>
+
+<section>
+<h3 id=t02>Scrolled content / webtoons</h3>
+<p id=x211 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2602">w3c/<wbr>epub-specs#2602</a></p>
+<p id=x326 class=irc><cite>&lt;shiestyle&gt;</cite> My slides: <a
+        href="https://drive.google.com/file/d/14M2wO2A4nXgorKPNSFYHgnlE_a7bRUwJ/view?usp=sharing">https://<wbr>drive.google.com/<wbr>file/<wbr>d/<wbr>14M2wO2A4nXgorKPNSFYHgnlE_a7bRUwJ/<wbr>view?usp=sharing</a>
+</p>
+<p id=x218 class=summary>shiestyle webtoons born in Korea, market increasing in Japan</p>
+<p id=x219 class=summary>using rendition-flow:scrolled-continuous metadata today</p>
+<p id=x220 class="phone s13"><cite>shiestyle:</cite> : major systems like Apple support this</p>
+<p id=x222 class="phone s13"><cite>shiestyle:</cite> (earlier) webtoons born in Korea, market increasing in Japan</p>
+<p id=x223 class="phone s13"><cite>shiestyle:</cite> (earlier) using rendition-flow:scrolled-continuous metadata today</p>
+<p id=x224 class="phone s13"><cite>shiestyle:</cite> mechanisms for webtoons are not defined yet</p>
+<p id=x225 class="phone s13"><cite>shiestyle:</cite> propose new metadata <a href="https://github.com/w3c/epub-specs/issues/2412">w3c/<wbr>epub-specs#2412</a></p>
+<p id=x226 class="phone s13"><cite>shiestyle:</cite> Hadrien's proposal in <a href="https://gist.github.com/HadrienGardeur/273a9d195f4a938880aa0bf8d2fc5dd9/">https://<wbr>gist.github.com/<wbr>HadrienGardeur/<wbr>273a9d195f4a938880aa0bf8d2fc5dd9/</a> requires &quot;class 4&quot; changes to epub (thus new charter)</p>
+<p id=x227 class="phone s13"><cite>shiestyle:</cite> Want to continue to support the Apple (rendition-flow) metadata as well as new metadata</p>
+<p id=x228 class="phone s13"><cite>shiestyle:</cite> because otherwise old webtoons won't work; we need backwards compatibility</p>
+<p id=x229 class="phone s13"><cite>shiestyle:</cite> passing to Hadrien to explain his proposal</p>
+<p id=x231 class="phone s14"><cite>Hadrien:</cite> rendition-flow is a little misguided</p>
+<p id=x232 class="phone s14"><cite>Hadrien:</cite> it suggests that you can have fine-grained control in how an epub flows</p>
+<p id=x233 class="phone s14"><cite>Hadrien:</cite> But you can't. The user decides. That's what epub is about.</p>
+<p id=x234 class="phone s14"><cite>Hadrien:</cite> Thus rendition-flow is not a well-used feature of epub.</p>
+<p id=x235 class="phone s14"><cite>Hadrien:</cite> Might want to consider dropping layouts (fixed layout?) in the future, but let's not talk about that now.</p>
+<p id=x236 class="phone s14"><cite>Hadrien:</cite> A webtoon doesn't behave like a fixed layout.</p>
+<p id=x237 class="phone s14"><cite>Hadrien:</cite> Today fixed layout means that everything is contained in the viewport. That's not what you want for a webtoon.</p>
+<p id=x238 class="phone s14"><cite>Hadrien:</cite> For a webtoon, you want only the full width in the viewport, not the height.</p>
+<p id=x239 class="phone s14"><cite>Hadrien:</cite> There is no such thing as a page in webtoons.</p>
+<p id=x240 class="phone s14"><cite>Hadrien:</cite> Consequently I have a hard time with the idea that a webtoon is fixed layout.</p>
+<p id=x241 class="phone s14"><cite>Hadrien:</cite> Misusing a property that is already problematic is not a good idea.</p>
+<p id=x242 class="phone s14"><cite>Hadrien:</cite> My proposal instead is a new property for rendition:layout, which would be `scrolled`.</p>
+<p id=x245 class="phone s14"><cite>Hadrien:</cite> Would fit to the width of the viewport, with a continuous scroll.</p>
+<p id=x249 class="phone s14"><cite>Hadrien:</cite> A few other optional things:</p>
+<p id=x250 class="phone s14"><cite>Hadrien:</cite> break-scroll-before: current webtoons only allow single episodes</p>
+<p id=x251 class="phone s14"><cite>Hadrien:</cite> this new property would allow multi-episode epubs (like buying a graphic novel or an entire season/series)</p>
+<p id=x252 class="phone s14"><cite>Hadrien:</cite> There are other scrolled comics (bottom-to-top, left-to-right) which are experimental, but thus you should be able to specify the scroll direction</p>
+<p id=x253 class="phone s14"><cite>Hadrien:</cite> that would be rendition:scroll-direction</p>
+<p id=x254 class="phone s14"><cite>Hadrien:</cite> proposal available on Gist, <a href="https://gist.github.com/HadrienGardeur/273a9d195f4a938880aa0bf8d2fc5dd9/">https://<wbr>gist.github.com/<wbr>HadrienGardeur/<wbr>273a9d195f4a938880aa0bf8d2fc5dd9/</a></p>
+<p id=x258 class="phone s01"><cite>wendyreid:</cite> a third proposal!!</p>
+<p id=x260 class="phone s01"><cite>wendyreid:</cite> or maybe fourth, who knows, not me</p>
+<p id=x261 class="phone s01"><cite>wendyreid:</cite> agree with a lot of Hadrien's proposal</p>
+<p id=x262 class="phone s01"><cite>wendyreid:</cite> I see a very big issue with adding a third value to rendition:layout; it will break reading systems</p>
+<p id=x263 class="phone s01"><cite>wendyreid:</cite> so we keep rendition:flow but add an update to dir (direction) or add scroll-direction</p>
+<p id=x265 class="phone s01"><cite>wendyreid:</cite> also add spine direction and other episode metadata</p>
+<p id=x266 class="phone s02"><cite>duga:</cite> I did a proof-of-concept implementation of webtoons</p>
+<p id=x267 class="phone s02"><cite>duga:</cite> thus I see why the Apple/Amazon version is not a level-3 change</p>
+<p id=x268 class="phone s02"><cite>duga:</cite> it's a huge change. It's a brand-new type of fixed layout, which means we have to update a zillion sections in the spec.</p>
+<p id=x269 class="phone s02"><cite>duga:</cite> this is not a bugfix.</p>
+<p id=x270 class="phone s02"><cite>duga:</cite> fixed layout flowing epubs do not exist in the spec, but do exist in reality</p>
+<p id=x271 class="phone s02"><cite>duga:</cite> for webtoons, the whole epub is fixed layout</p>
+<p id=x272 class="phone s02"><cite>duga:</cite> so the benefit of using the existing property is gone</p>
+<p id=x273 class=irc><cite>&lt;LaurentLM&gt;</cite> +1 to brady: this would not be a level 3 change</p>
+<p id=x274 class="phone s02"><cite>duga:</cite> so to Hadrien's point, it's a bad idea to reuse this flag just because it already exists.</p>
+<p id=x276 class="phone s02"><cite>duga:</cite> as wendyreid says, if you give Hadrien's epub to Google Play Books etc, it will break</p>
+<p id=x277 class=irc><cite>&lt;LaurentLM&gt;</cite> +100 to brady</p>
+<p id=x279 class="phone s02"><cite>duga:</cite> and that is GOOD because it will break at ingestion and prevent users from spending $5 on a thing that the RS can't render</p>
+<p id=x280 class="phone s06"><cite>liisamk:</cite> what's happening in this space from a business perspective is exactly what happened with children's picture books initially</p>
+<p id=x281 class="phone s06"><cite>liisamk:</cite> there wasn't a way to do them in epub</p>
+<p id=x282 class="phone s06"><cite>liisamk:</cite> Apple found a workaround, people started making/selling them, and then we doubled back to support them officially</p>
+<p id=x283 class="phone s06"><cite>liisamk:</cite> what's probably happening today is people are making two files, one for one partner and one for another</p>
+<p id=x284 class="phone s06"><cite>liisamk:</cite> or not selling it at all</p>
+<p id=x287 class="phone s06"><cite>liisamk:</cite> whether we like it or not, this is already happening, and expanding across the world quite quickly</p>
+<p id=x288 class="phone s06"><cite>liisamk:</cite> process question: whether you are going straight from webtoons to digital product, or introducing a print product in the middle</p>
+<p id=x289 class="phone s06"><cite>liisamk:</cite> some publishers are buying webtoons, breaking them up to put them on paper pages, and digital adaptation happens after that</p>
+<p id=x290 class="phone s06"><cite>liisamk:</cite> they want the ebook to mirror what they had on the print side</p>
+<p id=x291 class="phone s06"><cite>liisamk:</cite> right now that workflow is making them into regular fixed layout</p>
+<p id=x292 class="phone s06"><cite>liisamk:</cite> (liisamk is not saying this is a good thing, just reality)</p>
+<p id=x293 class="phone s06"><cite>liisamk:</cite> there is a business need to have fixed pages sometimes and flowing the rest of the time</p>
+<p id=x295 class="phone s13"><cite>shiestyle:</cite> I also oppose adding a third value to rendition:layout</p>
+<p id=x296 class="phone s13"><cite>shiestyle:</cite> this would break existing webtoons</p>
+<p id=x298 class="phone s13"><cite>shiestyle:</cite> if we add new metadata for webtoons, scroll-direction is enough</p>
+<p id=x299 class="phone s01"><cite>wendyreid:</cite> the complication is real and important</p>
+<p id=x300 class="phone s01"><cite>wendyreid:</cite> but the requirement for backwards compatibility is a real bind</p>
+<p id=x301 class="phone s01"><cite>wendyreid:</cite> today, if I were to download a file with this new value, the worst that would happen is I would get a paginated book</p>
+<p id=x302 class="phone s01"><cite>wendyreid:</cite> that's not ideal, but we still want it to work even if it's not the bestest</p>
+<p id=x303 class=irc><cite>&lt;George&gt;</cite> I would like to know more about Lisa's statement that higher education is using fixed layout. In the titltes I see, that is not the case.</p>
+<p id=x304 class="phone s01"><cite>wendyreid:</cite> it's great if e.g. Google breaks at ingestion, but some users are downloading epubs directly, opening them in Thorium, and will be upset if they break at that point.</p>
+<p id=x305 class="phone s01"><cite>wendyreid:</cite> We should better explore this mixed-experience content in future versions of epub</p>
+<p id=x308 class="phone s14"><cite>Hadrien:</cite> Mixing up a lotta different things here.</p>
+<p id=x310 class="phone s14"><cite>Hadrien:</cite> when I hear that the content is redesigned to be paginated, and we want to allow the user to choose between paginated and scrolled, that's quite different between what we're talking about in the past with webtoons.</p>
+<p id=x311 class="phone s14"><cite>Hadrien:</cite> Big difference between a user preference for how you consume fixed layout vs content that will be broken if you don't force the behavior for webtoons.</p>
+<p id=x312 class="phone s14"><cite>Hadrien:</cite> fixed layout today is already good enough for what liisamk described.</p>
+<p id=x313 class="phone s14"><cite>Hadrien:</cite> Japan is not the biggest market today for webtoons.</p>
+<p id=x314 class="phone s14"><cite>Hadrien:</cite> in all the biggest markets, webtoons are just images in a .zip file.</p>
+<p id=x316 class="phone s14"><cite>Hadrien:</cite> the majority of the business around this is not on EPUB today (outside of Japan)</p>
+<p id=x317 class="phone s02"><cite>duga:</cite> like liisamk said, this is fixed layout repeating itself</p>
+<p id=x318 class="phone s02"><cite>duga:</cite> but we didn't just take Apple's implementation; we made it fit into the spec</p>
+<p id=x319 class="phone s02"><cite>duga:</cite> today, there are two ways of supporting fixed layout, Apple's way and the official way</p>
+<p id=x320 class="phone s02"><cite>duga:</cite> that is annoying, but we don't need to take Apple's way of doing it (specifically). We should design the best thing for the spec and if we have two varying implementations again, so be it.</p>
+<p id=x322 class="phone s15"><cite>Dale:</cite> The web world has graceful degradatation</p>
+<p id=x324 class="phone s15"><cite>Dale:</cite> Edit: The web world has graceful degradation</p>
+<p id=x327 class="phone s15"><cite>Dale:</cite> I'm wondering if RSes see content they don't understand, do they ignore or do they just crash?</p>
+<p id=x328 class="phone s01"><cite>wendyreid:</cite> Most reading systems do the best they can to render.</p>
+<p id=x330 class="phone s01"><cite>wendyreid:</cite> The graceful degradation principle carries over ... with some limits.</p>
+<p id=x332 class="phone s01"><cite>wendyreid:</cite> For example, epubcheck has some errors that will prevent bad content rather than RSes trying to render it.</p>
+<p id=x333 class="phone s06"><cite>liisamk:</cite> Most reading systems do not render the epub exactly as delivered.</p>
+<p id=x334 class="phone s06"><cite>liisamk:</cite> RSes have ingestion processes (usually) that change things -- modifying CSS, etc.</p>
+<p id=x336 class="phone s06"><cite>liisamk:</cite> There's a big black box of people not knowing what happens or why.</p>
+<p id=x337 class="phone s06"><cite>liisamk:</cite> I would like to see the publisher/author to be able to indicate a *preference* for how a book should be rendered, but give the reader control as an override.</p>
+<p id=x340 class="phone s06"><cite>liisamk:</cite> Sometimes the content is optimized in a way that is not the reader's preference.</p>
+<p id=x341 class="phone s14"><cite>Hadrien:</cite> Not sure it's true that *most* RSes transform input, but the biggest ones do.</p>
+<p id=x342 class="phone s14"><cite>Hadrien:</cite> The vast majority of (small) RSes don't change the file.</p>
+<p id=x343 class="phone s14"><cite>Hadrien:</cite> Flow and spread are both examples of misused features.</p>
+<p id=x344 class="phone s14"><cite>Hadrien:</cite> So RSes try to have sane defaults and give options back to readers.</p>
+<p id=x345 class="phone s14"><cite>Hadrien:</cite> These properties where we're made mistakes in the spec are almost useless, because they're not well supported.</p>
+<p id=x346 class="phone s14"><cite>Hadrien:</cite> Another way of consuming content is one full viewport at a time. That's not quite paginated, but it can be useful for accessibility.</p>
+<p id=x348 class="phone s02"><cite>duga:</cite> The way liisamk describes scrolled-continuous is exactly how it was intended, but it's so hard to use.</p>
+<p id=x351 class="phone s02"><cite>duga:</cite> If it was my product, I would not bother implementing the default scrolled-continuous; it's a lot of work for a weird user experience that people will turn off.</p>
+<p id=x353 class="phone s06"><cite>liisamk:</cite> Many RSes take defaults that a reader sets and apply it to all content.</p>
+<p id=x356 class="phone s06"><cite>liisamk:</cite> This isn't really a standards question, but we should consider whether preferences should apply to all books equally.</p>
+<p id=x359 class="phone s06"><cite>liisamk:</cite> Readers don't really understand how much the RS decisions affect their reading experience.</p>
+<p id=x360 class=irc><cite>&lt;duga&gt;</cite> +1 liisamk</p>
+<p id=x361 class="phone s14"><cite>Hadrien:</cite> At Readium we have preferences per publication, global preferences, and a mix: initialized with global settings with per-publication overrides.</p>
+<p id=x362 class="phone s14"><cite>Hadrien:</cite> Some users need that (e.g. for accessibility)</p>
+<p id=x365 class="phone s14"><cite>Hadrien:</cite> You don't want to have to fix typography settings on every single book you open.</p>
+<p id=x367 class="phone s01"><cite>wendyreid:</cite> This is cool but we are off-topic.</p>
+<p id=x368 class="phone s01"><cite>wendyreid:</cite> We have been talking about webtoons in circles for a while.</p>
+<p id=x370 class="phone s01"><cite>wendyreid:</cite> We don't need to make a decision today, but we should get towards one.</p>
+<p id=x371 class=irc><cite>&lt;CharlesL&gt;</cite> +1 that was my point of view Dyslexic users will want a specific font which helps them read more efficiently same for low vision users with a specific font size etc.</p>
+<p id=x372 class="phone s01"><cite>wendyreid:</cite> How do we get to a path that makes sense in EPUB 3.X, and how do we fix this better in an ideal future?</p>
+<p id=x374 class="phone s15"><cite>Dale:</cite> Question is who has control — the original designer or the reader?</p>
+<p id=x379 class="phone s15"><cite>Dale:</cite> Some questions are design issues, some are accessibility issues</p>
+<p id=x380 class="phone s15"><cite>Dale:</cite> I would like to advocate for the perspective of the designer who is creating the book.</p>
+<p id=x381 class="phone s09"><cite>LaurentLM:</cite> The Apple proposal is not a level-3 change.</p>
+<p id=x383 class="phone s09"><cite>LaurentLM:</cite> In the previous discussion we agreed we should recharter.</p>
+<p id=x385 class="phone s09"><cite>LaurentLM:</cite> Let's do something clean in EPUB 3.4.</p>
+<p id=x387 class="phone s09"><cite>LaurentLM:</cite> That is, we don't need a level-3 change, and that's OK, because we're going to recharter anyway.</p>
+<p id=x388 class=irc><cite>&lt;rickj&gt;</cite> +1 to Laurent's comment to recharter</p>
+<p id=x389 class="phone s02"><cite>duga:</cite> Agree; let's recharter and do something good and new.</p>
+<p id=x390 class="phone s14"><cite>Hadrien:</cite> Maybe in Japan, with specialized RS, the Apple way will continue to exist.</p>
+<p id=x391 class="phone s14"><cite>Hadrien:</cite> Maybe those RSes will have aliases from one metadata property to another.</p>
+<p id=x393 class="phone s14"><cite>Hadrien:</cite> It's not that big of an issue. It's acceptable to have two ways of specifying the metadata.</p>
+<p id=x394 class="phone s14"><cite>Hadrien:</cite> e.g. if you see flow:continuous-scroll plus layout:fixed, you would treat that like layout:scrolled.</p>
+<p id=x395 class=irc><cite>&lt;LaurentLM&gt;</cite> rendition:layout = pre-paginated + rendition:flow = scrolled-continuous =&gt; rendition:layout = scrolled in EPUB 3.4</p>
+<p id=x396 class="phone s03"><cite>ivan:</cite> let me restate Hadrien</p>
+<p id=x397 class="phone s03"><cite>ivan:</cite> we define a new (thorough) approach</p>
+<p id=x398 class="phone s03"><cite>ivan:</cite> then we also document the practice by Apple/Amazon Japan, to indicate that that solution is still around and must be understood (aliased) in the context of our new properties</p>
+<p id=x399 class="phone s02"><cite>duga:</cite> we didn't do that for Apple's fixed layout</p>
+<p id=x400 class="phone s03"><cite>ivan:</cite> the market was smaller then!</p>
+<p id=x401 class=irc><cite>&lt;dlazin&gt;</cite> +1 to ivan</p>
+<p id=x402 class=irc><cite>&lt;shiestyle&gt;</cite> +1 to ivan</p>
+<p id=x403 class="phone s03"><cite>ivan:</cite> it doesn't cost us a penny to document the aliases</p>
+<p id=x405 class="phone s03"><cite>ivan:</cite> there are two aspects of where we go from here: the chartering is on me</p>
+<p id=x406 class="phone s03"><cite>ivan:</cite> but the modification to the epub spec can continue in parallel</p>
+<p id=x407 class="phone s03"><cite>ivan:</cite> modifying the Reading System spec is more complex than modifying the file spec</p>
+<p id=x408 class="phone s16"><cite>davidhall:</cite> (complex thought about whether we need to recharter to handle Apple's current implementation, which dlazin didn't capture well)</p>
+<p id=x409 class=summary>BREAK TIME! Re-convene in 26 minutes</p>
+</section>
+
+<section>
+<h3 id=t03>Locators and Annotations</h3>
+<p id=x417 class="phone s01"><cite>wendyreid:</cite> Reminder. we are no longer thinking about the charter.<br>
+<span id=x418>… what are the problems we are trying to solve</span></p>
+<p id=x420 class=summary><a href="https://github.com/readium/annotations">readium/<wbr>annotations</a></p>
+<p id=x424 class="phone s01"><cite>wendyreid:</cite> things we worked on in the past. work by Readium, etc.<br>
+<span id=x425>… location and wayfinding in EPUB and annotations is important and education use cases.</span><br>
+<span id=x426>… there are problems with the current implementations. we do some things well every platform has implemented it differently</span></p>
+<p id=x442 class="phone s03"><cite>ivan:</cite> I was part of the annotations work.  important browsers implementation. main motivation annotatins should be exchangable.<br>
+<span id=x443>… data format for storage on an annotation server.</span><br>
+<span id=x444>… details with JSON storage is beside the point.</span><br>
+<span id=x445>… it has failed usage with web browsers. one implementation which is Hypothesis but never opened up their servers which is private.</span><br>
+<span id=x446>… is there a market to exchange data among Reading Systems.</span><br>
+<span id=x447>… big question is exchange of data.</span><br>
+<span id=x448>… make sure there is a business case first.  but would love to see this work done.</span><br>
+<span id=x449>… clear market for Webtoons there is a market need.  but for annotations I am skeptical.</span></p>
+<p id=x456 class="phone s14"><cite>Hadrien:</cite> important keep in mind are higher level features.<br>
+<span id=x457>… need to look at what has changed.  new building blocks on the web.</span><br>
+<span id=x458>… scroll to text fragment. implemented in Chrome</span><br>
+<span id=x459>… there is a way now to reference text on the web without fragment IDs.</span><br>
+<span id=x460>… we can not get accesses to that low level.  highlight interface CSS highlight</span></p>
+<p id=x461 class=summary><a href="https://wicg.github.io/scroll-to-text-fragment/#fragmentdirective">https://<wbr>wicg.github.io/<wbr>scroll-to-text-fragment/#fragmentdirective</a></p>
+<p id=x462 class="phone s14"><cite>Hadrien:</cite> we have this now available on the web.</p>
+<p id=x463 class=summary><a href="https://drafts.csswg.org/css-pseudo/#selectordef-target-text">https://<wbr>drafts.csswg.org/<wbr>css-pseudo/#selectordef-target-text</a></p>
+<p id=x466 class="phone s14"><cite>Hadrien:</cite> use cases - Readium we have toolkits where 100's of developers are using.  Organizations need this feature need on desktop mobile, web.<br>
+<span id=x467>… if we build that into toolkits that are widely used. bloggers could use this with interoperability.</span></p>
+<p id=x469 class=irc><cite>&lt;dlazin&gt;</cite> +1 to liisamk ALREADY</p>
+<p id=x473 class="phone s06"><cite>liisamk:</cite> Focus on use case of reader taking their notes from one platform to another you will get pushback. wall gardens<br>
+<span id=x474>… every reader want to keep their notes without fear of loosing them.</span><br>
+<span id=x475>… author selling annotations is an interesting proposition. reading groups sharing annotations.</span></p>
+<p id=x476 class=irc><cite>&lt;Hadrien&gt;</cite> +1 for archiving as well, this goes beyond publication updates, a lot of ebooks are borrowed from libraries where users lose access to the publication after 21/28 days</p>
+<p id=x480 class="phone s06"><cite>liisamk:</cite> allow users to mark things up, highlighting / need.  books get updated minor things tech fixes, author adding new content. many versions over their lifetime.<br>
+<span id=x481>… many updating from EPUB2-3 and adding accessibility. keep their annotations.</span></p>
+<p id=x484 class=irc><cite>&lt;Zakim&gt;</cite> ivan, you wanted to react to rickj</p>
+<p id=x488 class="phone s04"><cite>rickj:</cite> business case for Education with Hypothesis, professors assigning their books.  When tying a grade to reading highlighting making notes engagement increased.<br>
+<span id=x489>… there are engagement reporting systems and this needs to be interoperable with this.</span></p>
+<p id=x493 class="phone s01"><cite>wendyreid:</cite> user interest in this is gaining.  iPad / Apple pencil. writing tools, social media how they note take and process information.  huge online and engagement with technology.  Readwise<br>
+<span id=x494>… we want interoperability but would be great if they worked with other platforms.</span></p>
+<p id=x496 class="phone s04"><cite>rickj:</cite> we need to interoperate with Hypothesis</p>
+<p id=x498 class="phone s03"><cite>ivan:</cite> since Hypothesis is a closed system.. right.</p>
+<p id=x499 class=irc><cite>&lt;LaurentLM&gt;</cite> a closed system like Hypothesis cannot be considered a standard...</p>
+<p id=x500 class="phone s17"><cite>Dan:</cite> clear business case page numbers how we use books.  We didn't reinvent the book we reinvented the scroll.</p>
+<p id=x501 class=irc><cite>&lt;LaurentLM&gt;</cite> hypothesis may be considered a monopoly by default</p>
+<p id=x503 class="phone s17"><cite>Dan:</cite> sharing page numbers when folks are on different reading systems or if a new version comes out which changes the page numbers.  we need standardized page numbers.</p>
+<p id=x504 class=irc><cite>&lt;tzviya8&gt;</cite> +1 to dlazin</p>
+<p id=x506 class="phone s17"><cite>Dan:</cite> we know there is a very strong use case for page numbers.<br>
+<span id=x507>… important, we don't want to have an algorithmic page numbers we need publisher defined page numbers.  great to get a consistent display of page numbers.</span></p>
+<p id=x511 class=irc><cite>&lt;Zakim&gt;</cite> duga, you wanted to talk about data export</p>
+<p id=x519 class="phone s02"><cite>duga:</cite> we want to do these annotation things.. what about simple import / export?<br>
+<span id=x520>… we don't have to do the centralized server.  Patrons could get their annotations.</span><br>
+<span id=x521>… wall gardens - maybe could shame them into adoption.</span><br>
+<span id=x522>… Microsoft would have loved to have if you could &quot;bring your annotations with you&quot;.</span></p>
+<p id=x525 class="phone s07"><cite>George:</cite> reading is a very personal experience.  keep forever their annotations and bookmarks, share with children / grandchildren.  save these annotations.  Wish I had this 20 years ago.</p>
+<p id=x529 class="phone s15"><cite>Dale:</cite> retired as a professor using an LMS from an educators POV.  if a student sent in a grade appeal, if I had to document that, I would go into the LMS and determin how engage that student was in the class.  I would have to make sure the LMS could give a report and it could tell me if the student read a particular book / page etc.  I am not sure if I could find out a the page level in the EPUB, I heard the argument for the education use
+case, not sure an educator would want to do.</p>
+<p id=x533 class="phone s06"><cite>liisamk:</cite> move towards more a11y content, a lot are including page numbers and backlists remediation does include this.  vast majority of Ebooks have real page #'s and where they were sourced from in the metadata.<br>
+<span id=x534>… there are times for better reading experience you may re-order content and what should the page #'s do if the order changes.  but keeping the mirror with the print book even if it is out of order in the digital book.</span></p>
+<p id=x537 class="phone s09"><cite>LaurentLM:</cite> Readium near prototype shared our spec.<br>
+<span id=x538>… use cases are in the spec, archiving is in the spec.</span><br>
+<span id=x539>… audio books and web publications.  first use case is import / exporting annotations or sets.</span></p>
+<p id=x540 class=irc><cite>&lt;tzviya8&gt;</cite> Readium document <a href="https://github.com/readium/annotations">readium/<wbr>annotations</a></p>
+<p id=x544 class="phone s09"><cite>LaurentLM:</cite> EPUB is the only format we are thinking for annotations.<br>
+<span id=x545>… we are not planning on pushing to a server, there is Hypothesis for that.</span><br>
+<span id=x546>… please comment in Github.  in a few months we will have a prototype to demo.</span></p>
+<p id=x553 class="phone s03"><cite>ivan:</cite> we would have to justify why we want to do this work..  AC would be asking so this is good.<br>
+<span id=x554>… important to remember the standard we would adapt and what Readium has done. not the UX experience that is outside of this.  export/import or on a server.  we must keep in mind to define a format that can be exchange.</span><br>
+<span id=x555>… other part that is important terminology &quot;selector&quot; / locator generalization of page numbering.  how to hook an annotation in the content.</span><br>
+<span id=x556>… usage of selectors go beyond annotations.</span><br>
+<span id=x557>… question: annotations standard for EPUB the standard does not modify the EPUB 3.3 itself.</span><br>
+<span id=x558>… the Readium maybe storing an annotation within an EPUB.</span></p>
+<p id=x560 class=irc><cite>&lt;fantasai&gt;</cite> Saw someone drop a link to ::target-text earlier; here's a few related items:</p>
+<p id=x561 class=irc><cite>&lt;fantasai&gt;</cite> <a href="https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments">https://<wbr>developer.mozilla.org/<wbr>en-US/<wbr>docs/<wbr>Web/<wbr>URI/<wbr>Fragment/<wbr>Text_fragments</a></p>
+<p id=x562 class=irc><cite>&lt;fantasai&gt;</cite> <a href="https://wicg.github.io/scroll-to-text-fragment/">https://<wbr>wicg.github.io/<wbr>scroll-to-text-fragment/</a></p>
+<p id=x565 class="phone s14"><cite>Hadrien:</cite> Archiving - ownership is less common, we are given temp access. different reading env. some you may loose access to it.  you may get subscription platforms but bringing that into another platform when I am no longer a student etc.  archival is very important and should be the core of how we think about this.<br>
+<span id=x566>… selector we choose will be important for archival.  less brittle (CFI will break if you update anything)</span></p>
+<p id=x567 class=irc><cite>&lt;George&gt;</cite> +1 to Hadrien  archive  and personal bookmarks and annotations</p>
+<p id=x570 class="phone s01"><cite>wendyreid:</cite> I am a student now and this is very frustrating.<br>
+<span id=x571>… locators: this is essential. most books are not coming in page numbers. we can not self publishers, they are using services.  massive part of the EPUB market.</span><br>
+<span id=x572>… we need to be mindful of that, as the maintainer of the standard.</span></p>
+<p id=x573 class=irc><cite>&lt;liisamk&gt;</cite> I can show you all of the ways they are different...</p>
+<p id=x576 class="phone s01"><cite>wendyreid:</cite> lot of interest in text fragments, perhaps supporting multiple</p>
+<p id=x578 class="phone s02"><cite>duga:</cite> CFI's are hard to make and define.  there are copy quota and you may try to annotate every work and steal it.  that is a concern.</p>
+<p id=x581 class=irc><cite>&lt;Hadrien&gt;</cite> copy quota are already dead with the ability to extract arbitrary text from any screen/screenshot/photo on mobile</p>
+<p id=x585 class=irc><cite>&lt;Hadrien&gt;</cite> I know at least 5 different ways built-into the platform to circumvent copy quota on Android for example</p>
+<p id=x586 class="phone s07"><cite>George:</cite> EBSCO for their patrons is absolutely essential.  if they don't have page numbers they must us an algorithm so that they distribute with page numbers.  we need a way to standardize this or all citations will be a major problem.  great if we could standardize this.</p>
+<p id=x589 class="phone s03"><cite>ivan:</cite> rechartering - annotations becomes a separate document along side the others. we have to do a rechartering with a new deliverable.  We have no choice.<br>
+<span id=x590>… does the WG agrees that annotation should be a separate document and not just tacked onto EPUB spec?</span></p>
+<p id=x592 class=irc><cite>&lt;Hadrien&gt;</cite> +1 for a separate document</p>
+<p id=x599 class="phone s15"><cite>Dale:</cite> I like the idea of it being a separate document.  finished a 3 year program some had print, digital, reading EPUBs on laptops, PDA's etc.  getting to a particular page was just about impossible.  We would say go to first chapter 3rd paragraph 2nd sentence is what we had to revert to.<br>
+<span id=x600>… if the DOM could take care of tracking things vs the Reading System.</span><br>
+<span id=x601>… I am an independent author as well, so I would just update changes when I need to make a change then the DOM may be updated as a result.</span></p>
+<p id=x602 class="phone s18"><cite>mgarrish:</cite> the authoring / rendering (this is not a core authoring / rendering) but more of a satellite spec.</p>
+<p id=x604 class="phone s04"><cite>rickj:</cite> Matt just answered my question.  I agree.</p>
+<p id=x605 class=irc><cite>&lt;George&gt;</cite> annotations, locators, and get citation in scope.</p>
+<p id=x606 class="phone s01"><cite>wendyreid:</cite> we would have to decide if this is a NOTE vs a Rec Track doc.</p>
+<p id=x607 class="phone s19"><cite>Phillip:</cite> are you thinking of creating a new metadata vocab?</p>
+<p id=x608 class="phone s03"><cite>ivan:</cite> No, we may need to extend the annotation web spec.</p>
+<p id=x609 class="phone s19"><cite>Phillip:</cite> charter ends next year, and you don't have to wait.  the charter doesn't care if its a separate document or not just depends on if it is in scope or not.</p>
+<p id=x610 class="phone s20"><cite>fantasai:</cite> don't try to put technologies specs in.</p>
+<p id=x611 class="phone s01"><cite>wendyreid:</cite> we also need testin NOTEs. They belong on REC track, for IPR reasons and Processg included.</p>
+</section>
+
+<section>
+<h3 id=t04>CSSWG Update</h3>
+<p id=x614 class="phone s20"><cite>fantasai:</cite> invite if you all need css support for improved layout etc. please see us. During EPUP3.0 development we had a great collaboration with EPUB folks that really improved internationalization for both CSS and EPUB; so if you need more CSS abilities please come talk to us.</p>
+<p id=x615 class=irc><cite>&lt;fantasai&gt;</cite> <a href="https://www.w3.org/TR/css-inline-3/">https://<wbr>www.w3.org/<wbr>TR/<wbr>css-inline-3/</a></p>
+<p id=x616 class=irc><cite>&lt;fantasai&gt;</cite> <a href="https://atypi.org/presentation/precise-text-alignment-in-css/">https://<wbr>atypi.org/<wbr>presentation/<wbr>precise-text-alignment-in-css/</a></p>
+<p id=x619 class="phone s20"><cite>fantasai:</cite> working on spacing of text line to line, sizing text in more precise ways. inline layout spec.<br>
+<span id=x620>… adding this box can be sized based on certain size metrics.</span><br>
+<span id=x621>… top of some text and an adjacent images etc.  so this will help with that.</span></p>
+<p id=x622 class=irc><cite>&lt;fantasai&gt;</cite> <a href="https://www.w3.org/TR/css-inline-3/#leading-trim">https://<wbr>www.w3.org/<wbr>TR/<wbr>css-inline-3/#leading-trim</a></p>
+<p id=x623 class=irc><cite>&lt;fantasai&gt;</cite> <a href="https://www.w3.org/TR/css-inline-3/#text-edges">https://<wbr>www.w3.org/<wbr>TR/<wbr>css-inline-3/#text-edges</a></p>
+<p id=x627 class="phone s20"><cite>fantasai:</cite> related features line heights are calculated.<br>
+<span id=x628>… we would love to have more feedback from publishers.</span></p>
+<p id=x629 class=irc><cite>&lt;fantasai&gt;</cite> <a href="https://github.com/w3c/csswg-drafts/issues?q=is%3Aopen+is%3Aissue+label%3Acss-inline-3">https://<wbr>github.com/<wbr>w3c/<wbr>csswg-drafts/<wbr>issues?q=is%3Aopen+is%3Aissue+label%3Acss-inline-3</a></p>
+<p id=x630 class="phone s02"><cite>duga:</cite> you don't need to be part of the CSS WG to comment?</p>
+<p id=x631 class="phone s20"><cite>fantasai:</cite> correct all welcome to comment.</p>
+<p id=x634 class="phone s01"><cite>wendyreid:</cite> we will break for an hour.</p>
+<p id=x636 class=summary>LUNCH TIME - be back in an hour</p>
+</section>
+
+<section>
+<h3 id=t05>Legislation and Accessibility</h3>
+<p id=x650 class="phone s01"><cite>wendyreid:</cite> For this session,  talking about upcoming worldwide legistlation<br>
+<span id=x651>… particularly EU A11y act</span><br>
+<span id=x652>… particularly what is remaining?</span><br>
+<span id=x653>… Also some changes to US Title 2</span><br>
+<span id=x654>… What impacts does that have to publishing?</span><br>
+<span id=x655>… And if anyone knows anything about other laws</span></p>
+<p id=x656 class=summary>&quot;international people&quot;</p>
+<p id=x657 class="phone s01"><cite>wendyreid:</cite> Start with EAA - what is left?</p>
+<p id=x680 class="phone s10"><cite>gpellegrino:</cite> I have a brief overview of the last year for EAA<br>
+<span id=x681>… EAA requires a11y for different types of products and services</span><br>
+<span id=x682>… Coming in June 2025, so about 9 months out</span><br>
+<span id=x683>… Includes ebooks, reading apps, toolchains, etc</span><br>
+<span id=x684>… I am not a lawyer, please refer to one if you need to!</span><br>
+<span id=x685>… All ecommerce has to be accessible, as well as banks and other services</span><br>
+<span id=x686>… Europe is using the latest version of web accessibility (2.0?)</span><br>
+<span id=x687>… We have shown to the European commision that we are already in compliance with the laws, via our accessibility specs</span><br>
+<span id=x688>… There is a note that has a mapping for a11y, and udated epub a11y to put it in line with the European requirements</span><br>
+<span id=x689>… Specifically, epub a11y references WCAG 2.0 level A</span><br>
+<span id=x690>… WCAG 2.0 Level A is not sufficient, as is clear from the mapping</span><br>
+<span id=x691>… There was some issues with DRM which are being discussed</span><br>
+<span id=x692>… finally EPUB fixed layout is the last problem.</span><br>
+<span id=x693>… The user must be allowed to change all text properties (line height, font, etc)</span><br>
+<span id=x694>… Some types of publications may not allow these types of format changes (e.g. comics)</span><br>
+<span id=x695>… But that is why we think exploring a11y in fixed layout is very important</span><br>
+<span id=x696>… Last TPAC we delayed ISO transition until after EAA</span><br>
+<span id=x697>… as such we ask that we delay ISO until after June 2025</span></p>
+<p id=x700 class="phone s03"><cite>ivan:</cite> Where are we on discussions with the European Commission? Is the danger of being sidelined still there?</p>
+<p id=x702 class="phone s21"><cite>christina:</cite> We are on a good track, there is a new meeting this week, they are willing to start the delegate access for this.<br>
+<span id=x703>… So we will have an answer soon</span></p>
+<p id=x705 class="phone s01"><cite>wendyreid:</cite> What is the issue with ISO?<br>
+<span id=x706>… delay isn't a problem, but why do we need to delay?</span></p>
+<p id=x710 class="phone s21"><cite>christina:</cite> Because the relationship between international and European standard is tricky, so we want to leave the choice to the commission right now<br>
+<span id=x711>… They need to make a petition to the EU standards body, and if the is an ISO standard that is confusing</span><br>
+<span id=x712>… So it will take time.</span></p>
+<p id=x713 class="phone s07"><cite>George:</cite> If there is an ISO standard it must be harmonized, but W3C standards are easier</p>
+<p id=x715 class="phone s22"><cite>CharlesL:</cite> We also published a note on the exceptions, so those need to be harmonized.</p>
+<p id=x718 class=irc><cite>&lt;rickj&gt;</cite> Link to the 'note on exceptions' that Charles mentioned?</p>
+<p id=x721 class="phone s03"><cite>ivan:</cite> Another practical Q - first a quick summary of this mornings session<br>
+<span id=x722>… Are we under any obligation to extend a11y to annotations? Is that a problem in the EU?</span></p>
+<p id=x725 class="phone s21"><cite>christina:</cite> Thinking aloud - I never thought about it in this light. If they are part of a reading solution, then I think they may be included<br>
+<span id=x726>… maybe leave as is and go back later</span></p>
+<p id=x727 class=irc><cite>&lt;gpellegrino&gt;</cite> +1 to Avneesh</p>
+<p id=x729 class="phone s12"><cite>AvneeshSingh:</cite> I don't think annotations matter. The mapping we did has no need for annotations. So I think we are ok</p>
+<p id=x732 class="phone s10"><cite>gpellegrino:</cite> +1<br>
+<span id=x733>… We don't have in the requirements for the EAA specific requirements for annotations so we are ok</span><br>
+<span id=x734>… But the Reading System must be in accessible</span></p>
+<p id=x738 class="phone s03"><cite>ivan:</cite> How does this relate to the exception for fixed layout?</p>
+<p id=x741 class="phone s01"><cite>wendyreid:</cite> Which of the documents will they recommend?<br>
+<span id=x742>… If it is just a11y 1.1 then that is fine, but if it is the epub docs then do we have to worry about changes we will make</span></p>
+<p id=x743 class="phone s21"><cite>christina:</cite> No, I think we will be ok with epub changes</p>
+<p id=x747 class="phone s02"><cite>duga:</cite> Ivan, you said the exception was for fixed layout, it's for comic books, right?<br>
+<span id=x748>… some comics reflow, and fixed layout is not a thing in the spec</span></p>
+<p id=x749 class="phone s23"><cite>cristina:</cite> The act requires accessibility, but within the limits of the publication, not compelled to make all comics accessible if its not possible</p>
+<p id=x753 class=irc><cite>&lt;gpellegrino&gt;</cite> Specific features of special volumes like comics, children’s books and art books should be considered in the light of all applicable accessibility requirements.</p>
+<p id=x757 class="phone s10"><cite>gpellegrino:</cite> Adding some quotes from the act<br>
+<span id=x758>… about fixed layout, it is an interesting challenge to find an accessible version of fixed layout</span></p>
+<p id=x771 class="phone s14"><cite>Hadrien:</cite> Coming back to comics, it seems like an unknown quantity<br>
+<span id=x772>… This will act will become local law, with regulators, so it is still unclear exactly what will happen with these publications</span><br>
+<span id=x773>… but fixed layout as it is today is not enough to meet the requirements</span><br>
+<span id=x774>… The biggest is the ability to change text property</span><br>
+<span id=x775>… maybe we can extract text and maintain the order of words</span><br>
+<span id=x776>… But comics are different, since the text is often in the image</span><br>
+<span id=x777>… could provide a script of the page, but that has limitations</span><br>
+<span id=x778>… But even that is hard since reading progression may jump around pages</span><br>
+<span id=x779>… we may need a fragment based approach instead of resouce based, similar to SMIL</span><br>
+<span id=x780>… Would require some extensions or a new format</span></p>
+<p id=x783 class="phone s18"><cite>mgarrish:</cite> Back to annotations, I think it will depend how they are expressed<br>
+<span id=x784>… e.g. if they are HTML, then that covers it</span><br>
+<span id=x785>… But it may depend on where they came from (e.g. for sale by publisher vs reading group sharing)</span></p>
+<p id=x788 class="phone s16"><cite>davidhall:</cite> Some comments on comics<br>
+<span id=x789>… the statement about what is possible, it might be possible to extract and read text from images, so will regulators require that if it is possible?</span></p>
+<p id=x790 class=irc><cite>&lt;davidhall&gt;</cite> <a href="https://idpf.org/epub/renditions/region-nav/">https://<wbr>idpf.org/<wbr>epub/<wbr>renditions/<wbr>region-nav/</a></p>
+<p id=x794 class="phone s16"><cite>davidhall:</cite> and then there is region based nav, has that come up</p>
+<p id=x799 class="phone s01"><cite>wendyreid:</cite> We never talk about fixed layout with region based nav coming uo<br>
+<span id=x800>… example of a good idea that never really made it</span><br>
+<span id=x801>… The fixed layout group discussed complex content a lot</span></p>
+<p id=x802 class=irc><cite>&lt;ikkwong&gt;</cite> +1 to wendyreid</p>
+<p id=x806 class="phone s01"><cite>wendyreid:</cite> Sometimes knowing where the text is is just as important as knowing what it says<br>
+<span id=x807>… we still don't know what the best solution is</span><br>
+<span id=x808>… we do want to incubate on it</span></p>
+<p id=x816 class="phone s14"><cite>Hadrien:</cite> I think region based is interesting, but not enough<br>
+<span id=x817>… it works across fragments</span><br>
+<span id=x818>… but can't map back to content of the speech bubble</span><br>
+<span id=x819>… when it comes to what can be done on device, it's a good point</span><br>
+<span id=x820>… sometimes we can detect panels, etc</span><br>
+<span id=x821>… I have made an accessible comic that shows some of these things</span></p>
+<p id=x824 class="phone s06"><cite>liisamk:</cite> I would note that there is one large implementation of region based nav<br>
+<span id=x825>… comixology uses it</span></p>
+<p id=x829 class="phone s02"><cite>duga:</cite> The other not-exactly region-based nav is google books' bubble detection<br>
+<span id=x830>… good for highlighting parts of the page, but it is lacking parts like text</span><br>
+<span id=x831>… what can be done on the device? But also a worrying question about what the EU can ask</span></p>
+<p id=x832 class=irc><cite>&lt;davidhall&gt;</cite> +1 duga</p>
+<p id=x833 class="phone s02"><cite>duga:</cite> if apple intelligence can read out the page and describe it, will it be an expectation, if it's not a native capability of the reading sytem, you're in trouble</p>
+<p id=x834 class=irc><cite>&lt;gpellegrino&gt;</cite> #notALayer</p>
+<p id=x840 class="phone s21"><cite>christina:</cite> It is a tricky answer, but the commision is the first time we are making it possible for everyone to do the same thing<br>
+<span id=x841>… if you look at the list of possible examples, that will evolve. It just isn't possible to cover everything</span><br>
+<span id=x842>… so all we can is monitor what is going on</span><br>
+<span id=x843>… and then go back to the commission</span><br>
+<span id=x844>… we can only get to a stable place and then adapt as time goes on</span></p>
+<p id=x850 class="phone s15"><cite>Dale:</cite> I just published a comic as an ebook, and wanted to figure out how to make it as accessible as possible<br>
+<span id=x851>… so I got into an argument with ChatGPT with the best way to present this</span><br>
+<span id=x852>… I ended up taking the image, sent it to chat gpt, and said &quot;please describe it&quot;. I got back a very good response</span><br>
+<span id=x853>… I was able to use a lot of that text in the alt text for the image, enough for the reader to follow along</span><br>
+<span id=x854>… what I want to know is, is that enough?</span></p>
+<p id=x856 class=irc><cite>&lt;Zakim&gt;</cite> gpellegrino, you wanted to ask about ADA</p>
+<p id=x858 class="phone s10"><cite>gpellegrino:</cite> Maybe we should move to ADA Title 2<br>
+<span id=x859>… the approach to EAA with the mapping seems like a good approach</span></p>
+<p id=x860 class=irc><cite>&lt;tzviya8&gt;</cite> +1 to ADA time</p>
+<p id=x861 class=irc><cite>&lt;George&gt;</cite> I think that is a good start!!!</p>
+<p id=x863 class="phone s10"><cite>gpellegrino:</cite> it seems to have good results<br>
+<span id=x864>… any thoughts on that?</span></p>
+<p id=x870 class="phone s01"><cite>wendyreid:</cite> as I understand the goal is to use WCAG 2.1 level AA<br>
+<span id=x871>… so we are pretty good already</span><br>
+<span id=x872>… Currently this is education, but it may be to Title 3 which includes business</span></p>
+<p id=x873 class=irc><cite>&lt;George&gt;</cite> A bill has been introduced for Title 3.</p>
+<p id=x874 class="phone s04"><cite>rickj:</cite> The discussions I have had is the Title 2 change is very similar to EAA</p>
+<p id=x879 class="phone s04"><cite>rickj:</cite> main difference is the stick associated with Title 2</p>
+<p id=x884 class="phone s05"><cite>tzviya8:</cite> Education hits a lot, eg a journal in a school is educational<br>
+<span id=x885>… So they may have trouble (or maybe not)</span><br>
+<span id=x886>… Just a new segment exposed to ADA</span></p>
+<p id=x892 class="phone s22"><cite>CharlesL:</cite> Some districts aren't sure if Title 2 impacts them<br>
+<span id=x893>… something to do with the size of the district</span><br>
+<span id=x894>… So it is 2 vs 3 years</span><br>
+<span id=x895>… It's not the district count, but rather the area, so it is confusing</span><br>
+<span id=x896>… But budgets happen in Sept., so a lot of districts are going to have trouble</span></p>
+<p id=x897 class="phone s07"><cite>George:</cite> At least we have clarity on the backlist, which is explicitly included in Title 2</p>
+<p id=x899 class="phone s04"><cite>rickj:</cite> While there may be small districts with an extra year, the suppliers will all be impacted earlier<br>
+<span id=x900>… since they sell to all districts</span></p>
+<p id=x901 class="phone s01"><cite>wendyreid:</cite> Is there anything we need to do to support anyone?</p>
+<p id=x905 class="phone s04"><cite>rickj:</cite> We are the publishing working group, what about pdf?<br>
+<span id=x906>… it feels like we should help people with that</span></p>
+<p id=x907 class=summary>I have to go pick up a kiddo, so goodbye for a while! See you in a couple weeks, I think?</p>
+<p id=x911 class="phone s06"><cite>liisamk:</cite> If we go down the PDF road we have to look at their a11y<br>
+<span id=x912>… having looked at it there is a lot of weird stuff</span><br>
+<span id=x913>… alt text isn't consistent, etc</span></p>
+<p id=x920 class="phone s05"><cite>tzviya8:</cite> I don't know how far down the PDF hole we can go<br>
+<span id=x921>… But ARIA WG is looking at working on this</span></p>
+<p id=x929 class="phone s12"><cite>AvneeshSingh:</cite> Touching on pdf - we have been discussing the metadata requirement in the cg<br>
+<span id=x930>… A lot comes from onix, but we should bring in some pdf people to discuss</span><br>
+<span id=x931>… so we will learn more from the pdf peope</span><br>
+<span id=x932>… We should discuss what adopting some wcag versions would have internationally (in the cg)</span></p>
+<p id=x935 class="phone s01"><cite>wendyreid:</cite> we have some incubation work and some discussion work - anything else we need to know about?</p>
+<p id=x936 class="phone s03"><cite>ivan:</cite> I was wondering if the doc we made for the EAA would help for Title 2 as well?</p>
+<p id=x937 class="phone s01"><cite>wendyreid:</cite> To rephrase, the EAA and epub a11y was done for the commission</p>
+<p id=x941 class="phone s01"><cite>wendyreid:</cite> so they understood how we fit in their framework<br>
+<span id=x942>… I don't think this is the same for title 2</span></p>
+<p id=x946 class="phone s04"><cite>rickj:</cite> I think you are right - title 2 has been around forever, it is just newly interpreted</p>
+<p id=x949 class="phone s07"><cite>George:</cite> When a publisher with an epub that hits wcag AA they will be in great shape (assumign they are telling the truth)</p>
+<p id=x953 class="phone s22"><cite>CharlesL:</cite> Benetech has been a leader in certifying people<br>
+<span id=x954>… So we are really far along with 3rd party certs for title 2</span></p>
+<p id=x962 class="phone s07"><cite>George:</cite> K-12 is not as solid as higher ed<br>
+<span id=x963>… still a lot of work there</span><br>
+<span id=x964>… and I am really concerned with reading systems</span><br>
+<span id=x965>… we don't see it as much with publisher reading systems embedded in the LMSes</span><br>
+<span id=x966>… we have also not been able to connect with libraries</span><br>
+<span id=x967>… so very big open question</span></p>
+<p id=x968 class="phone s15"><cite>Dale:</cite> so if we run it through ACE ...</p>
+<p id=x971 class="phone s07"><cite>George:</cite> No<br>
+<span id=x972>… If you use ACE with Smart and the KB, then that is the right thing</span><br>
+<span id=x973>… so GCA and LIA and MATT (err.... Matt?) [something something - maybe acronyms or names]</span></p>
+<p id=x974 class="phone s22"><cite>CharlesL:</cite> Things about SMART and WCAG and other things and it grabs it and puts it in the places</p>
+</section>
+
+<section>
+<h3 id=t06>Audiobooks Accessibility, TTS</h3>
+<p id=x986 class="phone s01"><cite>wendyreid:</cite> 2 parts to this session.  May not need to talk about the second<br>
+<span id=x987>… audiobook spec has a11y section, was not extensive</span><br>
+<span id=x988>… recent talk in the industry around audiobook a11y…we have no place to send them</span><br>
+<span id=x989>… some research going on (Canada)…do we want to take up the task of writing an equivalent audiobook spec like EPUB for a11y</span><br>
+<span id=x990>… audiobooks may get pulled into legislative scope</span></p>
+<p id=x997 class="phone s14"><cite>Hadrien:</cite> DAISY items missing from current audiobook spec<br>
+<span id=x998>… navigation missing for atomic levels, jump ahead/back, etc.</span><br>
+<span id=x999>… ability to sync text/audio in EPUB, but missing that when primary resource is audio</span><br>
+<span id=y000>… if this is important, we need the ability to make a fragment correspond to an audio section</span><br>
+<span id=y001>… new things for group to discuss... if we want to</span></p>
+<p id=y006 class="phone s24"><cite>matt:</cite> touched on this a bit in the EPUB spec…possible opening there to address it<br>
+<span id=y007>… this could be a new standard (not harmonized with existing) and may need a wider group to be involved</span></p>
+<p id=y017 class="phone s25"><cite>Wendy:</cite> DAISY mentioned…hard part is audiobook spec was targeted at commercial market, not the a11y market<br>
+<span id=y018>… may need new tools (or change how copyright works!) for production of audio content (rights issues/legal issues)</span><br>
+<span id=y019>… similar problem to FXL … cannot solve all a11y issues…can solve many of the issues, however</span><br>
+<span id=y020>… TOC, image descriptions, including all parts of the book (footnotes, index, ...)…</span><br>
+<span id=y021>… DAISY is the gold standard, can we find something commercially viable that we can do</span></p>
+<p id=y030 class="phone s12"><cite>AvneeshSingh:</cite> audio books seen as a downgrade from the DAISY standard<br>
+<span id=y031>… EPUB a11y work started in 2014, standard from IDPF, in 3.0 work need for something to be done was recognized</span><br>
+<span id=y032>… needed a structure to support the industry. ACE/SMART/Knowledge base came into being… adoption happened</span><br>
+<span id=y033>… on audiobook side still needs to gain some traction … Thorium implementing some solution, similar to spec,</span><br>
+<span id=y034>… do we need to change the spec to increase adoption?</span><br>
+<span id=y035>… where to put our resources?</span></p>
+<p id=y040 class="phone s07"><cite>George:</cite> The audiobooks are accessible, not usable (as a list of MP3 files)… downgrade from DAISY<br>
+<span id=y041>… could add TOC, etc.… not sure what the appetite of the industry is to do the work</span><br>
+<span id=y042>… most DAISY books have full book, but not text</span><br>
+<span id=y043>… with DAISY the primary media is the audio, as opposed to media overlays where audio is supplemental to primary text</span></p>
+<p id=y048 class="phone s22"><cite>CharlesL:</cite> without TOC for audiobooks, issues with WCAG in general.  Can't skip.<br>
+<span id=y049>… with text transcription also need sign language for deaf</span><br>
+<span id=y050>… big rabbit hole</span></p>
+<p id=y060 class="phone s14"><cite>Hadrien:</cite> need to separate interchange format from end user format<br>
+<span id=y061>… EPUB tries to do both… current spec 'feels like' both</span><br>
+<span id=y062>… Readium work on end user part, seen adoption in library space, good traction</span><br>
+<span id=y063>… Audiobook is a resource based format.  DAISY is a fragment based format</span><br>
+<span id=y064>… trying to bridge that gap in Readium toolkits</span><br>
+<span id=y065>… getting to a point to have fragment based approach along side of resource based approach</span><br>
+<span id=y066>… in comics: page based format along side of panel by panel</span><br>
+<span id=y067>… we need to do the same thing with audio</span></p>
+<p id=y072 class="phone s15"><cite>Dale:</cite> thinks of audiobook like MP3 file, no interactive elements<br>
+<span id=y073>… on Youtube can get audio with links to time signatures, takes me to a chapter, buttons with CC information.</span><br>
+<span id=y074>… is this what people want to interact with audio content?</span></p>
+<p id=y085 class="phone s01"><cite>wendyreid:</cite> Avvneesh asked a good question: Do we have the bandwidth?<br>
+<span id=y086>… however, this is a question being asked by the publishing industry</span><br>
+<span id=y087>… issues with using DAISY, want another solution/do better</span><br>
+<span id=y088>… on the display side, we want to do better, better affordances</span><br>
+<span id=y089>… RS can do this, but need some information from the file for interchange/delivery</span><br>
+<span id=y090>… we could make more usable than they currently are.  No consistency or guidance for publishers who want to do better</span></p>
+<p id=y093 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to stop aiming for perfection</p>
+<p id=y096 class="phone s05"><cite>tzviya8:</cite> If we strive too hard for perfection, we will never get there<br>
+<span id=y097>… there is demand for a solution here (real demand from publishers)</span><br>
+<span id=y098>… we have to figure out the priorities, and how to implement</span></p>
+<p id=y100 class="phone s03"><cite>Ivan:</cite> the audiobook standard we published has not been a success</p>
+<p id=y104 class="phone s26"><cite>…question:</cite> Because it is not accessible? or other reasons?<br>
+<span id=y105>… if a11y, then if we add features... hope of success?</span><br>
+<span id=y106>… if not... then, is this a standard that has not made is.  Put in more time/energy?</span></p>
+<p id=y110 class="phone s24"><cite>matt:</cite> can we make a mapping of what improvements we can do?</p>
+<p id=y118 class="phone s07"><cite>George:</cite> having worked with audiobook publishers… they are audio people… don't understand markup<br>
+<span id=y119>… would be happy to embrace a standard</span><br>
+<span id=y120>… would be happy with an equivalent of an opf file</span><br>
+<span id=y121>… automate ingestion</span><br>
+<span id=y122>… pubs would need a tool to help produce this?  [tooling questions]</span></p>
+<p id=y130 class="phone s06"><cite>liisamk:</cite> part of our issues with the success of this spec was timing<br>
+<span id=y131>… serious problem as the audiobook world was expanding to get information to various parts</span><br>
+<span id=y132>… spec came as other people had solved some of this stuff</span><br>
+<span id=y133>… i.e. send a package of tracks, with an excel doc, that gave you the information needed</span><br>
+<span id=y134>… tooling was figured out for specific differences in needs</span><br>
+<span id=y135>… we need to help them solve a problem they have, but awareness of the problem may not be big enough</span></p>
+<p id=y137 class="phone s27"><cite>Brady:</cite> it may be why it failed, but it still failed.  Spend more time working on it?<br>
+<span id=y138>… does the EAA apply?  No.  Can we force that?  :-)</span></p>
+<p id=y142 class="phone s15"><cite>dale:</cite> audio books purchased to listen where they cannot read<br>
+<span id=y143>… Alexa example of audio 'interaction' rather than a spec</span><br>
+<span id=y144>… does this align with the same needs here for interactive elements?</span></p>
+</section>
+
+<section>
+<h3 id=t07>Text to Speech</h3>
+<p id=y153 class="phone s01"><cite>wendyreid:</cite> a requirement of EAA<br>
+<span id=y154>… no clarity on what is required</span><br>
+<span id=y155>… do we need [not] a standard, but best practices?</span></p>
+<p id=y162 class="phone s07"><cite>George:</cite> the quality of TTS engines are surpassing existing.<br>
+<span id=y163>… if you have the text, you can use these engines to generate the audiobook</span><br>
+<span id=y164>… features need to be identified.  epubtest.org has test book for read aloud.  basis for RS implementation/testing</span><br>
+<span id=y165>… more could be done/added to test book, but don't see support for it in current implementations</span><br>
+<span id=y166>… reading alt-text, reading math, TTS speed controls, all needed</span></p>
+<p id=y171 class="phone s06"><cite>liisamk:</cite> To George's point, many leave out img alt text (or even mention an image), many have no speed control, no structural info, etc<br>
+<span id=y172>… It would be good to add some notes to this so the information will be properly used</span></p>
+<p id=y174 class=irc><cite>&lt;CharlesL&gt;</cite> +1 to Liisa's comments</p>
+<p id=y182 class="phone s03"><cite>ivan:</cite> I don't understand the question. TTS exists outside of this group<br>
+<span id=y183>… so it not in scope to work on TTS</span><br>
+<span id=y184>… these are all real problems, but they are relevant to TTS engines, not us</span><br>
+<span id=y185>… what are we supposed to do?</span></p>
+<p id=y187 class="phone s01"><cite>wendyreid:</cite> We are on the front lines, what we do impacts everyone who uses TTS</p>
+<p id=y198 class="phone s14"><cite>Hadrien:</cite> it's a complex topic<br>
+<span id=y199>… there are a few things that push this forward</span><br>
+<span id=y200>… So two things pushing this forward, both EAA and also audiobook generation</span><br>
+<span id=y201>… nothing about read aloud is well documented today</span><br>
+<span id=y202>… e.g. want text and structure, but not sure if we should use html structure, or epub stuff, etc</span><br>
+<span id=y203>… For instance, what should I say about chapters</span><br>
+<span id=y204>… for some implementations we are limited by web tech</span><br>
+<span id=y205>… which can be a bit of a mess</span></p>
+<p id=y206 class=summary><a href="https://w3.org/TR/spoken-html">https://<wbr>w3.org/<wbr>TR/<wbr>spoken-html</a></p>
+<p id=y207 class="phone s14"><cite>Hadrien:</cite> We have SSML  etc that can't really work with the speech generation (e.g. SSML says use a &quot;male&quot; voice, but that isn't exposed)</p>
+<p id=y217 class="phone s28"><cite>janina:</cite> APA has been trying to crack this nut for a while<br>
+<span id=y218>… CSS meeting - invitation to join to discuss this</span><br>
+<span id=y219>… problem at root is no 1 engine for reliable output the same across platforms</span><br>
+<span id=y220>… trying to get on top of that</span><br>
+<span id=y221>… lots has gone on, details available to forward if interested</span></p>
+<p id=y229 class="phone s01"><cite>wendyreid:</cite> work happening in SSML, CSS speech (link above to spoken-html)<br>
+<span id=y230>… not trying to tackle those problem - but rather what gets read in the first place</span><br>
+<span id=y231>… is all potential content (lists, image desc, etc.) being read from the EPUB?</span><br>
+<span id=y232>… different implementations in different reading systems.  No standards for users</span><br>
+<span id=y233>… no best practice to give guidance</span></p>
+<p id=y236 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to ask if a11y issues are EPUB or DOM</p>
+<p id=y240 class="phone s05"><cite>tzviya8:</cite> are we reinventing the wheel?  Does ARIA doe this?<br>
+<span id=y241>… all the information is there.  AT typically offers options to the reader (toggle on/off, etc)</span><br>
+<span id=y242>… is this just HTML and ARIA?</span></p>
+<p id=y247 class="phone s22"><cite>CharlesL:</cite> we have guidelines/recommendations to give to publishers for the correct markup such that RS can take advantage of TTS better<br>
+<span id=y248>… worked with Apple to get DPUB-ARIA roles prioritized</span><br>
+<span id=y249>… what is important/ not important and not spoken</span><br>
+<span id=y250>… guidelines for RS to implement read-aloud</span></p>
+<p id=y252 class="phone s13"><cite>shiestyle:</cite> Japanese text has ruby</p>
+<p id=y254 class=irc><cite>&lt;Makoto1&gt;</cite> See <a href="https://w3c.github.io/ruby-t2s-req/">https://<wbr>w3c.github.io/<wbr>ruby-t2s-req/</a></p>
+<p id=y257 class="phone s29"><cite>Makoto1:</cite> draft of technical note about ruby (link following)</p>
+<p id=y258 class=summary>(link above)</p>
+<p id=y260 class="phone s01"><cite>wendyreid:</cite> not all our responsibility.  Impacts EPUB, but we need to reach out to APA, ARIA, others to work on together</p>
+<p id=y265 class="phone s14"><cite>Hadrien:</cite> massive topic to cover it all.  Work on voice selection.  Extracting semantic text into SSML next<br>
+<span id=y266>… talking to specialized library org's is a good approach</span><br>
+<span id=y267>… wants to establish baseline of what we can do</span></p>
+<p id=y268 class=irc><cite>&lt;Makoto1&gt;</cite> ISO!</p>
+</section>
+<section>
+        <h3 id=t08>ISO</h3>
+
+<p id=y270 class=irc><cite>&lt;Makoto1&gt;</cite> In my understanding, last year, this group decided to submit EPUB 3.3, EPUB RS 3.3, and EPUB Accessibility 1.1 to ISO/IEC through the PAS process. However, because W3C ran into procedural issues with the PAS submission of WCAG 2.2, our PAS submission was also delayed.</p>
+<p id=y271 class=irc><cite>&lt;Makoto1&gt;</cite> Fortunately, Daniel Montalvo Charameli from the W3C team has completed the consultation with the ISO Central Secretariat regarding the PAS submission of WCAG 2.2. A few comments from ISO/CS have already been addressed, so we can likely apply the same approach for our PAS submission.</p>
+<p id=y273 class="phone s01"><cite>wendyreid:</cite> for ISO, pushing again since the EAA deadline need to pass before we can do anything so we do not disrupt the process<br>
+<span id=y274>… WCAG has a harmonized standard.  EPUB does not.</span></p>
+<p id=y280 class="phone s07"><cite>George:</cite> Europe has harmonized standard for WCAG<br>
+<span id=y281>… when we submit WCAG to ISO, they already have the harmonized standard in EAA</span><br>
+<span id=y282>… if we submit the EPUB A11y spec to ISO, it would trigger the need in the EU for a harmonized standard</span><br>
+<span id=y283>… would mean years of work</span><br>
+<span id=y284>… current plan to adopt EPUB a11y 1.1 as a standard is in process.  Don't want to trigger the need for a harmonized standard</span><br>
+<span id=y285>… once EAA is enacted, then submit to ISO, any work in that period the EAA spec would be in effect, rather than delayed</span></p>
+<p id=y286 class="phone s29"><cite>Makoto1:</cite> problem in Korea as they must use ISO, and are locked to use version 3.0.1</p>
+<p id=y288 class="phone s01"><cite>wendyreid:</cite> we keep this in mind and get ready to submit in summer</p>
+<p id=y291 class="phone s03"><cite>ivan:</cite> we know the document we have today, in the format we have today, cannot go to ISO directly.  We need several months of work to convert them<br>
+<span id=y292>… if things in the EU move as expected, may start the conversion early next year</span></p>
+<p id=y294 class="phone s01"><cite>wendyreid:</cite> I will talk to the WCAG team to find out what they had to do to do the ISO conversaion so we can know what we need to do</p>
+<p id=y295 class="phone s03"><cite>Ivan:</cite> talking about getting 3.1 to ISO, talking today about a new 3.x version (webtoons, annotations, ...)</p>
+<p id=y296 class="phone s01"><cite>wendyreid:</cite> WCAG had a previous version, we may have access to same means with ISO for a shorter path</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 229 (Thu Jul 25 08:38:54 2024 UTC).</address>
+
+
+</body>
+</html>
