@@ -1,0 +1,24 @@
+Denis
+
+This is an official publication request for the publication for the following three documents as updated Recommendations:
+
+- EPUB 3.3 with candidate corrections
+	- https://www.w3.org/TR/2024/REC-epub-33-20241017/
+
+- EPUB Reading Systems 3.3 with editorial changes
+	- https://www.w3.org/TR/2024/REC-epub-rs-33-20241017/
+
+- EPUB Accessibility 1.1 with editorial changes
+	- https://www.w3.org/TR/2024/REC-epub-a11y-11-20241017/
+
+All three documents to be published on the 17th of October
+
+The working groups decision on the publication is here:
+
+- https://w3c.github.io/pm-wg/minutes/2024-10-04.html#2984
+
+The documents are already in place and went through pubrules' checker.
+
+Thanks!
+
+Ivan

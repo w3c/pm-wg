@@ -1,0 +1,5 @@
+- Privacy review request: https://github.com/w3cping/privacy-request/issues/144
+- I18N review request: https://github.com/w3c/i18n-request/issues/242
+- A11y review request: https://github.com/w3c/a11y-request/issues/92
+- Security review request: https://github.com/w3c/security-request/issues/76
+- TAG review request: https://github.com/w3ctag/design-reviews/issues/1006
