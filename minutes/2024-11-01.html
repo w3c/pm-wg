@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 01 November 2024</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>01 November 2024</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2024Oct/0000.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2024/11/01-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>avneesh, AvneeshSingh, ben_dugas, brady, CharlesL2, George, ivan, MasakazuKitahara, mgarrish, shiestyle, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+    <li><a href="#i37">Issue 37: changes in A11y</a></li>
+    <li><a href="#i31">Epubcheck clarification</a></li>
+    <li><a href="#p45">Security addition</a></li>
+    <li><a href="#i29">TDM</a></li>
+    <li><a href="#metadata">Additional Metadata; out of scope section</a></li>
+    <li><a href="#i43-42">ARIA issues</a></li>
+    <li><a href="#edu">Educational interactions</a></li>
+    <li><a href="#misc">Timeline</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Chartering discussions</h2>
+<section><p id=575b class=irc><cite>&lt;ivan&gt;</cite> Date: 2024-11-01</p>
+<p id=4516 class="phone s01"><cite>wendyreid:</cite> Welcome Ben</p>
+<p id=da09 class="phone s02"><cite>Ben:</cite> At Kobo for a long time, I lead the rendering side of things<br>
+<span id=c39c>… we have a few</span><br>
+<span id=aa23>… I used to be on these calls, then wandered off as I wasn't contributing, but Wendy talked me into coming back</span><br>
+<span id=63ce>… I may also get someone more technical to join</span><br>
+<span id=e2a1>… I am mostly interested in webtoons and related</span></p>
+<p id=7598 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/publ-maintenance-wg-charter/">https://<wbr>w3c.github.io/<wbr>publ-maintenance-wg-charter/</a></p>
+<p id=16f5 class="phone s01"><cite>wendyreid:</cite> We are back into rechartering<br>
+<span id=f22e>… there have been some modifications</span><br>
+<span id=c95a>… content hasn't changed much, mostly wordsmithing</span><br>
+<span id=f375>… new scope has webtoons, annotations, a11y, some fixed layout properties, some script/wasm stuff, and a sprinkle of future things</span><br>
+<span id=5c49>… biggest change is a11y of comics/manga has changed to broader fixed layout</span><br>
+<span id=b1c0>… This will be EPUB 3.4</span></p>
+<p id=82a8 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/publ-maintenance-wg-charter/issues/37">w3c/<wbr>publ-maintenance-wg-charter#37</a></p>
+<p id=57fa class="phone s01"><cite>wendyreid:</cite> some outstanding issues<br>
+<h3 id="i37">Issue 37: changes in A11y</h3>
+<span id=6718>… Start with accessibility - is there anything else we need, particularly with an eye toward upcoming legislation</span></p>
+<p id=9919 class="phone s03"><cite>ivan:</cite> To clarify, we have a scope item that says work with the Publishing CG a11y group<br>
+<span id=ec71>… but do we need to add any specific language</span></p>
+<p id=f7fa class="phone s04"><cite>George:</cite> US legistlation may require some metadata, but no change needed</p>
+<p id=cb2c class="phone s01"><cite>wendyreid:</cite> from Avneesh, there was a comment about looking at gaps<br>
+<span id=f303>… do we want to consider an update to the crosswalk doc that includes title 2?</span></p>
+<p id=a134 class="phone s05"><cite>AvneeshSingh:</cite> We have been discussing with a similar table would be nice or not, we did decide we need to do some gap analysis, but may not want to be a crosswalk table<br>
+<span id=4599>… With title 2 it may be more of a strategic issue</span><br>
+<span id=7557>… It would be good to mention whether we should do more of this work in the CG or add a note from the WG (mention in charter)</span></p>
+<p id=8167 class="phone s04"><cite>George:</cite> It would really help adoption to have better communication, not much of a spec issue</p>
+<p id=ac5d class="phone s03"><cite>ivan:</cite> I propose we add something to the charter, but it may not be rec track work<br>
+<span id=95b4>… Maybe in the first block of scopes say we will look at legislation and consider a note or changes to the spec</span><br>
+<span id=f7b6>… for political reasons that is a good idea</span><br>
+<span id=b2d1>… we need links to the various legislation</span><br>
+<span id=d924>… can someone send me that info? EU, US, maybe Canada? And mention Japan and India if they have anything</span></p>
+<p id=bfbc class="phone s06"><cite>mgarrish:</cite> Second Ivan. Getting into legislation is a bad thing to do in spec. It should be notes, etc that aren't on the rec track<br>
+<span id=6ccb>… Probably shouldn't be in epub a11y</span></p>
+<p id=5601 class="phone s01"><cite>wendyreid:</cite> Agree. I can try and put together some text. We might not even reference them explicitly by name<br>
+<span id=2640>… exhaustive list will be hard</span></p>
+<p id=74f5 class=summary>AvneeshSingh&quot; Maybe just EAA and Title II as an example</p>
+<h3 id="i31">Epubcheck clarification</h3>
+<p id=2ff9 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/publ-maintenance-wg-charter/issues/31">w3c/<wbr>publ-maintenance-wg-charter#31</a></p>
+<p id=dd59 class="phone s01"><cite>wendyreid:</cite> Issue 31, mentioning epubcheck</p>
+<p id=00b9 class="phone s01"><cite>wendyreid:</cite> We will need changes in epubcheck if we change the spec, so we need to refer to epubcheck somehow</p>
+<p id=4b9e class="phone s03"><cite>ivan:</cite> We had it as an extra exit requirement, basically epubcheck must support epub 3.3<br>
+<span id=3c8d>… So adding that is easy, but are we shooting ourselves in the foot?</span><br>
+<span id=a808>… Will there be enough work on it?</span><br>
+<span id=d137>… there are some complex issues for it (annotations)</span></p>
+<p id=ad31 class="phone s07"><cite>duga:</cite> I don't know what the current state of funding is?<br>
+<span id=1166>… I remember contributing, and asking organization, but I don't know where that stands</span></p>
+<p id=8267 class="phone s05"><cite>AvneeshSingh:</cite> In the previous charter it was there because we had the fundraising going, but at this point I don't see anyone raising funds<br>
+<span id=f586>… We have reached out to w3c for funding, but no response yet</span><br>
+<span id=4535>… There is no guarantee. We need a proper project if we add it as exit criteria</span><br>
+<span id=7754>… we could add it as a &quot;will work with the maintainers&quot;</span><br>
+<span id=9fea>… and send to steering committee</span></p>
+<p id=b942 class="phone s03"><cite>ivan:</cite> I did not understand, is there a separate task force</p>
+<p id=8f9d class="phone s05"><cite>AvneeshSingh:</cite> Yes, we made a TF when we joined w3c</p>
+<p id=825e class="phone s03"><cite>ivan:</cite> I had no idea</p>
+<p id=329d class="phone s05"><cite>AvneeshSingh:</cite> Maybe ask Romain</p>
+<p id=21cc class="phone s03"><cite>ivan:</cite> Currently I don't think we should add it. Let's talk to the steering committee, etc, first</p>
+<p id=d620 class="phone s03"><cite>ivan:</cite> I will update the issue</p>
+<p id=3e71 class="phone s01"><cite>wendyreid:</cite> Anything else?</p>
+<h3 id="p45">Security addition</h3>
+<p id=a182 class=irc><cite>&lt;ivan&gt;</cite> <a href="https://github.com/w3c/strategy/issues/481#issuecomment-2440853261">w3c/<wbr>strategy#481 (comment)</a></p>
+<p id=84da class="phone s03"><cite>ivan:</cite> Yes, a PR, not an issue<br>
+<span id=3114>… There is a required review</span><br>
+<span id=3ebf>… The PR has approvals from 4 people, including the w3c security reviewer</span><br>
+<span id=578c>… but I like to leave it open for a little while</span><br>
+<span id=48ca>… This is just some blanket language about security issues that may be raised, we promise to look at it</span><br>
+<span id=aee5>… I would like to merge, objections?</span></p>
+<p id=9a4d class="phone s01"><cite>wendyreid:</cite> Not from me</p>
+<p id=9701 class="phone s03"><cite>ivan:</cite> Ok, I will merge it<br>
+<h3 id="i29">TDM</h3>
+<span id=873a>… I would like to close without further action the TDM issue</span><br>
+<span id=32d0>… I was wondering if there was anything to add, it seems to me the answer is no</span><br>
+<span id=2065>… Ok, I will close it since there are no objections</span></p>
+<h3 id="metadata">Additional Metadata; out of scope section</h3>
+<p id=d939 class="phone s04"><cite>George:</cite> Is there anything we need to be thinking about with metadata?<br>
+<span id=3b13>… We have the xwalk, is there any other metadata, particularly a11y, we need to add? And is it in scope?</span></p>
+<p id=471a class="phone s03"><cite>ivan:</cite> If you are talking about new metadata vocabs, then it is out of scope<br>
+<span id=41a8>… If you are talking about references, none of those things are normative and can be done now anyway</span><br>
+<span id=8711>… so I don't know what we would add</span></p>
+<p id=3726 class="phone s04"><cite>George:</cite> So if we want to add values to schema that is out of scope for us</p>
+<p id=8e89 class="phone s03"><cite>ivan:</cite> yes</p>
+<p id=ed13 class="phone s05"><cite>AvneeshSingh:</cite> There are some vocabs we created. Is such an addition of epub domain vocab in scope or not?</p>
+<p id=4f83 class="phone s06"><cite>mgarrish:</cite> We have some metadata, that is what some of the text in the charter is about<br>
+<span id=fd89>… We could incubate something, but not add it to the charter now</span></p>
+<p id=cc38 class="phone s05"><cite>AvneeshSingh:</cite> Q: if something comes in, can we add it? Sounds like yes</p>
+<p id=ac38 class="phone s03"><cite>ivan:</cite> There is an explicit out of scope section, which includes vocab<br>
+<span id=cddd>… I just copied it from the last version, I don't know why we had it at all</span><br>
+<span id=a6fb>… some make sense (e.g. DRM), but I don't know where that comes from</span><br>
+<span id=6e4a>… we could just remove the new metadata vocabs from out of scope and we are fine</span></p>
+<p id=f245 class="phone s08"><cite>CharlesL2:</cite> I agree. We may also need to add more metadata with the new fixed layout work</p>
+<p id=dfdb class="phone s01"><cite>wendyreid:</cite> In mentioning the out of scope section, I agree the new metadata stuff doesn't need to be there<br>
+<span id=46cc>… we also have something about things that impact viewports</span></p>
+<p id=ffff class="phone s07"><cite>duga:</cite> I assume that's there because of the pain we experienced from our custom CSS properties and this is our promise to the world we'll never do it again<br>
+<span id=82e7>… I noticed it as well, it's very vague, we can get around it by saying &quot;we needed to&quot;, and removing it feels like removing our promise to the CSS working group</span><br>
+<span id=409d>… I think we can leave it, we have ways around it when we need it</span></p>
+<p id=f799 class="phone s03"><cite>ivan:</cite> Echoing that, that bullet and the previous one was an answer to some people who say we don't need epub at all<br>
+<span id=9e1f>… We do get those types of remarks</span></p>
+<p id=bc0c class="phone s01"><cite>wendyreid:</cite> Anything else?</p>
+<h3 id="i43-42">ARIA issues</h3>
+<p id=db54 class="phone s03"><cite>ivan:</cite> I proposed two to be closed, both refer to dpub aria<br>
+<span id=33e1>… I propose closing because it isn't in our scope</span><br>
+<span id=dd25>… and not something we want to take over (aria wg has taken that over)</span></p>
+<p id=10000 class="phone s04"><cite>George:</cite> Should they go to CG?</p>
+<p id=8d5a class="phone s03"><cite>ivan:</cite> I would think since these are so specific they need to go to aria wg</p>
+<p id=9028 class="phone s06"><cite>mgarrish:</cite> We propbably need a new tf. I don't think that group can move on those at this point</p>
+<p id=f340 class="phone s05"><cite>AvneeshSingh:</cite> We have an official liason, what we need to do is create strong use cases so we can push it in the aria wg<br>
+<span id=dbed>… that is all we really need to do</span></p>
+<p id=4f25 class=summary>wendyreid + AvneeshSingh: Better to come through WG rather than CG</p>
+<h3 id="edu">Educational interactions</h3>
+<p id=83a2 class="phone s04"><cite>George:</cite> One attribute was &quot;exercise&quot;, would it be good for the cg (wg?) to work on an interactive question/answer mechanism<br>
+<span id=5a8a>… clearly it is something the industry needs</span></p>
+<p id=fed7 class="phone s03"><cite>ivan:</cite> Reminds me of edupub<br>
+<span id=94a7>… I think it would be premature for the wg, it requires a lot of incubation</span><br>
+<span id=46f5>… The right thing is to get a TF in the CG going, just like a11y group</span><br>
+<span id=21bc>… then in a few years bring it back to the wg</span><br>
+<span id=cc70>… But needs some strong leadership</span></p>
+<h3 id="misc">Timeline</h3>
+<p id=67c2 class="phone s08"><cite>CharlesL2:</cite> When will we start voting on the charter?</p>
+<p id=0082 class="phone s03"><cite>ivan:</cite> Need horizontal review, we have 2 (international and security)<br>
+<span id=b664>… may be a few weeks for the others</span><br>
+<span id=6120>… so charter to AC in mid Dec? Or hold to Jan 1</span><br>
+<span id=cc2a>… which means if there are no formal objections, then the new charter would start in Feb</span></p>
+<p id=7e05 class="phone s08"><cite>CharlesL2:</cite> APA has some potential additions</p>
+<p id=e727 class="phone s03"><cite>ivan:</cite> The sooner the better, since it is being actively reviewed</p>
+<p id=4ce7 class="phone s05"><cite>AvneeshSingh:</cite> I don't expect many surprises</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 238 (Fri Oct 18 20:51:13 2024 UTC).</address>
+
+</body>
+</html>
