@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 06 December 2024</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+Publishing Maintenance Working Group Telco</h1>
+<h2>06 December 2024</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2024Dec/0005.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2024/12/06-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, davehall, duga, gautierchomel, George, gpellegrino Hadrien, ivan, marisa, MasakazuKitahara, mgarrish, Milena_Risi, shiestyle, toshiakikoike, tzviya, wendyreid</dd>
+<dt>Regrets</dt><dd>RickJ, rickjohnson</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#9edc">Adding synced media for incubation to the new charter</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<p id=3974 class="phone s01"><cite>milena:</cite> PhD student working on alt text<br>
+<span id=319d>… and interested broadly in a11y</span></p>
+<p id=d7dc class="phone s02"><cite>wendyreid:</cite> as we finalize new charter, want to discuss adding sync media</p>
+</section>
+
+<section>
+<h3 id=9edc>Adding synced media for incubation to the new charter</h3>
+<p id=3d53 class="phone s02"><cite>wendyreid:</cite> over to Marisa for details on current state</p>
+<p id=0dd0 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/sync-media-pub/">https://<wbr>w3c.github.io/<wbr>sync-media-pub/</a></p>
+<p id=2497 class="phone s03"><cite>marisa:</cite> What had branched off pwg was a new WG<br>
+<span id=373d>… This group looked at different sync approaches</span><br>
+<span id=4bca>… today we have SMIL in epub (sync media for narration)</span><br>
+<span id=6c30>… Lots of people dislike SMIL</span><br>
+<span id=bff9>… But at the time it was the best choice</span><br>
+<span id=787a>… I no longer think it is the best choice</span><br>
+<span id=e446>… We have a proposal for using WebVTT (see link in agenda)</span><br>
+<span id=211d>… WebVTT is used for captions, but you can also use it for general sync</span></p>
+<p id=32e5 class=irc><cite>&lt;ivan&gt;</cite> <a href="https://w3c.github.io/sync-media-pub/">The document Marisa is referring to</a></p>
+<p id=5376 class="phone s03"><cite>marisa:</cite> Outside of publishing no one uses SMIL<br>
+<span id=af5f>… webVTT is widely supported in browsers</span><br>
+<span id=24c2>… It might be reasonable to use in EPUB, though our group didn't look into packaging, etc</span><br>
+<span id=4302>… Most compelling reason is that someday we should move forward. SMIL has roots in the 90s as a format for the digital talking book, but the world has moved on to other standards</span></p>
+<p id=1651 class="phone s04"><cite>George:</cite> SMIL is a W3C standard, but it comes from before the 2 implementation rules</p>
+<p id=1582 class="phone s05"><cite>ivan:</cite> Technical question - you refer to html 5, is webvtt dependent on html 5?</p>
+<p id=17d5 class="phone s03"><cite>marisa:</cite> Without doing any research, I would say yes because it is on the media element</p>
+<p id=db34 class="phone s05"><cite>ivan:</cite> But media is also in xhtml</p>
+<p id=8775 class="phone s03"><cite>marisa:</cite> I don't know. Seems like it would be fine</p>
+<p id=ffff class="phone s05"><cite>ivan:</cite> In the charter there are some items that are not necessarily going to be recs in this charter, and there are 3 items in that group. The biggest is whether HTML will be allowed in epub (as opposed to xhtml)<br>
+<span id=7ea2>… Should we add this work to the charter?</span></p>
+<p id=3603 class="phone s06"><cite>AvneeshSingh:</cite> Marisa has done a lot of work in the sync media group and it is always sad to me to see that there wasn't much traction<br>
+<span id=0e80>… As the COO of Daisy it would be helpful to know if there is a real business need? Will there be traction this time?</span><br>
+<span id=45df>… It may be hard to get Reading Systems to switch</span><br>
+<span id=6d93>… Even Daisy was hard to convince to switch to MO over an older SMIL version</span><br>
+<span id=e829>… Also, when we see sync media these days, we see it as useful in more places than epub?</span><br>
+<span id=f8c3>… Sync is much broader, so maybe it doesn't belong in the epubwg</span></p>
+<p id=ff51 class="phone s03"><cite>marisa:</cite> Asking people to switch is probably not going to be popular<br>
+<span id=8456>… I think there is a case for having parallel formats</span><br>
+<span id=3ba7>… existing implementations would still be fine</span></p>
+<p id=82f4 class="phone s07"><cite>shiestyle:</cite> Can we just do this as a note?</p>
+<p id=503f class="phone s03"><cite>marisa:</cite> This would touch on packaging, but I don't have details</p>
+<p id=9160 class="phone s02"><cite>wendyreid:</cite> We would have to add webvtt as a core media type<br>
+<span id=4d3c>… Going back to the business need, it is hard to tell. MO books have always been around, but there isn't much growth</span><br>
+<span id=bfca>… one reason is difficulty in making the books. This may help that, as there is more tooling</span><br>
+<span id=01f2>… Also new challenges with TTS</span></p>
+<p id=3782 class="phone s05"><cite>ivan:</cite> On SMIL and webvtt co-existing, we don't have a choice. The charter requires that old features cannot be removed, so SMIL cannot be removed.<br>
+<span id=0fae>… Minor thing - from w3c perpsective, going from note to rec is now very hard.</span><br>
+<span id=495a>… On packaging, do you mean we need to expand to include webvtt, or do you mean the structure itself has to change?</span></p>
+<p id=1564 class="phone s03"><cite>marisa:</cite> I would NEVER suggest we change the format of our most excellent packaging format<br>
+<span id=76e3>… Just some issues around what what needs to be added to the package document</span></p>
+<p id=3a51 class="phone s04"><cite>George:</cite> I understand modernizing - do we get new features?</p>
+<p id=f83b class="phone s03"><cite>marisa:</cite> Not necessarily, but maybe<br>
+<span id=10000>… One example is a sync of a poem. You can have word, sentence, and stanza sync</span><br>
+<span id=10001>… Also when pointing at text, we have always used fragment identifiers which means they are everywhere in the content. wbvtt allows other ids.</span></p>
+<p id=84c9 class="phone s03"><cite>marisa:</cite> On production side, it might be easier to use webvtt.<br>
+<span id=e4c1>… I just saw a demo of using AI for this, which will probably be getting easier</span></p>
+<p id=0764 class="phone s05"><cite>ivan:</cite> In regards to finer selectors, this may synergize with annotations. New selectors are part of that chartered work</p>
+<p id=0c22 class="phone s05"><cite>ivan:</cite> Do we agree to add this to the charter? Without obligation to produce a rec there isn't much of a barrier</p>
+<p id=ea78 class="phone s03"><cite>marisa:</cite> First thing to look at is some caveats in SMIL -&gt; WebVTT<br>
+<span id=104c>… e.g. there are some SMIL docs that are technically allowed, but don't work in webvtt. That should be top of the agenda</span></p>
+<p id=ea7e class="phone s02"><cite>wendyreid:</cite> At the very least we should add it to the charter so we can have further discussions<br>
+<span id=af2f>… No harm, but it at least signals we want to look at it</span><br>
+<span id=8fe9>… But also maybe mention it to the BG</span></p>
+<p id=9afa class="phone s08"><cite>Hadrien:</cite> Looking at the draft proposal, there are some differences.<br>
+<span id=3874>… SMIL is a tree with roles, which allows skipping and escaping. I don't see it i webvtt. Is that by design, or not possible, etc?</span></p>
+<p id=aafa class="phone s03"><cite>marisa:</cite> Section 4.3 covers skipping/escaping<br>
+<span id=72de>… I think these features should be derived from the html</span><br>
+<span id=0c5c>… Not really needed in SMIL</span><br>
+<span id=8b9b>… You could do it in webvtt, but it would be better to get it from the text content</span></p>
+<p id=2d3d class="phone s04"><cite>George:</cite> When DAISY added SMIL it was intended to replace audio books. Audio was the content (audio was king).<br>
+<span id=3f6d>… The fact that we have text as the main content driver is better</span></p>
+<p id=2849 class="phone s08"><cite>Hadrien:</cite> I agree in some cases<br>
+<span id=4568>… e.g. TTS</span><br>
+<span id=c2e1>… but this is trickier since you have to go through two levels to get structural info</span></p>
+<p id=1dfd class="phone s02"><cite>wendyreid:</cite> This is just a discussion for incubation, but these are all great topics for the chartered group</p>
+<p id=3b69 class="phone s05"><cite>ivan:</cite> Thank you to the chair for getting us back on track<br>
+<span id=838f>… Since this has to go to the AC and we want to avoid issues with that</span><br>
+<span id=1bf4>… I think we should present this as bringing in webvtt and not making something new</span><br>
+<span id=33b5>… &quot;Adding webvtt functionality to epub&quot; or something like that would be the entry</span><br>
+<span id=1dc6>… is that acceptable?</span></p>
+<p id=2c51 class="phone s08"><cite>Hadrien:</cite> I am not convinced this is the right way to go. Narrowing to just webvtt is a missed opportunity. We should considered business arguments and features<br>
+<span id=4487>… For example comics and a11y might be something we could address with a wider charter</span></p>
+<p id=f237 class="phone s05"><cite>ivan:</cite> I understand and intellectually agree. But complex and open ended charters will lead to &quot;make a CG and incubate there&quot; answers from the AC<br>
+<span id=a54c>… Here the message is taking an existing spec and combining it with epub 3, which is more managable for this group</span></p>
+<p id=68e8 class="phone s02"><cite>wendyreid:</cite> Ivan is right we are looking at a specific tech, but it is also good to phrase this around sync media in general<br>
+<span id=bb76>… This is also about audio books, etc. So a broader phrasing might be better</span></p>
+<p id=89ea class="phone s06"><cite>AvneeshSingh:</cite> I was also thinking on broader lines<br>
+<span id=9e28>… and use this tech as an example instead of only focusing on it</span><br>
+<span id=9534>… Then all sync media topics can be handled by this group</span></p>
+<p id=8fb6 class="phone s08"><cite>Hadrien:</cite> We already have an item in the charter that addresses my concerns. So I am connecting it back to things we already have in the charter instead of adding a new item</p>
+<p id=f120 class="phone s02"><cite>wendyreid:</cite> Sync is applicable to fixed and reflowable. Ivan and I will work on a PR for this in the charter</p>
+<p id=4a07 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/readium/guided-navigation/">readium/<wbr>guided-navigation</a></p>
+<p id=b435 class="phone s02"><cite>wendyreid:</cite> Do we want to talk about the agenda comments from Hadrien?</p>
+<p id=7962 class="phone s08"><cite>hadrien:</cite> Our work is a little different from what Marisa did<br>
+<span id=1c7f>… We looked at business cases and ended up at guided navigation. We can parse SMIL (or webvtt) and present them in an abstract way</span><br>
+<span id=b02a>… Thinking in that way has led to changes in other areas</span><br>
+<span id=e104>… Not trying to realign with the web, but instead have found other real issues we can address with the same work</span><br>
+<span id=06c5>… e.g. accessible comics</span></p>
+<p id=f052 class="phone s02"><cite>wendyreid:</cite> The incubation item we add could cover this as well</p>
+<p id=c665 class="phone s05"><cite>ivan:</cite> The proposal Wendy made before should cover this<br>
+<span id=2048>… We will put in a PR, please respond in the next few days so we can go to the AC withing a week</span><br>
+<span id=3091>… AC vote will likely go to end of January</span><br>
+<span id=c5ac>… So we would have a new charter in February unless things go sideways</span></p>
+<p id=fc10 class="phone s02"><cite>wendyreid:</cite> Do we need a call for consensus to move ahead with the charter?</p>
+<p id=70e6 class="phone s05"><cite>ivan:</cite> Not really needed</p>
+<p id=7243 class="phone s02"><cite>wendyreid:</cite> We will send out the charter, please comment now with issues, concerns, etc<br>
+<span id=03be>… we want everything ready before we go to the AC</span><br>
+<span id=b708>… we are moving next month's meetings out 1 week</span><br>
+<span id=87af>… We may need to discuss timing and frequency</span></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 238 (Fri Oct 18 20:51:13 2024 UTC).</address>
+
+</body>
+</html>
