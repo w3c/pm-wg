@@ -1,0 +1,24 @@
+Denis,
+
+First of all, happy new year!
+
+This is an official publication request for the publication for following document as updated Recommendation on the 7th of January:
+
+- EPUB 3.3 with proposed corrections
+	- https://www.w3.org/TR/2025/REC-epub-33-20250107/
+
+The previous version of the document was published on 17th of October, 2024 with candidate corrections.
+
+	- https://www.w3.org/TR/2024/REC-epub-33-20241017/
+
+Horizontal reviews were requested an tracked at:
+
+    - https://github.com/w3c/epub-specs/wiki/Horizontal-review-requests-for-the-EPUB-3.3-version-with-candidate-corrections,-2024%E2%80%9010%E2%80%9017
+
+I will work with the comm team to send out a review request to the AC.
+
+The documents is already in place and went through pubrules' checker.
+
+Thanks!
+
+Ivan
