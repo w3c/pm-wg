@@ -1,4 +1,4 @@
-# PM WG F2F meeting, April 2-3, Sophia Antipolis, France
+# PM WG F2F meeting, April 3-4, Sophia Antipolis, France
 
 Note: the meeting is the week before the [W3C AC Meeting](https://www.w3.org/2025/04/AC/Overview.html). The meeting will be held at the [Centre Inria d'Université Côte d'Azur](https://www.w3.org/2025/04/AC/venue.html#venue).
 
