@@ -1,1 +1,0 @@
-This folder contains a script (in `./deno_action`) that displays the same content as the current script in `minutes/index.html`, but meant to be run off-line using [deno](https://deno.land). Usage of this script may become necessary if the display of the "main" index.html file becomes too slow. The idea is to use the `./deno_action/generate.ts` as part of a github action.
