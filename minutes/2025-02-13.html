@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 13 February 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+Publishing Maintenance Working Group Telco</h1>
+<h2>13 February 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Feb/0006.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/02/13-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, brady, CharlesL, Dale, dhall5, gpellegrino, Hadrien, ikkwong, ivan, MasakazuKitahara, mgarrish, rickj, shiestyle, SueNeu,toshiakikoike, tzviya</dd>
+<dt>Regrets</dt><dd>george, wendy</dd>
+<dt>Chair</dt><dd>shinya</dd>
+<dt>Scribe</dt><dd>duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#6f37">Overview of the plan for the next few weeks</a></li>
+<li><a href="#4a34">w3c/<wbr>epub-specs#2649</a></li>
+<li><a href="#4917">Accessibility work to be done in this charter</a></li>
+<li><a href="#b8c1">admin</a></li>
+<li><a href="#8010">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=566c class=irc><cite>&lt;ivan&gt;</cite> m2gbot, help</p>
+<p id=88bf class=irc><cite>&lt;m2gbot&gt;</cite> ivan, I am an IRC bot to link github issues and PRs to the minutes of the meetings where they were discussed.</p>
+<p id=74e3 class=irc><cite>&lt;m2gbot&gt;</cite> ... I am an instance of minutes_to_gh version 0.8.1.</p>
+<p id=f61e class=irc><cite>&lt;m2gbot&gt;</cite> ... To know more, see <a href="https://github.com/pchampin/minutes_to_gh">pchampin/<wbr>minutes_to_gh</a></p>
+</section>
+
+<section>
+<h3 id=6f37>Overview of the plan for the next few weeks</h3>
+<p id=2c01 class="phone s01"><cite>shiestyle:</cite> The ew charter is in</p>
+<p id=a4a9 class="phone s02"><cite>ivan:</cite> And we as the leads did some planning the other day<br>
+<span id=2bcb>… we know the big things in the charter we need to do (annotations and webtoons)</span><br>
+<span id=e432>… we will discuss those are the f2f</span><br>
+<span id=954d>… so for the calls until then we will discuss the smaller items in the charter</span><br>
+<span id=87d7>… For instance, we had some long discussions about WebAssembly and whether we could add it to the spec before, we put some of that off</span><br>
+<span id=c4c7>… so those discussions will keep us busy for now</span><br>
+<span id=4a04>… We also did some work on the spec structure to prepare</span><br>
+<span id=b57e>… There will be a new release of 3.3 in March [scribe note: I missed what the changes are, sounds editorial]</span><br>
+<span id=b570>… Then we will set up a new 3.4 area of the repo, that will be for new work</span><br>
+<span id=1e73>… Also chairs call has changed to Wednesday to match the new group meeting</span></p>
+<p id=f35f class="phone s01"><cite>shiestyle:</cite> One more thing - the membership was renewed<br>
+<span id=a5b9>… So everyone needs to rejoin</span></p>
+<p id=9248 class=irc><cite>&lt;tzviya&gt;</cite> <a href="https://www.w3.org/groups/wg/pm/join">https://<wbr>www.w3.org/<wbr>groups/<wbr>wg/<wbr>pm/<wbr>join</a></p>
+<p id=6898 class=irc><cite>&lt;AvneeshSingh&gt;</cite> Does it mean I need to remove everyone in DAISY and join everyone again?</p>
+<p id=8139 class="phone s03"><cite>AvneeshSingh:</cite> We already seems to be members</p>
+<p id=6613 class="phone s02"><cite>ivan:</cite> Yes, DAISY is, but all the individual people need to rejoin</p>
+<p id=2f52 class="phone s04"><cite>duga:</cite> I didn't have a join button</p>
+<p id=1ebb class="phone s02"><cite>ivan:</cite> Expected, the process is different for IE<br>
+<span id=6a2a>… Everything this is working as expected</span></p>
+<p id=ebbd class="phone s05"><cite>dhall5:</cite> My AC rep is pinged, I am also dragging in a coworker</p>
+</section>
+
+<section>
+<h3 id=4a34><a href="https://github.com/w3c/epub-specs/issues/2649">w3c/<wbr>epub-specs#2649</a> (wasm)</h3>
+<p id=e6c6 class="phone s06"><cite>mgarrish:</cite> The question was do we allow webassembly?<br>
+<span id=d0fa>… it isn't explicitly referenced from the script tag</span><br>
+<span id=f39d>… we had a discussion around it, I think all we need to do is add a comment that it is ok</span><br>
+<span id=2f96>… We could add it to the script tag, or just exempt that tag entirely</span><br>
+<span id=34d6>… Main question is do we want add something to reading systems?</span><br>
+<span id=8318>… It will work if they support the API, so not sure what we would need to add</span></p>
+<p id=69eb class="phone s02"><cite>ivan:</cite> I think there are no problems, but there was a question around security<br>
+<span id=2c96>… My feeling is it is scripting, and so no, but maybe we should point at the security section</span></p>
+<p id=eaeb class="phone s06"><cite>mgarrish:</cite> I am not sure what else there is outside of JS<br>
+<span id=9d3a>… we should ask our security person</span></p>
+<p id=ade3 class="phone s04"><cite>duga:</cite> Do we want to explicitly call out webassembly, or just make it vague?</p>
+<p id=3d69 class="phone s06"><cite>mgarrish:</cite> I think we can leave it vague, and use webasssembly as an example</p>
+<p id=3b72 class="phone s07"><cite>Hadrien:</cite> When it comes to webassembly it opens some doors<br>
+<span id=b558>… but our scripting has always been spotty</span><br>
+<span id=c955>… so this pushes the issue further</span><br>
+<span id=5a23>… the more things like this we add, the more of a balance there is with reading systems. Just something to keep in mind</span></p>
+<p id=49af class="phone s01"><cite>shiestyle:</cite> Can the reading system distinguish between JS and webassembly?</p>
+<p id=96e8 class="phone s06"><cite>mgarrish:</cite> Short of inspecting the file, no, but doesn't need to<br>
+<span id=bb24>… we would have to flag it</span></p>
+<p id=c59d class="phone s04"><cite>duga:</cite> No, there isn't really a way of detecting it, but it doesn't really matter</p>
+<p id=092d class="phone s02"><cite>ivan:</cite> What is the next step</p>
+<p id=df01 class="phone s06"><cite>mgarrish:</cite> I think we just need to change the exemption text a little<br>
+<span id=2148>… real question is the script tag itself</span></p>
+<p id=21d5 class="phone s01"><cite>shiestyle:</cite> I will ask Voyager for their opinion</p>
+<p id=1cb2 class=summary>shiestyle + toshiakikoike: Discussion in Japanese</p>
+<p id=f2b3 class="phone s08"><cite>MasakazuKitahara:</cite> adds to discussion in Japanese</p>
+<p id=fa3a class="phone s01"><cite>shiestyle:</cite> The feeling is there is a risk, and they are not seeing any need for it in Japan</p>
+<p id=8de8 class="phone s02"><cite>ivan:</cite> I am curious what the risk is<br>
+<span id=f8ff>… The only thing is adding some speed, so it is not clear what the risk is</span></p>
+<p id=225d class="phone s01"><cite>shiestyle:</cite> Well, the security risk. We already have JS, so maybe there is a little more risk?</p>
+<p id=309f class="phone s02"><cite>ivan:</cite> Yes, but we can't block JS, it is already allowed<br>
+<span id=6e50>… so my feeling the only thing this brings is performance</span></p>
+<p id=430d class="phone s06"><cite>mgarrish:</cite> We aren't forcing support, so it is fine to block from a RS perspective.<br>
+<span id=311f>… It would be very hard to ban this</span><br>
+<span id=0669>… it is already going through via an exemption</span></p>
+<p id=a619 class="phone s01"><cite>shiestyle:</cite> relaying conversation in Japanese</p>
+<p id=3e28 class="phone s09"><cite>toshiakikoike:</cite> continues in Japanese</p>
+<p id=ffff class="phone s01"><cite>shiestyle:</cite> toshiakikoike says JS is allowed, so webassembly can be allowed, so they understand<br>
+<span id=5fa2>… so they understand, this is just their feeling</span></p>
+</section>
+
+<section>
+<h3 id=4917>Accessibility work to be done in this charter</h3>
+<p id=d3e9 class="phone s04"><cite>duga:</cite> And I also would add this is already supported per the spec</p>
+<p id=fd96 class="phone s01"><cite>shiestyle:</cite> Moving on<br>
+<span id=ae4b>… we have to discuss what the a11y work will be</span></p>
+<p id=6790 class="phone s03"><cite>AvneeshSingh:</cite> The broad things are in the charter, there are also new things we are finding as we do the work in the TF<br>
+<span id=eff5>… those things need to be discussed in the wg</span><br>
+<span id=b5f2>… and there are some clarifications we will need to provide</span><br>
+<span id=fbe4>… The question we have is whay wcag 2.0 - why not 2.1 or 2.2?</span><br>
+<span id=fd32>… We also need to discuss escapeability in Media overlays</span><br>
+<span id=4659>… We will also need to consider the new work in annotations</span><br>
+<span id=d3f6>… EAA is coming soon, so we may have feedback there</span><br>
+<span id=f6be>… So this is the broad direction</span></p>
+<p id=9b59 class="phone s01"><cite>shiestyle:</cite> The coformance version of wcag is a big change</p>
+<p id=283d class="phone s03"><cite>AvneeshSingh:</cite> We will probably need to update for changes, not clear if it will be 1.1, or 1.1.2 or 1.2</p>
+<p id=e001 class="phone s10"><cite>CharlesL:</cite> There is also webtoons and fixed layout that may impact a11y</p>
+<p id=4b59 class="phone s02"><cite>ivan:</cite> I was wondering about that as well.<br>
+<span id=3101>… We have the note on FL a11y, I was wondering if there was something from there that could be used</span></p>
+<p id=48d7 class="phone s10"><cite>CharlesL:</cite> Yes, we are working towards using that information, and we are currently working on techniques for using that<br>
+<span id=1217>… There could be implications as we go through each item</span><br>
+<span id=a7c8>… and as a side note, Amazon publishing has just sent someone to that task force</span><br>
+<span id=6d8f>… There may by issues with wcag aa, may just be single a</span></p>
+<p id=1fb8 class="phone s06"><cite>mgarrish:</cite> There is also some property that will cause a change to the main spec</p>
+<p id=d3c9 class="phone s07"><cite>Hadrien:</cite> Thorium web is coming<br>
+<span id=580e>… One item we have is a &quot;readability mode&quot; which will be for fixed layout as well</span><br>
+<span id=a7b4>… we extract the structure and text, and provide that as another view</span><br>
+<span id=a29e>… with full control (text size, etc)</span><br>
+<span id=4be0>… This could be of interest to lots of people.</span><br>
+<span id=5177>… We view the feature as experimental, but it may be a good basis for a11y designs</span></p>
+<p id=499c class="phone s02"><cite>ivan:</cite> Admin comment - a11y was done by a TF with separate meeting times<br>
+<span id=ad5b>… is that how it will work going forward?</span></p>
+<p id=d973 class="phone s03"><cite>AvneeshSingh:</cite> CG work needs to continue, we can't move that to all to WG<br>
+<span id=1ab7>… The meetings are a good way to keep things going</span><br>
+<span id=d6ae>… We will try to meet twice a month, and see how it is working out</span></p>
+</section>
+
+<section>
+<h3 id=b8c1>admin</h3>
+<p id=1030 class="phone s01"><cite>shiestyle:</cite> For the next call, we will cancel it, so the time is available if any TF wants to meet<br>
+<span id=03ee>… does any TF want to meet?</span></p>
+<p id=269c class="phone s03"><cite>AvneeshSingh:</cite> We don't need the time</p>
+<p id=005a class="phone s04"><cite>duga:</cite> Do we even have taskforces yet?</p>
+<p id=5263 class="phone s02"><cite>ivan:</cite> Not really, there is still work to do</p>
+<p id=82b7 class="phone s02"><cite>ivan:</cite> we need names of people, etc. So we need that from say shiestyle and Hadrien</p>
+<p id=5a24 class="phone s07"><cite>Hadrien:</cite> We have some ideas, do you want an early list</p>
+<p id=9f3d class="phone s02"><cite>ivan:</cite> Give me a first list ASAP</p>
+</section>
+
+<section>
+<h3 id=8010>AOB</h3>
+<p id=bee8 class="phone s04"><cite>duga:</cite> How many people will attend f2f in person?</p>
+<p id=434a class="phone s02"><cite>ivan:</cite> Lots and lots!</p>
+<p id=8e41 class="phone s01"><cite>shiestyle:</cite> Next week is canceled</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 242 (Fri Dec 20 18:32:17 2024 UTC).</address>
+
+</body>
+</html>
