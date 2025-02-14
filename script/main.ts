@@ -1,12 +1,12 @@
-import { getGroupedData, GroupedData } from "./lib/tools.ts";
+import { getGroupedData, GroupedData } from "./lib/data.ts";
 import { MiniDOM }                     from './lib/minidom.ts';
 import pretty                          from "npm:pretty";
 // Using the node:fs/promises module instead of Deno's built in i/o functions
 // if someone wants to run this script in a Node.js environment
 import * as fs                         from 'node:fs/promises';
 
-// Adapt it to your need: the working group repository name
-const wg = "pm-wg";
+// Adapt it to your needs: the relative file name for the directory of the working group's minutes
+const directory = "../minutes";
 
 /**
  * Generate the TOC HTML content.
@@ -32,7 +32,7 @@ function tocHTML(document: MiniDOM, parent: Element, data: GroupedData): void {
 
         for (const entry of datum) {
             const li_meeting = document.addChild(ul_meetings, 'li');
-            document.addChild(li_meeting, 'h3', `<a target="_blank" href="${entry.url}">${entry.date.toDateString()}</a>`);
+            document.addChild(li_meeting, 'h3', `<a target="_blank" href="${entry.fname}">${entry.date.toDateString()}</a>`);
             const details_meeting = document.addChild(li_meeting, 'details');
             document.addChild(details_meeting, 'summary', 'Agenda');
             const ul_toc = document.addChild(details_meeting, 'ul');
@@ -72,14 +72,14 @@ function resolutionHTML(document: MiniDOM, parent: Element, data: GroupedData): 
  * @param template_file - The template file name
  * @param id - The id of the slot in the template where the data should be inserted
  * @param output_file - Output file name
- * @param func - The content generation function
+ * @param generationFunction - The content generation function
  */
 async function generateContent(
         data: GroupedData, 
         template_file: string, 
         id: string, 
         output_file: string, 
-        func: (document: MiniDOM, parent: Element, data: GroupedData) => void): Promise<void> {
+        generationFunction: (document: MiniDOM, parent: Element, data: GroupedData) => void): Promise<void> {
     // get hold of the template file as a JSDOM
     const template = await fs.readFile(template_file, 'utf-8');
 
@@ -92,7 +92,7 @@ async function generateContent(
         throw new Error(`Could not find the right slot ${id} in the template`);
     }
 
-    func(document, slot, data);
+    generationFunction(document, slot, data);
 
     // Additional, minor thing: set the copyright statement to the right year
     const cc = document.getElementById('year');
@@ -113,7 +113,7 @@ async function generateContent(
  */
 async function main() {
     // Get hold of the data to work on
-    const data: GroupedData = await getGroupedData(wg);
+    const data: GroupedData = await getGroupedData(directory);
 
     // Get the data into the HTML templates and write the files
     // The functions are async, so we need to wait for all of them to finish
@@ -121,19 +121,18 @@ async function main() {
     const promises: Promise<void>[] = 
         [
             {
-                template : "./templates/index_template.html", 
-                id       : "list-of-calls", 
-                output   : "index.html", 
-                func     : tocHTML
+                template           : "./templates/index_template.html", 
+                id                 : "list-of-calls", 
+                output             : "index.html", 
+                generationFunction : tocHTML,
             },
             {
-                template : "./templates/resolutions_template.html", 
-                id       : "list-of-resolutions", 
-                output   : "resolutions.html", 
-                func     : resolutionHTML
+                template           : "./templates/resolutions_template.html", 
+                id                 : "list-of-resolutions", 
+                output             : "resolutions.html", 
+                generationFunction : resolutionHTML,
             },
-        ]
-        .map((entry) => generateContent(data, entry.template, entry.id, entry.output, entry.func));
+        ].map((entry) => generateContent(data, entry.template, entry.id, entry.output, entry.generationFunction));
     await Promise.allSettled(promises);
 }
 
