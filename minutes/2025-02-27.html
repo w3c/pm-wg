@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group &ndash; 27 February 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group</h1>
+<h2>27 February 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/02/27-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, duga, gautierchomel, George, gpellegrino, ikkwong, MasakazuKitahara, mgarrish, shiestyle, Sueneu, toshiakikoike, tzviya, wendyreid</dd>
+<dt>Regrets</dt><dd>Ivan</dd>
+<dt>Chair</dt><dd>wendyreid</dd>
+<dt>Scribe</dt><dd>Sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#d6c2">WASM resolution</a></li>
+<li><a href="#3845">Update from FXL Accessibility</a></li>
+<li><a href="#9744">WASM resolution</a></li>
+<li><a href="#9514">What to update in EPUB A11y 1.1?</a></li>
+<li><a href="#c055">Dark mode guidance for reading systems</a></li>
+<li><a href="#6b15">Adding dark mode styles to EPUB 3.4 documents</a></li>
+<li><a href="#13d9">Open letter about interoperable ebook standards</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=ea22 class=irc><cite>&lt;wendyreid&gt;</cite> date: 2025-02-27</p>
+</section>
+
+<section>
+<h3 id=d6c2>WASM resolution</h3>
+<p id=ea2c class="phone s01"><cite>Wendy:</cite> We have a packed agenda today</p>
+<p id=3849 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2686">w3c/<wbr>epub-specs#2686</a></p>
+<p id=c278 class="phone s01"><cite>Wendy:</cite> We would like to have a resolution affirming 2686, which includes webassembly…</p>
+<p id=b7f6 class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: Merge PR 2686.</p>
+<p id=b0e5 class=irc><cite>&lt;Sueneu&gt;</cite> +1</p>
+<p id=f0e5 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=3a98 class=irc><cite>&lt;gpellegrino&gt;</cite> 0</p>
+<p id=215b class="phone s02"><cite>duga:</cite> There were some changes from out discussion…</p>
+<p id=7f79 class=summary>something of a backdoor for fallbacks for embedded content. We’ve closed an open door and removed embedded content</p>
+<p id=199c class="phone s03"><cite>mgarrish:</cite> mostly it maps to what we talked about, added some clarifications and examples…</p>
+<p id=70ed class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=724e class=summary>there is a summary in the PR</p>
+<p id=b0ef class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=f0ef class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=b0f0 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=f0f0 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=70f0 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=30f4 class=irc><cite>&lt;George&gt;</cite> +1</p>
+<p id=3fff class=resolution><strong>RESOLUTION:</strong> Merge PR 2686.</p>
+</section>
+
+<section>
+<h3 id=3845>Update from FXL Accessibility</h3>
+<p id=72f0 class="phone s01"><cite>Wendy:</cite> Next item update from FXL a11y TF<br>
+<span id=3bbe>… FXL TF has been working on a recommendations document for creating FXL accessible content and recognizing the limitations</span><br>
+<span id=2306>… we’ve been floating some ideas about how we can address the limitations of FXL accessibility</span><br>
+<span id=6376>… Hadrien has mentioned a reading system that can display content in different ways</span><br>
+<span id=ffff>… including possibly rendering the FXL content as reflowable</span></p>
+<p id=0149 class="phone s04"><cite>Hadrien:</cite> What we have in mind is experimental. We are trying one platform first…<br>
+<span id=6c4c>… for this we are doing it on the web, because of our opensource web reader, Thorium web</span><br>
+<span id=d89f>… we would walk the dom to extract structure and utterances and pass them along. Here we would use that differently</span><br>
+<span id=d21c>… since in FXL words and letters are often separated, we are thinking of putting the text together</span><br>
+<span id=1189>… and creating a readability mode that allows font changes, colors, etc</span><br>
+<span id=b170>… this will depend on the quality of the content, if it is well structured, you will get something readable</span><br>
+<span id=13fc>… on larger screens we will do this side by side, you will see the fixed layout on one side and the reflowable on the other</span><br>
+<span id=2e8c>… on smaller screens it will be a toggle</span><br>
+<span id=2bad>… hard to say when we will have something to show, possibly in the summer or fall</span></p>
+<p id=6dd4 class="phone s02"><cite>duga:</cite> how does this relate to the work the taskforce is doing?</p>
+<p id=b8fc class="phone s05"><cite>wendyreid:</cite> since we’ve identified things keeping fxl layouts from being fully accessible this is one of the ways we are looking to solve this<br>
+<span id=199f>… on the practical side, we are writing a techniques doc, about how to achieve the recommendations</span><br>
+<span id=551f>… the goal is to encourage ebook creators to write the code in a way that allows a mode like this to work</span></p>
+<p id=f354 class="phone s02"><cite>duga:</cite> Has there been any exploration of using LLMs to extract useful data?</p>
+<p id=5813 class="phone s05"><cite>wendyreid:</cite> we have not</p>
+<p id=3789 class="phone s06"><cite>George:</cite> could a fxl book be validated to be useful for a reading mode?</p>
+<p id=4102 class="phone s05"><cite>wendyreid:</cite> we could run the book with ace and get some of the results, but it would still require human review for things like reading order</p>
+<p id=6f47 class="phone s06"><cite>George:</cite> does the technique thread the content through the page?</p>
+<p id=aa19 class="phone s05"><cite>wendyreid:</cite> yes. If they follow the recommendations.</p>
+<p id=dda2 class="phone s04"><cite>Hadrien:</cite> Assessing if content will work is possible<br>
+<span id=e518>… we know which languages are used from the metadata, we can extract the text</span><br>
+<span id=6a14>… we can check and see if the results don’t look like the indicated language, we will know something like the reading order is wrong</span><br>
+<span id=9b51>… about LLMs its interesting to see what is happening in screen readers</span><br>
+<span id=7c01>… they will pick up alt text, and if that is not available it will create a description</span><br>
+<span id=850d>… I’m not sure all the APIs we need are exposed, we can’t always use them</span><br>
+<span id=2c28>… but it is worth exploring. It may or may not be better than walking the DOM</span><br>
+<span id=c5ed>… lots of universities are focused on this area, uses like extracting texts from comics</span><br>
+<span id=6c14>… LLMs are working better than before</span><br>
+<span id=79a6>… the challenge is making a generalized model and using the embedded software</span></p>
+<p id=6d73 class="phone s07"><cite>CharlesL:</cite> Most fxl books can reach WCAG A, but not AA<br>
+<span id=b775>… Benetech is working with Amazon’s publishing to certify their pipelines, looking for ways their fxl pipeline can reach WCAG A</span></p>
+</section>
+
+
+<section>
+<h3 id=9514>What to update in EPUB A11y 1.1?</h3>
+<p id=08ac class="phone s01"><cite>Wendy:</cite> We started this discussion but there is still and open question<br>
+<span id=ba15>… what do we need to update in accessibility? are there areas we might look at?</span></p>
+<p id=87d6 class="phone s08"><cite>AvneeshSingh:</cite> We discussed accessMode sufficient metadata, there is a demand from the APA to stick with 2.0 for the floor<br>
+<span id=0b0d>… but we should move forward from that spec</span><br>
+<span id=739f>… alignment with 3.4 we don’t know what that would be but are keeping our eyes open</span><br>
+<span id=5391>… annotations, webtoons, we need to inquire what is required for accessibility for these things</span></p>
+</section>
+
+<section>
+<h3 id=c055>Dark mode guidance for reading systems</h3>
+<p id=efcb class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/pm-wg/issues/14">w3c/<wbr>pm-wg#14</a></p>
+<p id=30f1 class="phone s01"><cite>Wendy:</cite> Brady brought up the issue of day/night modes in reading systems<br>
+<span id=2c6e>… this has been an issue for a long time, more and more publishers are taking a look at this</span></p>
+<p id=2ffe class="phone s02"><cite>duga:</cite> I had a very specific issue, color space meta information in documents, that can change the appearance based on reading mode<br>
+<span id=2d22>… I’m curious what happens when we add this to an EPUB and how it works in the reading systems</span><br>
+<span id=8829>… I don’t want to recreate a new system for day/night mode</span><br>
+<span id=07ba>… but we might need to advise people on color mode in their documents</span></p>
+<p id=18e0 class="phone s04"><cite>Hadrien:</cite> I don’t think it is a good idea to use this when your authoring content<br>
+<span id=b955>… we have apps were the browser or system settings will apply a different theme for the app but not the content</span><br>
+<span id=ec60>… some apps might default to the system setting, but not all of them, not all users will have a preference</span><br>
+<span id=d8d0>… content creators should steer clear of this</span></p>
+<p id=31df class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=8a0f class="phone s09"><cite>Shiestyle:</cite> in Japan we use characters that are image based. We have to prepare both light and dark mode content<br>
+<span id=be07>… that makes Japanese particularly challenging</span></p>
+<p id=af00 class="phone s02"><cite>duga:</cite> you could do it with a filter in your CSS, but Hadrien is right, this could cause mapping problems<br>
+<span id=2d87>… the next step would be to generate some content and see how reading systems respond</span><br>
+<span id=305e>… I wil do that</span></p>
+</section>
+
+<section>
+<h3 id=6b15>Adding dark mode styles to EPUB 3.4 documents</h3>
+<p id=b903 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2685">w3c/<wbr>epub-specs#2685</a></p>
+<p id=234d class="phone s01"><cite>Wendy:</cite> we have the APR open to make the spec visible in dark mode</p>
+<p id=f869 class=irc><cite>&lt;CharlesL&gt;</cite> +1 to merge</p>
+<p id=1ac0 class="phone s01"><cite>Wendy:</cite> can we approve dark mode APR to be merged?</p>
+<p id=237c class=irc><cite>&lt;wendyreid&gt;</cite> PROPOSED: Merge PR 2685, add dark mode to EPUB 3.4 drafts.</p>
+<p id=b1ed class=irc><cite>&lt;Sueneu&gt;</cite> +1</p>
+<p id=31ed class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=b1ee class=irc><cite>&lt;tzviya&gt;</cite> +1</p>
+<p id=b1ef class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=b1f0 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=b1f1 class=irc><cite>&lt;romain&gt;</cite> +1</p>
+<p id=31ee class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=b1f2 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=9b8a class=resolution><strong>RESOLUTION:</strong> Merge PR 2685, add dark mode to EPUB 3.4 drafts.</p>
+</section>
+
+<section>
+<h3 id=13d9>Open letter about interoperable ebook standards</h3>
+<p id=d3e5 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.libraryfutures.net/post/call-for-interoperable-ebook-standards">https://<wbr>www.libraryfutures.net/<wbr>post/<wbr>call-for-interoperable-ebook-standards</a></p>
+<p id=3139 class="phone s01"><cite>Wendy:</cite> Did anyone see the open letter to interoperable ebook standards?<br>
+<span id=131f>… this came from academia</span><br>
+<span id=195e>… they want to look into ease of use, ease of discovery, and accessiblity</span><br>
+<span id=4414>… this is an opportunity to engage with them</span></p>
+<p id=2cfc class="phone s10"><cite>Tzviya:</cite> matt, would some of your connections from the library world have connections there?</p>
+<p id=b513 class="phone s04"><cite>Hadrien:</cite> they are asking for two things I<br>
+<span id=bf59>… I’ve created. They are familiar with EPUB</span><br>
+<span id=c45f>… their problem is having to pay more and more for content and reading systems</span><br>
+<span id=7e4b>… they would like to be able to create one collection, to harvest content into one collection</span><br>
+<span id=82bb>… this is about fragmentation of discovery, and fragmentation of the reading experience</span><br>
+<span id=8893>… this has already happened in a few countries</span></p>
+<p id=680f class="phone s09"><cite>Shiestyle:</cite> This seems not from academia but from libraries<br>
+<span id=9a24>… this article says Readium only, I don’t understand the objectives</span></p>
+<p id=193a class="phone s05"><cite>wendyreid:</cite> I’ve experienced this with my own studies. From my own university library, I could click through to 20 other sites and may or may not have access to the material</p>
+<p id=b09e class="phone s02"><cite>duga:</cite> Is this article looking for a rights management system?</p>
+<p id=d4eb class="phone s04"><cite>Hadrien:</cite> they aren’t looking at rights management, but want a single collection that can be used by whatever system you are using<br>
+<span id=c495>… you could imagine a Kobo reader that supports DRM  being able to read across ebook vendors</span><br>
+<span id=c12c>… its about giving end users options</span></p>
+<p id=b39d class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to identity issue</p>
+<p id=19ba class="phone s04"><cite>Hadrien:</cite> using standard interoperability would let the end user choose their reader</p>
+<p id=6dce class="phone s10"><cite>tzviya:</cite> this is also about user identity management<br>
+<span id=c371>… the rights may not carry over from one library to a connected one</span><br>
+<span id=3d89>… this is complex, but there are some cobbled together solutions</span></p>
+<p id=ebf1 class="phone s04"><cite>Hadrien:</cite> There is an identity issue moving from one platform to another, but if you only need to go to your university/institutions platform, it would be easier to solve<br>
+<span id=f545>… identity issues could be largely solved by bringing everything to one platform</span></p>
+<p id=e07b class="phone s09"><cite>shiestyle:</cite> we created a digital comics task force, let me or Hadrien know if you are interested</p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#3fff">Merge PR 2686.</a></li>
+<li><a href="#9b8a">Merge PR 2685, add dark mode to EPUB 3.4 drafts.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
