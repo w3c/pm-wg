@@ -49,6 +49,8 @@ To make the transition request review easier, the proposed corrections are at:
 - https://w3c.github.io/epub-specs/epub33/core/#sec-svg-restrictions
 - https://w3c.github.io/epub-specs/epub33/core/#app-viewport-meta-syntax
 
+None of these changes are [category 1 features](https://w3c.github.io/epub-specs/epub33/reports/exit_criteria.html#epub-3.3-core); instead, they are [category 2 features](https://w3c.github.io/epub-specs/epub33/reports/exit_criteria.html#epub-3.3-core) with clarifications of normative texts. These clarifications primarily resolve issues that were reported in the process of authoring conforming EPUB publications.
+
 # Link to internal AC Review results
 
 https://www.w3.org/2002/09/wbs/33280/epub-amendments/results
@@ -59,7 +61,7 @@ None
 
 # Implementation
 
-There were no new features, only essentially clarification of the normative texts. No new tests were necessary, the ones listed, and referred to, from the editor's draft (see links above), were enough.
+All changes are [category 2 features](https://w3c.github.io/epub-specs/epub33/reports/exit_criteria.html#epub-3.3-core). The [exit criteria for those features](https://w3c.github.io/epub-specs/epub33/reports/exit_criteria.html#exit-criteria-core) is based on the [EPUBCheck validator](https://www.w3.org/publishing/epubcheck/) which has indeed been updated to ensure conformance with the new recommendations.
 
 # Patent disclosures
 
