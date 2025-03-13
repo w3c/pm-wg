@@ -55,13 +55,17 @@ None of these changes are [category 1 features](https://w3c.github.io/epub-specs
 
 https://www.w3.org/2002/09/wbs/33280/epub-amendments/results
 
+TL;DR: 21 approval without comments, 4 abstentions. Most of the major stakeholder members (publishers, EPUB Reading system developers) have voted (positively).
+
 # Formal Objections
 
-None
+None.
 
 # Implementation
 
-All changes are [category 2 features](https://w3c.github.io/epub-specs/epub33/reports/exit_criteria.html#epub-3.3-core). The [exit criteria for those features](https://w3c.github.io/epub-specs/epub33/reports/exit_criteria.html#exit-criteria-core) is based on the [EPUBCheck validator](https://www.w3.org/publishing/epubcheck/) which has indeed been updated to ensure conformance with the new recommendations.
+All changes are [category 2 features](https://w3c.github.io/epub-specs/epub33/reports/exit_criteria.html#epub-3.3-core). The [exit criteria for those features](https://w3c.github.io/epub-specs/epub33/reports/exit_criteria.html#exit-criteria-core) is based on the [EPUBCheck validator](https://www.w3.org/publishing/epubcheck/) which has been updated to ensure conformance with the new recommendations. (See the [EPUBCheck releases](https://github.com/w3c/epubcheck/releases).)
+
+(It is worth emphasizing the importance of EPUBCheck in this industry: virtually all EPUB Distributer require the submitted EPUB publications to fully pass EPUBCheck. Hence the central role of EPUBCheck in the implementation strategy of EPUB.)
 
 # Patent disclosures
 

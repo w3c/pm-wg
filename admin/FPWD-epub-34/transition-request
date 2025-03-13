@@ -1,0 +1,59 @@
+# Document title, URLs, estimated publication date
+
+Title: EPUB 3.4
+- Final URL: https://www.w3.org/TR/2020/WD-epub-34-20200327/
+- Temporary URL: https://w3c.github.io/epub-specs/epub34/authoring/?specStatus=FPWD&publishDate=2020-03-27
+- Editor's draft: https://w3c.github.io/epub-specs/epub34/authoring/
+- Expected Publication date 2025-03-27
+- short name: epub-34
+
+Title: EPUB Reading Systems 3.4
+- Final URL: https://www.w3.org/TR/2020/WD-epub-rs-34-20200327/
+- Temporary URL: https://w3c.github.io/epub-specs/epub34/rs/?specStatus=FPWD&publishDate=2020-03-27
+- Editor's draft: https://w3c.github.io/epub-specs/epub34/rs/
+- Expected Publication date 2025-03-27
+- short name: epub-rs-34
+
+Title: EPUB Accessibility 1.1.1
+- Final URL: https://www.w3.org/TR/2025/WD-epub-a11y-111-20250327/
+- Temporary URL: https://w3c.github.io/epub-specs/epub34/a11y/?specStatus=FPWD&publishDate=2025-03-27
+- Editor's draft: https://w3c.github.io/epub-specs/epub34/a11y/
+- Expected Publication date 2025-03-27
+- short name: epub-a11y-111
+
+# Abstract
+
+See:
+- https://w3c.github.io/epub-specs/epub34/authoring/?specStatus=FPWD&publishDate=2020-03-27#abstract
+- https://w3c.github.io/epub-specs/epub34/rs/?specStatus=FPWD&publishDate=2020-03-27#abstract
+- https://w3c.github.io/epub-specs/epub34/a11y/?specStatus=FPWD&publishDate=2025-03-27#abstract
+
+# Status
+
+See:
+- https://w3c.github.io/epub-specs/epub34/authoring/?specStatus=FPWD&publishDate=2020-03-27#sotd
+- https://w3c.github.io/epub-specs/epub34/rs/?specStatus=FPWD&publishDate=2020-03-27#sotd
+- https://w3c.github.io/epub-specs/epub34/a11y/?specStatus=FPWD&publishDate=2025-03-27#sotd
+
+# Is it a delta specification intended to become a W3C Recommendation?
+
+No. It is the copy of the EPUB 3.3, EPUB Reading Systems 3.3, and EPUB Accessibility 1.1, with minimal changes/additions; they are the starting points for the
+new version of the Recommendations (per charter)
+
+# Link to group's decision to request transition
+
+- https://w3c.github.io/pm-wg/minutes/2025-03-13.html#d175
+
+# Issues
+
+- https://github.com/w3c/epub-specs/issues/
+ 
+# Information about implementations known to the Working Group
+
+The current (3.3) version is widely implemented and distributed.
+
+# Additional short name approval requests
+
+For future proofing, the WG would also request the short names `epub3` and `epub-3`, as aliases of the (existing) `epub` short name:
+
+- https://w3c.github.io/pm-wg/minutes/2025-03-13.html#dc8a
