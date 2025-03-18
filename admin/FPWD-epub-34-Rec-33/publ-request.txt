@@ -1,0 +1,55 @@
+To: webmaster
+CC: pm chairs, matt, susan, comm team, xueyuan
+Subject: publication request for a new version of EPUB 3.3 Rec, and three EPUB 3.4 FPWD-s
+
+Denis,
+
+This is an official publication request for the publication of the following documents, all for the 27th of March, 2025. 
+They are all published by the Publishing Maintenance (PM) Working Group.
+
+EPUB 3.3 Recommendation
+    - https://www.w3.org/TR/2025/REC-epub-33-20250327/
+    - The transition is from the previous the version REC publication with proposed additions. 
+      The final transition has been approved in:
+      https://github.com/w3c/transitions/issues/699#issuecomment-2724714500
+
+EPUB 3.4 First Public Working Draft
+    - https://www.w3.org/TR/2025/WD-epub-34-20250327/
+    - The FPWD transition request, with the new short name, has been approved in:
+      https://github.com/w3c/transitions/issues/700#issuecomment-2724720594
+
+EPUB Reading Systems 3.4 First Public Working Draft
+    - https://www.w3.org/TR/2025/WD-epub-rs-34-20250327/
+    - The FPWD transition request, with the new short name, has been approved in:
+      https://github.com/w3c/transitions/issues/700#issuecomment-2724720594
+
+EPUB Accessibility 1.1.1 First Public Working Draft
+    - http://www.w3.org/TR/2025/WD-epub-a11y-111-20250327/
+    - The FPWD transition request, with the new short name, has been approved in:
+      https://github.com/w3c/transitions/issues/700#issuecomment-2724720594
+
+All four documents are already in place. Note that the new FPWD represent new versions for the EPUB 3 family line,
+namely EPUB 3.4.
+
+Some additional comments on the publications:
+
+- All four documents use the Copyright agreement that was set up jointly with IDPF. I believe there is
+an admin file somewhere which lists the documents that use this copyright; the three FPWD-s should be added to 
+it (otherwise we get complaints from the pubrules checker).
+
+- The definition links from the Reading Systems 3.4 across to the EPUB 3.4 spec are not working (yet). 
+That will fix itself automatically once we publish the FPWD-s and specref absorbs the new documents. 
+I presume it is possible to publish the document this way as a FPWD.
+
+- I was not sure what the usual approach is for a new version number vs. history. Ideally, the history for EPUB 3.4, ie, 
+the epub-34 short name, should lead back to the epub-33 line. If so, the extra magic should be
+added to the history headers using, e.g., `data-previous-shortname="epub-34"` to point back to the right place. 
+As I was not sure whether that is the plan, I did not do the changes. I am happy to that if you give me a green light.
+
+Thanks!
+
+Ivan
+
+P.S. Xueyuan, the AC mail and HPN draft will follow shortly
+
+

@@ -1,0 +1,64 @@
+Xueyuan,
+
+here is the draft AC Announcement for the PM Publications
+
+———————————
+
+To: xueyuan
+CC: pm chairs, matt, susan, comm team, denis
+Subject: [Draft AC Announcement] EPUB 3.3 W3C Recommendation updated; new FPWD-s published
+
+Dear Advisory Committee Representative,
+[This announcement will be forwarded to W3C group chairs]
+
+It is my pleasure to announce that the following W3C Recommendation has 
+been updated:
+
+    EPUB 3.3
+    https://www.w3.org/TR/2025/REC-epub-33-20250327/
+
+EPUB® 3 defines a distribution and interchange format for digital publications
+and documents. The EPUB format provides a means of representing, packaging, and
+encoding structured and semantically enhanced web content — including HTML, 
+CSS, SVG, and other resources — for distribution in a single-file container.
+This specification defines the authoring requirements for EPUB publications
+and represents the third major revision of the standard.
+
+All Members who responded to the Last Call for Review of Proposed 
+Corrections to the Recommendation [1] supported the publication of the 
+document with the proposed corrections as a W3C Recommendation, with several 
+reviewers indicating that they produce or expect to produce products that 
+use this specification.
+
+Furthermore, the Working Also published three First Public Working Drafts:
+
+    EPUB 3.4
+    https://www.w3.org/TR/2025/WD-epub-34-20250327/
+
+    EPUB Reading Systems 3.4
+    https://www.w3.org/TR/2025/WD-epub-rs-34-20250327/
+
+    EPUB Accessibility 1.1.1
+    http://www.w3.org/TR/2025/WD-epub-a11y-111-20250327/
+
+These documents are the starting points for the next major version of the EPUB 3
+family of Recommendations. This new version will add some new normative
+features to the specifications, as chartered by the current charter of the
+Publishing Maintenance Working Group[2].
+
+Please join us in congratulating the W3C Publishing Maintenance Working Group [3] on 
+this achievement.
+
+This announcement follows section 5.7.2 of the W3C Process Document:
+   https://www.w3.org/policies/process/20231103/#ACReviewAfter
+
+Thank you,
+
+For Philippe le Hégaret, W3C Strategy and Project Lead,
+Ivan Herman, PM WG Team Contact;
+Xueyuan Jia, W3C Marketing & Communications
+
+[1] https://www.w3.org/2002/09/wbs/33280/epub-amendments/
+[2] https://www.w3.org/2025/02/pmwg-charter.html
+[3] https://www.w3.org/groups/wg/pm/
+
