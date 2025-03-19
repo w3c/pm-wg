@@ -6,12 +6,12 @@ The meeting will be held at the [Centre Inria d'Université Côte d'Azur](https:
 
 ## Meeting information
 
-- **Agenda**: T.B.D.
+- **Agenda and participants' list**: [Available on Google Doc](https://docs.google.com/document/d/1SePiVZDlyWNg5nhqBffCXSh7_EGC5IXPz9nTd8i1sdw/edit?tab=t.dbiebco88mfi).
 - **Dial-in information**: T.B.D.
   
 ## Travel and other practicalities
 
-- **List of hotels in the area**: [See a list of hotels in the area](https://www.w3.org/2025/04/AC/venue.html#hotels)
+- **List of hotels in the area**: [See a list of hotels in the area](https://www.w3.org/2025/04/AC/venue.html#hotels) (Several of us are staying in the Novotel.)
 - **Travel Infos**: ([Area map](https://framacarte.org/en/map/ac-2023-ac-2025_143800#15/43.6165/7.0675))
   - **Nearest airport**: [Nice-Côte d'Azur](https://www.nice.aeroport.fr/en)
   - **Nearest train station**: [Antibes](https://www.garesetconnexions.sncf/en/stations-services/antibes). Note: high speed trains between Paris and Nice stop at this station.
@@ -19,4 +19,4 @@ The meeting will be held at the [Centre Inria d'Université Côte d'Azur](https:
     - **Public transport**: See [Inria's page](https://www.inria.fr/en/how-get-inria-centre-universite-cote-dazur-and-its-montpellier-antenna)
     - **Taxi service**: see, e.g., [Transfert Service](https://www.transfertservice.fr) (site in French only…). Contact Sébastien Penet at +33 6 09 50 92 53 or by mail at [contact@transfertservice.fr](mailto:contact@transfertservice.fr). Count with around 60€ from the airport of Nice to the area around Inria.
   - **Visa requirements**: see the [relevant French Government's site](https://france-visas.gouv.fr/en/web/france-visas). (In case you are wondering: the upcoming [European Electronic Visa, ETIAS,](https://travel-europe.europa.eu/etias/what-etias_en) is not expected to be operational at the time of our meeting.)
-- Lunches will be available at INRIA's self-service restaurant. Unless we have a sponsor, everyone will have to pay for herself/himself, and only credit cards are accepted. Coffee/tea will be served in the breaks. 
+- Lunches will be available at INRIA's self-service restaurant. Everyone will have to pay for herself/himself, and only credit cards are accepted. Coffee/tea will be served in the breaks. 
