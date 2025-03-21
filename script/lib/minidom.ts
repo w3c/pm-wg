@@ -1,6 +1,5 @@
 import { JSDOM } from 'npm:jsdom';
 
-
 /**
  * A thin layer on top of the regular DOM Document. Necessary to "hide" the differences 
  * between DOM implementations such as JSDOM, and Deno's DOM WASM.
