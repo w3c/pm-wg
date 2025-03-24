@@ -12,6 +12,7 @@ export const filenameToTitle: { [key: string]: string; } = {
     "a11y"    : "Accessibility Task Force",
     "ann"     : "EPUB Annotations Task Force",
     "dc"      : "Digital Comics Task Force",
+    "fxl"     : "Fixed Layout Accessibility Task Force",
     "f2f"     : "Face-to-Face",
 };
 
