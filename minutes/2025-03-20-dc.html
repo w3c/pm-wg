@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Digital Comics TF &ndash; 20 March 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Digital Comics TF</h1>
+<h2>20 March 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/03/20-pm-dc-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>CharlesL, Dale, Delackner, dhall, duga, Hadrien, ikkwong, LaurentLM, MasakazuKitahar, MasakazuKitahara, sdelackner, shiestyle, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Hadrien Gardeur, Shinya Takami</dd>
+<dt>Scribe</dt><dd>dhall, duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#2e0f">Discussion for scrolled comics</a></li>
+<li><a href="#4b77">Agenda for F2F kick off meeting in April 2025</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=9f23 class="phone s01"><cite>shiestyle:</cite> overview presentation.  Agenda.<br>
+<span id=961d>… Shinya and Hadrien chairing</span><br>
+<span id=461e>… scrolled comics (webtoons) and Spread Comics for discussion today along with F2F kickoff</span></p>
+</section>
+
+<section>
+<h3 id=2e0f>Discussion for scrolled comics</h3>
+<p id=6812 class="phone s02"><cite>Hadrien:</cite> Started from scrolled-continuous discussion..  Things can be improved which is part of scope.</p>
+<p id=65af class="phone s01"><cite>shiestyle:</cite> In Japan - rendition:layout-pre-paginated and rendition:flow-scrolled-continuous in use.<br>
+<span id=2237>… Hadrien's proposal rendition:layout-flow (new)</span></p>
+<p id=a3c7 class="phone s02"><cite>Hadrien:</cite> To be clear, not requesting a new property, but a new value for rendition:layout<br>
+<span id=aa3f>… extracted an example of how current books achieve</span><br>
+<span id=cd9b>… should be interesting to see how things are produced today in more detail</span><br>
+<span id=e8fb>… should highlight other points for us to discuss in the future</span><br>
+<span id=8d35>… for example namespaces used, etc.</span><br>
+<span id=0850>… amazon requirement to indicate comics, viewport declarations present, etc</span><br>
+<span id=ce95>… should be interesting and useful to help give us direction</span><br>
+<span id=8b8d>… sent on mailing list, links coming</span></p>
+<p id=f379 class="phone s03"><cite>Shinya:</cite> we can also discuss as part of our next topic</p>
+<p id=1f5d class=irc><cite>&lt;Hadrien&gt;</cite> Examples: <a href="https://gist.github.com/HadrienGardeur/1263d7bdf2362f33e7ab9cd9521fb93b">https://<wbr>gist.github.com/<wbr>HadrienGardeur/<wbr>1263d7bdf2362f33e7ab9cd9521fb93b</a></p>
+<p id=bf7b class=irc><cite>&lt;Hadrien&gt;</cite> Proposal: <a href="https://gist.github.com/HadrienGardeur/273a9d195f4a938880aa0bf8d2fc5dd9">https://<wbr>gist.github.com/<wbr>HadrienGardeur/<wbr>273a9d195f4a938880aa0bf8d2fc5dd9</a></p>
+<p id=d4a9 class="phone s03"><cite>Shinya:</cite> this has a very large influence in Japan for existing epubs<br>
+<span id=1c3e>… have to change the behavior, need reading systems to support</span><br>
+<span id=d4d1>… issue for publishers until we have support across reading systems</span></p>
+<p id=a6b4 class="phone s02"><cite>Hadrien:</cite> What is interesting in the example for Japan is that this example can be tested in reading systems.  Currently only Apple Books can currently handle rendition:flow-scrolled-continuous<br>
+<span id=0471>… Not convinced about argument of compatibility as only Apple RS supports.</span><br>
+<span id=4cea>… behavior observed is consistent with what you would expect</span><br>
+<span id=e8ca>… in most RS, fixed layout mode does not offer a way for the user to choose continuous scrolling</span><br>
+<span id=90e8>… when we talk about compatibility, in Japan, the epub are used as an interchange format not as an end spec use</span><br>
+<span id=4d7f>… mostly flow through Apple, and maybe Amazon</span></p>
+<p id=79e6 class="phone s03"><cite>Shinya:</cite> On RS side, come concerns. From the content / publishers side, also a concern</p>
+<p id=d0fc class="phone s04"><cite>duga:</cite> didn't like flow-continuous, also changes the rules for fixed layout content (fit width)<br>
+<span id=e4a7>… difference between being able to set in UI for continuous scroll - could read manga - but want to get rid of the concept of pages</span><br>
+<span id=cc85>… curious about why this is considered difficult.</span><br>
+<span id=a085>… Once change is made in RS, don't understand why this is considered complex</span><br>
+<span id=8641>… it doesn't sound difficult.</span></p>
+<p id=0495 class="phone s05"><cite>LaurentLM:</cite> In Japan, assertion was used which wasn't standard.  See no harm in Japan keeping current solution and adding new solution.<br>
+<span id=1c7c>… current metadata being used and new metadata would have advantage of additional RS support, thus it would be good</span></p>
+<p id=6565 class=irc><cite>&lt;Delackner&gt;</cite> My apologies, my zoom completely froze for several minutes right after I asked for clarification re: why Shinya Takami was conerned about adding the new value</p>
+<p id=f0f5 class="phone s01"><cite>shiestyle:</cite> agree to add new feature for web-toons.  concerns of adding new value - value property would be fine</p>
+<p id=38c6 class="phone s02"><cite>Hadrien:</cite> You kind of have to have a new value for layout is that the expectation that come with fixed layout do not work with continuous scroll - expectation to fit both dimensions in the viewport.<br>
+<span id=aba0>… unavoidable as this is about fit width and continuously displaying it in that way</span><br>
+<span id=586f>… also making sure this is not just a user preference</span><br>
+<span id=5278>… layout is a natural fit for that since the current values don't fit</span><br>
+<span id=48b8>… makes sense to introduce a new one.</span><br>
+<span id=59c1>… in terms of implementation for Apple - current values could be aliased</span><br>
+<span id=b7f1>… for others, it is all new work regardless.</span></p>
+<p id=721a class="phone s01"><cite>shiestyle:</cite> in Japan is currently epubs</p>
+<p id=e80c class="phone s06"><cite>wendyreid:</cite> We've had this discussion multiple times.  Problem with adding property - need to handle reading systems that don't support.  Need a fallback in the specification.<br>
+<span id=f0aa>… no fallback mechanism - if you see something, do X</span><br>
+<span id=e456>… worry is that many RS when presented with confusing information default to reflow as it is a safe place.  This is not a good experience for a comic.</span><br>
+<span id=13c0>… presents a backwards compatibility challenge.  The other concern is that some of the arguments about fit width / display, this is how we are displaying fixed layout anyhow</span><br>
+<span id=2ebc>… existing RS are already fitting to width as it is the only thing that makes sense.  Think this is a technical challenge can be solved without rendition:layout</span></p>
+<p id=e65e class="phone s04"><cite>duga:</cite> if you provide to a RS that doesn't support its going to look terrible.  Fixed layout today is fit-all and mandates that all of the content is visible in the viewport.<br>
+<span id=aa3b>… would require modifying... at the end of the day need something to spec it's fit width.</span><br>
+<span id=880d>… if we create a 3rd kind of book is a questions, and appreciate concerns about the difficulty of this</span><br>
+<span id=e17c>… webtoons do share a lot of qualities of fixed layout, can possibly piggy-back.</span><br>
+<span id=2616>… just need to add the change in rendering behavior</span><br>
+<span id=fdf6>… does feel like it would be cleaner to add 3rd type, but understand 3rd type</span><br>
+<span id=1a40>… probably more correct to add 3rd type, but aware of issues</span></p>
+<p id=4e84 class="phone s02"><cite>Hadrien:</cite> Agree with Brady - going to be wonky anyhow.  About the benefit of using fixed layout, think there are not so many<br>
+<span id=c5b7>… don't care about spreads. Doesn't make sense in the context of a webtoon.  Flow in general is a bad thing that we have in the spec.</span><br>
+<span id=355c>… the idea that an author can decide if the document is paginated or scrolled is really a user choice</span><br>
+<span id=dbd6>… property -flow- is at odd with design goal of reflow able epub</span><br>
+<span id=9e1a>… the idea of extending something that is useless or harmful is a bad idea</span><br>
+<span id=1fc0>… the right way is to acknowledge the fact that these are different publications</span></p>
+<p id=a4c2 class="phone s01"><cite>shiestyle:</cite> would consider depreciating existing, but need to keep for compatibility, but acknowledge it's a workaround currently.</p>
+<p id=03c1 class="phone s07"><cite>CharlesL:</cite> Vote is to add a new value/property of fixed width - like the idea.  If done correctly, not trying to fit the entire image.  If user wants to flip pages, but had property, and the image is long you have to scroll<br>
+<span id=e0a1>… when you get to the end of it, you have to change pages.</span><br>
+<span id=0510>… at the end the user swipes to the next page</span><br>
+<span id=d21d>… or the user goes into the RS and you now get continuous scrolling</span><br>
+<span id=a2cb>… having one new value may get us what we want.</span><br>
+<span id=9109>… perhaps defaults to scrolling-continuous</span></p>
+<p id=6ac6 class="phone s01"><cite>shiestyle:</cite> In Japan, we don't use long images, we cut to small pieces currently so they have the same height</p>
+<p id=716a class=irc><cite>&lt;sdelackner&gt;</cite> My apologies, new to this discussion format but how do I join the speaker queue?</p>
+<p id=ffff class="phone s06"><cite>wendyreid:</cite> agree with Hadrien about the point of rendition-flow:scrolled, but this alludes to a philosophical point - the decision to give content creators to the control.<br>
+<span id=60a1>… we have seen RS give the user the ability to adjust content to preferences</span><br>
+<span id=db6c>… publisher author value becomes more of a hint about how it was authored</span><br>
+<span id=cf92>… RS provide the capability.  We should see the same thing for webtoons...  we still have a tension.  agree flow setting should not have been provided.</span><br>
+<span id=dd1f>… it probably should have been for fixed layout to begin with.</span><br>
+<span id=10000>… there may be a case for using flow... to the point of current usage need to be careful to not break existing systems.</span></p>
+<p id=9b5a class="phone s08"><cite>dale:</cite> Wondering - author vs user.  are approaches valid?  in CSS can say important for example.  Wondering about user vs. author</p>
+<p id=a118 class=irc><cite>&lt;wendyreid&gt;</cite> ack +</p>
+<p id=27e8 class="phone s08"><cite>dale:</cite> are there situations where it can't be both ways - author intent should win?<br>
+<span id=02e6>… seems we are trying to have both worlds.</span></p>
+<p id=2fdc class="phone s09"><cite>dhall:</cite> My question is best answered once we ge tinto more detail<br>
+<span id=45f6>… epub is basically just xhtml documents, didn't we once have the idea to have images in the spine instead?</span></p>
+<p id=4ce8 class="phone s02"><cite>Hadrien:</cite> There was a proposal to have images in spine, but Apple was against it</p>
+<p id=dfed class=irc><cite>&lt;CharlesL&gt;</cite> Just images means no accessibility no where to hang the alt text etc.</p>
+<p id=ca1d class="phone s02"><cite>Hadrien:</cite> So orgs thought it was a good idea, but we couldn't get to consensus</p>
+<p id=ba57 class="phone s09"><cite>dhall:</cite> Where are at, we want better ways to do author suggested layout with user abiliy to override<br>
+<span id=8a28>… Need to have enough info for RS to be consistent</span></p>
+<p id=f9ef class="phone s02"><cite>Hadrien:</cite> To go back to Charles / Wendy - default behavior is fit width and continuous scrolling<br>
+<span id=283d>… usually one long image and break it down with some rules.  Not talking about paginated media</span><br>
+<span id=932d>… we should still be able to give users options - for example keyboard nav - spacebar can move one full screen at a time (accessibility support for example)</span><br>
+<span id=8e54>… very important to make content understandable</span><br>
+<span id=c2eb>… don't want to be confusing to users</span><br>
+<span id=6b44>… want to be able to move one screen at a time is the user desire</span><br>
+<span id=4189>… about affordances for progressing</span></p>
+<p id=f1fd class="phone s10"><cite>sdelackner:</cite> A while ago discussing about a negative that the spec allows authors to specify.  Fixed layout books in the wild that define no spine. Its not like we leave this up to the user, we preserve the spine.<br>
+<span id=60b0>… this seems analogous to webtoons.  author has decided that this is the goal - continuous flow thank you.</span><br>
+<span id=b2d8>… to Shinya - concern about new value can possibly force systems would need to assume that they might consider a fixed layout non-web-toon could find this and how to support</span><br>
+<span id=1097>… from a production pipeline, need to consider</span><br>
+<span id=7f49>… speaking to idea about adding a value possibly adding, systems might say... yeah we don't do that...</span></p>
+<p id=9252 class="phone s07"><cite>CharlesL:</cite> Agree with the idea that some RS guidelines are necessary - can scroll by one 'screen' using keyboard is good.  Get point that author may not have the idea of page - could be in the middle of some text.<br>
+<span id=8c1b>… wouldn't want content split if paginated.</span><br>
+<span id=53bf>… we don't want just images in the spine as there is no AX support</span><br>
+<span id=7dea>… for Kindle and others - it's going to be an issue for RS side..</span><br>
+<span id=2415>… If you have to start swiping and see broken content, this is gong to be an issue.</span><br>
+<span id=7de5>… will be disruptive.  we have to set expectations that there will be RS work.</span><br>
+<span id=dd8a>… having Fixed-Width and Continuous scroll is what this means.</span></p>
+<p id=87ae class="phone s02"><cite>Hadrien:</cite> Don't think this is about the moral / author intent.  if RS respected flow you could have some that are chapters that are paginated and some that are scrolling - creates a funky UX experience for the user.<br>
+<span id=4f9f>… this ability should be depreciated.</span></p>
+<p id=ee87 class="phone s04"><cite>duga:</cite> RE Seth.  True that this is a property... in practice two kind of books.  flowing text and fixed layout<br>
+<span id=6a09>… new property really introduces a new kind of book for publishers.</span><br>
+<span id=1251>… more than just a property - it really is a new kind of book, even though it's kinda already there in the book.</span><br>
+<span id=750a>… question is around if this what we want to tackle.</span></p>
+<p id=c9c4 class=irc><cite>&lt;sdelackner&gt;</cite> My mind is not giving me the name, but there's properties today that really only make sense per-book but are indeed yes per-document</p>
+<p id=7871 class="phone s05"><cite>LaurentLM:</cite> Currently JPN implementation.  has been implemented by some publishers, RS amazon, apple support.<br>
+<span id=e2d9>… is the intent to get this adopted by RS?</span></p>
+<p id=b2c2 class="phone s01"><cite>shiestyle:</cite> all of JPN support - apple, amazon, webtoon RS</p>
+<p id=a9d2 class="phone s05"><cite>LaurentLM:</cite> Good to get a list and see the impact</p>
+<p id=9f7a class="phone s01"><cite>shiestyle:</cite> Amazon, Apple, maybe Google, JPN webtoons supported.  Maybe not so few in JPN.<br>
+<span id=1bdd>… will discuss about F2f next month.</span><br>
+<span id=c4eb>… two slots for each day. One for WT, one for Comics Spec.</span><br>
+<span id=2167>… Want 2 or more meetings before F2f</span></p>
+</section>
+
+<section>
+<h3 id=4b77>Agenda for F2F kick off meeting in April 2025</h3>
+<p id=0c5a class="phone s01"><cite>shiestyle:</cite> Continue to discuss, want a vote at the F2F if possible.</p>
+<p id=65a9 class="phone s01"><cite>shiestyle:</cite> Close meeting for today.  See you at next WG call!</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+
+</body>
+</html>

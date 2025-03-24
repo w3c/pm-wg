@@ -1,4 +1,5 @@
 import { MiniDOM } from './minidom.ts';
+import { filenameToTitle } from "./params.ts";
 import * as fs     from 'node:fs/promises';
 
 type FileName = string;
@@ -9,6 +10,8 @@ interface DisplayedData {
     fname: FileName;
     /** Date of the minutes */
     date: Date;
+    /** Title of the meeting */
+    title: string
     /** Array of TOC entries (can be HTML) */
     toc: string[];
     /** Array of Resolution entries entries (can be HTML) */
@@ -18,7 +21,7 @@ interface DisplayedData {
 /** The data regrouped per years */
 export type GroupedData = Map<number, DisplayedData[]>;
 
-/** Files names that must be ignored in the directory of minutes, if there */
+/** Files names that must be ignored in the directory of minutes, if there are present */
 const ignoredFiles: string[] = ["index.html", "resolutions.html"];
 
 /**
@@ -35,6 +38,26 @@ async function getMinutes(directory: string): Promise<FileName[]> {
         .map(file => `${directory}/${file}`);
 }
 
+/**
+ * Get the title of the meeting from the file name.
+ * 
+ * @param fname 
+ * @returns 
+ */
+function getMeetingTitle(fname: FileName): string {
+    // Get the html part off the file name
+    const baseName = fname.split(".html")[0];
+
+    // Get the last part of the file name which may be the meeting category
+    const parts: string[] = baseName.split("-");
+    const name: string = parts.pop() ?? "default";
+    if (name === undefined) {
+        // Although this may not happen, better keep the TS compiler happy
+        return filenameToTitle["default"];
+    } else {
+        return filenameToTitle[name] ?? filenameToTitle["default"];
+    }
+}
 
 /**
  * Get all TOCs and resolutions with the respective date; one block each that can 
@@ -84,6 +107,7 @@ async function getAllData(minutes: FileName[]): Promise<DisplayedData[]> {
         return {
             fname : fname,
             date  : date,
+            title : `${getMeetingTitle(fname)} Meeting`,
             toc   : extractListEntries(fname, content, "#toc ol li"),  
             res   : extractListEntries(fname, content, "#ResolutionSummary ol li"), 
         };

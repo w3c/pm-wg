@@ -1,12 +1,10 @@
 import { getGroupedData, GroupedData } from "./lib/data.ts";
 import { MiniDOM }                     from './lib/minidom.ts';
+import { directory }                   from "./lib/params.ts";
 import pretty                          from "npm:pretty";
 // Using the node:fs/promises module instead of Deno's built in i/o functions
 // if someone wants to run this script in a Node.js environment
 import * as fs                         from 'node:fs/promises';
-
-// Adapt it to your needs: the relative file name for the directory of the working group's minutes
-const directory = "../minutes";
 
 /**
  * Generate the TOC HTML content.
@@ -32,7 +30,7 @@ function tocHTML(document: MiniDOM, parent: Element, data: GroupedData): void {
 
         for (const entry of datum) {
             const li_meeting = document.addChild(ul_meetings, 'li');
-            document.addChild(li_meeting, 'h3', `<a target="_blank" href="${entry.fname}">${entry.date.toDateString()}</a>`);
+            document.addChild(li_meeting, 'h3', `<a target="_blank" href="${entry.fname}">${entry.date.toDateString()} — ${entry.title}</a>`);
             const details_meeting = document.addChild(li_meeting, 'details');
             document.addChild(details_meeting, 'summary', 'Agenda');
             const ul_toc = document.addChild(details_meeting, 'ul');
@@ -111,9 +109,9 @@ async function generateContent(
 /**
  * Main entry point to generate the HTML files.
  */
-async function main() {
+async function main(dir: string = directory) {
     // Get hold of the data to work on
-    const data: GroupedData = await getGroupedData(directory);
+    const data: GroupedData = await getGroupedData(dir);
 
     // Get the data into the HTML templates and write the files
     // The functions are async, so we need to wait for all of them to finish
