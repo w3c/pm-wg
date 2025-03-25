@@ -1,10 +1,10 @@
-import { getGroupedData, GroupedData } from "./lib/data.ts";
-import { MiniDOM }                     from './lib/minidom.ts';
-import { directory }                   from "./lib/params.ts";
-import pretty                          from "npm:pretty";
+import { GroupedData, getTFGroupedData, GroupedTFData } from "./lib/data.ts";
+import { MiniDOM }                                      from './lib/minidom.ts';
+import { directory, taskForces }                        from "./lib/params.ts";
+import pretty                                           from "npm:pretty";
 // Using the node:fs/promises module instead of Deno's built in i/o functions
-// if someone wants to run this script in a Node.js environment
-import * as fs                         from 'node:fs/promises';
+// It makes it easier if someone wants to convert and this script in Node.js
+import * as fs                                          from 'node:fs/promises';
 
 /**
  * Generate the TOC HTML content.
@@ -13,12 +13,17 @@ import * as fs                         from 'node:fs/promises';
  * @param parent 
  * @param data 
  */
-function tocHTML(document: MiniDOM, parent: Element, data: GroupedData): void {
-    const ul = document.addChild(parent, 'ul');
-    let open_details = true
+function tocHTML(document: MiniDOM, parent: Element, data: GroupedData, tf: string): void {
+    const section = document.addChild(parent, 'section');
+    section.setAttribute('id', tf);
+    const tfName = taskForces[tf] ?? `Unknown taskforce ${tf}`;
+    const sectionTitle = `${tfName} meetings`;
+    document.addChild(section, 'h2', sectionTitle);
+    const ul = document.addChild(section, 'ul');
+    let open_details = true;
     for (const [year, datum] of data) {
         const li_year = document.addChild(ul, 'li');
-        document.addChild(li_year, 'h2', `Minutes in ${year}`);
+        document.addChild(li_year, 'h3', `Minutes in ${year}`);
         const details_year = document.addChild(li_year, 'details');
         if (open_details) {
             // This trick makes the minutes of the current year initially visible, the rest hidden
@@ -30,7 +35,7 @@ function tocHTML(document: MiniDOM, parent: Element, data: GroupedData): void {
 
         for (const entry of datum) {
             const li_meeting = document.addChild(ul_meetings, 'li');
-            document.addChild(li_meeting, 'h3', `<a target="_blank" href="${entry.fname}">${entry.date.toDateString()} — ${entry.title}</a>`);
+            document.addChild(li_meeting, 'h4', `<a target="_blank" href="${entry.location}">${entry.date.toDateString()}</a>`);
             const details_meeting = document.addChild(li_meeting, 'details');
             document.addChild(details_meeting, 'summary', 'Agenda');
             const ul_toc = document.addChild(details_meeting, 'ul');
@@ -38,6 +43,12 @@ function tocHTML(document: MiniDOM, parent: Element, data: GroupedData): void {
                 document.addChild(ul_toc, 'li', em)
             }
         }
+    }
+
+    // Add a TOC element to the section
+    const slot = document.getElementById('toc');
+    if (slot) {
+        document.addChild(slot, 'li', `<a href="#${tf}">${sectionTitle}</a>`);
     }
 }
 
@@ -48,18 +59,28 @@ function tocHTML(document: MiniDOM, parent: Element, data: GroupedData): void {
  * @param parent 
  * @param data 
  */
-function resolutionHTML(document: MiniDOM, parent: Element, data: GroupedData): void {
-    const ul = document.addChild(parent, 'ul');
+function resolutionHTML(document: MiniDOM, parent: Element, data: GroupedData, tf: string): void {
+    const section = document.addChild(parent, 'section');
+    section.setAttribute('id', tf);
+    const sectionTitle = taskForces[tf] ?? `Unknown taskforce ${tf}`;
+    document.addChild(section, 'h2', `${sectionTitle} resolutions`);
+    const ul = document.addChild(section, 'ul');
+    let noResolutions = true;
     for (const [year, datum] of data) {
         const li_year = document.addChild(ul, 'li');
-        document.addChild(li_year, 'h2', `Resolutions in ${year}`);
+        document.addChild(li_year, 'h3', `Resolutions in ${year}`);
         const ul_resolutions = document.addChild(li_year, 'ul');
         for (const entry of datum) {
             const date = entry.date.toDateString();
             for (const res of entry.res) {
                 document.addChild(ul_resolutions, 'li',  `${res} (${date})`);
+                noResolutions = false
             }
         }
+    }
+    if (noResolutions) {
+        // It was all for nothing... Oh well
+        section.parentElement?.removeChild(section);
     }
 }
 
@@ -73,11 +94,11 @@ function resolutionHTML(document: MiniDOM, parent: Element, data: GroupedData): 
  * @param generationFunction - The content generation function
  */
 async function generateContent(
-        data: GroupedData, 
+        data: GroupedTFData, 
         template_file: string, 
         id: string, 
         output_file: string, 
-        generationFunction: (document: MiniDOM, parent: Element, data: GroupedData) => void): Promise<void> {
+        generationFunction: (document: MiniDOM, parent: Element, data: GroupedData, tf: string) => void): Promise<void> {
     // get hold of the template file as a JSDOM
     const template = await fs.readFile(template_file, 'utf-8');
 
@@ -90,9 +111,15 @@ async function generateContent(
         throw new Error(`Could not find the right slot ${id} in the template`);
     }
 
-    generationFunction(document, slot, data);
+    const tfList = Object.keys(taskForces).filter(tf => tf !== "default" && tf !== "f2f").sort();
+    for (const tf of ["default", "f2f", ...tfList]) {
+        const tfData = data.get(tf);
+        if (tfData !== undefined) {
+            generationFunction(document, slot, tfData, tf);
+        }
+    }
 
-    // Additional, minor thing: set the copyright statement to the right year
+    // Additional minor thing: set the copyright statement to the correct year
     const cc = document.getElementById('year');
     if (cc) {
         cc.innerHTML = (new Date()).toISOString().split('-')[0];
@@ -111,7 +138,7 @@ async function generateContent(
  */
 async function main(dir: string = directory) {
     // Get hold of the data to work on
-    const data: GroupedData = await getGroupedData(dir);
+    const tfData: GroupedTFData = await getTFGroupedData(dir);
 
     // Get the data into the HTML templates and write the files
     // The functions are async, so we need to wait for all of them to finish
@@ -130,7 +157,7 @@ async function main(dir: string = directory) {
                 output             : "resolutions.html", 
                 generationFunction : resolutionHTML,
             },
-        ].map((entry) => generateContent(data, entry.template, entry.id, entry.output, entry.generationFunction));
+        ].map((entry) => generateContent(tfData, entry.template, entry.id, entry.output, entry.generationFunction));
     await Promise.allSettled(promises);
 }
 
