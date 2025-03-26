@@ -6,8 +6,38 @@ The meeting will be held at the [Centre Inria d'Université Côte d'Azur](https:
 
 ## Meeting information
 
-- **Agenda and participants' list**: [Available on Google Doc](https://docs.google.com/document/d/1SePiVZDlyWNg5nhqBffCXSh7_EGC5IXPz9nTd8i1sdw/edit?tab=t.dbiebco88mfi).
+- **Participants' list**: [Available on Google Doc](https://docs.google.com/document/d/1SePiVZDlyWNg5nhqBffCXSh7_EGC5IXPz9nTd8i1sdw/edit?tab=t.dbiebco88mfi).
 - **Dial-in information**: T.B.D.
+
+## Agenda
+
+All times are in CEST (UTC+1). 
+
+### April 3, 2025 (Day 1)
+
+- 10:00-10:15 - Agenda overview
+- 10:15-11:00 - Digital Comics (Scrolled)
+- 11:00-11:30 - Break
+- 11:30-12:30 - Accessibility TF
+- 12:30-13:00 - Annotations
+- 13:00-14:30 - Lunch
+- 14:30-15:30 - Annotations
+- 15:30-16:00 - Evolution of Media Overlays
+- 16:00-16:15 - Break
+- 16:15-17:00 - HTML Serialization
+
+### April 4, 2025 (Day 2)
+
+- 10:00-10:15 - Agenda overview
+- 10:15-11:00 - (Buffer time)
+- 11:00-11:30 - Break
+- 11:30-12:30 - Footnotes/Extended Descriptions
+- 12:30-13:00 - Dark mode
+- 13:00-14:30 - Lunch
+- 14:30-15:30 - Digital Comics (technical side)
+- 15:30-16:00 - FXL Accessibility
+- 16:00-16:15 - Break
+- 16:15-17:00 - AOB
   
 ## Travel and other practicalities
 
