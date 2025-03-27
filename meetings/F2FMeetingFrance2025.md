@@ -2,7 +2,9 @@
 
 Note: the meeting is the week before the [W3C AC Meeting](https://www.w3.org/2025/04/AC/Overview.html). 
 
-The meeting will be held at the [Centre Inria d'Université Côte d'Azur](https://www.w3.org/2025/04/AC/venue.html#venue). The exact location of the meeting is Room Kahn 1, on the ground floor of the Kahn building.
+The meeting will be held at the [Centre Inria d'Université Côte d'Azur](https://www.w3.org/2025/04/AC/venue.html#venue). The exact location of the meeting is Room Kahn 1, on the ground floor of the Kahn building. (It is a separate building on the right from the INRIA main building.)
+
+You will need a badge to enter the campus, which will also be used to open the doors. Each participant, identified by name, will receive the badge at the reception.
 
 ## Meeting information
 
