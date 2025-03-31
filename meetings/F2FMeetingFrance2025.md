@@ -9,7 +9,7 @@ You will need a badge to enter the campus, which will also be used to open the d
 ## Meeting information
 
 - **Participants' list**: [Available on Google Doc](https://docs.google.com/document/d/1SePiVZDlyWNg5nhqBffCXSh7_EGC5IXPz9nTd8i1sdw/edit?tab=t.dbiebco88mfi).
-- **Dial-in information**: T.B.D.
+- **Dial-in information**: The same as for the regular calls.
 
 ## Agenda
 
