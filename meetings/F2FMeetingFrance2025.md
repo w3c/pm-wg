@@ -17,29 +17,26 @@ All times are in CEST (UTC+1).
 
 ### April 3, 2025 (Day 1)
 
-- 10:00-10:15 - Agenda overview
-- 10:15-11:00 - Digital Comics (Scrolled)
-- 11:00-11:30 - Break
-- 11:30-12:30 - Accessibility TF
-- 12:30-13:00 - Annotations
-- 13:00-14:30 - Lunch
-- 14:30-15:30 - Annotations
+- 11:00-11:05 - Agenda overview
+- 11:05-11:50 - Digital Comics
+- 11:50-12:30 - Accessibility TF
+- 12:30-14:00 - Lunch
+- 14:00-15:30 - Annotations 
 - 15:30-16:00 - Evolution of Media Overlays
 - 16:00-16:15 - Break
 - 16:15-17:00 - HTML Serialization
 
+
 ### April 4, 2025 (Day 2)
 
-- 10:00-10:15 - Agenda overview
-- 10:15-11:00 - (Buffer time)
-- 11:00-11:30 - Break
-- 11:30-12:30 - Footnotes/Extended Descriptions
-- 12:30-13:00 - Dark mode
-- 13:00-14:30 - Lunch
+- 11:00-12:00 - Footnotes/Extended Descriptions
+- 12:00-12:30 - Dark mode
+- 12:30-14:30 - Lunch
 - 14:30-15:30 - Digital Comics (technical side)
 - 15:30-16:00 - FXL Accessibility
 - 16:00-16:15 - Break
 - 16:15-17:00 - AOB
+
   
 ## Travel and other practicalities
 
