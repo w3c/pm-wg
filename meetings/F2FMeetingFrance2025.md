@@ -31,9 +31,9 @@ All times are in CEST (UTC+1).
 
 - 11:00-12:00 - Footnotes/Extended Descriptions
 - 12:00-12:30 - Dark mode
-- 12:30-14:30 - Lunch
-- 14:30-15:30 - Digital Comics (technical side)
-- 15:30-16:00 - FXL Accessibility
+- 12:30-14:00 - Lunch
+- 14:00-15:00 - Digital Comics (technical side)
+- 15:00-16:00 - FXL Accessibility
 - 16:00-16:15 - Break
 - 16:15-17:00 - AOB
 
