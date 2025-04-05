@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>PM Working Group F2F, Sophia Antipolis, 1st Day &ndash; 03 April 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+PM Working Group F2F, Sophia Antipolis, 1st Day</h1>
+<h2>03 April 2025</h2>
+
+<nav id=links>
+<a href="https://docs.google.com/document/d/1SePiVZDlyWNg5nhqBffCXSh7_EGC5IXPz9nTd8i1sdw/edit?tab=t.dbiebco88mfi#heading=h.gouartxyduig"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/04/03-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>CharlesL, delackner, dhall, gautier, gautierchomel, George, gpellegrino, Hadrien, ikkwong, ivan, LaurentLM, marisa, MasakazuKitahara, mgarrish, rdeltour, shiestyle, sue-neu, toshiakikoike, tzviya, wendyreid, makoto</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>shinya, wendy</dd>
+<dt>Scribe</dt><dd>duga, wendyreid, gpellegrino, gautierchomel, LaurentLM</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#ec62">Digital Comics</a></li>
+<li><a href="#4798">Accessibility TF</a></li>
+<li><a href="#b909">Annotations</a></li>
+<li><a href="#8f6e">Evolution of Media Overlays</a></li>
+<li><a href="#713f">HTML Serialization</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section>
+<p id=2fd9 class="phone s01"><cite>wendyreid:</cite> Welcome the first f2f of the NEW pmwg</p>
+<p id=c83e class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/pm-wg/blob/main/meetings/F2FMeetingFrance2025.md">https://<wbr>github.com/<wbr>w3c/<wbr>pm-wg/<wbr>blob/<wbr>main/<wbr>meetings/<wbr>F2FMeetingFrance2025.md</a></p>
+<p id=37aa class="phone s01"><cite>wendyreid:</cite> Quick agenda overview, no real change except the times<br>
+<span id=39cf>… start with comics, mostly focusing on the overall topic. Not really a tech conversion which will be tomorrow</span><br>
+<span id=c876>… (see agenda for details)</span><br>
+<span id=4355>… no buffer for today, so we may have carryover into tomorrow</span><br>
+<span id=184a>… Questions?</span></p>
+<p id=7e79 class="phone s02"><cite>Makoto:</cite> When will we discuss ISO?</p>
+<p id=c4bc class="phone s01"><cite>wendyreid:</cite> I don't think we will discuss, we are waiting for feedback and reaching out to some folks</p>
+</section>
+
+<section>
+<h3 id=ec62>Digital Comics</h3>
+<p id=8353 class="phone s03"><cite>shiestyle:</cite> I have a presentation for this. We have already had our first TF meeting last month</p>
+<p id=8814 class="phone s04"><cite>Hadrien:</cite> Just to clarify, we shouldn't be touching on tech stuff?</p>
+<p id=8ad6 class="phone s01"><cite>wendyreid:</cite> Yes, tech is fine but we should be more on the general side, tomorrow will be better for tech (more participants)</p>
+<p id=a362 class="phone s03"><cite>shiestyle:</cite> In Japan we already use epub for scrolled comics<br>
+<span id=9c8f>… We have two approaches both are being used</span><br>
+<span id=4cbf>… There is also a new proposal from Hadrien</span></p>
+<p id=c31f class="phone s04"><cite>Hadrien:</cite> just to clarify, I am just proposing 'scrolled' to replace the existing methods</p>
+<p id=94a9 class="phone s03"><cite>shiestyle:</cite> We agreed that this is a new feature<br>
+<span id=496d>… so the charter is updated for new features</span><br>
+<span id=a93a>… We still have no conclusion to the method</span><br>
+<span id=7346>… Some proposals, first Hadrien's proposal</span><br>
+<span id=df7c>… second proposal is a new proposal that keeps pre-paginated but adds new metadata</span></p>
+<p id=3ba8 class="phone s04"><cite>Hadrien:</cite> What are we trying to achieve?<br>
+<span id=3c98>… 2 things - we are trying fit on width</span><br>
+<span id=0e1a>… and the other is continuous scrolling</span><br>
+<span id=30b9>… Scrolling exists, but it is really a hint so it is different than what we want</span><br>
+<span id=581c>… pre-paginated doesn't do what we want, flow doesn't fit</span><br>
+<span id=9342>… This is a new type of publication</span><br>
+<span id=4cad>… for instance it doesn't even have pages to pre-paginated is weird</span><br>
+<span id=c03f>… Since it is a new type, layout makes sense</span><br>
+<span id=46bc>… We could alias pre-paginated and scrolled to mean webtoons</span><br>
+<span id=0c83>… I think a new type makes sense</span></p>
+<p id=ce70 class="phone s05"><cite>ivan:</cite> I do not disagree<br>
+<span id=ec25>… my question is actual practice</span><br>
+<span id=307f>… do we have feedback from Amazon and Apple</span><br>
+<span id=2519>… will they adopt the new ?</span><br>
+<span id=4341>… Are they flexible enough to switch?</span></p>
+<p id=c916 class="phone s04"><cite>Hadrien:</cite> This happened with fixed layout</p>
+<p id=2c64 class="phone s01"><cite>wendyreid:</cite> I agree, but I also wonder to take a step back we have an underlying problem in fixed layout<br>
+<span id=5270>… Since webtoons is chapter based, this exposes a problem. This content is very chapter based</span><br>
+<span id=e74e>… for instance, rendition flow breaks because we don't really have chapters in pre-paginated</span><br>
+<span id=27c0>… What if we keep things as they are currently implemented and add better chapter breaks</span><br>
+<span id=d830>… How are these actually created? One file er chapter? or per image?</span></p>
+<p id=ffff class="phone s04"><cite>Hadrien:</cite> One file per chapter<br>
+<span id=46e7>… It could be used for selling full seasons</span></p>
+<p id=898c class="phone s03"><cite>shiestyle:</cite> Regarding epub structure, webtoons and manga are all the same structure except the metadata</p>
+<p id=65bc class="phone s03"><cite>shiestyle:</cite> we don't use very long images, so as a result the structure is the same</p>
+<p id=13ea class="phone s06"><cite>duga:</cite> I was hoping we'd learn more about what is actually being sold on the various platforms. It's hard to think of a technical solution without knowing the business specifics<br>
+<span id=7a36>… it is a single book, are there collections, will there be collections?</span><br>
+<span id=1af2>… what is the problem we're solving, what are people selling, what do people want to sell?</span><br>
+<span id=ad97>… it would help to have real cases or an actual webtoon file</span><br>
+<span id=d971>… do we have examples?</span><br>
+<span id=4537>… where is the industry right now?</span></p>
+<p id=9cbb class="phone s04"><cite>Hadrien:</cite> It's a complex question, complex market</p>
+<p id=f24d class="phone s07"><cite>seth:</cite> Is each episode just one image? Are the images huge?</p>
+<p id=5322 class="phone s08"><cite>LaurentLM:</cite> The people around the table have the freedom to change<br>
+<span id=6feb>… Can we take a new value? Yes, we can add a note and explain that there are other implementations that should be considered aliases?</span></p>
+<p id=81bf class="phone s05"><cite>ivan:</cite> So do we have any chance to pass the CR criteria?</p>
+<p id=b4da class="phone s04"><cite>Hadrien:</cite> Yes, no problem, I am aware of multiple presentations</p>
+<p id=2c9c class="phone s09"><cite>dhall:</cite> We would continue to support for now, can't discuss future<br>
+<span id=ec98>… And agree that fit width is important and we need to be able to specify it</span></p>
+<p id=c786 class="phone s04"><cite>Hadrien:</cite> No one today produces episodes as a single image, largely for performance<br>
+<span id=35bc>… no one really divides things on semantic boundaries, they are arbitrarily split</span><br>
+<span id=3db4>… it is meant to be displayed as a single image, so these are really just tiles</span><br>
+<span id=1e8b>… Also want to point out that html is not really used to display this</span><br>
+<span id=b1fe>… Everyone uses images outside of Apple (not sure about Amazon)</span><br>
+<span id=c6df>… Back to market question, mostly done in specialized readers</span><br>
+<span id=9432>… Mostly this is done by free with ads, or perhaps subscriptions, sometimes there is microtransactions</span><br>
+<span id=5d0e>… much more like games</span><br>
+<span id=6dc9>… Mostly this is done in those apps, not epub readers</span><br>
+<span id=da96>… These apps are designed around the model (calendars for upcoming, package purchases, etc)</span><br>
+<span id=61f6>… almost all done as individual episodes</span></p>
+<p id=8d13 class="phone s04"><cite>Hadrien:</cite> usually is a giant file or zips of images<br>
+<span id=71e0>… Most places use psd or zip, not epub</span><br>
+<span id=99e3>… Korea is interesting as they are pushing to a national standard</span><br>
+<span id=7dc2>… they are adopting a Readium approach</span><br>
+<span id=bf8f>… they looked at epub, and thought it was too complex and had too many problems</span><br>
+<span id=8650>… so for their archiving work they are using zips</span></p>
+<p id=3cf2 class="phone s03"><cite>shiestyle:</cite> Regarding long images<br>
+<span id=a2e2>… some services accept long images, but these are not in epub</span><br>
+<span id=92c9>… I strongly propose to not add a new value for rendition layout</span><br>
+<span id=bd2e>… we cannot move to the new system until everyone adopts the new values</span><br>
+<span id=a6af>… In Japan we have a big market, but we cannot shift to the new standard due to compat issue</span></p>
+<p id=e0f4 class="phone s10"><cite>sue-neu:</cite> Does anyone know about the copyright?</p>
+<p id=7031 class="phone s01"><cite>wendyreid:</cite> Webtoons is ok, webtoon is not</p>
+<p id=a835 class=irc><cite>&lt;delackner&gt;</cite> You can say kleenexes but not kleenex?</p>
+<p id=92d7 class="phone s05"><cite>ivan:</cite> Why are we doing this? Why not just leave the specialized apps to do it?<br>
+<span id=6d62>… we seem to be pushing ourselves on people that don't want it</span></p>
+<p id=aa2a class="phone s07"><cite>seth:</cite> I wanted to ask about the Korean model<br>
+<span id=2a05>… We have html for a11y, voiceover, etc</span><br>
+<span id=2362>… that is the push to have epub wrap this</span><br>
+<span id=7100>… does the Korean format have an a11y answer?</span></p>
+<p id=993e class="phone s04"><cite>Hadrien:</cite> We are looking at it, it has more of a media overlay flavor<br>
+<span id=7bc6>… We really want to have the text become accessible</span></p>
+<p id=bba7 class="phone s06"><cite>duga:</cite> I've had Ivan's question too<br>
+<span id=2daa>… we're doing it because people have asked us to</span><br>
+<span id=d4b3>… EPUB may not be the right format, but some people want to do it that way anyway</span><br>
+<span id=a873>… and we can let them, we can make it work</span><br>
+<span id=daab>… if I were to start a company doing webtoons today, I wouldn't use EPUB, but if they wanted to, I could make it work</span><br>
+<span id=617d>… even manga was a zip archive of images, there was a push to using EPUB, we ended up supporting it because its nice to have metadata</span><br>
+<span id=e744>… issues with pages being wrong order, EPUB fixes that with metadata, it is nice, there are uses</span></p>
+<p id=2211 class="phone s01"><cite>wendyreid:</cite> The feedback we have gotten is some publishers might want to sell big collections<br>
+<span id=40dc>… I agree that if people want it let's help them</span><br>
+<span id=ad3b>… this group also supports other formats like publication manifest, which might be a more flexible format</span><br>
+<span id=ac1e>… we need to be responsive to industry need, and we don't need to be stuck in just epub</span><br>
+<span id=b428>… for instance webtoons have terrible a11y, and it would be great to make this better</span></p>
+<p id=09c9 class="phone s05"><cite>ivan:</cite> I checked the charter, we can update the publication manifest</p>
+<p id=25f6 class="phone s04"><cite>Hadrien:</cite> This is broader and goes into digital comics entirely<br>
+<span id=eb27>… We should keep in mind, this one distribution channel is not the only one we should consider</span><br>
+<span id=a6b0>… e.g. libraries making collections</span><br>
+<span id=0753>… And there is also the case of storefronts that might want to sell them</span><br>
+<span id=f517>… You can't really separate the business models from the technical</span><br>
+<span id=7df5>… back to zip vs epub</span><br>
+<span id=ee91>… what Korea said was metadata was bad for archival in epub</span><br>
+<span id=f989>… for instance, spread placement isn't a big issue for webtoons</span><br>
+<span id=0892>… we need to look at what works and what doesn't</span><br>
+<span id=3ffb>… and I think the most problematic is forcing images into an html wrapper</span><br>
+<span id=2307>… I don't think this just solves the a11y problem. We have a lot of inaccessible xhtml content out there today</span><br>
+<span id=85e4>… we really need to focus on what does and does not work</span><br>
+<span id=3332>… for a11y we need to focus on specific use cases</span></p>
+<p id=03bf class="phone s11"><cite>Avneesh:</cite> I am a little alarmed about Korea taking readium manifest, I am concerned about Korea going to ISO quickly<br>
+<span id=605d>… I think it is a problem if we are against the Korean national standard</span></p>
+<p id=383b class="phone s05"><cite>ivan:</cite> 2 things - first according to the Koreans epub MD is not good for archival<br>
+<span id=517f>… This is something we should address</span><br>
+<span id=7ac7>… the other is, what is wrong with saying we can put images in the spine with an xhtml fallback?</span><br>
+<span id=28d0>… but the xhtml fallback isn't the image it is just alt</span></p>
+<p id=03c8 class="phone s10"><cite>sue-neu:</cite> I have clients looking this as parts of courseware, say for a history book</p>
+<p id=6be1 class="phone s01"><cite>wendyreid:</cite> We will continue this tomorrow</p>
+</section>
+
+<section>
+<h3 id=4798>Accessibility TF</h3>
+<p id=0f4c class="phone s11"><cite>Avneesh:</cite> We didn't have time to plan for the a11y TF</p>
+<p id=4967 class=irc><cite>&lt;Avneesh&gt;</cite> <a href="https://github.com/w3c/publ-a11y/wiki/PMWG-Accessibility-TF-Topics">https://<wbr>github.com/<wbr>w3c/<wbr>publ-a11y/<wbr>wiki/<wbr>PMWG-Accessibility-TF-Topics</a></p>
+<p id=10000 class="phone s11"><cite>Avneesh:</cite> so we thought we could use this meeting for that<br>
+<span id=cdd9>… so we have a wiki with a list of topics</span><br>
+<span id=8cc8>… we have strong demand from APA for wcag version</span><br>
+<span id=5357>… then there are some issues from the cg</span><br>
+<span id=1d94>… for instance metadata to say text/audio mix</span><br>
+<span id=50c4>… then we have a11y md that is missing, for instance no publisher contact info</span><br>
+<span id=047b>… Then with AI we have to know if TTS is AI or human based</span><br>
+<span id=ef7b>… Then we have to define skippability and escapability</span><br>
+<span id=e53e>… Some liason work</span><br>
+<span id=fae5>… any comments?</span></p>
+<p id=2cc1 class=irc><cite>&lt;Makoto&gt;</cite> I had a teleconference with AGWG people including people from the team about the lack of support of non-western languages in WCAG 2.2.  People are inclined to create WCAG 2.3 as a solution but I am not sure if AGWG reaches cosensus.</p>
+<p id=e738 class="phone s05"><cite>ivan:</cite> We should not forget to officially issue a new a11y guidelines with the proper version. We need wg consensus</p>
+<p id=1215 class="phone s11"><cite>Avneesh:</cite> Yes, let's do that tomorrow<br>
+<span id=680e>… now harder topics</span><br>
+<span id=8444>… we maintain a mapping to EAA</span></p>
+<p id=65ca class=summary>wendyreid</p>
+<p id=bfbb class="phone s11"><cite>Avneesh:</cite> do we need to add anything to that?</p>
+<p id=359c class="phone s01"><cite>wendyreid:</cite> One thing I hear a lot is parts of wcag like image desc where publishers have trouble doing it in the context of books<br>
+<span id=b666>… Wcag doesn't seem to make sense to them, that is mapping web/app descriptions to book descriptions (what to say, how to integrate, etc)</span><br>
+<span id=b136>… may be related to footnote work</span><br>
+<span id=a89a>… maybe we need some guidelines</span></p>
+<p id=10001 class="phone s11"><cite>Avneesh:</cite> Yes we should discuss, and yes footnotes is similar</p>
+<p id=e877 class="phone s12"><cite>gpellegrino:</cite> Mybe we need something like an index page to link to everything we provide<br>
+<span id=2f9e>… it is hard to find all the documents we have</span></p>
+<p id=29d4 class=irc><cite>&lt;sue-neu&gt;</cite> +1</p>
+<p id=3775 class="phone s13"><cite>George:</cite> I agree there is a lot going on in different places, and I am often confused about where the right place to take issues is<br>
+<span id=11cc>… For instance back links to a footnote, but if the reading system had go back it wouldn't be needed</span><br>
+<span id=c498>… it is determines how things might be referenced</span><br>
+<span id=1265>… for instance a glossary term that is pointed at 3 times, a back link doesn't work</span><br>
+<span id=d42e>… so who addresses these? Us? CG? somewhere else?</span></p>
+<p id=41cb class="phone s01"><cite>wendyreid:</cite> I think the CG is usually right, but sometimes it is us</p>
+<p id=d8c1 class="phone s11"><cite>Avneesh:</cite> EAA and title 2 - anything else we need to do to support this?<br>
+<span id=e998>… and then there is dpub aria</span><br>
+<span id=1c89>… Matt is the liason</span><br>
+<span id=58c0>… It has strong use cases and long consistent systems for implementing</span><br>
+<span id=a816>… if we want some new roles we have to do it now</span></p>
+<p id=10ca class="phone s04"><cite>Hadrien:</cite> On Readium we plan to improve read aloud, the other readability<br>
+<span id=b17a>… we will have a lower level building block that supports dpub and dpub aria</span><br>
+<span id=337d>… This will help identify a11y behaviors</span><br>
+<span id=478a>… eg move where footnotes are read</span><br>
+<span id=7380>… We will use the dpub aria for read aloud, which hasn't been used yet. This will be a pretty open implementation</span><br>
+<span id=03ee>… We will have multiple implementations, not sure if that counts as 2+</span><br>
+<span id=22c6>… this will be coming this summer</span></p>
+<p id=186d class="phone s11"><cite>Avneesh:</cite> Jaws is supporting 50% of dpub aria coming up<br>
+<span id=b9d8>… so screen reader are starting to support it</span></p>
+<p id=9022 class="phone s12"><cite>gpellegrino:</cite> we found out a while back that talkback on chrome supported all dpub aria roles.<br>
+<span id=d7ae>… the browsers are there, there is still some discussion with Apple</span><br>
+<span id=d375>… I think the dpub aria roles are deeper than epub ones</span><br>
+<span id=09a8>… We used to have epub types, then we had aria which lost some things</span><br>
+<span id=11ad>… In many cases these roles are important for the production workflows not just end user</span><br>
+<span id=1bed>… There is a request to add common ways to identify certain items in there books</span></p>
+<p id=fd3b class="phone s14"><cite>CharlesL:</cite> couple things, on title 2 we have heard that the dept of special ed still exists<br>
+<span id=41d8>… but there has been a de-emphasis on title 2, unlikely for justice dept to start filling lawsuits on day 1</span><br>
+<span id=6df4>… but individuals still can</span><br>
+<span id=7ba5>… on dpub aria, one thing we may want to require is digital only publications for page breaks (some publishers having issues with that)</span><br>
+<span id=57f2>… there is a dpub aria role for it, in our tests everyone handles it differently</span><br>
+<span id=c34b>… Then there is the question if it is in code only but doesn't appear</span><br>
+<span id=e79c>… or it appears and has more words, etc</span><br>
+<span id=794f>… that can be problematic for AT</span></p>
+<p id=d2dd class="phone s01"><cite>wendyreid:</cite> dpub aria is similar to footnotes, needs best practices<br>
+<span id=45d2>… so we need expected behavior when we see it</span><br>
+<span id=caae>… page breaks is similar to footnotes on when and how to read</span><br>
+<span id=a673>… Then there is FL with dpub aria</span><br>
+<span id=bd5b>… Not every page is a chapter so you can't add it to every files</span><br>
+<span id=d598>… Need to see where the gaps are</span></p>
+<p id=9af0 class="phone s13"><cite>George:</cite> Excercises are important, it would be good to address the issues of how to do exercises and workbooks<br>
+<span id=9cd1>… Publishers will move the epub into an LMS</span><br>
+<span id=16e8>… so it would be great to address exercises and workbook completions in an epub</span></p>
+<p id=091b class="phone s15"><cite>mgarrish:</cite> We have had problems with roles, and too much verbosity<br>
+<span id=6825>… so we can't just keep throwing in new roles</span><br>
+<span id=ed0f>… For work on 1.2 Tviya works with me, but we will need a new person to help with editing that spec</span><br>
+<span id=c808>… because we can't have just one</span></p>
+<p id=4d94 class="phone s04"><cite>Hadrien:</cite> There was also the structural semantic vocab<br>
+<span id=a273>… in readium we primarily target dpub aria, but we have other properties we are pulling in</span><br>
+<span id=e061>… Also aria, which isn't used much in epub</span><br>
+<span id=7262>… So we are agnostic and pull in all 3</span><br>
+<span id=c355>… we have to take into account everything</span></p>
+<p id=ea7f class="phone s11"><cite>Avneesh:</cite> There are some things we will bring to the TF, not sure if the topic George raised can really be handled there<br>
+<span id=7c97>… We already keep a list of actionable aria roles</span><br>
+<span id=1a71>… It is missing some details (e.g. footnotes go back), but the high level is there</span></p>
+<p id=8913 class="phone s12"><cite>gpellegrino:</cite> And we have a test book that has every role</p>
+<p id=8e40 class="phone s13"><cite>George:</cite> And we have a published book with all the dpub aria roles we can support</p>
+<p id=80de class="phone s01"><cite>wendyreid:</cite> we're now speaking about annotations</p>
+<p id=f674 class="phone s16"><cite>laurent:</cite> I'm going to share some slides<br>
+<span id=3b1a>… today I would like to discuss an agenda of work, not to discuss the single items</span><br>
+<span id=7878>… we would like to start about discussing the incentives for TF participants</span><br>
+<span id=a405>… use cases, business cases, etc.</span><br>
+<span id=da12>… then discuss for annotations, bookmarks, annotations</span><br>
+<span id=07da>… then discuss the scope of the project (embedding, rest protocol, etc.)</span><br>
+<span id=5254>… find existing apps that are already exporting annotations</span><br>
+<span id=566f>… check to look at the data model available: W3C Annotation Model, Readium Annotation Model</span><br>
+<span id=fba3>… to find differences, and common elements</span></p>
+<p id=5c69 class="phone s16"><cite>laurent:</cite> so we'll start with the incentives for the participants, what are the market requests</p>
+<p id=d36f class="phone s16">… is there anyone that wants to propose incentives?</p>
+</section>
+
+<section>
+<h3 id=b909>Annotations</h3>
+<p id=7882 class="phone s15"><cite>mgarrish:</cite> we worked on open annotations years ago with edupub<br>
+<span id=99ec>… it didn't work</span><br>
+<span id=5745>… I think you should clarify if it's for publishers to distribute them, or for users to share them across reading systems</span></p>
+<p id=691c class="phone s05"><cite>ivan:</cite> I have here the list of people that wants to partecipate to the TF</p>
+<p id=3e1d class="phone s16"><cite>laurent:</cite> I asked to ReadWise (readwise.io), I may ask to hypothes.is<br>
+<span id=f6c7>… because I don't have contacts, and their solution is based on URLs</span></p>
+<p id=933e class="phone s05"><cite>ivan:</cite> I think also Matheus may want to partecipate</p>
+<p id=2456 class="phone s01"><cite>wendyreid:</cite> may you publish these slides?</p>
+<p id=c4b0 class="phone s16"><cite>laurent:</cite> sure</p>
+<p id=b89e class=irc><cite>&lt;ivan&gt;</cite> Participants as of now: Brady, Hadrien, Eloisa, Ivan, George, Laurent, Leonard, potentially Lars Wallin</p>
+<p id=3c48 class="phone s01"><cite>wendyreid:</cite> about incentives: I think the focus should be on the readers, to allow them to share annotations and move them around<br>
+<span id=5bb3>… a lot of platforms allow to export annotations</span><br>
+<span id=6ea0>… I think it's also important to have educational publishers on the table, because it's relevant for them</span></p>
+<p id=a207 class="phone s16"><cite>laurent:</cite> these two use cases are quite different</p>
+<p id=8547 class="phone s04"><cite>Hadrien:</cite> I think focusing on the user is right<br>
+<span id=8002>… I think we should keep attention on two things: one is DRMs, the other is the possibility of make it work outside EPUBs</span><br>
+<span id=aa50>… we should take one challenge at a time, focusing on endusers</span><br>
+<span id=19cb>… when thinking about annotations I would ask: what about bookmarks? what about highlights?</span></p>
+<p id=5352 class=irc><cite>&lt;tzviya&gt;</cite> very old list of use cases: <a href="https://www.w3.org/TR/dpub-annotation-uc/">https://<wbr>www.w3.org/<wbr>TR/<wbr>dpub-annotation-uc/</a></p>
+<p id=03ab class="phone s05"><cite>ivan:</cite> when I think to web annotation standard, I see it as an interchange format<br>
+<span id=5385>… meaning the standard doesn't say anything about UX of the enduser, it's all about sharing data</span><br>
+<span id=f4a9>… I think we should do the same here, not dictating what reading systems should do</span></p>
+<p id=10002 class="phone s13"><cite>George:</cite> I think we should start discussing the difference between annotations and footnotes<br>
+<span id=1937>… annotations (like the annotated Alice in wonderland) that are provided by the publisher</span><br>
+<span id=fa61>… while the ones made by users are totally different</span><br>
+<span id=6254>… there is also a use case for excersices in text books, the fill-in-the-blank is an annotation</span></p>
+<p id=863d class="phone s06"><cite>duga:</cite> I think that there is something we should carry on styling (like the color of the annotations)<br>
+<span id=c313>… about business cases: I think we may invent something really interesting, but we have to be sure that someone will implement it</span></p>
+<p id=66cc class="phone s16"><cite>laurent:</cite> we also have to find companies that may make money out of it<br>
+<span id=dffc>… Readwise may have benefits from a standard for managing annotations</span></p>
+<p id=fcef class="phone s01"><cite>wendyreid:</cite> sure, there are some companies that have direct interest, but we also have &quot;secondary market&quot;<br>
+<span id=8e0e>… were companies may be interested in offering the export/import of annotations as part of their service</span><br>
+<span id=2f35>… similarly this may help the switch from one ebook vendor to another (Kobo, Amazon, Apple, Google, etc.)</span></p>
+<p id=aa27 class="phone s04"><cite>Hadrien:</cite> in Readium we'll implement this spec in our toolkit for desktop, mobile and web (Readium)<br>
+<span id=b5e5>… this interoperability will help the interoperability inside Readium ecosystem as well</span><br>
+<span id=0493>… we also have some statistics from Readium users, so we have some idea on how users manage annotations, exports, etc.</span></p>
+<p id=7ae2 class="phone s13"><cite>George:</cite> I see the business case for selling annotations, for example for receipts books<br>
+<span id=4c8f>… I think people would like also to be sure to be able to maintain bookmarks in their life, from one vendor to another...</span></p>
+<p id=6e9e class="phone s05"><cite>ivan:</cite> do you have any relation with people working on legal replica?<br>
+<span id=f974>… in that business there is a lot of use of annotations</span><br>
+<span id=ca6f>… similarly if we look at specialized business, we may look at translations and multi-lingual content</span></p>
+<p id=40b2 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to say there are so many biz issues</p>
+<p id=d118 class="phone s17"><cite>tzviya:</cite> I'm not sure if translations is a use cases, on the legal side I think we should discuss with someone who has specific knowledge<br>
+<span id=aa4a>… in particular if we rely on the original content, so IP issues may raise</span></p>
+<p id=d138 class="phone s12"><cite>gpellegrino:</cite> I think there is a huge demand in the publishing industry<br>
+<span id=d591>… like working with vendors</span><br>
+<span id=87c2>… providing feedback is tricky, you can't reference exact locations</span></p>
+<p id=6e91 class=irc><cite>&lt;sue-neu&gt;</cite> +1</p>
+<p id=779a class="phone s12"><cite>gpellegrino:</cite> maybe vendors or conversion houses, may want to have part of this</p>
+<p id=9144 class="phone s06"><cite>duga:</cite> will we be able to move annotations from one edition of the book to another?</p>
+<p id=147c class="phone s16"><cite>laurent:</cite> it's part of the scope we have to discuss</p>
+<p id=01b3 class="phone s16"><cite>laurent:</cite> I think we should also discuss about annotations vs bookmarks vs citations</p>
+<p id=bc57 class=irc><cite>&lt;CharlesL&gt;</cite> Another use-case EPUB certification &amp; remediation annotate exactly where issues were found to give the feedback back to the publisher.</p>
+<p id=bb7f class="phone s16"><cite>laurent:</cite> for us, for annotations we need: publication metadata, the document, the text selection, the textual note<br>
+<span id=e10c>… for bookmarks: (similarly) publication metadata, the document, pointer (mark)</span><br>
+<span id=b806>… for people using assistive technologies is tricky to highlight text, so for them using bookmarks and adding notes to the bookmarks is simpler</span><br>
+<span id=baaf>… so bookmarks and annotations are similar</span><br>
+<span id=ba22>… for citations we need: publication metadata, page, text selection (quote) in a specific format</span><br>
+<span id=38c7>… for use citations are not part of the model, are more an export format for annotations</span></p>
+<p id=f87e class=summary>is there consensus on this?</p>
+<p id=bef0 class="phone s03"><cite>shiestyle:</cite> for use cases: how can it work for part of publications that are sold separately? (what is the relationship with the complete edition)?</p>
+<p id=e035 class="phone s04"><cite>Hadrien:</cite> for me the annotation is a text on top of a highlight, or on top of a bookmark<br>
+<span id=3f62>… if we take this approach, we can make it working on other types of publications, like audiobooks (you mark a timestamp and you add text)</span><br>
+<span id=9a6f>… the problem with highlight is that is very related to text, while we need something that may work with multimedia as well</span></p>
+<p id=1051 class="phone s01"><cite>wendyreid:</cite> abstracting it, the user is selecting a fragment, attached to the publication metadata, has some form of locator and has some content attached<br>
+<span id=991a>… I think we have to find a way to identify selected fragments</span><br>
+<span id=62dc>… on another side, more and more reading systems allow users to take hand written annotations</span><br>
+<span id=1533>… so the content attached may be images</span></p>
+<p id=9e6d class="phone s05"><cite>ivan:</cite> for me there is no difference between citations and annotations<br>
+<span id=fab0>… the real difference is on how much metadata we have, for providing a high quality citation</span><br>
+<span id=ae2a>… while on the color side of highlights I think we should work on a higher level</span><br>
+<span id=17cb>… not about colors, but based on categories, also for accessibility issues (e.g. color blind users)</span></p>
+<p id=9d2a class="phone s13"><cite>George:</cite> I agree, we should add semantics to the annotations, to categorize them</p>
+<p id=c800 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to talk about citation</p>
+<p id=9587 class="phone s13"><cite>George:</cite> I think that audio annotations are also a thing</p>
+<p id=eb29 class="phone s17"><cite>tzviya:</cite> I think we should allow the user to select if in copy-pasting content wants the citation references or not</p>
+<p id=66bc class="phone s04"><cite>Hadrien:</cite> I think we should be able to attach every type of multimedia to an annotation<br>
+<span id=e634>… about color related to annotations, I agree, at the same time I think that people are used to use different colors for different meanings</span><br>
+<span id=7778>… it's difficult to move end users from colors, to categories</span></p>
+<p id=3244 class="phone s05"><cite>ivan:</cite> about colors: my question is what do we want to specify at standard level, and what do we want to leave to implementers?</p>
+<p id=5c0a class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to color with meaning</p>
+<p id=d011 class="phone s05"><cite>ivan:</cite> I think we should split the information on how the information is displayed</p>
+<p id=f953 class="phone s17"><cite>tzviya:</cite> I think the GitHub approach is interesting: for labels we are colors + label (text)</p>
+<p id=651e class="phone s01"><cite>wendyreid:</cite> I think it's more important to mention in the annotation exports that there are different types of annotations (e.g. different colors), more then focusing on colors</p>
+<p id=c995 class="phone s04"><cite>Hadrien:</cite> for interoperability I think we should have a set of values<br>
+<span id=797c>… that the user agents can use for tagging annotations</span><br>
+<span id=2d3b>… I think we need a default way for managing the interoperability</span></p>
+<p id=7a70 class="phone s05"><cite>ivan:</cite> we can define types of annotations, but leaving that other applications can define other types<br>
+<span id=f4dd>… in web annotations we have a similar field</span></p>
+<p id=f174 class="phone s16"><cite>laurent:</cite> moving to next slide, we want to check what is already available as standards<br>
+<span id=5e84>… W3C annotation data model, is mainly for web, but can work in EPUB, using CFIs</span><br>
+<span id=1f01>… Hypothes.is has their &quot;standard&quot;</span><br>
+<span id=f5a5>… kindle, apple, google, kobo have their own system for exporting and syncing annotations</span></p>
+<p id=f433 class=irc><cite>&lt;tzviya&gt;</cite> zotero is important</p>
+<p id=043d class="phone s16"><cite>laurent:</cite> readwise.io has CSV/markdown, can import and export to/from many apps<br>
+<span id=096e>… Zotero supports EPUBs and export annotations</span><br>
+<span id=29d3>… Readium has an profile of W3C annotations</span></p>
+<p id=6c26 class="phone s05"><cite>ivan:</cite> W3C annotations is actually 3 specs<br>
+<span id=c1c7>… the data model, the vocabulary, the protocol (for data platforms)</span><br>
+<span id=b678>… in the WPUB annotation group note we've worked on annotations that may go across different documents in the spine</span></p>
+<p id=2aa9 class="phone s04"><cite>Hadrien:</cite> there are a number of things that are referenced from that specs, one is the text fragment</p>
+<p id=28af class=summary><a href="https://wicg.github.io/scroll-to-text-fragment/">https://<wbr>wicg.github.io/<wbr>scroll-to-text-fragment/</a></p>
+<p id=c361 class="phone s04"><cite>Hadrien:</cite> my proposal is that what we decide to choose and selector, we should find something that works on web as well</p>
+<p id=4026 class=irc><cite>&lt;George&gt;</cite> +1 to work on the web.</p>
+<p id=0ffa class="phone s05"><cite>ivan:</cite> I think we have to decision on the life of the CFI<br>
+<span id=1f98>… do we want keep it alive, or to kill it?</span></p>
+<p id=10003 class=summary><a href="https://docs.google.com/document/d/11GypOjE9xOTaINATl5bxVIA3Mc9jzNBGCr6GT_KNaQ4/edit?tab=t.0#heading=h.gbsmtjlkuon">https://<wbr>docs.google.com/<wbr>document/<wbr>d/<wbr>11GypOjE9xOTaINATl5bxVIA3Mc9jzNBGCr6GT_KNaQ4/<wbr>edit?tab=t.0#heading=h.gbsmtjlkuon</a></p>
+<p id=edb4 class="phone s05"><cite>ivan:</cite> we cannot avoid this discussion<br>
+<span id=38ec>… it may not work with plain HTML (not XHTML)</span></p>
+<p id=30fa class="phone s01"><cite>wendyreid:</cite> we did a lot of these discussions in the virtual locators TF<br>
+<span id=e2b2>… we worked on &quot;universal locators&quot;, interoperable across different reading systems</span><br>
+<span id=bebf>… and interoperable across different editions of the same book (e.g. Mobydick)</span></p>
+<p id=54b1 class="phone s04"><cite>Hadrien:</cite> on the web text fragments are quite good<br>
+<span id=a8e1>… the difficult part is creating a text fragment</span><br>
+<span id=f8fc>… browsers are able to do that, but they do not expose APIs</span></p>
+<p id=3eb8 class="phone s05"><cite>ivan:</cite> is there any WG in the W3C working on text fragments?</p>
+<p id=840d class="phone s01"><cite>wendyreid:</cite> Web Incubator Community Group (WICG)</p>
+<p id=54b8 class="phone s16"><cite>laurent:</cite> I think we should find something, like a polyfill in JS</p>
+<p id=f213 class="phone s13"><cite>George:</cite> maybe the accessibility object model (accessibility tree) may help</p>
+<p id=7e7d class="phone s16"><cite>laurent:</cite> now an overview about W3C annotation spec<br>
+<span id=cc20>… it's based on JSON-LD</span><br>
+<span id=e97a>… without complex structure, just a @context attribute</span><br>
+<span id=a890>… it's very flexible and at the same type it's difficult to fully implement</span><br>
+<span id=3ba9>… the structure is simple: id, type, motivation (bookmarking, commenting, ...), creator, created, modified</span><br>
+<span id=3977>… a target (with id, type of sources and selector)</span><br>
+<span id=b018>… the selector may have multiple types (including FragmentSelector)</span><br>
+<span id=f409>… the body has an id, a type</span></p>
+<p id=5693 class="phone s16"><cite>laurent:</cite> in these last 10 minutes I would like to mention the mailing list address of the TF<br>
+<span id=0f3f>… it's group-pm-ann@w3.org</span><br>
+<span id=5390>… we have to define the frequency of the calls</span><br>
+<span id=d322>… I would propose to start with a call every two weeks</span><br>
+<span id=ac10>… I would organize every call around one of the slide we discussed</span><br>
+<span id=16b5>… and find some consensus at the end of the call</span></p>
+<p id=a36e class=summary>some discussion about the best email list to use for task forces, not minuting :)</p>
+<p id=4946 class="phone s05"><cite>ivan:</cite> editorially how will we manage this spec?</p>
+<p id=8047 class=summary>will it be part of the main spec (or reading system spec) or will it be a separate specification?<br>
+<span id=b556>… in any case the logical place for storing the document we'll be the EPUB GitHub repository</span></p>
+<p id=8911 class="phone s16"><cite>laurent:</cite> I would like to create GitHub pages about the consensus we had, the history behind some decisions</p>
+<p id=f47a class="phone s05"><cite>ivan:</cite> we may use the wiki</p>
+</section>
+
+<section>
+<h3 id=8f6e>Evolution of Media Overlays</h3>
+<p id=11cb class="phone s18"><cite>marisa:</cite> sharing screen, showing notes in obsidian...</p>
+<p id=a37b class=irc><cite>&lt;marisa&gt;</cite> <a href="https://github.com/marisademeglio/epub-with-vtt/tree/main/epub-demo/book/EPUB">https://<wbr>github.com/<wbr>marisademeglio/<wbr>epub-with-vtt/<wbr>tree/<wbr>main/<wbr>epub-demo/<wbr>book/<wbr>EPUB</a></p>
+<p id=8f64 class="phone s18"><cite>marisa:</cite> WebVTT is a way to sync points to timed media. Let's see a demo.</p>
+<p id=3d8b class=irc><cite>&lt;marisa&gt;</cite> <a href="https://marisademeglio.github.io/epub-with-vtt/epub-demo/">https://<wbr>marisademeglio.github.io/<wbr>epub-with-vtt/<wbr>epub-demo/</a></p>
+<p id=10004 class="phone s18"><cite>marisa:</cite> WebVTT is a timing audio + associated data including selector. To use it in EPUB we need to list them in the manifest. We can overload the overlay (SMIL and VTT) and let the reading system use the one he handles.</p>
+<p id=9aa1 class="phone s18"><cite>marisa:</cite> using VTT alows to set up custom CSS highlight.</p>
+<p id=25ca class="phone s04"><cite>Hadrien:</cite> a general comment, we've seen media overlay only used in fixed layout. Aside we see specialised librares (Nota, MTM) willing to use them to replace Daisy files. For long time, MO was niche. If we want to change things to this format, we should make sure we really add features. I'm thinking about Accessible Comics, we could extend media overlay to images fragments.</p>
+<p id=08cf class="phone s08"><cite>LaurentLM:</cite> Agree, it's comllex to change now something that starts to be more used. We should remove the burden of IDs everywhere. That's seems to be the case with VTT. The works with selectors is also to consider as a piece to help enhance media overlays.</p>
+<p id=0ea3 class="phone s18"><cite>marisa:</cite> VTT brings greater range of selectors and allows to limit the number of needed IDs. This is a new serialisation format for media overlays. It is to be added, not to replace SMIL.</p>
+<p id=cf88 class="phone s05"><cite>ivan:</cite> is this implemented in webviews? Because Reading systems often depend on Webviews.</p>
+<p id=e0d7 class="phone s18"><cite>marisa:</cite> I will be happy to help implementors.</p>
+<p id=1053 class="phone s01"><cite>wendyreid:</cite> we have to make sure we don't break backward compatibility, and think about authoring tools so it is feasible for publishers.</p>
+<p id=1f81 class="phone s01"><cite>wendyreid:</cite> but on the spec side we tottally can do this addition.</p>
+<p id=956b class="phone s04"><cite>Hadrien:</cite> on implementtaion, when audio is involved, we often prefer native audio APIs than webviews. It allows to support more sysem control like touch etc.</p>
+<p id=c7bf class=irc><cite>&lt;marisa&gt;</cite> <a href="https://w3c.github.io/sync-media-pub/convert-smil/">https://<wbr>w3c.github.io/<wbr>sync-media-pub/<wbr>convert-smil/</a></p>
+<p id=d98f class="phone s19"><cite>rdeltour:</cite> I really like the idea of looking at implementation and identifying pain points before going further is a good strategy. If we want to support both SMIL and VTT, how complex or easy it is to convert one into another. Another question is how can we make VTT support escapability and skipability ?</p>
+<p id=db7e class="phone s18"><cite>marisa:</cite> I experimented conversions successfully. the link in the chat is to let you test that.</p>
+<p id=a77f class="phone s18"><cite>marisa:</cite> implementtaion is much more easier than SMIL.</p>
+<p id=cafa class="phone s18"><cite>marisa:</cite> regarding escapibility and skipability, i don't think that the audio / SMIL is the best place. I would drive them from the text file.</p>
+<p id=567b class="phone s20"><cite>delackner:</cite> what are the workflows in place to produce such files? Is there anything we know from the production side?</p>
+<p id=14f7 class="phone s06"><cite>duga:</cite> playbook uses media overlay to interact. It's easy because we have the IDs, shall they reprduce the experience with VTTs?</p>
+<p id=56de class="phone s18"><cite>marisa:</cite> yes, the selector replace the ID. We can discuss suitable selectors.</p>
+<p id=7e32 class="phone s04"><cite>Hadrien:</cite> on production, when it is human voice, it is a struggle today. When it is TTS generated prerecorded voices it is easier.</p>
+<p id=22a0 class="phone s21"><cite>gautierchomel:</cite> Similar to Hadrien, I've implemented an audio workflow when its generated, the system gives you back timestamps<br>
+<span id=eef6>… I can easily make this webVTT</span><br>
+<span id=8675>… when I try to relink to HTML ids, that is when it is more challenging</span><br>
+<span id=bf1a>… this could help a lot, this is the kind of filethat can be output from video for example</span></p>
+</section>
+
+<section>
+<h3 id=713f>HTML Serialization</h3>
+<p id=1302 class="phone s01"><cite>wendyreid:</cite> we're not switching over. It would be an addition. It would probably not break publishing workflows.<br>
+<span id=e90b>… distribution platforms and reading system would need to evolve.</span><br>
+<span id=c951>… how do EPUB validate and open in reading systems?</span><br>
+<span id=abd1>… Wendy made an EPUB with different files &amp; different approaches. a) just change file extension b) change doctype c) change media type.</span><br>
+<span id=9501>… run through EPUBCheck.</span><br>
+<span id=7dd7>… errors.</span><br>
+<span id=b89f>… tested on several reading systems. The doctype matters.</span></p>
+<p id=abf7 class="phone s03"><cite>shiestyle:</cite> I had a survey in Japan with reading system vendors. It is not a heavy modification.</p>
+<p id=a3f4 class="phone s05"><cite>ivan:</cite> I heard that it is a small addition for rs vendors. We need to hear Romain about the checker. A W3C process trick here: we marked it at risk (related to the CR phase).<br>
+<span id=b4a1>… we can only guess and wait for reactions.</span></p>
+<p id=232a class="phone s06"><cite>duga:</cite> for rs it can be a pretty big deal. Not well formed XML will break systems in several places.</p>
+<p id=c699 class="phone s04"><cite>hadrien:</cite> if we don't start we will not know. It is probably the only possible move.</p>
+<p id=2e9d class=irc><cite>&lt;Makoto&gt;</cite> QTI3 continues to use the XML syntax for representing elements borrowed from XHTML.  QTI3 is an XML-based markup language for repressenting assessments.</p>
+<p id=2a38 class="phone s12"><cite>gpellegrino:</cite> as part of the LIA process we are relying on some HTML tools, I transform XHTML to HTML. The xml:lang attribute must be moved to a lang attribute. This is the only transform we do.<br>
+<span id=c0c9>… At the industrial level, LIA will require XHTML at the start for certification, because some tools are XML only. The implementation period will be long.</span></p>
+<p id=19cc class=irc><cite>&lt;CharlesL&gt;</cite> Benetech's GCA certification requires both xml:lang and lang attributes to be set the same.</p>
+<p id=063b class="phone s15"><cite>mgarrish:</cite> a) epub:type is not solved. b) many publishers will not release EPUBs if they are not sure that every rs cannot read them.</p>
+<p id=a6da class=irc><cite>&lt;CharlesL&gt;</cite> +1 to EPUB 4 change not a 3.x</p>
+<p id=53dd class="phone s08"><cite>LaurentLM:</cite> About old reading systems, not using web engines<br>
+<span id=1ac5>… what do we do with them?</span><br>
+<span id=303a>… if a publisher releases something HTML-based, old reading systems will blow up, how might we manage this?</span><br>
+<span id=0f2b>… older eInk reading systems, RMSDK?</span></p>
+<p id=a4bc class="phone s16"><cite>laurent:</cite> what about the old rs (eink readers) which will explode if facing HTML-based publications? I'm ok for breaking, but there will be some issues.</p>
+<p id=140b class="phone s11"><cite>avneesh:</cite> we can write a W3C note, it will be a warning, give time to adapt to the publishing industry. In the next charter (2-3 years) we will move to it.</p>
+<p id=1595 class="phone s03"><cite>shiestyle:</cite> do we know when XHTML + CSS will break?</p>
+<p id=58ea class="phone s05"><cite>ivan:</cite> nobody knows. The package document is not the issue, the navigation document can be one. svg is in xml.<br>
+<span id=6da0>… I don't see a real difference btw publishing a note now or including the information in the draft now (released in two years).</span><br>
+<span id=c39f>… if there is no implementation we can remove it at last minute.</span></p>
+<p id=07e9 class="phone s05"><cite>ivan:</cite> browsers will continue supporting current XHTML for the known future. But new APIs may not be supported.</p>
+<p id=4fca class="phone s01"><cite>wendyreid:</cite> we can postpone to EPUB 4, but we are in year 13 of EPUB 3 and we are making important evolutions. There is no will from the industry to move to a major evolution of EPUB. It we do that in EPUB 4 it will take 10 years to fly.</p>
+<p id=4edf class="phone s06"><cite>duga:</cite> many readers display content as HTML today.</p>
+<p id=05b7 class="phone s14"><cite>charlesL:</cite> the driver should be a brand new thing, that we cannot do in XHTML.</p>
+<p id=8bcc class="phone s01"><cite>wendyreid:</cite> it may not be a publisher who will want to do a new thing, maybe a rs developers will need it to do great stuff.</p>
+<p id=827c class="phone s05"><cite>ivan:</cite> we should have a PR which shows the changes. and replaces epub:type (or is &quot;epub:type&quot; accepted in HTML5?)</p>
+<p id=49cc class="phone s12"><cite>gpellegrino:</cite> epub:type does not break the browser or validator. Querying for epub:type is a question.</p>
+<p id=0bf5 class="phone s13"><cite>george:</cite> K12 are putting publications in their LMS, they are moving to HTML.</p>
+<p id=3a2a class="phone s08"><cite>LaurentLM:</cite> 2 comments, following George, we're seeing the same in Brazil, because they need HTML to do the applications they want, better relationship between web reading, and for a prototype, we'd need samples.<br>
+<span id=e38e>… So we can test on something</span></p>
+<p id=8aad class="phone s08"><cite>laurentLM:</cite> in Brazil, the national program is contemplating moving to Web Publication because HTML is accepted and it brings more coexistence with Web reading.<br>
+<span id=4906>… and we need a good sample in the HTMLish varinant of EPUB.</span></p>
+<p id=da6d class=summary>PROPOSED: Create a PR for review that implements an HTML serialization for EPUB.</p>
+<p id=f2c3 class=irc><cite>&lt;Avneesh&gt;</cite> +1</p>
+<p id=f2c4 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=32c4 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=32c5 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=32c6 class=irc><cite>&lt;gautierchomel_&gt;</cite> +1</p>
+<p id=32c7 class=irc><cite>&lt;George&gt;</cite> +1</p>
+<p id=72c4 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=72c5 class=irc><cite>&lt;LaurentLM&gt;</cite> +1</p>
+<p id=b2c4 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=f2c5 class=irc><cite>&lt;marisa&gt;</cite> +1</p>
+<p id=f2c6 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=269a class=irc><cite>&lt;toshiakikoike&gt;</cite> 0</p>
+<p id=32c8 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=32c9 class=irc><cite>&lt;gpellegrino&gt;</cite> +1</p>
+<p id=cf8d class=resolution><strong>RESOLUTION:</strong> Create a PR for review that implements an HTML serialization for EPUB.</p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#cf8d">Create a PR for review that implements an HTML serialization for EPUB.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
