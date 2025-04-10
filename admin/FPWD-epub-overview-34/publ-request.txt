@@ -1,0 +1,42 @@
+To: webmaster
+CC: pm chairs, matt, susan, comm team, xueyuan
+Subject: publication request for two First Public WG Notes for the Publication Maintenance Working Group
+
+Denis,
+
+This is an official publication request for the publication of the following documents 
+for the 17th of April, 2025. They are published by the Publishing Maintenance 
+(PM) Working Group.
+
+EPUB Accessibility Techniques 1.1.1 First Public Note
+    - https://www.w3.org/TR/2025/NOTE-epub-a11y-tech-111-20250417/
+    - The First Note request, with the new short name, has been approved in:
+      https://github.com/w3c/transitions/issues/706#issuecomment-2782657651
+
+EPUB 3 Overview First Public Note
+    - https://www.w3.org/TR/2025/NOTE-epub-overview-34-20250409/
+    - The First Note request, with the new short name, has been approved in:
+      https://github.com/w3c/transitions/issues/706#issuecomment-2782657651
+
+
+Both documents are already in place. Note that the new notes represent new versions, bound to 
+the 3.4 version of the EPUB family line, to the notes with short names epub-a11y-tech-11 and 
+NOTE-epub-overview-33, respectively.
+
+Some additional comments on the publications:
+
+- Both documents use the Copyright agreement that was set up jointly with IDPF. I believe there is
+an admin file somewhere which lists the documents that use this copyright; the two Notes 
+should be added to it (otherwise we get complaints from the pubrules checker).
+
+- There is a reference from the second note (Overview) to the first (A11y techniques); this is flagged by the link checker. I presume we can ignore this; the next echidna publication of the overview will get
+everything in order as soon as the documents have been added to specref.
+
+
+Thanks!
+
+Ivan
+
+P.S. Xueyuan, I do not think we do a HPN and AC announcement for these; they are just new version
+existing notes. Not really newsworthy. If I am mistaken then ping me and I will prepare the usual 
+drafts.
