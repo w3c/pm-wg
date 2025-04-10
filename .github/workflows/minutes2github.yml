@@ -53,10 +53,7 @@ jobs:
 
     - name: Set up Rust
       if: ${{ env.NEW_FILES }}
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: stable
-        override: true
+      uses: dtolnay/rust-toolchain@stable
 
     - name: Checkout minutes_to_gh
       if: ${{ env.NEW_FILES }}
