@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 17 April 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>Publishing Maintenance Working Group Telco</h1>
+<h2>17 April 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Apr/0004.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/04/17-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>avneesh, AvneeshSingh, CharlesL, Dale, duga, gautierchomel, george, Hadrien, ivan, laurent, MasakazuKitahara, mgarrish, rdeltour, Seth_Delackner, shinya, SueNeu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>dhall</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>CharlesL</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#78d7">PR Cleanup</a>
+<ol>
+<li><a href="#ed04">w3c/<wbr>epub-specs#2527</a></li>
+<li><a href="#efbe">w3c/<wbr>epub-specs#2706</a></li>
+<li><a href="#26de">w3c/<wbr>epub-specs#2707</a></li>
+<li><a href="#cdeb">w3c/<wbr>epub-specs#2708</a></li>
+<li><a href="#2de4">w3c/<wbr>epub-specs#2709</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=78d7>PR Cleanup</h3>
+<p id=acac class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2527">w3c/<wbr>epub-specs#2527</a></p>
+<h4 id=ed04><a href="https://github.com/w3c/epub-specs/pull/2527">w3c/<wbr>epub-specs#2527</a></h4>
+<p id=692e class="phone s01"><cite>mgarrish:</cite> Changes back where a11y 1.1 from 1.0 would be compatible. 1.0 required an accessibilitySummary but 1.1 it is only a SHOULD not a MUST. technically not backward compatible but we need to do an errata to make that change.<br>
+<span id=980a>… PR must close since its on 3.3 and must be revised to 3.4</span><br>
+<span id=d8ee>… could be a 1.2 or a 1.1.1. stuck in the holding pattern until we can make the IDPF change.</span><br>
+<span id=aeb6>… it says its backward compatible but it clearly isn't.  Could got to ISO but that only changes part of the issue.</span></p>
+<p id=8e41 class="phone s02"><cite>shiestyle:</cite> two years have passed since it is raised. I think we can close this we should think with 3.4 how to handle it.</p>
+<p id=c187 class="phone s03"><cite>ivan:</cite> not sure how the old IDPF docs can be changed?  Matt maybe we can send a request to vivia?  until now we were discussing general things but if send a specific request we can take it from there.</p>
+<p id=c790 class="phone s01"><cite>mgarrish:</cite> we are only changing the errata document so its a small change.</p>
+<p id=ab79 class="phone s01"><cite>mgarrish:</cite> I agree a small change. I will send him directly an update errata and cc Ivan and Ralph</p>
+<p id=42e9 class="phone s04"><cite>AvneeshSingh:</cite> Ralph said we are the owners but we don't know how to update it.<br>
+<span id=efe7>… this was submitted as a document to the W3C member submission.  we should also consider ISO and that may not be straight fwd. they may be following the ISO 1.0.</span></p>
+<p id=35cb class="phone s01"><cite>mgarrish:</cite> This came from if we issue a new ISO version that is not compatible that is where this came from.</p>
+<p id=9781 class="phone s01"><cite>mgarrish:</cite> I thought we just need to change the errata and will be a very small change.</p>
+<p id=0a47 class="phone s04"><cite>AvneeshSingh:</cite> we are loosening the restriction from a MUST to a SHOULD for the inclusion of the <code>accessiblitySummary</code> metadata.</p>
+<p id=c5d7 class="phone s05"><cite>SueNeu:</cite> Are we only doing this to support folks using the old version?</p>
+<p id=cb10 class="phone s01"><cite>mgarrish:</cite> these standards also exist in these other standards it makes it compatible with an errata so it is backward compatible.</p>
+<p id=febc class="phone s04"><cite>AvneeshSingh:</cite> We had in the Publishing Steering Committee, we are the owners but don't know the passwords tochange it.</p>
+<h4 id=efbe><a href="https://github.com/w3c/epub-specs/pull/2706">w3c/<wbr>epub-specs#2706</a></h4>
+<p id=e06d class="phone s01"><cite>mgarrish:</cite> this is a massive headache.  we had to add a version identifier to create the history for epub 3.3 / 3.2 would rather use a date range of closed issues, instead of tagging everything. this is a lot of busy work behind the scenes.</p>
+<p id=6fb4 class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=ede0 class="phone s03"><cite>ivan:</cite> not in opposition, the final recommendation we refer to github as a changelog and we may get angry remarks from folks if github goes away for some reason.</p>
+<p id=453e class="phone s01"><cite>mgarrish:</cite> we won't get the changelog.  this is for non-substantive changes.</p>
+<p id=0d16 class="phone s03"><cite>ivan:</cite> Ok, merge the damn thing :)!!!</p>
+<h4 id=26de><a href="https://github.com/w3c/epub-specs/pull/2707">w3c/<wbr>epub-specs#2707</a></h4>
+<p id=4fc2 class="phone s06"><cite>wendyreid:</cite> make the editor happier, always a good thing!</p>
+<p id=f11e class="phone s01"><cite>mgarrish:</cite> this is last modified data, we held off on changing.  it has specific formatting, and we added how it had to be in UTC, formatting etc. just turning this into a note, it will be in UTC time but this is already in the formatting of the string.  it doesn't change anything it gets rid of 2 MUST which isn't needed since its already in the string format.</p>
+<p id=ac60 class="phone s06"><cite>wendyreid:</cite> OK we will merge it.</p>
+<h4 id=cdeb><a href="https://github.com/w3c/epub-specs/pull/2708">w3c/<wbr>epub-specs#2708</a></h4>
+<p id=be62 class="phone s06"><cite>wendyreid:</cite> clarification of styling documents.</p>
+<p id=edb5 class="phone s01"><cite>mgarrish:</cite> has a Reading System requirement but cleaning it up but we had some authoring recommendation but didn't notice that the the Reading System in spine requirements. When you are using it in the spine its up to the author to style it. when a RS shows the TOC in their own UI they need to hide the line numbers.<br>
+<span id=64ec>… we never did put that as a requirement in the RS's when using the nav documents to ignore that part of styling.</span><br>
+<span id=17e7>… this is just reshuffling of the requirements documents.</span></p>
+<p id=7187 class="phone s05"><cite>SueNeu:</cite> both to the author and the RS that this is list style none, outside the spine they require that they need to supress the style. it wasn't stated clearly, when authoring in the nav and put it in the &lt;spine&gt; then you as a content document author must suppress the numbering style.</p>
+<p id=18cc class="phone s03"><cite>ivan:</cite> I have updated test suite to handle 3.4<br>
+<span id=429d>… more important, testing period was long an tedious, this should be a lot better since we have backward compatible. When we add any normative change to document that will stay around we create the test right away. we don't want to wait to add all the tests at the end.</span><br>
+<span id=72ab>… makes everyones life easier.</span></p>
+<p id=13ba class="phone s01"><cite>mgarrish:</cite> similar with EPUBCheck</p>
+<p id=6cd6 class="phone s03"><cite>ivan:</cite> Merge it!</p>
+<p id=cc28 class=irc><cite>&lt;rdeltour&gt;</cite> +1 to what Matt just said :)</p>
+<p id=edcc class="phone s06"><cite>wendyreid:</cite> in reading it I am curious about &lt;nav.xhtml&gt; some creators will use that to include page list and landmarks.</p>
+<p id=147b class="phone s01"><cite>mgarrish:</cite> ignored in both cases, or ignore &lt;nav elements?<br>
+<span id=7ea9>… for in spine reading systems should ignore it, could be hiding branches within it. RS should ignore it just use it.</span></p>
+<h4 id=2de4><a href="https://github.com/w3c/epub-specs/pull/2709">w3c/<wbr>epub-specs#2709</a></h4>
+<p id=ed51 class="phone s01"><cite>mgarrish:</cite> start to supporting HTML.  Adds media type starts to configure the content document to identify it with a Note, define epub-type to use it in the HTML representation.  There is a defintion and NOTE to under discussion potentially *At Risk* to get on everyone's radar.</p>
+<p id=7162 class="phone s07"><cite>duga:</cite> 1. this will be fun for testing, this will take a lot of tests, not sure yet how. could be 100s of tests then to delete them at the end if we pull it.</p>
+<p id=a739 class="phone s03"><cite>ivan:</cite> this is an exception to create tests first. since we are requiring feedback from the larger community. just put a toe in not a complete dive.<br>
+<span id=5ab0>… merge as soon as we are happy and see if we can put it in EPUBCheck and see what publishers will do, as long as we can rollback at the present. we could add a couple tests turning some into html from XHTML.</span></p>
+<p id=8442 class="phone s07"><cite>duga:</cite> I do think we should have a hand full of tests for RS to tests.</p>
+<p id=f79c class="phone s08"><cite>gpellegrino:</cite> clarification: all HTML is all in addition to XHTML.  not removing XHTML.</p>
+<p id=7521 class="phone s06"><cite>wendyreid:</cite> we would be allowing EPUB creators to choose XHTML or HTML.</p>
+<p id=3311 class="phone s07"><cite>duga:</cite> important to answer it will impact what this PR look likes. we can have 2 types of content documents (HTML &amp; XHTML) maybe replace xhtml with html and allow for the serialization of HTML in XML, but maybe this is not the case but where do we land with this PR.</p>
+<p id=6fff class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=bf99 class="phone s03"><cite>ivan:</cite> we have a very strong requirement of backward compatibility so my view is HTML is alongside XHTML.<br>
+<span id=98de>… is it ok to mix the two inside the same publication or restrict it to one for a publication.</span><br>
+<span id=b7d6>… this is what the document does but leave it to Matt.</span></p>
+<p id=136e class="phone s01"><cite>mgarrish:</cite> I was trying to achieve to start to align us with HTML and there is an different syntax for each. requirements are the same a lot of duplicates. we have a lot of notes/specs so we want to try to minimize the change.<br>
+<span id=faa2>… do we wont to get into defining XHTML or HTML documents or could have an XHTML nav doc since its better supported for example.  I would let folks figure it out on their own. I would be surprised if they switch syntaxs.</span></p>
+<p id=2af4 class="phone s07"><cite>duga:</cite> I agree mixed is fine, so lets not try to restrict it.  XHTML is not really a thing we reference a spec that says it is not really a thing. we are saying you can use any HTML its up to you to use HTML, we require support for the XML serialization but we are fully backward compatible.</p>
+<p id=b096 class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=0aa6 class="phone s01"><cite>mgarrish:</cite> I agree we have HTML content and don't use say XHTML. I don't think we want two termsmoving forward.</p>
+<p id=4dc4 class="phone s06"><cite>wendyreid:</cite> Sounds like this is a cleaner approach, but will need some explanation to our community if we remove XHTML and replace it with HTML but its just the XML serialization.  Change in terminology.</p>
+<p id=9c99 class="phone s09"><cite>Hadrien:</cite> when we reference a media type when declare resources where they will be treated differently.</p>
+<p id=ffff class="phone s03"><cite>ivan:</cite> current draft maintains both so that's fine. define epub-type not epub:type similar to aria-*<br>
+<span id=95bf>… when we merge this we should have a discussion on outreach on this right away. Could lead to misunderstandings.  Blog Mailing List announcements etc.</span></p>
+<p id=88af class="phone s07"><cite>duga:</cite> if we dont' decide not use HTML in the content we could remove the term XHTML everywhere.</p>
+<p id=2220 class="phone s03"><cite>ivan:</cite> I think its a good idea.</p>
+<p id=c78a class="phone s05"><cite>SueNeu:</cite> as a book publisher I am not sure, I could get myself into trouble.</p>
+<p id=813b class="phone s07"><cite>duga:</cite> xhtml is not a term that is used anymore in the HTML specs. we could get rid of the term xhtml but xhtml doesn't define it. we require XHTML everywhere but just the term XHTML doesn't exist.</p>
+<p id=cfd8 class="phone s10"><cite>rdeltour:</cite> split the PR one side implements what Brady suggests, and the other PR for extends the spec to use the HTML syntax.</p>
+<p id=1839 class="phone s11"><cite>George:</cite> tools I use when I switch between the two with the validation. that will be an important distinction.</p>
+<p id=70b7 class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=137c class="phone s11"><cite>George:</cite> not just EPUBCheck but all the other tools out there.</p>
+<p id=c20a class="phone s07"><cite>duga:</cite> I agree it is a concern. Maybe that is a good idea. Not sure if we should remove the XHTML term in our spec, not sure that could lead to real confusion.  Might be the right thing to do, may need more time or coffee :)</p>
+<p id=948c class="phone s12"><cite>DaleR:</cite> sounds like 2 audiences, authors how do I create a product that will be rendered and doesn't produce errors, the the authors of the creators of the reading systems.</p>
+<p id=cc4a class="phone s01"><cite>mgarrish:</cite> sitting on the fence getting rid of X. safer if we have both syntax's if the spec just says HTML but the content still requires XHTML. just could be confusing until we really do support both.</p>
+<p id=3a88 class="phone s03"><cite>ivan:</cite> there are different audiences. change in the reading system, is easier since only RS developers.</p>
+<p id=5f2d class="phone s01"><cite>mgarrish:</cite> except the RS does refer to the authoring document so they need to be in sync.</p>
+<p id=7b29 class="phone s06"><cite>wendyreid:</cite> help to see what if we remove the X to see what it looks like. I have an EPUB that uses HTML content documents. and see what breaks.</p>
+<p id=dda4 class="phone s01"><cite>mgarrish:</cite> what is there now is easy to back out.<br>
+<span id=d754>… we won't get any feedback until we merge this in our draft.</span></p>
+<p id=d060 class="phone s02"><cite>shiestyle:</cite> I agree we should merge this then we can wide review. This will become a possiblity once its merged.</p>
+<p id=43e5 class="phone s05"><cite>SueNeu:</cite> is this a Task Force to explore this? test document failures??</p>
+<p id=ecfc class="phone s03"><cite>ivan:</cite> I don't think a TF is needed we have been discussing this for 2 1/2 years or more. its time to merge and get wide review / discussions.<br>
+<span id=8b06>… if there is an acceptance, then we can restructure the document in the long term is a good thing to do. use epub-type instead of epub:type but lets see.</span></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
