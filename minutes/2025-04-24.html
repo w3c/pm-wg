@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 24 April 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>24 April 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Apr/0009.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/04/24-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>avneesh, AvneeshSingh, charles, CharlesL1, dale, dan, duga, george, ikkwong, ivan, MasakazuKitahara, mgarrish, SueNue, toshiakikoike, tzviya, wendyreid</dd>
+<dt>Regrets</dt><dd>gregorio, shinya</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#b741">Changing XHTML to HTML - w3c/<wbr>epub-specs#2709</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=1460 class="phone s01"><cite>wendyreid:</cite> Susan is joining the chairs as a new co-chair!</p>
+<p id=de23 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/blog/2025/epub3-3-recommendations-published-work-begins-on-new-features/">https://<wbr>www.w3.org/<wbr>blog/<wbr>2025/<wbr>epub3-3-recommendations-published-work-begins-on-new-features/</a></p>
+<p id=2a6e class="phone s01"><cite>wendyreid:</cite> And a blog post about epub went out on the w3c website<br>
+<span id=4470>… thank you SueNue for writing it</span></p>
+<p id=ffff class="phone s02"><cite>ivan:</cite> Before the main topic, there is a pending PR on epub that has been around for a while with no feedback</p>
+<p id=d99a class="phone s01"><cite>wendyreid:</cite> 2708? I though we agreed to merge it. I just didn't want to touch it due to merge conflicts</p>
+<p id=f613 class="phone s03"><cite>mgarrish:</cite> Yeah, I just had not gotten back to it</p>
+</section>
+
+<section>
+<h3 id=b741>Changing XHTML to HTML - <a href="https://github.com/w3c/epub-specs/pull/2709">w3c/<wbr>epub-specs#2709</a></h3>
+<p id=1474 class="phone s01"><cite>wendyreid:</cite> Started this discussion last week, there is a open PR<br>
+<span id=ce0b>… There was an idea to just replace XHTML with HTML and change mention to the XML serialization</span></p>
+<p id=10000 class="phone s04"><cite>duga:</cite> I haven't commented more on the PR, I think Ivan was looking for something to add for HTML to see if people reacted<br>
+<span id=d2c5>… if there was a problem, we could just pull it out before it gets released. Easy to revert.</span><br>
+<span id=5111>… I'm worried no matter what we do, it'll be hard to pull this out, particularly the way its written now</span><br>
+<span id=dba6>… the current PR is only changing some of the stuff, its resulting in a broken build, a broken spc</span><br>
+<span id=f5fa>… we want to get the changes in, but the more we breakup the change, the harder it is to pull it out later</span><br>
+<span id=89da>… the spec is broken in the midst of the changes, that's less important, it leaves us in a weird place</span><br>
+<span id=b064>… the downside of doing anything is that it will be hard to pull it out</span><br>
+<span id=ccc0>… we'll add things to the spec over time, it'll be difficult to fix in the end</span><br>
+<span id=b0c4>… and room for significant errors if we pull it out</span><br>
+<span id=e98e>… I don't think it's possible for us to do this in a way that's easy to revert later</span><br>
+<span id=5525>… I just worry about rushing to this change and doing it in multiple parts, but we might be fooling ourselves if we think it's fixable later</span><br>
+<span id=7635>… it's a radical solution too to change XHTML to HTML</span></p>
+<p id=e207 class="phone s02"><cite>ivan:</cite> Let me pick it up from there<br>
+<span id=0e53>… My understanding is that our current spec is wrong</span><br>
+<span id=dc32>… because at w3c there is no such thing as XHTML</span><br>
+<span id=6931>… there is just html, just xml serialization of xhtml</span><br>
+<span id=bec3>… So the right thing to do is to refer to html</span><br>
+<span id=96cc>… and then say that only the xml serialization is accepted</span><br>
+<span id=0c70>… This is more work, but even if we don't do raw html, as it makes the spec more in line with the other w3c specs</span></p>
+<p id=5621 class="phone s03"><cite>mgarrish:</cite> I disagree, we aren't wrong, as we define xhtml ourselves<br>
+<span id=abbc>… But if we suddenly take the X out after so long, people won't read the definition and will think html is allowed</span><br>
+<span id=fe19>… But it requires people to pay attention to definitions to understand what really happened</span><br>
+<span id=277e>… I do agree that the farther we go down that harder it is to back out</span><br>
+<span id=2a13>… But I am not that worried to back out what we have, it is just a few changes at the moment</span><br>
+<span id=3f26>… but yes once it is everything this will be really hard to back out</span></p>
+<p id=9364 class="phone s05"><cite>SueNue:</cite> I think there are two competing ideas, one is supporting our community, the other is matching the  w3c<br>
+<span id=2aec>… I think we owe it to the community to leave the X in</span></p>
+<p id=dd9b class="phone s06"><cite>George:</cite> We should move forward until we get responses from the survey<br>
+<span id=f174>… And then we can have tools to support our decision (e.g. epubcheck)</span></p>
+<p id=1baf class="phone s01"><cite>wendyreid:</cite> This spec is used by people who aren't web people. What is a survey here asking?<br>
+<span id=686d>… I think a lot of people who get such a survey won't know the difference between XHTML and html</span><br>
+<span id=4fdd>… The big problem is toolchains, tools, and rendering systems</span><br>
+<span id=94ab>… Is it just pulling a few blocks of html? Or bigger?</span></p>
+<p id=bc44 class="phone s07"><cite>AvneeshSingh:</cite> I think we need to get the survey out ASAP<br>
+<span id=7ae7>… we need to get this to aggregators</span><br>
+<span id=8cbd>… Focus on them and reading systems</span></p>
+<p id=b81d class="phone s08"><cite>Dale_R:</cite> Back to the notion of who is the audience<br>
+<span id=9db0>… When I first looked at making my book, I looked at the spec and saw xhtml</span><br>
+<span id=4c1e>… I was surprised that I had to go back to xhtml</span><br>
+<span id=866a>… So from my point of view it threw me off</span><br>
+<span id=ea4c>… I would love to go forward with html</span><br>
+<span id=50f7>… I think there is a question if people are using an authoring system they may never see the difference</span></p>
+<p id=10001 class="phone s05"><cite>SueNue:</cite> That was really interesting to hear that perspective<br>
+<span id=871a>… I wonder if we change the doc and remove the X, will they make a document that works</span><br>
+<span id=8e3e>… do we have people that make large quantities of epubs?</span></p>
+<p id=db4b class="phone s04"><cite>duga:</cite> Interesting, and I want to home in on something SueNue said, and question for Dale, if you had read the spec it said HTML and buried somewhere it said &quot;XML serialization&quot;, what would you have done with your first book ?</p>
+<p id=5212 class="phone s08"><cite>Dale_R:</cite> I would have used modern HTML tools and code, and just followed the rest of the spec for other files</p>
+<p id=615d class="phone s04"><cite>duga:</cite> And I think that's the problem, it would not work<br>
+<span id=64f5>… the XHTML is such a speed bump because it says it everywhere, you know you have to do it. If we say HTML we'd get a lot of upset authors and broken content</span><br>
+<span id=123f>… as much as I like the purity of saying HTML, I just worry we'll create more confusion than we want</span><br>
+<span id=2d5a>… I also disagree that we're wrong, we could call it anything we want, as long as we define it we're fine</span></p>
+<p id=a5f7 class="phone s09"><cite>CharlesL1:</cite> To SueNue point, are the major players who are tool providers<br>
+<span id=9467>… Adobe is one</span><br>
+<span id=4367>… as far as the other vendors, we have agreements with a lot of them</span><br>
+<span id=2e53>… if we do a survey, I can make sure they see it, as well as gca publishers</span></p>
+<p id=8404 class="phone s03"><cite>mgarrish:</cite> I just threw out the idea of the survey this morning<br>
+<span id=10002>… We did this before.</span><br>
+<span id=971e>… Are authors using xhtml just because they have to?</span><br>
+<span id=5ce3>… It would be great to have data that shows that</span></p>
+<p id=23f0 class="phone s01"><cite>wendyreid:</cite> I like the idea of a survey<br>
+<span id=dab0>… We want to target to specific stake holders</span><br>
+<span id=63c4>… for instance targets are content authors, another for conversion houses, distributors, renderers</span></p>
+<p id=0ed0 class="phone s02"><cite>ivan:</cite> I understand all the arguments<br>
+<span id=2811>… to be precise we do not define xhtml (I just checked)</span><br>
+<span id=0849>… We just refer to the html spec, which at the end of a link chain takes us to a place in the html specification that says don't use it</span><br>
+<span id=d6b5>… The spec itself still looks strange</span></p>
+<p id=e430 class="phone s01"><cite>wendyreid:</cite> One thing we can clarify now for the survey is what a no-go point is<br>
+<span id=0be5>… we will hear that people don't want to do this</span><br>
+<span id=0b16>… tools and tech evolve, so more companies may be forced into it eventually</span><br>
+<span id=a476>… is it too hard to really do, vs we can, but we don't want to</span></p>
+<p id=83a7 class="phone s07"><cite>AvneeshSingh:</cite> Let's get it out, maybe there will be less pushback<br>
+<span id=2451>… This isn't really a show stopper as I understand it, maybe it will just inform how we approach the change</span><br>
+<span id=076c>… back to what SueNue said, people have to pay to be on this group, hence the need for outreach</span></p>
+<p id=1656 class="phone s04"><cite>duga:</cite> Thinking about the survey, thinking about the change, and the reality, the reality is that XHTML is dead, it's been dying for a while, no new features are making it from HTML to XHTML<br>
+<span id=e80e>… so if anything changes in HTML, it won't make it to the XML serialization</span><br>
+<span id=b95d>… because XHTML is dead, we need to make the change, and it will only make using the spec harder if we don't make the change</span><br>
+<span id=95f5>… the survey is also a PR or marketing push to tell people &quot;we're doing this eventually, now might be the time&quot; and we need them on board</span><br>
+<span id=c897>… unless there are literal fires, telling them this is coming</span><br>
+<span id=1a8f>… we need to use the wording of the survey to convince people to do it</span></p>
+<p id=e369 class="phone s08"><cite>Dale_R:</cite> Listening to this, it reminds me of current news events (e.g. cobol used in government)<br>
+<span id=408c>… And it reminds me of the browser wars, and sticking to the spec regardless of outcome</span><br>
+<span id=17d5>… Is our job to say how it is done, or how it should be done?</span></p>
+<p id=1de8 class="phone s06"><cite>George:</cite> two things - there are a11y innovations around complex images, etc that would benefit from html<br>
+<span id=7e02>… And people working on that are in html world</span><br>
+<span id=ac1f>… Second, maybe our survey should be targeted at &quot;what is the difficulty of switching&quot; instead of &quot;s hould we&quot;</span></p>
+<p id=2f0f class="phone s01"><cite>wendyreid:</cite> we should use this as a pr tool. E.g. as we are making this change how will this impact you? What will the problems be? How can we help?<br>
+<span id=fdf0>… I will take up the task of making a doc to brainstorm on this</span></p>
+<p id=6d1d class="phone s02"><cite>ivan:</cite> I propose we merge the current pr with the minimal change<br>
+<span id=c7d8>… Then we can reference that</span><br>
+<span id=2b36>… Then someone has to take point on the survey, and we need to decide how long we have for submittals</span><br>
+<span id=3eab>… No matter what we have to make some changes</span><br>
+<span id=e0c2>… as the current spec is a bit dirty in this regard</span></p>
+<p id=7606 class=irc><cite>&lt;AvneeshSingh&gt;</cite> Just to remind July and August are holidays season in Europe and US. So, ideally we should have most responses within June</p>
+<p id=b90c class="phone s09"><cite>CharlesL1:</cite> Some publishers are making EPUB 2 files.<br>
+<span id=2799>… So this will be a big shock</span><br>
+<span id=13e9>… If we did this is it an epub 3.4 vs 4 change</span></p>
+<p id=d7fa class="phone s05"><cite>SueNue:</cite> I like the idea of this is happening and how can we help as the focus</p>
+<p id=1158 class="phone s05"><cite>SueNue:</cite> As a group it would help to have our talking points ready</p>
+<p id=1c66 class="phone s10"><cite>tzviya:</cite> I understand this is a big processing change, but if we market this as a &quot;don't panic&quot; change<br>
+<span id=27c0>… then we are covered from the publisher side. For reading system side we need to document how to do this</span><br>
+<span id=7084>… We can't stay in 1988 forever! Documentation is our friend, and we have to do this</span></p>
+<p id=b795 class="phone s02"><cite>ivan:</cite> One thing, if this is epub 3.4 or 4, I push back on it being 4</p>
+<p id=6f85 class=irc><cite>&lt;tzviya&gt;</cite> +1 - this is not EPUB 4</p>
+<p id=df9e class="phone s02"><cite>ivan:</cite> It is still a gradual improvement<br>
+<span id=a13f>… We need to make sure it is not major change, XHTML is still allowed, 3.3 doc is still valid</span></p>
+<p id=8589 class="phone s01"><cite>wendyreid:</cite> I will start the doc and share it for comments and addition<br>
+<span id=813a>… We will help wrap peoples heads around what the change means</span></p>
+<p id=1e6c class="phone s04"><cite>duga:</cite> If we merge the PR can I review first?</p>
+<p id=f0be class=irc><cite>&lt;George&gt;</cite> +1</p>
+<p id=f0bf class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=bfc4 class="phone s01"><cite>wendyreid:</cite> AOB?</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
