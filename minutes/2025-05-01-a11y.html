@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.w3.org/2025/05/01-pmwg-a11y-minutes.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Accessibility Task Force (PMWG) – 01 May 2025</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>Accessibility Task Force (PMWG)</h1>
+<h2>01 May 2025</h2>
+
+<nav id="links">
+<a href="https://www.w3.org/2025/05/01-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id="prelims">
+<div id="attendees">
+<h2>Attendees</h2>
+<dl class="intro">
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, George, gpellegrino, mgarrish</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>CharlesL</dd>
+</dl>
+</div>
+
+<nav id="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="https://www.w3.org/2025/05/01-pmwg-a11y-minutes.html#d524">Welcome and meeting schedule.</a></li>
+<li><a href="https://www.w3.org/2025/05/01-pmwg-a11y-minutes.html#0568">EPUB/schema.org metadata for publisher contact.</a></li>
+<li><a href="https://www.w3.org/2025/05/01-pmwg-a11y-minutes.html#b66d">AccessmodeSufficient is not compulsory</a></li>
+<li><a href="https://www.w3.org/2025/05/01-pmwg-a11y-minutes.html#22bb">Upgrading the floor WCAG specification for EPUB Accessibility 1.1.x from WCAG 2.0 to 2.2.</a></li>
+</ol>
+</nav>
+</div>
+
+<main id="meeting" class="meeting">
+<h2>Meeting minutes</h2>
+<section><p id="d595" class="irc"><cite>&lt;AvneeshSingh&gt;</cite>EPUB/schema.org metadata for publisher contact.</p>
+</section>
+
+<section>
+<h3 id="d524">Welcome and meeting schedule.</h3>
+<p id="b867" class="phone s01"><cite>AvneeshSingh:</cite>We will be meeting 1st and 3rd Thursdays of each month. May 1 was holiday in some parts of the world and 15 is Global Accessibility Day. Then on June 5 we have DAISY board meeting and some of us will not be available for the meeting on that day. So, what is our availability on May 15, we have a possibility of moving the 15th meeting on 29th since May has 5 Thursdays.</p>
+<p id="6b42" class="phone s02"><cite>gpellegrino:</cite> We have the book publishing fair. to the week after or 29 will work.</p>
+<p id="a4b5" class="phone s03"><cite>Charles:</cite> Benetech also has a GAAD day at this time on the 15. May 29 will work.</p>
+<p id="9657" class="phone s01"><cite>AvneeshSingh:</cite> Decided we will have next meeting on May 29th. I will nnounce on PMWG mailing list.</p>
+</section>
+
+<section>
+<h3 id="0568">EPUB/schema.org metadata for publisher contact.</h3>
+
+<p id="c023" class="phone s01"><cite>AvneeshSingh:</cite> We have metadata for publishers contact in ONIX, but this field is not there in internal metadata i.e. neither in EPUB nor in schema.org metadata. can we have a schema.org vocabulary or EPUB metadata for this?</p>
+<p id="3e76" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2702">w3c/<wbr>epub-specs#2702</a></p>
+<p id="67ec" class="phone s02"><cite>gpellegrino:</cite> Rick J presented some info on this.<br>
+<span id="1b8a">… ONIX there are 3 different ways publish contact, trusted inter mediator, and contact of certifier who conducted.</span></p>
+<p id="9d93" class="phone s04"><cite>mgarrish:</cite> if we make a11y:contact we could use refines for different type of contact.  not sure if we want 3 matching types with ONIX.<br>
+<span id="5bf3">… do we want lots of properties or one we can refine.</span><br>
+<span id="b632">… contact object but it doesn't play well with EPUB metadata to try to link to schema.org easier to mint our own for now.</span></p>
+<p id="46c5" class="phone s05"><cite>CharlesL:</cite> Do we want to go with refines?</p>
+<p id="cb91" class="phone s04"><cite>mgarrish:</cite> at this point it doesn't matter, we already use it so... it is ours so we can do what we want.</p>
+<p id="ef68" class="phone s05"><cite>CharlesL:</cite> UX guide refines can be difficult.</p>
+<p id="e4c2" class="phone s04"><cite>mgarrish:</cite> if its only 1 level deep of refines its fairly easy to map. but individual property names might be the easier way to go with less pushback from W3C.</p>
+<p id="5e21" class="phone s01"><cite>AvneeshSingh:</cite> May look to RickJ or Ivan to get feedback on this.</p>
+<p id="abb3" class="phone s04"><cite>mgarrish:</cite> I can update the issue giving examples showing each way.</p>
+<p id="5f56" class="phone s04"><cite>mgarrish:</cite> exemptions we didn't want in the spec as its circumventing a11y. But this metadata can be part of EPUB Accessibility.</p>
+</section>
+
+<section>
+<h3 id="b66d">AccessmodeSufficient is not compulsory</h3>
+<p id="ee9b" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2679">w3c/<wbr>epub-specs#2679</a></p>
+<p id="1e1b" class="phone s01"><cite>AvneeshSingh:</cite> user experience guide is very dependent on it.</p>
+<p id="354d" class="phone s05"><cite>CharlesL:</cite> GCA requires it.</p>
+<p id="0318" class="phone s04"><cite>mgarrish:</cite> it can be repetitive metadata.</p>
+<p id="912a" class="phone s02"><cite>gpellegrino:</cite> end user it is more important to know AccessModeSufficient (AMS) instead of just AccessMode (AM). I think it should be required and AM could be optional.</p>
+<p id="ab8d" class="phone s05"><cite>CharlesL:</cite> that could be a problem for backward compatibility.</p>
+<p id="cd0b" class="phone s04"><cite>mgarrish:</cite> ISO specs to be backward compatibility is a concern.</p>
+<p id="28e6" class="phone s02"><cite>gpellegrino:</cite> making AMS required is important. mapping AM is far less obvious. lets focus on AMS.<br>
+<span id="3cdc">… we could wait until the next major version.  metadata by LIA / GCA is already requiring it. l</span></p>
+<p id="0122" class="phone s01"><cite>AvneeshSingh:</cite> We can have informative text if you really want users to discover non visual reading you need to put this "textual" in AMS.  If we can make the text stronger might be useful here.</p>
+<p id="3cdb" class="phone s02"><cite>gpellegrino:</cite> maybe add a note.</p>
+<p id="7b11" class="phone s04"><cite>mgarrish:</cite> whole note is informative. we tried to add the singular AccessModes. I will look into it again.</p>
+<p id="7473" class="phone s02"><cite>gpellegrino:</cite> ACE could manage this as well, minor issue to include AccessModeSufficient.</p>
+<p id="bf1e" class="summary">Charles +1<br>
+<span id="f794">… are we decided it will be 1.1.1?</span></p>
+<p id="8c58" class="phone s04"><cite>mgarrish:</cite> : if we go to 1.2 we need to then add new conformance values.</p>
+<p id="e154" class="phone s02"><cite>gpellegrino:</cite> we may jump to 1.2 if we need to elevate to WCAG 2.2 or something like Fixed Layout comes. but.</p>
+</section>
+
+<section>
+<h3 id="22bb">Upgrading the floor WCAG specification for EPUB Accessibility 1.1.x from WCAG 2.0 to 2.2.</h3>
+<p id="042c" class="phone s01"><cite>AvneeshSingh:</cite> pressure to upgrade to WCAG 2.2</p>
+<p id="5d8e" class="phone s02"><cite>gpellegrino:</cite> not sure if we need to mandate in our spec.  we can add a note to strongly recommended 2.2 but in Europe there is still strong support for 2.1 they are updating to 2.2 but that will be another year.<br>
+<span id="6dbf">… 2.0 in other countries is still the recommended level.  People may not move to the new version because they are not required by local law.</span></p>
+<p id="c51c" class="phone s04"><cite>mgarrish:</cite> the spec recommends to follow the latest version and AA. and EA is in informative text.</p>
+<p id="3aa1" class="phone s02"><cite>gpellegrino:</cite> from Germans we said EPUB 1.1 is aligned with EAA. but we think there is a miss understanding.</p>
+<p id="91a2" class="phone s01"><cite>AvneeshSingh:</cite> they did say we should then bump to 2.1 as a minimum. WCAG 1.0 is obselete, what about WCAG 2.0?</p>
+<p id="946c" class="phone s02"><cite>gpellegrino:</cite> I don't see any notes about follow 2.0.</p>
+<p id="da3a" class="phone s04"><cite>mgarrish:</cite> 1.0 is superseded. But WCAG 2.0 still co-exists with 2.1 and 2.2. So, I do not think that it is critical to move the floor WCAG standard.</p>
+<p id="38fb" class="phone s01"><cite>AvneeshSingh:</cite>We need an issue where we can document our discussion and we can point people to it.  Matt can you please create an issue for this and document our discussion here.</p>
+<p id="8179" class="phone s05"><cite>CharlesL:</cite> GCA and LIA require WCAG 2.2 AA.</p>
+<p id="f0bf" class="phone s01"><cite>AvneeshSingh:</cite> maybe we have an appendix reference to EAA and Title II requirements etc. India follows EN301549</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a href="https://w3c.github.io/scribe2/scribedoc.html">scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+
+
+</body></html>
