@@ -1,7 +1,6 @@
 <div>
 
-[![W3C](https://www.w3.org/StyleSheets/TR/2016/logos/W3C){border="0"
-height="48" width="72"}](https://www.w3.org/)
+[![W3C](https://www.w3.org/StyleSheets/TR/2016/logos/W3C)](https://www.w3.org/)
 
 </div>
 
