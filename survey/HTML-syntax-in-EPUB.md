@@ -9,7 +9,7 @@ This initiative aims to address the diminishing use and maintenance of the XML s
 
 The proposal does not fundamentally alter EPUB's reliance on HTML5 but removes the restriction to XML syntax. This change could simplify workflows, reduce barriers to entry, and potentially broaden adoption across the ebook value chain—from content creation to consumption.
 
-PMWG is seeking your valuable feedback on the potential benefits, technical challenges, and implementation timelines associated with this change. Your insights will help shape the future of EPUB standards. 
+PMWG is seeking your valuable feedback. What can you see as potential benefits? Do you anticipate any technical challenges? What would you consider a reasonable implementation timeline?  Your insights will help shape the future of EPUB standards. 
 
 Your responses will be kept anonymous but will be made public to ensure transparency. Providing some context about your tools and workflows will help us better understand and address your feedback.
 
