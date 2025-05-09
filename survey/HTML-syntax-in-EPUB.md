@@ -5,7 +5,7 @@ date: 2025-05-08
 
 The Publishing Maintenance Working Group (PMWG) is exploring the possibility of allowing the [HTML syntax](https://html.spec.whatwg.org/multipage/syntax.html#syntax) for the HTML content document format in EPUB 3.4, instead of restricting it to the [XML Syntax](https://html.spec.whatwg.org/multipage/xhtml.html#the-xhtml-syntax) as it is in earlier versions of EPUB 3.
 
-This initiative aims to address the diminishing use and maintenance of XHTML outside the publishing industry while leveraging HTML's status as a living standard. 
+This initiative aims to address the diminishing use and maintenance of the XML syntax outside the publishing industry while leveraging the future evolution of HTML. 
 
 The proposal does not fundamentally alter EPUB's reliance on HTML5 but removes the restriction to XML syntax. This change could simplify workflows, reduce barriers to entry, and potentially broaden adoption across the ebook value chain—from content creation to consumption.
 
