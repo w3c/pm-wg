@@ -1,0 +1,28 @@
+@@1,
+
+sorry for the (very) late replies. There were some personal change issues compounded with vacations…
+
+Indeed, the @@2 task force exists and is active. It is, however not a group in isolation: it is a task group of the Publishing Working Group, which has the task to maintain and, also, to improve the core EPUB standards, including the Accessibility part. You can see some more practical information of the group here:
+
+  https://www.w3.org/groups/wg/pm/
+
+In particular, the official charter that describes its current activities is here:
+
+  https://www.w3.org/2025/02/pmwg-charter.html
+
+As all Working Groups at W3C, members of the group are delegated by official member institutions of W3C. That would mean that @@4 should join the W3C to send delegates to the PM Working Group (or any other Working Group at W3C for that matter). @@3I must say that, based on the profile of your company, it would be great if you joined; we have several representatives of reading system implementers and, in general, software people, it would be good to have people from the down to earth publishing community who really produce the books.@@3
+
+You can find more details about membership here:
+
+  https://www.w3.org/membership/
+
+I realize that joining W3C needs some internal discussions, and also has financial implication; this takes time. It would therefore be possible to request an Invited Expert position for someone for a limited amount of time (usually 6 months), giving time to have an overall impression whether joining the Working Group is interesting and worthwhile for your group. More details for that position is here:
+
+ https://www.w3.org/invited-experts/
+
+Do not hesitate to contact me if you need further details,
+
+Sincerely
+
+Ivan Herman
+W3C staff contact of the PM WG
