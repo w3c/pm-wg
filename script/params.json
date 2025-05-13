@@ -1,0 +1,16 @@
+{
+    "directory"              : "../minutes",
+    "location"               : "./",
+    "index_template"         : "./templates/index_template.html",
+    "index_template_id"      : "list-of-calls",
+    "resolution_template"    : "./templates/resolutions_template.html",
+    "resolution_template_id" : "list-of-resolutions",
+    "taskForces" : {
+        ""     : "Working group",
+        "f2f"  : "Group face to face",
+        "a11y" : "Accessibility task force",
+        "ann"  : "EPUB annotations task force",
+        "dc"   : "Digital comics task force",
+        "fxl"  : "Fixed layout accessibility task force"
+    }
+}
