@@ -6,6 +6,7 @@ name: Publish to Github Pages
 on:
   push:
     branches: [main]
+    paths: ['minutes/**']
   # Allows workflow to be triggered manually from the Actions tab
   workflow_dispatch:
 
