@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 15 May 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>15 May 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025May/0023.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/05/15-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, DaleRogers, duga, eric_hellman (gluejar), gautierchomel, George, Hadrien, ivan, MasakazuKitahara, mgarrish, rdeltour, SeuNeu, shiestyle, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>SeuNeu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#f11b">HTML in EPUB - w3c/<wbr>epub-specs#2715</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=f11b>HTML in EPUB - <a href="https://github.com/w3c/epub-specs/issues/2715">w3c/<wbr>epub-specs#2715</a></h3>
+<p id=058a class="phone s01"><cite>wendyreid:</cite> We were discussing adding HTML to EPUB online and via email, let's continue the discussion here</p>
+<p id=180b class="phone s02"><cite>duga:</cite> I don't know about adding a flag about HTML in the file<br>
+<span id=e46b>… I'm not sure what this would do, it is something we've tried before</span></p>
+<p id=2581 class="phone s03"><cite>George:</cite> with Rick's suggestion about HTML vs XHTML, adding a flag in the OPF would avoid that</p>
+<p id=031f class="phone s04"><cite>Charles:</cite> It would be nice from a consumer point of view — you'd like to know if a book would work on your reading system</p>
+<p id=5256 class="phone s01"><cite>wendyreid:</cite> it would be nice from a vendor perspective to differentiate books, like fxl vs reflowable,<br>
+<span id=a5bf>… it might be hard to communicate to a consumer the difference between XHTML and HTML</span><br>
+<span id=dc2f>… we could say something like &quot;might not work on some reading systems&quot;</span></p>
+<p id=198c class="phone s02"><cite>duga:</cite> agree it might be difficult to exchange, and a flag would be redundant with the mime types in the manifest<br>
+<span id=8acc>… publishers may not be accurate about the flag, they haven't been accurate with similar things before</span></p>
+<p id=f3b8 class="phone s05"><cite>CharlesL:</cite> The cost of us adding the flag is negligable<br>
+<span id=00d4>… a reading system could then make a patch that could utilize it to tell users if a book would work on their system</span></p>
+<p id=de77 class=irc><cite>&lt;gluejar&gt;</cite> &quot;quick patch&quot; = ~3 years, I think</p>
+<p id=3ffe class="phone s05"><cite>CharlesL:</cite> plus a flag could be used to get data about how many publishers are using HTML</p>
+<p id=e73a class="phone s06"><cite>gautierchomel:</cite> Its not that the publisher will use this information,<br>
+<span id=d0ca>… what about a file with mixed HTML and XHTML content?</span></p>
+<p id=e3d5 class="phone s01"><cite>wendyreid:</cite> publishing moves slow, if we release this change tomorrow, we won't see HTML epubs in the pipe line<br>
+<span id=6214>… they will be some people who try it right away, some people are already doing this internally</span><br>
+<span id=61c0>… it will take time for us to see this, but that's good</span><br>
+<span id=80ae>… we will see people and platforms experiment with it</span><br>
+<span id=b55e>… what does HTML offer the XHTML doesn't?</span><br>
+<span id=0c53>… this change is more about longevity</span></p>
+<p id=13f3 class="phone s07"><cite>mgarrish:</cite> We don't need to get into the solutions right now<br>
+<span id=1d04>… it is important to find out what the issues are across the board</span><br>
+<span id=b614>… vendors who don't want HTML will simply not accept the content</span><br>
+<span id=5e01>… vendors will be the barrier, this will take a long time</span><br>
+<span id=1e2e>… we have problems that already exist, I'd like to go back and fix those</span><br>
+<span id=062c>… it may take time, 10 + years, before the tools and all people adapt for HTML</span></p>
+<p id=ffff class="phone s08"><cite>eric_hellman:</cite> I've maintain the software that turns html files into epubs at project guttenberg<br>
+<span id=adf2>… we regenerate our files every month</span><br>
+<span id=86ac>… we are able to do this for a lot of files without much intervention</span><br>
+<span id=b877>… we have changed our preferred format from XHTML to HTML5</span><br>
+<span id=3e23>… my software deprecates that to EPUB3 and EPUB2</span><br>
+<span id=505c>… we give our books away for free and have no control over the platforms</span><br>
+<span id=3702>… there is a demand for EPUB2 it works better</span><br>
+<span id=d8d1>… the difficulty is, we have millions of users and thousands of different reading devices</span><br>
+<span id=cc12>… we are conservative about what we allow</span><br>
+<span id=3d14>… we don't want HTML5 in the EPUBs because we will get problem reports</span><br>
+<span id=63a9>… we have no staff to deal with this, so we strip out new things when we make the EPUB files</span><br>
+<span id=6574>… we control the distribution and production, but no control over the reading platforms</span><br>
+<span id=cdf6>… things that should work across devices but don't, are a source of problems</span><br>
+<span id=91d9>… for instance ADE doesn't respect CSS pagebreak in EPUB 3, but did for EPUB2</span><br>
+<span id=10000>… we have to watch out for any potential problems</span><br>
+<span id=c742>… if people are getting errors with files using HTML in the EPUB, we will stop using it</span><br>
+<span id=ada8>… I would love to be able to put HTML5 in an EPUB</span><br>
+<span id=98bf>… my concern is the rate at which reading systems will be able to render the HTML files</span><br>
+<span id=3db8>… a lot of people experienced with the XHTML files made mistakes producing HTML5 files</span><br>
+<span id=3380>… I fear that a lot of y'all may underestimate the failures that occur when you try to render HTML5 with something used to seeing HTML4</span><br>
+<span id=3929>… I was surprised with the failure modes we found looking over our 75k+ flies and all that the reading systems do</span><br>
+<span id=cbb4>… this group should think about how to promote adoption of new features</span><br>
+<span id=53ef>… especially features that could ruin the experience for the reader</span><br>
+<span id=20b1>… just having a flag will not be enough</span><br>
+<span id=c018>… I'd like to see an HTML5 only format that could be the bright new thing</span><br>
+<span id=e273>… with appropriate branding</span><br>
+<span id=c0f9>… and some level of javascript, sound rendering</span><br>
+<span id=39a5>… a new brand could be promoted by the reading systems, &quot;we can now do this&quot;</span><br>
+<span id=3b18>… not doing the branding has lead to slow adoption of the features in EPUB3</span><br>
+<span id=acac>… if you really want to have new features adopted, you need to give them some gold stars they can use to sell their reading systems</span></p>
+<p id=0421 class="phone s01"><cite>wendyreid:</cite> This is incredibly valuable information, we've been talking about EPUB3 adoption<br>
+<span id=3c77>… what we've found is that EPUB3 is well adopted</span><br>
+<span id=238b>… but we don't have any examples except ADE</span><br>
+<span id=dba9>… because ADE is no long being developed</span><br>
+<span id=0fd9>… you have lots of information that would be really helpful for us</span><br>
+<span id=8d67>… can that be shared? It would answer questions for us</span></p>
+<p id=54c9 class="phone s05"><cite>CharlesL:</cite> Thinking down the line 10 years, now reading systems only support HTML, they can use a flag to identify XHTML files that won't work anymore</p>
+<p id=fe2d class="phone s09"><cite>DaleRogers:</cite> If I'm creating an Ebook, and I want it to be in KDP, I need to go to their docs to find our what they support<br>
+<span id=5821>… as a content creator I always have to start with the output and design my files to be compatible with the outpt</span><br>
+<span id=3490>… as part of this group I put on a different hat</span><br>
+<span id=8630>… I hear what people are saying about some reading systems being up to speed and some not</span><br>
+<span id=29f7>… do we always have to check what standard a reading system supports?</span></p>
+<p id=e26c class="phone s10"><cite>ivan:</cite> CSS features update almost once a week, we expect reading systems to follow this<br>
+<span id=b50a>… some do and some don't, and then the rendering can go wrong</span><br>
+<span id=61db>… particularly a problem for accessibility</span><br>
+<span id=7bac>… HTML5 is a similar problem</span><br>
+<span id=2c3c>… in EPUB3.3 we worked on a testing suite for the purpose of the W3C process</span><br>
+<span id=1148>… this suite was used to test reading systems</span><br>
+<span id=f305>… the results are publicly available</span><br>
+<span id=b7a0>… if we put more care into this testing suite it could become useful beyond the W3C process</span><br>
+<span id=91ba>… rendering systems may or may not choose to share the results of the testing suite</span></p>
+<p id=a2cb class="phone s11"><cite>shiestyle:</cite> As a publisher we do not provide HTML based EPUB<br>
+<span id=e365>… since we have to provide encrypted epubs to some vendors we can control versions</span><br>
+<span id=7ece>… it might be safer for us to expand EPUB generation to HTML for our complicated Japanese titles</span></p>
+<p id=2158 class="phone s02"><cite>duga:</cite> I develop reading systems, I would think it was bullsh*t to have to go through every line of code<br>
+<span id=1e81>… where I made decisions about whether a file is renderable</span><br>
+<span id=2ce2>… and I'll be right where I started rendering Ebooks after all that work</span><br>
+<span id=3ac1>… we let other people determine our formats</span><br>
+<span id=f243>… and they don't care about XHTML</span><br>
+<span id=6ce0>… at some point, someone will delete the XHTML syntax</span><br>
+<span id=7ea9>… and we will be left with a lot of content built on XHTML</span></p>
+<p id=e0a9 class="phone s01"><cite>wendyreid:</cite> a special challenge with EPUB is that we are reliant on standards built with a different industry than ours<br>
+<span id=1465>… that industry moves a lot faster than ours</span><br>
+<span id=7a49>… there is an argument we could make that we need to fence off a version that addresses our specific needs</span><br>
+<span id=6d48>… we are trapped, when tools and browsers evolve, we won't be able to respond</span><br>
+<span id=8180>… lots of platforms are on the web or use browser engines</span><br>
+<span id=ff14>… it is possible that XHTML spec can be deleted and EPUBS will break</span><br>
+<span id=92e4>… this is a scary change, but important for the long term usability of the format</span><br>
+<span id=888f>… testing is a good thing to raise</span><br>
+<span id=3c5e>… I have a test book with HTML files, I will upload it so reading systems can use it</span><br>
+<span id=3d56>… we also have the survey and we can use that to find challenges we aren't seeing</span></p>
+<p id=b556 class=irc><cite>&lt;wendyreid&gt;</cite> See: <a href="https://github.com/w3c/pm-wg/pull/21/files">survey text proposal</a>.</p>
+<p id=9e46 class="phone s12"><cite>GeorgeL:</cite> it is clear to me from surveys that people who are complaining are using EPUB2,<br>
+<span id=45cc>… it is time for people to update their systems to EPUB3</span><br>
+<span id=b069>… and get them to use something better than ADE which is bad for accessiblitiy</span></p>
+<p id=32aa class="phone s13"><cite>AveneeshSingh:</cite> EPUB is a business format<br>
+<span id=02cc>… release 3.4 with traditional tech, and 3.4+ with HTML and see how it is adopted</span><br>
+<span id=0fd1>… the browser people aren't listening to us, we need to take a step and allow the world to evolve</span></p>
+<p id=a8af class="phone s01"><cite>wendyreid:</cite> we could talk about this forever, we don't have the information we need<br>
+<span id=13e4>… we don't know what the challenges and the issues will be</span></p>
+<p id=6c38 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/pm-wg/pull/21/files">https://<wbr>github.com/<wbr>w3c/<wbr>pm-wg/<wbr>pull/<wbr>21/<wbr>files</a></p>
+<p id=c284 class="phone s01"><cite>wendyreid:</cite> we can't move forward until we know more<br>
+<span id=17d9>… everyone should read over the survey and get feedback from the industry</span><br>
+<span id=3c35>… until we have that information we will keep circling on the topic</span></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
