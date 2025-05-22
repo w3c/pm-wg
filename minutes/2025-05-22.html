@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 22 May 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>22 May 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025May/0033.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/05/22-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, brady, CharlesL, dale, elisabeth_kraler, gautierchomel, George, gpellegrino, Hadrien, ivan, Laura_driussi, LaurentLM, MasakazuKitahara, mgarrish, rdeltour, shiestyle, SueNeu, toshiakikoike, tzviya, wendyreid</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>mgarrish</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#c747">EPUB HTML Survey - w3c/<wbr>pm-wg#21</a></li>
+<li><a href="#3f7f">Dark Mode - w3c/<wbr>epub-specs#2700</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=c747>EPUB HTML Survey - <a href="https://github.com/w3c/pm-wg/pull/21">w3c/<wbr>pm-wg#21</a></h3>
+<p id=3a68 class="phone s01"><cite>wendyreid:</cite> looking at the proposed text from Gauthier I mostly think we should focus on the question - we probably want to ask more than one question</p>
+<p id=b44a class="phone s02"><cite>gpellegrino:</cite> in the google doc there were more questions - did we lose them?</p>
+<p id=4747 class="phone s03"><cite>ivan:</cite> you are right but we discussed previously that we should simplify the survey as much as possible</p>
+<p id=2712 class="phone s04"><cite>bduga:</cite> that was what my comment was - I thought we wanted a tell us what we think and maybe a follow up about why - the current question is maybe too specific and should be made broader</p>
+<p id=6bc3 class=irc><cite>&lt;ivan&gt;</cite> present question in the PR: &quot;**Question 1:** What challenges, if any, would your organization face in adding support for HTML syntax in your workflows? Please describe any technical, operational, or resource-related issues you foresee.&quot;</p>
+<p id=a133 class="phone s01"><cite>wendyreid:</cite> I agree with brady that there should be a follow up question - question one is what are the challenges and question two is do you think these are insurmountable</p>
+<p id=2c6b class="phone s05"><cite>SueNeu:</cite> I think we're leading the witness if we only focus on problems and pain points - we'll get that feedback but we don't need to focus there<br>
+<span id=6f5f>… : we should have a question about the general issues in the community</span></p>
+<p id=5b7e class="phone s06"><cite>George:</cite> I get the sense that most of us think it is important to get to html - why not state that we will add support and do you have a major objection to that<br>
+<span id=aad2>… : if there is a major objection then we should hear that because it will affect w3c process</span></p>
+<p id=08b1 class="phone s01"><cite>wendyreid:</cite> that's probably one angle we can take but we want to send this out wider than w3c community so we should be careful not to focus too much on w3c lingo<br>
+<span id=8277>… the person responding may not be in a position to object formally</span><br>
+<span id=7746>… we need to consider the source, too - a single self publisher won't carry as much weight in objecting</span><br>
+<span id=152e>… we need to weigh objections and understand why people are objecting</span></p>
+<p id=d86f class="phone s04"><cite>bduga:</cite> maybe we need to make it clear that this is a thing that has to happen eventually and we want focus on what happens if it appears tomorrow - not on objecting because this has to happen</p>
+<p id=0a26 class=irc><cite>&lt;ivan&gt;</cite> +1 to brady</p>
+<p id=f078 class="phone s01"><cite>wendyreid:</cite> and is there anything we can do in our implementation that makes this easier for you</p>
+<p id=ff89 class="phone s03"><cite>ivan:</cite> I think the way we should formulate the question is not on whether we will do this but this is coming and what should we do to facilitate the transition</p>
+<p id=7af1 class=irc><cite>&lt;LaurentLM&gt;</cite> +1 to ivan</p>
+<p id=74be class="phone s03"><cite>ivan:</cite> we've had a lot of talk of versioning and profiling - we need more info on how to do it</p>
+<p id=7b46 class=irc><cite>&lt;SueNeu&gt;</cite> +1 to ivan</p>
+<p id=0d18 class="phone s01"><cite>wendyreid:</cite> the way the question is currently framed fits that model but we should make it clear in the opening comments we're doing this</p>
+<p id=2d05 class=irc><cite>&lt;gpellegrino&gt;</cite> we had that question in the previous version :)</p>
+<p id=9fef class="phone s01"><cite>wendyreid:</cite> we need a question about who is submitting - what is their role, are they a publisher, developer, etc.</p>
+<p id=56cb class="phone s05"><cite>SueNeu:</cite> So just to recap the question is about the impact on the work and where do you fit in the publishing ecosystem - do we also want a question on how we can support people?</p>
+<p id=d84d class="phone s03"><cite>ivan:</cite> I would favour a third question that asks how we can ease the pain - maybe we can add in parentheses some of the options like versioning, profiling, etc. but not go there as a choice</p>
+<p id=16a4 class="phone s05"><cite>SueNeu:</cite> the purpose of the survey is to get the temperature of the community about this technical change but also to figure out where the pain points are for each area, is that right?</p>
+<p id=42d3 class="phone s03"><cite>ivan:</cite> and also what we can do to ease it</p>
+<p id=7b4d class="phone s05"><cite>SueNeu:</cite> if we're looking for other data we should rethink it otherwise I think we're good</p>
+<p id=8938 class="phone s03"><cite>ivan:</cite> if we are good then we have the practicalities - is Gauthier comfortable finishing it the way we discussed</p>
+<p id=fbc1 class="phone s07"><cite>gautierchomel:</cite> yes</p>
+<p id=c572 class="phone s03"><cite>ivan:</cite> it is possible to make it a w3c survey which is proven to be accessible - I am happy to set it up but we need to decide how to disseminate it</p>
+<p id=6ebd class="phone s01"><cite>wendyreid:</cite> should we ask for help from daisy</p>
+<p id=3cbc class="phone s03"><cite>ivan:</cite> and bisg</p>
+<p id=7d98 class="phone s01"><cite>wendyreid:</cite> booknet canada</p>
+<p id=9f28 class="phone s01"><cite>George:</cite> read 2.0</p>
+<p id=6981 class="phone s01"><cite>wendyreid:</cite> I don't know if want to try translating it and distributing it in other languages, like japanese</p>
+<p id=d861 class="phone s08"><cite>shiestyle:</cite> how can we prepare a translated version?</p>
+<p id=0d32 class="phone s03"><cite>ivan:</cite> to make it simpler I wonder if we should do one form with the main description in multiple languages and then the answers will come in different languages<br>
+<span id=9fd2>… I am uneasy about sending out separate forms for each language</span></p>
+<p id=9b98 class="phone s03"><cite>ivan:</cite> we will have to find someone to translate it to Chinese</p>
+<p id=2ed0 class="phone s01"><cite>wendyreid:</cite> there may be some people at W3C</p>
+<p id=1f3f class="phone s03"><cite>ivan:</cite> we need both simplified and traditional</p>
+<p id=4bae class="phone s08"><cite>shiestyle:</cite> we used to have some people in Taiwan</p>
+<p id=4793 class="phone s03"><cite>ivan:</cite> the other practical question I have is we give it six weeks or a couple of months but how do we work on the results?<br>
+<span id=e56e>… we'll get answers in free form and it will be hard to synthesize if we have responses in multiple languages</span></p>
+<p id=5927 class="phone s01"><cite>wendyreid:</cite> google translate?</p>
+<p id=e706 class="phone s03"><cite>ivan:</cite> that's possible but I'm not sure I trust it</p>
+<p id=952a class="phone s02"><cite>gpellegrino:</cite> for the italian community we are already discussing this with publishers - it is fine to have the survey in English</p>
+<p id=9a42 class="phone s05"><cite>SueNeu:</cite> about how to handle the data we can borrow techniques from the user community they use card sort and start finding common themes</p>
+<p id=adcd class="phone s01"><cite>wendyreid:</cite> we can try a few techniques like that - we can summarize, use card sort, tagging - let's get the results first</p>
+<p id=3ba6 class="phone s01"><cite>wendyreid:</cite> guathier when do you think you can have a draft ready?</p>
+<p id=d3f4 class="phone s07"><cite>gautierchomel:</cite> probably by tomorrow</p>
+<p id=3419 class="phone s01"><cite>wendyreid:</cite> once we have that we can send to a few people to get translations</p>
+<p id=0764 class="phone s03"><cite>ivan:</cite> I can find someone for Chinese, Shinya I assume you can do Japanese, do we need more translations, like French?</p>
+<p id=00c6 class="phone s01"><cite>wendyreid:</cite> it would be good to have French - we can find someone</p>
+<p id=2f6f class="phone s01"><cite>wendyreid:</cite> Gauthier can you translate?</p>
+<p id=5574 class="phone s07"><cite>gautierchomel:</cite> I think we can have a discussion with the French publishers and see if they need one but I can do it</p>
+<p id=f263 class="phone s02"><cite>gpellegrino:</cite> I think we're overdoing it. Most people in the community should understand English if they are reading our specs? There are so many other language we could translate to</p>
+<p id=9654 class="phone s05"><cite>SueNeu:</cite> if we're doing these translations we should also consider Spanish and Portuguese - but I agree this may be overcomplicating things</p>
+<p id=42c4 class=irc><cite>&lt;gpellegrino&gt;</cite> <a href="https://www.w3.org/Translations/?technology=epub-33">https://<wbr>www.w3.org/<wbr>Translations/?technology=epub-33</a></p>
+<p id=3abf class="phone s01"><cite>wendyreid:</cite> I know we've had this issue in the past where it's harder to read for some languages, like Japanese and Chinese<br>
+<span id=83ab>… if people need assistance we can give a contact to help them</span><br>
+<span id=34c1>… we'll put aside broader translation than the language we've already identified</span></p>
+</section>
+
+<section>
+<h3 id=3f7f>Dark Mode - <a href="https://github.com/w3c/epub-specs/issues/2700">w3c/<wbr>epub-specs#2700</a></h3>
+<p id=433c class="phone s01"><cite>wendyreid:</cite> brady gave us a good overview about this at the face-to-face<br>
+<span id=a1ff>… basically the challenge is that css and modern web browsers have introduced light and dark modes</span><br>
+<span id=4eac>… interfaces follow the switches in your operating system but the challenge is that reading systems have already had colour themese for some time and people are attached tot them</span><br>
+<span id=78e1>… most reading apps have at least four modes, too, sepia, white on black, high contrast, customizable themes</span><br>
+<span id=8702>… the themes don't work for all books - but a book in dark mode and content would disappear because publisher styles would interfere</span><br>
+<span id=3148>… users feel quite strongly about their preferences, however</span><br>
+<span id=4d75>… is there anything we can do about these interactions?</span></p>
+<p id=8f08 class="phone s09"><cite>Hadrien:</cite> I think talking about dark mode is the wrong thing - the general issue is that reflowable epub is whatever you want it to be - if you don't like settings you cna change the look<br>
+<span id=848d>… if users change settings then content won't work perfectly</span><br>
+<span id=e866>… what browsers do is not the issue - can we do something to ensure images are easy to view with any colour combinations - no</span><br>
+<span id=dddc>… we're going to go down a rabbit hole if we dig too deep into trying to solve this</span></p>
+<p id=252a class="phone s10"><cite>Dale:</cite> I've always viewed the epub spec more as a structural guide on how to set up a document, not as a style guide. we're looking at appearance over structure here<br>
+<span id=b52b>… browsers can override css and it's always been a tug of war over the appearance - epub is the same way</span><br>
+<span id=88be>… from my point of view we shouldn't try to standardize the appearance</span></p>
+<p id=1a5f class="phone s03"><cite>ivan:</cite> I agree with Hadrien that it's more than just dark mode and the question I have is if you have an epub in your reading system who has the upper hand when the same thing is set by the reading system and the css in the document? is it specified if the reading system or author gets preference?<br>
+<span id=0661>… does the reader's choice or the document get preference?</span></p>
+<p id=ca7d class="phone s09"><cite>Hadrien:</cite> most reading systems will let the user decide what they want - some use cascade to get the effect while others mess with the dom<br>
+<span id=b18d>… it's not so easy because authors abuse styles to get what they want and then reading systems have to undo it</span></p>
+<p id=601b class="phone s01"><cite>wendyreid:</cite> it's been an historically significant problem where publishers were not sending good content with decent styling so css was injected to make them look better<br>
+<span id=e686>… content creators have been improving the quality of their styling in the last ten years</span><br>
+<span id=6dd1>… we would show our styling with a default to the publisher styling if the user wanted</span><br>
+<span id=d759>… the problem is that while font styling has gotten better the colour is increasingly a challenge as publishers use more colour in their content</span><br>
+<span id=adca>… the problem is that as users change the mode this colouring breaks because we don't know all the places it's used</span><br>
+<span id=1db1>… we probably need something but I'm not sure what - could be going to css and letting them know there is more than just light and dark</span></p>
+<p id=95fa class="phone s03"><cite>ivan:</cite> maybe we should invite someone from the css group to help us explain where they're going with it<br>
+<span id=223a>… isn't it necessary to put in the reading system spec a general &quot;should&quot; statement about how to handle clashing css?</span></p>
+<p id=4140 class="phone s04"><cite>bduga:</cite> colour schemes are going to start appearing and we should tell content authors they should not use colour schemes - css does not define light and dark so you can do other things but short of standardizing modes we should discourage use</p>
+<p id=0d8a class="phone s07"><cite>gautierchomel:</cite> I think we should move this to an incubation group</p>
+<p id=8282 class="phone s06"><cite>George:</cite> going back decades the debate on who wins goes to the user - we shouldn't go anywhere where that precedent gets changed</p>
+<p id=d764 class=irc><cite>&lt;Zakim&gt;</cite> tzviya, you wanted to respond to George</p>
+<p id=887a class="phone s11"><cite>tzviya:</cite> I agree in principle what George says is true but in practice it doesn't always work out - we document what should happen instead of what will because of this</p>
+<p id=9d54 class="phone s03"><cite>ivan:</cite> I don't remember anything being documented in the spec</p>
+<p id=813d class="phone s11"><cite>tzviya:</cite> no, it was never written that way</p>
+<p id=336f class="phone s03"><cite>ivan:</cite> I think that should be done</p>
+<p id=d65c class="phone s01"><cite>wendyreid:</cite> we need some guidance even if it is not normative - this should go in the reading systems spec as it will affect them</p>
+<p id=1878 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://drafts.csswg.org/css-color-adjust-1/#values">https://<wbr>drafts.csswg.org/<wbr>css-color-adjust-1/#values</a></p>
+<p id=9a41 class="phone s01"><cite>wendyreid:</cite> I also think it's worth discussing this with the css group whether with them or having them come here<br>
+<span id=7f11>… they have custom values but also a lot of scary language around using them</span></p>
+<p id=241e class=irc><cite>&lt;SueNeu&gt;</cite> +1 to talking with CSS group</p>
+<p id=9175 class="phone s10"><cite>Dale:</cite> I was wondering if this is a bridge that css has already been over - how do reading systems respect or overwrite css</p>
+<p id=2fdb class="phone s03"><cite>ivan:</cite> the reason why it will be different is that browsers don't give users choices - reading systems do more than they might realize</p>
+<p id=7f8c class="phone s01"><cite>wendyreid:</cite> next steps are to draft some language of what brady suggested and to talk to the css group</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
