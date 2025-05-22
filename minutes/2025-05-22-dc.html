@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Digital Comics TF &ndash; 22 May 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Digital Comics TF</h1>
+<h2>22 May 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/05/22-pm-dc-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Dale_Rogers, gautierchomel, Hadrien, LaurentLM, MasakazuKitahara, toshiakikoike</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Hadrien Gardeur, Shinya Takami</dd>
+<dt>Scribe</dt><dd>gautierchomel</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#f8f3">Discussion for scrolled comics</a></li>
+<li><a href="#bc30">referencing images</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=f8f3>Discussion for scrolled comics</h3>
+<p id=e7d6 class=summary>invite RSSAgent pm-dc</p>
+<p id=27aa class=summary>invite RSSAgent</p>
+<p id=ffff class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://docs.google.com/presentation/d/1DyHqLhzmn26kUGkHgbAAkdCOJ55LRwBBuQpews9gF6Q/edit?usp=sharing">https://<wbr>docs.google.com/<wbr>presentation/<wbr>d/<wbr>1DyHqLhzmn26kUGkHgbAAkdCOJ55LRwBBuQpews9gF6Q/<wbr>edit?usp=sharing</a></p>
+<p id=05d9 class="phone s01"><cite>shiestyle:</cite> presenting slides for context. we discussed scrolled comics since long time. We have Apple and Amazon behavior and Hadrien proposal.</p>
+<p id=96fb class="phone s01"><cite>shiestyle:</cite> Japanese and Taiwan communities feedback show no strong opposition.</p>
+<p id=e0c5 class="phone s02"><cite>Hadrien:</cite> interesting that the feedback mentions scrolls not being a layout but a behavior. I agree in general, but in the context of webtoon, the content is often formatted to be scrolled, and won't render well if paginated.</p>
+<p id=8467 class="phone s03"><cite>Dale_Rogers:</cite> there is a difference between ignoring and trowing an error. How reading systems reacts here?</p>
+<p id=0fd6 class="phone s02"><cite>Hadrien:</cite> usually it's ignored if not supported.</p>
+<p id=796a class="phone s02"><cite>Hadrien:</cite> for a RS, whatever we do, there will be work to support those contents.</p>
+<p id=1c7d class="phone s01"><cite>shiestyle:</cite> the current way is supported by Apple and Amazon. I am not sure how long it will take to have support for the new value.</p>
+<p id=e00b class="phone s04"><cite>LaurentLM:</cite> because of the missing value, historically, it has been ignored.</p>
+<p id=4f50 class="phone s04"><cite>LaurentLM:</cite> there will probably be a need for a RS rule if we want adoption.</p>
+<p id=bbb5 class="phone s02"><cite>Hadrien:</cite> Shinya created good examples, we can use them to test.</p>
+<p id=9215 class="phone s05"><cite>toshiakikoike:</cite> we don't use OPF metadata.</p>
+<p id=a2ca class="phone s03"><cite>Dale_Rogers:</cite> i would love to see examples.</p>
+<p id=2d4c class=irc><cite>&lt;Hadrien&gt;</cite> <a href="https://gist.github.com/HadrienGardeur/1263d7bdf2362f33e7ab9cd9521fb93b">https://<wbr>gist.github.com/<wbr>HadrienGardeur/<wbr>1263d7bdf2362f33e7ab9cd9521fb93b</a></p>
+<p id=5f9a class="phone s02"><cite>Hadrien:</cite> there are some on kadokawa website. There's also a gist. I would see ho to zip those and add them to an issue somewhere so people can check.</p>
+<p id=1f83 class=irc><cite>&lt;Hadrien&gt;</cite> Full proposal from 2024: <a href="https://gist.github.com/HadrienGardeur/273a9d195f4a938880aa0bf8d2fc5dd9">https://<wbr>gist.github.com/<wbr>HadrienGardeur/<wbr>273a9d195f4a938880aa0bf8d2fc5dd9</a></p>
+<p id=a0d9 class="phone s02"><cite>Hadrien:</cite> I suggest we work on a new proposal to get consensus.</p>
+<p id=f9a0 class="phone s02"><cite>Hadrien:</cite> this would combine a New feature and an update for compatibility. The same path we went thru when we discussed fixed layout.</p>
+<p id=c761 class="phone s01"><cite>shiestyle:</cite> agree. We have a proposal, we need feedback from Apple and Amazon.</p>
+<p id=8844 class="phone s04"><cite>LaurentLM:</cite> we can safely push as there is a fallback to support what is done by them. As it is, we won't break anything.</p>
+<p id=78d0 class="phone s02"><cite>Hadrien:</cite> agree, there no reason for opposition here, it's win win.</p>
+<p id=854d class="phone s01"><cite>shiestyle:</cite> so we can go to the WG with this proposal. I will write an explanation of it.</p>
+<p id=9b9f class="phone s02"><cite>Hadrien:</cite> since we have time left, i suggest we discuss a second subject: referencing images.</p>
+</section>
+
+<section>
+<h3 id=bc30>referencing images</h3>
+<p id=300f class="phone s02"><cite>Hadrien:</cite> comics are images. Can we reference them in the spine so we don't need to open the HTML? I think it would improve production, maintenance and reading. And no change to the spec is needed.</p>
+<p id=7ddf class="phone s04"><cite>LaurentLM:</cite> this one is more impactful, the RS must accepts html or svg. If we add images, that's possible with fallbacks. On EDRLab reading systems it's ok, we can get this, and that will improve the experience. I don't know for other RS.</p>
+<p id=b651 class="phone s01"><cite>shiestyle:</cite> we have dedicated RS for comics, they ingest images, to do that they extract them from HTML now, but they don't keep anything apart from images.</p>
+<p id=f0ab class="phone s04"><cite>LaurentLM:</cite> accessability of comics should not be done as big alt text, it's not a suficient way, it should be done with guided navigation. So referencing images instead of HTML should not affect accessibility.</p>
+<p id=021b class="phone s02"><cite>Hadrien:</cite> in the spine it's image first and HTML as feedback.</p>
+<p id=3553 class="phone s05"><cite>toshiakikoike:</cite> in manga we have TOC, for that it is usefull to have HTML. There's also image style used with HTML.</p>
+<p id=3b3d class="phone s02"><cite>Hadrien:</cite> there's a change if you have a table of content in the content, I've seen ones in SVG. I understand that manga have more appeal(?) than webtoon. We can push something only for webtoon and explore more for manga.</p>
+<p id=5144 class="phone s01"><cite>shiestyle:</cite> do we have consensus to go forward?</p>
+<p id=444b class="phone s01"><cite>shiestyle:</cite> yes, so let's open a PR.</p>
+<p id=62c1 class="phone s01"><cite>shiestyle:</cite> next call in next month</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
