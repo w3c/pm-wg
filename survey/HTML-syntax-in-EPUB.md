@@ -13,5 +13,8 @@ PMWG is seeking your valuable feedback. What can you see as potential benefits? 
 
 Your responses will be kept anonymous but will be made public to ensure transparency. Providing some context about your tools and workflows will help us better understand and address your feedback.
 
-**Question 1:** What challenges, if any, would your organization face in adding support for HTML syntax in your workflows? Please describe any technical, operational, or resource-related issues you foresee.
+**Question 1:** What is your position in the industry and how do your workflows involve EPUB?
 
+**Question 2:** What potential benefits and challenges do you anticipate when incorporating HTML syntax into your processes? 
+
+**Question 3:** Are there any technical, operational, or resource related issues that need to be considered?
