@@ -9,7 +9,7 @@ This initiative aims to address the diminishing use and maintenance of the XML s
 
 The change does not affect the document formats currently allowed in an EPUB publication; they will remain valid as they are today. This change merely removes the restriction to the XML syntax.
 
-PMWG is seeking your valuable feedback. What can you see as potential benefits? Do you anticipate any technical challenges? What would you consider a reasonable implementation timeline?  Your insights will help shape the future of EPUB standards. 
+PMWG is seeking your valuable feedback.  The purpose of the survey is to get the temperature of the community about this technical change, figure out the potential difficulties, and what the Working Group can do to make the transition easier.  Your insights will help shape the future of EPUB standards. 
 
 Your responses will be kept anonymous but will be made public to ensure transparency. Providing some context about your tools and workflows will help us better understand and address your feedback.
 
