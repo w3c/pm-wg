@@ -7,7 +7,7 @@ The Publishing Maintenance Working Group (PMWG) plans to allow the [HTML syntax]
 
 This initiative aims to address the diminishing use and maintenance of the XML syntax outside the publishing industry while leveraging the future evolution of HTML. 
 
-The proposal does not change the document formats currently allowed in an EPUB. Since EPUB is already reliant on HTML, this proposal merely removes the restriction to the XML syntax.
+The change does not affect the document formats currently allowed in an EPUB publication; they will remain valid as they are today. This change merely removes the restriction to the XML syntax.
 
 PMWG is seeking your valuable feedback. What can you see as potential benefits? Do you anticipate any technical challenges? What would you consider a reasonable implementation timeline?  Your insights will help shape the future of EPUB standards. 
 
