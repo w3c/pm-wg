@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>(MEETING TITLE) &ndash; 29 May 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+PM WG A11y Task Force Call </h1>
+<h2>29 May 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/05/29-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, George, Madeleine5, mgarrish</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>mgarrish</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#4b26">Implementation details of EPUB metadata for publisher contact.</a></li>
+<li><a href="#9c5b">Decision on AccessmodeSufficient.</a></li>
+<li><a href="#a594">Creation of a common document for explaining the accessibility metadata.</a></li>
+<li><a href="#1484">upgrading the floor WCAG specification for EPUB Accessibility 1.1.x from WCAG 2.0 to 2.2.</a></li>
+<li><a href="#d725">Next meeting on June 19.</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=4b26>Implementation details of EPUB metadata for publisher contact.</h3>
+<p id=cf4f class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2702">w3c/<wbr>epub-specs#2702</a></p>
+<p id=b53e class="phone s01"><cite>AvneeshSingh:</cite> should we be using role or another dedicated metadata</p>
+<p id=e0b3 class="phone s02"><cite>mgarrish:</cite> I'd go with minting our own new property - using refines is too complicated</p>
+<p id=d7d9 class="phone s01"><cite>AvneeshSingh:</cite> agree</p>
+</section>
+
+<section>
+<h3 id=9c5b>Decision on AccessmodeSufficient.</h3>
+<p id=4ead class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a
+        href="https://github.com/w3c/epub-specs/issues/2679">w3c/<wbr>epub-specs#2679</a></p><p id=2678 class=resolution><strong>RESOLUTION:</strong> add properties for publisher and trusted intermediary contacts</p>
+<p id=87e3 class="phone s02"><cite>mgarrish:</cite> it's problematic to reduce requirements in new standards as it makes it incompatible with older versions</p>
+<p id=6e80 class="phone s03"><cite>George:</cite> maybe we should only make access mode sufficient required</p>
+<p id=13f8 class="phone s04"><cite>Madeleine5:</cite> access mode sufficient is the most complicated to understand</p>
+<p id=4d0b class="phone s03"><cite>George:</cite> it's repeatable but we allow textual and visual as single statements</p>
+<p id=738d class="phone s01"><cite>AvneeshSingh:</cite> can this be automated</p>
+<p id=e343 class="phone s04"><cite>Madeleine5:</cite> yes, I've automated these in the past to make access modes from other metadata</p>
+<p id=d5dc class="phone s01"><cite>AvneeshSingh:</cite> daisy pipeline computes metadata when it compiles an epub - but need to check if it works with edge cases</p>
+<p id=a7aa class="phone s01"><cite>AvneeshSingh:</cite> we could bump it up to mandatory and see if people resist</p>
+<p id=c0e1 class="phone s04"><cite>Madeleine5:</cite> so we want compatibility with previous</p>
+<p id=9114 class="phone s02"><cite>mgarrish:</cite> content doesn't break if we change the conformance identifier</p>
+<p id=9d10 class="phone s01"><cite>AvneeshSingh:</cite> let's update the tracker that we're going to move it to a requirement and if we don't get any negative feedback after a couple of weeks we can move it to the spec</p>
+</section>
+
+<section>
+<h3 id=a594>Creation of a common document for explaining the accessibility metadata.</h3>
+<p id=151a class=summary><a href="https://github.com/w3c/publ-a11y/pull/723">w3c/<wbr>publ-a11y#723</a></p>
+<p id=ceed class="phone s02"><cite>mgarrish:</cite> consolidates all the information about the accessibility metadata that was spread around in different documents and consolidates it into a single new guide that we'll maintain</p>
+<p id=38c7 class="phone s03"><cite>George:</cite> is this rec track?</p>
+<p id=3c20 class="phone s02"><cite>mgarrish:</cite> no, this will be maintained by the CG</p>
+</section>
+
+<section>
+<h3 id=1484>upgrading the floor WCAG specification for EPUB Accessibility 1.1.x from WCAG 2.0 to 2.2.</h3>
+<p id=aa09 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2717">w3c/<wbr>epub-specs#2717</a></p>
+<p id=3513 class="phone s01"><cite>AvneeshSingh:</cite> should we elevate the floor from WCAG 2.0 level A<br>
+<span id=ba1f>… there is no urgency to make this change - WCAG 2 versions do not supersede each other</span></p>
+<p id=585c class="phone s02"><cite>mgarrish:</cite> what about raising just the level?</p>
+<p id=0e60 class="phone s01"><cite>AvneeshSingh:</cite> could be problematic as some regions still only require level A</p>
+<p id=c2cd class="phone s01"><cite>AvneeshSingh:</cite> let's continue with the status quo and see if we get any other feedback</p>
+</section>
+
+<section>
+<h3 id=d725>Next meeting on June 19.</h3>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#2678">add properties for publisher and trusted intermediary contacts</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
