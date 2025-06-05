@@ -17,4 +17,4 @@ Your responses will be kept anonymous but will be made public to ensure transpar
 
 **Question 2:** What potential benefits and challenges do you anticipate when incorporating HTML syntax into your processes? 
 
-**Question 3:** Are there any technical, operational, or resource related issues that need to be considered?
+**Question 3:** Are there any technical, operational, or resource related steps that the Working Group should consider to ease the transition (e.g., additional metadata, profiling the EPUB specification, introducing several EPUB versions, etc.)?
