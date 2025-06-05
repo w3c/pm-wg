@@ -9,7 +9,7 @@ Use of the XML syntax is diminishing outside of publishing. The syntax is no lon
 
 The change does not affect the document formats currently allowed in an EPUB publication; they will remain valid as they are today. This change merely removes the restriction to the XML syntax.
 
-PMWG is seeking your valuable feedback. The purpose of this survey is to get the temperature of the community about the technical change. The Working Group hopes to discover potential obstacles so we can make the transition easier. Your insights will help shape the future of EPUB standards. 
+PMWG is seeking your valuable feedback. The purpose of this survey is to get the temperature of the community about the technical change. The Working Group wants to identify potential obstacles so we can make the transition easier. Your insights will help shape the future of EPUB standards. 
 
 Your responses will be kept anonymous but will be made public to ensure transparency. Providing some context about your tools and workflows will help us better understand and address your feedback.
 
@@ -18,3 +18,5 @@ Your responses will be kept anonymous but will be made public to ensure transpar
 **Question 2:** What potential benefits and challenges do you anticipate when incorporating HTML syntax into your processes? 
 
 **Question 3:** Are there any technical, operational, or resource related steps that the Working Group should consider to ease the transition (e.g., additional metadata, profiling the EPUB specification, introducing several EPUB versions, etc.)?
+
+**Question 4:** Please share any additional comments you may have.
