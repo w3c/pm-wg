@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group &ndash; 12 June 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group</h1>
+<h2>12 June 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/06/12-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>CharlesL, Dale, duga, George, gpellegrino, Hadrien, LaurentLM, Leonard, mgarrish, shiestyle, SueNeu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>ivan</dd>
+<dt>Chair</dt><dd>wendyreid</dd>
+<dt>Scribe</dt><dd>duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#58e0">Scrolled Comics</a></li>
+<li><a href="#2c61">EPUB to ISO</a></li>
+<li><a href="#f767">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=58e0>Scrolled Comics</h3>
+<p id=74e1 class="phone s01"><cite>wendyreid:</cite> first topic is scrolled comics - over to shiestyle</p>
+<p id=ffff class="phone s02"><cite>shiestyle:</cite> Our TF discussed specs for scrolled comics<br>
+<span id=abf7>… we already have webtoons formats in Japan, but the current style isn't good for the specs</span><br>
+<span id=5bbe>… so we need to determine how to define webtoons in the specs</span><br>
+<span id=631e>… so today we will present two proposals</span><br>
+<span id=10000>… first, we have rendition-scrolled [is that the right one?]</span><br>
+<span id=62f9>… we will add a new value</span><br>
+<span id=68e7>… we did not have a strong opposition to rendition-layout: scrolled</span><br>
+<span id=7927>… we want both new and existing features to be valid</span><br>
+<span id=1a74>… so we want to update the note like this</span></p>
+<p id=13da class="phone s03"><cite>Hadrien:</cite> Voyager Japan sent an email that was very supportive regarding that approach<br>
+<span id=95af>… I think this concept that we add a new thing while acknowledging the old this is consistent with the way we have done this before (e.g. fixed layout)</span><br>
+<span id=36e5>… So mention the old way, but encourage the new way for implementation consistency</span></p>
+<p id=d7ac class="phone s01"><cite>wendyreid:</cite> What is the fallback scheme?<br>
+<span id=e8b9>… if we get a book with rendition-layout: scrolled? Most RS would fall back to reflow</span><br>
+<span id=9949>… should we have some sort of fallback?</span><br>
+<span id=e86a>… Maybe a fallback rendition-layout value?</span></p>
+<p id=6c90 class="phone s03"><cite>Hadrien:</cite> I have done some testing, first the way the current style works, and they generally just show as fxl<br>
+<span id=3ffe>… which is really bad</span><br>
+<span id=ea95>… I then tried the new way and it falls back to flowing, which is also bad</span><br>
+<span id=0089>… we are asking for a new mode</span><br>
+<span id=0198>… if a RS doesn't have it there isn't much to do</span></p>
+<p id=06ec class="phone s04"><cite>SueNeu:</cite> If we decide on a fallback mode maybe ask for pagination from the contet creators<br>
+<span id=4e93>… not great but better than reflow</span></p>
+<p id=fdc6 class="phone s05"><cite>duga:</cite> I'm not sure how feasible that would be, there is actually a company that does this, they make money off paginating webtoons, it's not trivial<br>
+<span id=b43c>… it would be nice if every webtoon had an alternative that did this.</span><br>
+<span id=4d32>… question I had is what is the mandated behaviour of rendition-layout if it's unknown?</span><br>
+<span id=ca6b>… are we supposed to assume its reflow?</span></p>
+<p id=9dda class="phone s03"><cite>Hadrien:</cite> In my testing its treated as reflow</p>
+<p id=e291 class="phone s01"><cite>wendyreid:</cite> I am checking now<br>
+<span id=e054>… &quot;must use one of the following&quot;</span><br>
+<span id=0a2f>… reflowable is the default</span></p>
+<p id=02b8 class="phone s02"><cite>shiestyle:</cite> Japanese publishers just won't sell them on platforms where it doesn't work</p>
+<p id=7782 class="phone s04"><cite>SueNeu:</cite> How does this relate to panel by panel navigation?<br>
+<span id=cf2e>… will webtoons do that?</span></p>
+<p id=6f9c class="phone s03"><cite>Hadrien:</cite> I would argue it isn't really necessary since the content was designed for phones<br>
+<span id=a7a0>… panel to panel is helpful for reading things on smaller devices</span><br>
+<span id=349f>… Also maybe for a11y</span><br>
+<span id=75c8>… And as far as I am aware panel to panel in Amazon is proprietary</span><br>
+<span id=b8f2>… And as shiestyle said, just not providing content is probably fine</span><br>
+<span id=daa1>… and at some point we should talk to Editour and get the property added</span><br>
+<span id=2d8a>… so the content can be filtered out</span></p>
+<p id=e156 class="phone s01"><cite>wendyreid:</cite> We should get a PR so we can see it in place<br>
+<span id=2db4>… shiestyle, Hadrien, can you work with Matt to get this done?</span></p>
+<p id=d8dc class="phone s03"><cite>Hadrien:</cite> Sure we will have a PR ready before the next TF report to this group</p>
+</section>
+
+<section>
+<h3 id=2c61>EPUB to ISO</h3>
+<p id=c22f class="phone s01"><cite>wendyreid:</cite> Our other topic was ISO<br>
+<span id=786e>… we want to take EPUB 3.3 to ISO. There are other groups that want it ASAP. ISO is still on 3.0.1</span></p>
+<p id=2171 class="phone s06"><cite>gpellegrino:</cite> As you may recall we asked for the group to wait on this until the EU a11y legislation was done<br>
+<span id=47d1>… If we go to ISO then it will be adopted by the EU, so it will be a different spec than the one publishers are using</span><br>
+<span id=e2ba>… so we made an arrangement for them to reference the W3C version</span><br>
+<span id=f7de>… so the European commission did not require the ICT version</span><br>
+<span id=e903>… the EAA will go into effect in two weeks, but as of now there is no committee request to reference EPUB standards as ICT Technical Specification</span><br>
+<span id=af92>… so I would request that we wait</span></p>
+<p id=7c7e class="phone s01"><cite>wendyreid:</cite> Can't they do whatever they want?</p>
+<p id=1e88 class="phone s06"><cite>gpellegrino:</cite> The ICT is just a reference and the EC will endorse it</p>
+<p id=4cf0 class="phone s01"><cite>wendyreid:</cite> How long are they going to make us wait?</p>
+<p id=fc39 class="phone s07"><cite>mgarrish:</cite> Can we split it up?<br>
+<span id=3b73>… then we can push at least EPUB 3.3, but delay a11y spec?</span></p>
+<p id=8bc0 class="phone s01"><cite>wendyreid:</cite> Is this ICT thing for a11y 1.1 and epub 3.3?</p>
+<p id=84d5 class="phone s06"><cite>gpellegrino:</cite> We presented a11y 1.1, epub 3.3., and RS 3.3, so they may point at those as well</p>
+<p id=a380 class="phone s01"><cite>wendyreid:</cite> This is very awkward<br>
+<span id=9bca>… If we go to ISO, one option is they could just keep going with the current path</span><br>
+<span id=9e99>… will they decide to change what they are pointint at?</span></p>
+<p id=d829 class="phone s08"><cite>Leonard:</cite> They can do whatever, but that doesn't mean they will</p>
+<p id=2fca class="phone s01"><cite>wendyreid:</cite> So are we really worried about going to ISO, and they will change what they are using?</p>
+<p id=9e8a class="phone s08"><cite>Leonard:</cite> They do have to make changes by agreement with the committees involved</p>
+<p id=f589 class="phone s01"><cite>wendyreid:</cite> I want to understand what is technically possible vs what will actually happen</p>
+<p id=5412 class="phone s06"><cite>gpellegrino:</cite> They decided to exclude e-book from the mandate to update EN 301 549</p>
+<p id=95ae class="phone s09"><cite>AvneeshSingh:</cite> ISO is a kind of trigger, and historically we have had trouble keeping European standards in line with us<br>
+<span id=e21a>… so we really don't want to have to open a new can of worms</span><br>
+<span id=ca9a>… gpellegrino what are your thoughts on the previous efforts here?</span></p>
+<p id=8daa class="phone s06"><cite>gpellegrino:</cite> Even with that huge effort (EU version of WCAG), it isn't in a great<br>
+<span id=656d>… place</span></p>
+<p id=7eba class="phone s09"><cite>AvneeshSingh:</cite> And we are smaller than the web</p>
+<p id=6330 class="phone s10"><cite>George:</cite> After [date I missed], there is an existing default standard that will be in place<br>
+<span id=2c90>… If we wait a little while before going to ISO, the more it establishes the existing defacto standard</span><br>
+<span id=5d04>… Once we have that we should be able to go to ISO</span><br>
+<span id=1265>… I can't imagine at that point going to ISO would cause a harmonized spec to trigger</span></p>
+<p id=0df3 class="phone s04"><cite>SueNeu:</cite> Is this a place where backwards compat will help us?<br>
+<span id=f1d7>… Since their older books will still be usable</span><br>
+<span id=4807>… I am not sure of the utility of waiting if everything is backwards compatible. What would happen if we went to ISO with 3.3?</span><br>
+<span id=4457>… Will this require new things of publishers?</span></p>
+<p id=9943 class="phone s01"><cite>wendyreid:</cite> The prime example is WCAG and EN3459<br>
+<span id=3313>… For instance the EN spec covers a lot more than the web, web is just one chapter</span></p>
+<p id=ed83 class=irc><cite>&lt;gpellegrino&gt;</cite> 1+</p>
+<p id=10001 class="phone s01"><cite>wendyreid:</cite> But I got on the queue to say we are using the PATH approach to going to ISO<br>
+<span id=7002>… so there isn't much room to change things (just minor termiology)</span><br>
+<span id=bdaf>… This is per agreement between ISO ad W3C</span><br>
+<span id=90b6>… so I don't think we need to worry that it will cause a change anything substantively</span><br>
+<span id=efe1>… But all we have been hearing &quot;just wait&quot; with no timeline</span><br>
+<span id=e00b>… And the rest of the world is on hold without even having a deadline</span></p>
+<p id=547e class="phone s06"><cite>gpellegrino:</cite> two things on what may happen<br>
+<span id=a8ba>… First, they may require new metadata, and all content made now without it will cause all current epubs to fail</span></p>
+<p id=1ed2 class="phone s01"><cite>wendyreid:</cite> I guess we are stuck waiting again</p>
+<p id=0b49 class="phone s05"><cite>duga:</cite> Do we just set a reminder to ourselves to have this conversation again in 6 months, a year?</p>
+<p id=c0f8 class="phone s06"><cite>gpellegrino:</cite> </p>
+<p id=11c1 class="phone s06"><cite>gpellegrino:</cite> I think TPAC is the right time to discuss again</p>
+<p id=69c8 class="phone s02"><cite>shiestyle:</cite> Let's continue at TPAC</p>
+</section>
+
+<section>
+<h3 id=f767>AOB</h3>
+<p id=10002 class="phone s09"><cite>AvneeshSingh:</cite> TPAC - when do we want to have the meeting? APA is already looking at their cross group meetings<br>
+<span id=6a99>… DAISY will be having meetings on the 12th and 13th, so it would help to have dates ASAP</span></p>
+<p id=7c19 class="phone s01"><cite>wendyreid:</cite> I have already requested the 10th and 11th, our typical Monday/Tuesday</p>
+<p id=dffc class="phone s05"><cite>duga:</cite> What about the survey? Did we agree on the wording?</p>
+<p id=e985 class="phone s04"><cite>SueNeu:</cite> yes, we have agreed and we have the Japanese translation<br>
+<span id=5402>… And Ivan is working on it, though he is off</span></p>
+<p id=dc37 class="phone s04"><cite>SueNeu:</cite> Which brings us to who we are sending this to</p>
+<p id=bdb0 class="phone s11"><cite>CharlesL:</cite> and in addition, do we have the verbage for the email that links to the survey</p>
+<p id=abd1 class="phone s01"><cite>wendyreid:</cite> We should have a wiki or doc to coordinate and propose text</p>
+<p id=70a4 class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=72e1 class="phone s09"><cite>AvneeshSingh:</cite> We will be sending out the inclusive publishing newsletter, so if it is ready then we can add it there</p>
+<p id=6405 class="phone s01"><cite>wendyreid:</cite> May SueNeu and I can work on setting up coordination for comms</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+
+</body>
+</html>
