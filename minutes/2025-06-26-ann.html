@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Annotation Task Force Telco &ndash; 26 June 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Annotation Task Force Telco</h1>
+<h2>26 June 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/06/26-pm-ann-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>duga, George, hadrien, ivan, LaurentLM</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>laurentlm</dd>
+<dt>Scribe</dt><dd>duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#00a4">Organizations</a></li>
+<li><a href="#f8e7">Documentation</a></li>
+<li><a href="#0d8c">Use cases</a>
+<ol>
+<li><a href="#b4af">Simple annotation</a></li>
+<li><a href="#8217">Adding tags</a></li>
+<li><a href="#eae8">Annotating images, videos</a></li>
+<li><a href="#a334">Bookmarks</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=00a4>Organizations</h3>
+<p id=877e class="phone s01"><cite>LaurentLM:</cite> What orgs are interested in this project<br>
+<span id=31f6>… EDRLab talked to Himmer (sp?) who are interested but will not join</span><br>
+<span id=0df8>… Colibrio made a presentation on CFI use and presented the fact that Colibrio has released an open source JS library for CFI</span><br>
+<span id=5cc8>… So those are two who are interested, does anyone knows anyone else?</span><br>
+<span id=04d3>… (sounds like no)</span></p>
+</section>
+
+<section>
+<h3 id=f8e7>Documentation</h3>
+<p id=31fc class="phone s01"><cite>LaurentLM:</cite> proposal for docs is to use github as a subdir under somewhere [I missed where]<br>
+<span id=6d38>… we still need to decide Note vs rec</span><br>
+<span id=ffff>… apparently the current admin at W3C isn't happy with Note -&gt; Rec process</span><br>
+<span id=2c54>… so we need to decide ASAP</span></p>
+<p id=feb0 class="phone s02"><cite>ivan:</cite> Rec means we need 2 implementations<br>
+<span id=58d5>… and in this case we will probably need to prove interop between RSes</span><br>
+<span id=0ea5>… If I look at that and the few number of orgs interested, then I am not sure we can do rec track</span><br>
+<span id=3f10>… just trying to be realistic</span></p>
+<p id=5e9a class="phone s01"><cite>LaurentLM:</cite> We have Colibrio and EDRLab<br>
+<span id=194e>… which should be good</span></p>
+<p id=b500 class="phone s02"><cite>ivan:</cite> No, sorry. There are 2 independent implementations, but the minimum of 2 should require interchange as well<br>
+<span id=8708>… so we need more than 2, maybe 3 or 4</span></p>
+<p id=3a6f class="phone s01"><cite>LaurentLM:</cite> Are you sure that using the Readium kit at different companies won't count as multiple impls?</p>
+<p id=4bf2 class="phone s02"><cite>ivan:</cite> No, it is like Google and Brave implementing the same thing. They are considered the same impl<br>
+<span id=625f>… I would like it to be a rec, but I am trying to defend against objections</span></p>
+<p id=10000 class="phone s03"><cite>George:</cite> Rick Johnson and VitalSource are interested in interchange<br>
+<span id=e9f5>… They are also interested in citations. They are no longer members, but I can check if they are implementing</span><br>
+<span id=5ea5>… they are not in WG</span></p>
+<p id=163c class="phone s02"><cite>ivan:</cite> That is ok<br>
+<span id=5b95>… CR does not require they be W3C members</span></p>
+<p id=ab15 class=summary>ach George</p>
+<p id=559f class="phone s04"><cite>duga:</cite> So Note to rec is an issue, what about the other direction?</p>
+<p id=c67b class="phone s02"><cite>ivan:</cite> No, not a problem, it would just stay as a working draft</p>
+<p id=10001 class="phone s01"><cite>LaurentLM:</cite> I would be in favor of going to rec track<br>
+<span id=79fe>… Note is ok at first, but it is a problem for wider adoption</span></p>
+<p id=7b01 class="phone s01"><cite>LaurentLM:</cite> Back to documentation</p>
+<p id=9e31 class="phone s02"><cite>ivan:</cite> Should be in the 3.4 line in github</p>
+<p id=5a82 class="phone s01"><cite>LaurentLM:</cite> Yes, with folder name annotations<br>
+<span id=ca5d>… Next item is process and use cases</span></p>
+</section>
+
+<section>
+<h3 id=0d8c>Use cases</h3>
+<p id=01c2 class="phone s01"><cite>LaurentLM:</cite> we should start with them, ok?</p>
+<p id=a7de class="phone s02"><cite>ivan:</cite> Yes, definitely</p>
+<p id=4862 class="phone s01"><cite>LaurentLM:</cite> I have a Google doc that I started<br>
+<span id=0666>… we can move to github later</span></p>
+<p id=6986 class=irc><cite>&lt;LaurentLM&gt;</cite> link to the temporary google doc: <a href="https://docs.google.com/document/d/12V_HTYNTQhrAcqT3ve0mMd8GIeybEMq9B5Q7D1M4FdI/edit?tab=t.0">https://<wbr>docs.google.com/<wbr>document/<wbr>d/<wbr>12V_HTYNTQhrAcqT3ve0mMd8GIeybEMq9B5Q7D1M4FdI/<wbr>edit?tab=t.0</a></p>
+<p id=4b9c class="phone s01"><cite>LaurentLM:</cite> It would be good to add to this document in the next few days, then we can move the best ones to github</p>
+<p id=1e80 class="phone s02"><cite>ivan:</cite> So 1 paragraph is 1 use case?</p>
+<p id=6389 class="phone s01"><cite>LaurentLM:</cite> Yes</p>
+<h4 id=b4af>Simple annotation</h4>
+<p id=c872 class=irc><cite>&lt;LaurentLM&gt;</cite> first use case : A user decides to annotate a textual section of an EPUB. He selects the section, triggers the annotation affordance, optionally enters a note, selects a highlight mode and color. He then saves the annotation. The selected section appears on the page with the chosen highlight.</p>
+<p id=84d2 class=irc><cite>&lt;LaurentLM&gt;</cite> comments?</p>
+<p id=ae2d class="phone s02"><cite>ivan:</cite> We already have annotations, the important thing is the interchange<br>
+<span id=ff1f>… do we even need this one? Since it already exists</span><br>
+<span id=b1c2>… looking for other use cases for the web, but I am not finding them</span><br>
+<span id=4cee>… what we really care about is how are these different from web annotations</span></p>
+<p id=45b8 class="phone s01"><cite>LaurentLM:</cite> W3C annotations has so much in it. Maybe we should close the door on unnecessary things</p>
+<p id=1b95 class="phone s02"><cite>ivan:</cite> The use case doc structure is ours, we could start with exactly that<br>
+<span id=75de>… e.g. &quot;web annotations allows, but we don't need&quot; at the start of the use cases</span></p>
+<p id=eea5 class="phone s03"><cite>George:</cite> A simple use case, I read in Thorium, annotate, then open the same book on the phone in a different app<br>
+<span id=17f3>… That isn't even between people</span></p>
+<p id=2cc0 class="phone s01"><cite>LaurentLM:</cite> That is on the list near the top</p>
+<h4 id=eae8>Annotating images, videos</h4>
+<p id=1289 class=irc><cite>&lt;LaurentLM&gt;</cite> second one: A user decides to annotate an image of an EPUB. He selects the image and triggers the annotation affordance. The annotation feature is then identical to the one associated with a textual selection.</p>
+<p id=2963 class="phone s01"><cite>LaurentLM:</cite> There are some obvious ones before it, but the only one I want to call out is images, etc<br>
+<span id=efed>… we should probably discuss this</span></p>
+<p id=5363 class="phone s03"><cite>George:</cite> There are a couple of AI tools to get the description of the image<br>
+<span id=7203>… I could annotate the image with that, but I may need a sighted user to confirm the annotation</span></p>
+<p id=2e7c class="phone s03"><cite>George:</cite> Just select it and annotate</p>
+<p id=2aea class="phone s01"><cite>LaurentLM:</cite> In Thorium, that ability doesn't exist<br>
+<span id=05c1>… This will inform our choice of selectors</span></p>
+<p id=209e class="phone s03"><cite>George:</cite> What about figures?</p>
+<p id=c486 class="phone s01"><cite>LaurentLM:</cite> If we require images, we will get figures</p>
+<p id=4f2d class="phone s02"><cite>ivan:</cite> Apart from the tech issues, what are the arguments for not annotating images?<br>
+<span id=9629>… It seems fine in a use case document</span></p>
+<p id=92a5 class="phone s04"><cite>duga:</cite> Do we need all the possibilities?</p>
+<p id=b292 class="phone s01"><cite>LaurentLM:</cite> There are definitely technical issues with some of these things<br>
+<span id=8102>… maybe we can add a use case for images, but not video, etc?</span></p>
+<p id=4f90 class="phone s02"><cite>ivan:</cite> Just because it is in the use case document, doesn't mean we don't have to support it<br>
+<span id=094a>… If it is a valid use case, we should add it, then explain why we are not supporting the use case</span><br>
+<span id=af6f>… technical issues aside, it is a valid use case</span></p>
+<p id=da16 class="phone s01"><cite>LaurentLM:</cite> So we can have use cases that are not in the requirements list?</p>
+<p id=9fc9 class="phone s02"><cite>ivan:</cite> Yes</p>
+<p id=98eb class="phone s01"><cite>LaurentLM:</cite> Ok, we can dream in the use cases</p>
+<h4 id=8217>Adding tags</h4>
+<p id=0b03 class=irc><cite>&lt;LaurentLM&gt;</cite> third one: A user creates an annotation. He can categorise this annotation with a string (let’s call it a tag), so that annotations can easily be grouped together. Examples: “analysis”, “to be discussed”.</p>
+<p id=10002 class="phone s01"><cite>LaurentLM:</cite> there is another small use case<br>
+<span id=dac3>… categorization</span><br>
+<span id=1b03>… Being able to add a label</span><br>
+<span id=6555>… So the annotator can add some semantics</span></p>
+<p id=621c class="phone s04"><cite>duga:</cite> Is this use case valid for us? Since we are specing interchange</p>
+<p id=a810 class="phone s01"><cite>LaurentLM:</cite> If we have the possibility to tag, then we will need this in interchange</p>
+<p id=59f8 class="phone s02"><cite>ivan:</cite> The real use case is adding categories to the interchange</p>
+<p id=a3b0 class="phone s01"><cite>LaurentLM:</cite> I will move this to the last section for interchange<br>
+<span id=d361>… and clarify</span></p>
+<h4 id=a334>Bookmarks</h4>
+<p id=ea09 class=irc><cite>&lt;LaurentLM&gt;</cite> next use case: A user decides to bookmark a location in an EPUB. The current cursor is used as an anchor. He selects the section. He triggers the annotation affordance, optionally enters a note, selects a highlight mode and color. He then saves the annotation. A bookmark icon appears on the page, near the line where the cursor was positioned when the bookmark was created.</p>
+<p id=ddf9 class="phone s01"><cite>LaurentLM:</cite> People also want to share bookmarks, it is not clear if the current spec covers bookmarks</p>
+<p id=583b class="phone s05"><cite>Hadrien:</cite> You have bookmarks and highlights, and either can be annotated<br>
+<span id=4ff5>… a highlight is essentially a range, but a bookmark isn't</span><br>
+<span id=79a0>… an annotation is complementary to those two (highlight and annotation)</span></p>
+<p id=f003 class="phone s02"><cite>ivan:</cite> I agree with Hadrien<br>
+<span id=6f67>… We are talking annotations and selectors, a selector could be a range or a bookmark</span><br>
+<span id=ce77>… we need to add them both to use cases, and yes they should be separated</span><br>
+<span id=84dd>… in the bookmarks use case, a big difference between an epub and web page, a book is typically much longe</span><br>
+<span id=f243>… it is unusual for someone to read the whole epub in one go</span><br>
+<span id=7323>… so we need to clarify in the use cases that there is an emphasis difference here</span></p>
+<p id=d40e class="phone s03"><cite>George:</cite> I see 3 or 4 items in this annotation. I see a tag, a color, the content, and one bookmark (the location)<br>
+<span id=9f77>… so when I move devices I have a last known reading position</span></p>
+<p id=6a1f class="phone s01"><cite>LaurentLM:</cite> I didn't put this in the use cases, since this is not a user action, but rather is automatic</p>
+<p id=fc7b class="phone s03"><cite>George:</cite> I don't know if that is a flag that goes across users<br>
+<span id=6372>… in schools teachers want to know amount read, etc, but we aren't going there, we are just looking at the annotation transfer</span></p>
+<p id=10003 class="phone s05"><cite>Hadrien:</cite> I would treat last known reading position as different from a bookmark, and typically that can't be annotated<br>
+<span id=068d>… And the progression is transient, so it may not be very interesting for this work</span><br>
+<span id=ec1f>… It seems better for syncing across devices, so I would exclude it from our use cases</span></p>
+<p id=d959 class="phone s01"><cite>LaurentLM:</cite> But when I export wouldn't it be interesting to export it?</p>
+<p id=c259 class="phone s05"><cite>Hadrien:</cite> maybe, but not for sharing</p>
+<p id=96b1 class="phone s01"><cite>brady:</cite> if I'm jumping between devices, I might want my reading position to follow, not in other use cases. Make it optional in the RS is a UX complexity. My alternative is to explicitly add a bookmark if I want to export it. It is almost an implementation detail. We should not muddy the waters with this current position</p>
+<p id=4241 class="phone s01"><cite>LaurentLM:</cite> We are at time, if everyone could review the use cases and add as needed, and we can finalize the next time we meet</p>
+<p id=2ba0 class="phone s03"><cite>George:</cite> Will we move this into the repo?</p>
+<p id=10004 class="phone s01"><cite>LaurentLM:</cite> Yes. Should we allow some editing first, or move it now?</p>
+<p id=18ac class="phone s03"><cite>George:</cite> I prefer github</p>
+<p id=bff4 class="phone s02"><cite>ivan:</cite> Let's take it offline</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+
+</body>
+</html>

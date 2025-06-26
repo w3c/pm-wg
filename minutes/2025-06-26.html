@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 26 June 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>26 June 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Jun/0023.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/06/26-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, duga, George, Hadrien, ivan, LaurentLM, MasakazuKitahara, mgarrish, shiestyle, sue-neu,  toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>Gautier, Gregorio</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>sue-neu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#dc1f">PR 2742 - w3c/<wbr>epub-specs#2742</a></li>
+<li><a href="#ea9a">PR 2735 - w3c/<wbr>epub-specs#2735</a></li>
+<li><a href="#7586">PR 2731 - w3c/<wbr>epub-specs#2731</a></li>
+<li><a href="#88f0">PR 2730 - w3c/<wbr>epub-specs#2730</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=d66e class="phone s01"><cite>wendyreid:</cite> today we have some PRs that deserve attention</p>
+</section>
+
+<section>
+
+<h3 id=dc1f>PR 2742 - <a href="https://github.com/w3c/epub-specs/pull/2742">w3c/<wbr>epub-specs#2742</a></h3>
+<p id=96d8 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://pr-preview.s3.amazonaws.com/w3c/epub-specs/pull/2742.html">https://<wbr>pr-preview.s3.amazonaws.com/<wbr>w3c/<wbr>epub-specs/<wbr>pull/<wbr>2742.html</a></p>
+<p id=8411 class="phone s01"><cite>wendyreid:</cite> the first one is about reserved prefixes<br>
+<span id=aa92>… this fixes a related issue about reserved prefixes and obsoleting some that haven't been used</span></p>
+<p id=a060 class="phone s02"><cite>mgarrish:</cite> some of these links go to a 404<br>
+<span id=1e18>… what can we do to help people understand what these are now that there are not relevant</span><br>
+<span id=b773>… we added a new column to the table with more explanation</span></p>
+<p id=2e7e class="phone s03"><cite>ivan:</cite> how will we be handling this kind of thing?<br>
+<span id=1898>… the vocabulary is a good example. We didn't take it out</span><br>
+<span id=a07b>… because of backward compatibility</span><br>
+<span id=8779>… how long do we want to keep things like this in the specification?</span><br>
+<span id=6607>… if we were not dedicated to backward compatibility we would probably remove things like this</span></p>
+<p id=3b4d class="phone s02"><cite>mgarrish:</cite> I think it is kind of silly that we have to retain these things but we have to think of backward compatibility</p>
+<p id=badc class="phone s02"><cite>mgarrish:</cite> if we take them out I would love to know who ever implemented these things</p>
+<p id=ab52 class="phone s04"><cite>CharlesL:</cite> does it make sense to delete the ones without a valid link</p>
+<p id=fa4c class="phone s02"><cite>mgarrish:</cite> if you don't know about these identifiers, it is helpful to add a proper link that we can maintain</p>
+<p id=47d4 class="phone s05"><cite>George:</cite> Why don't we just get rid of it? If someone is using it then they can complain</p>
+<p id=89de class="phone s01"><cite>wendyreid:</cite> that is compelling for the ones no longer maintained</p>
+<p id=589f class="phone s03"><cite>ivan:</cite> the charter says that any 3.1  3.3 document should be backward compatible in 3.4<br>
+<span id=ffff>… then epubcheck might flag these terms as errors</span><br>
+<span id=87da>… we will never know if anyone uses these</span></p>
+<p id=6671 class="phone s02"><cite>mgarrish:</cite> we can never be sure it is used</p>
+<p id=68e6 class="phone s06"><cite>duga:</cite> alternatively could we say &quot;this is a collection of deprecated prefixes&quot;<br>
+<span id=cc48>… they still exist in the spec, just don't use them</span><br>
+<span id=3ea0>… they are still in epub check and we just never remove them</span></p>
+<p id=6951 class="phone s02"><cite>mgarrish:</cite> then we need to decide if we flag all deprecated features</p>
+<p id=a34e class=irc><cite>&lt;CharlesL&gt;</cite> +1 to Brady's suggestion. and bring up a warning in EPUBCheck</p>
+<p id=bc5b class="phone s01"><cite>wendyreid:</cite> it might not be bad if epub check flags deprecated prefixes</p>
+<p id=2cc9 class="phone s06"><cite>duga:</cite> if we really want links we can use internet archive or just let other people look there</p>
+<p id=7f8f class="phone s03"><cite>ivan:</cite> let's keep it as we have it in the PR, but for our next charter, let ourselves delete some unused stuff</p>
+<p id=cd56 class="phone s06"><cite>duga:</cite> that makes sense, can we track the things we would like to delete? So we can go back to it?</p>
+<p id=332d class="phone s03"><cite>ivan:</cite> maybe the deprecated flag would be the best way to do that<br>
+<span id=412b>… then we can add &quot;everything will be retained except deprecated features&quot; in the next charter</span></p>
+<p id=abfa class="phone s02"><cite>mgarrish:</cite> would that suggest we change the PR and put them in the deprecated section?</p>
+<p id=5c6a class="phone s03"><cite>ivan:</cite> to be procedural, we should pass a resolution that deprecated features will be removed in our next charter</p>
+<p id=1af0 class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: Deprecated features in EPUB 3.4 will be removed in future versions of the spec.</p>
+<p id=afb6 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=2fb6 class=irc><cite>&lt;sue-neu&gt;</cite> +1</p>
+<p id=6fb6 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=afb7 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=afb8 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=2fb7 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=2fb8 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=6fb7 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=afb9 class=irc><cite>&lt;George&gt;</cite> +1</p>
+<p id=efb7 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=efb8 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=dde2 class=resolution><strong>RESOLUTION:</strong> Deprecated features in EPUB 3.4 will be removed in future versions of the spec.</p>
+<p id=fa47 class="phone s07"><cite>hadrien:</cite> I have a somewhat long list of things I'd like to see deprecated<br>
+<span id=236e>… what is the best course of action?</span><br>
+<span id=0f9f>… I did a presentation on the misuse of some properties</span><br>
+<span id=5965>… some of it comes from the work of the comics group</span></p>
+<p id=cdbe class="phone s03"><cite>ivan:</cite> this would be good for the f2f</p>
+<p id=a226 class="phone s01"><cite>wendyreid:</cite> it would be good to open an issue so people can think about it ahead of time</p>
+<p id=4b6d class="phone s01"><cite>wendyreid:</cite> matt will have to make some edits to that PR</p>
+</section>
+
+<section>
+<h3 id=ea9a>PR 2735 - <a href="https://github.com/w3c/epub-specs/pull/2735">w3c/<wbr>epub-specs#2735</a></h3>
+<p id=6064 class="phone s01"><cite>wendyreid:</cite> the next is about ITS attributes</p>
+<p id=22c6 class="phone s03"><cite>ivan:</cite> there is a set of attributes that look like the ARIA attributes defined by the W3C for internationalization<br>
+<span id=cc5c>… like setting the translation of terms, setting aside language portions</span><br>
+<span id=cf1a>… these attributes are not recognized in epub or an extension to HTML</span><br>
+<span id=cb1b>… i ran into this problem changing a document into Chinese</span><br>
+<span id=2330>… it was written with 3 different director sets</span><br>
+<span id=b128>… epubcheck rejects this because it is not accepted</span></p>
+<p id=995d class="phone s02"><cite>mgarrish:</cite> we were wondering if it would be easier to add extensions going forward</p>
+<p id=054d class="phone s02"><cite>mgarrish:</cite> we would just add another extension section with optional reading system support</p>
+<p id=f2c6 class="phone s08"><cite>wendy:</cite> so we want to change this to an extension section?<br>
+<span id=fe94>… any opposition to merging this?</span></p>
+</section>
+
+<section>
+<h3 id=7586>PR 2731 - <a href="https://github.com/w3c/epub-specs/pull/2731">w3c/<wbr>epub-specs#2731</a></h3>
+<p id=3fdf class="phone s08"><cite>wendy:</cite> seeing none, we will move on</p>
+<p id=82c9 class="phone s01"><cite>wendyreid:</cite> formulating the evaluation dates</p>
+<p id=10000 class="phone s02"><cite>mgarrish:</cite> we didn't formalize a format for the date<br>
+<span id=9c4f>… the problem is how to localize the date when we don't know the format of the date</span><br>
+<span id=a159>… we could choose an existing format, and likely exclude the time</span><br>
+<span id=b68a>… and will this affect existing content</span><br>
+<span id=3ee8>… and have we already committed to bumping the conformance number</span><br>
+<span id=45c5>… if not, this affect all existing content that conforms to the current version</span><br>
+<span id=dc85>… are we proceeding on requiring access mode sufficient and is it OK to add this when we bump up the number?</span></p>
+<p id=c511 class="phone s09"><cite>AvneeshSingh:</cite> we will discuss this in an upcoming meeting in the WG<br>
+<span id=7727>… we will elevate it to a must follow and see how the community responds</span><br>
+<span id=6f83>… we are moving ahead with precautions ACE will flag it</span><br>
+<span id=bc92>… I am worried if we make the date a must at this point, we would get downstream errors</span></p>
+<p id=e7cf class="phone s02"><cite>mgarrish:</cite> maybe we keep a separate list of items that we would return to if we change conformance numbers</p>
+<p id=6f19 class="phone s07"><cite>Hadrien:</cite> I don't see the point of this change as a must statement<br>
+<span id=fd0a>… what is the value of this change to the user? When you localize the date</span><br>
+<span id=9248>… you can choose what to display. At best this could be a &quot;should&quot;</span><br>
+<span id=08fd>… especially since there are potential validation problems</span></p>
+<p id=90d6 class="phone s02"><cite>mgarrish:</cite> I see what you're saying, but at this time we have no suggestion about how to express the date</p>
+<p id=10001 class="phone s07"><cite>Hadrien:</cite> as long as it is based on an existing format, we can work with it</p>
+<p id=2759 class="phone s05"><cite>George:</cite> identifying the date format seems like standards work<br>
+<span id=9fa6>… if we change the conformance number, it gives us more freedom</span></p>
+<p id=40c9 class="phone s04"><cite>CharlesL:</cite> the reading system or bookstore can always display it how they choose<br>
+<span id=253e>… having a standard format will help it be changed to the local language</span><br>
+<span id=6200>… so we need to go with the ISO</span><br>
+<span id=c41a>… as far as requiring it, we can start requiring, it has been optional, but we tell everyone to put it in</span><br>
+<span id=aa0d>… we can discuss this in our next WG call</span><br>
+<span id=9e0d>… I agree with George that we should plan to update the conformance number</span></p>
+<p id=9c50 class="phone s02"><cite>mgarrish:</cite> if we don't make it a requirement we will never really be sure what we get when processing this data<br>
+<span id=a3de>… if we made it a must we would know we could trust the required date format after a certain point</span><br>
+<span id=ce66>… we don't know what the date will contain if we don't do some testing</span></p>
+<p id=57fe class="phone s09"><cite>AvneeshSingh:</cite> does the backward compatibility clause get violated if we make these kinds of changes</p>
+<p id=5c13 class="phone s03"><cite>ivan:</cite> the conformance in the charter never really explicitly refers to the accessibility metadata, we are in a gray area<br>
+<span id=faad>… it refers to in practice what epub check checks</span></p>
+<p id=c02b class="phone s04"><cite>CharlesL:</cite> similar to &quot;conforms to&quot; if you have that then you must put in &quot;certified by&quot;<br>
+<span id=ec7a>… maybe it could be if you include a certified date it should conform to an ISO standard</span></p>
+<p id=de8f class="phone s02"><cite>mgarrish:</cite> that is what this change does</p>
+<p id=d75a class="phone s01"><cite>wendyreid:</cite> This change is OK, but we shouldn't make it a must?</p>
+<p id=c5e6 class="phone s02"><cite>mgarrish:</cite> right now we will accept any date format from the date section, make it a &quot;should&quot; and see what happens</p>
+<p id=643f class="phone s04"><cite>CharlesL:</cite> I don't know that we need to include the date/time, but its OK as long as the time is ISO standard</p>
+<p id=2cb5 class="phone s07"><cite>Hadrien:</cite> One of the reasons we should be looser about the format is we don't know what people have in their systems<br>
+<span id=ece5>… if people use a timezone for instance, we can deal with that</span><br>
+<span id=681d>… we shouldn't force things that aren't necessary</span></p>
+<p id=4096 class=irc><cite>&lt;CharlesL&gt;</cite> +1 to Hadrien</p>
+<p id=0fab class="phone s08"><cite>Wendy:</cite> any opposition to making this a &quot;should&quot; and adding date/time</p>
+<p id=5537 class="phone s09"><cite>AvneeshSingh:</cite> let's wait to merge this until after the Accessibility WG</p>
+<p id=93fe class=irc><cite>&lt;CharlesL&gt;</cite> I also agree this should be a MUST</p>
+<p id=cac8 class="phone s06"><cite>duga:</cite> I prefer making it a must and updating the conformance number</p>
+<p id=8185 class="phone s02"><cite>mgarrish:</cite> if it isn't a must, ACE can bump it up as a serious error</p>
+<p id=605f class="phone s10"><cite>shiestyle:</cite> This date is not mandatory, right?<br>
+<span id=49d4>… from a publisher's point of view we generate epub, and we have to change it because the date appeared, many publishers will use this, but this looks like tricky metadata</span></p>
+<p id=189b class="phone s02"><cite>mgarrish:</cite> it isn't required, but it is a good record, for knowing when their accessibility was last done</p>
+<p id=70e8 class="phone s02"><cite>mgarrish:</cite> the more important part is getting the accessibility review is done</p>
+<p id=b88c class="phone s01"><cite>wendyreid:</cite> if you're running ACE, you'll get an error, but not from EPUB check</p>
+<p id=30aa class="phone s04"><cite>CharlesL:</cite> does ONIX have a similar field?</p>
+<p id=ca60 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://ns.editeur.org/onix/en/196/91">https://<wbr>ns.editeur.org/<wbr>onix/<wbr>en/<wbr>196/<wbr>91</a></p>
+<p id=95d0 class="phone s01"><cite>wendyreid:</cite> it is number 91, latest accessibility assessment date<br>
+<span id=8a20>… so we'll let the Accessibility TF talk about this first, if they are happy, then we can merge it</span></p>
+</section>
+
+<section>
+<h3 id=88f0>PR 2730 - <a href="https://github.com/w3c/epub-specs/pull/2730">w3c/<wbr>epub-specs#2730</a></h3>
+<p id=ec87 class=irc><cite>&lt;ivan&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2714">w3c/<wbr>epub-specs#2714</a></p>
+<p id=3d79 class="phone s01"><cite>wendyreid:</cite> adding pagebreak source to the metadata vocabulary property</p>
+<p id=2574 class="phone s07"><cite>Hadrien:</cite> a general comment, how useful is this?<br>
+<span id=3dda>… in practice I don't see how we can use this if we get an identifier we don't know about</span><br>
+<span id=8551>… we can't properly display it. It is hard to make use of this</span><br>
+<span id=bce6>… in ONIX it is pretty coming to know about the other format of a book</span><br>
+<span id=37eb>… in a EPUB context I'm not sure what to do with this</span></p>
+<p id=c149 class="phone s04"><cite>CharlesL:</cite> this is useful when the end user is creating references to data<br>
+<span id=bd30>… it is more for citing passages by students or scholarly publishing</span></p>
+<p id=ccc4 class="phone s01"><cite>wendyreid:</cite> it doesn't have to be an ISBN, maybe we can be more specific and suggest a URL<br>
+<span id=9d09>… I see your point about this being difficult to display</span><br>
+<span id=2895>… maybe this is also a question for the annotations group</span></p>
+<p id=b3c7 class="phone s02"><cite>mgarrish:</cite> the usefulness if for education purposes<br>
+<span id=8f96>… in terms of adding this to the spec. This is trying to address cases</span><br>
+<span id=d096>… when a book has no print source</span><br>
+<span id=b8a7>… this is an invitation to make our own standard and no rely on a dc:source</span><br>
+<span id=960e>… we can continue working on improving it</span></p>
+<p id=cdf3 class="phone s01"><cite>wendyreid:</cite> is there any opposition to merging this as a step forward?<br>
+<span id=a8a3>… alright, cool</span><br>
+<span id=9424>… we don't have time for the last one</span></p>
+<p id=f622 class="phone s02"><cite>mgarrish:</cite> I'm holding off on this it is bound up in us bumping up the conformance version<br>
+<span id=b7a1>… a question of making AccessModeSufficient a must and compatible with the current ISO version</span><br>
+<span id=c0d9>… we may want to wait on this</span></p>
+<p id=f9cc class="phone s01"><cite>wendyreid:</cite> I will put an &quot;on hold&quot; label on it</p>
+<p id=cc62 class=irc><cite>&lt;LaurentLM&gt;</cite> move to #pm-ann</p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#dde2">Deprecated features in EPUB 3.4 will be removed in future versions of the spec.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
