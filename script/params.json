@@ -7,7 +7,7 @@
     "resolution_template_id" : "list-of-resolutions",
     "taskForces" : {
         ""     : "Working group",
-        "f2f"  : "Group face to face",
+        "f2f"  : "Working group face to face",
         "a11y" : "Accessibility task force",
         "ann"  : "EPUB annotations task force",
         "dc"   : "Digital comics task force",
