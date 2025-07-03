@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Digital Comics TF &ndash; 03 July 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>&
+Digital Comics TF</h1>
+<h2>03 July 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/07/03-pm-dc-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>duga, gautierchomel, Hadrien, LaurentLM, MasakazuKitahara, shiestyle, toshiakikoike</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Hadrien Gardeur, Shinya Takami</dd>
+<dt>Scribe</dt><dd>duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#3777">Discussion: Digital Comic issues</a></li>
+<li><a href="#b12e">Discussion: Optional specs for scrolled comics</a></li>
+<li><a href="#a11e">Agenda for next time</a></li>
+<li><a href="#7b68">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=3777>Discussion: Digital Comic issues</h3>
+<p id=cf2d class="phone s01"><cite>shiestyle:</cite> We have some issues from Hadrien</p>
+<p id=602d class="phone s02"><cite>Hadrien:</cite> yes, let go over them<br>
+<span id=b30f>… in the layout section, there are a lot of properties handling layout</span><br>
+<span id=1a70>… For the layout overrides we can say they are flowing or pre-paginated</span><br>
+<span id=bc21>… it is possible to override on a per-resource manner</span><br>
+<span id=6dd0>… I am not sure if it is supported or if it is a good use case</span></p>
+<p id=1084 class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2749">w3c/<wbr>epub-specs#2749</a></p>
+<p id=203e class="phone s02"><cite>Hadrien:</cite> it's one thing we added that doesn't make sense. And particularly with scrolled content it can be very confusing<br>
+<span id=2db1>… the only use case is very education focused uses, for example at Hachette</span><br>
+<span id=30ae>… it is very specialized, so I don't think we should allow it</span><br>
+<span id=9bf5>… especially when we have scrolled</span></p>
+<p id=b72b class="phone s03"><cite>duga:</cite> I think it does actually have some use, but it isn't really supported so we may need to deprecate</p>
+<p id=2945 class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2750">w3c/<wbr>epub-specs#2750</a></p>
+<p id=514a class="phone s02"><cite>Hadrien:</cite> It's been there for a long time, we need to adapt to reality</p>
+<p id=7e32 class="phone s02"><cite>Hadrien:</cite> next issue, mix of scrolled and paged<br>
+<span id=cc69>… reflow really isn't about publsher control, it should be up to users</span><br>
+<span id=a7e2>… I am worried about removing from the spine, due to the previous comics implementation from Japan</span><br>
+<span id=c007>… I don't think publishers should control this, and most RSes don't support this</span></p>
+<p id=ffaa class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2751">w3c/<wbr>epub-specs#2751</a></p>
+<p id=7743 class="phone s02"><cite>Hadrien:</cite> next one is for FL, and it is for orientation<br>
+<span id=919c>… The content author shouldn't have a say here</span><br>
+<span id=cf67>… and it is even an a11y issue</span><br>
+<span id=a79f>… So it is problematic from an EAA perspective</span><br>
+<span id=d29a>… there seems to be a lot of support to deprecate</span><br>
+<span id=8c08>… it seems misguided and shouldn't be there</span></p>
+<p id=7e88 class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2753">w3c/<wbr>epub-specs#2753</a></p>
+<p id=535a class="phone s02"><cite>Hadrien:</cite> next, when should spreads be used or not. You can do it both at the spine and item levels<br>
+<span id=ba40>… it is usually misused.</span><br>
+<span id=0e48>… I think sometimes people left spread-none or spread-both, and the pub just left it there</span><br>
+<span id=7da6>… And it varies by device</span><br>
+<span id=0954>… there was one comment about spread-none being correctly used, but spread placement is a good replacement for it</span><br>
+<span id=ceff>… You can't do that for the entire spine, but it can be put on every spine item</span><br>
+<span id=a8cf>… and this is usually misused. And comics apps usually let you decide</span><br>
+<span id=7805>… I think it should all be deprecated</span><br>
+<span id=b5d7>… So even if we support just none, it will still have some bad impacts on titles</span></p>
+<p id=799d class="phone s01"><cite>shiestyle:</cite> In Japan we use both none and center</p>
+<p id=a044 class="phone s02"><cite>Hadrien:</cite> Well you can use spread placement</p>
+<p id=1de6 class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2754">w3c/<wbr>epub-specs#2754</a></p>
+<p id=2b6f class="phone s02"><cite>Hadrien:</cite> so next it is using flow as metadata (not on spine items)<br>
+<span id=6578>… flow as metadata we might want to deprecate everything except continuous at the top level</span><br>
+<span id=0f45>… just for the existing comics impl</span><br>
+<span id=0d68>… Otherwise I would say we should deprecate it all</span></p>
+<p id=a192 class="phone s01"><cite>shiestyle:</cite> We just really need scrolled-continuous<br>
+<span id=1524>… at least for a while</span></p>
+<p id=a966 class="phone s02"><cite>Hadrien:</cite> And yes, I acknowledge that<br>
+<span id=99d3>… it all kind of depends on what deprecated means</span></p>
+<p id=58d1 class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2755">w3c/<wbr>epub-specs#2755</a></p>
+<p id=5ddb class="phone s02"><cite>Hadrien:</cite> and the last one I brought up at TPAC last year<br>
+<span id=06df>… Everyone either includes spread placement all the time, or they never include it at all</span><br>
+<span id=4046>… but the spec says you shouldn't use it unless it is meaningful (e.g. a true spread)</span><br>
+<span id=a3dc>… there are two groups, one wants placement exactly where it should be, the other is following Apple Books (cover is center, then starts left-right alternation)</span><br>
+<span id=87e4>… true spread is a red herring, since you can't tell from the metadata</span><br>
+<span id=cea7>… we may need to realign with reality</span></p>
+<p id=97c5 class="phone s01"><cite>shiestyle:</cite> We can't remove those, we can't really deprecate</p>
+<p id=ce85 class="phone s02"><cite>Hadrien:</cite> This is about dropping the concept of true spread, and specifying how the first item is displayed<br>
+<span id=4588>… so we shouldn't deprecate, we just need to clarify</span><br>
+<span id=63ca>… but this is clearly used and important</span></p>
+<p id=0c26 class="phone s04"><cite>LaurentLM:</cite> So all the proposals for deprecation are all linked to allowing the publisher to have power, and we have discovered that the user has control</p>
+<p id=d285 class="phone s03"><cite>duga:</cite> A lot  of these were hints, not meant to be required</p>
+<p id=a465 class="phone s02"><cite>Hadrien:</cite> The WG needs to discuss these, some may need to wait for TPAC<br>
+<span id=6cec>… and a lot will depend on what deprecation means</span><br>
+<span id=9cfb>… overall these changes will make comics simpler</span></p>
+</section>
+
+<section>
+<h3 id=b12e>Discussion: Optional specs for scrolled comics</h3>
+<p id=247f class="phone s01"><cite>shiestyle:</cite> let's move on to the next topic<br>
+<span id=652a>… scroll direction is one, but direction probably isn't needed for scrolled</span><br>
+<span id=260c>… since it is just up and down</span></p>
+<p id=21b4 class="phone s02"><cite>Hadrien:</cite> We plan to work on a PR for scrolled<br>
+<span id=b75d>… initial PR won't include optional items</span><br>
+<span id=5ff1>… it will just have layout scrolled, and only at the spine level</span><br>
+<span id=61b0>… Once that is done we should decide if there is anything else we need</span><br>
+<span id=e087>… for instance, support for multiple episodes</span><br>
+<span id=400c>… In Japan it is largely a sold per episode, but outside it may be easier to sell content as bundles of episodes</span><br>
+<span id=00b1>… If we want multiple episodes in one comic, do we need a way to say this is the end of the current scroll, or the end of the current episode?</span><br>
+<span id=8733>… I had proposed a way of specifying the end of scroll</span><br>
+<span id=1797>… but you could also do it with ARIA that indicates episode</span><br>
+<span id=f8ec>… and then reading systems could decide episode nav</span><br>
+<span id=8eee>… typically continuous scroll is inside an episode only, then there is UI to skip to the next one</span></p>
+<p id=ff86 class="phone s01"><cite>shiestyle:</cite> It depends on the UI of reading systems how to advance, we should discuss with RS implementers</p>
+<p id=d29c class="phone s02"><cite>Hadrien:</cite> The more I think about it, the less I like rendering control and the more I prefer semantics to provide the RS useful information<br>
+<span id=f6f9>… then the UI is up to the RS</span></p>
+<p id=1c46 class="phone s01"><cite>shiestyle:</cite> As a next step, will you have an issue or PR to propose this?</p>
+<p id=ebee class="phone s02"><cite>Hadrien:</cite> I can open an issue, and I would like to add the concepts of season and chapter, and maybe volume<br>
+<span id=21c0>… sometimes you have multiple volumes with multiple issues</span><br>
+<span id=f60a>… so I would like to have these added to aria, and I can summarize in an issue</span><br>
+<span id=c439>… this would also help with manga</span></p>
+<p id=8d8b class="phone s02"><cite>Hadrien:</cite> I agree about directions. There are some experimental ones that go in different directions<br>
+<span id=f48b>… so if we are pragmatic we can assume up/down only</span></p>
+<p id=a2b7 class="phone s04"><cite>LaurentLM:</cite> I think it can wait, as you say it is experimental</p>
+<p id=e6da class="phone s02"><cite>Hadrien:</cite> I am happy to add the semantics<br>
+<span id=8bd0>… if we get quick agreement on the semantics we could do a PR with semantics and scrolled</span></p>
+<p id=a2ac class="phone s05"><cite>duga:</cite> I prefer more smaller PRs</p>
+</section>
+
+<section>
+<h3 id=a11e>Agenda for next time</h3>
+<p id=a58b class="phone s02"><cite>Hadrien:</cite> We are done with the agenda for today, next time I would like to see images in spine as our next topic<br>
+<span id=14e2>… this would be very good for comics and make them easier to create</span></p>
+</section>
+
+<section>
+<h3 id=7b68>AOB</h3>
+<p id=4af3 class="phone s01"><cite>shiestyle:</cite> Next call in two weeks</p>
+<p id=1e67 class="phone s02"><cite>Hadrien:</cite> do we continue during the holidays? Do we skip anything?</p>
+<p id=98bc class="phone s01"><cite>shiestyle:</cite> Let's discuss on the mailing list</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Succeeded: s/maga/manga/</p>
+<p class=warning>All speakers: duga, duga7, Hadrien, LaurentLM, shiestyle</p>
+<p class=warning>Active on IRC: duga7, gautierchomel, Hadrien, LaurentLM, MasakazuKitahara, shiestyle, toshiakikoike</p>
+</div>
+</body>
+</html>

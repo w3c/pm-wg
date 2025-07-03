@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 03 July 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>03 July 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Jul/0001.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/07/03-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, duga, gautierchomel, George, gpellegrino, Hadrien, ivan, LaurentLM, MasakazuKitahara, mgarrish, shiestyle, sue-neu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#7a67">Remove the draft edupub terms - w3c/<wbr>epub-specs#2744</a></li>
+<li><a href="#9eb5">HTML Survey</a></li>
+<li><a href="#6f81">Overview of the Digital Publishing Summit</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=7a67>Remove the draft edupub terms - <a href="https://github.com/w3c/epub-specs/pull/2744">w3c/<wbr>epub-specs#2744</a></h3>
+<p id=f50f class="phone s01"><cite>wendyreid:</cite> We discussed this a little last week, dropping the draft edupub terms<br>
+<span id=3b47>… This is from the note, I think we agreed to remove things that are deprecated</span></p>
+<p id=cedc class="phone s02"><cite>ivan:</cite> We did not decide that on this specifically<br>
+<span id=0c91>… should we start on edupub first, then move on to deprecated?</span></p>
+<p id=c729 class="phone s03"><cite>mgarrish:</cite> Sure. For edupub we created a new vocab, then started to move them back to the main spec<br>
+<span id=e238>… So they are stuck in draft status, and people keep thinking we are still working on them</span><br>
+<span id=3e3c>… We will just remove the draft terms, and leave epubcheck alone, so this change just clarifies things</span></p>
+<p id=1ac9 class="phone s02"><cite>ivan:</cite> There was a separate list of bugs on FL raised by Hadrien which also raised the question of what deprecated means<br>
+<span id=f5ce>… Currently the charter says &quot;deprecated stuff will be removed&quot;, but we didn't say when</span><br>
+<span id=86fe>… And this PR does at least move the  deprecated stuff to the end</span></p>
+<p id=b35f class="phone s01"><cite>wendyreid:</cite> Issues with merging?<br>
+<span id=02dd>… Ok, no objections, we will merge it</span></p>
+</section>
+
+<section>
+<h3 id=9eb5>HTML Survey</h3>
+<p id=4925 class="phone s01"><cite>wendyreid:</cite> We sent out the survey and already have over 25 responses</p>
+<p id=bd17 class="phone s02"><cite>ivan:</cite> I scanned through them, there is one aspect that often comes up<br>
+<span id=4786>… There is confusion of what XHTML really means</span><br>
+<span id=16e0>… We mean what is in the HTML spec, not the older version of XHTML</span><br>
+<span id=9eab>… we have a bunch of responses that says HTML is governed by the big browsers, etc</span><br>
+<span id=6288>… But people don't seem to notice we moved in 3.0 from XHTML 1.1 to the living HTML standard</span><br>
+<span id=4987>… Maybe we can make that more clear in the spec</span></p>
+<p id=f898 class="phone s04"><cite>Hadrien:</cite> In 3.0 we decided we couldn't fork the web<br>
+<span id=28ee>… The people working on it knew this was a big change, but thought it was a good thing</span><br>
+<span id=d677>… So it is weird people lost that memo, because it was very important and positive</span><br>
+<span id=f525>… 3.0 was all about  not making our own content format</span><br>
+<span id=fb65>… that was a good 15 years ago, and we certainly knew about it back then</span></p>
+<p id=5d09 class="phone s05"><cite>George:</cite> When I am in VSCode and I have XHTML extensions enabled, is that HTML or the older XHTML?</p>
+<p id=ffff class="phone s03"><cite>mgarrish:</cite> What exactly are they upset about? We didn't go with WhatWG, we adopted W3C specs, but have people missed our gradual alignment with WhatWG?<br>
+<span id=dd90>… There are a lot of benefits to keep our spec fluid and adapting to HTML. Are people just upset because it is related to browsers?</span></p>
+<p id=d650 class="phone s02"><cite>ivan:</cite> WhatWG only came up in one case. The main issue was the complexity of the spec and html parsing<br>
+<span id=72f6>… One answer to Hadrien is that we are talking about standards buffs. But these comments come from people who aren't.</span><br>
+<span id=2d59>… so I am wondering if there is something we can do to make this more explicit</span><br>
+<span id=5983>… So for instance XHTML is a name only we use</span></p>
+<p id=2ab2 class="phone s06"><cite>sue-neu:</cite> Hadrien said, correctly, we don't want to fork the web<br>
+<span id=da8a>… There are some RSes that would be very happy to fork the web, if it made their process easier or gave them an advantage</span><br>
+<span id=4f0e>… and we can't control that</span></p>
+<p id=17f7 class="phone s01"><cite>wendyreid:</cite> sue-neu you aren't wrong, but it has already happened<br>
+<span id=3a30>… I don't think we need to worry too much about the lack of understanding on these terms</span><br>
+<span id=50f3>… we have a broad range of responses, but they are overall very positive</span><br>
+<span id=d3f3>… There was also comments about updating, which today is more of a user behavior issue</span><br>
+<span id=af0c>… Some just don't want to touch their toolchains</span><br>
+<span id=6376>… So just to bring it back to overall comments, everything has been pretty positive</span></p>
+<p id=b0c2 class="phone s03"><cite>mgarrish:</cite> We aren't the only ones with the confusion issue<br>
+<span id=76df>… I think we should leave it alone until we move to HTML</span><br>
+<span id=3f03>… but back to what ivan said, why don't we just update the non-normative sections and explain things?</span><br>
+<span id=249b>… Informative seems ok, let's just do it</span></p>
+<p id=0101 class="phone s07"><cite>duga:</cite> Just to add on, Ivan you said &quot;people knew about this but only the spec buffs&quot;, I don't think there's anything we can do to communicate outside the buffs<br>
+<span id=9bd8>… I forget exactly how we state our relationship, but the people we're trying to inform don't read the specs</span><br>
+<span id=ab38>… it's not even the XML serialization, it's the XML syntax</span><br>
+<span id=ecbe>… it's never going to make sense to anyone</span></p>
+<p id=1742 class="phone s08"><cite>AvneeshSingh:</cite> Do we see a lot of responses from Europe?<br>
+<span id=4bb6>… holiday just started there, so maybe the results are skewed</span></p>
+<p id=b781 class="phone s02"><cite>ivan:</cite> I don't know, and the worst answer is we won't know<br>
+<span id=986c>… so all I know is the email address</span><br>
+<span id=0761>… we had 2 or 3 in Japanese, but we need those translated, but at least we do have responses from them</span><br>
+<span id=2947>… but mostly we don't know where they are from</span></p>
+<p id=c8ae class="phone s01"><cite>wendyreid:</cite> I lost all my email addresses when I switched jobs, so I can't forward to everyone who should get it<br>
+<span id=3c56>… so I haven't sent it directly to any European orgs</span></p>
+<p id=fef9 class="phone s09"><cite>gpellegrino:</cite> We are going to send it on, we have discussed in our monthly meetings, they are a lttle afraid, but we will talk to them some more<br>
+<span id=c6f8>… Have we talked to Amazon? Will it be disruptive for them?</span></p>
+<p id=46c6 class="phone s01"><cite>wendyreid:</cite> They are on our mailing list, but I don't have a good Kindle contact</p>
+<p id=63e1 class="phone s05"><cite>George:</cite> DAISY has contacts with accessibility people</p>
+<p id=a2c1 class="phone s01"><cite>wendyreid:</cite> Maybe they are a good place to start</p>
+<p id=624f class="phone s10"><cite>LaurentLM:</cite> We will send an email to our list of a hundred orgs.<br>
+<span id=a311>… We will send an explanation with it, as we are already seeing people being confused</span></p>
+<p id=dc25 class="phone s01"><cite>wendyreid:</cite> Maybe we should make clear this opens up the next step in epub development</p>
+</section>
+
+<section>
+<h3 id=6f81>Overview of the Digital Publishing Summit</h3>
+<p id=ea1a class="phone s10"><cite>LaurentLM:</cite> The publishing summit was in Dublin, same place as the Book of Kells is<br>
+<span id=2748>… it's a very technical summit, it had a lot of participation</span><br>
+<span id=64ac>… there were two main drivers - EAA and AI</span><br>
+<span id=10000>… Vital source talked about interactive ebooks for students</span><br>
+<span id=9b84>… Colibrio talked about an EPUB CFI library that is open source</span><br>
+<span id=7e48>… we have seen a lot about metadata extraction tools</span><br>
+<span id=ea61>… there is a tool for this, which is helping with A11y metadata</span><br>
+<span id=f55f>… We heard from Hachette, there is a new internal format for all their publications types</span><br>
+<span id=83ee>… there were also publication tools presented,  a couple of new tools were presented including wysiwig editing of A11y</span><br>
+<span id=bdc6>… Also some presentations about the importance of ToC in audiobooks</span><br>
+<span id=8c16>… anyone else with updates?</span></p>
+<p id=b5e2 class="phone s04"><cite>Hadrien:</cite> We heard other people doing the same as Hachette, some technical, some related to UX</p>
+<p id=fbb0 class="phone s01"><cite>wendyreid:</cite> We hear that a lot of people start with HTML and back port to XHTML</p>
+<p id=c434 class="phone s02"><cite>ivan:</cite> We concentrate on epub, but web publications is also on our charter<br>
+<span id=d73a>… should we reach out to people and see if that needs to be revived?</span></p>
+<p id=0f9e class="phone s09"><cite>gpellegrino:</cite> These are good B2B formats, but not B2C<br>
+<span id=e8fb>… I see this for web publications and epub as well</span><br>
+<span id=0799>… maybe discussing the use of this for b2b may be interesting</span></p>
+<p id=af73 class="phone s04"><cite>Hadrien:</cite> We see they are not using the w3c spec, they are using the readium version.<br>
+<span id=02cb>… readium version is older, but also there is better tooling, e.g. a tool to take EPUB and produce a web publication from it</span><br>
+<span id=71ba>… We don't really push this, but on their own they have come to it</span><br>
+<span id=4131>… so if we want to tackle that question, then we need to decide on which serialization to use. It might be easier to move the spec than the users</span></p>
+<p id=4c25 class="phone s10"><cite>LaurentLM:</cite> Also index.html is important to web publications<br>
+<span id=339e>… they want to use it for b2b, and some b2c, they don't want to deal with a single xml file</span><br>
+<span id=0898>… so yes, if we go that path we should converge the specs</span></p>
+<p id=0da8 class="phone s01"><cite>wendyreid:</cite> We had this discussion before, but are we really that far apart?<br>
+<span id=44bc>… they are nearly the same</span></p>
+<p id=4b70 class="phone s10"><cite>LaurentLM:</cite> They are similar, I have a table somewhere</p>
+<p id=8463 class="phone s04"><cite>Hadrien:</cite> I think it is possible to overcome them<br>
+<span id=d529>… there was a pressure for xml, but people don't really want to use it</span><br>
+<span id=b685>… the current spec is where it is due to arguments like this, but the industry has spoken and they want a single json file</span><br>
+<span id=be86>… it is also more powerful as it can support images, text, etc</span><br>
+<span id=b6b3>… There are some things that it is hard to argue why they are there</span></p>
+<p id=9ec3 class="phone s07"><cite>duga:</cite> I was just going to say, there's a reasonably good example of a spec following reality in HTML, which has been relatively successful in speccing reality instead of the perfect spec<br>
+<span id=c86a>… it doesn't seem like a bad idea to revisit pub manifest and align it with reality</span></p>
+<p id=7db4 class="phone s02"><cite>ivan:</cite> I may be misremembering that we pulled web publications from the manifest<br>
+<span id=10001>… The maifest is just a JSON thing, it doesn't mention xml, so I am not sure what we are talking about</span></p>
+<p id=c9f6 class="phone s01"><cite>wendyreid:</cite> I am checking, I don't recall<br>
+<span id=1526>… audiobooks has the requirements</span></p>
+<p id=05ff class="phone s03"><cite>mgarrish:</cite> we left it with a pointer to the manifest<br>
+<span id=e008>… because we couldn't resolve it</span></p>
+<p id=b4f2 class="phone s02"><cite>ivan:</cite> We should discuss later</p>
+<p id=eb13 class="phone s03"><cite>mgarrish:</cite> ToC is an easy change</p>
+<p id=aeb0 class="phone s01"><cite>wendyreid:</cite> We could make it an either or<br>
+<span id=ebc4>… Like NCX and Nav in epub</span></p>
+<p id=cd54 class="phone s04"><cite>Hadrien:</cite> Another thing that is different, the thoughts around pub manifest is that it applies to pubs natively on the web and we put something on top<br>
+<span id=2d13>… But in reality that isn't what we see. it is people who want something like epub that is more b2b focused</span><br>
+<span id=b87e>… The reason that the readium version is doing well is due to the easy conversions between epub</span></p>
+<p id=614c class="phone s01"><cite>wendyreid:</cite> This sounds interesting, we need to do some research. But specing reality seems doable</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
