@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>(MEETING TITLE) &ndash; 03 July 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+(MEETING TITLE)</h1>
+<h2>03 July 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/07/03-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, gautierchomel, George_, gpellegrino, Hadrien, Matt</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>gautierchomel, George</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#208a">For information:</a></li>
+<li><a href="#9591">Fix the type of the certifierCredential property: Issue #2112</a></li>
+<li><a href="#f95f">Evaluator relationship · Issue #2721</a></li>
+<li><a href="#e24f">Extended Descriptions in EPUB3: Issue #2691</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=208a>For information:</h3>
+<p id=8df3 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/commit/643e88847369566b81c6b1c34d2e54faf9949356">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>commit/<wbr>643e88847369566b81c6b1c34d2e54faf9949356</a></p>
+<p id=971d class="phone s01"><cite>AvneeshSingh:</cite> we already made some changes, including access mode sufficient now mandatory, AccessMode is down graded to recommended,  and formatting for date. Those are the first changes for epub accessibility 1.2, if we are making these changes we should not use version 1.1.1.</p>
+</section>
+
+<section>
+<h3 id=9591>Fix the type of the certifierCredential property: Issue #2112</h3>
+<p id=794f class="phone s01"><cite>AvneeshSingh:</cite> to be discussed further after US holidays</p>
+<p id=c730 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2112">w3c/<wbr>epub-specs#2112</a></p>
+<p id=9d8a class="phone s02"><cite>gpellegrino:</cite> we are putting the URL to our website</p>
+<p id=221c class="phone s02"><cite>gpellegrino:</cite> all other certification aspects like logo are ruled through a direct contract, not thru metadata</p>
+<p id=a06d class=summary>s /nder/under/</p>
+</section>
+
+<section>
+<h3 id=f95f>Evaluator relationship · Issue #2721</h3>
+<p id=8cba class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2721">w3c/<wbr>epub-specs#2721</a></p>
+<p id=7aef class="phone s03"><cite>Matt:</cite> we try to determine if it is third party certification or self sertified by comparing the publisher name and the name in the certifiedBy string.</p>
+<p id=b314 class=summary>Do we need to emphasise this third party certification?</p>
+<p id=e317 class=summary>Should we have actual metadata that states this?</p>
+<p id=b3dd class="phone s04"><cite>Gregorio:</cite> Self certification does not make sense. The logic is if certifier matches the publisher or creater, then it is self certified.</p>
+<p id=c7c2 class="phone s05"><cite>George:</cite> Rick J said that it is imppossible to match it.</p>
+<p id=739a class="phone s06"><cite>Avneesh:</cite> What does self certification mean? Does it means an independent Q&A department inside the same company doing certification?</p>
+<p id=73aa class="phone s03"><cite>Matt:</cite> Somebody in your organization has certified. It is weak metadata.</p>
+<p id=8f9c class="phone s06"><cite>Avneesh:</cite> If you self certify, you should not put your company name in certifiedBy.</p>
+<p id=c228 class="phone s04"><cite>Gregorio:</cite> People are not paying much attention to the both certifiedBy and credential are not used outside of LIA and Benetech.</p>
+<p id=c569 class="phone s03"><cite>Matt:</cite> should we remove the string comparison information from the spec?</p>
+<p id=ddea class=summary>Gregorio agrees.</p>
+<p id=b1ec class="phone s05"><cite>George:</cite> I see in higher ed a lot of weight being put on third party certification.</p>
+<p id=d9c6 class="phone s03"><cite>Matt:</cite> If you put the name of the organization name in, then that is the party certified.</p>
+<p id=c22e class=summary>The people can figure it out themselves if it is self certified.</p>
+<p id=57ce class="phone s06"><cite>Avneesh:</cite> We should remove the piece that shows the comparison. Just leave the certifier is the name of the organization. We do not need to get into these issues.</p>
+<p id=6085 class=summary>Are we OK with this? Rexolved, no objection.</p>
+<p id=c4e0 class="phone s07"><cite>Hadrian:</cite> This has been a problem for us. Publishers are not sure what they can say.</p>
+<p id=1602 class=summary>Anything related to certifier is hard to do something with.</p>
+<p id=1f40 class=summary>We only allow a single certifier.</p>
+<p id=ffff class=summary>Having more certifications makes this a complex problem.</p>
+<p id=7a59 class="phone s03"><cite>Matt:</cite> Using refines is very difficult.</p>
+<p id=1ce9 class="phone s05"><cite>George:</cite> Could we add a simple metadata field that is third party certified?</p>
+<p id=46fa class="phone s03"><cite>Matt:</cite> We will still would have an ugly mechanism for presenting the metadata.</p>
+<p id=f856 class="phone s06"><cite>Avneesh:</cite> Can we contact the higher education folks to get their take on third party certification. I am reluctant to do major changes which effects accessibility metadata display guide also, until there is very strong need.</p>
+<p id=36f3 class="phone s07"><cite>Hadrian:</cite> This is better suited for ONIX.</p>
+<p id=de8d class="phone s04"><cite>Gregorio:</cite> Making significant changes in the Accessibility metadata would get pushback from the big players.</p>
+<p id=69b0 class=summary>Amazon has decided to use only ONIX.</p>
+<p id=6b40 class="phone s03"><cite>Matt:</cite> Taking the examples outdoes not change anything.</p>
+<p id=2627 class=summary>Let's take out the wishiwashie pieces.</p>
+</section>
+
+<section>
+<h3 id=e24f>Extended Descriptions in EPUB3: Issue #2691</h3>
+<p id=14bd class="phone s06"><cite>Avneesh:</cite> We are having this discussion inside DAISY.</p>
+<p id=0121 class=summary>If we want something inside the specifications, we should bring this up.</p>
+<p id=99f5 class="phone s04"><cite>Gregorio:</cite> I will present what I have proposed.</p>
+<p id=e454 class=irc><cite>&lt;gpellegrino&gt;</cite> <a href="https://github.com/daisy/transitiontoepub/tree/main/extended-desc-experiments/extended-description-poc/OEBPS">https://<wbr>github.com/<wbr>daisy/<wbr>transitiontoepub/<wbr>tree/<wbr>main/<wbr>extended-desc-experiments/<wbr>extended-description-poc/<wbr>OEBPS</a></p>
+<p id=0e0c class="phone s07"><cite>Hadrian:</cite> The complexity for Reading system is that there are so many ways to present the information.</p>
+<p id=9714 class=summary>What is confusing is that there are so many ways to provided additional/long/extended description.</p>
+<p id=abbf class="phone s03"><cite>Matt:</cite> This seems to be the domain of best practices.</p>
+<p id=bc17 class=summary>Gregorio are accustom to copy what we suggest.</p>
+<p id=3b63 class="phone s04"><cite>Gregorio:</cite> We want one way to provide this and have many organizations adopt.</p>
+<p id=7296 class="phone s07"><cite>Hadrian:</cite> We cannot assume that a best practice will be adopted.</p>
+<p id=88e8 class=summary>People will not always follow best practice.</p>
+<p id=10000 class="phone s04"><cite>Gregorio:</cite> One guideline should be for publishers.</p>
+<p id=939f class=summary>Another document for what the reading systems should do.</p>
+<p id=2dd8 class="phone s05"><cite>George:</cite> We have a test experimental book on go back and history also, we want reading systems to support this functionality also.</p>
+<p id=9a47 class="phone s04"><cite>Gregorio:</cite> There are other best practices that we need to develop</p>
+<p id=279e class="phone s06"><cite>Avneesh:</cite> Next call will be July 17. Meanwhile let us continue discussion on extended descriptions.</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+<div class=diagnostics>
+<h2>Diagnostics</h2>
+<p class=warning>Ignored empty command &quot;scribe:&quot;</p>
+<p class=warning>Maybe present: Avneesh, George, Gregorio, Hadrian, Matt</p>
+<p class=warning>All speakers: Avneesh, AvneeshSingh, George, gpellegrino, Gregorio, Hadrian, Matt</p>
+<p class=warning>Active on IRC: AvneeshSingh, gautierchomel, gautierchomel_, George_, gpellegrino, Hadrien, mgarrish</p>
+</div>
+</body>
+</html>
