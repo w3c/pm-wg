@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 10 July 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>10 July 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Jul/0007.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/07/10-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, charlesL, DaleRogers, duga, elguerrero, gpellegrino, Hadrien, ivan, LaurentLM, MasakazuKitahara, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>Susan</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>LaurentLM, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#9f66">Relationship to Accessibility Specs - w3c/<wbr>epub-specs#2720</a></li>
+<li><a href="#07d5">Footnotes in EPUB3 - w3c/<wbr>epub-specs#2690</a></li>
+<li><a href="#bf67">Signify that an EPUB uses HTML - w3c/<wbr>epub-specs#2761</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=0697 class="phone s01"><cite>wendy:</cite> let's start with open issues</p>
+</section>
+
+<section>
+<h3 id=9f66>Relationship to Accessibility Specs - <a href="https://github.com/w3c/epub-specs/issues/2720">w3c/<wbr>epub-specs#2720</a></h3>
+<p id=bb5e class="phone s01"><cite>wendy:</cite> the desire is to make clear relationship with WCAG/ARIA/EPUB-A11Y.</p>
+<p id=7f4f class="phone s02"><cite>DaleRogers:</cite> what is our lane, how do we stay in our lane? when we write the spec, we have different audiences, how do we care of them?</p>
+<p id=88cb class="phone s03"><cite>ivan:</cite> the spec is a tech document, the target is tech people producing ebooks, tools and reading systems. We probably should have a different document on how to create epubs.<br>
+<span id=9e8d>… what Matt is seing is that the section refers to stds that are directly relevant for EPUB, not those which are indirectly referenced, like SVG (which depends on HTML). EPUB depends on the sister stds, like the accessibility docs.</span><br>
+<span id=ca2a>… listing all others is going to far.</span></p>
+<p id=bbae class="phone s04"><cite>AvneeshSingh:</cite> epub a11y, wcag put constraints on EPUB. HTML SVG are building blocks. DPUB ARIA is a dependency, the other are not adding to the standard.</p>
+<p id=4865 class="phone s05"><cite>CharlesL:</cite> I see the point. Something is missing. To make an accessible EPUB you need these things. EPUB has a relationship with DPUB ARIA. I would be in favor of adding it to the A11Y spec.</p>
+<p id=ff91 class="phone s06"><cite>wendyreid:</cite> I think we didn't do that before because it was a draft. We can reference it now. There is a one-sentence in the spec; maybe we should add to it.<br>
+<span id=8e20>… our audience is mixed. We made the spec readable. We should listen to feedback.</span></p>
+<p id=6f52 class="phone s03"><cite>ivan:</cite> EPUB could reference the a11y spec and the reading system spec; and the a11y spec can reference DPUB ARIA. For me it is a different level.</p>
+<p id=1370 class="phone s04"><cite>AvneeshSingh:</cite> DPUB ARIA is designed to provide semantic info to EPUB, it is a building block.<br>
+<span id=250d>… ARIA is going beyond a11y.</span></p>
+<p id=72a3 class="phone s03"><cite>ivan:</cite> why no rdf-a in this case? it is used in html.</p>
+<p id=ed56 class="phone s06"><cite>wendyreid:</cite> RS process DPUB ARIA. It is impactful for content creators, more than rdf-a.<br>
+<span id=3a49>… next topic</span></p>
+</section>
+
+<section>
+<h3 id=07d5>Footnotes in EPUB3 - <a href="https://github.com/w3c/epub-specs/issues/2690">w3c/<wbr>epub-specs#2690</a></h3>
+<p id=902b class=irc><cite>&lt;gpellegrino&gt;</cite> epubtests.org :)</p>
+<p id=e9ab class="phone s06"><cite>wendyreid:</cite> there is a need for a note about how to create good footnotes. The DAISY KB is a source. It would be good to have a test file and check RS. So that content creators get feedback.</p>
+<p id=1b86 class="phone s03"><cite>ivan:</cite> we can use the existing test environment, initially created for spec CR. Some of these tests would be linked to a best practice document.</p>
+<p id=dbaa class=irc><cite>&lt;gpellegrino&gt;</cite> sorry right link: <a href="https://epubtest.org/">https://<wbr>epubtest.org/</a></p>
+<p id=7c60 class=summary>CharlesL the a11y tf discusses extended descriptions, with test. It could be moved to such environment.<br>
+<span id=6673>… originally the epub:type was a trigger for popup footnotes. Now doc-footnote is the trigger. We should tease it in a test suite.</span></p>
+<p id=f8ca class="phone s03"><cite>wendyreid:</cite> the best practice may be to recommend both.</p>
+<p id=0cd2 class="phone s03"><cite>ivan:</cite> as staff, the question is if the WG is ok to start such a work item, with a WG document.</p>
+<p id=98fe class="phone s07"><cite>LaurentLM:</cite> We have the DAISY knowledge base, which is already the bet practice, should we duplicate it?<br>
+<span id=68a6>… should we discuss with DAISY if we can use it as a source of truth?</span></p>
+<p id=d28e class="phone s04"><cite>DaleRogers:</cite> I can help Suzan on such a best practice document.</p>
+<p id=abbc class="phone s04"><cite>AvneeshSingh:</cite> to elaborate on Laurent's comment. At Daisy we are working on extended descriptions. We'll update the KB.</p>
+<p id=5f20 class="phone s05"><cite>CharlesL:</cite> We would add to the test page, not create a full best practice document.</p>
+<p id=db2b class="phone s03"><cite>ivan:</cite> we should not duplicate the effort with the Daisy KB. We can have a meeting to discuss where Suzan can help.</p>
+<p id=ddbe class="phone s06"><cite>wendyreid:</cite> we can write the test.</p>
+<p id=d830 class="phone s03"><cite>ivan:</cite> we should try to make use of both groups.</p>
+<p id=a259 class="phone s04"><cite>AvneeshSingh:</cite> regarding the Daisy KB, it is huge, on a11y and beyond. In Daisy tools in case of error there are links to the KB. It is part of a Web of tools.</p>
+<p id=0bc9 class="phone s06"><cite>wendyreid:</cite> the missing piece for EPUB creators is &quot;it is working hre and here&quot;.</p>
+<p id=4fa5 class="phone s05"><cite>CharlesL:</cite> the KB could reference these W3C tests.<br>
+<span id=4b5b>… the Daisy KB is maintained by Matt.</span></p>
+</section>
+
+<section>
+<h3 id=bf67>Signify that an EPUB uses HTML - <a href="https://github.com/w3c/epub-specs/issues/2761">w3c/<wbr>epub-specs#2761</a></h3>
+<p id=caeb class="phone s06"><cite>wendyreid:</cite> about adoption on HTML there were already suggestions. Major version EPUB4, change the extension, check the OPF ...</p>
+<p id=ed17 class="phone s08"><cite>gpellegrino:</cite> I'm in favor of a different version number in the OPF. It is the only way for RS to announce something to the end user. If not,  the RS will not announce anything before breaking.</p>
+<p id=9796 class="phone s09"><cite>duga:</cite> I hear about old RS, what they do or not. But how big is their market share? Who are they? What would they do in these scenarios (media-types are usually wrong)?<br>
+<span id=b391>… before we decide, we have to understand. A list of RS, and some way to test.</span></p>
+<p id=2fc7 class="phone s05"><cite>CharlesL:</cite> perfect example where we can create test files with different options and check RSs.</p>
+<p id=ffff class="phone s02"><cite>DaleRogers:</cite> as a web designer and teacher, I said to may students open a tag, close a tag. RS are smart enough to forgive unclosed tags. Most browsers are smart enough to ajust. I'm wondering if EPUB RS can be smart enough.</p>
+<p id=1172 class=summary><a href="https://www.mobileread.com/forums/showthread.php?p=4523848#post4523848">https://<wbr>www.mobileread.com/<wbr>forums/<wbr>showthread.php?p=4523848#post4523848</a></p>
+<p id=da03 class="phone s06"><cite>wendyreid:</cite> I'm also curious about RS reactions on HTML.<br>
+<span id=4735>… Suzan opened a thread on Mobileread.</span><br>
+<span id=5425>… if we use the EPUB version in the OPF, EPUB creator will use a static EPUB 3.4 even if they don't use HTML.</span></p>
+<p id=00c7 class="phone s10"><cite>Hadrien:</cite> a different media-type is a solution, the EPUB version in the OPF is not properly processed by RS.<br>
+<span id=6a64>… with all the things we are discussing, a version number may be needed, but usually we register a media-type and extension.</span></p>
+<p id=00a5 class="phone s09"><cite>duga:</cite> non well-formed documents are not possible in XML.</p>
+<p id=2bc4 class="phone s03"><cite>ivan:</cite> HTML is know to be less strict.<br>
+<span id=4704>… I'm worried that we are running ahead. I hope we'll see answers in the survey. Will today's RS are easily transformable into HTML-processors?  If none of the big RS around (Readium, Apple, Kobo, Amazon ...) all way we won't do that until we are forced, and publishers say we won't do that because RS don't process that, then we'll be stuck.</span></p>
+<p id=26ec class="phone s07"><cite>LaurentLM:</cite> We need to talk about distributors too<br>
+<span id=7049>… they can block this if they say no</span><br>
+<span id=2a52>… if its not distributed, you won't find people to make it</span></p>
+<p id=9857 class="phone s07"><cite>LaurentLM:</cite> Some distributors are retailers, but many are intermediaries between publishers and retailers<br>
+<span id=7e62>… some transform EPUB, like Amazon, but others don't, or only make partial changes, they use other checking tools like EPUBCheck or others</span></p>
+<p id=605a class="phone s10"><cite>Hadrien:</cite> distributors mostly rely on EPUBCheck and ACE. They don't check content too much, but they process publications to generate samples, watermark content, inject marketing material ... Most processes rely on XML.</p>
+<p id=dd75 class="phone s02"><cite>DaleRogers:</cite> if we create a version of the spec that distributors and RS do not handle, are we advancing the medium.?</p>
+<p id=ba6a class="phone s08"><cite>gpellegrino:</cite> Apple has its own validator. Do the chair have plans to reach such big players?</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Annotation Task Force Telco &ndash; 10 July 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Annotation Task Force Telco</h1>
+<h2>10 July 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/mid/C86EAEDF-A3EE-41BE-BFF4-753352031960@edrlab.org"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/07/10-pm-ann-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Dale, delackner, duga, Hadrien, ivan, LaurentLM</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>laurentlm</dd>
+<dt>Scribe</dt><dd>duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+    <li><a href="#usec">Use case document draft</a></li>
+    <li><a href="#wann">Short overview of the Web Annotation spec</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section>
+    <h3 id=usec>Use case document draft</h3>
+    <p id=4f9a class="phone s01"><cite>LaurentLM:</cite> We have a first draft of use cases<br>
+<span id=e715>… It will stay as a note, but will be the basis of our requirements</span><br>
+<span id=8eea>… So it is important that everything that is a real use case be here. Maybe not everything we can imagine, but everything that people really need</span></p>
+<p id=c198 class=irc><cite>&lt;LaurentLM&gt;</cite> Use cases: <a href="https://w3c.github.io/epub-specs/wg-notes/annotations-ucr/">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>wg-notes/<wbr>annotations-ucr/</a></p>
+<p id=9470 class=irc><cite>&lt;LaurentLM&gt;</cite> duga: it could also be surviving editions.</p>
+<p id=e5c8 class=irc><cite>&lt;Hadrien&gt;</cite> +1 and this could even be across formats</p>
+<p id=9ea6 class="phone s01"><cite>LaurentLM:</cite> I feel it is the same use case. Basically something has changed<br>
+<span id=069a>… other than the start and end and pagination, what else has changed?</span><br>
+<span id=49b0>… Anything else</span></p>
+<p id=bacf class="phone s02"><cite>Hadrien:</cite> Usually just the front/back matter, most everything else stays the same</p>
+<p id=397a class="phone s03"><cite>duga:</cite> but there could be some text differences</p>
+<p id=a9f5 class="phone s01"><cite>LaurentLM:</cite> Yes, this is why we need to work on selectors, so changes to text will need to survive</p>
+<p id=301e class="phone s04"><cite>delackner:</cite> Will this not use CFI?</p>
+<p id=e80f class="phone s01"><cite>LaurentLM:</cite> In w3c annotations you can use a lot of selectors, including CFI<br>
+<span id=8f2f>… But CFI can be over precise</span></p>
+<p id=dcf9 class="phone s04"><cite>delackner:</cite> Footnotes are kind of sad, and there is no formal support for styled footnotes. We treat them as plain text</p>
+<p id=896b class="phone s01"><cite>LaurentLM:</cite> Footnotes are different beasts</p>
+<p id=daa7 class=irc><cite>&lt;LaurentLM&gt;</cite> duga: CFIs is precise but has ability to adjust to content, via text added before after, + ids. You can correct a broken CFI.</p>
+<p id=7058 class=irc><cite>&lt;LaurentLM&gt;</cite> ... about footnotes, you can have styled footnotes but implementations don't use styles. This feels like we have a way to style, but nobody uses it because it is a lot easier.</p>
+<p id=50bc class="phone s02"><cite>Hadrien:</cite> On the footnote side, it seems like an implementation issue<br>
+<span id=72a2>… In thorium mobile we won't do what Apple does, we will open a new webview with the documet that contains the footnote and scroll to its location</span></p>
+<p id=f3a5 class="phone s05"><cite>Dale:</cite> Looking at this from the edu direction, I imagine some profs who were tech savvy, some not<br>
+<span id=1fa2>… So I ask how would this work in that world?</span><br>
+<span id=ea0c>… We take something written student to teacher and vice versa, and we want that to be in the digital world</span><br>
+<span id=21c4>… When I think about an epub that has archival issues, I am thinking about how people will add this to the archive</span><br>
+<span id=7d74>… And some email systems strip large files, so I am wondering - are we talking about a separate document for the annotation?</span><br>
+<span id=10c0>… Is the annotation a separate document that links to an epub? So we don't have the overhead of the epub</span><br>
+<span id=b9dd>… Are we considering all the possibilities?</span></p>
+<p id=f460 class="phone s01"><cite>LaurentLM:</cite> Yes, we are. We are considering detached files, and we are considering annotations in the epub. So both.</p>
+<p id=9724 class="phone s06"><cite>ivan:</cite> If I look at edu case, it is based on the teacher student interaction by import/export<br>
+<span id=5472>… which is fine, but I would expect people expect a real time sync of annotations</span><br>
+<span id=51b8>… e.g. like Google Docs</span><br>
+<span id=68ca>… So the teacher annotates, and it just shows up in the students book</span></p>
+<p id=6aee class="phone s01"><cite>LaurentLM:</cite> I didn't want to mix this with the teacher use case<br>
+<span id=0576>… But this is why I added the option of syncing in the cloud</span></p>
+<p id=d1ae class="phone s04"><cite>delackner:</cite> When we look at real school deployments of shared reading systems, the success seems to be the areas that are low complexity<br>
+<span id=d030>… Is there a solution that is simple enough that we don't require isolated silos?</span><br>
+<span id=8014>… We need something that is simple enough to allow interop</span></p>
+<p id=3f85 class="phone s01"><cite>LaurentLM:</cite> We should create something to interact with a server<br>
+<span id=a1e1>… so we can crush the silos</span></p>
+<p id=8e50 class="phone s06"><cite>ivan:</cite> Looking back at w3c web annotations forum, I extracted some comments<br>
+<span id=0396>… Once annotations are extracted beyond the epub, they exist as their own thing. How do we reference those annotations? Is there a UID? What about copyright? etc</span><br>
+<span id=7e9e>… the current annotation standard doesn't touch on this, but we may want to at least document all these issues</span></p>
+<p id=c287 class="phone s01"><cite>LaurentLM:</cite> we can create use cases around that, but I wonder if we should at this time. As you say, it is cimplex</p>
+<p id=1e9a class="phone s06"><cite>ivan:</cite> It is fine to have it in the use cases, and then decide not to solve it</p>
+<p id=509e class="phone s01"><cite>LaurentLM:</cite> So we will add these use cases from the 10 year old workshop?</p>
+<p id=bd39 class="phone s06"><cite>ivan:</cite> Yes, but it is ok. One interesting thing that came up was annotations on religious literature, that itself become religious literature</p>
+<p id=cd9b class="phone s05"><cite>Dale:</cite> X api may have some of this functionality<br>
+<span id=37af>… it is working with a server, there is a language you can use to specify what you want to store or retrieve</span><br>
+<span id=03c4>… but in terms of having a server, a single point where you can store info</span><br>
+<span id=7790>… X api already exists. Can that be used in a special case like annotations</span></p>
+<p id=7b72 class="phone s01"><cite>LaurentLM:</cite> Could you review the x api spec and see if X api can process JSON and save/fetch and store where it is searchable</p>
+<p id=a115 class="phone s05"><cite>Dale:</cite> let me find out</p>
+<p id=ffff class="phone s01"><cite>LaurentLM:</cite> we talked about styled footnotes, but we have no use case for styled annotations<br>
+<span id=7d3f>… there will be some needed</span><br>
+<span id=3d96>… and we need to see if e.g. Ruby is needed</span><br>
+<span id=1416>… I will take the minutes and try to add new use cases</span><br>
+<span id=6ac4>… next topic is an overview of the W3C annotation spec</span></p>
+
+</section>
+<section>
+    <h3 id=wann>Short overview of the Web Annotation spec</h3>
+
+<p id=42cf class=irc><cite>&lt;LaurentLM&gt;</cite> Link to the W3C Annotation spec: <a href="https://www.w3.org/TR/annotation-model/">https://<wbr>www.w3.org/<wbr>TR/<wbr>annotation-model/</a></p>
+<p id=997a class="phone s01"><cite>LaurentLM:</cite> it is not simple, so I will just give an iverview<br>
+<span id=9b74>… [reviewing annotation sample in slide]</span><br>
+<span id=117a>… [reviewing all the items that can go in a header]</span><br>
+<span id=f5d2>… target is flexible - it can be a URL or a local structure</span><br>
+<span id=1e6c>… target can be a source and selector</span><br>
+<span id=b531>… this is most interesting to us</span><br>
+<span id=ff33>… target is very flexible, as is body</span><br>
+<span id=2986>… body can just be embedded</span><br>
+<span id=0bef>… plain text is easy, as is styled text in markup/down</span><br>
+<span id=f8f9>… real complexity is the target, and especially the selector</span></p>
+<p id=b343 class=irc><cite>&lt;LaurentLM&gt;</cite> <a href="https://www.w3.org/TR/annotation-model/#fragment-selector">https://<wbr>www.w3.org/<wbr>TR/<wbr>annotation-model/#fragment-selector</a></p>
+<p id=10000 class="phone s01"><cite>LaurentLM:</cite> [discussing list of selectors]<br>
+<span id=9865>… One is epub cfi selector (a left and right part)</span><br>
+<span id=4155>… there is redundancy, as the target is specified in the json and in the cfi</span><br>
+<span id=1256>… there are a lot of selectors. we need to decide on a subset if we don't want it to be overwhelming</span><br>
+<span id=ca57>… In this spec, there is the notion of collection</span><br>
+<span id=c0ce>… you can't add, delete, etc. You can just fetch a set of annotations</span><br>
+<span id=4188>… we don't really have time to discuss this spec today, but for next time please review the existing w3c annotations spec and decide what you like, what you don't, and what is missing</span><br>
+<span id=d21b>… e.g. the annotation does not have a good way to point at an epub</span><br>
+<span id=90cb>… should we have calls over the summer?</span><br>
+<span id=dcc1>… I am missing for the next two weeks, but do we want to meet in August? Or skip to September</span></p>
+<p id=6295 class="phone s06"><cite>ivan:</cite> Two things on the presentation<br>
+<span id=9917>… selectors can be combined</span></p>
+<p id=47ca class=irc><cite>&lt;ivan&gt;</cite> <a href="https://www.w3.org/TR/selectors-states/">https://<wbr>www.w3.org/<wbr>TR/<wbr>selectors-states/</a></p>
+<p id=63d3 class="phone s06"><cite>ivan:</cite> So a text before/after selector can be combined with a more targeted selector to limit scope (e.g. id)<br>
+<span id=df66>… we also had a note specifically about selectors which makes it a little more readable than the core spec</span><br>
+<span id=38d2>… it might be easier to understand than the spec</span></p>
+<p id=08b3 class="phone s05"><cite>Dale:</cite> Of the different selector models, are any just based on the DOM?</p>
+<p id=4592 class="phone s06"><cite>ivan:</cite> many if not most</p>
+<p id=4708 class="phone s05"><cite>Dale:</cite> We can just use the DOM structure to add labels</p>
+<p id=7f09 class="phone s01"><cite>LaurentLM:</cite> There is no DOM range selector that is pure serialization of the DOM range</p>
+<p id=5481 class="phone s06"><cite>ivan:</cite> CSS selector is probably the most complex one. May be the most important one</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
