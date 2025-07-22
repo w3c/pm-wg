@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Digital Comics TF &ndash; 17 July 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+PM WG Digital Comics TF</h1>
+<h2>17 July 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/07/17-pm-dc-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>CharlesL, Dale, gautierchomel, MasakazuKitahara, shiestyle, toshiakikoike</dd>
+<dt>Regrets</dt><dd>Laurent</dd>
+<dt>Chair</dt><dd>Hadrien Gardeur, Shinya Takami</dd>
+<dt>Scribe</dt><dd>gautierchomel</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#c5d3">the issue opened for structural semantics</a></li>
+<li><a href="#8b22">Images in spine</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=c5d3>the issue opened for structural semantics</h3>
+<p id=2c9e class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2759">w3c/<wbr>epub-specs#2759</a></p>
+<p id=dd18 class="phone s01"><cite>Hadrien:</cite> In the case of publication containing more than one episode. That could be volumes or seasons. Usually one epub is one episode, but in some case there is interest to package more han one episode at a time. It makes sense to have a vocabulary to descirbe this. It's a way to allow RS to provide affordances and crafted reading experiences. Globally, it is about providing semantics instead of layout rendering controls. With the semantics,the RS can provide control to the user.</p>
+<p id=88c4 class="phone s02"><cite>shiestyle:</cite> I understand the situation and use case, but i think it is difficult to do on the author side. I think metadata is another option to provide power to the user.</p>
+<p id=2055 class="phone s03"><cite>CharlesL:</cite> I'm concerned about using `epub-type`, I would prefer DPUB-Aria, and we have fast track to get things in DPUB-Aria now. I also agree there is an important piece of metadata to add to say how many episodes.</p>
+<p id=e3a4 class=irc><cite>&lt;shiestyle&gt;</cite> +1 to Charles to use DPUB-Aria than epub-type</p>
+<p id=98e8 class="phone s01"><cite>Hadrien:</cite> I agree I would prefer DPUB-Aria if we have ways to push things there, because they are not actually sufficient. epub-type seems quicker to get.<br>
+<span id=3472>… metadata is complementary, I think. It allows to say how many chapter, it does not indicates where the chapter start.</span></p>
+<p id=ae9b class="phone s04"><cite>Dale:</cite> I'm always in favor of semantics.</p>
+<p id=4e77 class=irc><cite>&lt;CharlesL&gt;</cite> +1 to both metadata and semantics</p>
+<p id=ffff class="phone s02"><cite>shiestyle:</cite> maybe episode and issue is the same, do we really need three words? It may be too much information for a RS and not much value for the user. To me the metadata outisde of the epub is more important.</p>
+<p id=0bd9 class="phone s01"><cite>Hadrien:</cite> it's no cost to have variety, and it can be used to push specific information to different user agents, like screen readers per example.</p>
+<p id=75f3 class="phone s04"><cite>Dale:</cite> from a practical point of view, I'll be interested to see how RS handle differently each. I see a top level TOC but that could probably be different.</p>
+<p id=042e class="phone s01"><cite>Hadrien:</cite> It could be separated TOC, it will affect the progression, I have several use cases.</p>
+<p id=bf01 class="phone s01"><cite>Hadrien:</cite> this vocabulary is to be added to the nav doc, not to the content.</p>
+<p id=d2dc class="phone s03"><cite>CharlesL:</cite> I see the use case of a screen reader hotkey to shift to the next episode.</p>
+</section>
+
+<section>
+<h3 id=8b22>Images in spine</h3>
+<p id=8a23 class="phone s01"><cite>Hadrien:</cite> manga production today is mostly made of images wrapped in HTML because the spec imposes HTML as spine elements.</p>
+<p id=068c class=summary>… The reality is that the HTML wrapper is ignored as soon as possible by distributors or RS.</p>
+<p id=2bcb class=summary>… That's a problem for accessibility. We still can provide images in spine with HTML fallback or provide HTML in spine with images as fallback.</p>
+<p id=aab8 class=summary>… But we need guidance.</p>
+<p id=ab38 class="phone s02"><cite>shiestyle:</cite> anyway we have to prepare HTML for accessibility.</p>
+<p id=4bb0 class="phone s03"><cite>CharlesL:</cite> SVG image are possibly accessible without HTML. That's one way to do it also. I've seen fixed layout ebooks with SVG and CSS. That's an option to allow because it exist.</p>
+<p id=7cea class="phone s01"><cite>Hadrien:</cite> being pragmatic, SVG is not used for comics to my knowledge. Most RS have a specific mode for comics, they just display images and badly support SVG. In the comic world everything is bitmap.</p>
+<p id=abbb class="phone s01"><cite>Hadrien:</cite> I see comic accessibility with something like SMILE, ways to syncronise images with text and audio. The current HTML practice is a big alt text replacement, lacking of granularity.</p>
+<p id=4257 class="phone s02"><cite>shiestyle:</cite> I agree we have to separate comics and manga from fixed layout. It is different. Today, making comics fully accessible is very costly.</p>
+<p id=badd class="phone s04"><cite>Dale:</cite> it's the same discussion about publisher intent in a way. We need good best practice.</p>
+<p id=97c4 class="phone s01"><cite>Hadrien:</cite> for comics, EPUB is a distribution container, but it not used by the RS. The RS in comic mode keeps images, metadata and TOC. It's about easing the way for them, so they use the standard instead of homegrown recipes.</p>
+<p id=f0f3 class="phone s01"><cite>Hadrien:</cite> Allowing images in spine is what the comic industry wants but it needs a spec change and has the risk of breaking in RS. Also, it is hard to scope it only to comics.</p>
+<p id=3f8f class="phone s01"><cite>Hadrien:</cite> using HTML as fallback is not supported by Apple.</p>
+<p id=6a6f class="phone s01"><cite>Hadrien:</cite> pragmaticaly, continue using HTML and provide images as fallback is probably the easier to implement and less risky. It still mean to produce useless HTML, but probably this one is autogenerated and don't come with extra costs.</p>
+<p id=46e3 class="phone s03"><cite>CharlesL:</cite> also allowing images in spine might be a problem with our charter.</p>
+<p id=fe26 class="phone s04"><cite>Dale:</cite> the beautifull thing with standards is that tere are so many of them.</p>
+<p id=7ef7 class=irc><cite>&lt;shiestyle&gt;</cite> Hadrien: We will skip TF calls in August and focus on preparing PR for scrolled comics. See you in September!</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>

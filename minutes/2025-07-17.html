@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group &ndash; 17 July 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group</h1>
+<h2>17 July 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/07/17-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, Dale, George, Hadrien, MasakazuKitahara, shiestyle, sue-neu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>Ivan, Laurent</dd>
+<dt>Chair</dt><dd>wendyreid</dd>
+<dt>Scribe</dt><dd>CharlesL, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#da04">Summer Availability</a></li>
+<li><a href="#e1a4">Age-based restrictions workshop</a></li>
+<li><a href="#7f3f">Issue 2762 w3c/<wbr>epub-specs#2762</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=8795 class=irc><cite>&lt;wendyreid&gt;</cite> date: 2025-07-17</p>
+<p id=8b69 class="phone s01"><cite>Wendy:</cite> It's Summer who's around :)<br>
+<span id=6dad>…  I will miss the last meeting of the month.</span></p>
+</section>
+
+<section>
+<h3 id=da04>Summer Availability</h3>
+<p id=039b class="phone s02"><cite>sue-neu:</cite> I am 30'th through the 6th.</p>
+<p id=d6cb class="phone s03"><cite>Dale:</cite> I will be available.</p>
+<p id=497d class=irc><cite>&lt;elguerrero&gt;</cite> Will be available :)</p>
+<p id=a052 class="phone s04"><cite>gautierchomel:</cite> I will be off last week July, and travelling first week of August</p>
+<p id=7768 class="phone s05"><cite>Charles:</cite> I will be away first week of August.</p>
+</section>
+
+<section>
+<h3 id=e1a4>Age-based restrictions workshop</h3>
+<p id=b4d1 class="phone s06"><cite>wendyreid:</cite> workshop on technical different approaches to age based access to content.<br>
+<span id=e71e>…  publishing industry has a stake / experience. Metadata for this, how we use, categorize age ranges, etc.</span><br>
+<span id=e7e8>… risks on censorship is a side effect.</span><br>
+<span id=fd90>… could write position papers, and may have a role to play in this.</span><br>
+<span id=ef3b>… Booknet Canada has agreed to help. Need to talk to Librarians.</span><br>
+<span id=7bd5>… will be in London in October, may do remote participation over a couple of days.  UK folks?</span></p>
+<p id=bf0c class="phone s02"><cite>sue-neu:</cite> sent out feelers here in the US will see if anything comes in.</p>
+</section>
+
+<section>
+<h3 id=7f3f>Issue 2762 <a href="https://github.com/w3c/epub-specs/issues/2762">w3c/<wbr>epub-specs#2762</a></h3>
+<p id=0851 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2762">w3c/<wbr>epub-specs#2762</a></p>
+<p id=e41d class=summary>Relationship between the rendering control of the RS and the publisher's settings?</p>
+<p id=c836 class="phone s06"><cite>wendyreid:</cite> Color schemes.<br>
+<span id=8569>… every RS has some level of control over this, font size, margins, colors etc. there are common items.  We don't say anything in the spec about that behavior.</span><br>
+<span id=7f7d>… we don't specify anything about reset, &quot;RS may ....&quot;</span><br>
+<span id=c544>… do we need to say more about this.  Some RS (publisher default) or default setting, allow users to adjust from there as a starting point.</span></p>
+<p id=e579 class="phone s02"><cite>sue-neu:</cite> I know Ivan and Brady has thoughts who are not here. table this?</p>
+<p id=d0c1 class="phone s07"><cite>Hadrien:</cite> difficult to have a general discussion on this. Rendering controls are completely ignored, flow: scroll doc scroll continuous.<br>
+<span id=c670>… other things are supported are problematic, other things may be followed by default but allow RS or user sometimes for a11y reasons, hard to put everything under the same issue. which is why I created separate issues.</span><br>
+<span id=56bf>… Best path forward is to tackle them individually.</span></p>
+<p id=f14e class="phone s03"><cite>Dale:</cite> my comment in the issue. reflow able is for the device, the a11y issue is foremost making can enjoy the work which is different in Fixed layout.</p>
+<p id=e766 class=summary>… option to &quot;reset&quot; to publisher settings. is this just a Principle or is there an issue we are trying to solve.</p>
+<p id=2896 class="phone s08"><cite>shiestyle:</cite> sanserif font and serif font, 2page spread in Manga display orientation its good to recommend some default options for RS from the publishers intensions.</p>
+<p id=31dc class="phone s06"><cite>wendyreid:</cite> Chairs discussed this: the intension for renditions, the book &quot;MUST&quot; be rendered in this orientation because it is fixed layout and needs to be in this orientation.<br>
+<span id=ffff>… the importance of them is not more important than the end users ability to read the book.</span><br>
+<span id=71a5>… the appearance of the book when you overwrite the font or colors and from the user/publishers side you run into problems. but there could be issues where you may have an aside and now you change things so the font is gray on gray.</span><br>
+<span id=2fab>… honor in some way and same for fonts some are used because the language needs that, and character be rendered in that font when they speak, but when you change font settings, but this conflicts with a11y requirements. and certain css properties are really important maybe they should be warned when adjusting these.</span><br>
+<span id=f8e6>… some RS has this feature not common enough that all have this functionality.</span></p>
+<p id=06e0 class="phone s07"><cite>Hadrien:</cite> we may be mixing up two things here. Layout rendering controls should not be an issue, some issues with CSS for websites zoom in/out, can change behavior around zooming, but for a RS users expect to change font, themes, line, word, spacing etc. for a11y, but CSS is not really designed to do that.<br>
+<span id=1bd4>… we end up with RS having different approaches to follow user expectation. some use the cascade with CSS. some RS go all in and override everything, this was very prevalent in the early days, but many publishers abused this, but RS fought back since users demanded the ability to change things and over ride what the publisher provided.</span><br>
+<span id=7de4>… users will complain to RS and the RS will work around what is in the file so in the end the user will win. Problem is CSS when we go down that road, unreadable text, images with issues with backgrounds etc.</span><br>
+<span id=8884>… this battle has been fought and is finished.. not sure if we want to reopen this.</span></p>
+<p id=5ff6 class="phone s02"><cite>sue-neu:</cite> not sure about the statement: publisher wins or user wins.  Names with punctuation could get drop. text messages needed to be in different fonts, authors intent. this will result where the publisher may use an image.</p>
+<p id=c6cd class="phone s09"><cite>CharlesL:</cite> I see so many issues here, I get the fact that a publisher will want to change fonts, two characters, different speaking, but then also we have dyslexic users who need a specific fonts<br>
+<span id=11a9>… ideally we have an option where you can choose all the different fonts</span></p>
+<p id=362d class="phone s06"><cite>wendyreid:</cite> idealistic can't everyone win :)<br>
+<span id=cff6>… user needs dyslexic which needs specific fonts, or needs more line margin spacing to read. Publisher to needs the font to be specific or it won't be readable potentially.</span></p>
+<p id=da47 class="phone s06"><cite>wendyreid:</cite> when book is using a language with specific characters that can't be rendered in all fonts.  Publishers could add an accessibilitySummary that will warn users. fallback font chain to detect those characters.</p>
+<p id=f87d class="phone s10"><cite>George:</cite> RS flag that alert the user about this recommendation by the publisher.</p>
+<p id=662f class="phone s02"><cite>sue-neu:</cite> this is an ecosystem so if we can diffuse this from win/lose, less friction creating/rendering of EPUBs at times giving the choice what the author wanted them to see.</p>
+<p id=12ec class="phone s07"><cite>Hadrien:</cite> in Readium we have a lot of experience. Readium CSS, Vitalsource is using this among others. the concept of respecting publisher styles.<br>
+<span id=3bd5>… even basic for the user authored for specific line spacing font size, lot to go wrong.</span><br>
+<span id=6ecd>… too many files to respect without breaking the user experience.</span><br>
+<span id=9d00>… avoid font size and instead zoom, and you keep size of different elements. font size you need to normalize. we have been trying to use zoom. Safari is horrible for zoom in iOS. too many bugs.</span><br>
+<span id=8d7a>… facing deep technical issues, difference in expectations.</span></p>
+<p id=8f80 class="phone s03"><cite>Dale:</cite> case study with character voices is interesting from Sue. different browsers with intent. Once user has control over it then its out of my hands. but I know it works when it leaves my office. after that I don't have control over. once the RS gets it they or the user change things, shouldn't we just step back.</p>
+<p id=0ff8 class="phone s09"><cite>CharlesL:</cite> The idea of the authors warning the user, George and I are updating the a11y metadata best practices, in there we have a11ysummary guidelines, maybe something like this would be good to include<br>
+<span id=15c6>… an example of the kind of text to include</span></p>
+<p id=b090 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=a210 class="phone s09"><cite>CharlesL:</cite> Give publishers another way to express their reasoning</p>
+<p id=1011 class="phone s02"><cite>sue-neu:</cite> re framing this from win/lose is not the end of the conversation. What the RS needs / best practices then we will see better files.</p>
+<p id=a252 class="phone s10"><cite>George:</cite> I also don't see this as win/lose, we need a mechanism to tell RS that the publishers publication should be honored unless override by the user. and putting that into the A11ySummary is a good place to do this. A teacher will set up an env. for a student that is ideal for them, which should be honored unless there is some alert saying that there is a reason by the publisher that could conflict with those settings a user may want to  override.</p>
+<p id=3b6e class="phone s07"><cite>Hadrien:</cite> well isn't that Fixed Layout.<br>
+<span id=2a0e>… users will get angry and blame the reading system.</span></p>
+<p id=6ac3 class="phone s03"><cite>Dale:</cite> designers make the best with limitations they have. from a design view if I know what RS need to provide a good user experience, I can rev. engineer, I know to use certain classes, ids, etc. so they can get a hold of those.<br>
+<span id=ad9d>… I understand what Hadrien says that the user will want to override. but If I know what users will want to do maybe I can adjust at the design stage.</span><br>
+<span id=6ebd>… right now I see that as a black box currently.</span></p>
+<p id=72a5 class="phone s07"><cite>Hadrien:</cite> Its not difficult to know what users want.  Everyone is kind of doing the same thing these days. The more time the RSs will do the same things although they may do it differently.<br>
+<span id=36cf>… some RS may be more intrusive in how they apply the CSS styles, but some RS that do not support CSS if at all.</span><br>
+<span id=7b0f>… on RS side is document for us we are open source, we are opening up a playground to upload their files and play with them with various settings.</span></p>
+<p id=5e87 class="phone s06"><cite>wendyreid:</cite> this is tricky and the diversity of RS is a big part of it.  there is a balance to be had. RS do best to give users what they want.<br>
+<span id=024c>… I have see feedback, complaints, etc. but to them the publisher is not the issue, its the RS / vendor's fault that the book rendered that way and they see it as broken.</span><br>
+<span id=5d8a>… and with the diversity of the content a RS receives complicates things.</span></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+
+</body>
+</html>
