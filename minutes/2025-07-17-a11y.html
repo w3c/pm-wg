@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=utf-8>
-<title>PM WG Accessibility Task Force &ndash; 17 July 2025</title>
-<meta name=viewport content="width=device-width">
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>PMWG Accessibility TF – 17 July 2025</title>
+<meta name="viewport" content="width=device-width">
 <link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
 <link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
 <link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
@@ -14,29 +13,28 @@
 
 <body>
 <header>
-<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" border="0" height="48" width="72"></a></p>
 
-<h1>
-PM WG Accessibility Task Force</h1>
+<h1>PMWG Accessibility TF</h1>
 <h2>17 July 2025</h2>
 
-<nav id=links>
+<nav id="links">
 <a href="https://www.w3.org/2025/07/17-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
 </nav>
 </header>
 
-<div id=prelims>
-<div id=attendees>
+<div id="prelims">
+<div id="attendees">
 <h2>Attendees</h2>
-<dl class=intro>
-<dt>Present</dt><dd>AvneeshSingh, CharlesL, Dale, DanielWeck, gautierchomel, gpellegrino</dd>
+<dl class="intro">
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, Dale, DanielWeck, gautierchomel, gpellegrino, GeorgeK, Hadrian</dd>
 <dt>Regrets</dt><dd>-</dd>
 <dt>Chair</dt><dd>AvneeshSingh</dd>
 <dt>Scribe</dt><dd>CharlesL</dd>
 </dl>
 </div>
 
-<nav id=toc>
+<nav id="toc">
 <h2>Contents</h2>
 <ol>
 <li><a href="#20cb">Fix the type of the certifierCredential property: Issue #2112</a></li>
@@ -45,87 +43,86 @@ PM WG Accessibility Task Force</h1>
 </nav>
 </div>
 
-<main id=meeting class=meeting>
+<main id="meeting" class="meeting">
 <h2>Meeting minutes</h2>
-<section><p id=7738 class="phone s01"><cite>AvneeshSingh:</cite> Resume meetings 31st August.</p>
+<section><p id="7738" class="phone s01"><cite>AvneeshSingh:</cite> Let us take a break of a month and resume meetings 21st August.</p>
 </section>
 
 <section>
-<h3 id=20cb>Fix the type of the certifierCredential property: Issue #2112</h3>
-<p id=c135 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a
-        href="https://github.com/w3c/epub-specs/issues/2112">w3c/<wbr>epub-specs#2112</a></p>
-<p id=5c34 class="phone s01"><cite>AvneeshSingh:</cite> about certifier credential should it be a text string, URLs in it?</p>
-<p id=d76c class="phone s01"><cite>AvneeshSingh:</cite> , link is important for GCA logo.</p>
-<p id=774d class=irc><cite>&lt;gautierchomel&gt;</cite> CharlesL: when we fisrt come with this metadata it was supposed to be a link to a credencial page with more information including logo. Distributors like Vital Source, we'v negociated and if they see this url, the display the logo. If we change to text only, thousands of EPUBs out there will have an issue and need to be updated.</p>
-<p id=af10 class="phone s01"><cite>AvneeshSingh:</cite> when using this field in the reading systems it may not be useful to the users since they can't display the logo</p>
-<p id=8859 class=irc><cite>&lt;gautierchomel&gt;</cite> AvneeshSingh: plain link is not user friendly and not often used as a link by the reading systems. Users would have a better information if they read GCA instead of a raw URL.</p>
-<p id=130d class=irc><cite>&lt;gautierchomel&gt;</cite> CharlesL: One way would be to recomand RS to find an image when they get this specific URL. But yes it's extra work.</p>
-<p id=7682 class="phone s01"><cite>AvneeshSingh:</cite> whats the recommendation from the group? status quo?<br>
-<span id=20be>… what about using refines to provide the URL.</span></p>
-<p id=3b60 class="phone s02"><cite>Dale:</cite> is this a matter for the Standards, or is this a requirement for the one certification body.</p>
-<p id=aa04 class="phone s01"><cite>AvneeshSingh:</cite> Thorium wants to display this metadata, if you have the URL to the credential</p>
-<p id=8cd5 class=irc><cite>&lt;gautierchomel&gt;</cite> CharlesL: we could add a new metadata like certifier credential name with a refine, so it can be used by RS without needing to update too many epubs.</p>
-<p id=4c35 class="phone s01"><cite>AvneeshSingh:</cite> Lets see what Matt things of this approach.</p>
-<p id=f0da class="phone s03"><cite>George:</cite> right now there is a link that the RS cannot fetch the logo from the link they can show it but may not be an active link.<br>
-<span id=4d7d>… now a new requirement they they want to display this for discovery.</span></p>
-<p id=2c37 class="phone s04"><cite>Hadrien:</cite> refine in general in EPUB is problematic a RS will probably ignore it. we get a flat representation of the metadata.</p>
-<p id=998f class="phone s03"><cite>George:</cite> but the metadata would be there and therefore just display the name of the &quot;organization&quot;.</p>
-<p id=1bd2 class="phone s04"><cite>Hadrien:</cite> We roll out things that potentially won't get used.</p>
-<p id=a438 class="phone s03"><cite>George:</cite> we have the new metadata why need for refines?</p>
-<p id=9021 class="phone s04"><cite>Hadrien:</cite> part of the problem is multiple certifiers potentially.</p>
-<p id=3ceb class="phone s01"><cite>AvneeshSingh:</cite> if a RS is showing a link is that a problem. but it may not be clickable.</p>
-<p id=396d class="phone s03"><cite>George:</cite> a lot of links are pretty understandable. but having a link that has GCA in the link is pretty readable.</p>
-<p id=d141 class="phone s01"><cite>AvneeshSingh:</cite> we don't want to disrupt existing implementations.</p>
-<p id=9e5f class="phone s03"><cite>George:</cite> that should be good enough for a reading system to present to end user.</p>
+<h3 id="20cb">Fix the type of the certifierCredential property: Issue #2112</h3>
+<p id="5c34" class="phone s01"><cite>AvneeshSingh:</cite> about certifier credential should it be a text string, URLs in it?</p>
+<p id="c135" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2112">w3c/<wbr>epub-specs#2112</a></p>
+<p id="d76c" class="phone s01"><cite>AvneeshSingh:</cite> , link is important for GCA logo.</p>
+<p id="774d" class="irc"><cite>&lt;CharlesL:&gt;</cite>when we first come with this metadata it was supposed to be a link to a credential page with more information including logo. Distributors like Vital Source, we negotiated and if they see this url, the display the logo. If we change to text only, thousands of EPUBs out there will have an issue and need to be updated.</p>
+<p id="af10" class="phone s01"><cite>AvneeshSingh:</cite> when using this field in the reading systems it may not be useful to the users since they can't display the logo</p>
+<p id="8859" class="irc"><cite>&lt;AvneeshSingh:&gt;</cite>  plain link is not user friendly and not often used as a link by the reading systems. Users would have a better information if they read GCA instead of a raw URL.</p>
+<p id="130d" class="irc"><cite>&lt;CharlesL:&gt;</cite>  One way would be to recommend RS to find an image when they get this specific URL. But yes it's extra work.</p>
+<p id="7682" class="phone s01"><cite>AvneeshSingh:</cite> whats the recommendation from the group? status quo?<br>
+<span id="20be">… , what about using refines to provide the URL.</span></p>
+<p id="3b60" class="phone s02"><cite>Dale:</cite> is this a matter for the Standards, or is this a requirement for the one certification body.</p>
+<p id="aa04" class="phone s01"><cite>AvneeshSingh:</cite> Thorium wants to display this metadata, if you have the URL to the credential</p>
+<p id="8cd5" class="irc"><cite>CharlesL: </cite> we could add a new metadata like certifier credential name with a refine, so it can be used by RS without needing to update too many epubs.</p>
+<p id="4c35" class="phone s01"><cite>AvneeshSingh:</cite> Lets see what Matt things of this approach.</p>
+<p id="f0da" class="phone s03"><cite>George:</cite> right now there is a link that the RS cannot fetch the logo from the link they can show it but may not be an active link.<br>
+<span id="4d7d">… , now a new requirement they they want to display this for discovery.</span></p>
+<p id="2c37" class="phone s04"><cite>Hadrien:</cite> refine in general in EPUB is problematic a RS will probably ignore it. we get a flat representation of the metadata.</p>
+<p id="998f" class="phone s03"><cite>George:</cite> but the metadata would be there and therefore just display the name of the "organization".</p>
+<p id="1bd2" class="phone s04"><cite>Hadrien:</cite> We roll out things that potentially won't get used.</p>
+<p id="a438" class="phone s03"><cite>George:</cite>If we have the new metadata why need for refines?</p>
+<p id="9021" class="phone s04"><cite>Hadrien:</cite> part of the problem is multiple certifiers potentially.</p>
+<p id="3ceb" class="phone s01"><cite>AvneeshSingh:</cite> if a RS is showing a link is that a problem. but it may not be clickable.</p>
+<p id="396d" class="phone s03"><cite>George:</cite> a lot of links are pretty understandable. but having a link that has GCA in the link is pretty readable.</p>
+<p id="d141" class="phone s01"><cite>AvneeshSingh:</cite> we don't want to disrupt existing implementations.</p>
+<p id="9e5f" class="phone s03"><cite>George:</cite> that should be good enough for a reading system to present to end user.</p>
 </section>
 
 <section>
-<h3 id=e631>Extended Descriptions in EPUB3: Issue #2691</h3>
-<p id=f278 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2691">w3c/<wbr>epub-specs#2691</a></p>
-<p id=5e53 class="phone s05"><cite>gpellegrino:</cite> define a common way to semantically tag an extended description the image, the link to the description and the backlink.<br>
-<span id=26da>… give this template to publishers so that it becomes a common way to do extended descriptions and RS can start to leverage this tagging, and tools can of the supply chain, to extracting the extended descriptions, etc. could utilize this common tagging structure.  I made two versions to try to experiment with the semantics we have now.</span><br>
-<span id=ab84>… without new ARIA codes/attributes I released first set of examples, and we discussed and I made an update that I released yesterday the latest version 2 files 1. main content with the actual chapter with 2 images both having a extended descriptions, one with a fig/figcaption and the other is just an image without a container with linksto the extended descriptions to a different file, it is in the spine with linear no, so you can</span> only reach it via the link not by browsing to the end of the book.<br>
-<span id=cb2d>… this document 2 sections are the tags we used for the container for the ext-desc. with the image with role=&quot;presentation&quot; alt=&quot;&quot;, and then the extended description with back link to the original image.</span><br>
-<span id=1ed3>… limitations: 1. tried to put link to the ext. description inside the fig tag but after the caption. the fig caption must be first or last tag of the figure. so the link is in the caption as a result.</span><br>
-<span id=a238>… we don't have proper semantic roles to the link to the extended description. JS / tools can select all the links to the extended descriptions, but for the ext. desc. container we don't have a solution. RS can implement across different document what links point to the container file, or some new roles would need to be added to DPUB aria for example.</span></p>
-<p id=9d4e class="phone s01"><cite>AvneeshSingh:</cite> the identification is done by aria-details on an image pointing to a link anchor which goes to the extended description file.<br>
-<span id=c9ce>… this is main focus area, is this enough special behavior for RS, accessibility checking tools, etc. or do we need something more for explicitly specifying the container of the ext. description.</span></p>
-<p id=f682 class="phone s03"><cite>George:</cite> Years ago there was longdesc attribute which could go to a different page of the description, which was opposed, since you could loose where you were if you went to a different page.<br>
-<span id=37a0>… we have an id pointing to the link. maybe it is problematic link to another file in an attribute in which case having a similar relationship like notref/footnote have a extendedDescRef and extendedDesciption as DPUB aria roles.</span><br>
-<span id=9e09>… RS could figure out this is an ext. description ref, not sure how that could be figured out.</span></p>
-<p id=0682 class="phone s05"><cite>gpellegrino:</cite> even if we have a role to a link to the ext. description using aria-details we are already linking the image to the link to the ext. description. to identify those with the ext description. and which image they extended description is defined for.</p>
-<p id=3151 class="phone s04"><cite>Hadrien:</cite> True in general that  RS / Browser to work with info in a single document. A read-aloud feature we would extract a tree for the current document and when you ref. something in a different resource is more work but not impossible to do.  The more external references the more work.<br>
-<span id=c139>… if we expect the RS to extract info from another resource that becomes more problematic ie. read-aloud if you want it to go and get the ext. description read in-line.</span></p>
-<p id=e7ae class="phone s01"><cite>AvneeshSingh:</cite> what if the ext. desc. was on the same page, and aria-details can be used on any element not just images.</p>
-<p id=96aa class="phone s04"><cite>Hadrien:</cite> if we want the ext description beside the image. all comes down to use-case and what should we do with the ext. description. Pop-ups are so bad, and some publishers don't put noteref   footnote for this reason</p>
-<p id=f01c class="phone s05"><cite>gpellegrino:</cite> knowing proper tagging but in edu. setting having a sidebar containing the ext. description could be different UX implementations.</p>
-<p id=a433 class="phone s04"><cite>Hadrien:</cite> On blue sky I can put alt text on image, and users must include it, if I see something that the image has an alt text, and if I click on it I can see the image and display its description.  Are we expecting something like this image details affordance with extended description and alt text description.</p>
-<p id=79e6 class="phone s05"><cite>gpellegrino:</cite> tts could have some settings to announce the fact there is a ext-desc. or to read the description or not, also skipablility could also be possible.<br>
-<span id=0b27>… if the markup to do something like that is what we are trying to achieve.</span></p>
-<p id=5030 class="phone s04"><cite>Hadrien:</cite> if image has alt text and ext-desc. we could provide an indicator and provide an image details view. we could have something in verbosity in read-aloud.<br>
-<span id=394c>… screen readers is a black box, either we hope they do the right thing, or we create a new view were we fetch the ext. desc. in the middle of the text so the SR will read the ext. desc.</span></p>
-<p id=8161 class="phone s01"><cite>AvneeshSingh:</cite> do we want to work on some kind of role, broader use case includes browsers or is this just publishing and DPUB aria role. broader ARIA role will be more challenging.</p>
-<p id=2062 class="phone s04"><cite>Hadrien:</cite> this seems broader than publishing.</p>
-<p id=04a2 class="phone s06"><cite>DanielWeck:</cite> aria-details is html identifiers can target more than 1 element, what happens to reach into an &lt;a&gt; element<br>
-<span id=1bdd>… in an example I saw one links to a &lt;p&gt; and the other pointing to the &lt;a&gt;</span></p>
-<p id=37e8 class=irc><cite>&lt;gpellegrino&gt;</cite> <a href="https://w3c.github.io/aria/#aria-details">https://<wbr>w3c.github.io/<wbr>aria/#aria-details</a></p>
-<p id=3371 class="phone s06"><cite>DanielWeck:</cite> , when I hover over an image I see the outline of the image and can click on it brings up a new popoup with the image can be zoomable but add additional information displaying the alt attribute, the fig caption. and the extended description<br>
-<span id=a6e0>… we could dump the entire text of the hyperlink. which is I can hit back, or use the back link you provided.</span><br>
-<span id=2a6f>… epub type backlink has an outstanding issue.</span></p>
-<p id=57bb class=irc><cite>&lt;Hadrien&gt;</cite> +1 to what Daniel said, which is very similar to my Bluesky example</p>
-<p id=3f90 class="phone s06"><cite>DanielWeck:</cite> , leaning more towards fetching the nonlinear document ext. desc. and providing a different view with additional AI description.<br>
-<span id=8d59>… using the footnote popup if I have to render the HTML into a new viewport it could be a challenge.</span></p>
-<p id=4798 class="phone s01"><cite>AvneeshSingh:</cite> epubtype is deprecated, so do we need a new role. annotating the &lt;a&gt; hyperlink the destination is optional but useful if the Longdesc. is inside an aside then the aside should be hidden, so you don't repeat the description if they are available on demand with a popup.</p>
-<p id=382f class="phone s05"><cite>gpellegrino:</cite> do you think role for enabling the UX do you think it is needed to have a role, or could with the xpath you could identifiy the links by aria-details we may end up with broken experiences.</p>
-<p id=1758 class="phone s06"><cite>DanielWeck:</cite> because aria-details can link to multiple reference so that could be an issue. xpath is expensive, CSS selectors better. whereever we can us a role on a target or source link is better.</p>
+<h3 id="e631">Extended Descriptions in EPUB3: Issue #2691</h3>
+<p id="f278" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2691">w3c/<wbr>epub-specs#2691</a></p>
+<p id="5e53" class="phone s05"><cite>gpellegrino:</cite> define a common way to semantically tag an extended description the image, the link to the description and the backlink.<br>
+<span id="26da">… , give this template to publishers so that it becomes a common way to do extended descriptions and RS can start to leverage this tagging, and tools of the supply chain, can start extracting the extended descriptions, etc. could utilize this common tagging structure.  I made 2 versions to try to experiment with the semantics we have now.</span><br>
+<span id="ab84">… , without new ARIA codes/attributes I released first set of examples, and we discussed and I made an update that I released yesterday the latest version 2 files 1. main content with the actual chapter with 2 images both having a extended descriptions, one with a fig/figcaption and the other is just an image without a container with linksto the extended descriptions to a different file, it is in the spine with linear no, so you can</span></p>
+<p id="ffff" class="summary">only reach it via the link not by browsing to the end of the book.<br>
+<span id="cb2d">… , this document 2 sections are the tags we used for the container for the ext-desc. with the image with role="presentation" alt="", and then the extended description with back link to the original image.</span><br>
+<span id="1ed3">… , limitations: 1. tried to put link to the ext. description inside the fig tag but after the caption. the fig caption must be first or last tag of the figure. so the link is in the caption as a result.</span><br>
+<span id="a238">2. we don't have proper semantic roles to the link to the extended description. JS / tools can select all the links to the extended descriptions, but for the ext. desc. container we don't have a solution. RS can implement across different document what links point to the container file, or some new roles would need to be added to DPUB aria for example.</span></p>
+<p id="9d4e" class="phone s01"><cite>AvneeshSingh:</cite> the identification is done by aria-details on an image pointing to a link anchor which goes to the extended description file.<br>
+<span id="c9ce">… , this is main focus area, is this enough special behavior for RS, accessibility checking tools, etc. or do we need something more for explicitly specifying the container of the ext. description.</span></p>
+<p id="f682" class="phone s03"><cite>George:</cite> Years ago there was longdesc attribute which could go to a different page of the description, which was opposed. since you could loose where you were if you went to a different page.<br>
+<span id="37a0">… , we have an id pointing to the link. maybe it is problematic link to another file in an attribute in which case having a similar relationship like noteref/footnote have a extendedDescRef and extendedDesciption as DPUB aria roles.</span><br>
+<span id="9e09">… , RS could figure out this is an ext. description ref, not sure how that could be figured out.</span></p>
+<p id="0682" class="phone s05"><cite>gpellegrino:</cite> even if we have a role to a link to the ext. description using aria-details we are already linking the image to the link to the ext. description. to identify those with the ext description. and which image they extended description is defined for.</p>
+<p id="3151" class="phone s04"><cite>Hadrien:</cite> True in general that  RS / Browser to work with info in a single document. A read-aloud feature we would extract a tree for the current document and when you ref. something in a different resource is more work but not impossible to do.  The more external references the more work.<br>
+<span id="c139">… , if we expect the RS to extract info from another resource that becomes more problematic ie. read-aloud if you want it to go and get the ext. description read in-line.</span></p>
+<p id="e7ae" class="phone s01"><cite>AvneeshSingh:</cite> what if the ext. desc. was on the same page, but the problem is aria-details can be used on any element not just images.</p>
+<p id="96aa" class="phone s04"><cite>Hadrien:</cite> if we want the ext description beside the image. all comes down to use-case and what should we do with the ext. description. Pop-ups are so bad, and some publishers don't put noteref   footnote for this reason</p>
+<p id="f01c" class="phone s05"><cite>gpellegrino:</cite> knowing proper tagging but in edu. setting having a sidebar containing the ext. description could be different UX implementations.</p>
+<p id="a433" class="phone s04"><cite>Hadrien:</cite> On blue sky I can put alt text on image, and users must include it, if I see something that the image has an alt text, and if I click on it I can see the image and display its description.  Are we expecting something like this image details affordance with extended description and alt text description.</p>
+<p id="79e6" class="phone s05"><cite>gpellegrino:</cite> tts could have some settings to announce the fact there is a ext-desc. or to read the description or not, also skipablility could also be possible.<br>
+<span id="0b27">… , if the markup to do something like that is what we are trying to achieve.</span></p>
+<p id="5030" class="phone s04"><cite>Hadrien:</cite> if image has alt text and ext-desc. we could provide an indicator and provide an image details view. we could have something in verbosity in read-aloud.<br>
+<span id="394c">… , screen readers is a black box, either we hope they do the right thing, or we create a new view were we fetch the ext. desc. in the middle of the text so the SR will read the ext. desc.</span></p>
+<p id="8161" class="phone s01"><cite>AvneeshSingh:</cite> do we want to work on some kind of role, broader use case includes browsers or is this just publishing and DPUB aria role. broader ARIA role will be more challenging.</p>
+<p id="2062" class="phone s04"><cite>Hadrien:</cite> this seems broader than publishing.</p>
+<p id="04a2" class="phone s06"><cite>DanielWeck:</cite> aria-details is html identifiers can target more than 1 element, what happens to reach into an &lt;a&gt; element<br>
+<span id="1bdd">… , in an example I saw one links to a &lt;p&gt; and the other pointing to the &lt;a&gt;</span></p>
+<p id="37e8" class="irc"><cite>&lt;gpellegrino&gt;</cite> <a href="https://w3c.github.io/aria/#aria-details">https://<wbr>w3c.github.io/<wbr>aria/#aria-details</a></p>
+<p id="3371" class="phone s06"><cite>DanielWeck:</cite> , when I hover over an image I see the outline of the image and can click on it brings up a new popup with the image can be zoomable but add additional information displaying the alt attribute, the fig caption. and the extended description<br>
+<span id="a6e0">… , we could dump the entire text of the hyperlink. which is I can hit back, or use the back link you provided.</span><br>
+<span id="2a6f">… , epub type backlink has an outstanding issue.</span></p>
+<p id="57bb" class="irc"><cite>&lt;Hadrien&gt;</cite> +1 to what Daniel said, which is very similar to my Bluesky example</p>
+<p id="3f90" class="phone s06"><cite>DanielWeck:</cite> , leaning more towards fetching the nonlinear document ext. desc. and providing a different view with additional AI description.<br>
+<span id="8d59">… , using the footnote popup if I have to render the HTML into a new viewport it could be a challenge.</span></p>
+<p id="4798" class="phone s01"><cite>AvneeshSingh:</cite> epubtype is deprecated, so do we need a new role. annotating the &lt;a&gt; hyperlink the destination is optional but useful if the Longdesc. is inside an aside then the aside should be hidden, so you don't repeat the description if they are available on demand with a popup.</p>
+<p id="382f" class="phone s05"><cite>gpellegrino:</cite> do you think role for enabling the UX do you think it is needed to have a role, or could we achieve it with the xpath you could identifiy the links by aria-details we may end up with broken experiences.</p>
+<p id="1758" class="phone s06"><cite>DanielWeck:</cite> because aria-details can link to multiple reference so that could be an issue. xpath is expensive, CSS selectors better. whereever we can us a role on a target or source link is better.</p>
 </section>
 </main>
 
 
-<address>Minutes manually created (not a transcript), formatted by <a
-href="https://w3c.github.io/scribe2/scribedoc.html"
->scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+<address>Minutes manually created (not a transcript), formatted by <a href="https://w3c.github.io/scribe2/scribedoc.html">scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
 
 </div>
-</body>
-</html>
+
+
+</body></html>
