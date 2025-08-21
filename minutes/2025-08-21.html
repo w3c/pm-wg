@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 21 August 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>21 August 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Aug/0011.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/08/21-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Avneesh, CharlesL, DaleRogers, duga, gautierchomel, George, gpellegrino, Hadrien, ivan, LaurentLM, MasakazuKitahara, shiestyle, sue-neu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendyreid</dd>
+<dt>Scribe</dt><dd>sue-neu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#df95">Extended Descriptions - w3c/<wbr>epub-specs#2691</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=df95>Extended Descriptions - <a href="https://github.com/w3c/epub-specs/issues/2691">w3c/<wbr>epub-specs#2691</a></h3>
+<p id=ffff class="phone s01"><cite>gpellegrino:</cite> I volunteered to work on the standardized aproach to semantically describe<br>
+<span id=b360>… the image itself and the backlink that takes people to their original postion</span><br>
+<span id=b2d4>… Adobe will implement extended descriptions</span><br>
+<span id=96bb>… this is different than alt text, extended descriptions have no standard way to make them</span><br>
+<span id=64c6>… we are looking for a standard way to have extended descriptions across publishers</span><br>
+<span id=87b1>… similar to the discussion we had about footnotes</span><br>
+<span id=ac6b>… so RS can leverage best practices and other tools also</span><br>
+<span id=e326>… we did an experiment, linked in the github issues</span><br>
+<span id=4bef>… uses just the tags we have with the standards and existing ARIA codes and attributesd</span><br>
+<span id=ab25>… I have put together a main content file with 2 images</span><br>
+<span id=d8c9>… one figure has a caption with a link to the extended description</span><br>
+<span id=146f>… for both descriptions there is an ARIA tag called aria-details</span><br>
+<span id=438e>… the extended description is in the spine with the attribute &quot;linear: no&quot;</span><br>
+<span id=1bb0>… in this separate file we have containers made with section elements. Within them we have the image, the desccription</span><br>
+<span id=0ecd>… the image is hidden from screen readers</span><br>
+<span id=579a>… the extended description can use tags beyond text</span><br>
+<span id=3279>… in tests, we want to know if these can be programmatically identified</span></p>
+<p id=8ec7 class=irc><cite>&lt;gautierchomel&gt;</cite> Gregorio's poc is available at <a href="https://github.com/daisy/transitiontoepub/tree/main/extended-desc-experiments">https://<wbr>github.com/<wbr>daisy/<wbr>transitiontoepub/<wbr>tree/<wbr>main/<wbr>extended-desc-experiments</a></p>
+<p id=08fd class="phone s01"><cite>gpellegrino:</cite> so you can identify the links to extended description<br>
+<span id=ebce>… at this time we cannot identify the extended description div with a role</span><br>
+<span id=1fdb>… we see that maybe one or two roles could help identify the links to the extended descriptions and description containers</span><br>
+<span id=9568>… we are open to discussion right now</span></p>
+<p id=9ff7 class="phone s02"><cite>CharlesL:</cite> When we first had this discussion, the objection was that publishers didn't want an ugly link under their images</p>
+<p id=1e64 class="phone s03"><cite>Geroge:</cite> an icon might be more palatable for publishers. So their would be a link with alt text</p>
+<p id=c1bb class="phone s02"><cite>CharlesL:</cite> what has changed? Are publishers more receptive to this?<br>
+<span id=6942>… or is still the clickable image link preferred?</span></p>
+<p id=d69d class="phone s01"><cite>gpellegrino:</cite> the technique we are proposing could work with icons or text links<br>
+<span id=3dc0>… but the semantics behind it would be the same</span></p>
+<p id=8d59 class="phone s04"><cite>wendyreid:</cite> did we do anything with the details element? Does that mess up pagination?<br>
+<span id=78ff>… any guidance for the icon must be very clear so it meets a minimum touch target size</span><br>
+<span id=802a>… making the images themselves links creates other problems for RS</span></p>
+<p id=09ec class="phone s05"><cite>ivan:</cite> anything we do we should also do it in our own document<br>
+<span id=43e6>… we are talking about an HTML document, it doesn't work in our current spec to make a separate document for the extended description</span><br>
+<span id=2a5b>… is there another solution that is plain text readable for everyone</span></p>
+<p id=da6f class="phone s02"><cite>CharlesL:</cite> regarding the visible URL under an image that you click on to get to the extended description is what publishers objected to<br>
+<span id=bbc7>… the link doesn't have to be to a separate document in the spine</span><br>
+<span id=484f>… this is just another HTML page that is separate</span><br>
+<span id=a88a>… the summary details, our previous option works well in HTML</span><br>
+<span id=9414>… RS have problems with extended descriptions they can expand past the end of the current page and not be fully displayed</span><br>
+<span id=c0b4>… RS say this would be hard to fix</span></p>
+<p id=3d10 class="phone s01"><cite>gpellegrino:</cite> in EPUB we try to leave the user experience to the RS and the contetn to the EPUB<br>
+<span id=78c3>… the semantic tagging we are proposing maintains this</span><br>
+<span id=e296>… so the content creator is not imposing an experience on the user</span><br>
+<span id=de1d>… in the first experiment, we tried having an extended description on the same page isn't simple for the publisher</span><br>
+<span id=1428>… adding external files is easier so that's what we propose as the standard</span></p>
+<p id=86b0 class="phone s06"><cite>George:</cite> people are asking us to tell them how to do this, and not give them options<br>
+<span id=ef03>… when we identify and icon, we should try to standardize what this icon is and what it looks like</span><br>
+<span id=646e>… so it becomes known to readers that it will lead to an extended description</span><br>
+<span id=1bb5>… we would have the semantics on this through a DPUB ARIA role</span><br>
+<span id=4741>… it shouldn't take as long as it has in the past to get new DPUB ARIA roles if the community wants it</span></p>
+<p id=a2de class="phone s07"><cite>shiestyle:</cite> my colleagues tested this<br>
+<span id=653c>… you propose to add a new feature only when people are using assitive technologies?</span></p>
+<p id=6ce2 class="phone s06"><cite>George:</cite> I think having the icon would be visible for everyone and would not require assistive technology</p>
+<p id=3304 class="phone s07"><cite>shiestyle:</cite> so the icon or the link would be visible for all?</p>
+<p id=21a0 class="phone s07"><cite>shiestyle:</cite> is this different from footnotes?</p>
+<p id=bc9e class="phone s06"><cite>George:</cite> these descriptions can get quite long, having them in a modal may be too long<br>
+<span id=e3d6>… if you have the semantics from DPUB ARIA a reading system can put them anywhere they want</span></p>
+<p id=711a class=irc><cite>&lt;LaurentLM&gt;</cite> <a href="https://daisy.github.io/transitiontoepub/best-practices/extended-desc/ExtendedDescriptionsBestPractices.html">https://<wbr>daisy.github.io/<wbr>transitiontoepub/<wbr>best-practices/<wbr>extended-desc/<wbr>ExtendedDescriptionsBestPractices.html</a></p>
+<p id=bd25 class="phone s08"><cite>LaurentLM:</cite> there are already recommendations. Having just one would help reading systems</p>
+<p id=12c1 class=irc><cite>&lt;LaurentLM&gt;</cite> <a href="https://apln.ca/how-to-add-extended-descriptions-in-epubs/">https://<wbr>apln.ca/<wbr>how-to-add-extended-descriptions-in-epubs/</a></p>
+<p id=1e9f class=irc><cite>&lt;LaurentLM&gt;</cite> <a href="https://kb.daisy.org/publishing/docs/html/images-desc.html">https://<wbr>kb.daisy.org/<wbr>publishing/<wbr>docs/<wbr>html/<wbr>images-desc.html</a></p>
+<p id=07b7 class="phone s08"><cite>LaurentLM:</cite> would we contact Daisy? APLM? and the knowledge base?<br>
+<span id=f1f0>… would these 3 documents be updated by decisions made here?</span><br>
+<span id=cecf>… so the other options would be suppressed in this case?</span></p>
+<p id=1ff9 class="phone s06"><cite>George:</cite> yes</p>
+<p id=7738 class="phone s09"><cite>Avneesh:</cite> these techniques are specific to the EPUB world<br>
+<span id=58b9>… we need to make these because of the constraints of our environment</span><br>
+<span id=14ca>… we will be working on details about the visibility of links, etc. in the WG</span><br>
+<span id=188e>… can the larger group focus on the reading systems</span><br>
+<span id=0774>… what does the reading system need? Are new roles required only for the extended description text?</span><br>
+<span id=456c>… we plan to discuss this with the APA maybe at TPAC</span></p>
+<p id=5579 class="phone s05"><cite>ivan:</cite> related to Laurent's question? What is the intention of this?<br>
+<span id=bd96>… what is the idea to give the text the maximum visibility</span></p>
+<p id=f494 class="phone s09"><cite>Avneesh:</cite> the idea is to develop best practices within the WG<br>
+<span id=c983>… maybe a new specification on DPUB or DPUB ARIA</span><br>
+<span id=5c14>… this best practice will inform what specification changes we need to make</span></p>
+<p id=10000 class="phone s10"><cite>duga:</cite> looking at the examples, how do we know there is a double indirection?<br>
+<span id=58e0>… now the ARIA details are a link to something else that should be extracted</span><br>
+<span id=6a85>… if you go to the details, you would want to extract the extended descriptions and take the user directly there</span><br>
+<span id=515f>… would reading systems know this is a double indirection?</span></p>
+<p id=2cd7 class="phone s01"><cite>gpellegrino:</cite> using ARIA details as an attribute may cause this issue, thinking that a RS can follow the link change without showing the user an external document</p>
+<p id=a636 class="phone s10"><cite>duga:</cite> the heuristic is if the ARIA details is a link you follow that link to get the details, but don't follow it if it isn't a link</p>
+<p id=a3bb class="phone s06"><cite>George:</cite> so this role, there are two possibilities. One is an extended description reference on an anchor, so you know it is a link<br>
+<span id=4cc2>… then the target is the extended description.</span><br>
+<span id=1a12>… in the HTML world where they may want to use the details element and linking and not taking people away from a page</span><br>
+<span id=3dfd>… you could then put the extended description attribute in the details element.</span></p>
+<p id=612d class="phone s11"><cite>Hadrien:</cite> thinking about the expectations. We set expectations that are different from the web<br>
+<span id=3f53>… there is probably and expectation that the user can access a detail view</span><br>
+<span id=0708>… another is links, but we don't treat links the same way</span><br>
+<span id=6a33>… we would identify that this link is somehow different and we would display it in a different way, maybe a new view that could be dismissed</span><br>
+<span id=0476>… and when I think of readaloud, what is expected from a reading system?</span><br>
+<span id=3c7f>… mention that there is an extended description? just play the description?</span><br>
+<span id=1a3a>… these considerations are more important than our technical solution</span><br>
+<span id=c75f>… i don't think we have thoroughly discussed what these expectations are</span></p>
+<p id=10e0 class="phone s01"><cite>gpellegrino:</cite> and there is another expectation in the supply chain<br>
+<span id=7539>… that tools can open an epub and understand when there is an extended description</span></p>
+<p id=560a class="phone s10"><cite>duga:</cite> I think a role will be helpful, because by the time you get to a link you need to know it is an extended description<br>
+<span id=5925>… in readaloud you could get the link and replace the image, does it get read aloud?</span></p>
+<p id=5d4f class=irc><cite>&lt;Zakim&gt;</cite> Avneesh, you wanted to comment on meeting with APA</p>
+<p id=f08b class=summary>without a role, you might need to figure out that an extended description link is somehow different</p>
+<p id=4cc4 class=irc><cite>&lt;gpellegrino&gt;</cite> +1 for Brady</p>
+<p id=e88e class="phone s09"><cite>Avneesh:</cite> another topic, we would like to discuss this with the APA<br>
+<span id=63c9>… most of the people in the APA will be online. It is becoming challenging to arrange the meeting at TPAC</span><br>
+<span id=d32c>… perhaps we can arrange a virtual meeting at another time?</span></p>
+<p id=b8e0 class=irc><cite>&lt;CharlesL&gt;</cite> +1 to APA meeting ahead of time 2 weeks would be good, week before harder :)</p>
+<p id=4f20 class="phone s04"><cite>wendyreid:</cite> as long as it is OK with the APA it is no problem for us</p>
+<p id=e912 class=irc><cite>&lt;ivan&gt;</cite> <a href="https://w3c.github.io/aria/#aria-details">details' def</a></p>
+<p id=25c3 class="phone s05"><cite>ivan:</cite> looking at the definition of ARIA details, list a number of roles<br>
+<span id=bbd9>… is the idea here that we would add one or more roles here?</span><br>
+<span id=57a8>… the APA can accept or refuse them?</span></p>
+<p id=1891 class="phone s01"><cite>gpellegrino:</cite> with the plain link, we are already safe</p>
+<p id=9c97 class="phone s05"><cite>ivan:</cite> the behavior has to be defined in some way<br>
+<span id=46e0>… looking at the details, we are hoping to add bullet items under those details</span></p>
+<p id=5a47 class="phone s01"><cite>gpellegrino:</cite> yes. and if we need other roles to work with the extended description</p>
+<p id=3c99 class="phone s02"><cite>CharlesL:</cite> in that link on the ARIA details one of the items (Example 36) is pointing to an anchor that points to an extended description</p>
+<p id=8216 class="phone s05"><cite>ivan:</cite> but then there are no details about what should happen</p>
+<p id=d943 class="phone s04"><cite>wendyreid:</cite> I may have to talk to the ARIA group about extending the details</p>
+<p id=2ad8 class="phone s06"><cite>George:</cite> we have talked about images and those are most of the cases but there may be other elements<br>
+<span id=ab08>… for instance super complex tables</span></p>
+<p id=a362 class="phone s05"><cite>ivan:</cite> sometimes complex mathematical formulas require descriptions as well</p>
+<p id=447e class="phone s04"><cite>wendyreid:</cite> we will contact the APA to set up a new meeting time</p>
+<p id=a509 class="phone s05"><cite>ivan:</cite> maybe we can get this meeting done before TPAC but we can maintain the meeting time at TPAC</p>
+<p id=53d7 class="phone s09"><cite>Avneesh:</cite> perhaps we can have a follow up meeting after TPAC</p>
+<p id=ceb3 class="phone s05"><cite>ivan:</cite> agreed</p>
+<p id=00b0 class="phone s04"><cite>wendyreid:</cite> is there anything else we should be doing in the meantime?</p>
+<p id=801a class="phone s09"><cite>Avneesh:</cite> we need to pinpoint our exact ask for the APA</p>
+<p id=bd92 class="phone s04"><cite>wendyreid:</cite> this was a really good discussion, we will push the other agenda items to another time</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
