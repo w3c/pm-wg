@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 28 August 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>28 August 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Aug/0020.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/08/28-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, dale, duga, Elizabeth, gautierchomel, george, gpellegrino, Hadrien, ivan, MasakazuKitahara, mgarrish, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Susan, Wendy</dd>
+<dt>Scribe</dt><dd>gautierchomel, duga, sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#569b">Fallbacks</a></li>
+<li><a href="#a539">HTML Survey data visualization</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+
+<section>
+<h3 id=569b>Fallbacks</h3>
+<p id=002a class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2773">w3c/<wbr>epub-specs#2773</a></p>
+<p id=dfd7 class="phone s01"><cite>gautierchomel:</cite> The question from FL a11y guidance doc (a hybrid doc), on reviewing it the RS part has some stuff about supporting fallbacks. It says &quot;in cases where it is supplied, RS should support&quot;</p>
+<p id=7b20 class="phone s01"><cite>gautierchomel:</cite> but we are missing a section on what can be done or not with them. The only guidance is in the main spec, which does not say what you cannot do<br>
+<span id=68d0>… there was some work done on auto-reflow on FL, with intent to use HTML fallback on an HTMLresource</span><br>
+<span id=ce4b>… We realized it wasn't the right way, but if that was attempted then it means the spec isn't clear enough</span><br>
+<span id=f781>… For example, can I have an html fallback for svg? Spec doesn't say no</span><br>
+<span id=5fde>… to me this is a question to address in the FL doc, since it is specific to reflow documents in FL docs</span></p>
+<p id=d595 class="phone s01"><cite>gautierchomel:</cite> but group decided not to address it there and do it here, though I disagree with that and think it should be in the FL doc</p>
+<p id=66a0 class="phone s01"><cite>duga:</cite> why do you say html fallbacks of html aren't the right way to do it?<br>
+<span id=c95e class="phone s02"> …did it break reading systems and not work in practice?</span></p>
+<p id=12f5 class="phone s01"><cite>gautierchomel:</cite> the reading system already accepts fixed layout. I want you to use a fall back, we were asked to add a button to select the fall back. We can't do that.<br>
+<span id=a457>… in thorium we will offer a fall back view, but we won't be allowed to switch between them</span></p>
+<p id=f4ee class="phone s02"><cite>duga:</cite> I don't know what is right for your reader, when we created the fall back spec we decided it was legal to have a same type fallback ie html with an html fallback<br>
+<span id=af77>… we didn't specify how a reading system can determine which file is the fall back</span><br>
+<span id=8508>… I don't think we should limit the fallback and say you can't fall back to the same filetype</span></p>
+<p id=1a92 class="phone s03"><cite>mgarrish:</cite> I agree that we could fall back to a different file type. This is an interesting case, because fallbacks weren't made with fixed layout in mind<br>
+<span id=d463>… how do we indicate which html is fixed layout and which is reflowable?</span></p>
+<p id=048f class="phone s04"><cite>wendyreid:</cite> the other thing making this complicated is that this use case is maybe out of step with the intention of fallbacks.<br>
+<span id=e0ca>… &quot;the reading system can't render the original&quot; so it has a file it can render</span><br>
+<span id=cdf8>… this particular usage is not that the reading system can't render the original, but that we want to give the user choices</span><br>
+<span id=9c3d>… there should be a different mechanism for that. There could be other alternative cases</span></p>
+<p id=dd26 class="phone s01"><cite>gautierchomel:</cite> we should not address the reading system giving a choice to the reader, that is up to the reading system<br>
+<span id=5d89>… some reading systems don't display anything when they encounter a fixed layout</span><br>
+<span id=8a42>… still we should know what we should and shouldn't do when an rs cannot display an fxl</span><br>
+<span id=f6eb>… and does this go in the fxl document or the main document</span></p>
+<p id=caaf class="phone s05"><cite>Hadrien:</cite> I have seen things like this before,<br>
+<span id=3ccc>… Barnes and Noble wanted to keep the print like experience, but also offer a reflowable</span><br>
+<span id=2bb1>… but there isn't a one to one mapping between the fxl and the reflowable assets</span><br>
+<span id=9a14>… B&amp;N chose multiple renditions with a document that could map an area in fxl to the reflowable</span><br>
+<span id=8d84>… Hachette creates multiple rendition epubs without mapping</span><br>
+<span id=20a8>… fallback will not work well because of the mapping issue</span><br>
+<span id=9eb3>… we probably need something more like an alternate</span><br>
+<span id=396c>… there is a similar proposal in the comics task force</span><br>
+<span id=5e8b>… it would be easier for some publishers to have an easy way to map the html to a resource</span></p>
+<p id=3955 class="phone s01"><cite>gautierchomel:</cite> let's separate the discussion about fallbacks and alternate renderings<br>
+<span id=a22c>… still the issue about what should I do in an fxl file that can't be rendered</span></p>
+<p id=a3bc class="phone s04"><cite>wendyreid:</cite> the challenge is that an fxl file can't be shown or renders badly<br>
+<span id=b14f>… this is like the audio only readers, the problem isn't fixed layout, but that the file doesn't follow semantic html</span><br>
+<span id=ecf2>… so the guidance we have in place would still solve the issue</span></p>
+<p id=f48f class="phone s05"><cite>Hadrien:</cite> we are working on Thorium mobile, we already support the ability to listen to an fxl<br>
+<span id=0427>… with a well structured fxl you can have a decent voice experience. But this isn't always the case</span><br>
+<span id=cc59>… we will try to process and find sentences and groups of words</span><br>
+<span id=5e3a>… it won't work if there is no text or text is out of order</span></p>
+<p id=96da class="phone s04"><cite>wendyreid:</cite> our emphasis should remain on well structured content<br>
+<span id=ab26>… but we should discuss alternatives</span></p>
+<p id=72e8 class="phone s06"><cite>ivan:</cite> we took multiple rendition out of 3.3 because there was no implementation for this<br>
+<span id=7705>… is that still true, or should we keep in the past</span></p>
+<p id=3391 class="phone s05"><cite>Hadrien:</cite> there is implementation within propriety specialized reading systems<br>
+<span id=94cb>… not usually as an interoperable format</span><br>
+<span id=50e5>… does anyone know if B&amp;N still uses this?</span></p>
+<p id=7613 class="phone s06"><cite>ivan:</cite> does vital source use it?<br>
+<span id=22e9>… if not, we should keep multiple rendition in the past</span></p>
+<p id=757a class="phone s07"><cite>sueneu:</cite> what is the next step? Should we make recommendations for creators?</p>
+<p id=01d4 class="phone s04"><cite>wendyreid:</cite> This is for the fxl accessibility task force, I don't recommend using html fallbacks because it isn't proven.</p>
+<p id=2429 class="phone s08"><cite>George:</cite> the user who doesn't want that experience may want an alternative<br>
+<span id=69bc>… can we create this?</span></p>
+<p id=9df5 class="phone s02"><cite>duga:</cite> we don't have to solve the world's problems<br>
+<span id=e7d6>… it sounds like the issue is we want to use fall backs</span><br>
+<span id=eeca>… we tried this but it doesn't work.</span><br>
+<span id=179c>… for fixed layout books, we might have multiple documents point to a single html</span><br>
+<span id=526d>… do we simply need to say that fall backs don't work in this case?</span></p>
+<p id=4d55 class="phone s01"><cite>gautierchomel:</cite> one problem at a time. We just need to put a note in the fixl document<br>
+<span id=3b44>… maybe in fxl specs</span><br>
+<span id=979a>… in the future we should let content creators know how to restyle this html</span><br>
+<span id=e843>… in the future multiple rendition might come back</span></p>
+<p id=f03f class="phone s05"><cite>Hadrien:</cite> what we want to do in Thorium is the style selection you can do in a browser<br>
+<span id=e744>… and use no original styling</span><br>
+<span id=0adb>… I am doubtful that people will be excited about this and use it again</span></p>
+<p id=ffff class="phone s05"><cite>Hadrien:</cite> what we want to do in thorium web is the equivalent of the reading mode in the browser, so there's no way to style this form a content creator perspective. Multiple rendition have not been used, we should not want to try again.<br>
+<span id=db87>… I would be happy to point people to what already exists</span></p>
+<p id=8a1c class="phone s01"><cite>gautierchomel:</cite> does anyone know of a specification on reading mode provided by a browser</p>
+<p id=f2a2 class="phone s06"><cite>ivan:</cite> I haven't seen that</p>
+<p id=6d49 class="phone s09"><cite>ack:</cite> CharlesL</p>
+<p id=e54b class="phone s10"><cite>CharlesL:</cite> back in the day there was a reader who could show you a scan or a reflowable ocr rendering</p>
+<p id=10000 class="phone s11"><cite>DaleRogers:</cite> I created an epub, fxl, a short comic, with a reflowable introduction and backmatter that was reflowable<br>
+<span id=a6b0>… according to the spec I can do this, it worked in Apple Books</span><br>
+<span id=1fd6>… Amazon wouldn't take it. I chatted with someone who looked at his epub</span><br>
+<span id=5eff>… they suggested uploading it as a comic book</span><br>
+<span id=924d>… and not allow the front matter and back matter to be reflowable</span><br>
+<span id=c3fc>… their creator tool requires loading in PDFS that can't be made accessible</span><br>
+<span id=c423>… there are some platforms on which this will be accessible and some where it isn't</span><br>
+<span id=2f1c>… even though the spec says I should be able to do this</span><br>
+<span id=a284>… it takes me aback that I can't always use features listed in the spec</span></p>
+<p id=55fb class="phone s12"><cite>shiestyle:</cite> in japan, if we want to mix fxl and reflow, we generate a reflow with some resources fixed.</p>
+<p id=7a84 class="phone s07"><cite>sueneu:</cite> so two different discussion. One to go to the fxl group and the other to keep in mind for the future.</p>
+<p id=e80b class="phone s02"><cite>duga:</cite> my understanding is that we want to explicitly say what won't work.</p>
+<p id=e204 class=irc><cite>&lt;duga&gt;</cite> +1 to Hadrien</p>
+<p id=7a95 class="phone s05"><cite>Hadrien:</cite> probably, a problem is that many properties are spine based while they would give better benefit in the manifest</p>
+</section>
+
+<section>
+<h3 id=a539>HTML Survey data visualization</h3>
+<p id=88c6 class="phone s07"><cite>sueneu:</cite> we are reaching the end of the survey. I started to play with collected data to see how we can visualise it. I wonder if a binary pro vs con numbers would be of use.</p>
+<p id=a567 class="phone s01"><cite>gautierchomel:</cite> There is a grey zone between pro and con, I am afraid giving those numbers gives a false feeling<br>
+<span id=3569>… It is more graduated than the numbers might suggest</span></p>
+<p id=af47 class="phone s07"><cite>sueneu:</cite> showing data visualization on my screen. I broke pro and con by role. I agree there is a lot of grey area. We could have multiple people scoring reactions. The pain will fall at different point depending on roles.</p>
+<p id=c695 class="phone s07"><cite>sueneu:</cite> the survey closes in two weeks.</p>
+<p id=6cb2 class="phone s06"><cite>ivan:</cite> yes, a lot of grey area, but we have to do a binary choice. I think we should make a report to adress those grey areas regardless of the final decision.</p>
+<p id=a692 class="phone s06"><cite>ivan:</cite> another problem, is that representation is not sufficiently distributed. We miss more reading system responses. That may invalidate the whole exercise. I hope we get more answers from apple, google, kobo.</p>
+<p id=8771 class="phone s06"><cite>ivan:</cite> maybe we should extend the survey period to reach that.</p>
+<p id=4a40 class="phone s01"><cite>gautierchomel:</cite> We might want to extend, we are also preparing a response and will have it soon<br>
+<span id=2b9d>… back to binary choice, I would like to see if there are blockers</span><br>
+<span id=790e>… are there people for whom html will totally break things</span><br>
+<span id=6b1c>… even if 90% say yes, if 10% have big blockers then we should not say yes</span></p>
+<p id=31a5 class="phone s02"><cite>duga:</cite> about getting RS onboard, I can send some messages. I also think we can reach those organizations ACs.</p>
+<p id=96fd class="phone s07"><cite>sueneu:</cite> about if there are blockers, I wonder how we want to display those answers. What we want to share with the community.</p>
+<p id=5c51 class="phone s06"><cite>ivan:</cite> workflow developers said they would have impossibility to accept HTML</p>
+<p id=7af0 class="phone s04"><cite>wendyreid:</cite> we're out of time, let's think more about this for next week.</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
