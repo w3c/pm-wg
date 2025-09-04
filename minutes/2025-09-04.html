@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 04 September 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>04 September 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Sep/0003.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/09/04-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Brady, CharlesL, DaleRogers, gautierchomel, gpellegrino, ivan, LaurentLM, MasakazuKitahara, mgarrish, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Susan</dd>
+<dt>Scribe</dt><dd>mgarrish, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#2de3">Reading System Participation</a></li>
+<li><a href="#f0a7">PR 2771 - w3c/<wbr>epub-specs#2771</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=2de3>Reading System Participation</h3>
+<p id=8fd6 class="phone s01"><cite>wendyreid:</cite> talked about this last week - I've reached out to a couple of people to fill in the survey</p>
+<p id=af64 class="phone s01"><cite>wendyreid:</cite> I've reached out to some AC reps and at least one has indicated they will get someone to respond</p>
+</section>
+
+<section>
+<h3 id=f0a7>PR 2771 - <a href="https://github.com/w3c/epub-specs/pull/2771">w3c/<wbr>epub-specs#2771</a></h3>
+<p id=dc00 class=irc><cite>&lt;ivan&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2762">w3c/<wbr>epub-specs#2762</a></p>
+<p id=ffff class="phone s02"><cite>ivan:</cite> the reason this is started is because of me - there is a common thread in a number of issues e.g. in the dark mode thread<br>
+<span id=b2a0>… this is about the relationship between the author and reading system - author spending time on css and rs invalidate what they do</span><br>
+<span id=b250>… we use html5 and css so styling is better than epub2 had</span><br>
+<span id=e675>… I opened a pull request to start to put in some hints for reading systems in both authoring and rs specs about the way they would/should/might handle author css</span><br>
+<span id=715e>… the ship has sailed on changing reading systems - rses have taken the lead on rendering and control over things like margins, fonts, etc.</span><br>
+<span id=bc4d>… the pull request is still open but in the authoring spec we have added some statements warning authors some of their styling will be overwritten</span><br>
+<span id=e40e>… and the hope is that at least some reading systems will publish their styling so that authors can find out what happens without experimentation</span><br>
+<span id=4b02>… the other aspect is to ask reading system devs to give the option to the user to have the author's styling dominate</span><br>
+<span id=0f5f>… apple reader offers a choice for an original view but I haven't tested it too much</span><br>
+<span id=a188>… I don't think we can do what I'd prefer to give whole power to the authors</span></p>
+<p id=6b3c class="phone s03"><cite>mgarrish:</cite> I think that mostly covers where we are, the disagreement is on how the affordance works, is it specced out well enough<br>
+<span id=8dee>… it's somewhat implemented, but is it repeatable?</span><br>
+<span id=b7c1>… that is as far as we've gotten now, is it realistic and how does it work</span></p>
+<p id=7cbf class="phone s02"><cite>ivan:</cite> we looked at both the css sections in both specs and the text came from earlier versions of epub and the meaning is not really clear<br>
+<span id=539c>… the pr fixes some of those ambiguities</span></p>
+<p id=10000 class="phone s04"><cite>LaurentLM:</cite> when reading systems add some css to the author it's because they have to normalize all the peculiarities<br>
+<span id=37fa>… it is difficult to remove the rs css - it will break the view if you take out too much</span><br>
+<span id=b10c>… most reading systems try to make a minimal changes as possible</span><br>
+<span id=8a5a>… apple is not the only one to offer to go back to author styling</span><br>
+<span id=5220>… thorium offers an option to get back to author css but still with the required optimizations done</span><br>
+<span id=9f24>… having a public reading system css would be good but I expect only open source ones will do so</span></p>
+<p id=c8a2 class="phone s05"><cite>Brady:</cite> +1000 to laurent - the css reading systems add is to take the book from looking like garbage - without margins text would be a complete mess<br>
+<span id=1ef4>… you keep adding css until the content looks good on your system</span><br>
+<span id=023a>… the author doesn't know the problems of a device because the rs makes it look legible</span><br>
+<span id=fcbb>… if we give the author complete control then the content will not render as they expect</span><br>
+<span id=c031>… I do see where it does make sense like on fonts although even then publishers don't care too much and users tend to not want fonts changed from their preference</span><br>
+<span id=cef5>… publisher intent for font size is not always clear so google, for example, will figure out an optimal 100% size based on the device</span><br>
+<span id=2d1f>… play books has a true original mode where you can see the content down to the page breaks and no one uses it because it's unreadable on their phone</span><br>
+<span id=4fc7>… people who have found this feature have called support because they can't figure out how to get out the rendering</span><br>
+<span id=3359>… adding a flag to get rid of the effort to make the content readable is strange - but if we really feel it is important as an optional feature okay as it is vague enough</span></p>
+<p id=b754 class="phone s06"><cite>sueneu:</cite> I agree with brady about some aspects of author intent - author's don't always care about font<br>
+<span id=bb8b>… margins and text size should be calculated to the device</span><br>
+<span id=2dec>… but sometimes authors want indented text, text to look like it's handwritten, especially in YA text</span><br>
+<span id=b442>… sometimes they want a background to make it look like it was typed in a phone</span><br>
+<span id=90f6>… would it be possible to separate out the parts the reading system takes responsibility for and what authors can use css to customize</span></p>
+<p id=60c4 class="phone s02"><cite>ivan:</cite> this looks and sounds like a cultural difference - everything that Brady says could have been said by browser vendors to justify changing web sites<br>
+<span id=c1fe>… no browser does this, outside perhaps of reading mode</span><br>
+<span id=8c75>… pagination is special to epub and I understand that part</span><br>
+<span id=21c0>… but why such a huge difference from the web for everything else - could be cultural</span></p>
+<p id=932c class="phone s02"><cite>ivan:</cite> how do fixed layouts get published if reading systems override their settings?</p>
+<p id=e9cd class=irc><cite>&lt;LaurentLM&gt;</cite> FXL is totallty different. The RS does not normalizes.</p>
+<p id=a9d4 class="phone s01"><cite>wendyreid:</cite> reading systems pay far more attention to FXL than reflow<br>
+<span id=5071>… I agree with most of what Brady said but kobo respects much more of the original rendering</span><br>
+<span id=1618>… one of the big challenges is making content work for so many devices</span><br>
+<span id=09de>… because publishers convert from print they think about print pagination and don't think about phone displays, for example</span><br>
+<span id=3abd>… publishers aren't always considering every device their content will render on</span><br>
+<span id=d865>… but there must be a balance we can strike between publisher and rs</span><br>
+<span id=5832>… fonts is a case where sometimes it doesn't matter but sometimes it does and you need to see the differences</span><br>
+<span id=11d2>… but how do we sort through all the properties to determine what is important and what is not</span><br>
+<span id=ecd3>… maybe this should be best practice styling recommendations that we know work well</span></p>
+<p id=772d class="phone s05"><cite>Brady:</cite> I think font is one of the more important ones that get changed and why reading systems differ from browsers<br>
+<span id=b078>… it is problematic to overwrite math fonts or handwritten fonts but we don't want to use fonts like roboto</span><br>
+<span id=f3de>… what play books does is parses all the font rules and inserts a better font before a generic one</span><br>
+<span id=dfa2>… you can't do that with the css cascade so you have to edit the css to do that</span><br>
+<span id=83f3>… a browser is a user agent but a reading system has a user agent - if you don't intercept you can't make the fix</span><br>
+<span id=3a18>… I have read books with different fonts and indents but we spent a lot of time making the outer margins work so the inner ones look good</span><br>
+<span id=cc3c>… in terms of fixed layout we don't do anything - we don't let you change fonts or alter the styling</span><br>
+<span id=cd5f>… we have an entire task force on fxl accessibility and it's still hard to read even for sighted people</span><br>
+<span id=4857>… our culture is different because we have to show books created twenty years ago and make them look like they were created today</span><br>
+<span id=ff20>… you also don't go to the chrome store and buy a web site and be okay with it looking like crap</span></p>
+<p id=a69c class=irc><cite>&lt;sueneu&gt;</cite> +1 Brady on business model differences between the web and the RS</p>
+<p id=7333 class="phone s05"><cite>Brady:</cite> if your competitor's product looks better than you lose business</p>
+<p id=27d5 class="phone s07"><cite>DaleRogers:</cite> I know content creators might create epubs with pages or indesign and never get under the hood to see the css<br>
+<span id=2d7c>… so I understand what brady is saying about having to deal with content that was created by these programs from years ago</span><br>
+<span id=0b8c>… the validator will tell me if it's conforming but I don't know all of what it checks</span><br>
+<span id=4d7a>… but how does the author know what is the best practice for different reading systems - we follow the spec and hope for the best</span><br>
+<span id=7120>… is there a css validator that checks if it will be problematic with different reading systems?</span><br>
+<span id=fd76>… I wonder if it would be helpful if we knew ahead of time how reading systems work and what css will work - is that a possibility?</span></p>
+<p id=033f class="phone s08"><cite>gautierchomel:</cite> ebooks are not updated as often as web sites - it is easier to update a web site<br>
+<span id=ca5d>… as a publisher I want my css to be as simple as possible</span><br>
+<span id=3500>… on the web designers have media queries to target different displays</span><br>
+<span id=e497>… not sure I want to have to do that for reading systems</span><br>
+<span id=5eb3>… I have not heard any complaints about this topic from french publishers but I will ask them</span><br>
+<span id=3332>… we need more industry voices in this group to understand whether this is an individual or industry issue</span></p>
+<p id=1f10 class="phone s06"><cite>sueneu:</cite> I'm interested in whether this is an industry issue - reading systems seem to have taken the issue in stride - more voices would be better</p>
+<p id=d5aa class="phone s04"><cite>LaurentLM:</cite> we should have some authoring recommendations like choosing fonts wisely</p>
+<p id=f90e class=irc><cite>&lt;sueneu&gt;</cite> +1 Laurent</p>
+<p id=020c class="phone s04"><cite>LaurentLM:</cite> authors also don't follow some rules to make epubs - make we need more rules in the spec or a supplemental document</p>
+<p id=1792 class=irc><cite>&lt;gautierchomel&gt;</cite> <a href="https://readium.org/css/docs/">https://<wbr>readium.org/<wbr>css/<wbr>docs/</a></p>
+<p id=b97d class="phone s08"><cite>gautierchomel:</cite> adding a link to the readium css<br>
+<span id=167e>… ten years ago it was more problematic but now if I don't do strange things the display is good</span><br>
+<span id=48b4>… I don't even update books yearly - I want my content to display well for years to come</span></p>
+<p id=01ed class="phone s05"><cite>Brady:</cite> it's great that readium publishes this but how many authors go through the css?<br>
+<span id=6957>… if we find problems we typically go back to the publisher and request that they fix it</span><br>
+<span id=492e>… the problem is they often come back and say it works on ibooks and then we have to recreate someone else's display to make the author content look right</span><br>
+<span id=f6d1>… if I still worked at play books it would have fallen on me to publish the css but would anyone have looked or cared?</span><br>
+<span id=c6fe>… the response will likely remain it works elsewhere to make it work - but I might be pessimistic</span></p>
+<p id=d3b9 class="phone s01"><cite>wendyreid:</cite> I've had the same experience as brady - but as gautier said things have gotten better<br>
+<span id=8f08>… books made twenty years ago were really poor quality but today they are quite good</span><br>
+<span id=d544>… if we tell people what to do now they may already have figured these things out</span><br>
+<span id=7060>… it would be great if authoring tools could warn users about display choices that are really going to make a mess</span><br>
+<span id=86f8>… but we're not quite there and that may be where best practices come in</span></p>
+<p id=0a5f class="phone s06"><cite>sueneu:</cite> agree with directing tool makers to the reading system css than authors<br>
+<span id=dea9>… flightdeck is an online tool you subscribe to monthly and they will tell you if a book will work</span></p>
+<p id=56fc class=irc><cite>&lt;sueneu&gt;</cite> <a href="https://ebookflightdeck.com/">https://<wbr>ebookflightdeck.com/</a></p>
+<p id=a06a class="phone s06"><cite>sueneu:</cite> they have a supplier-compliant matrix for checking</p>
+<p id=44c6 class="phone s04"><cite>LaurentLM:</cite> some publishers do test with thorium css and not just ibooks</p>
+<p id=d388 class="phone s07"><cite>DaleRogers:</cite> I'm wondering if authors did not include css and did everything in markup would that show up fine or do reading systems expect some css?</p>
+<p id=5555 class="phone s01"><cite>wendyreid:</cite> we generally expect at least some css but reading systems will handle a book without any - some things like asides will need styling to differentiate</p>
+<p id=7bc8 class=irc><cite>&lt;Zakim&gt;</cite> ivan, you wanted to where we go from here?</p>
+<p id=4ed6 class="phone s05"><cite>Brady:</cite> if you look back at books from 20 years ago they didn't have much css and they display fine</p>
+<p id=62bb class="phone s02"><cite>ivan:</cite> so where do we go from here?<br>
+<span id=82ca>… I think matt and I are at the last round of discussion with the PR</span><br>
+<span id=8910>… I don't think we should merge it as-is but get more people to look at it</span><br>
+<span id=e6d6>… it is much better than it used to be but in light of the discussion today we should get more review</span><br>
+<span id=1f93>… to respond to gauitier I was wondering if media queries would cover all the cases we are concerned about</span><br>
+<span id=d41f>… maybe we should discuss with the css people in Kobe whether there are media queries that are reading system specific</span></p>
+<p id=9d0d class="phone s05"><cite>Brady:</cite> the biggest thing missing is the knowledge of a page and from media queries is page size<br>
+<span id=9583>… it's probably not solvable from the css side because they have pages but no one uses them</span></p>
+<p id=e163 class="phone s01"><cite>wendyreid:</cite> when I asked about colour issues they directed me to their issue tracker - maybe we could ask about this as they have more pull with browsers<br>
+<span id=21bb>… in terms of next steps the PR is not the direction we want to take</span><br>
+<span id=60c8>… the text improvements are okay but not recommendations</span></p>
+<p id=00bd class="phone s02"><cite>ivan:</cite> there are no new normative requirements in the text</p>
+<p id=82d7 class=summary><a href="https://github.com/w3c/epub-specs/issues/2762">w3c/<wbr>epub-specs#2762</a></p>
+<p id=0331 class="phone s01"><cite>wendyreid:</cite> people can use the issue to discuss further</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
