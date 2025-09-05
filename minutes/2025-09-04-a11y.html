@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>PMWG Accessibility TF – 4 September 2025</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" border="0" height="48" width="72"></a></p>
+
+<h1>Accessibility task force - PMWG</h1>
+<h2>04 September 2025</h2>
+
+<nav id="links">
+<a href="https://www.w3.org/2025/09/04-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id="prelims">
+<div id="attendees">
+<h2>Attendees</h2>
+<dl class="intro">
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, gautierchomel, George, gpellegrino, Madeleine, Mgarrish</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>CharlesL</dd>
+</dl>
+</div>
+
+<nav id="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#f331">Publisher contact for additional accessibility information: Issue #2702</a></li>
+<li><a href="#28ea">Example of certifierCredential property: Issue #2760</a></li>
+<li><a href="#525e">Use cases for extended descriptions.</a></li>
+</ol>
+</nav>
+</div>
+
+<main id="meeting" class="meeting">
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id="f331">Publisher contact for additional accessibility information: Issue #2702</h3>
+<p id="ffff" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2702">w3c/<wbr>epub-specs#2702</a></p>
+<p id="10000" class="phone s01"><cite>mgarrish:</cite> we don't have a way to put in contact info for metadata.<br>
+<span id="10001">… in display guide we don't account for 2 fields we have publisher / trusted intermediary contact. Do we need 2 contact fields for EPUB maybe an accessibility contact field. not sure when you would have 2 contacts. why contact the publisher or the intermediary, did we ever try to display this in the display guide but maybe only this is in ONIX.  what are we accounting for here?  Why don't we display trusted intermediary's. What are</span></p>
+<p id="be37" class="summary">we expecting for a11y contact email 1 field, 1 value and we don't care which it is.</p>
+<p id="5f42" class="phone s02"><cite>AvneeshSingh:</cite> maybe EAA has a part in this.</p>
+<p id="5a91" class="phone s03"><cite>George:</cite> in WIPO they have a trusted intermediary. from our perspective the publisher contact would be the one we would want to display.</p>
+<p id="28bb" class="phone s04"><cite>gpellegrino:</cite> I agree that is the data we are using in the ONIX techniques. publisher contact. 1 contact field generic could be a specialized library just a11y contact.</p>
+<p id="3e0e" class="phone s02"><cite>AvneeshSingh:</cite> MTM in Sweden is assigned as supervisory agency for implementation of EAA for eBooks, in such cases the contact of such supervisory agencies would be prefered. So, it would be good to have a generic field for email.</p>
+<p id="10002" class="phone s01"><cite>mgarrish:</cite> a11yContact or something like that. that works. I need to check the display guide but if the display guide may need to be updated since it might call out the "publisher" specifically  I can create a new issue for that if thats the case.</p>
+</section>
+
+<section>
+<h3 id="28ea">Example of certifierCredential property: Issue #2760</h3>
+<p id="46ff" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2760">w3c/<wbr>epub-specs#2760</a></p>
+<p id="ed5d" class="phone s01"><cite>mgarrish:</cite> are we at a point to make changes with this?<br>
+<span id="5197">… is it a URL or text is it only URLs or it</span></p>
+<p id="afaf" class="phone s05"><cite>Charles:</cite> in GCA's case the URL is our credential and thousands of books has this as the certifierCredential. Vitalsource does look for this to put our GCA logo.</p>
+<p id="43fc" class="phone s02"><cite>AvneeshSingh:</cite> if it is text, and we put a URL in it, it doesn't prevent anyone to actually parse the URL and provide the logo or provide a linked URL.</p>
+<p id="06fe" class="phone s01"><cite>mgarrish:</cite> the issue is it should have a Human Readable name. instead of the ugly URL.<br>
+<span id="db1c">… , we don't need a registry of what URLs are out there.  Do we need to change anything?</span></p>
+<p id="ba33" class="phone s03"><cite>George:</cite> Bookshare puts in human readable URL.</p>
+<p id="6ebc" class="phone s01"><cite>mgarrish:</cite> it will be up to the agency what should be in this field. we are open and doesn't prefer anything.</p>
+<p id="7c25" class="phone s02"><cite>AvneeshSingh:</cite> the demand here is show some examples. So, we can show example with text. And we can place a note that if you want to use a URL then it is your responsibility to reach out to the distributors to display something else like a logo.</p>
+</section>
+
+<section>
+<h3 id="525e">Use cases for extended descriptions.</h3>
+<p id="49fa" class="irc"><cite>&lt;gpellegrino&gt;</cite> <a href="https://github.com/w3c/publ-a11y/wiki/Extended-Descriptions-Use-Cases-and-Reading-System-Expectations">https://<wbr>github.com/<wbr>w3c/<wbr>publ-a11y/<wbr>wiki/<wbr>Extended-Descriptions-Use-Cases-and-Reading-System-Expectations</a></p>
+<p id="5996" class="phone s02"><cite>AvneeshSingh:</cite> thanks Gregorio for this first draft.  can we highlight the use cases were we can have some examples where having specific roles for the link to the extended description and another for the desc. itself. so we can have a good use cases for APA discussion.</p>
+<p id="217d" class="phone s03"><cite>George:</cite> we could at the end suggest 2 roles or we could suggest it up-front so they can concentrate on our suggestions. Maybe we communicate this to APA we talk about 2 roles that are needed and point to the use case.</p>
+<p id="2aee" class="phone s02"><cite>AvneeshSingh:</cite> 1 question what is the RS behavior it will help us evaluating our solution of roles is correct, and Gregorio is correct and what we can to to improve that.  Why not put those use cases put upfront that AT and announce the presence of a link to the ext. descriptions and announce the presence of the descriptions. ACE needs to collect these extended descriptions.  so we can build a case for our roles.</p>
+<p id="ca46" class="phone s05"><cite>Charles:</cite> agrees we need strong use cases to justify the new roles to APA and ARIA ultimately.</p>
+<p id="c649" class="phone s04"><cite>gpellegrino:</cite> we can stress other things, AT that should be able to list all the images of ext-descs in a page. for Web we can stress crawlers images with extended descriptions for roles on based on automatic injection.</p>
+<p id="5f6e" class="phone s02"><cite>AvneeshSingh:</cite> we should work with Gregorio to refine it further.</p>
+<p id="9240" class="phone s03"><cite>George:</cite> do we want the issue to state there is a need for 2 roles. here are the use cases for these two roles. in this wiki that is linked in the agenda</p>
+<p id="6bf1" class="phone s02"><cite>AvneeshSingh:</cite> we need to move this wiki.  should we move it to an issue?</p>
+<p id="7121" class="phone s03"><cite>George:</cite> what about APA's issue tracker.</p>
+<p id="b6c7" class="phone s02"><cite>AvneeshSingh:</cite> we need to be prepare before it goes to APA.</p>
+<p id="aa8b" class="phone s01"><cite>mgarrish:</cite> may not want to have a issue. ARIA won't be crazy about a new role on a link.<br>
+<span id="2a9e">… you have describedby/details and now a new role on a link will get major pushback.</span><br>
+<span id="4fc4">… maybe if we add it to the DPUB ARIA.</span></p>
+<p id="315e" class="phone s02"><cite>AvneeshSingh:</cite> maybe a call with Janina specifically before we open it up to everyone.</p>
+<p id="2a80" class="phone s01"><cite>mgarrish:</cite> maybe transfer the wiki page over to the epub specs.</p>
+<p id="700f" class="phone s02"><cite>AvneeshSingh:</cite> that would be a good place.</p>
+<p id="ce8c" class="irc"><cite>&lt;mgarrish&gt;</cite> <a href="https://github.com/w3c/epub-specs/wiki">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>wiki</a></p>
+<p id="845b" class="phone s02"><cite>AvneeshSingh:</cite> refining it further, smaller group to help with this effort.<br>
+<span id="a72b">… we will go through 1 more iteration then ask Matt to move it.</span></p>
+<p id="7550" class="phone s03"><cite>George:</cite> we are saying this is initiated by publishing, isn't this useful for web pages in general?</p>
+<p id="6d9a" class="phone s04"><cite>gpellegrino:</cite> I am not sure. for sure it would be important for interaction with AT, but POV what user should expect when you click on a link to an extended description, that part on UX we are trying to achieve is publishing specific.  we need to stress AT interactions.</p>
+<p id="4a75" class="phone s01"><cite>mgarrish:</cite> nature of roles these are potentially to the ARIA group first and may be kicked back to DPUB. lets bring a general approach to the broader group.</p>
+<p id="6a1c" class="phone s03"><cite>George:</cite> general ARIA saying extendedDescription and extendedDescriptionLink, are those the words we want?</p>
+<p id="f179" class="phone s02"><cite>AvneeshSingh:</cite> if its only in DPUB ARIA its mainly for the publishing ecosystem but could have broader appeal which we can see what the appetite is for it in a more broader sense.<br>
+<span id="b5a7">… Gregorio and I can start iterating on this, and ask for comments and move ahead more rapidly</span></p>
+<p id="3692" class="phone s01"><cite>mgarrish:</cite> I can discuss with ARIA editors to get a feel for the appeal of entertaining this new idea.</p>
+<p id="926d" class="phone s04"><cite>gpellegrino:</cite> aria-details you can ref. multiple IDs and other issues identifying what the aria-details pointing to the ext description link.</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a href="https://w3c.github.io/scribe2/scribedoc.html">scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+
+
+</body></html>
