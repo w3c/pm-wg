@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Digital Comics TF &ndash; 11 September 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Digital Comics TF</h1>
+<h2>11 September 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/09/11-pm-dc-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>CharlesL, Dale, duga, Hadrien, MasakazuKitahara, shiestyle, toshiakikoike</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Hadrien Gardeur, Shinya Takami</dd>
+<dt>Scribe</dt><dd>CharlesL</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#5fa6">Profile</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+
+<section>
+<h3 id=5fa6>Profile</h3>
+<p id=4e1f class="phone s01"><cite>Hadrien:</cite> epub for comics. 1 bitmat per page.<br>
+<span id=02ee>… handled through conventions. how to author comics in Japan. receivers of those files they would have a good way to extract the bitmaps.</span><br>
+<span id=bbe1>… another way fallbacks, we have seen comics in the spine, 1 html per page with fallback to a bitmap. If you know about that you can extract the bitmaps</span><br>
+<span id=2e0f>… , or scrolled comics could be possible images in spine.</span><br>
+<span id=a9ae>… there are RS content aggregators that need bitmaps but knowing different things or inspecting the files. but if we had a way to say this is a comic. Pre-paginated comics could get a bitmap per page, and scrolled would be a bitmap per tile.</span><br>
+<span id=0715>… in Japan there could be some proprietary file formats.</span><br>
+<span id=843b>… better to discuss together to discuss here and address.</span></p>
+<p id=2fb1 class="phone s02"><cite>shiestyle:</cite> we use a style HTML in spine each html is an image.<br>
+<span id=a62e>… image in spine with fallback, we plan to update BP?? version same html in spine for last 10 years</span><br>
+<span id=d66d>… image in spine extract images, we propose a solution however W3C its not good for a11y.</span><br>
+<span id=d2f6>… we need to consider a11y</span></p>
+<p id=6b5b class="phone s01"><cite>Hadrien:</cite> Happy to bring up a11y for comics in a future call because the current solution does not work.<br>
+<span id=7952>… sometimes you go back and forth between pages.</span><br>
+<span id=bee9>… may not be on a single bitmap or page</span><br>
+<span id=412d>… a single description alt text wont be enough and doesn't meet EAA regs.</span><br>
+<span id=c9dc>… we need to make those specialize RS / aggregators better.</span><br>
+<span id=5f94>… EPUB is a mediocre option for comics currently</span></p>
+<p id=bb71 class="phone s02"><cite>shiestyle:</cite> we should move a11y to a future call.  in Japan we had a discussion about a11y for Manga<br>
+<span id=d317>… result was it is very difficult to create text / scripts for a11y.</span><br>
+<span id=2d26>… we discussed alternative approaches for Manga, audio book version we could link to those. we don't have a dedicated spec for that type of content.</span><br>
+<span id=a37e>… last year Hadrien proposed text for a11y for Manga but publishers difficult to prepare for a11y content.</span></p>
+<p id=8faf class=irc><cite>&lt;shiestyle&gt;</cite> q&gt;?</p>
+<p id=c94a class="phone s03"><cite>duga:</cite> images in spine without a fallback it is not making images accessible. other content like inaccessible children's books.<br>
+<span id=6be1>… are we opening a door to allow to ignore a11y.</span><br>
+<span id=ddd7>… it would be a hard sell to just have images in spine, this is true for comics.</span></p>
+<p id=c70f class="phone s01"><cite>Hadrien:</cite> this door was already open with fixed layout.<br>
+<span id=9a3b>… even if they could add alt text they don't.</span><br>
+<span id=b437>… a children's book could be made accessible. a regulator could go against a publisher since there is a technical way to make it accessible.</span><br>
+<span id=af5e>… understand your concerns about that including cost etc. EAA if the cost is too much there is an exemption for that.</span><br>
+<span id=7b7c>… it is understandable although disappointing that comics are accessible.</span><br>
+<span id=1bf4>… first step a11y comics to specialized organization could adapt and make comics accessible. and depending on cost then the publisher can adapt and make the content born accessible.</span></p>
+<p id=d7a6 class="phone s02"><cite>shiestyle:</cite> who can provide the text for Manga, authors can not prepare the correct text always.</p>
+<p id=d71e class="phone s01"><cite>Hadrien:</cite> when you do an adaptation its not the author who is doing that work.</p>
+<p id=4b0f class="phone s04"><cite>Dale:</cite> from a11y pov Hadrien says no real a11y tools, what level of a11y you are talking about. If I create a comic putting in alt on an image describing the images completely accessible?  having something in the spine / fallback a lot has to do with production / time to create an asset and sell it and if using HTML or not / adding a11y in or not it takes more time than the publisher is willing to do that and ROI is worth it.</p>
+<p id=6188 class="phone s01"><cite>Hadrien:</cite> we can't solve the problem with the current spec and alt text is not the answer either. you need to a11y for blind but also dyslexic user with text in visuals they may understand the image but they need the the ability to tweak how the text is presented / highlighted while speaking it with read aloud.  Its wrong to produce fully accessible comics with the current spec and this needs to be addressed.</p>
+<p id=5b72 class="phone s01"><cite>Hadrien:</cite> is it necessary to have a Profile, prepaginated content the approach used today 1 html per page fallback 1 bitmap does sorta works if you know about it and it is not idea.</p>
+<p id=21c8 class="phone s05"><cite>LaurentLM:</cite> What do you expect a profile, it will be a burden for publishers and may not be there and what would the RS do / expectations and if they see comic as a profile. I don't see the adv.</p>
+<p id=ffff class="phone s01"><cite>Hadrien:</cite> take Kobo: when they have a FXL they open all FXL images and they wouldn't need to guess, and you clearly say this is a comic.<br>
+<span id=b49f>… do you need a metadata that you conform to this profile or is the presence of images in the spine or not.</span><br>
+<span id=0f9b>… could change how RS / aggregators would be able to use this.</span></p>
+<p id=2a94 class="phone s02"><cite>shiestyle:</cite> in Japan all fixed layout tile in spine 1 image even if the content is not only Manga. prepaginated has same structure for RS to detect.</p>
+<p id=7761 class="phone s01"><cite>Hadrien:</cite> you created a convention. not something official to be shared with the rest of the world.<br>
+<span id=8bc0>… what if new version of profile is not only in Japan but from this WG we could make this global that the industry will adopt. and be a great step forward.</span></p>
+<p id=7be8 class="phone s02"><cite>shiestyle:</cite> not easy to move to a global profile than Japanese style. We have a big Manga movement which is different than global needs.</p>
+<p id=2795 class="phone s01"><cite>Hadrien:</cite> moving to anything new is painful.  we get that. if Japanese is involved it is a good thing and there is a lot of content using your old ways.</p>
+<p id=a217 class="phone s02"><cite>shiestyle:</cite> I have reservations between global vs. Japanese needs.</p>
+<p id=e786 class="phone s02"><cite>shiestyle:</cite> only a few major publishers from Japan has joined the W3C</p>
+<p id=0f11 class="phone s01"><cite>Hadrien:</cite> what about a CG?</p>
+<p id=ebb8 class="phone s02"><cite>shiestyle:</cite> it is difficult for us to speak English and participate and express our views/ concerns / needs.</p>
+<p id=fc70 class="phone s01"><cite>Hadrien:</cite> if we did this 1:1 with a translator might help?<br>
+<span id=c5f3>… Myself / LaurentLM will be in Japan and in Kobo / Tokyo for a good part of time in November and can meet with publishers directly.</span></p>
+<p id=2e9d class="phone s05"><cite>LaurentLM:</cite> Library for the Blind it would be great to speak to publishers directly while we are in Japan.</p>
+<p id=54b7 class="phone s05"><cite>LaurentLM:</cite> I do understand the need for a profile. but if we allow images in spine this requires specific handling from RS and not sure why we need this extra metadata.</p>
+<p id=cb65 class="phone s01"><cite>Hadrien:</cite> lot of content html in spine with images as a fallback, if we come up with images in spine or fallback to image we could have this documented we could validate against that profile. retroactively to fit the profile even without the extra metadata. we could also recognize other metadata to recognize this specific metadata in Japan, this could help RS to leverage this.</p>
+<p id=1aab class="phone s03"><cite>duga:</cite> not clear with the profile is telling me. 1 this is a comic and 2 there are performance tricks that could be used since the content is structured in a specific way.<br>
+<span id=0734>… in playbooks there is a comics play mode, by looking at age, format, type etc. dedicated kids reader, is this for kids/comics and will send it to an appropriate reader.</span><br>
+<span id=1704>… could take advantage of rendering or is it telling me just this is a comic.</span></p>
+<p id=bbfc class="phone s01"><cite>Hadrien:</cite> taking the guess work out is the major win. I agree there is a question if we are only targeting comics or content with images.<br>
+<span id=478a>… we could prepossess when you know you have a Bitmap, I see pros/cons for both. limiting to comic but other content could benefit from it, but could be a con to cover kids book</span></p>
+<p id=0744 class="phone s04"><cite>Dale:</cite> Sue has talked about, ch 1 reflowable, ch 2 is fixed layout so when I hear this wondering if the usecase this is only for complete cover to end all that exists is images.<br>
+<span id=83da>… Kindle create had issues which kept rejecting but KDP wont accept it because the so many images you must make it into a comic book and had to make the reflowable content into a PDF. Thorium/Readium could open it but KDP couldn't handle this.</span><br>
+<span id=b335>… in real world if I knew about what the Japanese RS needed then I could maybe tap into that market.</span><br>
+<span id=abd1>… if we said this profile is comic does that mean we can't have any reflowable content in there.</span><br>
+<span id=2121>… in my spine say this is an image, this is reflow, this is an image etc.</span></p>
+<p id=eec2 class="phone s01"><cite>Hadrien:</cite> Yes cover to cover is a bitmap.<br>
+<span id=9f33>… guess work is problematic, which you saw this KDP had to guess what your content was.</span><br>
+<span id=6ed8>… your EPUB could be treated different ways because of the guess work. Good example of why we need this.</span><br>
+<span id=ee3f>… spine overrides does allow in the spec but not widely supported.</span><br>
+<span id=5a2e>… trap we have in the spec where we document ways but in practice (18 years) won't work.</span><br>
+<span id=f357>… I think its a risk having this in the spec which is not really supported.</span></p>
+</section>
+</main>
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
