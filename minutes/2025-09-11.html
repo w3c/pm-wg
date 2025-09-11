@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 11 September 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>11 September 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Sep/0013.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/09/11-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>avneeshsingh, CharlesL, dale, duga, elisabeth_kraler, George, gpellegrino, Hadrien, ivan, LaurentLM, MasakazuKitahara, mgarrish, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>GautierSchomel</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga, SueNeu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#1d5b">PR 2788 - w3c/<wbr>epub-specs#2788</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=1d5b>PR 2788 - <a href="https://github.com/w3c/epub-specs/pull/2788">w3c/<wbr>epub-specs#2788</a></h3>
+<p id=72be class="phone s01"><cite>wendyreid:</cite> Discussing scrolled in rendition:layout<br>
+<span id=1386>… over to Hadrien</span></p>
+<p id=f475 class="phone s02"><cite>Hadrien:</cite> This is a followup to continuous scrolled comics<br>
+<span id=d495>… we had an agreement that a new value was a good idea, and we would add a note to explain what has happened to date</span><br>
+<span id=d68e>… Working on it, there was a lot in fixed layout that aren't really fixed layout</span><br>
+<span id=ffff>… for instance, the property for layout was a subsection, even though it can specify flowing</span><br>
+<span id=e50f>… so i bumped it up a level, and then after some more feedback from mgarrish I reorganized again</span><br>
+<span id=86f4>… I also added an example from a previous doc</span><br>
+<span id=10000>… this is really a draft, since I have yet to add the RS side, and I still don't have the note</span><br>
+<span id=48a5>… I am a bit concerned about revisiting again</span><br>
+<span id=75b2>… since we already have agreement</span></p>
+<p id=6de9 class="phone s03"><cite>duga:</cite> I was reading the comments this morning<br>
+<span id=606d>… I understand not wanting to re litigate this, it works, I'm not interested in revisiting this</span><br>
+<span id=030f>… we shouldn't discount the fact that ivan is confused, so I'm certain others are also</span><br>
+<span id=c08e>… I'm concerned we haven't made this clear enough</span><br>
+<span id=c251>… perhaps it is because we are missing the reading system piece</span><br>
+<span id=d52e>… perhaps &quot;scrolled&quot; is the wrong word, it is a behavior, not a format</span><br>
+<span id=c7c8>… and we have used it somewhere else for something different</span><br>
+<span id=50f0>… perhaps we should find a name that expressed the format and not the reading system behavior</span><br>
+<span id=6844>… like contiguous vertical</span></p>
+<p id=aaea class="phone s04"><cite>ivan:</cite> Forget about my comment about alternatives<br>
+<span id=4dc4>… I officially revoke that comment</span></p>
+<p id=a675 class="phone s04"><cite>ivan:</cite> but the term itself is what I find confusing, since it is already used<br>
+<span id=6841>… so if we find another term I am happy</span></p>
+<p id=ed7c class="phone s05"><cite>CharlesL:</cite> Are there horizontal scroll comics<br>
+<span id=2b18>… ?</span></p>
+<p id=7fee class="phone s02"><cite>Hadrien:</cite> That is a thing, but uncommon<br>
+<span id=10001>… We did cover a possible direction field</span></p>
+<p id=37c6 class="phone s06"><cite>SueNeu:</cite> Do we feel that horizontal scroll can be specified with FL?</p>
+<p id=a47d class="phone s02"><cite>Hadrien:</cite> Not really, same problem as vertical</p>
+<p id=7f59 class="phone s07"><cite>mgarrish:</cite> Are comics the sole use case here?<br>
+<span id=b6e5>… Rather than scrolled</span></p>
+<p id=1ccf class=irc><cite>&lt;LaurentLM&gt;</cite> comics is a US term</p>
+<p id=2fd7 class="phone s03"><cite>duga:</cite> I did consider that, but it seems that is also a layout term<br>
+<span id=395d>… what if someone wants to use if for something else</span><br>
+<span id=c004>… I don't like the term vertical that I suggested,</span><br>
+<span id=91dd>… because then we can't pivot to a horizontal format</span></p>
+<p id=14ea class="phone s02"><cite>Hadrien:</cite> I do think the only real use case are comics<br>
+<span id=cd28>… having an html container is less than ideal for this use</span><br>
+<span id=bee6>… Industry would prefer a list of images</span></p>
+<p id=c63b class="phone s06"><cite>SueNeu:</cite> Amazon calls everything comics, even children's books<br>
+<span id=d0c4>… I have a lot of questions what the document would look like</span></p>
+<p id=ea85 class="phone s02"><cite>Hadrien:</cite> What do you mean?</p>
+<p id=d2c8 class="phone s06"><cite>SueNeu:</cite> Is it one html with multiple images? Can this apply for panel by panel navigation?</p>
+<p id=f1d9 class="phone s02"><cite>Hadrien:</cite> for this content, there is no concept of a page. Think of the files as if they were tiles<br>
+<span id=9810>… the comics themselves are designed to be read in a continuous scroll</span></p>
+<p id=3677 class="phone s08"><cite>Dale:</cite> I wonder if this is the way it is, because people approach epubs coming from the web, and that is the convention there<br>
+<span id=904a>… Do we want to lock people into a convention or do we want people to have a chance to experiment?</span></p>
+<p id=34da class="phone s09"><cite>LaurentLM:</cite> Today there is no question, the webtoon is tiled vertically, period. If there is one case where the RS must follow the author intent, this is it<br>
+<span id=a63b>… We have seen some horizontal, but they did not have much success</span><br>
+<span id=10002>… If scrolled is not a layout, how about pageless? It is very literal</span></p>
+<p id=9ff4 class="phone s05"><cite>CharlesL:</cite> According to some LLM, I got 'axis' or 'single axis', or 'ribbon'.<br>
+<span id=778b>… also continuous</span></p>
+<p id=5c1b class="phone s01"><cite>wendyreid:</cite> To Dale, the reason these exist is due to mobile phones<br>
+<span id=c1b6>… It is the most natural way to read comics on the phone</span><br>
+<span id=72cf>… traditional omics are not as good on the phone (zoom, etc)</span><br>
+<span id=1966>… the challenge is more and more RSes support scrolled for flowing as well</span><br>
+<span id=b80d>… we do need to be clear that we are discussing fixed width image format and not other content</span></p>
+<p id=ab67 class="phone s10"><cite>shiestyle:</cite> I just proposed unpaginated or pagefree</p>
+<p id=efd6 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=a4bb class="phone s10"><cite>shiestyle:</cite> we can define vertical is the default</p>
+<p id=1c18 class="phone s03"><cite>duga:</cite> I'm enjoying the &quot;pageless&quot; and &quot;page-free&quot; we could add &quot;contiguous&quot;<br>
+<span id=8567>… I don't like &quot;unpaginated&quot; since it is negative</span><br>
+<span id=891e>… we could take this offline and find a way for ranked choice voting</span><br>
+<span id=94bf>… we could talk about this name for the rest of the meeting</span></p>
+<p id=a7ba class="phone s01"><cite>wendyreid:</cite> That makes sense, let's go back to content</p>
+<p id=116c class="phone s06"><cite>SueNeu:</cite> Hadrien mentioned tiles, what are the tiles, are they svg, jpeg, etc?</p>
+<p id=da6a class="phone s09"><cite>LaurentLM:</cite> Currently they are jpeg pictures</p>
+<p id=da70 class="phone s02"><cite>Hadrien:</cite> It is still common to send a single file, and let the publisher cut it down to size<br>
+<span id=81fa>… but the reality is no one in this industry cares about html</span><br>
+<span id=9482>… the industry today is just bitmaps</span><br>
+<span id=e54a>… and html isn't really helping, even for a11y</span></p>
+<p id=ff94 class="phone s04"><cite>ivan:</cite> I think we said we should look at the a11y issues again, with fallbacks for images<br>
+<span id=02ee>… and maybe this is something we should address in the WG, but not today</span></p>
+<p id=bada class="phone s01"><cite>wendyreid:</cite> Aside from the name and a11y, what else is there?</p>
+<p id=e8f2 class="phone s04"><cite>ivan:</cite> I am in favor with going forward, and the new structure works for me<br>
+<span id=d648>… for the RS, you have a sentence that characterizes what you expect will happen</span><br>
+<span id=ae58>… the one thing missing is the log entry, that we need</span><br>
+<span id=0c05>… Big question: will we have enough implementations?</span></p>
+<p id=e3e5 class="phone s06"><cite>SueNeu:</cite> I was also thinking that scrolling was an option for flowing, but wasn't supported by RSes</p>
+<p id=91a7 class="phone s01"><cite>wendyreid:</cite> Totally different question, probably for authoring spec:<br>
+<span id=d066>… we do have to tell authors how to construct a scrolled document, and we need that to be consistent enough that implementers can do stuff with it</span><br>
+<span id=2ea9>… traditionally, these are released as chapters, but you may also get a season, is it one html file with a single chapter, or do we have something to tell us where the boundaries are? How do we address that?</span><br>
+<span id=013d>… One hack might be a single file per chapter</span></p>
+<p id=da72 class="phone s02"><cite>Hadrien:</cite> There is a technical reason for multi files, mainly performance<br>
+<span id=3720>… ideally we would have a bunch of images, and then something else that would define a structure</span><br>
+<span id=497e>… I think it will have to be one html per tile, and structure can be in the nav document</span><br>
+<span id=2163>… I do agree that full seasons make sense for some retailers who can't handle a subscription</span></p>
+<p id=6724 class="phone s07"><cite>mgarrish:</cite> The whole 1to1 html to image is an old topic, but you can add images directly to the spine, with a fallback to a single html document<br>
+<span id=7376>… So there are workarounds to the spine level image documents</span></p>
+<p id=c91d class="phone s01"><cite>wendyreid:</cite> On the html file per tile question, we used to require this for performance, but do we really still need this? Performance is now much better<br>
+<span id=8744>… And does having a local file change anything, since you don't have to stream?</span></p>
+<p id=e43e class="phone s02"><cite>Hadrien:</cite> For a good RS, they usually have a few files in memory and discard the ones that won't be needed soon<br>
+<span id=9671>… Usually this is done with images directly</span><br>
+<span id=fc96>… on the web, I have seen canvas, iframe, etc</span><br>
+<span id=3692>… but you always have this caching to make it work</span></p>
+<p id=bb2e class="phone s03"><cite>duga:</cite> both of these work, you could put all your content into a single HTML and then put images in the spine<br>
+<span id=3630>… or you could split up your images to individual HTML files</span><br>
+<span id=de14>… the industry will decide which one</span><br>
+<span id=28d3>… if the giant HTML causes performance issues people will stop</span><br>
+<span id=5f58>… if publishers don't like making one HTML per panel they will not do that</span></p>
+<p id=7077 class="phone s02"><cite>Hadrien:</cite> I think what mgarrish suggested was that we can do images in spine, we can just point at a &quot;this is broken&quot; html<br>
+<span id=6ff0>… which is different from what you said</span><br>
+<span id=1a25>… if people are comfortable with that then it is fine</span><br>
+<span id=ba8f>… so I very much agree with mgarrish</span></p>
+<p id=10003 class="phone s08"><cite>Dale:</cite> as a web designer, I was taught that as I develop a design, I am always in the viewport<br>
+<span id=dc0b>… so I am always in the browser, and I adjust what I am doing to the browser</span><br>
+<span id=84fa>… and I am learning not all RSes handle content in the same way</span><br>
+<span id=202e>… so I am wondering, as we discuss the spec, how much does the spec say this is how it should be and the RS must adjust, vs how much are we explaining to authors what will work</span></p>
+<p id=212a class="phone s03"><cite>duga:</cite> I understand we can have a single file that says &quot;this is broken&quot;<br>
+<span id=5659>… or we can have a single HTML file that contains all images with single line of CSS to make width 100%</span><br>
+<span id=e284>… and you don't get that the book is broken</span><br>
+<span id=8698>… it might not be ideal, but it could be a fall back</span><br>
+<span id=9b58>… it would retain the content for RS that require HTML</span><br>
+<span id=ac77>… then it is up to the reading system to choose to use the HTML or the image isn the spine</span><br>
+<span id=2297>… this is consistent with the current spec</span></p>
+<p id=2883 class="phone s10"><cite>shiestyle:</cite> In Japan we had many comic epubs, we had one image in one html in the spine<br>
+<span id=b9e2>… and we use the same for scrolled</span><br>
+<span id=9fbf>… we have many RSes that support that, and they also support vertical scroll</span><br>
+<span id=7bb5>… even for traditional comics</span><br>
+<span id=b35b>… So in Japan, the only difference is RS behavior. EPUB behavior is the same</span><br>
+<span id=4d99>… with just the metadata on the EPUB</span><br>
+<span id=a855>… we don't need the additional metadata for episodes, etc</span></p>
+<p id=e4a2 class="phone s04"><cite>ivan:</cite> The approach from duga is fine, with the minimal html file<br>
+<span id=5ec3>… But images in the spite with fallback to single html doesn't work because the image size isn't available from just the image</span></p>
+<p id=6ac3 class="phone s02"><cite>Hadrien:</cite> The PR is designed this way due to the spec. If we want to do images in spine, then we need different requirements<br>
+<span id=7ba3>… on a spec level I think it is hard to say what to put in these documents (can't require images, vs broken comment)</span><br>
+<span id=761a>… The benefit to images in spine is it removes the guesswork</span><br>
+<span id=f10f>… but if we do it here, we should also consider it for comics</span></p>
+<p id=3d7c class="phone s02"><cite>Hadrien:</cite> the ability to know vs guess is a huge benefit</p>
+<p id=3f76 class="phone s05"><cite>CharlesL:</cite> I would be uncomfortable if it cannot be made accessible<br>
+<span id=7455>… we would need an image in the spine with some way to specify alt text</span></p>
+<p id=3ce1 class="phone s07"><cite>mgarrish:</cite> if you do all the images in a single html document, you would need to only reference it once, then add blank documents</p>
+</section>
+</main>
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
