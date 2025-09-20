@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>PMWG Accessibility TF – 18 September 2025</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" border="0" height="48" width="72"></a></p>
+
+<h1>Accessibility task force - PMWG</h1>
+<h2>18 September 2025</h2>
+
+<nav id="links">
+<a href="https://www.w3.org/2025/09/18-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id="prelims">
+<div id="attendees">
+<h2>Attendees</h2>
+<dl class="intro">
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, Dale, gautierchomel, gpellegrino, Madeleine</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>CharlesL, gpellegrino</dd>
+</dl>
+</div>
+
+<nav id="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#3552">Refinement of extended description Use cases document</a></li>
+<li><a href="#d1e2">Any other business.</a></li>
+</ol>
+</nav>
+</div>
+
+<main id="meeting" class="meeting">
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id="3552">Refinement of extended description Use cases document</h3>
+<p id="d97a" class="phone s01"><cite>AvneeshSingh:</cite> Gregorio created this document and exploring the gaps.</p>
+<p id="1d1e" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/publ-a11y/wiki/Standardizing-Extended-Descriptions:-User-Stories,-Testing-Results,-and-Current-Limitations">https://<wbr>github.com/<wbr>w3c/<wbr>publ-a11y/<wbr>wiki/<wbr>Standardizing-Extended-Descriptions:-User-Stories,-Testing-Results,-and-Current-Limitations</a></p>
+<p id="0693" class="phone s02"><cite>gpellegrino:</cite> expectations from reading systems. This document is to expose use cases for extended descriptions to lobby this idea. more about different requirements for whole ecosystem.  tried to explain the experiments made and state of Art what is possible on the Web. (summary/details in HTML) and aria-details attribute. and express limitations.  Ie. for publishing industry summary details is a problem, and aria details on linked to same page and</p>
+<p id="28aa" class="summary">no way to identify the containers of extended descriptions<br>
+<span id="da09">… these user stories starts from EPUB ecosystem and beyond to web and different systems, edtech, news portals etc.</span><br>
+<span id="9c59">… 5 user types: Screen reader, visual users (Dyslexic), user agents reading systems dev., content creators and QA.</span><br>
+<span id="5559">… need specific roles, identify the image and link to description. and identify the description itself.</span><br>
+<span id="7fa6">… describe how tests was structured, and 2nd doc. with extended descriptions. and listed the limitations with current state of art.</span><br>
+<span id="744c">… XPATHs to traverse. the DOM to identify if links are to ext. desc. etc. how traverse the DOM to find all links to extended descriptions before loading doc. or once it has been loaded.</span></p>
+<p id="b34a" class="phone s03"><cite>Dale:</cite> annotations talk notion: separate doc that has info that has information locator from another doc. reminds me of different usage case and similar problem there is content in the original doc and that we are going to give additional information about and pointing to it.<br>
+<span id="b340">… is there something we can look to that group to solve this problem here.</span></p>
+<p id="99ec" class="phone s02"><cite>gpellegrino:</cite> Its interesting, ext. description we have an image that ref. the extended description. image with a link below which points to the extended description and then a back link to the original image.  similar to Foot/End notes<br>
+<span id="b3e3">… exploring annotations for ext. desc. for future work, once we have broad support for standardizing of annotations.</span></p>
+<p id="6088" class="phone s01"><cite>AvneeshSingh:</cite> web already has tech to resolve linking to extended descriptions. we need semantics for these extended descriptions, we have linking mech.</p>
+<p id="ef27" class="phone s04"><cite>George:</cite> footnotes, endnotes and these extended descriptions are authored part of the original publications, annotations are usually added after the fact and point in, which is the main difference.  Annotations may be useful to adding additional content but not part of the author distributed work.</p>
+<p id="d09e" class="phone s05"><cite>mgarrish:</cite> State of Art: good to reinforce the lack of support, aria-details only points to current document, its ineffective it can point to the link but no semantics that the link points to the extended descriptions.  the link is not clear is the main issue.</p>
+<p id="a98d" class="phone s01"><cite>AvneeshSingh:</cite> limitations is good, we should highlight 1 piece, to identify the extended description.<br>
+<span id="155d">… should we give an example footnotes are identified as aria roles or would this be misleading?</span></p>
+<p id="1e82" class="phone s02"><cite>gpellegrino:</cite> we could propose a possible solution or just state the issue.  our mind we have an idea. two roles for the link to the ext desc, and the other the ext desc. itself.</p>
+<p id="2961" class="phone s01"><cite>AvneeshSingh:</cite> we are giving a hint to them.  is this a good way?</p>
+<p id="a5e8" class="phone s05"><cite>mgarrish:</cite> thats helpful to show precedent for these. to show we have already considered this</p>
+<p id="2ece" class="phone s01"><cite>AvneeshSingh:</cite> put limitations before then show the explanation of the test itself.<br>
+<span id="6d48">… see conclusion first before the test.</span></p>
+<p id="8c53" class="phone s02"><cite>gpellegrino:</cite> I agree, I can do that and even remove the explanation of the test</p>
+<p id="f6a5" class="phone s01"><cite>AvneeshSingh:</cite> should we remove that or keep it where it is or after?</p>
+<p id="5c9a" class="phone s04"><cite>George:</cite> the descriptions are good enough, I don't think we need to see the code.</p>
+<p id="5afb" class="phone s01"><cite>AvneeshSingh:</cite> any objections to removing the explanations of test and keep it in our back pocket, we can provide it if needed.<br>
+<span id="8799">… Gregorio will do another round then Matt will move to PMWG wiki page.</span></p>
+<p id="ea40" class="phone s05"><cite>mgarrish:</cite> just let me know when to move it.</p>
+</section>
+
+<section>
+<h3 id="d1e2">Any other business.</h3>
+<p id="1d6f" class="phone s06"><cite>Charles:</cite> proposes to bring FXL A11Y into this group.</p>
+<p id="d3ec" class="phone s07"><cite>gautierchomel:</cite> Fixed layout remaining problem reflowing fixed layout.<br>
+<span id="010e">… solution was to reading system to reflow the FXL same way TTS does or screen reader does, many FXL will remain the way they are currently. Hachette and maybe others the application both in FXL and Reflowable both content linked in same application switch from one to other.  Press most press application have this similar feature you can read in paginated or articale inf a reflowable way.</span><br>
+<span id="d6ab">… would like to have it specified.  time has come to discuss so we can specify both content linked and author provides both fixed layout reflowed by the RS.</span><br>
+<span id="6d8f">… incubation has been long 2+ years. my proposal is to show the PWG what is being done but could be this new joint Task Force. this could happen quickly what they say/do and what is being done.</span></p>
+<p id="73af" class="phone s01"><cite>AvneeshSingh:</cite> that would be nice in a CG meeting.</p>
+<p id="ba1e" class="phone s02"><cite>gpellegrino:</cite> similar to the multiple renditions worth investigating.</p>
+<p id="4704" class="phone s01"><cite>AvneeshSingh:</cite> if we want FXL to be part of this sub task force.</p>
+<p id="e38b" class="phone s04"><cite>George:</cite> I was thinking having it at this time, move that meeting over to hear it would get attention of Avneesh / George and others who can't make that other meeting time.</p>
+<p id="b287" class="phone s01"><cite>AvneeshSingh:</cite> 2 meetings in a month 1 can be focused on FXL and the other for this groups agenda topics.</p>
+<p id="444c" class="phone s05"><cite>mgarrish:</cite> what is left for 1.2?  we addressed some of the major stuff, unless we have plans to do more right?<br>
+<span id="2314">… we could pick up some FXL stuff, or limit ourself to the PCG calls. then we can start rescheduling the PCWG a11y calls.</span></p>
+<p id="e406" class="phone s01"><cite>AvneeshSingh:</cite> the work with APA that would be something, but once a month.</p>
+<p id="8df2" class="phone s02"><cite>gpellegrino:</cite> From FXL may need us to update our document.</p>
+<p id="8929" class="phone s08"><cite>Hadrien:</cite> I am interested in a11y comics could continue in CG and when we are ready bring it to this group.</p>
+<p id="ecca" class="phone s01"><cite>AvneeshSingh:</cite> Some of you are on FXL group also, what are the next steps to have FXL combined with this group?</p>
+<p id="1fce" class="phone s04"><cite>George:</cite> Gautier mentioned some FXL involved 2 documents / renditions &amp; linked and when thinking of comics with images in the spine. that notion is very appealing and may address the APA Horizontal review.</p>
+<p id="9dc4" class="phone s08"><cite>Hadrien:</cite> to make FXL accessible vs comics accessible is very different.<br>
+<span id="8b6f">… newspaper layout you can identify blocks and have html presentation. comics are different less about maping and more similar to media overlays playing fragments in a certain order.</span><br>
+<span id="58c0">… character who is talking in a speech bubble etc. solutions are different. newspaper and magazine solution could work for childrens books, cookbooks. comics more than mapping but also describing etc.</span></p>
+<p id="b6d5" class="phone s08"><cite>Hadrien:</cite> the FXL TF hasn't been doing a lot currently, we are working on authoring best practices.<br>
+<span id="affc">… what Gautier is saying there is no standard output and it may be a big change of what has happened in that group to this point.</span></p>
+<p id="6004" class="phone s01"><cite>AvneeshSingh:</cite> I think it would be good to see a presentation and see where this would fit either in the CG or WG.</p>
+<p id="59ed" class="phone s03"><cite>Dale:</cite> notion of a11y its broad subject I create comics and put them into EPUBs there is a story telling element, but from a user experience if a user wants to experience the comic what is the text bubble what is in the background etc. this will get more complicated.<br>
+<span id="38a3">… there are two different ways on how comics can be experienced. I wonder from a11y pov is accessibility the content and story accessible or is it breaking it apart to understand both aspects of the story and what characters are saying etc.</span></p>
+<p id="26c0" class="phone s04"><cite>George:</cite> there may also be sound effects as someone comes onto the scene and the audio representation of comics where Media overlay is similar here.</p>
+<p id="3f9c" class="phone s07"><cite>gautierchomel:</cite> I think I will discuss with Wendy how we can move fwd, so we can move fwd in our next meeting of the FXL TF call.</p>
+<p id="c306" class="phone s07"><cite>gautierchomel:</cite> I will reach out to Wendy.</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a href="https://w3c.github.io/scribe2/scribedoc.html">scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+
+
+</body></html>
