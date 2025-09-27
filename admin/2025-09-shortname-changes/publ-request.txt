@@ -20,17 +20,19 @@ EPUB 3 Accessibility 1.2
     - Previous document:
       - https://www.w3.org/TR/2025/WD-epub-a11y-111-20250910/
 
-The changes in the short names was decided by the WG on its meeting, see the resolution
+The changes in the short names was decided by the WG on its meeting, see the resolution:
 
  https://w3c.github.io/pm-wg/minutes/2025-09-18.html#c0ad
 
 The transition request, with the approval, is at:
  
- https://github.com/w3c/transitions/issues/745
+ https://github.com/w3c/transitions/issues/745#issuecomment-3338878389
 
 Both documents are already in place. 
 
-Note that there are cross references between the documents, using the short name, which are obviously wrong at this point. I presume we can ignore that; we plan to republish the documents as soon as the new short names are properly added to specref.
+Note that there are cross-references between the documents, using the short name, 
+which are obviously wrong at this point. I presume we can ignore that; we plan to republish
+the documents as soon as the new short names are properly added to specref.
 
 Thanks!
 
