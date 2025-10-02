@@ -1,0 +1,858 @@
+[
+    {
+        "nick": [
+            "geealbers"
+        ],
+        "name": "Greg Albers",
+        "github": "geealbers"
+    },
+    {
+        "nick": [
+            "Franco",
+            "francoalvarado"
+        ],
+        "name": "Franco Alvarado",
+        "github": "francofaa"
+    },
+    {
+        "nick": [
+            "BorisAnthony"
+        ],
+        "name": "Boris Anthony",
+        "github": "BorisAnthony"
+    },
+    {
+        "nick": [
+            "michaelbaker",
+            "mikebaker"
+        ],
+        "name": "Michael Baker",
+        "github": "mikebbaker"
+    },
+    {
+        "nick": [
+            "baldurbjarnason"
+        ],
+        "name": "Baldur Bjarnason",
+        "github": "baldurbjarnason"
+    },
+    {
+        "nick": [
+            "laurab"
+        ],
+        "name": "Laura Brady"
+    },
+    {
+        "nick": [
+            "Nick_Brown",
+            "nickbrown"
+        ],
+        "name": "Nick Brown"
+    },
+    {
+        "name": "Yu-Wei Chang (Yanni)",
+        "nick": [
+            "yanni"
+        ]
+    },
+    {
+        "nick": [
+            "fchasen"
+        ],
+        "name": "Fred Chasen",
+        "github": "fchasen"
+    },
+    {
+        "name": "Gautier Chomel",
+        "nick": [
+            "gautier",
+            "gautierchomel"
+        ]
+    },
+    {
+        "name": "Simon Collinson",
+        "nick": [
+            "Simon",
+            "simon_collinson",
+            "simoncollinson"
+        ]
+    },
+    {
+        "nick": [
+            "Rachel"
+        ],
+        "name": "Rachel Comerford",
+        "github": "RachelComerford"
+    },
+    {
+        "name": "Juan Corona",
+        "nick": [
+            "JuanCorona"
+        ]
+    },
+    {
+        "nick": [
+            "ckcosner"
+        ],
+        "github": "ckcosner",
+        "name": "Christopher Cosner"
+    },
+    {
+        "nick": [
+            "dauwhe",
+            "dave"
+        ],
+        "name": "Dave Cramer",
+        "github": "dauwhe"
+    },
+    {
+        "nick": [
+            "gregdavis"
+        ],
+        "name": "Greg Davis",
+        "github": "antelopeb"
+    },
+    {
+        "nick": [
+            "marisa",
+            "marisa_demeglio",
+            "marisademeglio"
+        ],
+        "name": "Marisa DeMeglio",
+        "github": "marisademeglio"
+    },
+    {
+        "nick": [
+            "sdelackner",
+            "sdelackner9"
+        ],
+        "name": "Seth Delackner"
+    },
+    {
+        "nick": [
+            "rdeltour",
+            "romain"
+        ],
+        "name": "Romain Deltour",
+        "github": "rdeltour"
+    },
+    {
+        "nick": [
+            "vagner",
+            "vagner_br"
+        ],
+        "name": "Vagner Diniz",
+        "github": "vagnerdiniz"
+    },
+    {
+        "name": "Kenneth Dougherty",
+        "nick": [
+            "Kenneth"
+        ]
+    },
+    {
+        "nick": [
+            "Laura_driussi",
+            "laurad",
+            "ldriussi"
+        ],
+        "name": "Laura Driussi"
+    },
+    {
+        "nick": [
+            "brady",
+            "brady_duga",
+            "duga",
+            "duga5"
+        ],
+        "name": "Brady Duga"
+    },
+    {
+        "nick": [
+            "bdugas",
+            "ben_dugas",
+            "bendugas"
+        ],
+        "name": "Ben Dugas",
+        "github": "bdugas"
+    },
+    {
+        "nick": [],
+        "name": "Roger Espinosa"
+    },
+    {
+        "nick": [
+            "ReinaldoFerraz"
+        ],
+        "name": "Reinaldo Ferraz"
+    },
+    {
+        "nick": [
+            "symon",
+            "symon_flaming"
+        ],
+        "name": "Symon Flaming"
+    },
+    {
+        "nick": [
+            "Heather",
+            "HeatherF"
+        ],
+        "name": "Heather Flanagan",
+        "github": "hlflanagan"
+    },
+    {
+        "nick": [
+            "teenya"
+        ],
+        "name": "Teenya Franklin",
+        "github": "Teenya"
+    },
+    {
+        "nick": [
+            "JunGamo",
+            "gamou",
+            "jun_gamo",
+            "jun_gamou"
+        ],
+        "name": "Jun Gamou"
+    },
+    {
+        "nick": [
+            "Hadrien",
+            "HadrienGardeur",
+            "hadrian"
+        ],
+        "name": "Hadrien Gardeur",
+        "github": "HadrienGardeur"
+    },
+    {
+        "nick": [
+            "matt",
+            "mattg",
+            "mattgarrish",
+            "mgarrish"
+        ],
+        "name": "Matt Garrish",
+        "github": "mattgarrish"
+    },
+    {
+        "nick": [
+            "Michael_Goodman"
+        ],
+        "name": "Michael Goodman"
+    },
+    {
+        "nick": [
+            "elguerrero",
+            "eloisa",
+            "guerrero"
+        ],
+        "name": "Eloisa Guerrero"
+    },
+    {
+        "name": "Kaleeg Hainsworth",
+        "nick": [
+            "kaleeg"
+        ]
+    },
+    {
+        "nick": [
+            "dhall"
+        ],
+        "name": "David Hall"
+    },
+    {
+        "nick": [
+            "katie",
+            "ryladog"
+        ],
+        "name": "Katie Haritos-Shea"
+    },
+    {
+        "nick": [
+            "CHayes"
+        ],
+        "name": "Caroline Hayes",
+        "github": "CHayesNorton"
+    },
+    {
+        "nick": [
+            "eric",
+            "eric_hellman",
+            "erich"
+        ],
+        "name": "Eric Hellman"
+    },
+    {
+        "nick": [
+            "iherman",
+            "ivan"
+        ],
+        "name": "Ivan Herman",
+        "github": "iherman"
+    },
+    {
+        "name": "Jeff Jaffee",
+        "nick": [
+            "jeff"
+        ]
+    },
+    {
+        "nick": [
+            "ajellinek"
+        ],
+        "name": "Abe Jellinek"
+    },
+    {
+        "nick": [
+            "RickJ",
+            "Rick_Johnson"
+        ],
+        "name": "Rick Johnson",
+        "github": "rickj"
+    },
+    {
+        "name": "Ken Jones",
+        "nick": [
+            "circularken"
+        ]
+    },
+    {
+        "nick": [
+            "swjoo"
+        ],
+        "name": "Seong-Wook Joo"
+    },
+    {
+        "name": "Geoff Jukes",
+        "nick": [
+            "geoff",
+            "geoff_jukes",
+            "geoffjukes"
+        ],
+        "github": "geoffjukes"
+    },
+    {
+        "name": "Junko Kamata",
+        "nick": [
+            "jkamata"
+        ]
+    },
+    {
+        "nick": [
+            "takeshi"
+        ],
+        "name": "Takeshi Kanai",
+        "github": "tkanai"
+    },
+    {
+        "nick": [
+            "Deborah_Kaplan",
+            "deborah",
+            "dkaplan",
+            "dkaplan3"
+        ],
+        "name": "Deborah Kaplan",
+        "github": "deborahgu"
+    },
+    {
+        "name": "Jean Kaplansky",
+        "nick": [
+            "JeanK",
+            "Jean_K",
+            "Jean_kaplansky"
+        ]
+    },
+    {
+        "nick": [
+            "BillK",
+            "Bill_Kasdorf"
+        ],
+        "name": "Bill Kasdorf",
+        "github": "BillKasdorf"
+    },
+    {
+        "nick": [
+            "George"
+        ],
+        "name": "George Kerscher",
+        "github": "georgekerscher"
+    },
+    {
+        "nick": [
+            "Yuri"
+        ],
+        "name": "Yuri Khramov"
+    },
+    {
+        "nick": [
+            "kimberg"
+        ],
+        "name": "Daniel Kimberg"
+    },
+    {
+        "name": "Masakazu Kitahara",
+        "nick": [
+            "MasakazuKitahara",
+            "Masakazu_Kitahara"
+        ]
+    },
+    {
+        "nick": [
+            "toshiaki-koike",
+            "toshiakikoike"
+        ],
+        "name": "Toshiaki Koike",
+        "github": "toshiakikoike"
+    },
+    {
+        "nick": [
+            "elisabeth",
+            "elisabeth_kraler"
+        ],
+        "name": "Elisabeth Kraler"
+    },
+    {
+        "nick": [
+            "ryo.kuroda"
+        ],
+        "name": "Ryo Kuroda"
+    },
+    {
+        "nick": [
+            "CharlesL",
+            "CharlesL1",
+            "clapierre",
+            "clapierre1"
+        ],
+        "name": "Charles LaPierre",
+        "github": "clapierre"
+    },
+    {
+        "nick": [
+            "dan",
+            "dlazin"
+        ],
+        "name": "Dan Lazin"
+    },
+    {
+        "nick": [
+            "MustLazMS"
+        ],
+        "name": "Mustapha Lazrek",
+        "github": "Mustlaz"
+    },
+    {
+        "nick": [
+            "Laurent",
+            "laurent_lm",
+            "laurentlemeur",
+            "laurentlm",
+            "lmeurs"
+        ],
+        "name": "Laurent Le Meur",
+        "github": "llemeurfr"
+    },
+    {
+        "nick": [
+            "Vlad"
+        ],
+        "name": "Vladimir Levantovsky",
+        "github": "vlevantovsky"
+    },
+    {
+        "nick": [
+            "cmaden",
+            "cmaden2",
+            "cmaden21"
+        ],
+        "name": "Chris Maden",
+        "github": "crism"
+    },
+    {
+        "nick": [
+            "makoto",
+            "murata"
+        ],
+        "name": "Murata Makoto",
+        "github": "murata2makoto"
+    },
+    {
+        "name": "Keith McFarland",
+        "nick": [
+            "keith",
+            "keithmcfarland"
+        ]
+    },
+    {
+        "nick": [
+            "hughmcguire"
+        ],
+        "name": "Hugh McGuire",
+        "github": "hughmcguire"
+    },
+    {
+        "nick": [
+            "nellie"
+        ],
+        "name": "Nellie McKesson",
+        "github": ""
+    },
+    {
+        "name": "Nellie McKesson",
+        "nick": [
+            "neelie",
+            "nellie"
+        ]
+    },
+    {
+        "nick": [
+            "juliette",
+            "juliette_mcshane"
+        ],
+        "name": "Juliette McShane"
+    },
+    {
+        "nick": [
+            "davidm"
+        ],
+        "name": "David Merrell"
+    },
+    {
+        "nick": [
+            "Michael"
+        ],
+        "name": "Michael Miller"
+    },
+    {
+        "nick": [
+            "sel"
+        ],
+        "name": "Selma Morais"
+    },
+    {
+        "nick": [
+            "jasminemulliken",
+            "jmulliken"
+        ],
+        "name": "Jasmine Mulliken",
+        "github": "jmulliken"
+    },
+    {
+        "nick": [
+            "cmussi",
+            "cristina",
+            "cristinamussinelli"
+        ],
+        "name": "Cristina Mussinelli",
+        "github": "cmussi"
+    },
+    {
+        "nick": [
+            "sue-neu",
+            "sueneu",
+            "suenue",
+            "susan"
+        ],
+        "name": "Susan Neuhaus"
+    },
+    {
+        "nick": [
+            "g_pellegrino",
+            "gpellegrino",
+            "gregorio"
+        ],
+        "name": "Gregorio Pellegrino",
+        "github": "gregoriopellegrino"
+    },
+    {
+        "nick": [
+            "MarthP"
+        ],
+        "name": "Marty Picco"
+    },
+    {
+        "nick": [
+            "jaclyn",
+            "jaclyn_pope"
+        ],
+        "name": "Jaclyn Pope"
+    },
+    {
+        "nick": [
+            "ckpowell"
+        ],
+        "name": "Chris Powell",
+        "github": "cmkpowell"
+    },
+    {
+        "nick": [
+            "jeffp"
+        ],
+        "name": "Jeff Printy",
+        "github": "jeffprinty"
+    },
+    {
+        "nick": [
+            "rpug"
+        ],
+        "name": "Ryan Pugatch"
+    },
+    {
+        "nick": [
+            "josh",
+            "jpyle"
+        ],
+        "name": "Joshua Pyle",
+        "github": "atyposh"
+    },
+    {
+        "nick": [
+            "wendy",
+            "wendyreid"
+        ],
+        "name": "Wendy Reid",
+        "github": "wareid"
+    },
+    {
+        "name": "Milena Risi",
+        "nick": [
+            "milena"
+        ]
+    },
+    {
+        "nick": [
+            "florian"
+        ],
+        "name": "Florian Rivoal",
+        "github": " frivoal"
+    },
+    {
+        "nick": [
+            "dale",
+            "dale_rogers",
+            "dalerogers"
+        ],
+        "name": "Dale Rogers"
+    },
+    {
+        "nick": [
+            "johnroque"
+        ],
+        "name": "John Roque"
+    },
+    {
+        "nick": [
+            "Leonard",
+            "leonardr"
+        ],
+        "name": "Leonard Rosenthol",
+        "github": "lrosenthol"
+    },
+    {
+        "nick": [
+            "Madeleine"
+        ],
+        "name": "Madeleine Rothberg"
+    },
+    {
+        "nick": [
+            "NickRuffilo",
+            "nick",
+            "nick1"
+        ],
+        "name": "Nick Ruffilo"
+    },
+    {
+        "nick": [
+            "jim_saiya"
+        ],
+        "name": "Jim Saiya"
+    },
+    {
+        "nick": [
+            "azaroth"
+        ],
+        "name": "Rob Sanderson",
+        "github": "azaroth42"
+    },
+    {
+        "nick": [
+            "JodiS",
+            "jodi"
+        ],
+        "name": "Jodi Schneider",
+        "github": "jodischneider"
+    },
+    {
+        "name": "Daihei Shiohama",
+        "nick": [
+            "Daihei",
+            "Daihei_Shiohamna"
+        ],
+        "github": "dshiohama"
+    },
+    {
+        "nick": [
+            "tzviya"
+        ],
+        "name": "Tzviya Siegman",
+        "github": "TzviyaSiegman"
+    },
+    {
+        "nick": [
+            "Avneesh",
+            "Avneeshsingh"
+        ],
+        "name": "Avneesh Singh",
+        "github": "avneeshsingh"
+    },
+    {
+        "name": "Adam Sisco",
+        "github": "awsisco",
+        "nick": [
+            "adamsisco",
+            "awsisco"
+        ]
+    },
+    {
+        "nick": [
+            "dave_stroup",
+            "david_stroup"
+        ],
+        "name": "David Stroup"
+    },
+    {
+        "nick": [
+            "LillianSullam",
+            "lsullam"
+        ],
+        "name": "Lillian Sullam"
+    },
+    {
+        "nick": [
+            "ralph"
+        ],
+        "name": "Ralph Swick",
+        "github": "swickr"
+    },
+    {
+        "name": "Shinya Takami",
+        "nick": [
+            "shiestyle",
+            "shinya"
+        ]
+    },
+    {
+        "nick": [
+            "mateus",
+            "mateus-teixeira",
+            "mteixeira",
+            "mteixeira-wwn"
+        ],
+        "name": "Mateus Teixeira",
+        "github": "mteixeira-wwn"
+    },
+    {
+        "nick": [
+            "bobbytung"
+        ],
+        "name": "Bobby Tung"
+    },
+    {
+        "name": "Lars Wallin",
+        "nick": [
+            "LarsColibrio",
+            "lars"
+        ]
+    },
+    {
+        "nick": [
+            "BenWaltersMS"
+        ],
+        "name": "Ben Walters",
+        "github": "BCWalters"
+    },
+    {
+        "nick": [
+            "DanieWeck",
+            "DanielWeck",
+            "Daniel_Weck"
+        ],
+        "name": "Daniel Weck",
+        "github": "danielweck"
+    },
+    {
+        "name": "Ivan Wong",
+        "nick": [
+            "ikkwong"
+        ]
+    },
+    {
+        "nick": [
+            "DavidWood",
+            "dwood",
+            "prototypo"
+        ],
+        "name": "David Wood",
+        "github": "prototypo"
+    },
+    {
+        "nick": [
+            "Ric",
+            "rkwright"
+        ],
+        "name": "Ric Wright",
+        "github": "rkwright"
+    },
+    {
+        "nick": [
+            "jeff_xu",
+            "zheng",
+            "zheng_xu"
+        ],
+        "name": "Zheng Xu (Jeff)",
+        "github": "rakutenjeff"
+    },
+    {
+        "nick": [
+            "evan"
+        ],
+        "name": "Evan Yamanishi"
+    },
+    {
+        "nick": [
+            "jyasskin"
+        ],
+        "name": "Jeffrey Yasskin"
+    },
+    {
+        "nick": [
+            "jyoshii",
+            "yoshii"
+        ],
+        "name": "Jun’Ichi Yoshii"
+    },
+    {
+        "nick": [
+            "naomi"
+        ],
+        "name": "Naomi Yoshizawa"
+    },
+    {
+        "nick": [
+            "benjamin",
+            "bigbluehat"
+        ],
+        "name": "Benjamin Young",
+        "github": "bigbluehat"
+    },
+    {
+        "name": "Marcelo da Silva Zanon",
+        "nick": [
+            "marcelo"
+        ],
+        "github": "marcelozanon"
+    }
+]
