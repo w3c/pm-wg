@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>PMWG Accessibility TF – 02 October 2025</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt="W3C" border="0" height="60" width="60"></a></p>
+
+<h1>Accessibility task force - PMWG</h1>
+<h2>02 October 2025</h2>
+
+<nav id="links">
+<a href="https://www.w3.org/2025/10/02-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id="prelims">
+<div id="attendees">
+<h2>Attendees</h2>
+<dl class="intro">
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, Dale, gautierchomel, George, gpellegrino, Hadrien, mgarrish</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>gautierchomel</dd>
+</dl>
+</div>
+
+<nav id="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#bebb">Review of editorial refactoring of EPUB Accessibility 1.2 and techniques document.</a></li>
+<li><a href="#0cf4">Any other business.</a></li>
+</ol>
+</nav>
+</div>
+
+<main id="meeting" class="meeting">
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id="bebb">Review of editorial refactoring of EPUB Accessibility 1.2 and techniques document.</h3>
+<p id="739e" class="phone s01"><cite>AvneeshSingh:</cite> We collect comments and have some specific questions.</p>
+<p id="6e62" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/blob/6eef7b970099dd3eeb30d44a9331e25c4e800ee6/epub34/a11y/index.html">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>blob/<wbr>6eef7b970099dd3eeb30d44a9331e25c4e800ee6/<wbr>epub34/<wbr>a11y/<wbr>index.html</a></p>
+<p id="1279" class="phone s02"><cite>mgarrish:</cite> where should we keep the references to Optimized publications?</p>
+<p id="a8e4" class="phone s03"><cite>George:</cite> I would be in favor of an Appendix.</p>
+<p id="35b6" class="phone s03"><cite>George:</cite> there's confusion about audiobook, we want accessibility metadata about audiobooks in the trade. It is good to make sure there is no confusion with optimized daisy formats.</p>
+<p id="cabf" class="phone s04"><cite>gpellegrino:</cite> The title of the document is EPUB accessibility, this section is about other formats. We should not change the document name and push them (and the audiobook references) to an annex.</p>
+<p id="83b4" class="phone s05"><cite>CharlesL:</cite> I would expect Optimized to be an EPUB Optimized, with Braille ready inside.</p>
+<p id="f3d0" class="phone s01"><cite>AvneeshSingh:</cite> Braille rendition of EPUB is an important subject we are discussing at DAISY.</p>
+<p id="5261" class="phone s03"><cite>George:</cite> A media overlay is an EPUB that can easily become an audiobook.</p>
+<p id="b070" class="phone s01"><cite>AvneeshSingh:</cite> This section is for education purpose. EPUB accessibility and WCAG 2.x is great but cannot fit all needs. Could we keep a section to inform this concept.</p>
+<p id="96f1" class="irc"><cite>&lt;CharlesL&gt;</cite> +1 to a dual approach</p>
+<p id="2d1e" class="phone s02"><cite>mgarrish:</cite> I understand, then maybe not as a big section.</p>
+<p id="6181" class="phone s06"><cite>gautierchomel:</cite> maybe then we want to inform about limitations of EPUB for accessibility.</p>
+<p id="50de" class="phone s02"><cite>mgarrish:</cite> yes, accessible universal does not fits every needs.</p>
+<p id="e47e" class="phone s02"><cite>mgarrish:</cite> Second question is about the Guide to Optimized Publication Standards for a non-normative list of standards.</p>
+<p id="3504" class="summary"><a href="https://w3c.github.io/epub-specs/docs/optimized-pubs/">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>docs/<wbr>optimized-pubs/</a></p>
+<p id="ffff" class="phone s02"><cite>mgarrish:</cite> do we want to have this guidance here or at daisy?</p>
+<p id="863a" class="phone s02"><cite>mgarrish:</cite> it's legacy from the IDPF.</p>
+<p id="8c0e" class="phone s01"><cite>AvneeshSingh:</cite> It probably makes more sense to have this list on daisy side</p>
+<p id="8bea" class="phone s01"><cite>AvneeshSingh:</cite> Most of optimized accessibility specifications compatible with EPUB are created by DAISY community.</p>
+<p id="e7a5" class="phone s03"><cite>George:</cite> we have the legacy specifications at daisy and the ebraille incoming. All of those are Daisy Standards.</p>
+<p id="3bf0" class="phone s03"><cite>George:</cite> NIMAS will be revisited also, it's derived from Daisy. It is good to have a register of all optimized formats.</p>
+<p id="0055" class="phone s02"><cite>mgarrish:</cite> Next question, in dc conform to you could use the value none. Shall we example that and be clear it is usable?</p>
+<p id="9ecf" class="phone s05"><cite>CharlesL:</cite> unknown and none are useful, but then you must say who evaluated.</p>
+<p id="993c" class="phone s02"><cite>mgarrish:</cite> probably the accessibility summary is more important when the publication is not accessible, to explain why.</p>
+<p id="8b06" class="phone s01"><cite>AvneeshSingh:</cite> conformsTo is a string you can put what ever you want.</p>
+<p id="6c21" class="phone s05"><cite>CharlesL:</cite> the guidance already mention xyz conformance. We only miss information about what to do if we use none or unknown.</p>
+<p id="fcf5" class="phone s01"><cite>AvneeshSingh:</cite> That's an interesting discussion for the community group, I'll put it on next week agenda to have feedback.</p>
+<p id="b9b3" class="phone s05"><cite>CharlesL:</cite> I have seen conformsTo with "ACE version xx"</p>
+<p id="7724" class="phone s04"><cite>gpellegrino:</cite> the important information is in metadata. Conformance is black or white, it helps secure production.</p>
+<p id="9ae8" class="phone s02"><cite>mgarrish:</cite> we cannot really just display what is in ConformsTo, we use a control vocabulary to trigger displays. So the question is what should we do with none and unknown.</p>
+<p id="0750" class="phone s03"><cite>George:</cite> conformance require human intelligence, no magic bullet exist.</p>
+</section>
+
+<section>
+<h3 id="0cf4">Any other business.</h3>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a href="https://w3c.github.io/scribe2/scribedoc.html">scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+
+
+</body></html>
