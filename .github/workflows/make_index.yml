@@ -2,7 +2,7 @@
 # The really specific details are in the steps that generates the index files
 # (and the deployment of deno as an underling tool).
 # See https://github.com/iherman/display_minutes for more details
-name: Publish to Github Pages
+name: Generate Index
 on:
   push:
     branches: [main]
