@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 09 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>09 October 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Oct/0010.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/10/09-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL1, duga, Elizabeth, Hadrien, ivan, kimberg, MasakazuKitahara, mgarrish, rdeltour, shiestyle, SueNeu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>dalerogers, gautierchomel, laurentlm</dd>
+<dt>Chair</dt><dd>susan, wendy</dd>
+<dt>Scribe</dt><dd>SueNeu, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#7c83">Topics for F2F - https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2815</a></li>
+<li><a href="#0c3f">Font Obfuscation - w3c/<wbr>epub-specs#2807</a></li>
+<li><a href="#10001">Alternatives in spine - w3c/<wbr>epub-specs#2806</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=7c83>Topics for F2F - <a href="https://github.com/w3c/epub-specs/discussions/2815">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2815</a></h3>
+<p id=9e91 class="phone s01"><cite>wendyreid:</cite> We created a discussion in Github for topics for the f2f</p>
+<p id=292b class="phone s02"><cite>Hadrien:</cite> There are many publishers/distributers who are doing remediation for accessibility<br>
+<span id=831e>… sometimes they generate the image description or infer metadata</span><br>
+<span id=fbed>… this is important right now, because there is no way to indicate that the descriptions and metadata have been generated</span><br>
+<span id=24f1>… mostly an accessibility issue</span><br>
+<span id=a868>… similar to another topic, the ability to identify synthesized voices</span><br>
+<span id=c48e>… overall how do we indicate that something was generated in EPUB</span></p>
+<p id=f46c class="phone s01"><cite>wendyreid:</cite> we can include that too</p>
+<p id=5fc0 class="phone s03"><cite>ivan:</cite> we had some discussion about the publication manifest</p>
+</section>
+
+<section>
+<h3 id=0c3f>Font Obfuscation - <a href="https://github.com/w3c/epub-specs/issues/2807">w3c/<wbr>epub-specs#2807</a></h3>
+<p id=245c class=irc><cite>&lt;ivan&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2814">w3c/<wbr>epub-specs#2814</a></p>
+<p id=ffff class="phone s03"><cite>ivan:</cite> I started this discussion and it took an unexpected turn<br>
+<span id=2c4a>… I was reviewing another PR and realized that the obfuscation section uses a SHA1 for hashing</span><br>
+<span id=e654>… I realized that SHA is one of the algorithm that is considered out of date</span><br>
+<span id=124a>… because of security issues and lack of unique hashes</span><br>
+<span id=1ee5>… [1] will retire SHA1 soon which leads to governments and other orgs</span><br>
+<span id=fb7c>… not being able to use it</span><br>
+<span id=ef75>… I proposed that we update the version of SHA</span><br>
+<span id=fcf1>… Brady saw this as an opportunity to retire obfuscation from the spec</span><br>
+<span id=d156>… not 100% because we have to be backward compatible</span><br>
+<span id=a491>… we can add text saying that people should avoid using obfuscation</span><br>
+<span id=239a>… and use WOFF fonts</span><br>
+<span id=6aa8>… in the discussion there was agreement that this is the way to go</span><br>
+<span id=9be6>… mattgarish has already made a PR</span><br>
+<span id=7abc>… that includes other obsolete but still usable section</span><br>
+<span id=01ac>… these are not specifically deprecated</span><br>
+<span id=4756>… we ask that people not use these technologies but reading systems with continue to understand them</span><br>
+<span id=ebb0>… do we want to remove obfuscation in 3.4, and include the new section?</span><br>
+<span id=d306>… it makes sense to move older features to a separate section</span><br>
+<span id=8e37>… it cleans up the spec, we don't have to keep all the font obfuscation specs for ever for example</span></p>
+<p id=9cdd class="phone s04"><cite>duga:</cite> I thinks its better to use WOFF fonts than to rewrite the obfuscation spec<br>
+<span id=6a97>… the reality is that SHA1 isn't broken, there is no maintenance required</span><br>
+<span id=e68a>… just some won't use it</span></p>
+<p id=f8da class=summary>'…it is not the end of the world if we choose to do nothing<br>
+<span id=1f0a>… it is still used. So it is a little weird if one of the major tools, InDesign, still uses obfuscation</span><br>
+<span id=6b90>… it still makes sense to move it into older features</span></p>
+<p id=4c58 class=irc><cite>&lt;wendyreid&gt;</cite> s/'.../...</p>
+<p id=5df1 class="phone s05"><cite>SueNeu:</cite> Can confirm, Adobe Indesign still produces font obfuscation</p>
+<p id=75f1 class="phone s03"><cite>ivan:</cite> leonard did chime in on the thread and said he didn't see any reason we couldn't go ahead with WOFF fonts<br>
+<span id=1575>… perhaps this is an incentive for InDesign to change</span></p>
+<p id=0a78 class="phone s06"><cite>wendreid:</cite> are we all in agreement that we are deprecating font obfuscation?</p>
+<p id=e3bc class="phone s04"><cite>duga:</cite> is deprecate the right term?</p>
+<p id=758c class="phone s07"><cite>mattgarrish:</cite> obsolete but conforming is what is used now</p>
+<p id=e9e6 class="phone s03"><cite>ivan:</cite> the question we also have to answer is what do we expect epub check to do if it sees obfuscation?</p>
+<p id=b3a4 class="phone s07"><cite>mattgarrish:</cite> right now, we expect it to say nothing as long as it is used correctly</p>
+<p id=571d class=summary>Proposed: Make font obfuscation an obsolete but conforming EPUB feature in EPUB 3.4.</p>
+<p id=2fc7 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=6fc7 class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=6fc8 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=afc7 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=afc8 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=efc7 class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=2fc8 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=6fc9 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=efc8 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=2fc9 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=6fca class=irc><cite>&lt;CharlesL1&gt;</cite> +1</p>
+<p id=68dc class=irc><cite>&lt;SueNeu&gt;</cite> s/mattgarrish /mgarrish</p>
+<p id=fa04 class=resolution><strong>RESOLUTION:</strong> Make font obfuscation an obsolete but conforming EPUB feature in EPUB 3.4.</p>
+<p id=7f7c class="phone s01"><cite>wendyreid:</cite> resolved</p>
+<p id=10000 class="phone s08"><cite>CharlesL:</cite> do we have anything that lists all the features that are OK but can't really be used anymore from EPUB check?<br>
+<span id=81d9>… can it give a publisher a list of things they shouldn't be doing the future</span></p>
+<p id=b556 class="phone s09"><cite>rdetour:</cite> ordinarily we issue a note that they should not use these features</p>
+</section>
+
+<section>
+<h3 id=10001>Alternatives in spine - <a href="https://github.com/w3c/epub-specs/issues/2806">w3c/<wbr>epub-specs#2806</a></h3>
+<p id=2d98 class=irc><cite>&lt;SueNeu&gt;</cite> s/redetour /rdeltour</p>
+<p id=a003 class="phone s01"><cite>wendyreid:</cite> there was some discussion on this issue, so we need something in the spine<br>
+<span id=6038>… besides fallback, that indicates something has an alternative</span><br>
+<span id=d4e8>… we've had a lot of ideas about this</span><br>
+<span id=d897>… including mapping between resources using something like SMIL</span><br>
+<span id=8ceb>… I wonder if this creates other issues especially with overlay files</span></p>
+<p id=10002 class="phone s02"><cite>Hadrien:</cite> A good number of people have been using fall backs for this, particularly for comics<br>
+<span id=2c13>… I don't know if these is part of the main spec or part of the comics group</span><br>
+<span id=dc06>… it isn't good if something is widely used but not mentioned in the spec</span><br>
+<span id=33fb>… I think of newspapers and magazines where this is widely used</span><br>
+<span id=45f1>… I've seen this implemented as getting a list of alternatives like Libby app in the US/Canada</span><br>
+<span id=d3ba>… it is not a one-to-one mapping</span><br>
+<span id=40d0>… for some publications you could tap on the article and it would open in another view</span><br>
+<span id=0aa1>… to do something like Libby we wouldn't need SMIL</span><br>
+<span id=7087>… to do a one to one mapping we would need something more like SMIL, Rendition mapping or region mapping</span><br>
+<span id=7f72>… there are a lot of organizations that do this with EPUB or PDF. They've invented their own way to do this</span><br>
+<span id=16af>… as an extension of the spec to enhance newspapers and magazines as fixed layout epubs</span></p>
+<p id=7746 class="phone s01"><cite>wendyreid:</cite> If I understand correctly, you're saying there is a missing thread<br>
+<span id=ef06>… we could continue to let people use fallbacks but we need some way of indicating why they are being used</span><br>
+<span id=77f8>… we could extend properties or add something new that says the fallback is being used as an alternative</span><br>
+<span id=d699>… at large many reading systems may not see the fallback that way and won't provide the necessary UI</span></p>
+<p id=e982 class="phone s02"><cite>Hadrien:</cite> fallbacks wouldn't cover the Libby use case<br>
+<span id=97e7>… fallbacks have mostly been used because we don't allow images in the spine</span><br>
+<span id=f3de>… for what you've described, we do have multiple renditions, though I am not a fan</span><br>
+<span id=f026>… I'm not sure it has ever been implemented by anyone other that B&amp;N</span><br>
+<span id=d812>… if we want this kind of concept, we could reopen multiple renditions or we could use collection</span><br>
+<span id=16a2>… I'm worried about introducing something new. We could start with what is in our spec</span><br>
+<span id=b757>… because something new may never be implemented</span></p>
+<p id=5be2 class="phone s04"><cite>duga:</cite> I have a question, this came from the fxl group, but are there other use cases?<br>
+<span id=dd11>… are we trying to fix this in committee without going to the people who are trying this</span></p>
+<p id=66bb class="phone s02"><cite>Hadrien:</cite> yes, people who are members of EDRLab are already doing this<br>
+<span id=c757>… mostly in newspapers, magazines and textbooks</span></p>
+<p id=10003 class="phone s01"><cite>wendyreid:</cite> there are tool makers who are also trying to solve this<br>
+<span id=9fef>… and there isn't a lot of clarity for fxl accessibility</span><br>
+<span id=c25b>… and reading systems aren't jumping on this either</span><br>
+<span id=a983>… no one really knows what an accessible fxl book looks like</span><br>
+<span id=634f>… there's no reason why this isn't possible, we've seen examples in closed instances</span><br>
+<span id=77e5>… people aren't doing this on a large scale</span><br>
+<span id=80dc>… the push for this in 3.4 is that publishing moves slowly and this will be needed</span></p>
+<p id=8cb3 class="phone s02"><cite>Hadrien:</cite> we could invite people building these tools or using this content to the task force<br>
+<span id=9467>… so they could give us a better understanding and we could identify the needs</span><br>
+<span id=5a49>… do we just need to map between resources or fragments?</span><br>
+<span id=d1aa>… what are the criteria for need these alternates?</span><br>
+<span id=d73d>… before we push solutions</span><br>
+<span id=ebe5>… I can try to get this in place before heading to Japan</span></p>
+<p id=a64c class="phone s10"><cite>AvneeshSingh:</cite> it would be great to get the use cases in place first<br>
+<span id=a5be>… the main use case in DAISY is braille vs text</span><br>
+<span id=122a>… and demand is coming back for this</span></p>
+<p id=243a class="phone s03"><cite>ivan:</cite> let's suppose multiple renditions is still in use. Would we be OK with that</p>
+<p id=5c9b class="phone s02"><cite>Hadrien:</cite> that's a tough question. I don't prefer that. It wouldn't be good enough even if some parts are good enough to sue<br>
+<span id=076e>… I'm pretty sure major changes would be required if we decided to go to Multiple renditions again</span></p>
+<p id=cda3 class="phone s03"><cite>ivan:</cite> what I am afraid of is that we are reinventing the wheel, and a wheel we already have<br>
+<span id=1068>… are we repeating a lot of work others have already done for us</span></p>
+<p id=76c2 class="phone s01"><cite>wendyreid:</cite> I don't know multiple renditions well, and have never seen one in action<br>
+<span id=a4e7>… I understand that multiple versions of the epub are in the same file</span><br>
+<span id=019b>… are they completely separate? Can you switch between them? or view them simultaneously?</span><br>
+<span id=b337>… in fxl a11y there is a need to see things at the same time</span><br>
+<span id=b644>… for instance you can see the full page image  but still read the text in a way that can be adjusted for size etc</span></p>
+<p id=e3cc class="phone s02"><cite>Hadrien:</cite> you can think of multiple renditions as multiple items in the same file<br>
+<span id=8c5b>… rendition mapping is used to link resources among different documents</span><br>
+<span id=c76e>… that's the part I think is not so great right now</span><br>
+<span id=b109>… the worst part of multiple renditions is the mapping part</span></p>
+<p id=d80b class="phone s01"><cite>wendyreid:</cite> I notice the reading system conformance instruction is that RS must support switching between renditions<br>
+<span id=3a3b>… so it would address the use case I mentioned above</span><br>
+<span id=fef9>… is your problem with CFI?</span></p>
+<p id=4274 class="phone s02"><cite>Hadrien:</cite> I don't know why CFI is used so heavily<br>
+<span id=8d9f>… I may be able to find my arguments against it</span></p>
+<p id=f7b2 class="phone s03"><cite>ivan:</cite> if you use epub CFI to point to a resource or part of a resource<br>
+<span id=c450>… we are working on something like this in the annotation task force</span><br>
+<span id=808f>… perhaps we could use what we come up with in the annotation TF instead of CFI?</span></p>
+<p id=9a05 class="phone s02"><cite>Hadrien:</cite> we may not need the complexity that is needed in annotation anchoring</p>
+<p id=60cf class="phone s04"><cite>duga:</cite> you only need fancy things like CFI if you don't control the publication<br>
+<span id=9aaa>… so we could get rid of that</span><br>
+<span id=4024>… are we reworking multiple renditions?</span><br>
+<span id=a48b>… and CFI?</span></p>
+<p id=2f2c class="phone s01"><cite>wendyreid:</cite> maybe the new way of targeting text fragments is better than CFI</p>
+<p id=11bd class="phone s04"><cite>duga:</cite> we could talk about CFI all day</p>
+<p id=fe4e class="phone s01"><cite>wendyreid:</cite> I am convinced that some of our ideas that aren't still used were just ahead of their time.<br>
+<span id=38f2>… we will continue talking about this. EPUB 3.4 is going to be the big fxl revision</span><br>
+<span id=ca7b>… it would be helpful to get any feedback you can get</span></p>
+<p id=0b13 class="phone s02"><cite>Hadrien:</cite> I will go back to people and ask if they are comfortable talking about it publicly</p>
+<p id=7913 class="phone s01"><cite>wendyreid:</cite> please add any ideas you have for the f2f<br>
+<span id=4dbf>… we are trying to schedule a meeting with APA before TPAC</span></p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#fa04">Make font obfuscation an obsolete but conforming EPUB feature in EPUB 3.4.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+</body>
+</html>
