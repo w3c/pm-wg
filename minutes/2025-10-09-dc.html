@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Digital Comics TF &ndash; 09 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+Digital Comics TF</h1>
+<h2>09 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/09-pm-dc-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>CharlesL, duga, Hadrien, LaurentLM, MasakazuKitahara, shiestyle</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>Hadrien, shiestyle</dd>
+<dt>Scribe</dt><dd>duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#7bfa">PR for Support for roll in layout</a></li>
+<li><a href="#f275">Topics of Digital Comics to be discussed at TPAC</a></li>
+<li><a href="#6528">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+
+
+<section>
+<h3 id=7bfa>PR for Support for roll in layout</h3>
+<p id=837c class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2788">w3c/<wbr>epub-specs#2788</a></p>
+<p id=1bf2 class="phone s01"><cite>CharlesL1:</cite> One question, we have a new rendition layout role, comics used to be fixed, right?<br>
+<span id=8ff3>… what do we now expect with this change?</span><br>
+<span id=3d9f>… what will reading systems do differently?</span></p>
+<p id=ad24 class="phone s02"><cite>Hadrien:</cite> pre-paginated is the current value, the expectation is you may find one or the other<br>
+<span id=9a49>… in pre-paginated every resource is a page, maybe with layout hints</span><br>
+<span id=61cc>… similar to print comics</span><br>
+<span id=340c>… with roll, you will fit to the width of the viewport, and you can scroll through with no gaps</span><br>
+<span id=7b74>… looks like a single image to the user</span><br>
+<span id=ee04>… There are some open issues, like direction</span><br>
+<span id=d828>… and direction may change how fit works (e.g. left-to-right might fit height)</span><br>
+<span id=f4f5>… There may be some publications that have multiple rolls (e.g. a collection of web comics)</span><br>
+<span id=54c8>… this is an open issue</span><br>
+<span id=6750>… the idea is instead of rendering controls, we would provide semantics that identify chapters or episodes, then leave it the RS to decide display</span></p>
+<p id=625f class="phone s03"><cite>shiestyle:</cite> Roll will not have spread</p>
+<p id=ffff class="phone s04"><cite>LaurentLM:</cite> In the PR, it says &quot;fixed dimensions&quot;, but in our case it is 1 fixed dimension</p>
+<p id=c7c6 class="phone s02"><cite>Hadrien:</cite> But you are confusing viewport and images</p>
+<p id=4f4f class="phone s04"><cite>LaurentLM:</cite> I am not sure if I am speaking about images</p>
+<p id=0abf class="phone s02"><cite>Hadrien:</cite> Which is why I am not pushing the PR at the moment, since a lot changes with images in spine</p>
+<p id=5059 class="phone s04"><cite>LaurentLM:</cite> So why is it fixed dimensions?</p>
+<p id=07c8 class="phone s02"><cite>Hadrien:</cite> It doesn't matter, we will probably discard a lot of it<br>
+<span id=79eb>… we originally grouped FL and roll, but we may not need to if we allow images in spine</span><br>
+<span id=8f00>… I don't think this will get much work or discussion until TPAC where we decide on images in spine</span></p>
+<p id=0bc9 class="phone s03"><cite>shiestyle:</cite> We still have time before TPAC, we should finalize there<br>
+<span id=e767>… but we can still discuss now</span></p>
+<p id=bb14 class="phone s02"><cite>Hadrien:</cite> Looks like we only have the week before TPAC given schedules, do you really want to discuss images in spine then?</p>
+<p id=249e class="phone s03"><cite>shiestyle:</cite> we will have another meeting before tpac</p>
+<p id=fe89 class="phone s02"><cite>Hadrien:</cite> So you want to discuss images in spine during that call? It will take the entire call</p>
+<p id=c182 class="phone s03"><cite>shiestyle:</cite> We can arrange it</p>
+</section>
+
+<section>
+<h3 id=f275>Topics of Digital Comics to be discussed at TPAC</h3>
+<p id=10000 class="phone s03"><cite>shiestyle:</cite> We are just starting TPAC planning in the WG<br>
+<span id=2ea5>… Tuesday morning is for the BG, so really only 1.5 days for WG</span><br>
+<span id=78e6>… we can propose which of the remaining slots we want to use</span><br>
+<span id=f490>… I heard some a11y people will not be there in person</span><br>
+<span id=db64>… I was thinking afternoon, any ideas?</span></p>
+<p id=7e7c class="phone s02"><cite>Hadrien:</cite> I am not sure about who from Europe will be remote who is interested in these topics?<br>
+<span id=cf94>… so remotely just Romain and Ivan from Europe</span></p>
+<p id=4040 class="phone s03"><cite>shiestyle:</cite> There are bunch of remotes (Sue, Dale, Matt)<br>
+<span id=8068>… so maybe early morning is fine</span></p>
+<p id=1f67 class="phone s01"><cite>CharlesL1:</cite> 9am jst is 5pm or 8pm for those people<br>
+<span id=5908>… so maybe that is the best time</span></p>
+<p id=6cce class="phone s03"><cite>shiestyle:</cite> Maybe day 1 first slot</p>
+<p id=168d class="phone s05"><cite>duga:</cite> Kind of doesn't matter, since many of these people must attend all sessions</p>
+<p id=06f2 class="phone s02"><cite>Hadrien:</cite> Good point, what about you CharlesL1? What is good?</p>
+<p id=7387 class="phone s01"><cite>CharlesL1:</cite> Earlier is better</p>
+<p id=e582 class="phone s02"><cite>Hadrien:</cite> So comics and a11y early are best for you?</p>
+<p id=7af9 class="phone s01"><cite>CharlesL1:</cite> Yes</p>
+<p id=c11b class="phone s01"><cite>CharlesL1:</cite> why is the first slot at 11 on day 2?</p>
+<p id=9f98 class="phone s03"><cite>shiestyle:</cite> Business group will meet first</p>
+<p id=53e7 class="phone s02"><cite>Hadrien:</cite> I have a list of things to discuss<br>
+<span id=86bf>… images in spine is biggest, we should discuss then</span><br>
+<span id=b9da>… also default behavior for spreads</span><br>
+<span id=6224>… there is a disconnect between the spec and reality, it is important to clarify</span><br>
+<span id=a656>… Also pr 2759</span></p>
+<p id=ac77 class=irc><cite>&lt;Hadrien&gt;</cite> Images in spine</p>
+<p id=53f0 class=irc><cite>&lt;Hadrien&gt;</cite> * <a href="https://github.com/w3c/epub-specs/issues/2792">w3c/<wbr>epub-specs#2792</a></p>
+<p id=4671 class=irc><cite>&lt;Hadrien&gt;</cite> Default behavior when drawing spreads</p>
+<p id=5570 class=irc><cite>&lt;Hadrien&gt;</cite> * <a href="https://github.com/w3c/epub-specs/issues/2755">w3c/<wbr>epub-specs#2755</a></p>
+<p id=5d0f class=irc><cite>&lt;Hadrien&gt;</cite> Deprecating rendition properties</p>
+<p id=7ca0 class=irc><cite>&lt;Hadrien&gt;</cite> * Layout overrides: <a href="https://github.com/w3c/epub-specs/issues/2749">w3c/<wbr>epub-specs#2749</a></p>
+<p id=257c class=irc><cite>&lt;Hadrien&gt;</cite> * Flow as metadata: <a href="https://github.com/w3c/epub-specs/issues/2754">w3c/<wbr>epub-specs#2754</a></p>
+<p id=cc4d class=irc><cite>&lt;Hadrien&gt;</cite> * Flow overrides: <a href="https://github.com/w3c/epub-specs/issues/2750">w3c/<wbr>epub-specs#2750</a></p>
+<p id=f5e7 class=irc><cite>&lt;Hadrien&gt;</cite> * Orientation: <a href="https://github.com/w3c/epub-specs/issues/2751">w3c/<wbr>epub-specs#2751</a></p>
+<p id=6a69 class=irc><cite>&lt;Hadrien&gt;</cite> * Spreads: <a href="https://github.com/w3c/epub-specs/issues/2753">w3c/<wbr>epub-specs#2753</a></p>
+<p id=7c05 class=irc><cite>&lt;Hadrien&gt;</cite> New document division terms for comics</p>
+<p id=6853 class=irc><cite>&lt;Hadrien&gt;</cite> * <a href="https://github.com/w3c/epub-specs/issues/2759">w3c/<wbr>epub-specs#2759</a></p>
+<p id=a822 class="phone s02"><cite>Hadrien:</cite> Any other issues specific to comics?<br>
+<span id=5f63>… there is nothing about accessible comics here since that is experimental</span><br>
+<span id=15e7>… So maybe a breakout session for that. CharlesL1 would you be interested?</span></p>
+<p id=374c class="phone s01"><cite>CharlesL1:</cite> Yes, definitely. E.g. people from the APA may have ideas</p>
+<p id=fdb1 class="phone s02"><cite>Hadrien:</cite> We have until Oct 22 to propose sessions</p>
+<p id=f1d8 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=1b0e class=irc><cite>&lt;duga&gt;</cite> +1 to a breakout</p>
+<p id=8c74 class="phone s04"><cite>LaurentLM:</cite> I agree with a breakout, not too long though</p>
+<p id=74a5 class="phone s02"><cite>Hadrien:</cite> Ok, we have some votes for that</p>
+<p id=2388 class="phone s02"><cite>Hadrien:</cite> avif is important for us, but not much to say<br>
+<span id=a76f>… but not controversial</span><br>
+<span id=55f6>… so I didn't put it on the list</span></p>
+<p id=31ed class="phone s03"><cite>shiestyle:</cite> I just started to inform people in Japan about it</p>
+<p id=7b3f class="phone s05"><cite>duga:</cite> Maybe pull rendition properties to a separate slot?</p>
+<p id=78cd class="phone s02"><cite>Hadrien:</cite> I agree, it is not just for comics</p>
+<p id=057b class="phone s02"><cite>Hadrien:</cite> PR for roll should be right after images in spine</p>
+<p id=3bd3 class="phone s03"><cite>shiestyle:</cite> Other topics?<br>
+<span id=9a20>… what do we want to discuss before tpac?</span></p>
+<p id=bc8f class="phone s02"><cite>Hadrien:</cite> We need to discuss images in spine, but that should probably be in the WG<br>
+<span id=47fb>… so do we really need a call for the TF in addition?</span></p>
+<p id=86c4 class="phone s01"><cite>CharlesL1:</cite> Don't forget the APA meeting, which may take a full meeting slot before TPAC</p>
+<p id=65f9 class="phone s02"><cite>Hadrien:</cite> Maybe see what the WG can handle, but if we can get to images in spine we can just cancel the next TF meeting</p>
+<p id=6f26 class="phone s03"><cite>shiestyle:</cite> Ok, I will raise that in the chairs call<br>
+<span id=27e4>… I think we should also skip the Nov 6 meeting, since it is so close to tpac</span></p>
+</section>
+
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+</body>
+</html>
