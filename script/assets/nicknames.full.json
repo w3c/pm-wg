@@ -304,6 +304,10 @@
     },
     {
         "nick": [],
+        "name": "Ryoshu Hirose"
+    },
+    {
+        "nick": [],
         "name": "Tetsu Hoshino"
     },
     {
@@ -694,6 +698,14 @@
     },
     {
         "nick": [
+            "magnus",
+            "magnusrudolfsen",
+            "rudolfsen"
+        ],
+        "name": "Magnus Rudolfsen"
+    },
+    {
+        "nick": [
             "NickRuffilo",
             "nick",
             "nick1"
@@ -910,9 +922,5 @@
         ],
         "name": "Marcelo da Silva Zanon",
         "github": "marcelozanon"
-    },
-    {
-        "nick": [],
-        "name": "ryoshu hirose"
     }
 ]
