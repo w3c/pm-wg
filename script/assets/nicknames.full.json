@@ -107,19 +107,17 @@
     },
     {
         "nick": [
+            "marcelo"
+        ],
+        "name": "Marcelo da Silva Zanon",
+        "github": "marcelozanon"
+    },
+    {
+        "nick": [
             "gregdavis"
         ],
         "name": "Greg Davis",
         "github": "antelopeb"
-    },
-    {
-        "nick": [
-            "marisa",
-            "marisa_demeglio",
-            "marisademeglio"
-        ],
-        "name": "Marisa DeMeglio",
-        "github": "marisademeglio"
     },
     {
         "nick": [
@@ -135,6 +133,15 @@
         ],
         "name": "Romain Deltour",
         "github": "rdeltour"
+    },
+    {
+        "nick": [
+            "marisa",
+            "marisa_demeglio",
+            "marisademeglio"
+        ],
+        "name": "Marisa DeMeglio",
+        "github": "marisademeglio"
     },
     {
         "nick": [
@@ -915,12 +922,5 @@
         ],
         "name": "Benjamin Young",
         "github": "bigbluehat"
-    },
-    {
-        "nick": [
-            "marcelo"
-        ],
-        "name": "Marcelo da Silva Zanon",
-        "github": "marcelozanon"
     }
 ]
