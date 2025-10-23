@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 23 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>23 October 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/10/23-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, DaleRogers, duga, Hadrien, kimberg, MasakazuKitahara, mgarrish, rdeltour, shiestyle, SueNeu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>gautierchomel, ivan</dd>
+<dt>Chair</dt><dd>wendyreid</dd>
+<dt>Scribe</dt><dd>SueNeu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#f64c">TPAC Agenda https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2815#discussioncomment-14751130</a></li>
+<li><a href="#1bcb">Agenda for TPAC</a></li>
+<li><a href="#977b">Images in Spine - w3c/<wbr>epub-specs#2792</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=f64c>TPAC Agenda <a href="https://github.com/w3c/epub-specs/discussions/2815#discussioncomment-14751130">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2815#discussioncomment-14751130</a></h3>
+</section>
+
+<section>
+<h3 id=1bcb>Agenda for TPAC</h3>
+<p id=2729 class="phone s01"><cite>wendyreid:</cite> I've put a link in the chat to a rough agenda, there are some openings.</p>
+<p id=2af7 class="phone s02"><cite>Hadrien:</cite> We will do a full hour on HTML in EPUB?</p>
+<p id=6665 class="phone s01"><cite>wendyreid:</cite> yes<br>
+<span id=9a9f>… we are trying to push things that need more people to the afternoons because of the time differences</span></p>
+<p id=3180 class="phone s03"><cite>shiestyle:</cite> after the business group meaning the first time slot<br>
+<span id=59ad>… I propose Japanese session</span><br>
+<span id=ba66>… Japanese industry group is moved to DPXPA</span><br>
+<span id=5985>… we have EPUB 3 Guidelines</span><br>
+<span id=9902>… that we have been working on for 10 years. It will be released tomorrow</span><br>
+<span id=9d91>… I would like to present it then</span><br>
+<span id=1bdd>… the business group could join the working group</span></p>
+<p id=3367 class="phone s04"><cite>AvneeshSingh:</cite> Pleases consider the accessibility schedule on the 10th</p>
+<p id=fcee class="phone s05"><cite>wendyreid:</cite> thank you for the reminder</p>
+<p id=b7a9 class="phone s05"><cite>wendyreid:</cite> feel free to comment on the discussion in Github if you have more
+    suggestions</p>
+</section>
+
+<section>
+<h3 id=977b>Images in Spine - <a href="https://github.com/w3c/epub-specs/issues/2792">w3c/<wbr>epub-specs#2792</a></h3>
+
+<p id=ac80 class="phone s01"><cite>wendyreid:</cite> we've had a constellation of discussions about this</p>
+<p id=0cfe class="phone s06"><cite>duga:</cite> what is the current proposal? Is it a PR or best practices</p>
+<p id=7e5f class="phone s02"><cite>Hadrien:</cite> we've had more discussion than proposal<br>
+<span id=c9f7>… the proposal would be to add images to the spine, it would be a</span><br>
+<span id=58ea>… strong recommendation to provide image description</span><br>
+<span id=8407>… in comics we know that people wrap images in html and it causes nothing but pain</span><br>
+<span id=3dcb>… we know that browsers can show images without html</span><br>
+<span id=12a2>… so it would be better to align with the web</span></p>
+<p id=162e class="phone s07"><cite>mgarrish:</cite> I wonder where we are with HTML in the spine<br>
+<span id=ac0b>… these two seem bound together</span><br>
+<span id=78aa>… if we can't have html in the spine, how can we have images in the spine?</span></p>
+<p id=e416 class=summary>... won't it cause the same issues?</p>
+<p id=c79b class=summary>... can we make this call before we know how the industry thinks of this?</p>
+<p id=e718 class="phone s02"><cite>Hadrien:</cite> I don't think these are necessarily connected since we are introducing a new kind of layout<br>
+<span id=cd27>… rolled documents will require support, so it isn't much more of a workload to support images</span><br>
+<span id=e7ed>… we know that images have been used for quite a while, with fallbacks</span></p>
+<p id=7f32 class="phone s06"><cite>duga:</cite> that is an important part of this proposal<br>
+<span id=3714>… images in spine but only for rolled documents?</span></p>
+<p id=8b9f class="phone s08"><cite>Hardrien:</cite> that is one possibility but we should consider fxl</p>
+<p id=c878 class="phone s06"><cite>duga:</cite> so if we open it up to fxl we are opening it up to reflowable documents as well</p>
+<p id=6d64 class="phone s03"><cite>shiestyle:</cite> we should separate the discussion about rolled comics and images in spine<br>
+<span id=d854>… for Japanese this is good, better for comic over all, rather than just for rolled comics</span></p>
+<p id=9309 class="phone s01"><cite>wendyreid:</cite> @duga is right. Additionally, people aren't good at reading the spec<br>
+<span id=268c>… even if we limit images in spine to rolled documents people will use them where they want</span><br>
+<span id=31a8>… we should do it for all types of documents because we know that's how it will happen in practice.</span><br>
+<span id=a000>… we've had discussions about full bleed images</span><br>
+<span id=4d18>… theoretically you could have fixed layout pages in a reflowable document</span><br>
+<span id=1740>… this hasn't been seen often, but publishers have asked for it</span><br>
+<span id=b223>… this is another avenue for images in spine</span></p>
+<p id=6b7c class="phone s09"><cite>DaleRogers:</cite> from a creator/publisher point of view, we want to be able to create one document for all reading systems<br>
+<span id=00cd>… I would like to know that one document can be created and RS will know what to do with it</span></p>
+<p id=ffff class="phone s06"><cite>duga:</cite> I both agree and disagree with wendyreid<br>
+<span id=4568>… people will be putting images in the spine, and epub check will complain</span><br>
+<span id=69ba>… people will then just change doctype to roll</span><br>
+<span id=9bd3>… so we will see images popping up in weird places</span><br>
+<span id=d4b3>… I disagree that this is easier than doing fxl in the middle of a reflowable document</span><br>
+<span id=f2be>… I think there's lots of designs out there that mix those and it's not easy to do</span><br>
+<span id=505e>… fxl is much better for full bleed images</span><br>
+<span id=9ba9>… in the middle of a reflowable document an image could be made accessible</span><br>
+<span id=0ba0>… I don't think its any easier to have images in the spine than having mixed modes</span><br>
+<span id=960b>… I would love to hear from other RS representatives</span><br>
+<span id=f659>… it would be great to hear from them, this is similar to adding HTML</span><br>
+<span id=1e7b>… where is the push back? Should we have a survey</span></p>
+<p id=7d33 class="phone s02"><cite>Hadrien:</cite> we have discussed this with our members<br>
+<span id=06c6>… they believe this removes the guesswork</span><br>
+<span id=cf12>… they use BISAC to indicate something is a comic</span><br>
+<span id=7244>… we've heard from mulitple, some big names, that this would make things easier for comics</span></p>
+<p id=55d8 class=irc><cite>&lt;kimberg&gt;</cite> i wanted to hear your comment first, brady</p>
+<p id=8648 class="phone s06"><cite>duga:</cite> I agree with Hadrien it is really annoying trying to guess that something is a comic<br>
+<span id=b000>… but I'm not sure how this helps. Is adding an image to the spine mean an EPUB is a comic?</span><br>
+<span id=3350>… even if we limit images to rolled documents</span></p>
+<p id=4d20 class="phone s10"><cite>CharlesL:</cite> we had an fxl meeting, Ken Jones created a tool<br>
+<span id=0cab>… he will share it when we merge the fxl, comic and accessibility groups</span><br>
+<span id=973c>… working with Calibre you can select regions in InDesign</span><br>
+<span id=0065>… change the reading order, add in image and region descriptions</span><br>
+<span id=f019>… the reading system was able to zoom in and speak the text on the page</span><br>
+<span id=b1c4>… we should get Calibre to share what they are doing</span><br>
+<span id=bf62>… Ken is doing interesting stuff with new features on a Harry Potter book series</span></p>
+<p id=c705 class="phone s11"><cite>kimberg:</cite> the idea of mixing comic and reflowable is terrifying, but adding images is not</p>
+<p id=298d class="phone s02"><cite>Hadrien:</cite> I agree that it will make things harder, it would be easier than having to detect the HTML file<br>
+<span id=8747>… checking for images is way easier</span><br>
+<span id=01c0>… because of historical content, we will keep this messiness for sometime</span><br>
+<span id=c458>… what I've seen from Ken and Colibrio doing they are using region navigation</span><br>
+<span id=71e1>… interesting but doesn't have a bearing on our discussion here</span><br>
+<span id=d9e1>… region navigation isn't incompatible with images in the spine</span></p>
+<p id=b5a0 class="phone s06"><cite>duga:</cite> are you saying &quot;images in spine are only used in comics&quot;<br>
+<span id=d308>… which is untestable. If I must use this as a key to determine if this is a comic</span><br>
+<span id=76d6>… I've seen lots of crazy fxl documents, I bet we will see more craziness</span></p>
+<p id=5513 class="phone s02"><cite>Hadrien:</cite> agreed it is probably more for all illustrated content</p>
+<p id=4387 class="phone s09"><cite>DaleRogers:</cite> I guess in this case &quot;comic&quot; means that every page in the content is an image<br>
+<span id=b9ac>… similar to Kindle Create</span></p>
+<p id=cc71 class="phone s12"><cite>@shiestyle:</cite> I think if we add a new layout, comic, in addition to roll, we can<br>
+<span id=866e>… only adopt the image in spine for both of these</span><br>
+<span id=119d>… we use fxl for comics in Japan but it is so different than manga</span></p>
+<p id=35db class="phone s02"><cite>Hadrien:</cite> I wouldn't really do it that way. I think comics are files that have all images in spine<br>
+<span id=c27a>… we have spent a lot of time looking at edge cases</span><br>
+<span id=9551>… we have made things difficult for years</span><br>
+<span id=90b5>… what we require people to do doesn't add value</span><br>
+<span id=5c8b>… people have to guess, to go through rule sets to get what they want</span><br>
+<span id=a9c5>… we will always find weird cases that require mixed modalities</span><br>
+<span id=ffb0>… we are not helping the industries by focusing on these edge cases</span><br>
+<span id=1c4c>… we should address the huge number of comics out there</span></p>
+<p id=0d1b class="phone s06"><cite>duga:</cite> we have solved the issue of front and backmatter by making them horrible and unreadable<br>
+<span id=92c9>… but our readers are used to that, so unfortunately we can ignore that case</span><br>
+<span id=af9d>… using the images in the spine to indicate that something is a comic is deceptive</span><br>
+<span id=ec65>… there are kids books that do this too</span></p>
+<p id=a4e5 class="phone s01"><cite>wendyreid:</cite> the current way to do comics is a bit more work, and automation exists<br>
+<span id=2fe9>… its not hard to build comics with images inside html</span><br>
+<span id=d01a>… this will exist for a long time going forward because this is how people's workflow function</span><br>
+<span id=b36f>… and sometimes this causes issues with RS</span><br>
+<span id=3999>… but from a User perspective this is transparent</span><br>
+<span id=05d3>… people will see that this is possible, and do it.</span><br>
+<span id=5173>… we are making something easy just to make it easy without thinking about what is best for the user/reader</span><br>
+<span id=3157>… we've been managing just fine all this time</span></p>
+<p id=10000 class="phone s02"><cite>Hadrien:</cite> I don't get your point. The fact is that the user experience isn't good<br>
+<span id=264b>… its not true that adding bitmaps in spine will make things any worse for anyone</span><br>
+<span id=180b>… people already produce things that way</span><br>
+<span id=e805>… I have a hard time hearing how this will negatively affect accessibility</span><br>
+<span id=e3f1>… or user experience</span><br>
+<span id=673d>… I remember that we were very close from accepting images in the spine</span><br>
+<span id=0729>… at the beginning of fxl spec</span></p>
+<p id=37ca class="phone s01"><cite>wendyreid:</cite> agree! about accessibility, I'm concerned about images in the spine<br>
+<span id=0c0a>… if you distribute books to Europe they must be acceptable</span><br>
+<span id=c646>… let's say we stick with fallbacks for this</span><br>
+<span id=72b1>… how do I signal that that is what I need?</span><br>
+<span id=782c>… how do I tell the reading experience to give me the image experience?</span><br>
+<span id=8dae>… we have to be careful about the security and privacy of users</span><br>
+<span id=4bc2>… right now we don't have to worry about that with text imbedded in the HTML</span><br>
+<span id=602a>… I'm concern about how we trigger the fallback</span></p>
+<p id=dbb4 class="phone s02"><cite>Hadrien:</cite> that would be true if all reading systems were using web view<br>
+<span id=7d8d>… many reading systems simply extract the image</span><br>
+<span id=83e3>… even if you have the description, you might not be able to show this to the reader</span><br>
+<span id=c43f>… even if a reading system wants to be accessible comics, it can't</span><br>
+<span id=7145>… allowing images in the spine won't make them less accessible, they already aren't</span><br>
+<span id=8c77>… we are conflating spec with legal requirements</span><br>
+<span id=e838>… of course we should make accessible content</span></p>
+<p id=b465 class="phone s04"><cite>AvneeshSingh:</cite> There is a default mechanism where HTML provides accessibility even if the publisher doesn't<br>
+<span id=b23d>… in the new proposal, you are asking more of the reading system</span><br>
+<span id=a254>… theoretically it can be aligned with accessibility but it doesn't align with what is available now</span><br>
+<span id=3925>… if these images in spine are used everywhere, things will get worse for accessibility</span></p>
+<p id=6993 class="phone s06"><cite>duga:</cite> I sort of agree that we shouldn't conflate the spec and the legal requirements<br>
+<span id=4eb9>… as long as we have the mechanism to do things</span><br>
+<span id=adcd>… we will still have inaccessible content</span><br>
+<span id=e5d3>… right now if someone makes an accessible kids book</span><br>
+<span id=7bec>… it is an expensive process that can be read via a screen reader</span><br>
+<span id=0bcd>… if they can do the same thing with images in the spine</span><br>
+<span id=b825>… if I just take that image and see it in a web view, will it correctly extract that metadat?</span><br>
+<span id=d920>… now we are putting a burden on the RS. If they get an accessible ebook</span><br>
+<span id=a33f>… but don't display it that way, it could lead to problems</span></p>
+<p id=86ff class="phone s02"><cite>Hadrien:</cite> You always have to consider who is doing what<br>
+<span id=79ac>… it isn't common for comics to work with web view</span><br>
+<span id=be0b>… having the metadata in a file might be easier than extracting it from HTML</span><br>
+<span id=65da>… some people work with web views, but not everyone</span><br>
+<span id=acce>… for everyone else, images in spine make life easier</span><br>
+<span id=10e6>… this is probably the area with the most specialized reading systems</span></p>
+<p id=c38e class="phone s06"><cite>duga:</cite> Comics aren't going to be accessible, regardless of what we decide to do<br>
+<span id=ec7c>… there are other kinds of content that will benefit from images in spine</span><br>
+<span id=2094>… comics and kids books have very different kind of readers</span><br>
+<span id=217e>… you don't want to mix those up</span><br>
+<span id=2c24>… there is a lot of illustrated content that isn't comics and still needs to be supported</span></p>
+<p id=f145 class="phone s02"><cite>Hadrien:</cite> some kids books still use images, but European regulators will say you can to better than that<br>
+<span id=6ac8>… can we force people not to use images?</span><br>
+<span id=bad3>… I'm not sure I see the problem, as long as we provide a means for alt text</span><br>
+<span id=38d7>… it won't make the experience even worse than currently</span><br>
+<span id=c31c>… we're not talking about technical issues, but best practices</span></p>
+<p id=491d class="phone s06"><cite>duga:</cite> I think we are speaking technically<br>
+<span id=0e07>… if I can put the description in my image, as an implementor</span><br>
+<span id=70ed>… I now have two different accessiblity methods to support</span><br>
+<span id=0d9b>… I don't think playbooks does anything for accessibility in comics</span></p>
+<p id=eed2 class="phone s01"><cite>wendyreid:</cite> I think if allow metadata in the image, you're going to need to build that<br>
+<span id=8b91>… and if it is html we can add semantics</span><br>
+<span id=9c1c>… we can't do that with metadata</span><br>
+<span id=408a>… the other thing, we have a lot of stake holders</span><br>
+<span id=8e85>… the person who makes the ebooks, the tools to make it, the distribution system, the vendors, and the readers</span><br>
+<span id=9130>… we don't always put pressure evenly.</span><br>
+<span id=6ca4>… we probably do want to have more of a discussion about what we expect from reading systems</span><br>
+<span id=9f53>… how do we do this that is easy for the reading systems and are secure for the readers</span><br>
+<span id=4546>… but we don't talk about the tools.</span><br>
+<span id=1848>… if we can make children's books accessible, we can make comics accessible</span><br>
+<span id=b6e1>… we agree that the current state of fxl isn't ideal</span><br>
+<span id=b23a>… we need to spread the pressure more evenly</span><br>
+<span id=294c>… we will continue this discussion</span><br>
+<span id=c5d0>… next week we will meet with the APA</span></p>
+<p id=e03e class="phone s03"><cite>Shiestyle:</cite> this is a good topic for Kobe</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 246 (Wed Oct  1 15:02:24 2025 UTC).</address>
+
+</body>
+</html>
