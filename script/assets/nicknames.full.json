@@ -23,6 +23,12 @@
     },
     {
         "nick": [
+            "matatk"
+        ],
+        "name": "Matthew Atkinson"
+    },
+    {
+        "nick": [
             "michaelbaker",
             "mikebaker"
         ],
@@ -202,6 +208,12 @@
             "ReinaldoFerraz"
         ],
         "name": "Reinaldo Ferraz"
+    },
+    {
+        "nick": [
+            "fredrik"
+        ],
+        "name": "Fredrik Fischer"
     },
     {
         "nick": [
@@ -727,6 +739,12 @@
     },
     {
         "nick": [
+            "janina"
+        ],
+        "name": "Janina Sajka"
+    },
+    {
+        "nick": [
             "azaroth"
         ],
         "name": "Rob Sanderson",
@@ -770,6 +788,12 @@
         ],
         "name": "Adam Sisco",
         "github": "awsisco"
+    },
+    {
+        "nick": [
+            "JenStrickland"
+        ],
+        "name": "Jen Strickland"
     },
     {
         "nick": [
@@ -897,10 +921,6 @@
     {
         "nick": [],
         "name": "Osamu Yoshiba"
-    },
-    {
-        "nick": [],
-        "name": "Junichi Yoshii"
     },
     {
         "nick": [

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 30 October 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>30 October 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Oct/0035.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/10/30-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, duga, Fredrik, George, gpellegrino, Hadrien, ivan, JenStrickland, kimberg, MasakazuKitahara, matatk, mgarrish, shiestyle, SueNeu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>susan, wendy</dd>
+<dt>Scribe</dt><dd>duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#5e3d">APA and PMWG Joint Meeting</a>
+<ol>
+<li><a href="#e3b6">Extended Descriptions</a></li>
+<li><a href="#89a2">Updates from APA</a></li>
+<li><a href="#6c81">symbols</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=5e3d>APA and PMWG Joint Meeting</h3>
+<p id=a022 class="phone s01"><cite>wendyreid:</cite> Goal is a joint meeting with APA. Typically done at TPAC, but that had scheduling issues</p>
+<p id=7491 class="phone s02"><cite>gpellegrino:</cite> I have an agenda proposal, I would like extended desc to happen now for schedule reasons</p>
+<p id=7e94 class="phone s03"><cite>matatk:</cite> We have discussed in TAG and APA, I have some ideas</p>
+<h4 id=e3b6>Extended Descriptions</h4>
+<p id=bb42 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/wiki/Standardizing-Extended-Descriptions:-User-Stories,-Testing-Results,-and-Current-Limitations/">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>wiki/<wbr>Standardizing-Extended-Descriptions:-User-Stories,-Testing-Results,-and-Current-Limitations/</a></p>
+<p id=ffff class="phone s02"><cite>gpellegrino:</cite> Brief intro - for descriptions that go beyond alt text (formula, etc)<br>
+<span id=92d9>… anyone can see them, not just for screen readers</span><br>
+<span id=e397>… we are missing ways to control them</span><br>
+<span id=bfd4>… there are a few ways to do it, but they all have issues in epub</span><br>
+<span id=7626>… for instance summary details breaks with pagination</span><br>
+<span id=f44d>… aria details is more interesting, and works ok when it is all in the same file</span><br>
+<span id=8ffd>… But we need something that puts the description in one file and the item it describes elsewhere</span><br>
+<span id=f4eb>… but have a link between them</span><br>
+<span id=a68c>… We have footnote and endnote metadata for links</span><br>
+<span id=371a>… 1. How to identify a link goes to an extended desc</span><br>
+<span id=d944>… 2. how can programmatic relationships be maintained cross file</span><br>
+<span id=0977>… 3. How can we know something is an extended desc when we open a file</span></p>
+<p id=1242 class="phone s03"><cite>matatk:</cite> We have some possible solutions, I will give an overview<br>
+<span id=10f5>… these come from APA, with some ideas from Jeffrey Yasskin (TAG)</span><br>
+<span id=8a18>… some sounds a little like the issue with long desc, and why it is now gone (misuse, no support)</span><br>
+<span id=aeb7>… We need to be aware of those risks</span><br>
+<span id=96fc>… ARIA details is still very low support</span><br>
+<span id=38fd>… Details and summary come to mind at first, but may not be right</span><br>
+<span id=5965>… Putting the metadata on the link breaks down on an inter doc link, but maybe `rel` is better for cross document</span><br>
+<span id=b24a>… that might preserve the data</span></p>
+<p id=679f class=irc><cite>&lt;matatk&gt;</cite> Patching in content - discussed as an enhancement of a Declarative Partial Updates CG: &lt;<a href="https://github.com/WICG/declarative-partial-updates/blob/main/patching-explainer.md#potential-enhancement---patch-contents-from-url">https://<wbr>github.com/<wbr>WICG/<wbr>declarative-partial-updates/<wbr>blob/<wbr>main/<wbr>patching-explainer.md#potential-enhancement---patch-contents-from-url</a>&gt;</p>
+<p id=0ccb class="phone s03"><cite>matatk:</cite> There is also a proposal to patch in content<br>
+<span id=2cc4>… which might be interesting to lazy patch in content from other sources</span><br>
+<span id=d1c1>… APA had the same concerns as reviewed here (misuse, support)</span><br>
+<span id=b039>… We had a different way of viewing the problem. One problem with navigating away is coming back</span><br>
+<span id=1f02>… easy to do in JS, but is this a problem with the platform that you need to be able to come to where you were as a general problem for the web</span><br>
+<span id=2ac2>… One last thing is to get ARIA and TAG feedback</span><br>
+<span id=405a>… And keep APA up to date</span></p>
+<p id=a55c class="phone s04"><cite>AvneeshSingh:</cite> Thank you, good overview<br>
+<span id=aeeb>… main problem is detecting the extended desc via machine</span><br>
+<span id=5d99>… We really need the semantics, not a specific mechanism for showing it</span></p>
+<p id=64b0 class="phone s05"><cite>CharlesL:</cite> What is the APA view on extending DPUB ARIA roles for the extended description?</p>
+<p id=ea12 class="phone s01"><cite>wendyreid:</cite> We still have the RS UA problem. Dynamic insertion of content doesn't really work in a RS due to pagination issues<br>
+<span id=e222>… we have a similar issue with footnotes, we solve that with links and popups</span><br>
+<span id=550b>… Goal for extended desc is to have a similar implementation</span><br>
+<span id=0a3d>… i.e. popups</span></p>
+<p id=9417 class=irc><cite>&lt;Zakim&gt;</cite> matatk, you wanted to talk about identifying the extended descriptions (Charles asked about extending DPUB roles)</p>
+<p id=8d91 class="phone s01"><cite>wendyreid:</cite> today we have trouble with footnotes as there are multiple implementations</p>
+<p id=761a class="phone s03"><cite>matatk:</cite> CharlesL, you suggested extending DPUB. Seems logical, and there is prior art<br>
+<span id=6677>… but should discuss with ARIA if this can be a solution for a wider problem</span><br>
+<span id=3d6d>… If you are sometimes talking same doc and sometime different, we should avoid two mechanisms</span><br>
+<span id=6b6b>… So `rel` still sounds interesting</span><br>
+<span id=6e6b>… regarding pagination, why not show as popup? But how do I know this is an extended desc to show in the popup</span><br>
+<span id=10000>… The document you have covers a lot of use cases, but we might want some that are from outside epub to make sure we have a general solution</span></p>
+<p id=2636 class="phone s06"><cite>mgarrish:</cite> That is the concern. And long desc has a lot of baggage, so we would like to avoid that<br>
+<span id=a3ac>… and we do want something that is more broadly applicable</span><br>
+<span id=6a46>… This will probably take more discussion/input and why we are socializing it now</span><br>
+<span id=b5a4>… Is there a broader audience for this?</span></p>
+<p id=fbe9 class="phone s04"><cite>AvneeshSingh:</cite> Extended desc can have broader appeal<br>
+<span id=10cb>… In epub, for footnote we have aria role on link, and container has its own role</span><br>
+<span id=8881>… The container role might have an aria role, not dpub:aria, which makes it useful across the web</span><br>
+<span id=0ba8>… The other thing to highlight - whenever we discuss this, we are warned away from the long desc debate</span><br>
+<span id=f92c>… We don't want long desc, we just want semantics</span><br>
+<span id=24b3>… how can we avoid that comparison?</span></p>
+<p id=27a1 class=irc><cite>&lt;SueNeu&gt;</cite> ack: matalk</p>
+<p id=d17b class="phone s03"><cite>matatk:</cite> I'll have a rough go about differentiating from long desc<br>
+<span id=bbb2>… the point you make about identifying content that is currently visible is important</span><br>
+<span id=e0e4>… it seems like the big issue with long desc was that it wasn't rendered</span><br>
+<span id=425b>… So making that clear should help. And socializing this is very important to get all feedback.</span><br>
+<span id=2123>… Might be a harder sell in the epub sense, since it is in a different file</span><br>
+<span id=4d22>… So there really should be an affordance for all users that this is available</span><br>
+<span id=d0ed>… So my question is, what should be next steps?</span><br>
+<span id=5029>… Maybe another call with APA?</span></p>
+<p id=9e89 class="phone s07"><cite>janina:</cite> In terms of selling programmatic access (the idea of that), it might be useful. If we don't make it discoverable then perhaps it was underspecified. That might be a way to sell it</p>
+<p id=66b5 class="phone s08"><cite>George:</cite> So the link is always visible. On the web details is great, but has trouble in EPUB<br>
+<span id=5d8c>… in either case, it is always visible to all users, but we need to be clear that the semantics are important and need to be available</span><br>
+<span id=bd68>… the understanding that extended desc is there on the link and target is important</span></p>
+<p id=c211 class="phone s04"><cite>AvneeshSingh:</cite> Next steps - we need to do one more pass on the document. Need to clarify we are looking for semantics<br>
+<span id=276f>… we will also leverage html to make things programmatically available as part of sales pitch</span></p>
+<p id=b8fe class=irc><cite>&lt;CharlesL&gt;</cite> +1 for a meeting with APA after TPAC.</p>
+<p id=3817 class="phone s04"><cite>AvneeshSingh:</cite> Then maybe some of us can join an APA call after TPAC<br>
+<span id=c3aa>… Is a wiki page ok, or do we need to be more formal</span></p>
+<p id=10001 class="phone s09"><cite>JenStrickland:</cite> I see how the semantics is a lovely pairing, but it doesn't work well with epub<br>
+<span id=a2eb>… Does epub ever have a popup? It seems like the semantics needs to be clarified for that</span></p>
+<p id=1b7c class=irc><cite>&lt;matatk&gt;</cite> Next steps: turn the wiki page into an Explainer (&lt;<a href="https://www.w3.org/TR/explainer-explainer/">https://<wbr>www.w3.org/<wbr>TR/<wbr>explainer-explainer/</a>&gt;) or write one as a markdown file in revision control.</p>
+<p id=7db3 class=irc><cite>&lt;JenStrickland&gt;</cite> The HTML popover API is the thing I was thinking of.</p>
+<p id=28c8 class="phone s03"><cite>matatk:</cite> The proposed next step (an explainer) is a good way to list all the rejected approaches (better than a spec)<br>
+<span id=1f7e>… so using an explainer format will help with review since they are familiar with the format</span><br>
+<span id=a937>… and I would be willing to help review</span><br>
+<span id=2c4c>… then TAG could give some good feedback</span></p>
+<h4 id=89a2>Updates from APA</h4>
+<p id=c3cc class="phone s03"><cite>matatk:</cite> First pronunciation</p>
+<p id=db5c class=irc><cite>&lt;matatk&gt;</cite> <a href="https://www.w3.org/WAI/about/groups/task-forces/spoken-presentation/">https://<wbr>www.w3.org/<wbr>WAI/<wbr>about/<wbr>groups/<wbr>task-forces/<wbr>spoken-presentation/</a></p>
+<p id=98e1 class="phone s03"><cite>matatk:</cite> Need to make sure TTS will properly pronounce things<br>
+<span id=bd87>… lots of use cases are around education</span><br>
+<span id=d038>… we have explored some tech approaches</span><br>
+<span id=44e3>… typically this has leaned on SSML, etc and we haven't had much success</span><br>
+<span id=115f>… there has also been a lot of discussion around CSS speech, some of that might be easier to implement</span><br>
+<span id=a822>… but we are really diving into real use cases first</span><br>
+<span id=aa04>… Some tech answers, there may be some low hanging fruit in AT [I think I missed a detail here]</span><br>
+<span id=7614>… At some point we will share the use cases to get feedback</span></p>
+<p id=0aee class="phone s10"><cite>Hadrien:</cite> Pronunciation has a lot of solutions, but none are implemented<br>
+<span id=ef1c>… another issue is SSML is just really poorly implemented</span><br>
+<span id=0dc4>… so even if we had the pronunciation, we have no way to use it</span><br>
+<span id=e306>… so we have  a risk of coming to an unimplemented solution</span></p>
+<p id=df22 class=irc><cite>&lt;Hadrien&gt;</cite> <a href="https://kb.daisy.org/publishing/docs/text-to-speech/index.html">https://<wbr>kb.daisy.org/<wbr>publishing/<wbr>docs/<wbr>text-to-speech/<wbr>index.html</a></p>
+<p id=438c class=irc><cite>&lt;SueNeu&gt;</cite> duga: on a previous project we worked on tts for audio book content. We gave up on</p>
+<p id=2abc class=irc><cite>&lt;SueNeu&gt;</cite> …anyway for the the author to provide pronunciation except having the author provide us with a sound file</p>
+<p id=5f95 class=irc><cite>&lt;SueNeu&gt;</cite> …of them pronouncing it</p>
+<p id=9724 class="phone s06"><cite>mgarrish:</cite> this is a good time to bring it up, big problem in need of solution</p>
+<p id=eed5 class="phone s11"><cite>SueNeu:</cite> I do a lot of mixed language books, specifying language causes a voice change (jarring)<br>
+<span id=2ebc>… so I hope bilingual is on the list</span></p>
+<p id=9cb8 class="phone s12"><cite>shiestyle:</cite> Japanese text has ruby for pronunciation, but is also used for other things<br>
+<span id=ac07>… we don't have a spec for which should be pronounced</span><br>
+<span id=30b3>… sometimes both, sometimes base, sometimes ruby</span></p>
+<h4 id=6c81>symbols</h4>
+<p id=c589 class="phone s03"><cite>matatk:</cite> Next, symbols. You may have seen them as AAC symbols<br>
+<span id=928d>… often used to help understand text</span><br>
+<span id=0ce9>… There is also Bliss symbolic languages with is entirely symbolic</span></p>
+<p id=9ac0 class=irc><cite>&lt;matatk&gt;</cite> <a href="https://www.w3.org/WAI/about/groups/task-forces/adapt/">https://<wbr>www.w3.org/<wbr>WAI/<wbr>about/<wbr>groups/<wbr>task-forces/<wbr>adapt/</a></p>
+<p id=fd71 class="phone s03"><cite>matatk:</cite> there is a dictionary, which is constantly changing (it's a language)<br>
+<span id=7a37>… You can't just add to web pages as there a number of symbols</span><br>
+<span id=03ac>… we are working on a way to specify the symbols, then drop in the user preferred symbol set</span><br>
+<span id=a733>… We are currently looking at ruby to implement this, though that is a little controversial</span><br>
+<span id=4d68>… main question is, is ruby supported in EPUB?</span></p>
+<p id=c06b class=irc><cite>&lt;SueNeu&gt;</cite> duga: There is ruby support in reading systems that support asian languages</p>
+<p id=bb4d class="phone s08"><cite>George:</cite> Is there a symbol for extended desc?<br>
+<span id=24e0>… seems perfectly logical. Publishers want a visual element for an extended desc</span></p>
+<p id=22c4 class="phone s12"><cite>shiestyle:</cite> RS in Japan all support ruby, as do major players launched in Japan</p>
+<p id=ad8f class="phone s07"><cite>janina:</cite> I am willing to bet that extended desc will have such a symbol, assuming we get AAC fully supported</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body>
+</html>
