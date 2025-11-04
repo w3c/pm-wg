@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>FXL Accessibility TF &ndash; 04 November 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+FXL Accessibility TF</h1>
+<h2>04 November 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/11/04-fxl-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>CharlesL, CircularKen, Dale, gautierchomel, gpellegrino, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendyreid</dd>
+<dt>Scribe</dt><dd>wendyreid, CharlesL</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section>
+<p id=834b class=summary><a href="https://github.com/w3c/epub-specs/discussions/2825">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2825</a></p>
+<p id=b2c7 class="phone s02"><cite>wendyreid:</cite> Lots of discussion around images in spine and FXL, accessibility, how can we make things like scrolled comics work in the context of all the other needs.</p>
+<p id=e8d8 class="phone s03"><cite>gautierchomel:</cite> Good use of the discussions feature, I think there is something missing in this discussion, something that allows for parallel contents<br>
+<span id=a63c>… not synchronized, or alternate, or fallback</span><br>
+<span id=6237>… to me it's the same problem we face with displaying reflow along with FXL, same problem with translated content or bilingual content, the mechanism we need for all these topics is the same</span><br>
+<span id=c04d>… a mechanism to author and present parallel content</span><br>
+<span id=fa26>… we may need a specific TF for this, it's a big topic</span></p>
+<p id=7fa0 class="phone s04"><cite>CharlesL:</cite> I see where you're coming from gautierchomel, I agree<br>
+<span id=70cc>… with images in spine, I have a strong adverse reaction to that because of the accessibility, and I get the potential improvements to some workflows</span><br>
+<span id=8768>… if we make it easy for publishers to make inaccessible content, they will do it, we see it already in some books, the images being made as a background image using CSS, we need to come up with something</span><br>
+<span id=5e24>… using the spine makes sense in many ways, smaller file sizes, but we could use alternates or references to other files, we don't want no way to do it</span><br>
+<span id=58a1>… we need to provide options, with the alternatives in other files</span><br>
+<span id=ffff>… if we don't have an accessible solution, we will have pushback in the horizontal review</span></p>
+<p id=4b94 class="phone s05"><cite>Dale:</cite> If we follow the spec as written, and there's an XHTML document and we go to that, the image is there, the accessibility information is there, it's accessible<br>
+<span id=3307>… but I hear that some reading systems strip out the image, just show it, it seems like the solution for having accessible ebooks are already there, those that choose to discard make that choice</span><br>
+<span id=910f>… why are we doing all this work when the effort remains, feels like we are reinventing the wheel</span></p>
+<p id=8c78 class="phone s02"><cite>wendyreid:</cite> I agree with you all.<br>
+<span id=47be>… RS that are not concerned with a11y they will continue to just strip the images out.</span><br>
+<span id=c4be>… I don't feel bad to do the extra work for the RS to do the extra work if they want to make it in-accessible.</span><br>
+<span id=2d0d>… My goal as spec dev. to make the reader happy and satisfy their needs.</span><br>
+<span id=c4af>… I don't want to make it harder for Publishers. and want to fight for the user with the most need we get 10X benefits for everyone.</span><br>
+<span id=b598>… making this choice make this easier for RS devs.</span><br>
+<span id=af2b>… interlinear even if we start work for that today we couldn't fix the scrollable content.</span><br>
+<span id=c89b>… we need to hold firm on this in EPUB, but the parallel content, and this is probably the future maybe EPUB4 or Manifest 2.  It does make sense. We can't take a huge step backwards to make some content easier to use.</span></p>
+<p id=d6b2 class="phone s06"><cite>CircularKen:</cite> Agree with everyone, we have a lot of inaccessible FXL out there, we all know someone out there who can write a script to make image1 to xhtml and so on. There are ways to already have scrolling with FXL<br>
+<span id=18a6>… I don't think we should change for this</span></p>
+<p id=29a9 class="phone s04"><cite>CharlesL:</cite> Slightly related, maybe off topic, I'll be at an accessibility council meeting, can pick some brains</p>
+<p id=5ebe class="phone s06"><cite>CircularKen:</cite> For FXL? How can we make an accessible FXL on Kindle, what are they doing?<br>
+<span id=cc38>… what are they working on?</span></p>
+<p id=fae3 class="phone s04"><cite>CharlesL:</cite> I can ask about that</p>
+<p id=0647 class="phone s05"><cite>Dale:</cite> I create books that are mixed media, one chapter is a comic, there's a poem in another chapter, when I try to upload, it's not publishing online</p>
+<p id=087c class="phone s05"><cite>Dale:</cite> I get told it needs to be a comic book, because it has comic elements, but it forces a situation where you're stuck to a format that is not accessible</p>
+<p id=009d class="phone s02"><cite>wendyreid:</cite> there is a problem just for this kind of content say &quot;Comic&quot; that it must be scrolled and could allow for this new way of creating the EPUB.<br>
+<span id=acd9>… sometimes there is both Fixed layout and reflowable.</span></p>
+<p id=a983 class="phone s05"><cite>Dale:</cite> my content works great on Apple Books. so I know its possible. exactly the way I expect it to from the spec,<br>
+<span id=5d50>… EPUB spec doesn't need to change IMO.</span></p>
+<p id=ddd2 class="phone s07"><cite>Ken:</cite> I agree<br>
+<span id=d7c8>… visual types of books is not as accessible but we don't want to make it even less accessible.</span></p>
+<p id=c05b class="phone s04"><cite>CharlesL:</cite> One point I want to make, the Amazon FXL is only certified at WCAG 2.2 A, for the reasons we defined</p>
+<p id=922f class="phone s04"><cite>CharlesL:</cite> Amazon's FL is certified at WCAG 2.2 A only.</p>
+<p id=7cde class="phone s06"><cite>CircularKen:</cite> New software out there, Affinity, which produces really amazing FXL content<br>
+<span id=19a4>… I have contributed to what we want, and they listened</span><br>
+<span id=ad9d>… worth checking out</span><br>
+<span id=16ba>… I'm running a webinar about it</span></p>
+<p id=ed10 class="phone s04"><cite>CharlesL:</cite> <a href="https://www.linkedin.com/posts/kenjones_in-the-loop-activity-7391073544081735680-21zH">https://<wbr>www.linkedin.com/<wbr>posts/<wbr>kenjones_in-the-loop-activity-7391073544081735680-21zH</a><br>
+<span id=baf1>… main link: <a href="https://bookmachine.org/2025/10/30/canva-has-just-given-you-a-free-alternative-to-adobe/">https://<wbr>bookmachine.org/<wbr>2025/<wbr>10/<wbr>30/<wbr>canva-has-just-given-you-a-free-alternative-to-adobe/</a></span></p>
+<p id=d693 class="phone s02"><cite>wendyreid:</cite> One assertion in that discussion: comics can't be accessible with the current paradigm. I agree its not the most ideal solution to have the entire page described to you.<br>
+<span id=ee48>… I reject the idea that because we can't have a fully accessible option we shouldn't try, and just allow an inaccessible version.</span><br>
+<span id=0c70>… there are cases in Education where there may be comics as part of the curricula.</span><br>
+<span id=ffab>… we need people from alternate formats that will push back on that assumption.</span></p>
+<p id=d827 class="phone s05"><cite>Dale:</cite> Watch the Ted Talk Scott McCloud</p>
+<p id=6ca1 class="phone s02"><cite>wendyreid:</cite> I read lite version of Manga comics and they are not the same.</p>
+<p id=10000 class="phone s08"><cite>gpellegrino:</cite> I have not seen an accessible comic at a publishing house. I have seen experiments.<br>
+<span id=c8b1>… when we get a comic in our QA process, say 1 page comic we make sure the description of the one page and the text in the comic is there.</span><br>
+<span id=ec81>… the alt text can be as long as you want. but you can't navigate alt text is 1 chunk of text. which may be difficult to understand, no language shifting in alt text etc.</span><br>
+<span id=8049>… not mandatory with spec. to force it to be accessible.</span><br>
+<span id=f749>… we need to provide a way to make it accessible. I agree lets not skip it completely but its not a perfect solution. to have a fully accessible will take a lot of effort. (complex images etc.)</span></p>
+<p id=c293 class="phone s03"><cite>gautierchomel:</cite> Want to emphasize what Gregorio said, what I see with publishers we work with at EDRLab who want to do accessible comics<br>
+<span id=31c3>… they are working actively on it</span><br>
+<span id=b14c>… the publisher we meet have the will, they don't have a way</span><br>
+<span id=126e>… so instead of spending time on discussing the image in spine, it's not the best solution, the entire situation is problematic, but I think we should focus on strong ways to do accessible comics with things like parallel content</span><br>
+<span id=40df>… the example I know is from Hachette, the collection being made as audiobooks, they hired professionals to write scripts to make the comics understandable</span><br>
+<span id=4209>… they are wondering how to synchronize/parallelize the audio version with the content</span><br>
+<span id=b78b>… page by page, to fit the dialogue</span><br>
+<span id=bf71>… we could do that with alt text, it's not great, we could do it with other means</span></p>
+<p id=f948 class="phone s05"><cite>Dale:</cite> What is a comic? Scott McCloud really breaks it down, there are sound effects, dialogue, the scene, multiple elemetns<br>
+<span id=63c7>… some publishers would say this is a bitmap, just stick it on the page</span><br>
+<span id=da3f>… but from an accessibility POV, there's a story, and we use semantics to that</span><br>
+<span id=adc5>… there's so many different ways to look at how to describe it</span><br>
+<span id=e754>… regardless of the limitations, how do we help the reader experience the comic?</span><br>
+<span id=825c>… it's almost like typing out the script of the page</span><br>
+<span id=97e8>… let them read the script</span><br>
+<span id=ea47>… in multimedia we have scripts, transcripts, audio description</span><br>
+<span id=8133>… there's all these different ways of experiencing a story</span><br>
+<span id=ebc4>… how do you coming at a story from multiple POVs</span><br>
+<span id=4e5b>… when we talk about comics, the definition of comic is bitmap, and we just need to put a bitmap in the spine to be done, that's all there is until we talk about it from an accessibility POV</span></p>
+<p id=783b class="phone s02"><cite>wendyreid:</cite> I did an experiment, an assignment for class, created an image SVG and wanted to make it accessible and navigable.<br>
+<span id=17e1>… every single panel is navigable and described to AT.</span><br>
+<span id=2f90>… nothing fancy SVG in HTML, just did rectangles, could do bubbles / circles, sound effects. navigable reading order. missing semantics because its just SVG which doesn't allow that no headings / body text, etc.</span><br>
+<span id=114e>… we have the status quo not great, there are tech that could help but there are new tech like parallelization to content.</span><br>
+<span id=cf5d>… if the only way to do scrolled content with images in spine, but this is not the case. its possible other ways.</span></p>
+<p id=ac2f class="phone s05"><cite>Dale:</cite> I hear everything you say, parallel paths, I encouraged my students to use different senses in storytelling<br>
+<span id=e31a>… on the web I can bring in all these different types of content and properties, can we head in that direction with EPUB</span></p>
+<p id=292c class="phone s05"><cite>Dale:</cite> Is EPUB meant to reproduce a physical book in an electronic device, or something more?<br>
+<span id=7f83>… is there a solution beyond EPUB</span><br>
+<span id=4bad>… if EPUB has its weak spots, in its own lane, and this is what it does, or is it possible to do this in EPUB?</span><br>
+<span id=dc90>… an EPUB is a website in an archive, but we don't have access to the full experience of the web either</span><br>
+<span id=f23a>… it's a stripped down version, is that ok?</span></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
