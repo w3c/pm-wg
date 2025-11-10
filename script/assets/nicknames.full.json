@@ -69,6 +69,12 @@
         "github": "fchasen"
     },
     {
+        "name": "Yong-sang Cho",
+        "nick": [
+            "Yong-sang"
+        ]
+    },
+    {
         "nick": [
             "gautier",
             "gautierchomel"
@@ -128,7 +134,9 @@
     {
         "nick": [
             "sdelackner",
-            "sdelackner9"
+            "sdelackner9",
+            "seth",
+            "seth2"
         ],
         "name": "Seth Delackner"
     },
@@ -421,6 +429,12 @@
     },
     {
         "nick": [
+            "Hiroshi_Kawada"
+        ],
+        "name": "Hiroshi Kawada"
+    },
+    {
+        "nick": [
             "George"
         ],
         "name": "George Kerscher",
@@ -447,6 +461,7 @@
     },
     {
         "nick": [
+            "koike",
             "toshiaki-koike",
             "toshiakikoike"
         ],
@@ -697,7 +712,8 @@
     },
     {
         "nick": [
-            "johnroque"
+            "johnroque",
+            "jroque"
         ],
         "name": "John Roque"
     },
@@ -812,6 +828,12 @@
     {
         "nick": [],
         "name": "Yutaka Suzuki"
+    },
+    {
+        "name": "Motoi Suzuki",
+        "nick": [
+            "motoisuzuki"
+        ]
     },
     {
         "nick": [
@@ -942,5 +964,12 @@
         ],
         "name": "Benjamin Young",
         "github": "bigbluehat"
+    },
+    {
+        "name": "Brent Zundel",
+        "nick": [
+            "brent",
+            "brentz"
+        ]
     }
 ]

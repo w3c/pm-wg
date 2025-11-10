@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group F2F &ndash; 10 November 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>&ndash; DRAFT &ndash;<br>
+Publishing Maintenance Working Group F2F</h1>
+<h2>10 November 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/11/09-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, brent, cristina, duga, George, gpellegrino, Hadrien, jroque, marisa, MasakazuKitahara, mgarrish, rdeltour, seth2, shiestyle, toshiakikoike, wendyreid, ivan, makoto, magnus, brentz, fantasai</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>shiestyle, wendyreid</dd>
+<dt>Scribe</dt><dd>duga, wendyreid, fantasai, Hiroshi_Kawada</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#8153">Update on Annotations</a></li>
+<li><a href="#7c4e">ISO and Liaising with ISO/IEC JTC1/SC34</a></li>
+<li><a href="#406b">Update on Digital Comics</a>
+<ol>
+<li><a href="#1fea">Images in spine</a></li>
+</ol>
+</li>
+<li><a href="#21f3">Process Discussion</a></li>
+<li><a href="#0255">Image in Spine (cont.)</a></li>
+<li><a href="#e223">FXL Changes and Digital Comics</a>
+<ol>
+<li><a href="#1a21">First page</a></li>
+<li><a href="#14e0">Orientation - w3c/<wbr>epub-specs#2751</a></li>
+<li><a href="#edb6">Deprecating flow as metadata - w3c/<wbr>epub-specs#2754</a></li>
+</ol>
+</li>
+<li><a href="#19f8">closing</a></li>
+<li class=app><a href="#ActionSummary">Summary of action items</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section>
+<p id=4644 class="phone s01"><cite>wendyreid:</cite> Welcome<br>
+<span id=7735>… today is mostly annotations, ISO, digital comics, plus extra time at the end</span><br>
+<span id=9a36>… tomorrow we start with BG meeting (no conflict with PMWG), then we take over. Japanese publishing guidelines, html in epub, pub manifest, bugs, buffer for run over</span><br>
+<span id=5dba>… [see calendar for times]</span><br>
+<span id=6478>… This year is a little different, there are breakouts at the end of meetings and before some</span><br>
+<span id=b0bf>… please follow the code of conduct, etc, etc</span></p>
+</section>
+
+<section>
+<h3 id=8153>Update on Annotations</h3>
+<p id=3d01 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/2025/11/EPUBAnnotationsSlide.pdf">See presentation slides</a></p>
+<p id=ffff class="phone s02"><cite>LaurentLM:</cite> [sharing some slides]<br>
+<span id=b99a>… starting with testimony about annotations requesting import/export</span><br>
+<span id=8835>… So there are people actually asking for this</span><br>
+<span id=2279>… so far there are a limited number of interested parties</span><br>
+<span id=feca>… [see slides for list]</span><br>
+<span id=e8ae>… where we are - use cases and requirements are done</span><br>
+<span id=452a>… we are actively working on what goes in an annotation</span><br>
+<span id=0624>… coming up we will look at selectors, JSON, etc</span><br>
+<span id=cdd1>… Then we have to decide what to do about sync/API</span><br>
+<span id=a40a>… then it is on to implementations</span></p>
+<p id=07fc class=summary>Github Document: ​​EPUB Annotations Use Cases and Requirements</p>
+<p id=a967 class="phone s03"><cite>Laurent:</cite> [Looking over the doc at github] We now have a shortlist of requirements. Not all requirements will make this version, and perhaps never will. [reviewing the list of requirements]<br>
+<span id=de50>… This list includes a list of selectors. It also covers import/export and embedding, as well as version resilience. Questions?</span></p>
+<p id=7088 class="phone s04"><cite>George:</cite> Do we have creator info?</p>
+<p id=4887 class="phone s03"><cite>Laurent:</cite> yes. And also what software created it</p>
+<p id=362a class="phone s05"><cite>Wendy:</cite> We also need to consider privacy and security</p>
+<p id=e263 class="phone s03"><cite>Laurent:</cite> More questions? If not, here is the spec I just wrote up: <a href="https://w3c.github.io/epub-specs/epub34/annotations/index.html">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub34/<wbr>annotations/<wbr>index.html</a>  This is a subset of the w3c annotation date model. There are<br>
+<span id=f539>… also some things that don’t exist in the data model. So we can go over what the subset is. We start with the annotation object, with a target and body. W3C has 0 or more, but we only need at</span><br>
+<span id=8989>… most one, so we will have 0 or 1 instead. And we only support embedded, not linked. We still need to look at audio/video, it may not be embeddable. Target must have a source URL and selector.</span><br>
+<span id=c379>… W3C also has multiple motivations, we will have only 1. They also have multiple creators, we will have only 1, more on that later. We will also restrict the additional properties and their</span><br>
+<span id=f0f1>… values. The document in github covers this in more detail.</span></p>
+<p id=a8ca class="phone s04"><cite>George:</cite> So an annotation will have 2 states, private and local, and one that is sharable, right?</p>
+<p id=a073 class="phone s03"><cite>Laurent:</cite> Sharing is a user action. I don’t think we would restrict that. Why would we want to do that?</p>
+<p id=3b7c class="phone s04"><cite>George:</cite> I may only want to share a subset of annotations</p>
+<p id=6a2c class="phone s03"><cite>Laurent:</cite> so perhaps filtering would help?</p>
+<p id=6583 class="phone s04"><cite>George:</cite> Well I want to set the sharable state when I create the annotation</p>
+<p id=fd47 class="phone s03"><cite>Laurent:</cite> so the user is always in charge</p>
+<p id=40dc class="phone s04"><cite>George:</cite> If I want to make some annotation for a class, some private, some public. I don’t want to tag each one at time of export. So you set that when you create the annotation</p>
+<p id=bcea class="phone s03"><cite>Laurent:</cite> There may be conflicts with the sync of the device</p>
+<p id=8cce class="phone s06"><cite>Hadrien:</cite> I feel we are confusing the data with the protocol. Privacy is only at the protocol level. Since we are undecided on that I think it is too early to work on this. Scope is already<br>
+<span id=dc07>… ambitious, I think we need to restrain ourselves to the non-protocol level</span></p>
+<p id=01ef class="phone s07"><cite>???:</cite> we have a section on sharing and comments, so does that imply that requirement should be tied to the protocol?</p>
+<p id=c8b4 class="phone s03"><cite>Laurent:</cite> Yes, and we need to keep manual sync separate from auto sync. [Now reviewing properties from w3c model, with a list of what we will keep] [shows clean and small json with this data].<br>
+<span id=8061>… Target has a meta property that doesn’t exist in w3c model. We can annotate any item, it doesn’t need to be in the spine. For body we are limiting to textual, but may need to revisit. [shows</span><br>
+<span id=2d17>… body example] So if we can agree on target and body we are basically half way. On to annotation set - we are adding a few things. I propose adding DC properties to the About object, which can</span><br>
+<span id=168a>… be used to identify the book. It is really all we have to work with.</span></p>
+<p id=75e9 class="phone s06"><cite>Hadrien:</cite> We have discussed this before. Even before CFI we had epub linking. It was hard and we never managed to do it. EPUB identifiers are just sad. This is only really useful if you don’t<br>
+<span id=6903>… have the book. I have zero trust that this will find the right book. I think we should focus on making the annotation useful without the book. I think that is the direction we should go -</span><br>
+<span id=ac0d>… this is context to make the annotation useful by itself. We should keep this list short, but focus on the useful parts</span></p>
+<p id=8008 class="phone s04"><cite>George:</cite> I heard citations would be supported. This DC info would help with that. We talk about books, but journals are heavily annotated. Need to keep those in mind.</p>
+<p id=c810 class="phone s08"><cite>Marisa:</cite> I saw there was a highlight property. Will that be compatible with CSS highlights?</p>
+<p id=12c6 class="phone s03"><cite>Laurent:</cite> I don’t think these values work with CSS highlights</p>
+<p id=49f6 class="phone s08"><cite>Marisa:</cite> CSS highlights are still pretty restricted, but you can do a lot</p>
+<p id=0017 class="phone s03"><cite>Laurent:</cite> But if we have a device not based on CSS, or perhaps on audio, etc, I still want this to work</p>
+<p id=10000 class="phone s08"><cite>Marisa:</cite> So the non web based reader would probably only support a few things, a non-display device might discard it. [lists the things supported by CSS highlights] I was just curious if this had come up</p>
+<p id=65f8 class="phone s03"><cite>Laurent:</cite> For example, color could support every color, but in fact reading systems only really support a handful. We have limited them to a set of specific named colors (see spec). And then leave it to RS to decide which color to use</p>
+<p id=a6c2 class="phone s05"><cite>Wendy:</cite> Yes, even in a reader the specific color may change based on theme</p>
+<p id=aeef class="phone s06"><cite>Hadrien:</cite> I have looked at a bunch of readers [gives breakdown by reader] Most have just 4 or maybe 5. Only yellow seems to be universally used.</p>
+<p id=5d02 class="phone s05"><cite>Wendy:</cite> On styles, I have never seen strikethrough. But it brings up the use for copyediting, lie work substitution</p>
+<p id=a8e9 class="phone s03"><cite>Laurent:</cite> I am sure it will be used by publishers, maybe at last round of review. So not for pro copy editors, but I don’t think we need to go to far</p>
+<p id=ab19 class="phone s04"><cite>George:</cite> I have heard the term red line used, does that have specific meaning?</p>
+<p id=6b27 class="phone s05"><cite>Wendy:</cite> Yeah, especially in legal documents. Used to amend contracts, etc<br>
+<span id=a40b>… then it is on to implementations</span></p>
+<p id=1759 class=irc><cite>&lt;LaurentLM&gt;</cite> <a href="https://w3c.github.io/epub-specs/epub34/annotations/index.html">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub34/<wbr>annotations/<wbr>index.html</a></p>
+<p id=78a2 class="phone s01"><cite>wendyreid:</cite> we still have some time, do we want to dive into nitty gritty details?</p>
+<p id=8820 class="phone s02"><cite>LaurentLM:</cite> There is a section we didn't discuss</p>
+<p id=334c class="phone s09"><cite>magnus:</cite> We have a reading system used for students, they used colors for hightlight. Is there anything in the spec to correlate color and meaning?</p>
+<p id=400c class="phone s01"><cite>wendyreid:</cite> I think keyword may come in here. maybe tags is better? Color is a way people annotate, but with only 4 colors maybe tags would allow for more customization<br>
+<span id=300e>… I wonder if we should think about tags and keywords together</span></p>
+<p id=07ba class="phone s03"><cite>Laurent:</cite> We went back and forth on the name. They are related</p>
+<p id=80cc class="phone s06"><cite>Hadrien:</cite> But this is different, we Magnus is asking for a color means a specific thing, vs color and tags can be combined</p>
+<p id=6fd4 class="phone s09"><cite>magnus:</cite> So colors have specific meanings for the students</p>
+<p id=b0dc class="phone s03"><cite>laurent:</cite> this is more like a config setting in the RS, connecting a color and a tag<br>
+<span id=b5ad>… so we have to decide if thus is in the model or just up to RS</span></p>
+<p id=baaa class="phone s10"><cite>Seth:</cite> So we need to make it easy to connect these things, but the data would just know the color</p>
+<p id=1556 class="phone s01"><cite>wendyreid:</cite> A lot of this will come down to what the RS wants to do and allow for<br>
+<span id=fba0>… I can imagine in a group context, I may use colors and tags, I can share with other people so they understand what the notes are about.</span><br>
+<span id=4aaf>… So we should break visual display and meaning apart</span></p>
+<p id=2b4c class="phone s09"><cite>magnus:</cite> You may also want to filter by type</p>
+<p id=3336 class="phone s01"><cite>wendyreid:</cite> any other thoughts?</p>
+<p id=10001 class="phone s03"><cite>laurent:</cite> I have some sections on filtering, as well as multiple selectors<br>
+<span id=ec91>… selectors should include a precise one, but also one that will survive mutation</span><br>
+<span id=a9bb>… We also looked at extensions</span><br>
+<span id=8422>… Also discussed putting this file in METAINF (for embedded annotations)</span><br>
+<span id=846f>… This has implications for signing EPUBs, but no one does that</span><br>
+<span id=f264>… There is also a section on the order of importing. Basically a recommendation to not bother with automatic detection</span><br>
+<span id=d6c3>… And also a recommendation on what to do if the RS does not support a color</span><br>
+<span id=a778>… It would be could to have people review these</span><br>
+<span id=184a>… Questions?</span></p>
+<p id=a29f class="phone s11"><cite>George_:</cite> Media is supported, can audio and video be annotated?</p>
+<p id=ed40 class="phone s03"><cite>laurent:</cite> it is in the requirements, but I think v1 should start with text.<br>
+<span id=dd58>… We might allow full image in v1, but segments of images, videos, etc, most RSes won't be able to do that. So we should push that to v2</span><br>
+<span id=8b80>… The evolution there will be with selectors. That is all that needs to change to support that</span><br>
+<span id=fa81>… the issue isn't how to specify, but support for it</span></p>
+<p id=0040 class="phone s01"><cite>wendyreid:</cite> Currently we just have textual, not audio and image?</p>
+<p id=5fb1 class="phone s03"><cite>laurent:</cite> yes, the big issue is how to embed</p>
+<p id=9223 class="phone s01"><cite>wendyreid:</cite> A lot of annotation is currently done via images, anything with a stylus does that<br>
+<span id=fd35>… so we probably need a way to embed this in annotations</span><br>
+<span id=5cf7>… it may be hand drawn text, images, etc</span></p>
+<p id=2dbe class="phone s03"><cite>laurent:</cite> there are two issues, one is export file format, and how do we put that in an epub</p>
+<p id=6965 class="phone s12"><cite>duga:</cite> Question about the stylus drawing, we never quite knew how to attach to the text in a way that was meaningful. If the content split or was adjusted, it was lost<br>
+<span id=cced>… attachment was a challenge</span></p>
+<p id=a647 class="phone s01"><cite>wendyreid:</cite> We would drop a selector in that position. If you drew a circle, we couldn't show the annotation, but just drop an icon to show the original image<br>
+<span id=0aac>… so still selector based to the first point</span><br>
+<span id=b94d>… so the problem isn't really solved</span></p>
+<p id=1ac1 class="phone s06"><cite>hadrien:</cite> it is very device dependent<br>
+<span id=5675>… It is more like a bookmark, it is not as specific as textual. But this is now growing</span><br>
+<span id=3708>… So worth investigating</span></p>
+<p id=a9f1 class="phone s03"><cite>laurent:</cite> Also commenting in other languages is important. We can support plan text and markdown. Do we need html to support ruby for annotations in Japanese? I have heard that this is uncommon in comments<br>
+<span id=74fe>… which would be great since not everyone supports html in comments</span><br>
+<span id=6dbe>… and markdown works for basic styling</span></p>
+<p id=a3be class="phone s13"><cite>makoto:</cite> if you want to publish annotations, then ruby would be required<br>
+<span id=a5d0>… so this is out of scope at the moment?</span></p>
+<p id=9531 class="phone s03"><cite>laurent:</cite> there was a case of an author wanting to publish a book with their annotations</p>
+<p id=41c2 class="phone s13"><cite>makoto:</cite> sometimes the annotations are more important</p>
+<p id=d446 class="phone s01"><cite>wendyreid:</cite> In terms of publishing with annotations, wouldn't these be embedded in the content? This is part of the book</p>
+<p id=bcaf class="phone s10"><cite>seth:</cite> So if a famous author is editing their own book, annotates it, then send it on to the publisher the natural way is annotations in the epub<br>
+<span id=1222>… so are we creating a world where there is a separate system to make these annotations?</span></p>
+<p id=00ec class="phone s14"><cite>shiestyle:</cite> Actually image based characters are more important than ruby<br>
+<span id=33d4>… but I am not sure about the publishing the annotations case</span></p>
+<p id=4b73 class="phone s11"><cite>George_:</cite> Annotations point in to the book, footnotes point out. Second if we are not using html and someone inserts an image, is it just a jpeg with no alt text, etc?</p>
+<p id=9d31 class="phone s03"><cite>laurent:</cite> So for image annotations? For body we could easily add alt text as plain text in the json<br>
+<span id=8f7c>… with the body as an object, we can add any property</span></p>
+<p id=d2bf class="phone s01"><cite>wendyreid:</cite> Thank you for the update</p>
+</section>
+
+<section>
+<h3 id=7c4e>ISO and Liaising with ISO/IEC JTC1/SC34</h3>
+<p id=a83c class="phone s01"><cite>wendyreid:</cite> Two things to discuss, first is ISO port of epub 3.3 to ISO<br>
+<span id=b4b6>… By which I mean the full family of scpes</span><br>
+<span id=b0f8>… we agree it should be done, but timing has been an issue, due to some EU complications</span><br>
+<span id=7b61>… we now have some info about that. There remain some unknowns, the short description is the EU a11y act caused a letter to go out about publishing standards, specifically EPUB.</span><br>
+<span id=671f>… This is all good, and it means the EU will adopt EPUB.</span><br>
+<span id=b8b1>… the problem is kicking off ISO process may cause problems with that adoption. We have some questions - what exactly is the problem? Just starting it? voting? etc</span><br>
+<span id=f355>… And does this apply to everything or just a11y spec?</span><br>
+<span id=37b9>… we are still trying to figure out who is talking to each other at ISO and w3c</span></p>
+<p id=ef22 class="phone s15"><cite>cristina:</cite> This all sounds accurate<br>
+<span id=053e>… The committee needs to wait if there is an ISO spec in process</span><br>
+<span id=6aab>… Second, the commission will accept the w3c standard</span><br>
+<span id=d339>… So I am glad the commission has contacted w3c so we can better understand the timeline</span></p>
+<p id=ed53 class="phone s13"><cite>makoto:</cite> We also have Yong-Sang from JTC7 SC34<br>
+<span id=ed4e>… Perhaps he can comment</span></p>
+<p id=e2a4 class="phone s16"><cite>Yong-sang:</cite> I have only heard about this from you (makoto)</p>
+<p id=6248 class="phone s13"><cite>makoto:</cite> Can you give our position?</p>
+<p id=d198 class="phone s16"><cite>Yong-sang:</cite> EPUB a11y is important to ISO, as members can adopt 3.3 as a national standard<br>
+<span id=13b9>… This is why we really want these in ISO, so we can adopt these important specs</span></p>
+<p id=94cc class="phone s13"><cite>makoto:</cite> I have been a member of SC34 and w3c and epub for decades<br>
+<span id=058e>… I will be chair of SC34 shortly</span><br>
+<span id=6939>… I have a new company working on bringing LCP to Japan</span><br>
+<span id=2d79>… LCP is not w3c rec, it was created by IDPF and Readium. It is now part of SC34</span><br>
+<span id=42c1>… There are a lot of committees, including one on AI. ISO is the right place to discuss things that matter to a number of countries.</span><br>
+<span id=fef3>… We are currently looking at scrolling comics, EPUB, LCP</span><br>
+<span id=ff3e>… there are a number of groups under SC 34</span><br>
+<span id=ce31>… [see presentation for list]</span><br>
+<span id=4179>… we have some specs on EPUB3 preservation</span><br>
+<span id=cfe3>… AHG1 is for scrollable comics, but it does not make specs</span><br>
+<span id=e967>… it could create terms of reference that could make a spec, but it is hard (multiple countries have to agree and nominate 5 experts)</span><br>
+<span id=b5a0>… This is recreated yearly (it is an ad hoc group, so not permanent)</span><br>
+<span id=1072>… Currently there is no proper relationship between this group and SC34. I would like to present documents from AHG1</span><br>
+<span id=7a2f>… I am looking into filing documents for this now</span><br>
+<span id=1e38>… The current specs at ISO are very old</span><br>
+<span id=f375>… I have not been able to update these</span><br>
+<span id=1a11>… we also have epub 3.0.1, these are also very old, but are listed as current</span><br>
+<span id=257d>… same applies to epub a11y</span><br>
+<span id=88e6>… Now to summarize normal vs. fast track process</span><br>
+<span id=2b25>… Normal has lots of specific rules that have to be followed (e.g. May is not really used)</span><br>
+<span id=c128>… PAS or fast track is used for moving things standardized elsewhere</span></p>
+<p id=df52 class=irc><cite>&lt;cristina&gt;</cite> it is worth to highlight that the EAA has a global impact as all international organizations willing to sell in Europe should comply with the EAA requirements and standards</p>
+<p id=9f39 class="phone s01"><cite>wendyreid:</cite> Question - does this mean we don't have to do editorial work to change language?</p>
+<p id=c572 class="phone s13"><cite>makoto:</cite> correct. I don't know where that idea came from. There is a cover page that will be handled by ISO, other minor things</p>
+<p id=78e6 class="phone s03"><cite>laurent:</cite> So pagination since it is PDF there will be some changes, that is ok?</p>
+<p id=6f75 class="phone s13"><cite>makoto:</cite> Proposal - SC34 should withdraw the old specs<br>
+<span id=10002>… This is really bad, these should not be the current version</span><br>
+<span id=09f8>… I strongly advise that EPUB 3.3 and a11y 1.1 be submitted with NO changes</span><br>
+<span id=664c>… Since I will be chair, I hope we can establish a better relationship</span></p>
+<p id=ef65 class="phone s01"><cite>wendyreid:</cite> Thank you, this is good to hear. We were worried about making the changes, so that makes this a lot easier<br>
+<span id=2462>… the existing relationship was with publishing @ w3c, so I would like to understand if that still includes us since we are under that</span><br>
+<span id=3eee>… I am very interested in the scrolled comics work</span></p>
+<p id=10003 class="phone s17"><cite>AvneeshSingh:</cite> we are aware of the ISO process and the requirements<br>
+<span id=5b48>… We are currently wrapped up in the political issues. Not everyone is in the same loop</span><br>
+<span id=a14b>… There are discussions with EU, and with ISO, and with w3c and ISO and these are all different conversations</span><br>
+<span id=afaa>… I am concerned that we are having all these discussions without a proper strategy in place</span><br>
+<span id=1c72>… I am tired of the adhoc relationship, we need a proper strategy</span></p>
+<p id=1f61 class="phone s13"><cite>makoto:</cite> In the context of wcag I have had a lot of problems with the EU.<br>
+<span id=582f>… Many japanese changes have been rejected</span><br>
+<span id=9b72>… my opinion is that a special relationship with w3c and EU is a problem</span></p>
+<p id=9535 class="phone s15"><cite>cristina:</cite> This is really a national issue, but it is also a business issue. There is a BG that needs to be involved</p>
+<p id=5b21 class="phone s01"><cite>wendyreid:</cite> One challenge has been that we don't have all the information<br>
+<span id=e00f>… I did know not that the commission and w3c had been talking</span><br>
+<span id=f3dc>… and that the commission and w3c have been talking</span><br>
+<span id=438e>… this is a big deal, but we really need to know who has been talking</span><br>
+<span id=44f1>… and it is very odd that people are talking and not including the chairs</span><br>
+<span id=bd96>… so I think we can move ahead with liaison with sc34 for now</span><br>
+<span id=8baa>… and try to figure out the rest</span></p>
+<p id=251d class="phone s18"><cite>mgarrish:</cite> We really need to get to a place where these can be kept in sync<br>
+<span id=9cfb>… I was editing the metadata for conservation document, and I had to keep saying what was different between these specs</span><br>
+<span id=f296>… the current space is simply not sustainable</span></p>
+<p id=43fa class="phone s15"><cite>cristina:</cite> When we presented to the commission it was as w3c<br>
+<span id=0eb9>… we have had a problem with people contacting w3c and not getting a response</span><br>
+<span id=c547>… this is an opportunity we don't want to miss</span></p>
+<p id=5af7 class="phone s01"><cite>wendyreid:</cite> Pedantic question - we have epub 3.3. and a11y 1.1, but we are working on 3.4 and 1.2. If we publish one version, can we leave 3.3 with the EU? Or can we not publish anything?</p>
+<p id=a3f2 class="phone s13"><cite>makoto:</cite> The fast track process is quick</p>
+<p id=b0f7 class="phone s03"><cite>laurent:</cite> How many countries have to say yes?</p>
+<p id=ada8 class="phone s13"><cite>makoto:</cite> I don't know. But many will just say yes, because they lose voting writes if they fail to vote</p>
+<p id=6a2f class="phone s19"><cite>ivan:</cite> Makoto, as far as I know, we have to go through an editorial process, right?<br>
+<span id=d194>… that process means going between the two formats is a lot of work</span></p>
+<p id=f690 class="phone s13"><cite>makoto:</cite> I strongly believe that is incorrect</p>
+<p id=931b class="phone s19"><cite>ivan:</cite> WCAG had to go through this painful process, why are we different?</p>
+<p id=dd6f class="phone s13"><cite>makoto:</cite> I reviewed the wcag ISO with w3c and the only difference is the cover sheet and index</p>
+<p id=3bb4 class="phone s16"><cite>Yong-sang:</cite> JWG7 would like to take the responsibility for the editorial changes. We would like to pursue with just adding the cover page, but if there is a different position, then JWG7 would like to take the entire conversion effort<br>
+<span id=ff0d>… Just format work</span><br>
+<span id=1a99>… Without changing the requirements from the original spec</span></p>
+<p id=10004 class="phone s19"><cite>ivan:</cite> Thank you, it will be an enormous help<br>
+<span id=a699>… I don't know who to contact for a once and for all final statement on what we need to do</span><br>
+<span id=e83f>… we keep hearing different things</span><br>
+<span id=e225>… who at ISO has the official role to make such an official statement?</span><br>
+<span id=fb3c>… if it is just the cover page, then this radically changes the situation</span><br>
+<span id=18c3>… Then the 3.4 question becomes more interesting</span><br>
+<span id=53ff>… but where should we go for a proper answer?</span></p>
+<p id=a90d class="phone s13"><cite>makoto:</cite> Since I will be chair I should set up a meeting with ISO Geneva and this group<br>
+<span id=33f0>… how does that sound</span></p>
+<p id=115c class="phone s16"><cite>Yong-sang:</cite> we have 2 very strong options - [talk to the technical program manager and also makoto can talk o the editorial team at Geneva</p>
+<p id=0853 class="phone s15"><cite>cristina:</cite> The EU will not publish an official standard, they will adopt the W3C version</p>
+<p id=be7f class="phone s19"><cite>ivan:</cite> The message I have from the EU is don't publish an ISO standard. So my question is can we work in parallel? Can we leave the w3c spec alone, and start working on ISO, but not publish until the EU is ready?<br>
+<span id=6097>… if we do this with 3.4 since it is a good 1.5 years out</span></p>
+<p id=e10c class="phone s15"><cite>cristina:</cite> we should organize a meeting with the commission to answer that</p>
+<p id=9414 class="phone s15"><cite>cristina:</cite> I think it is important understanding if the spec is alignment with the commission</p>
+<p id=d59b class="phone s17"><cite>AvneeshSingh:</cite> Fast-track will start after 3.4 after it is done. I don't understand how we could start it now?<br>
+<span id=3e26>… it has to be rec track first</span></p>
+<p id=c340 class=irc><cite>&lt;ivan&gt;</cite> avneesh: epub 3.4 /a11 1.2 are rec-track</p>
+<p id=5bad class="phone s17"><cite>AvneeshSingh:</cite> I would like to get to an arrangement where EU isn't lagging behind</p>
+<p id=09b8 class="phone s13"><cite>makoto:</cite> I have a fundamental concern that giving EU special status is unfair to other countries<br>
+<span id=85c8>… I respect the work done, but it doesn't mean the EU can decline what other countries do</span></p>
+<p id=816b class="phone s19"><cite>ivan:</cite> I am not sure what is a problem, re AvneeshSingh</p>
+<p id=87e9 class="phone s14"><cite>shiestyle:</cite> How long does it take</p>
+<p id=97ed class="phone s13"><cite>makoto:</cite> 8 months plus  bit, so say 1 year<br>
+<span id=10005>… if we want to delay we can request that</span></p>
+<p id=7d00 class="phone s14"><cite>shiestyle:</cite> Can we stop publishing?</p>
+<p id=08b2 class="phone s13"><cite>makoto:</cite> you can always withdraw at any time before publishing, even if all countries have voted yes</p>
+<p id=ceaf class="phone s14"><cite>shiestyle:</cite> so it is canceled?</p>
+<p id=a615 class="phone s01"><cite>wendyreid:</cite> Yes, but we could restart</p>
+<p id=87c2 class="phone s15"><cite>cristina:</cite> I don't think EU will stop. The question is an international one, so we can sell everywhere<br>
+<span id=e543>… I am not so sure that everyone in Japan agrees. This needs to be a business decision</span></p>
+<p id=1dbb class="phone s01"><cite>wendyreid:</cite> let us drop the international issue. This is about logistics. We don't have all the info yet, so we need to figure that out first</p>
+<p id=dc0a class="phone s16"><cite>yong-sang:</cite> I am curious about the EU standard you are referring to? What standard do you mean?</p>
+<p id=3fa7 class="phone s15"><cite>cristina:</cite> There is not standard for ebooks, they will adopt a technical spec</p>
+<p id=57be class="phone s16"><cite>yong-sang:</cite> Usually the ISO standard is auto (maybe) adopted by EU<br>
+<span id=0028>… We should make epub a living standard</span></p>
+<p id=a80e class="phone s11"><cite>George_:</cite> I love that, it sounds great. I want to move things forward in parallel and avoid the sequential nature<br>
+<span id=7e69>… I don't like having to get it locked down, then sent to ISO, then having issues that can't be resolved</span><br>
+<span id=defa>… getting things to move forward smoothly would be grat</span></p>
+<p id=5dc6 class="phone s13"><cite>makoto:</cite> when epub 3 was submitted there were a lot of requests for changes that I resisted</p>
+<p id=f74c class="phone s17"><cite>AvneeshSingh:</cite> We need a proper relationship with ISO, figuring that out will solve these issues<br>
+<span id=1e46>… To ivan it was about 3.4 going to ISO</span></p>
+<p id=396f class="phone s19"><cite>ivan:</cite> I misunderstood</p>
+<p id=3b20 class="phone s01"><cite>wendyreid:</cite> I have reached out to see who I should talk to, apparently it is Rigo. We need to figure out the parameters on all 3 sides. Would be great to have all 3 in a room<br>
+<span id=b242>… we do not want to favor one group over another</span></p>
+<p id=f405 class="phone s13"><cite>makoto:</cite> Do you feel comfortable with an official relationship between us and SC34?</p>
+<p id=c649 class="phone s01"><cite>wendyreid:</cite> No problem, sounds good</p>
+<p id=46e7 class="phone s11"><cite>George_:</cite> I hope the ISO publication is something that is not in PDF would be important to me</p>
+<p id=bedb class="phone s19"><cite>ivan:</cite> Two things. One is I hope we are talking about the 3 rec track docs, and not unbundling<br>
+<span id=5437>… second, to broaden what George_ said, my understanding is that what is published in w3c and iso the two texts should be identical</span><br>
+<span id=8b3c>… I know it is hard to get ISO docs into the public as html. I don't hold my breath though. W3C will still publish as html and make it available, so I don't really care</span></p>
+<p id=51a5 class="phone s01"><cite>wendyreid:</cite> What do we have to do to get the relationship done?</p>
+<p id=2489 class="phone s13"><cite>makoto:</cite> We just have to file a form. We just need to find someone to sign it</p>
+<p id=d226 class="phone s20"><cite>Daihei:</cite> What are the next steps on the international relations side?</p>
+<p id=54a3 class="phone s01"><cite>wendyreid:</cite> Next step is to find out who is talking to who. Then maybe schedule a meeting where we can all meet<br>
+<span id=efd4>… For instance, understanding timelines would be very helpful</span></p>
+<p id=5df8 class="phone s20"><cite>Daihei:</cite> From the global publishing side, the reason we need to take into account EU is the eaa has already been enacted<br>
+<span id=96fc>… those a11y requirements affect the entire global community</span><br>
+<span id=de49>… The global system is interconnected, we have to give due consideration to all members, including the EU</span></p>
+<p id=bc87 class="phone s01"><cite>wendyreid:</cite> That is what has made this so difficult<br>
+<span id=6380>… we understand the importance of all sides here.</span></p>
+<p id=6808 class="phone s12"><cite>duga:</cite> Love having this conversation over and over again, I want to have this joint meeting, I would like to see that the EU has been saying &quot;don't go to ISO until...&quot; we need to know the &quot;until&quot;<br>
+<span id=476b>… it doesn't have to be an exact date, but we need to know a date</span></p>
+<p id=1517 class="phone s11"><cite>George_:</cite> The tricky thing is getting someone to speak with any authority</p>
+<p id=3f6a class=irc><cite>&lt;seth2&gt;</cite> Regarding the discussion around whether we are required to apply the editorial grammar rules when using PAS:</p>
+<p id=b797 class=irc><cite>&lt;seth2&gt;</cite> In ISO/IEC Directives, Part 1 – Consolidated JTC 1 Supplement 2023</p>
+<p id=e0a8 class=irc><cite>&lt;seth2&gt;</cite> <a href="https://iec.ch/system/files/2023-10/Consolidated_JTC1_Supplement_2023.pdf">https://<wbr>iec.ch/<wbr>system/<wbr>files/<wbr>2023-10/<wbr>Consolidated_JTC1_Supplement_2023.pdf</a></p>
+<p id=b92a class=irc><cite>&lt;seth2&gt;</cite> &quot;F.3.4.2 PAS Submission”</p>
+<p id=8d31 class=irc><cite>&lt;seth2&gt;</cite> Paragraph 5:</p>
+<p id=3bf4 class=irc><cite>&lt;seth2&gt;</cite> The format and content of the submitted specification are not required to comply with the</p>
+<p id=fa46 class=irc><cite>&lt;seth2&gt;</cite> ISO/IEC Directives Part 2.</p>
+<p id=a4dd class="phone s21"><cite>seth2:</cite> I have no context for a lot of this, but I did some research on fast track process<br>
+<span id=c299>… [see link]</span><br>
+<span id=5223>… basically contents does not have to be updated</span></p>
+<p id=086e class="phone s19"><cite>ivan:</cite> The problem is, that used to be the case for sure. The info I got 2 years ago is that ISO changed this<br>
+<span id=5a03>… so we have to check that that is still the official statement</span></p>
+<p id=0699 class="phone s13"><cite>makoto:</cite> Lots of things happened to normal process, but not to fast track</p>
+</section>
+
+<section>
+<h3 id=406b>Update on Digital Comics</h3>
+<p id=66af class="phone s14"><cite>shiestyle:</cite> We'll start the afternoon session, update on digital comics, Hadrien has a presentation</p>
+<p id=5604 class="phone s06"><cite>Hadrien:</cite> Tried to summarize where we are right now, afternoon sessions will be related to comics<br>
+<span id=e20b>… not necessarily have the discussions now, but set the table for those later discussions</span></p>
+<p id=c4cd class=summary><a href="https://docs.google.com/presentation/d/1FqyVtKXlVJcjmMjborQpSX9Xaw7Xq3KFb-FKzokelbY/">See Hadrien's slides</a></p>
+<p id=49b4 class="phone s06"><cite>Hadrien:</cite> if I had to summarize why we're doing this at all, EPUB is also for comics, not great for comics<br>
+<span id=eaec>… it shapes a lot of the current work</span><br>
+<span id=6ac8>… when we look at adoption of EPUB for comics, it varies by country</span><br>
+<span id=8cbc>… in Japan, it's an interchange format, you get what you need and discard the rest</span><br>
+<span id=eca6>… in Europe and the US, it's different, ebookstores use EPUB as is for comics</span><br>
+<span id=ab45>… not just interchange, but also display</span><br>
+<span id=7a87>… what we've also seen, many of those stores also accept PDF</span><br>
+<span id=4194>… specialized stores, ones that specialize in comics, many don't use EPUB at all, some may ingest it</span><br>
+<span id=91ce>… in South Korea, they pushed for a TTA standard (local), for continuously scrolled comics, they consciously chose not to use EPUB</span><br>
+<span id=62ae>… EPUB is not the default standard for comics</span><br>
+<span id=e143>… it's used, but there is no single place where it's the standard, it always lives alongside other formats</span><br>
+<span id=0a2e>… example of new comics store, SweetShop, they sell PDF</span><br>
+<span id=5f18>… other one, Panels, more EU, they'll be using CBZ/PDF</span><br>
+<span id=b02d>… speciality stores not using EPUB</span><br>
+<span id=2103>… and why are people not using EPUB?</span><br>
+<span id=1793>… it's a number of things, in some cases, people think PDF is good enough</span><br>
+<span id=b605>… it has native support</span><br>
+<span id=10006>… there has been a community standard, CBZ, which has been out for a long time</span><br>
+<span id=4a2e>… good enough for people for a long time</span><br>
+<span id=3487>… those have played a role in EPUB adoption</span><br>
+<span id=8b3d>… EPUB makes it hard to work with images, we can talk about this in the afternoon</span><br>
+<span id=847e>… we don't provide clear industry guidelines</span><br>
+<span id=df65>… different places have different ways to use EPUB, EBPAJ, more like a template</span><br>
+<span id=64d8>… no guideline to &quot;properly&quot; do comics in EPUB</span><br>
+<span id=6441>… this seems more necessary for comics vs other publications</span><br>
+<span id=6dbb>… neither PDF or CBZ can support continuously scrolled comics</span><br>
+<span id=014c>… places where EPUB is better, other formats don't have spread control</span><br>
+<span id=5d5c>… spreads are under and over specified</span><br>
+<span id=5ecc>… last area we are better, metadata and semantics</span><br>
+<span id=3f67>… we have useful, specialized metadata</span><br>
+<span id=8b71>… even EPUB basic metadata, but we don't have the full metadata for comics yet</span><br>
+<span id=959e>… we have semantics from DPUB ARIA, etc.</span><br>
+<span id=1d0c>… need more added for comics</span><br>
+<span id=3433>… where we are now with EPUB 3.4</span><br>
+<span id=65c2>… images in spine, contentious topic, but ask questions for our discussion later</span><br>
+<span id=e056>… we have AVIF and WEBP support, modern image format support</span><br>
+<span id=1c76>… moving in the right direction</span><br>
+<span id=75da>… we agreed on &quot;roll&quot; as a layout value</span><br>
+<span id=6dfb>… we haven't agreed on how to deal with those documents, what is in the spine</span><br>
+<span id=86e2>… we have open issues on spreads, there are a few things that need to be addressed</span><br>
+<span id=32a9>… comics specific metadata</span><br>
+<span id=a7b7>… semantics, need more discussion</span><br>
+<span id=20a5>… some progress, lots to discuss</span><br>
+<span id=d7c3>… let's talk about images in spine, primary need is to identify an image for a specific page</span><br>
+<span id=719f>… what we need is an ability to say &quot;where is the image&quot;</span><br>
+<span id=e4d6>… might be less contentious than images in spine</span><br>
+<span id=9b5b>… images in spine currently possible with fallback</span><br>
+<span id=11f3>… usage today, we know in Japan do images in spine without fallback, there are also publishers using images in spine with fallback</span><br>
+<span id=20d0>… it's not new, people use it today</span><br>
+<span id=ce25>… questions we need to ask, should we allow them</span></p>
+<p id=10007 class="phone s06"><cite>Hadrien:</cite> Can we allow them? Do we do it for roll documents, pre-paginated, if we do it, how far<br>
+<span id=7f65>… if we don't allow them, how can we make things easier?</span><br>
+<span id=b98e>… we need to test things out in several different ways, if it was clearer where to find the images, maybe that would be better</span><br>
+<span id=2b6a>… we know there is usage of fallbacks, it is in use in Japan, EU</span><br>
+<span id=5c00>… there are many that use it right now</span><br>
+<span id=6cbf>… we might need to use a new property, or lean into what people are doing</span><br>
+<span id=1962>… roll documents, we're blocked a bit by images in spine, we either say we do images in spine, or fallback</span><br>
+<span id=e0a2>… everything else would be a missed opportunity</span><br>
+<span id=26c9>… if we force HTML in the spine, it's complicated for the sake of being complicated</span><br>
+<span id=3a4f>… expectation gap between what producers are doing and EPUB</span><br>
+<span id=d8b4>… expectation on the market that first page is displayed on its own, regardless of spread info</span><br>
+<span id=f5d2>… but we don't say anything about it in the spec, we should align with expectations</span><br>
+<span id=1a0d>… what does it mean when we have page-spread-*, the spec says it is meaningful, production differs</span><br>
+<span id=848d>… some people always include it</span><br>
+<span id=9ee1>… it means they want control, but there is a mismatch</span><br>
+<span id=8b1d>… I don't think it is a bigthing to solve but should be</span><br>
+<span id=28c7>… how much control do we want to give over spreads?</span><br>
+<span id=216d>… values are overused or problematic</span><br>
+<span id=9f44>… for semantics, we inherit many values from AHL WG, mostly to describe contents of a page, but not used much outside</span><br>
+<span id=2a68>… there is a need for panel by panel, Amazon asked content producers to provide, but they need to use specialized software, there is interest in panel by panel</span><br>
+<span id=f73b>… shame people don't use EPUB</span><br>
+<span id=4726>… we also have the ability to indicate volume and chapter</span><br>
+<span id=38b5>… in Japan chapters are sold, but elsewhere it's volumes containing chapters, but we can leverage that</span><br>
+<span id=e87f>… we need new things for continuous scrolled comics, we have seasons, episodes, issues</span><br>
+<span id=6c57>… it could be relevant in a variety of markets</span><br>
+<span id=9c2a>… metadata, we need additional metadata, similar to document divisions</span><br>
+<span id=c911>… to say an EPUB is a volume of multiple chapters</span><br>
+<span id=7e9d>… question of EPUB or ONIX</span><br>
+<span id=b540>… we've had people ask for this, need series, story arc</span><br>
+<span id=a6f6>… just wanted to set the table for other discussions</span></p>
+<p id=94b5 class="phone s19"><cite>ivan:</cite> General question, before we dive into the technical discussion, lets say we solve all these issues, has the boat sailed on adoption?<br>
+<span id=faf0>… would we change the picture you painted at the beginning, whereby most people don't use EPUB</span></p>
+<p id=36f7 class="phone s06"><cite>Hadrien:</cite> Good question, for paginated comics, we may have missed the boat, but for continuous scrolled comics, things are behind closed doors, there's no cross-platform standard<br>
+<span id=5f68>… I could be wrong about paginated comics, but things can changed</span></p>
+<p id=98fd class="phone s19"><cite>ivan:</cite> To be more specific, we have the W3C process, if we do all the changes in some way or other, will we even have enough meaningful implementations to pass CR transition?</p>
+<p id=2d94 class="phone s06"><cite>Hadrien:</cite> Images in spine, we probably would, many of those reading systems don't consume EPUB</p>
+<p id=0fa4 class="phone s19"><cite>ivan:</cite> If I wanted to be a purist, it would be irrelevant to transition</p>
+<p id=10008 class="phone s06"><cite>Hadrien:</cite> I'd need to look into it, it's supported in some reading systems, two might be possible<br>
+<span id=e011>… for roll, that's new, we'd need new implementations</span><br>
+<span id=70ab>… for spreads, its aligning with what people already do</span><br>
+<span id=c995>… semantics, what do we expect RSs to do with this?</span><br>
+<span id=1814>… seasons or episodes may offer breaks in the scroll, but its an unknown</span><br>
+<span id=3f0b>… metadata, depends on our expectations for RSs</span></p>
+<p id=3b7a class="phone s19"><cite>ivan:</cite> What we used in 3.3 for metadata, there would be at least 2 systems that make a valid use of the metadata, how they use or display the content is not in our control, but if its useful to have it</p>
+<p id=346e class="phone s06"><cite>Hadrien:</cite> The state of EPUB metadata is complex, there's cases where ONIX is preferred, the main use is sideloading, if we target that, we could have implementations, but it would be doable</p>
+<p id=42de class=irc><cite>&lt;Zakim&gt;</cite> fantasai, you wanted to ask about slides</p>
+<p id=bc24 class="phone s14"><cite>shiestyle:</cite> If they are optional features, they don't need to meet the criteria?</p>
+<p id=f207 class="phone s12"><cite>duga:</cite> I want to disagree with Ivan about implementations, a reading system is more than a device, if a reading system can accept features and eventually display them, that's an implementation</p>
+<p id=cedb class="phone s19"><cite>ivan:</cite> I don't think we disagree</p>
+<p id=7ce0 class="phone s12"><cite>duga:</cite> My question then, some of these things, finding the images in the HTML, these feel like heuristics<br>
+<span id=ccad>… I don't know if these belong in the spec, or a separate document, if you want to do this optimized image thing, look here</span><br>
+<span id=2237>… does this need to be in the main spec</span></p>
+<p id=abc1 class="phone s06"><cite>Hadrien:</cite> I think that's a good question, we may need a best practice document for comics, I agree, some of this is heuristics<br>
+<span id=bd69>… I agree that not everything should end up in the spec</span><br>
+<span id=1d14>… it could be in a complementary documents, recommended semantics and metadata</span><br>
+<span id=a62e>… less fragmentation</span><br>
+<span id=6608>… even in single markets we have fragmentation</span></p>
+<p id=7a56 class="phone s22"><cite>toshiakikoike:</cite> Question, implementation for images in spine, if Voyager's and Kadokawa's reading systems implemented, would it satisfy W3C's standard?</p>
+<p id=69da class="phone s06"><cite>Hadrien:</cite> These are already implemented?</p>
+<p id=3d6b class="phone s14"><cite>shiestyle:</cite> I think they are, if both of us have these features</p>
+<p id=9da4 class="phone s19"><cite>ivan:</cite> I don't know the internals, if they are independently developed, they meet the requirements</p>
+<p id=deef class="phone s06"><cite>Hadrien:</cite> And it works in Thorium as well</p>
+<p id=b784 class="phone s01"><cite>wendyreid:</cite> Had this discussion with EPUB 3.3</p>
+<p id=d8e0 class="phone s01"><cite>wendyreid:</cite> There's the W3C implementation bar: 2 independent impl of a standard</p>
+<p id=6246 class="phone s01"><cite>wendyreid:</cite> We also have discussion with 3.3, we agreed that, 2 was not quite enough for publishing.</p>
+<p id=a90b class="phone s01"><cite>wendyreid:</cite> Because of the huge diversity of reading systems and reading platforms</p>
+<p id=f2e1 class="phone s01"><cite>wendyreid:</cite> It's great to have 2, but 2 is not enough to reflect that feature being well-supported</p>
+<p id=2ba1 class="phone s01"><cite>wendyreid:</cite> If we have 2-3, it means we cleared W3C bar, but on the way to our own declaration of well-supported</p>
+<p id=165f class="phone s01"><cite>wendyreid:</cite> I think us meeting the W3C standard is relatively simple</p>
+<p id=a3d4 class="phone s01"><cite>wendyreid:</cite> it's more whether publishing industry supports that we need to worry about</p>
+<p id=75c9 class="phone s06"><cite>Hadrien:</cite> I might be wrong, I think we'll have more than 2 for AVIF, it's more than that for images in spine, quite a bit more, spreads and so on<br>
+<span id=34de>… there's always a risk when we introduce new things what the support is</span></p>
+<p id=3b81 class="phone s14"><cite>shiestyle:</cite> Any questions before we get deeper into this?</p>
+<h4 id=1fea>Images in spine</h4>
+<p id=f656 class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2792,">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>issues/<wbr>2792,</a> <a href="https://github.com/w3c/epub-specs/discussions/2825,">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2825,</a> <a href="https://github.com/w3c/epub-specs/pull/2788">w3c/<wbr>epub-specs#2788</a></p>
+<p id=f599 class="phone s14"><cite>shiestyle:</cite> The first topic is images in spine</p>
+<p id=29b1 class="phone s06"><cite>Hadrien:</cite> I think this has been contentious, we've discussed for a long time, it came up when we first discussed FXL<br>
+<span id=d62a>… we know that images in spine are used, we also know that people have issues with them, mainly for accessibility, I kind of feel that we're stuck in the same discussion loop</span><br>
+<span id=b6cb>… we have the same arguments for or against</span><br>
+<span id=5835>… we never manage to move forward</span><br>
+<span id=608a>… we're stuck as a result with the status quo, my questions I hope can move us towards a solution for this</span><br>
+<span id=4c49>… we have some options within the spec, other options might require changes to the spec</span><br>
+<span id=735d>… we should avoid the status quo, I don't think it's good to have a difference between the spec and the industry</span></p>
+<p id=10009 class="phone s12"><cite>duga:</cite> So you often point out that there aren't really accessible comics, or they are hard to do<br>
+<span id=ba71>… I agree for comics, it doesn't make sense for XHTML, but for FXL we do have accessible content</span><br>
+<span id=8922>… in that perspective, it is an accessibility issue for FXL, this subset of content is huge, comics is a big industry</span><br>
+<span id=3241>… for children's books, it's good that that content is accessible today</span><br>
+<span id=ea0c>… people are making use of these features</span><br>
+<span id=8f7f>… it's not fair to disregard the accessibility aspect</span><br>
+<span id=56d9>… but if we do something for comics, that is weird, but we have rolled content, not sure if we should forget about HTML in this respect either</span><br>
+<span id=b399>… the other question, you listed two options, image in spine or image in spine with fallback HTML</span><br>
+<span id=b159>… would HTML in spine be illegal for roll comics?</span></p>
+<p id=61c4 class="phone s06"><cite>Hadrien:</cite> Not saying it should be illegal, it would be disappointing to those producing that content<br>
+<span id=00f5>… we shouldn't force people to put images in spine, but shouldn't force HTML either</span><br>
+<span id=690f>… would negatively impact adoption</span></p>
+<p id=2e8a class="phone s02"><cite>LaurentLM:</cite> In every specification, certain things are triggered by certain metadata, roll comics are triggered by specific metadata<br>
+<span id=648c>… we could say accessibility of scrolled comics is different, if we say we want to do the same for paginated comics, or do something different</span><br>
+<span id=446b>… we could extend the time of solving the accessibility problem</span><br>
+<span id=4441>… we don't have that content on the market, we don't know what an accessible comic needs to look like</span><br>
+<span id=3033>… more research needs to be done</span></p>
+<p id=c2a3 class="phone s06"><cite>Hadrien:</cite> There is a difference between partially accessible comics vs fully accessible comics, we don't know what makes a fully accessible comic</p>
+<p id=e7e6 class="phone s02"><cite>LaurentLM:</cite> Just adding HTML to comics doesn't make it accessible</p>
+<p id=3c3f class="phone s23"><cite>rdeltour:</cite> I have a simple question, does it have to be EPUB<br>
+<span id=d13e>… images in spine, it creates hurdles in interoperability, could it be a separate standard, a profile, something that is different?</span><br>
+<span id=ce81>… another question about CBZ, basically a list of images in a zip, could be we somehow have a hybrid CBZepub?</span><br>
+<span id=0250>… could an epub be a CBZ or vice versa</span></p>
+<p id=bd4a class="phone s06"><cite>Hadrien:</cite> First question is good, we see some places saying EPUB is not the solution. But one option to discuss, do we do something more like web publications, SK is doing JSON with metadata and some controls<br>
+<span id=e4ca>… it goes to Ivan's question, has the boat sailed</span><br>
+<span id=2515>… but for some markets, EPUB is huge, like Japan, we can't pretend people don't use it</span><br>
+<span id=9f3a>… for CBZ, the order of images matter, the .epub may not be recognized by CBZ readers</span><br>
+<span id=d1dc>… you could name images in a way that works for CBZ</span><br>
+<span id=ad02>… you could make something that works for both</span><br>
+<span id=618a>… or a packaged web publication that could also be an EPUB at the same time</span><br>
+<span id=7c16>… maybe a little too creative there</span></p>
+<p id=906e class="phone s01"><cite>wendyreid:</cite> I think I share Romain's question, does this have to be EPUB?</p>
+<p id=69df class="phone s01"><cite>wendyreid:</cite> One of the underlying parts of this discussion is, philosophically, what we think EPUB is?</p>
+<p id=f639 class="phone s01"><cite>wendyreid:</cite> Do we think that, as the group that maintains EPUB, who do we serve and who do we follow?</p>
+<p id=4184 class="phone s01"><cite>wendyreid:</cite> We try to strike balance between what industry wants and what readers need</p>
+<p id=7647 class="phone s01"><cite>wendyreid:</cite> And lately also government regulations</p>
+<p id=9672 class="phone s01"><cite>wendyreid:</cite> On the surface, about images in spine, questions what do we want EPUB to be</p>
+<p id=f6d9 class="phone s01"><cite>wendyreid:</cite> Many of us fought for EPUB to be the accessible standard, accessible by default.</p>
+<p id=813f class="phone s01"><cite>wendyreid:</cite> Images in spine is where we need to make decision, in order of priority, where do we put things?</p>
+<p id=f680 class="phone s01"><cite>wendyreid:</cite> Does accessibility trump everything?</p>
+<p id=f80e class="phone s01"><cite>wendyreid:</cite> Disappointing that some markets didn't choose EPUB as the standard, for variety of reasons</p>
+<p id=f2b2 class="phone s01"><cite>wendyreid:</cite> But companies releasing apps with PDF or CBZ are not thinking about accessibility</p>
+<p id=0a9f class="phone s01"><cite>wendyreid:</cite> in their application or business model</p>
+<p id=5c78 class="phone s01"><cite>wendyreid:</cite> That's a choice that they made in their business</p>
+<p id=2364 class="phone s01"><cite>wendyreid:</cite> But do we want to make that choice for EPUB</p>
+<p id=30b0 class="phone s01"><cite>wendyreid:</cite> We know there are many inaccessible EPUBs out there, because businesses made that decision. But for EPUB, you have to make a *choice* to make inaccessible. We give all the tools, they choose not use.</p>
+<p id=41e2 class="phone s01"><cite>wendyreid:</cite> But here we would give them a tool to make inaccessible content.</p>
+<p id=b794 class="phone s01"><cite>wendyreid:</cite> Make that possible.</p>
+<p id=9082 class="phone s24"><cite>fantasai:</cite> What are the implementation challenges with having images in spine vs in HTML</p>
+<p id=f869 class="phone s06"><cite>Hadrien:</cite> Apps that implement this, they don't use webviews, they use platform APIs, with HTML they need to find ways to render those images, if its SVG they need to rasterize the images<br>
+<span id=1000a>… not saying they should do that, but that is what they do</span></p>
+<p id=c34b class="phone s24"><cite>fantasai:</cite> Is there or has their been an effort to create a profile for HTML that prioritizes images?</p>
+<p id=3617 class="phone s06"><cite>Hadrien:</cite> Japan has it, it's not used by everyone even in Japan, it's something you know if you're in industry, but it has no official status<br>
+<span id=606e>… the closest would be the EBPAJ profile</span></p>
+<p id=292b class="phone s24"><cite>fantasai:</cite> Would it make sense to standardize on that?</p>
+<p id=9f07 class="phone s06"><cite>Hadrien:</cite> Possibly, it falls on the line of having an alternate profile or best practices document</p>
+<p id=3511 class="phone s24"><cite>fantasai:</cite> The HTML file would need to conform in a spec, it would validate, for reading systems would know to parse as an image, but we have the additional structure, the framework for creating accessible content is still there</p>
+<p id=fcf6 class="phone s06"><cite>Hadrien:</cite> The reality would be it might be fragmented, but would move people in the right direction possibly</p>
+<p id=abd6 class="phone s19"><cite>ivan:</cite> To put things in perspective, the approach Romain suggested is how we published the audiobook standard<br>
+<span id=350d>… it follows the rules of Publication Manifest, it's an analogy</span><br>
+<span id=6e62>… a very different point, at some point in your slides, image in the spine fallback to HTML as a solution, there were two other approaches discussed, one was suggested by Matt</span><br>
+<span id=8b1e>… referring to the fact you could put the alt into the package, it's legal in the spec,</span><br>
+<span id=b651>… other possibility was to include the accessibility info in the image itself through metadata</span></p>
+<p id=5414 class="phone s06"><cite>Hadrien:</cite> The first is to use meta:refines, refine the image using it's id to provide description<br>
+<span id=fdfa>… one way to do it</span><br>
+<span id=52e7>… those have been discussed before</span></p>
+<p id=c683 class="phone s25"><cite>gpellegrino:</cite> We can have images in spine with fallbacks, I suggest we leave the spec as is, we advise on how to make comics</p>
+<p id=9c80 class="phone s23"><cite>rdeltour:</cite> For the sake of completeness, in one of the slides you mention was the objective was to link a page to an image, maybe it's also possible to use the nav doc, may also be used to link the pages to the document<br>
+<span id=9047>… not sure if that works, maybe worth looking into</span></p>
+<p id=0d74 class="phone s10"><cite>seth:</cite> I have missed some of the previous meetings, we've heard a lot from reading systems people, I never hear from publishers<br>
+<span id=3dcb>… I want to know what the issues are with tooling to add the necessary accessibility info to documents</span><br>
+<span id=988c>… it can't just be there's no interest</span><br>
+<span id=b934>… there must be challenges</span><br>
+<span id=7ac6>… is there a gap in the EPUB production process that blocks this being possible</span></p>
+<p id=2a9f class="phone s06"><cite>Hadrien:</cite> A page in a comic can have a lot of information, you'd need to describe each panel, and even within panels<br>
+<span id=c2b4>… comics are visual by nature, for screen readers, you'd need to produce text in the right order</span><br>
+<span id=3ca7>… almost a transformation of the content, like a novelization</span><br>
+<span id=0307>… there's a huge complexity in how to produce the thing</span><br>
+<span id=bef6>… do you need to get the author involved, are you following the author's intent?</span><br>
+<span id=58c6>… lots of open questions and cost associated</span><br>
+<span id=0c3d>… if the resulting text is just a huge block of text, it's not functional either, it would need to be a full HTML document with everything you'd need</span></p>
+<p id=2809 class="phone s06"><cite>Hadrien:</cite> Some of it is cost, some of it is technical, there's needs beyond just screenreader users<br>
+<span id=1000b>… one panel at a time plus text to speech, not only do you need equivalent text for a given fragment, then we have tactile images</span><br>
+<span id=d4ef>… we can do some of that today, we can't do what say EAA expects</span></p>
+<p id=937c class="phone s19"><cite>ivan:</cite> I want to come back to what Gregorio said, and the spec of today allows what you need as allowing an HTML file as fallback, I may have misunderstood the second part, this may only be valid for roll comics<br>
+<span id=8f91>… I would be uneasy to add something to the spec for just one type of content</span></p>
+<p id=333d class=irc><cite>&lt;fantasai&gt;</cite> +1 ivan</p>
+<p id=c4be class="phone s19"><cite>ivan:</cite> it relates to what Hadrien said, falling back to an HTML file, seems to be only a rudimentary way to handle accessibility for an image<br>
+<span id=ae72>… not sure we can handle it today</span></p>
+<p id=6289 class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=331e class="phone s25"><cite>gpellegrino:</cite> Ivan, my proposal was not to allow this way only for roll content, since it's already allowed for any content in the spine<br>
+<span id=cdb4>… my proposal was to have guidelines for producing comics</span></p>
+<p id=a28b class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=699e class="phone s24"><cite>fantasai:</cite> I wanted to scope the question down to sighted users who need accessibility support?<br>
+<span id=dc8b>… to make that work, you need to have a format to support that additional content, you need a reader to support that, and you need tools to produce that content</span><br>
+<span id=8904>… does any of that exist?</span></p>
+<p id=c191 class="phone s03"><cite>Laurent:</cite> No</p>
+<p id=b391 class="phone s24"><cite>fantasai:</cite> If we want EPUB to be able to do this, is images in spine getting us closer or further to that?</p>
+<p id=6c7d class="phone s06"><cite>Hadrien:</cite> We're years away from being able to do what you describe, its too early to say, I don't think it would be a step in the wrong direction to add images in spine<br>
+<span id=f7ee>… if we really want to achieve comics accessibility we can say its someone else's problem, or we can work towards it</span></p>
+<p id=91b9 class="phone s01"><cite>wendyreid:</cite> Discussed in fixed layout accessibility task force about that. How do we make this possible?</p>
+<p id=4178 class="phone s01"><cite>wendyreid:</cite> We have some proposals, to solve what Elika described</p>
+<p id=ddba class="phone s01"><cite>wendyreid:</cite> Discussing side-by-side content</p>
+<p id=1de4 class="phone s01"><cite>wendyreid:</cite> parallel content that's related to each other</p>
+<p id=e42f class="phone s01"><cite>wendyreid:</cite> I don't think we're as far away from this as we think we are</p>
+<p id=2a19 class="phone s01"><cite>wendyreid:</cite> There are reading systems already that do side-by-side content (forgot name)</p>
+<p id=3880 class="phone s01"><cite>wendyreid:</cite> One that allows fixed layout and relayout together</p>
+<p id=9e95 class="phone s01"><cite>wendyreid:</cite> A lot of it, unfortunately, it's about tooling.</p>
+<p id=4fde class="phone s01"><cite>wendyreid:</cite> Lack of will to make this happen</p>
+<p id=f4b5 class="phone s01"><cite>wendyreid:</cite> Especially nowadays, with AI, offers us a lot of ways to automate this that previously would have been fully manual</p>
+<p id=fd0c class="phone s01"><cite>wendyreid:</cite> Only a few years ago, alt text for comics would have been fully manual, now can automate much of it</p>
+<p id=2f67 class="phone s01"><cite>wendyreid:</cite> Image detection of panels</p>
+<p id=7799 class="phone s01"><cite>wendyreid:</cite> Etc.</p>
+<p id=0bac class="phone s01"><cite>wendyreid:</cite> I'm reluctant to say that it's not possible. It's increasingly possible.</p>
+<p id=b429 class="phone s01"><cite>wendyreid:</cite> Alternate format providers are already doing this work, just mainstream publishers are not</p>
+<p id=2956 class="phone s01"><cite>wendyreid:</cite> So I'm reluctant to give in on this.</p>
+<p id=ee23 class="phone s01"><cite>wendyreid:</cite> We have the technology. Some of the tools already exist.</p>
+<p id=bbed class="phone s01"><cite>wendyreid:</cite> A lot more publishers can do in content development that they're not doing.</p>
+<p id=622c class="phone s01"><cite>wendyreid:</cite> And more on reading system side that could make it possible</p>
+<p id=db4a class="phone s01"><cite>wendyreid:</cite> I've seen scrolled fixed layout content in EPUB readers. It's not impossible.</p>
+<p id=91fa class="phone s01"><cite>wendyreid:</cite> Doesn't mean we should make provisions in the spec to sacrifice our principles</p>
+<p id=9725 class="phone s14"><cite>shiestyle:</cite> We have 10 minutes left, we want to conclude this topic in TPAC, maybe gpellegrino's proposal, using the spec as is<br>
+<span id=6687>… we will not make consensus to make images in spine without fallbacks</span><br>
+<span id=0e20>… should we vote on this?</span></p>
+<p id=2184 class="phone s06"><cite>Hadrien:</cite> I think some people don't like image in spine with HTML fallback but its the current spec, having a best practice document that describes how to do this, that is doable<br>
+<span id=1cb9>… it solves what I was mentioning, that helps to drive things toward clearer guidance</span></p>
+<p id=c9ee class=summary>[Seth asks question about tooling and alternate text in Japanese]</p>
+<p id=e319 class="phone s10"><cite>seth:</cite> Can someone from the Japanese publishing community share why they don't produce accessible content, is it tooling or something else?</p>
+<p id=31f7 class="phone s22"><cite>toshiakikoike:</cite> When preparing alt text for manga, just the speech bubble text is not sufficient, but people make prepare the description of the story, we can't prepare that content without the author<br>
+<span id=4e6b>… it's difficult to prepare that content</span></p>
+<p id=a707 class=summary>ここには日本の出版社の人がいると思うので、聞きたい。漫画はなぜアクセシビリティをサポートしないのか。どういう理由があるのか？</p>
+<p id=2f74 class="phone s26"><cite>Ito-san:</cite> Japanese publishers don't have the right to produce that type of content, only authors can</p>
+<p id=6798 class="phone s14"><cite>shiestyle:</cite> I'll explain this a bit more tomorrow, manga content is generally out of scope</p>
+<p id=7202 class=summary>漫画のアクセシビリティというのは、何を情報として含めるのかが難しい。ただセリフをテキストに変えさえすれば、漫画のコマに含まれている情報を正確に伝えることができたというのかというと、そうではないとも思っていまる。</p>
+<p id=dd8f class="phone s06"><cite>Hadrien:</cite> Just wanted to reply to Wendy's comment, and it leads into the next discussion<br>
+<span id=9e03>… there's a number of documents that can't be made fully accessible, we have children's books, textbooks, comics, the solutions for all those can be slightly different</span><br>
+<span id=e5aa>… there's options for magazines, newspapers, there's content out there where you can view articles</span><br>
+<span id=2a31>… we don't have a way to support those in EPUB</span><br>
+<span id=7a6d>… I've talked to many people, but they are missing the format, they don't know how to distribute it</span><br>
+<span id=95d1>… I don't think comics fall into that, comics is a lot about storytelling, comics have more in comics with media overlays or SMIL than textbooks or newspapers</span><br>
+<span id=6dfc>… there's AI solutions out there, but they haven't been tested, and they don't have a way to represent that</span><br>
+<span id=31ae>… there's prototypes, but it's still early</span><br>
+<span id=7f92>… we don't have an easy way out of the hole we've dug ourselves into, is it now or in the future? Up to us</span></p>
+<p id=e2aa class="phone s19"><cite>ivan:</cite> The way I read the standard now, for each image you'd have an HTML fallback, ideally one HTML with the alt text, making the publisher's lives easier, but you can't refer to a fragment in a fallback<br>
+<span id=f8af>… if this is our solution, we force the author to produce one HTML per image</span></p>
+<p id=d6ff class="phone s27"><cite>Tomikura-san:</cite> What accessibility features do people want?</p>
+<p id=3c8d class="phone s06"><cite>Hadrien:</cite> We hear from people that there is interest, people want access to what their friends are reading<br>
+<span id=3ba7>… also with EAA, in theory, most books on the market will be natively accessible, orgs will re-orient to focus on different types of content, usually education or comics</span><br>
+<span id=25dd>… orgs want to produce the content</span><br>
+<span id=4549>… maybe publishers won't do it, but alternate format providers will</span><br>
+<span id=87ea>… with Marrakesh treaty, people can do this, we might be in a world where speciality providers can do this work</span><br>
+<span id=c585>… it doesn't put burden on publishers, but it does create challenges for the providers</span></p>
+</section>
+
+<section>
+<h3 id=21f3>Process Discussion</h3>
+<p id=6f2a class="phone s28"><cite>Brent:</cite> I'm from the AB and I'm here to help!</p>
+<p id=a888 class="phone s28"><cite>Brent:</cite> Feel free to contact me outside this meeting also.</p>
+<p id=8a7e class="phone s28"><cite>Brent:</cite> Scope of what we're looking for feedback on.</p>
+<p id=c83a class="phone s28"><cite>Brent:</cite> Chartering a group - how did that go? Was it straightforward?</p>
+<p id=4a7d class="phone s28"><cite>Brent:</cite> What about publishing?</p>
+<p id=3a15 class="phone s28"><cite>Brent:</cite> What problems block you from moving along REC track?</p>
+<p id=4ae0 class="phone s28"><cite>Brent:</cite> Are there things in Process to make easier?</p>
+<p id=8572 class="phone s28"><cite>Brent:</cite> Have you ever dealt with formal objection? Suggestions for improvement?</p>
+<p id=bf19 class="phone s19"><cite>ivan:</cite> My experience as Team Contact, most complicated for each group is handling horizontal reviews.</p>
+<p id=7469 class="phone s19"><cite>ivan:</cite> It's very difficult to know when to start a horizontal review, and how.</p>
+<p id=3b04 class="phone s19"><cite>ivan:</cite> When you start, you get avalanche of questions which are not always relevant to the WG you're in</p>
+<p id=51ce class="phone s19"><cite>ivan:</cite> Each WG has different requirements. EPUB vs Verifiable Credentials, for example.</p>
+<p id=9028 class="phone s19"><cite>ivan:</cite> So faced with HUGE questionnaires, requires a lot of work to say whether relevant or not.</p>
+<p id=5036 class="phone s19"><cite>ivan:</cite> Tendency of requiring a lot of work up front is becoming worse and worse.</p>
+<p id=fb7b class="phone s19"><cite>ivan:</cite> TAG asks more things than it used to, etc. keeps getting complicated.</p>
+<p id=f574 class="phone s19"><cite>ivan:</cite> I consider horizontal review to be essential, but this process needs review.</p>
+<p id=86e0 class="phone s19"><cite>ivan:</cite> So far glad I didn't have to handle formal objections or IPR issues</p>
+<p id=2715 class="phone s01"><cite>wendyreid:</cite> I think we're an awkward group to ask, as Ivan has spared us from difficulties because he is able to answer the questions</p>
+<p id=e70a class="phone s01"><cite>wendyreid:</cite> Also lucky not to face FOs etc.</p>
+<p id=f6c2 class="phone s01"><cite>wendyreid:</cite> Most of the truly thorny things we've dealt with in the Process have been things related to publication, knowing that we're doing right steps at right times</p>
+<p id=3396 class="phone s01"><cite>wendyreid:</cite> Candidate Amendments for RECs etc.</p>
+<p id=c57d class="phone s01"><cite>wendyreid:</cite> The thing we were trying to do was very simple, just needed to make some corrections.</p>
+<p id=0cea class="phone s01"><cite>wendyreid:</cite> We spent weeks just figuring out exactly what we're supposed to do.</p>
+<p id=2708 class="phone s01"><cite>wendyreid:</cite> Once we did it, it was fine, but ... debating level 2 vs level 3 change, etc.</p>
+<p id=f39b class="phone s01"><cite>wendyreid:</cite> We debated a lot of it, and it took longer than it should have for some necessary corrections.</p>
+<p id=8405 class="phone s01"><cite>wendyreid:</cite> Clarify to spec.</p>
+<p id=f154 class="phone s01"><cite>wendyreid:</cite> Falling into process quicksand where a lot of pathways, hard to tell when criteria apply and when they don't, to what degree, etc.</p>
+<p id=a866 class="phone s28"><cite>Brent:</cite> Good feedback. Even knowing that ability to navigate helped by having a good Team Contact.</p>
+<p id=31a8 class="phone s24"><cite>fantasai:</cite> I've been on the other side of formal objections, one of the challenges is finding information on it, the council page is not the easiest to find or navigate<br>
+<span id=4427>… we should have a website with the information, easy to find</span><br>
+<span id=513b>… probably true of many things, where the process is not an issue but finding the necessary information is challenging</span><br>
+<span id=bdd1>… for most cases people shouldn't need to read the process doc, there are some exceptions, the amendment process is complicated and needs to be made more easy to understand</span><br>
+<span id=3927>… it's not supposed to be that complicated, even if it has complications to it</span></p>
+<p id=1000c class="phone s28"><cite>Brent:</cite> We found it easier to do an 1.1 vs an amendment</p>
+<p id=d4ee class="phone s24"><cite>fantasai:</cite> The amendment was more for corrections</p>
+<p id=2ebb class="phone s19"><cite>ivan:</cite> Brent said what I wanted to say, the amendments process was difficult, and a tooling issue, so it was easier to go through the rec process<br>
+<span id=e988>… it's difficult to markup the changes, it was challenging, in other cases tooling like ReSpec is helpful</span></p>
+<p id=8a2a class="phone s28"><cite>Brent:</cite> Would also like to hear from editors.</p>
+<p id=2ea9 class="phone s02"><cite>LaurentLM:</cite> The burden is to use ReSpec, but it's a good tool, so no real burden.</p>
+<p id=4396 class="phone s24"><cite>fantasai:</cite> I'm in a Bikeshed group, and same, it's easy.</p>
+<p id=1e61 class="phone s19"><cite>ivan:</cite> We have had, still have, problems with Invited Expert restrictions. We've had people whom we couldn't get ans an IE, or only with an enormous fight, because person happened to work for company which recently left W3C.<br>
+<span id=132c>… that created a lot of problems for us, because that person was indispensable to the WG. Similar case now also.</span><br>
+<span id=ef03>… So issues around IE position, which is related to the whole Membership discussion at W3C that regularly comes up.</span><br>
+<span id=479c>… It's a problem for WGs in general. Maybe Wgs lack enough people, and any obstacle that makes it difficult to get people who do the work is a problem.</span><br>
+<span id=a6ef>… This WG is in the same position.</span></p>
+<p id=f9e3 class="phone s24"><cite>fantasai:</cite> There are two reasons the restrictions exist, one is business reasons, the other is IPR, trying to solve this problem would require considering both</p>
+<p id=9176 class="phone s28"><cite>Brent:</cite> will have breakout on Wednesday to discuss this, and AB-led Member Meeting which everyone is welcome to join.<br>
+<span id=74c7>… We want to hear from you, so don't hesitate to reach out.</span></p>
+</section>
+
+<section>
+<h3 id=0255>Image in Spine (cont.)</h3>
+<p id=f657 class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2792,">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>issues/<wbr>2792,</a> <a href="https://github.com/w3c/epub-specs/discussions/2825,">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2825,</a> <a href="https://github.com/w3c/epub-specs/pull/2788">w3c/<wbr>epub-specs#2788</a></p>
+<p id=a2fb class="phone s24"><cite>fantasai:</cite> Did we conclude on the images-in-spine issue? Should there be a resolution?</p>
+<p id=8350 class="phone s19"><cite>ivan:</cite> Agree that having a resolution is what we need<br>
+<span id=ccae>… but I wonder whether we can make the formal references to fallbacks a bit more flexible than they are today, to make it easier to collect all the hypertext into one file instead of one per image for 200 images</span><br>
+<span id=2c29>… Might require adjusting how fallback is identified in the package document</span><br>
+<span id=72eb>… Maybe an additional entry which would allow referencing a fragment in the fallback file</span><br>
+<span id=5db5>… Because right now we don't have that</span></p>
+<p id=c53f class="phone s06"><cite>Hadrien:</cite> So, saying you'd have a single HTML with all the text, and you'd have the fallback point to a fragmentID</p>
+<p id=8cdf class="phone s19"><cite>ivan:</cite> Yes</p>
+<p id=5f70 class="phone s06"><cite>Hadrien:</cite> If we do that, that opens a lot of other questions</p>
+<p id=4746 class="phone s12"><cite>duga:</cite> That fundamentally changes fallbacks and the spine and how this works.<br>
+<span id=1404>… Maybe a great change, but much bigger change.</span><br>
+<span id=79e9>… Fallback in the spine is meant to be, this is the content document you can use instead of this other document.</span><br>
+<span id=5a74>… You can just swap the files out</span><br>
+<span id=50ae>… But we don't have fragments of documents in the spine. In fact we have specific restriction on re-using a document in the spine.</span><br>
+<span id=7017>… Avoids complications with navigation and paging etc.</span><br>
+<span id=912e>… So this is a giant can of worms.</span><br>
+<span id=67f7>… If we do fallbacks, we should do fallbacks as we do now</span></p>
+<p id=b9d5 class="phone s19"><cite>ivan:</cite> Ok, but we have a problem.<br>
+<span id=e7ee>… image in the spine with HTML fallback is technically true, but very impractical</span></p>
+<p id=82de class="phone s06"><cite>Hadrien:</cite> Yes, it is impractical</p>
+<p id=1000d class="phone s01"><cite>wendyreid:</cite> I would agree it was impractical if 1) it wasn't already how things happen and 2) if person who is making epub had to hand-write every HTML document<br>
+<span id=fa30>… but this is automated. It's not difficult to produce the files.</span><br>
+<span id=0dc0>… The tooling is already there to do it, workflow is there to do it.</span><br>
+<span id=9fc3>… If there was a size concern here (and the size here comes from the images, realistically speaking), maybe</span><br>
+<span id=7638>… It does seem a bit silly to have 100 HTML files that aren't used, but in terms of effort it's not a big deal.</span></p>
+<p id=8392 class="phone s06"><cite>Hadrien:</cite> My suggestion comes from pragmatic viewpoint which is what's out there<br>
+<span id=3ab0>… I see 2 things</span><br>
+<span id=99bb>… Images in spine with HTML fallback, and HTML with image fallback.</span><br>
+<span id=f99f>… We should recognize these as valid ways to deal with this problem.</span><br>
+<span id=e83a>… not have it be word-of-mouth</span><br>
+<span id=d766>… So we need to acknowledge what's out there.</span><br>
+<span id=975e>… Secondly, one of those two should be how we recommend authoring content.</span><br>
+<span id=04c5>… &quot;this is the way you should do it&quot;</span><br>
+<span id=094a>… Not necessarily in the spec, but that could cover other comic-related issues</span><br>
+<span id=22a2>… We can also recommend other things like metadata, semantics etc</span><br>
+<span id=cb96>… With that approach, we won't break anything, won't ask anything new, would just say &quot;this is what is used, and this is what should be used&quot;</span></p>
+<p id=6676 class="phone s23"><cite>rdeltour:</cite> If we knew how well fallbacks are supported in reading systems<br>
+<span id=00d5>… we do have some tests for manifest fallbacks</span><br>
+<span id=01a1>… but those are about one single document having a fallback</span><br>
+<span id=46fd>… but I wonder if someone has tested when all the documents have fallbacks, how does that work, how to transition from one document to another</span><br>
+<span id=7e4b>… whether this is sufficiently tested to be a viable solution</span></p>
+<p id=0d02 class="phone s25"><cite>gpellegrino:</cite> I think the time is not right for thinking about solutions for comics etc. So opening the possibility to just images in spine maybe problematic. So suggest we continue as we have now, postponing the discussion, and we can open a task force thinking about a11y and comics</p>
+<p id=883a class="phone s25"><cite>gpellegrino:</cite> Maybe inside the a11y task force we already have</p>
+<p id=871c class="phone s25"><cite>gpellegrino:</cite> but I wouldn't take it up right now</p>
+<p id=4c76 class="phone s19"><cite>ivan:</cite> I agree</p>
+<p id=c2e3 class="phone s19"><cite>ivan:</cite> Laurent, is it possible for you to take a typical example which has fallbacks with HTML and has a relatively large number of images, and turn it into a test case for our test suite?</p>
+<p id=abe7 class="phone s02"><cite>LaurentLM:</cite> Yes</p>
+<p id=8e8c class="phone s19"><cite>ivan:</cite> It would be a valuable addition to our test suite. Romain is right, we have a basic test, but we don't have a good stress test.</p>
+<p id=b147 class="phone s19"><cite>ivan:</cite> With that, I think repeating what Elika said, I think we should have a vote and have a resolution on what we put for advice for this type of documents</p>
+<p id=0686 class="phone s02"><cite>LaurentLM:</cite> I totally agree, and disagree with Gregorio</p>
+<p id=5b08 class="phone s02"><cite>LaurentLM:</cite> We don't validate 3.4 today. So we have time to make a pre-recommendation, and ask reading systems to support what's in the spec</p>
+<p id=e3dc class=irc><cite>&lt;gpellegrino&gt;</cite> +1 to Laurent</p>
+<p id=0419 class="phone s02"><cite>LaurentLM:</cite> We can easily make the evolution to support fallbacks if we know this is the right direction.</p>
+<p id=2547 class="phone s02"><cite>LaurentLM:</cite> So let's make a pre-recommendation that is a resolution of this</p>
+<p id=76c4 class="phone s02"><cite>LaurentLM:</cite> And then when we make 3.4 we will be ready, and reading systems will be ready</p>
+<p id=f8f7 class=action><strong>ACTION:</strong> LaurentLM to add a images-with-fallbacks stress test to test suite</p>
+<p id=924b class="phone s01"><cite>wendyreid:</cite> Something to consider is images with XHTML fallbacks, those happen to have alt text which is great, how do I signal to reading system that I want the fallback instead of the images?<br>
+<span id=d554>… Most reading systems don't open the OPF file to see what's there.</span><br>
+<span id=c150>… Maybe we now need to make fallbacks more obvious to users?</span></p>
+<p id=236f class="phone s02"><cite>LaurentLM:</cite> There's a simple way. If there is a version of a comic with some accessibility description, then the publisher should put it as the first choice. Image as a fallback.</p>
+<p id=78e7 class="phone s02"><cite>LaurentLM:</cite> Favorite of the publisher should be first.</p>
+<p id=132e class="phone s06"><cite>Hadrien:</cite> That doesn't work. Many have put HTML first and images as fallback because it works in more systems, e.g. Apple Books can't work with images in spine.<br>
+<span id=2de9>… So I don't think HTML in spine signals an intent from the producer</span><br>
+<span id=6fc5>… It has more to do with the state of the industry than anything else</span><br>
+<span id=8b9f>… There's no easy way to signal this preference.</span><br>
+<span id=ad8d>… We have a problem in general with fallback. We use spine to convey information instead of using manifest.</span><br>
+<span id=a573>… If we go in that direction, we're uncover a number of problems with how we do information in spine</span></p>
+<p id=2f8a class="phone s12"><cite>duga:</cite> Would go a step farther and say, if you have an accessible HTML document, you've made an accessible comic, don't put an image in the spine<br>
+<span id=91d0>… Might not work in some crummy reader, they should update.</span></p>
+<p id=0bdc class=irc><cite>&lt;Hadrien&gt;</cite> +1 for what brady just said</p>
+<p id=2936 class="phone s12"><cite>duga:</cite> You spent a lot of effort making that.<br>
+<span id=82e8>… So should only do this for comics that are otherwise inaccessible.</span><br>
+<span id=c254>… If there is useful HTML accessibility info, put it in the spine, don't put images there.</span><br>
+<span id=3be4>… Similarly, for childrens books. Put the HTML in the spine. And that can be covered in the note.</span></p>
+<p id=0952 class="phone s01"><cite>wendyreid:</cite> So maybe better resolution is, we're keeping the spec as-is, but we are in agreement that comics deserves better guidance, so we want to write that guidance.</p>
+<p id=243a class="phone s06"><cite>Hadrien:</cite> And want to acknowledge what has been done for last 10 years, in millions of files.</p>
+<p id=4fec class="phone s24"><cite>fantasai:</cite> Brady covered what I wanted to say, if we are writing best practices, if you do it clearly enough, but if its clear enough readers that use images can extract them, enabling that functionality<br>
+<span id=61c9>… while making the content more accessible for readers with better capabilities</span></p>
+<p id=076a class=summary>PROPOSED: Write a best practices document for comics content as a separate working group note. No change to the specification for images in spine.</p>
+<p id=a4d1 class=irc><cite>&lt;fantasai&gt;</cite> +1</p>
+<p id=24d1 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=a4d2 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=a4d3 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=a4d4 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=e4d1 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=e4d2 class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=24d2 class=irc><cite>&lt;ikkwong&gt;</cite> +1</p>
+<p id=64d2 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=a4d5 class=irc><cite>&lt;gpellegrino&gt;</cite> +1</p>
+<p id=e4d3 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=24d3 class=irc><cite>&lt;LaurentLM&gt;</cite> +1</p>
+<p id=e1b2 class=resolution><strong>RESOLUTION:</strong> Write a best practices document for comics content as a separate working group note. No change to the specification for images in spine.</p>
+<p id=66d8 class="phone s19"><cite>ivan:</cite> Should I close the issue? discussion?</p>
+<p id=08ac class="phone s06"><cite>Hadrien:</cite> Connected to this resolution is roll documents.<br>
+<span id=8f6a>… I was blocked for this PR because unsure about direction</span><br>
+<span id=6dad>… But we need to decide more wrt roll documents</span><br>
+<span id=1c50>… We had some remaining complexity with how to describe them in the specification, that is resolved with this, we can have an example with image with HTML fallback</span><br>
+<span id=c41c>… We can get rid of many complexities.</span></p>
+<p id=a9df class="phone s19"><cite>ivan:</cite> I will mark the issue as needing to be closed, and chairs can figure it out</p>
+<p id=8d17 class=summary>[discussion of what to discuss]</p>
+</section>
+
+<section>
+<h3 id=e223>FXL Changes and Digital Comics</h3>
+<h4 id=1a21>First page</h4>
+<p id=ee90 class=irc><cite>&lt;rdeltour&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2755">w3c/<wbr>epub-specs#2755</a></p>
+<p id=3075 class="phone s06"><cite>Hadrien:</cite> What we see in the market, you have 2 types of fixed layout<br>
+<span id=3bdf>… One that indicates position for each resource</span><br>
+<span id=90d8>… and one that doesn't indicate for anything</span><br>
+<span id=8418>… partial info is quite rare</span><br>
+<span id=5a3c>… Authors typically assume that if no positions are given, the first will be on its own, and the rest is two by two</span><br>
+<span id=ab67>… It is an unwritten expectation that almost everyone creating FXL documents has, but we don't say anything in the spec</span></p>
+<p id=8c5f class="phone s24"><cite>fantasai:</cite> So you're proposing to specify that.</p>
+<p id=358b class="phone s06"><cite>Hadrien:</cite> Yes, let's add this concept into our spec</p>
+<p id=f593 class="phone s01"><cite>wendyreid:</cite> That would be in reading systems, not core?</p>
+<p id=c404 class="phone s06"><cite>Hadrien:</cite> Core has quite a bit of language about that</p>
+<p id=8cdd class="phone s01"><cite>wendyreid:</cite> But expectation would be in reading system</p>
+<p id=b709 class="phone s06"><cite>Hadrien:</cite> We'd have to change language in core. Because currently implied that if you don't put any information, then it means spread is not relevant, which is not what market is expecting.<br>
+<span id=a1cc>… some language in Core is confusing, so we have to change language there and also add more to reading system</span></p>
+<p id=e702 class="phone s25"><cite>gpellegrino:</cite> Considering e.g. PDFs and ??, agree that the first page should be displayed as a single page if no other info.<br>
+<span id=c83c>… But are we allowing user to change it?</span><br>
+<span id=b626>… Sometimes it's wrong e.g. for PDFs, there's an option for users to change the default.</span></p>
+<p id=f3ba class="phone s06"><cite>Hadrien:</cite> I think it's a good idea for reading system to decide to use spreads or not.<br>
+<span id=0532>… depending on orientation of device, often switch whether spread or not. E.g. portrait mode have no spreads, landscape mode use spreads.</span><br>
+<span id=f68a>… possible user might want no spreads in either, some reading systems allow some don't</span><br>
+<span id=31ba>… different from having option for first page on its own</span><br>
+<span id=82b0>… I don't think we need an option for an offset, but good thing to have whether you want spreads or not, but is that something our spec covers?</span></p>
+<p id=321a class="phone s02"><cite>LaurentLM:</cite> no it's a reading system choice</p>
+<p id=846b class="phone s25"><cite>gpellegrino:</cite> I agree, maybe something to suggest somewhere. But two options. One is whether spreads preferred or not. Other option is whether ifrst page is cover or not.</p>
+<p id=8c51 class="phone s06"><cite>Hadrien:</cite> Linear no, wouldn't necessarily see it</p>
+<p id=6874 class="phone s24"><cite>fantasai:</cite> Not familiar with this format, each resource would say if its on the left or right?</p>
+<p id=24c4 class="phone s06"><cite>Hadrien:</cite> Yes, the spec says if you say nothing, it doesn't matter, and if you say, there is a spread, both are not true<br>
+<span id=28c2>… what we see if people not declaring it, or always declaring it</span></p>
+<p id=cb17 class=summary>PROPOSED: Adapt spec language in Core and Reading Systems to say that if no information about placement in spreads, the first resource should be a page on its own.</p>
+<p id=f033 class="phone s06"><cite>Hadrien:</cite> We're talking about the spine override in this case.</p>
+<p id=64ff class=irc><cite>&lt;fantasai&gt;</cite> +1</p>
+<p id=a4ff class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=a500 class=irc><cite>&lt;seth2&gt;</cite> +1</p>
+<p id=a501 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=e4ff class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=e500 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=a502 class=irc><cite>&lt;jroque&gt;</cite> +1</p>
+<p id=a503 class=irc><cite>&lt;ikkwong&gt;</cite> +1</p>
+<p id=2500 class=irc><cite>&lt;LaurentLM&gt;</cite> +1</p>
+<p id=2501 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=058c class=irc><cite>&lt;MasakazuKitahara&gt;</cite> 0</p>
+<p id=e501 class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=2502 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=2503 class=irc><cite>&lt;gpellegrino&gt;</cite> +1</p>
+<p id=cf26 class=resolution><strong>RESOLUTION:</strong> Adapt spec language in Core and Reading Systems to say that if no information about placement in spreads, the first resource should be a page on its own.</p>
+<p id=e1ee class="phone s19"><cite>ivan:</cite> Who will adapt the spec language?</p>
+<p id=21b0 class=action><strong>ACTION:</strong> Hadrien to create PR to adapt the spec language for making first page on its own in spreads</p>
+<p id=e352 class="phone s06"><cite>Hadrien:</cite> Also want to remove language that says that, if there is spread placement information, it means that there should be spreads</p>
+<p id=a9a2 class="phone s06"><cite>Hadrien:</cite> [quotes spec]</p>
+<p id=dc53 class="phone s06"><cite>Hadrien:</cite> Says presence of page spread info means it's a &quot;true spread&quot;</p>
+<p id=6123 class="phone s02"><cite>LaurentLM:</cite> Says it should not be should without a spread layout -- and this is false.</p>
+<p id=3533 class=summary><a href="https://www.w3.org/TR/epub/#page-spread">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub/#page-spread</a></p>
+<p id=f80f class="phone s12"><cite>duga:</cite> When I joined my last team, that is how they implemented their reader, and everyone hated it and they gots a lot of complaints.<br>
+<span id=c702>… They were following the spec, and we had to tell them to ignore the spec.</span></p>
+<p id=ce39 class=irc><cite>&lt;Hadrien&gt;</cite> <a href="https://www.w3.org/TR/epub-33/#spread:~:text=To%20indicate%20that%20two,presentation%20is%20equally%20acceptable.">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-33/#spread:~:text=To%20indicate%20that%20two,presentation%20is%20equally%20acceptable.</a></p>
+<p id=f65b class=summary>PROPOSED: Remove text saying that presence of spread information implies that the pages SHOULD be laid out as a spread, making either presentation equally acceptable.</p>
+<p id=b0c7 class=summary>PROPOSED: Remove text saying that presence of spread information implies that the pages SHOULD be laid out as a spread, making either presentation equally acceptable. See <a href="https://www.w3.org/TR/epub-33/#spread:~:text=To%20indicate%20that%20two,presentation%20is%20equally%20acceptable">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-33/#spread:~:text=To%20indicate%20that%20two,presentation%20is%20equally%20acceptable</a></p>
+<p id=6592 class=irc><cite>&lt;fantasai&gt;</cite> +1</p>
+<p id=a592 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=e592 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=2592 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=978d class=irc><cite>&lt;gpellegrino&gt;</cite> 0</p>
+<p id=2593 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=a593 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=e593 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=a00d class=irc><cite>&lt;rdeltour&gt;</cite> 0</p>
+<p id=3186 class=resolution><strong>RESOLUTION:</strong> Remove text saying that presence of spread information implies that the pages SHOULD be laid out as a spread, clarify that either presentation equally acceptable. <a href="https://www.w3.org/TR/epub-33/#spread:~:text=To%20indicate%20that%20two,presentation%20is%20equally%20acceptable">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-33/#spread:~:text=To%20indicate%20that%20two,presentation%20is%20equally%20acceptable</a></p>
+<p id=baa6 class=irc><cite>&lt;LaurentLM&gt;</cite> 0 (ok for the direction, but the paragraph needs a bit more modifications)</p>
+<p id=fbd9 class="phone s19"><cite>ivan:</cite> Laurent, for the PR that you will do, can you add a test for the test suite?</p>
+<p id=33b9 class="phone s01"><cite>wendyreid:</cite> We can modify existing spread tests</p>
+<p id=948f class="phone s19"><cite>ivan:</cite> Anyway think about the test suite.</p>
+<p id=1ba2 class="phone s06"><cite>Hadrien:</cite> I'll ping you when I make the PR.</p>
+<h4 id=14e0>Orientation - <a href="https://github.com/w3c/epub-specs/issues/2751">w3c/<wbr>epub-specs#2751</a></h4>
+<p id=595c class="phone s06"><cite>Hadrien:</cite> Seems like a lot of people oppose this property, and not many support it.</p>
+<p id=c592 class="phone s19"><cite>ivan:</cite> So remove or deprecate?</p>
+<p id=537e class="phone s06"><cite>Hadrien:</cite> Probably deprecate</p>
+<p id=5aa9 class="phone s19"><cite>ivan:</cite> I have seen one book that used it, a French book on Egyptian temple which has photos and videos and probably handcrafted.</p>
+<p id=f3eb class="phone s25"><cite>gpellegrino:</cite> This is a WCAG violation, blocking re-orientation of the content.<br>
+<span id=b73f>… but also some authoring tools like Pub?? which use this value a lot because they tend to add their content at full-screen on the device</span><br>
+<span id=1255>… and to have it full-screen on the device you have to block the orientation</span></p>
+<p id=f9cb class="phone s06"><cite>Hadrien:</cite> FXL you always contain both dimensions in the viewport. So if you want to use the full extent of the screen, force landscape, but only true for some screens and some documents</p>
+<p id=2943 class="phone s12"><cite>duga:</cite> and only if you have control over spreads, which we just decided you don't</p>
+<p id=3fe3 class="phone s12"><cite>duga:</cite> If the user decides they want to have two spreads in landscape, then all of a sudden you've lost the control.</p>
+<p id=6a7f class="phone s06"><cite>Hadrien:</cite> Still the spread property where you can say both.<br>
+<span id=a0ba>… what we voted on is that if you put one resource on left one o right, it's not forcing spread. But you could use spread:both, or on a spine override, to do this</span><br>
+<span id=59b9>… Because you can still do both, you're not blocking anything else.</span></p>
+<p id=8562 class="phone s06"><cite>Hadrien:</cite> I would be in favor of deprecating this and changing the reading system behavior, because this is actively harmful for a lot of people. Not just a11y.</p>
+<p id=3251 class=summary>Are we proposing: Deprecate rendition-orientation in Core, and also update Reading Systems to ignore it.</p>
+<p id=6c3c class=irc><cite>&lt;Hadrien&gt;</cite> <a href="https://www.w3.org/TR/epub-33/#orientation">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-33/#orientation</a></p>
+<p id=e67c class=summary>PROPOSED: Deprecate rendition-orientation in Core, and also update Reading Systems to ignore it.</p>
+<p id=9697 class="phone s12"><cite>duga:</cite> Should we deprecate rendition-orientation or just the non-auto value?</p>
+<p id=b2ec class="phone s24"><cite>fantasai:</cite> If auto is the only non-deprecated value, then that's equivalent to deprecating the whole thing, so just deprecate the whole thing.</p>
+<p id=5b8c class="phone s12"><cite>duga:</cite> Want to be clear what reading systems need to do.</p>
+<p id=ddce class="phone s01"><cite>wendyreid:</cite> We just say treat them all like auto.</p>
+<p id=8cda class=summary>PROPOSED: Deprecate rendition-orientation in Core, and also update Reading Systems to ignore it.</p>
+<p id=65b8 class=irc><cite>&lt;fantasai&gt;</cite> +1</p>
+<p id=65b9 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=a5b8 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=a5b9 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=c68d class=irc><cite>&lt;shiestyle&gt;</cite> 0</p>
+<p id=a5ba class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=e5b8 class=irc><cite>&lt;gpellegrino&gt;</cite> +1</p>
+<p id=25b8 class=irc><cite>&lt;LaurentLM&gt;</cite> +1</p>
+<p id=a5bb class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=65ba class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=cb0d class=summary>0</p>
+<p id=3397 class=resolution><strong>RESOLUTION:</strong> Deprecate rendition-orientation in Core, and also update Reading Systems to ignore it.</p>
+<p id=3e45 class=irc><cite>&lt;ivan&gt;</cite> Move to <a href="https://www.w3.org/TR/epub-rs-34/#app-unsupported">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-rs-34/#app-unsupported</a></p>
+<p id=5aac class="phone s19"><cite>ivan:</cite> Deprecation means that we have to move that property into the unsupported section.<br>
+<span id=d250>… but yeah, let's leave it to Matt to figure out the editing.</span></p>
+<p id=080b class="phone s14"><cite>shiestyle:</cite> How about epub-check?</p>
+<p id=3156 class="phone s02"><cite>LaurentLM:</cite> epub-check checks the structure</p>
+<p id=6448 class="phone s06"><cite>Hadrien:</cite> Shouldn't affect epub-check.</p>
+<p id=2ee4 class="phone s24"><cite>fantasai:</cite> You can issue a warning.</p>
+<p id=afab class="phone s19"><cite>ivan:</cite> Might need to raise an issue to the epub-check repo.</p>
+<p id=5da4 class=irc><cite>&lt;rdeltour&gt;</cite> +1 on creating an issue please</p>
+<p id=c037 class="phone s06"><cite>Hadrien:</cite> Have to be careful about warnings, some people treat them as not warnings.</p>
+<p id=5b4a class=action><strong>ACTION:</strong> Ivan to create issue against epub-check wrt removing rendition-orientation</p>
+<p id=ad80 class="phone s19"><cite>ivan:</cite> Don't forget to update the changelog</p>
+<h4 id=edb6>Deprecating flow as metadata - <a href="https://github.com/w3c/epub-specs/issues/2754">w3c/<wbr>epub-specs#2754</a></h4>
+<p id=459f class="phone s06"><cite>Hadrien:</cite> I also opened similar issues wrt `flow` which is really under-used, and another about layout overrides and spreads.<br>
+<span id=a5cc>… These are more contentious.</span><br>
+<span id=e207>… Flow much less interest in it</span><br>
+<span id=1aa8>… aside from shiestyle</span><br>
+<span id=6699>… I'm not sure what you are using it for is a problem?</span><br>
+<span id=8f34>… But when we go back to this, flow would probably be my next target. Because I don't really understand why an author should say whether content is paginated or scrolled.</span><br>
+<span id=cbc7>… Goes against principle of EPUB.</span></p>
+<p id=172e class="phone s01"><cite>wendyreid:</cite> Wrt flow, was a way to declare scrolled comics in the before times. So when we add roll, we can say this thing does that better.</p>
+<p id=eeab class="phone s06"><cite>Hadrien:</cite> Yeah, we should do those together. But I think it's harmful otherwise.</p>
+<p id=a52f class="phone s14"><cite>shiestyle:</cite> But for now we need to keep scrolled-continuous, because we use this feature for contents.</p>
+<p id=2da6 class="phone s06"><cite>Hadrien:</cite> So we would acknowledge its previous usage, and treat is as equivalent of 'layout: roll'</p>
+<p id=eb52 class="phone s14"><cite>shiestyle:</cite> Ok, we're out of time, so let's wrap up.</p>
+</section>
+
+<section>
+<h3 id=19f8>closing</h3>
+<p id=409c class=summary>wendyreid reviews the agenda for tomorrow</p>
+</section>
+</main>
+
+<div id=ActionSummary>
+<h2>Summary of action items</h2>
+<ol>
+<li><a href="#f8f7">LaurentLM to add a images-with-fallbacks stress test to test suite</a></li>
+<li><a href="#21b0">Hadrien to create PR to adapt the spec language for making first page on its own in spreads</a></li>
+<li><a href="#5b4a">Ivan to create issue against epub-check wrt removing rendition-orientation</a></li>
+</ol>
+</div>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#e1b2">Write a best practices document for comics content as a separate working group note. No change to the specification for images in spine.</a></li>
+<li><a href="#cf26">Adapt spec language in Core and Reading Systems to say that if no information about placement in spreads, the first resource should be a page on its own.</a></li>
+<li><a href="#3186">Remove text saying that presence of spread information implies that the pages SHOULD be laid out as a spread, clarify that either presentation equally acceptable. https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-33/#spread:~:text=To%20indicate%20that%20two,presentation%20is%20equally%20acceptable</a></li>
+<li><a href="#3397">Deprecate rendition-orientation in Core, and also update Reading Systems to ignore it.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+</body>
+</html>
