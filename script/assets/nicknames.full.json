@@ -37,6 +37,13 @@
     },
     {
         "nick": [
+            "hadley",
+            "hadleybeeman"
+        ],
+        "name": "Hadley Beeman"
+    },
+    {
+        "nick": [
             "baldurbjarnason"
         ],
         "name": "Baldur Bjarnason",
@@ -47,6 +54,13 @@
             "laurab"
         ],
         "name": "Laura Brady"
+    },
+    {
+        "nick": [
+            "danbri"
+        ],
+        "name": "Dan Brickley",
+        "github": "danbri"
     },
     {
         "nick": [
@@ -184,6 +198,7 @@
             "brady",
             "brady_duga",
             "duga",
+            "duga4",
             "duga5"
         ],
         "name": "Brady Duga"
@@ -832,6 +847,7 @@
     {
         "name": "Motoi Suzuki",
         "nick": [
+            "motoi",
             "motoisuzuki"
         ]
     },
@@ -865,6 +881,7 @@
     },
     {
         "nick": [
+            "bobby",
             "bobbytung"
         ],
         "name": "Bobby Tung"

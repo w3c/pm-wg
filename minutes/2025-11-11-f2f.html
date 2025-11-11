@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group &ndash; 11 November 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group F2F, 2nd day</h1>
+<h2>11 November 2025</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2025/11/11-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>Bobby, CharlesL, DaleRogers, danbri, duga, gpellegrino, hadleybeeman, Hadrien, ikkwong, ivan, jroque, Junko, jyasskin, jkamata, LaurentLM, Magnus, marisa, MasakazuKitahara, mgarrish, motoi, rdeltour, seth2, shiestyle, swjoo, toshiakikoike, tzviya, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>shiestyle, wendyreid</dd>
+<dt>Scribe</dt><dd>seth2, LaurentLM, duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#6b94">Day 1 overview</a></li>
+<li><a href="#c80d">Japanese Publishing Guidelines Update</a></li>
+<li><a href="#b0e4">Updating Publication Manifest</a></li>
+<li><a href="#e9a2">HTML in EPUB</a></li>
+<li><a href="#f730">Issue Clean-up</a>
+<ol>
+<li><a href="#c27c">rendition:flow issues #2750 and #2754</a></li>
+<li><a href="#465b">Layout Overrides - w3c/<wbr>epub-specs#2749</a></li>
+<li><a href="#2ee0">AI contributions to ebooks</a></li>
+</ol>
+</li>
+<li class=app><a href="#ActionSummary">Summary of action items</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+
+
+<section>
+<h3 id=6b94>Day 1 overview</h3>
+<p id=b326 class="phone s01"><cite>wendyreid:</cite> I want to do a quick overview of day one in case there are people who missed or refresh their memory or if things came up overnight that they had thoughts on</p>
+<p id=9238 class="phone s01"><cite>wendyreid:</cite> yesterday we spent the bulk of the day on annotations, fixed layout, comics</p>
+<p id=e478 class="phone s01"><cite>wendyreid:</cite> there's been huge progress in annotations, the beginnings of what the format will look like, more work to be done but exciting, keep an eye on it</p>
+<p id=e383 class="phone s01"><cite>wendyreid:</cite> afternoon spent mostly on fixed layout, comics with progress and decisions on rendition properties<br>
+<span id=e11e>… what to do with images in spine, deciding on best practices on comics</span><br>
+<span id=d597>… also talked about ISO and what to do about the progress, good news: since that discussion I talked to three people who can help so positive movement there. Upside of conversations at TPAC you can find someone who is relevant</span><br>
+<span id=6c84>… for today, is there anything people want to ask about yesterday / comment on?</span><br>
+<span id=4299>… for today we have a couple of topics, grab bag day of random things</span><br>
+<span id=ffff>… starting with discussions about the update to the Japanese publishing guidelines, then in the afternoon updates to publication manifest and possibly HTML in epub, survey results</span><br>
+<span id=9f97>… remainder of afternoon &quot;general time&quot; to do issue cleanup</span><br>
+<span id=0ed1>… we started the rendition properties discussion but maybe focus on the rest of the rendition stuff to get it finished</span><br>
+<span id=df78>… if there are other issues you want to discuss we have time so let us know</span><br>
+<span id=d628>… anything we missed or burning topics you want to discuss while we are all available?</span><br>
+<span id=0368>… good start, ahead of schedule. Shinya, would you tell us about the japanese publishing guidelines?</span></p>
+</section>
+
+<section>
+<h3 id=c80d>Japanese Publishing Guidelines Update</h3>
+<p id=da7c class=irc><cite>&lt;shiestyle&gt;</cite> <a href="https://docs.google.com/presentation/d/1NXqa-9iK04QcvRojNCQdm0nU3JREH8XvOdCGpUiGLns/edit?usp=sharing">See my slides</a></p>
+<p id=4542 class="phone s02"><cite>shiestyle:</cite> this TPAC was held in Japan so we prepared a special session for introducing Japanese status for some kinds of guidelines update<br>
+<span id=9326>… EBPAJ as some may know created the EPUB3 file creation guidelines over ten years ago, and maybe these bring a big impact of the Japanese epub market to expand and grow steadily but</span><br>
+<span id=cb74>… this moved to DPFJ 3 years ago, this new organization combined with the Digital Comics organization</span><br>
+<span id=8bcb>… DPFJ today has some people in this room</span></p>
+<p id=bbca class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://dpfj.or.jp">See DPFJ Homepage</a></p>
+<p id=5db2 class="phone s02"><cite>shiestyle:</cite> has over 50 publishers and some major reading system developers in japan so we can discuss the consensus of the japanese market of Ebook area,<br>
+<span id=4091>… I am in charge of the area of Comic related commitee chair, also liason with W3C liason with PMWG</span><br>
+<span id=b06f>… for 10 years this old EBPAJ guide was not updated but this year actually last month we updated the guideline in 10 years because we released EPUB 3.3 two years ago and we wanted to update the guide</span></p>
+<p id=14b3 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://dpfj.or.jp/counsel/guide">See DPFJ Guidelines</a></p>
+<p id=10000 class="phone s02"><cite>shiestyle:</cite> to the latest EPUB version.  There's a Japanese and english version also<br>
+<span id=4aba>… the characteristics or features of the DPFJ guide is used by many publishers in japan and referred to by many reading systems developers for Japanese market including global companies like Amazon Google Apple Kobo, etc</span><br>
+<span id=81cb>… includes a lot of guidelines for Japanese text expression rendering layout because they are so different between reading systems in japan, because not only browser based but also</span><br>
+<span id=951e>… some reading systems have original rendering systems</span><br>
+<span id=9725>… because maybe before EPUB3 in japan we have some traditional domestic formats used in the EPUB market in Japan that still are in use</span><br>
+<span id=7522>… DPFJ guide also provides best practices for MANGA contents but its based on Sony's best practices guide from 10 years ago. so...</span><br>
+<span id=5a66>… maybe not the best but in use for 10 years so it is easy to extract images from manga for many reading systems</span><br>
+<span id=050b>… in Japan dedicated manga reading systems are easily developed</span><br>
+<span id=ba13>… In Japan Fixed Layout means Image based content</span><br>
+<span id=cfe3>… HTML and fixed layout with CSS is very hard to create</span><br>
+<span id=1140>… DPFJ guide provides feature of standardized EPUB contents in Japan</span><br>
+<span id=38b6>… and the feature of DPFJ guide is CSS files</span><br>
+<span id=7a78>… we provide some sample files with these guidelines, it includes the CSS file</span><br>
+<span id=2aa9>… this CSS file contains many many preset classes for Japanese text layout so publishers can use these CSS files and select the class presets already so it is easy to use Japanese expressions, vertical layout, tateyoko</span><br>
+<span id=2a33>… some reading systems have their own original renderer as already explained, as we used to have some domestic formats like Voyager-made `.book`</span><br>
+<span id=3419>… as example this is a CSS example describing Tatechuyoko (horizontal layout in vertical layout text)</span><br>
+<span id=8271>… the image shown means 30'th anniversary, and is prepared using the `.tcy` class and we said some features of properties in this class</span><br>
+<span id=57b9>… so 10 years ago we said these CSS samples and we can maintain these EPUB3 files as is for now</span><br>
+<span id=609f>… we updated the guidelines for 10 years. What is different or what's new</span><br>
+<span id=f4cc>… we want to adopt EPUB 3.3 spec but it is not so big a change as we concentrated on compatibility of existing files</span><br>
+<span id=7081>… we updated some kinds of references from IDPF -&gt; W3G, EPUBCheck URLs, but the main difference for Japanese market is we deleted some features from sample files</span><br>
+<span id=6f85>… but not such a big change from international formats, and we added WebP as an image market but for now</span><br>
+<span id=e22a>… many Japanese market reading systems don't support WebP so we want to encourage this WebP or AVIF format so we put these new formats in the guidelines</span><br>
+<span id=739e>… next actions: we didn't include A11y conformance in the guide yet</span><br>
+<span id=85cd>… Will discuss the reason afterwards</span><br>
+<span id=ffce>… if we release EPUB 3.4 we will put scrolled comics features in the guidelines in the future</span><br>
+<span id=f649>… let me introduce the A11y situation in Japan</span><br>
+<span id=b505>… these guidelines have not included A11y guidelines because and most EBOOKS in Japan are NOT accessible</span><br>
+<span id=534c>… last year regulations were updated, but many publishers are not sure how to make books accessible in Japan</span><br>
+<span id=b605>… also there are no standardized practices or guidelines for making Manga accessible in the world or Japan at all so we have to make</span><br>
+<span id=d3dc>… but many publishers hesitate to create such content as it is quite hard to prepare</span><br>
+<span id=ef87>… as discussed yesterday it is not the publisher's right so they have to confirm the copyright</span><br>
+<span id=0087>… we provide the paper book and ebook simultaneously so if the A11y support is too much we cannot provide both simultaneously so in Japan we don't know how to make the Manga accessible but we want to know the situation of accessible manga outside Japan</span><br>
+<span id=afc0>… another approach for the A11y guidelines: METI, one of the Japanese government ministry</span><br>
+<span id=5be5>… started to prepare a guidebook for EBOOK accessibility, I'm a member of this working group</span><br>
+<span id=31ce>… but this guideline excludes fixed layout and complicated layout books like education or specialized books so it is aimed for the very popular novels or easy to read contents</span><br>
+<span id=04a2>… and unfortunately these Japanese guidelines will not request for the EPUB A11y conformance totally because many members of this working group think</span><br>
+<span id=9b7d>… it is too hard for the Japanese publishers to meet even the single conformance</span><br>
+<span id=b314>… so many think we should exclude manga / fixed layout contents from these guidelines so we didn't discuss accessible manga yet</span><br>
+<span id=8256>… maybe in America or Europe regulations they discuss these but the Japanese regulation doesn't cover manga yet</span><br>
+<span id=7203>… so we have to define the reasonable accommodation for the Japanese market but this will not be in conformance to EPUB</span><br>
+<span id=d661>… so this is a different requirement from the EU or US market</span><br>
+<span id=d51d>… currently the Japanese market will go in such direction</span><br>
+<span id=e9d7>… so after this government guideline is released we will update the guidelines next year but we need more discussions, as I said the Japanese / US / EU conformance are very different so it will be a big issue eventually</span></p>
+<p id=6761 class="phone s01"><cite>wendyreid:</cite> what has the working group with METI defined what the gaps are? it would be helpful to understand speaking as someone who worked on EPUB A11y and worked on WCAG standards as well to understand the perceived gaps in Japanese content<br>
+<span id=bc46>… it helps to be specific where are the gaps in reflowable novels, education, manga vs the current standards?  understanding those gaps helps us understand how to address them and maybe even requires we change the standards</span></p>
+<p id=cd85 class="phone s02"><cite>shiestyle:</cite> many Japanese publishers or working group members think we have to focus on the mandatory criteria as necessary for the beginning of the Japanese adoption of A11y</p>
+<p id=0ed2 class="phone s02"><cite>shiestyle:</cite> we are just focusing on TTS features as necessary for A11y as recognized in Japan, I don't know why but many people focus on TTS.</p>
+<p id=a89e class="phone s02"><cite>shiestyle:</cite> specialized books or educational ones have special requirements for pronunciation.  we focus at first on the lazy conformance</p>
+<p id=f067 class="phone s03"><cite>jkamata:</cite> before EPUB3 we had the word of publishing basically E-comic with various proprietary formats, then after that EPUB3 changed the market to a new world</p>
+<p id=9807 class="phone s03"><cite>jkamata:</cite> at that time generally incorporated association named DPFJ, sometimes you see the DPFJ on that slide, I think would like you to say the DPFJ is the base of the publishing company team, concerned about EPUB3, and the member of them contribute the guideline, so from the birthdate the DPFJ has a mind to contribute to spread knowledge of EPUB3<br>
+<span id=2ea8>… or reading system or how to sell</span><br>
+<span id=408c>… national diet library has now a Ebook repository officially and now we have some copyright law and law against discrimination against disabilities / barrier free reading content.  The market for ebooks is small compared to the english market but the teamwork is good so</span><br>
+<span id=6ae3>… the ebook stores, publishers, developers of reading systems all would like to contribute to build the ebook market in Japan, the key person is [...]? also I would like to introduce the DPFJ executive director Motoi Suzuki ?</span></p>
+<p id=10001 class="phone s04"><cite>Bobby:</cite> we use the same guideline as Taiwan (?) and use the same platform as publishers used in Japan for ten years that has some restrictions for what HTML tags you can / cannot use</p>
+<p id=4543 class=irc><cite>&lt;Bobby&gt;</cite> <a href="https://bug-301410-attachments.webkit.org/attachment.cgi?id=477186">https://<wbr>bug-301410-attachments.webkit.org/<wbr>attachment.cgi?id=477186</a></p>
+<p id=368a class="phone s04"><cite>Bobby:</cite> it happened earlier in Taiwan people were encouraged to use the latest CSS tags and got in trouble as<br>
+<span id=3bfe>… they used text decoration underline + offset to create a highlight effect to emphasize a word, working in Chrome but not well in Webkit and Safari so people in Japan want to do this effect want help to use the correct syntax for vertical writing</span><br>
+<span id=6d17>… it is a good chance, if you can open this in Chrome and Safari you can see things different but we should test different browsers.</span><br>
+<span id=aedb>… I translated EPUB Accessibility 1.1 to traditional chinese but</span><br>
+<span id=679b>… they send the book to the library for the visually impaired, they see no problem with ASE and the epub accessibility standard but there is a problem with the TTS system because one character can have 6 different pronunciations and even AI can't get it right so we want some better way to do TTS</span></p>
+<p id=10002 class="phone s05"><cite>CharlesL:</cite> I just want to remind everyone that EPUB A11y 1.1 we watered that down slightly with an exception with the WCAG 1.1 for text alternatives for images and complex images that we thought would be too much a burden to make publishers make complex image descriptions also for things like comics</p>
+<p id=1fa2 class="phone s05"><cite>CharlesL:</cite> that exception was removed in EPUB A11y 1.2, because 1. its a WCAG requirement, but also in US and EU publishers were starting to embrace Alt text and complex image descriptions especially in STEM educational materials<br>
+<span id=baf1>… starting to push that effort to the author and demand that the author provide alt text descriptions, you know what you meant so you provide the alt text and complex alt description so the japanese market should take a hard look at</span></p>
+<p id=1974 class="phone s06"><cite>mgarrish:</cite> To clarify 1.0 had the exception, 1.1 removed it</p>
+<p id=17ab class="phone s06"><cite>mgarrish:</cite> as an editor had to point that out</p>
+<p id=6c24 class="phone s07"><cite>LaurentLM:</cite> a comment, Bobby, you said that pronunciation, TTS is a big deal we totally agree, we have a problem because we try to have TTS but when we try to make a better pronunciation because browsers follow the rules or don't differently,<br>
+<span id=82a4>… perhaps the browser vendors in different rooms are discussing this but we should push them to treat this better because otherwise even if we improve it won't matter</span></p>
+<p id=7080 class="phone s04"><cite>Bobby:</cite> we use in chinese BOPOMOFO which can be used to produce Han character pronunciations, and ruby to show how to pronounce,</p>
+<p id=77ab class="phone s04"><cite>Bobby:</cite> but it will pronounce the ruby once and the base as well, so we need attributes or selectors to decide how to pronounce Ruby</p>
+<p id=fda0 class="phone s08"><cite>Hadrien:</cite> just wanted to add to what Laurent said, there's a breakout session with WCAG tomorrow but mostly about speach recognition instead of TTS, also last year the same as there was interest in chat bots<br>
+<span id=d7a8>… dissapointing because the current state of TTS is broken for some years and there's always some browser broken in some way but inconsistently and even with the same browser in different situations may crash or get it wrong</span><br>
+<span id=d0c2>… decent VO in some browsers but even if you install better voices you can't use them,</span><br>
+<span id=b3c2>… we know it is possible to get high quality TTS voices but Microsoft Edge browser is the only one doing it</span><br>
+<span id=f9af>… TTS is possible but sad and broken, even boundaries between words, where to pause, all broken, but worse there seems to be little interest at W3C</span><br>
+<span id=d10e>… maybe included in media or audio but an afterthought and we might be the community that cares the most</span><br>
+<span id=daac>… browsers are avoiding this issue, maybe they have a reader mode but it is walled off away from reading system publishers, so they sidestep the issue, would love to find the right contact to push for TTS mattering on the web</span></p>
+<p id=c121 class="phone s07"><cite>LaurentLM:</cite> we always speak about a11y but we are totally blocked on the web for one of the most important ways to get a11y</p>
+<p id=10003 class="phone s01"><cite>wendyreid:</cite> so I think what we are all discussing here is these are all incredibly important things and we need to take advantage of where we are, we are IN W3C, we have access to some of these groups we need to ask questions of and we need the support of CSS, what wig like the way we get that support is by putting together clear requests and<br>
+<span id=1de3>… reaching out to those groups</span><br>
+<span id=1739>… and saying we need this, what do you know about it?</span></p>
+<p id=046d class="phone s07"><cite>LaurentLM:</cite> we tried with CSS regions to support [...] well they said you should spend 3 years in the CSS group and you might get a solution, so asking is not sometimes enough</p>
+<p id=b9d0 class="phone s01"><cite>wendyreid:</cite> fair point but we have to at least document our requests</p>
+<p id=e350 class="phone s06"><cite>mgarrish:</cite> minor point, I didn't hear it mentioned but ACE has been translated into Japanese and the knowledge base is also translated so there are resources to help with making content accessible</p>
+<p id=50f9 class="phone s01"><cite>wendyreid:</cite> that's huge, didn't know about that, but the flip side about us needing to reach out and be clear is that we have a lot to offer to other groups, as an example: I have been struggling with working on how to write requirements for Text a11y for different languages, different typographical requirements for line spacing, character spacing,<br>
+<span id=d874>… and there's no resource online but we happen to know many publishers in a lot of countries that have done research into best practices for or know people who konw</span><br>
+<span id=2f20>… it goes both ways, as an example for Japan if there are WCAG a11y guidelines that don't work for Japan we should know so we can improve that and keep it bidirectional</span></p>
+<p id=debb class="phone s02"><cite>shiestyle:</cite> maybe matt said ACE was already translated to Japanese, maybe interfaces but only ACE cannot be evaluated for conformance to WCAG single A<br>
+<span id=4372>… so we have to check by human for the conformance to WCAG so its hard for japanese publishers to check conformance</span></p>
+<p id=9d17 class="phone s06"><cite>mgarrish:</cite> just pointing out it is a means of automating the checking so a person doesn't have to check everything, certainly there's more you have to do if you want to claim conformance</p>
+<p id=15bc class="phone s09"><cite>tzviya:</cite> can you explain why it is WCAG A and not double A?</p>
+<p id=741b class="phone s02"><cite>shiestyle:</cite> because the WCAG A11Y spec at least ... double A is more difficult to adopt in Japan</p>
+<p id=737a class="phone s05"><cite>CharlesL:</cite> I assume you mean for the WCAG Double A because reflowable vs Manga, manga is the main issue with meeting WCAG AA?</p>
+<p id=02cc class="phone s02"><cite>shiestyle:</cite> yes it is about Manga</p>
+<p id=c22e class="phone s05"><cite>CharlesL:</cite> was Smart also translated into Japanese because that will also help with conformance checking because ACE shows the visual confirmation of the alt text being good or not<br>
+<span id=dac9>… so you need to have those humans</span></p>
+<p id=10004 class="phone s06"><cite>mgarrish:</cite> the project was only for converting ACE but not SMART because it is more complicated.  we did french but it didn't happen, it takes a lot more work and time</p>
+<p id=7368 class="phone s02"><cite>shiestyle:</cite> let me correct the previous questions: we are not talking about Manga for WCAG adoption<br>
+<span id=294c>… for Japanese reflowable contents Double A is too hard to adopt, many publishers thought</span></p>
+<p id=3b8c class="phone s01"><cite>wendyreid:</cite> we are talking about standard novel reflowable content</p>
+<p id=c0d7 class="phone s02"><cite>shiestyle:</cite> yes</p>
+<p id=f590 class="phone s10"><cite>motoi:</cite> I'm Suzuki from DPFJ, Japanese sorry, relating to a11y regarding Japan compared to north american a11y government ...<br>
+<span id=2991>… clearly what is happening is there are clear differences between EU / North America / Japan regarding regulations and what the authority is</span></p>
+<p id=accb class="phone s10"><cite>motoi:</cite> currently in Japan the A11y guideline is still under development<br>
+<span id=0cce>… until that is finished Japan with regard to EAA can't</span><br>
+<span id=3aad>… it is difficult to look forward to working on a11y compliance in Japan with each publisher as we have to have some collective guideline to comply with the international requirements</span></p>
+<p id=9d36 class="phone s10"><cite>motoi:</cite> regarding manga, a11y is quite difficult, but including that, DPFJ position is that we want to work with the various Japanese publishers to comply with international a11y standards,<br>
+<span id=c855>… with the complications of Manga content to comply with a11y requirements, it won't be an easy step but DPFJ will work with the publishers to make it possible</span><br>
+<span id=6ded>… at this group PMWG and also w3C and other publishing groups the DPFJ together with you guys would like to find a way to step forward with the a11y requirements</span></p>
+<p id=84ba class="phone s01"><cite>wendyreid:</cite> I think there's I understand that there's different challenges with a11y particularly is there are different legal standards<br>
+<span id=a02b>… WCAG is not a law, but there are countries like the US that have made the WCAG into their law</span><br>
+<span id=e30f>… but the idea with WCAG was always that if you conformed then it would benefit the most people as possible, the same position with EPUB was to help as many people as possible</span><br>
+<span id=39eb>… to give an example of a country with no legal requirement but that has major strides is Canada</span><br>
+<span id=77ea>… however the government has spent a lot of money to help publishers to convert content so that they can sell better on the international market even a small 2 person publishing house can then be successful in europe in education</span><br>
+<span id=f8df>… because the government saw that it was worth putting energy into making the content available</span><br>
+<span id=56bc>… and maybe that's the way to pitch this to publishers in Japan now, that if you get ready now even if the law changes later to require it then you would be in a good place because the content would already be ready</span><br>
+<span id=4079>… but if there are places the standards don't provide what Japanese content needs please let us know so we can fight to improve the standards</span></p>
+<p id=7074 class="phone s07"><cite>LaurentLM:</cite> you said what I wanted to say, we are in an assembly to collaborate<br>
+<span id=3c20>… so for reflowable content, we can infer shared experience and fill the gaps between what can be done today and what WCAG a11y requries</span><br>
+<span id=6778>… as we said Manga doesn't work today but we can share what we want to do for the future</span></p>
+<p id=bad3 class="phone s01"><cite>wendyreid:</cite> this conversation has proved fruitful to see what areas this working group can take on work in the future, a lot of these issues are mirrored not just in Japan, but Taiwan, europe, elsewhere.  TTS pronunciation even affects english<br>
+<span id=6870>… it would be helpful in a future meeting to dedicate to proposals we should take to other groups.  TTS particularly has come up as there is not standard clarity around how it is supposed to work, I don't know if it is our problem to solve but we need to figure out who we need to work with to solve it and we have more discussions to have</span></p>
+<p id=8637 class="phone s08"><cite>Hadrien:</cite> we know that the TTS issue is bigger than reading systems so the way we at EDR lab and Readium to help is to work on this as a separete project I documented all the TTS voices across browsers a year ago and there were about 600 voices at diffrerent qualiities, genders,<br>
+<span id=71ae>… in use on some projects today</span><br>
+<span id=9edf>… now we are working on readium speach that is useful for people who want TTS on the web generally to try to work around the edges of different browsers and OSs, to eventually potentially connect this whatever you want, even with your own models or proxy services, potentially used anywhere</span><br>
+<span id=44bd>… we hope this project will make things easier but also that we can make things better by working with others and working beyond publishing as this has more potential than that</span></p>
+<p id=14ee class=irc><cite>&lt;ivan&gt;</cite> s/thepublisher/the publisher/</p>
+</section>
+
+<section>
+<h3 id=b0e4>Updating Publication Manifest</h3>
+<p id=0d83 class=irc><cite>&lt;ivan&gt;</cite> <a href="https://docs.google.com/presentation/d/1Uj25pywoG1Nwo2uNiloW15YkijxB8GVtssugUjPqzWc/edit?slide=id.p#slide=id.p">Presentation slides</a></p>
+<p id=4b41 class="phone s01"><cite>wendyreid:</cite> let's talk about Web Publication Manifests.<br>
+<span id=e264>… there is a W3C version and a Readium version. There are subtle differences. More implementations on the Readium side. Time for us to bring them closer together, and make sure that the spec is in good shape.</span></p>
+<p id=5c27 class="phone s08"><cite>Hadrien:</cite> presentation of how Readium Web Publications are actually used.<br>
+<span id=b486>… History: starts with the AHL WG in 2012. Objective = do renditions differently.</span><br>
+<span id=10005>… Then for EPUB 3.1, Browser Friendly Format (BFF). Two different approaches: HTML (Dave), JSON (Hadrien). There were prototypes.</span><br>
+<span id=0c4a>… in 2017, the Readium people defined the Readium Web Publication Manifest. It was for a SDK we called Readium 2 at the time, which became later Readium Mobile. Objective: hiding differences between different types of publications (EPUB 2, 3 ...)</span><br>
+<span id=a612>… in 2018, profiles of Web Publications for audiobooks and comics (Divina, Digital Visual Narrative).</span><br>
+<span id=82b6>… Same JSON base structure used for catalogs of publications = OPDS 2.</span><br>
+<span id=5aec>… 1) RWPM as an internal format for Readium toolkits (Mobile on iOS and Android; Web; and Desktop). Conversion to RWPM (Readium Web Publication Manifest) in the reading app.  Parsing (from interchange formats implemented in Swift, Kotlin, Go, Ts).</span><br>
+<span id=fd59>… More than 200 mobile apps are using Readium Mobile -&gt; RWPM.</span><br>
+<span id=a9d7>… 2) Gained adoption as a distribution format -&gt; audiobooks (stream or download) with a package format and LCP support.</span><br>
+<span id=595c>… Also used for protecting PDF with LCP.</span><br>
+<span id=1706>… Recently, interest in its generic profile, in the education world, by Brazil and UNICEF, due to limitations of interactivity in EPUB (due to other expectations like pagination and user control).</span><br>
+<span id=30a9>… 3) As an archival format, by the Korean government, for archiving webtoons, along with a new identifier to avoid using a large number of ISBN. Felt that EPUB was too complex for their need. Turned RWPM in its Divina flavour as a national standard (TTA). Now testing the water as an ISO standard.</span><br>
+<span id=0aa5>… 4) As a pivot format. Presentation made this year by Hachette at the Digital Publishing Summit  (EDRLab, Dublin). They want to create a digital-first workflow, using RWPM as a pivot format before sending to print and EPUB production.</span><br>
+<span id=de54>… The print version of reflow publication can be automatic. FXL publications can be done via import of the RWPM in InDesign.</span><br>
+<span id=7a3f>… 5) As a workflow format. As an easy way to support extraction information from EPUB files. Now in Readium CLI (Command Line Interface), which can generate a Manifest on the fly, and can be used as a publication server.</span><br>
+<span id=c9f9>… As a serve, it can stream an EPUB file from an Object Storage and server Web Publications for feeding the Readium Web reader.</span></p>
+<p id=7d97 class="phone s01"><cite>wendyreid:</cite> the W3C Audiobook format is also used as a pivot format by some organizations.<br>
+<span id=6800>… the question is now, how do we align the specs?</span></p>
+<p id=32b0 class="phone s08"><cite>Hadrien:</cite> however, the primary use case for RWPM is delivering audiobooks to users. Sometime hidden by an app or an OPDS feed.</p>
+<p id=35eb class="phone s11"><cite>ivan:</cite> there was an influence coming from Readium, it is a pity that the 2 things diverged.<br>
+<span id=b585>… The main differences between the two seem to be. The HTML TOC (and the primary page).</span><br>
+<span id=5555>… The other differencies are unfortunate.</span></p>
+<p id=6d3a class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/TR/pub-manifest/">See W3C Publication Manifest:</a></p>
+<p id=2d29 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://readium.org/webpub-manifest/#23-links">See Readium WPM:</a></p>
+<p id=2d90 class="phone s11"><cite>ivan:</cite> if the goal is to merge, i.e. make a new standard, two questions: is it in the interest of Readium to make in a W3C standard? And a new version that in backward compatible (1.1) seems impossible; so it would be a 2.0.</p>
+<p id=0e78 class="phone s02"><cite>shiestyle:</cite> Can the RWPM replace the OPF file?</p>
+<p id=2e16 class="phone s08"><cite>hadrien:</cite> it was mainly designed as an internal format.</p>
+<p id=8667 class="phone s06"><cite>mgarrish:</cite> the W3C spec was generic and has flexible constraints (TOC...). The RWPM seems more specific.</p>
+<p id=61b1 class="phone s08"><cite>Hadrien:</cite> yes, some of the goals were different. We wanted to hide the complexity of formats to RS developers. However the W3C focus was dealing with publication that &quot;live on the web&quot;. But the web is probably good enough without it.<br>
+<span id=969a>… People have found new use of RWPM over the years.</span><br>
+<span id=d2b5>… There are some differences. The W3C spec does not require a media type, some in naming, dealing with languages, duration format ...</span><br>
+<span id=aa2e>… Korea has made it a standard. The Readium community does not see a problem with it.</span><br>
+<span id=f8c7>… NISO is interested to use it and push is to ISO.</span></p>
+<p id=a0ef class="phone s01"><cite>wendyreid:</cite> There are sutble differences between the specs. If there are no breaking changes, or a way to break them gracefully, because W3C WPM are really flexible, we can study if we can make a profile of W3C WPM.</p>
+<p id=76d4 class="phone s11"><cite>ivan:</cite> looking at the large adoption of the RWPM, any breaking change to it will not be unacceptable. If we create a W3C version, we'll have to adopt the syntax of the RWPM where it is different.<br>
+<span id=8539>… we will create a different version, not an incremental change.</span><br>
+<span id=7be1>… We also have to check if the charter allows for a major version.</span><br>
+<span id=2c39>… We cannot decide right now if we start this work.</span></p>
+<p id=fded class="phone s08"><cite>hadrien:</cite> the RWPM can use an HTML TOC, but nobody is using it, as there is the JSON TOC in the manifest.<br>
+<span id=5023>… some features like string direction, have been also challenging in EPUB.</span></p>
+<p id=8daa class="phone s01"><cite>wendyreid:</cite> next step is to study the differences between the 2 specs.</p>
+<p id=d46e class="phone s11"><cite>ivan:</cite> I'm happy to work with Laurent for updating the tables he initially wrote.</p>
+</section>
+
+<section>
+<h3 id=e9a2>HTML in EPUB</h3>
+<p id=f592 class="phone s01"><cite>wendyreid:</cite> Welcome TAG! There has been a long standing question in epub whether we should add the HTML serialization to epub in addition to XML<br>
+<span id=49c9>… this year we sent a survey to see what people think</span><br>
+<span id=38a2>… we got a very interesting set of responses</span><br>
+<span id=a888>… [presenting doc with results summary]</span><br>
+<span id=6bd7>… 4 questions, first was who you are</span><br>
+<span id=165b>… we got very broad results, creators or epub, open source devs, conversion providers, some users, some for-profit vendors/publishers which was very different from open source</span><br>
+<span id=1c67>… some edu, some RS, some XML experts</span><br>
+<span id=9c60>… Then question 2 was benefits and challenges, if we were to do this what are the pros and cons</span><br>
+<span id=0138>… we got a lot of interop feedback, one of the most important things</span><br>
+<span id=ca6b>… we got feedback about from different angles. Some people gave some features as a pro, others gave the same html feature as a con</span><br>
+<span id=ad95>… we also had wild conjectures</span><br>
+<span id=8bf9>… a lot about the level of change (epub4 or a different profile)</span><br>
+<span id=52ba>… a lot of responses about cost</span><br>
+<span id=e55f>… question 3 was what steps should we take to make it easy</span><br>
+<span id=8c7a>… this had a lot of feedback about epub4 or some sort of a flag</span></p>
+<p id=34bd class="phone s01"><cite>wendyreid:</cite> I tracked positive/neutral/negative sentiment<br>
+<span id=a8a4>… there were a lot of comments about providing documentation about what is available in practice</span><br>
+<span id=1e4f>… some people that responded didn't know about existing features (e.g. please provide a validator)</span><br>
+<span id=0ef1>… some people skipped the intro and thought we were getting rid of xhtml</span><br>
+<span id=fa7f>… then the final question was open form</span><br>
+<span id=fe90>… a lot of people asking for best practices</span><br>
+<span id=3d31>… even asking for a permitted subset of properties/elements</span><br>
+<span id=7b4d>… basically asking for advice on how to make books</span><br>
+<span id=c691>… that was the messy version, here is the cleaned up one</span><br>
+<span id=c1b5>… in terms of points in favor, things like longevity since it would ensure epub would continue on</span><br>
+<span id=2fb9>… also like tooling, integration, getting closer to web platform, even new features, new workflows, new types of content</span><br>
+<span id=38e0>… there was also comments about bringing in new people</span><br>
+<span id=2716>… and integrating more modern a11y, design, etc that has appeared on the web in the last few years</span><br>
+<span id=1f4c>… against was complexity, more content errors, current tooling would need updates, not fully supported on all RSes, old books may not work on new readers</span><br>
+<span id=7aaa>… don't want to change tooling</span><br>
+<span id=37c1>… Some people from watermarking claim it will destroy their business</span><br>
+<span id=5134>… a11y was a pro and a con, might be better, might be worse</span><br>
+<span id=c44d>… Request for feature coverage, update epub check</span><br>
+<span id=565c>… suggest to do it in Pub Manifest, or a new profile</span><br>
+<span id=9a43>… Help with tooling, maybe native epub support</span><br>
+<span id=0b91>… could new epub reading systems be html only</span><br>
+<span id=8f30>… maybe watermarking won't work</span><br>
+<span id=6e79>… there is slow adoption, epub 3 barely passed epub2</span><br>
+<span id=9ca5>… but that is why we are discussing this now</span><br>
+<span id=c1e7>… Older RSes may not support this content</span><br>
+<span id=5576>… we got some responses from XML people asking us to push XML forward in the html community</span><br>
+<span id=4758>… These are the results, all very interesting</span></p>
+<p id=0885 class="phone s12"><cite>magnus:</cite> What was it used for?</p>
+<p id=048e class="phone s01"><cite>wendyreid:</cite> DRM</p>
+<p id=b6f9 class="phone s12"><cite>magnus:</cite> I created watermarking for a company, it would break in html, but it could be fixed</p>
+<p id=618f class="phone s01"><cite>wendyreid:</cite> This was about breaking workflows</p>
+<p id=b80b class="phone s12"><cite>magnus:</cite> They are probably right, it would break it</p>
+<p id=b99c class="phone s11"><cite>ivan:</cite> One interesting thing in the comments, there were several responses that showed the community believes we are still using xhtml 1.1<br>
+<span id=70f9>… so people were upset about the new features of html 5 appearing in content</span><br>
+<span id=8cc1>… they didn't realize that epub 3.0 already made that change 15 years ago</span><br>
+<span id=0919>… which casts a very strange light on the responses</span></p>
+<p id=b7f3 class="phone s13"><cite>Hadley:</cite> I am glad you did this research<br>
+<span id=e37b>… what can we do to help? We get involved when there are issues that impact web, or big picture interop</span><br>
+<span id=206c>… or if a group wants a particular question answered</span></p>
+<p id=6632 class="phone s01"><cite>wendyreid:</cite> I think it is the latter, this is a big architectural change<br>
+<span id=a594>… we would like an outside perspective, are we missing something, has anyone else ever done something like this?</span></p>
+<p id=58bf class="phone s07"><cite>LaurentLM:</cite> from the results of the survey, etc, the issue come from both extremities. Producion and end user display<br>
+<span id=3bef>… everyone in the middle seems fine. Distributors, aggregators, etc are happy with html</span><br>
+<span id=10006>… on production side there is a hope that there may be something more shiny</span><br>
+<span id=23b9>… on RS side, people are worried about breakage</span><br>
+<span id=10007>… they are both wrong. On prod side, If you want to use html, there are plenty of ways to transform it</span><br>
+<span id=f411>… on RS side, you can just use XSLT to convert</span><br>
+<span id=afdc>… so is there a need in the future to support html</span></p>
+<p id=fb20 class=irc><cite>&lt;gpellegrino&gt;</cite> +1 to Laurent</p>
+<p id=c09d class="phone s07"><cite>LaurentLM:</cite> I think we shouldn't touch epub, and examine the extremities</p>
+<p id=9294 class="phone s08"><cite>Hadrien:</cite> I have a different take. for instance in Brazil they have decided to not use epub. Why?<br>
+<span id=a7e8>… a lot was UX. They felt epub was giving away control as the producers and giving it to end users</span><br>
+<span id=5126>… they wanted more complex or responsive layout, or interativity</span><br>
+<span id=15dc>… the only thing they like about epub is packaging</span><br>
+<span id=5f80>… they like that part, not the rest. They don't like pagination code</span></p>
+<p id=6d1f class="phone s08"><cite>Hadrien:</cite> I know it is different, but it is interesting to see why people have changed</p>
+<p id=7575 class="phone s13"><cite>hadley:</cite> I was in govt for a while, we tried to move them from PDF to html<br>
+<span id=2cbe>… they wanted to control it all, and look like essentially print</span><br>
+<span id=7681>… we had to explain that they were making it harder for people to use</span><br>
+<span id=1bd1>… in that context, they were articulating as benefitting themselves, not their users</span><br>
+<span id=33be>… is that what these people were saying?</span></p>
+<p id=464f class="phone s08"><cite>Hadrien:</cite> Not really. They felt they had more control with html, since it avoids the RS from messing with things<br>
+<span id=a024>… they actually prefer web pages better, the only issue for them is packaging</span><br>
+<span id=bbc8>… so it is kind of different</span></p>
+<p id=2913 class="phone s14"><cite>jyasskin:</cite> I don't think we have an answer<br>
+<span id=e853>… it seems the main benefit is that it becomes easier to create epubs in the first place</span><br>
+<span id=156e>… That is an uncertain benefit. The main downside is making implementation harder</span><br>
+<span id=342a>… So which dominates?</span></p>
+<p id=34f3 class="phone s15"><cite>duga:</cite> There is a different, there are some libraries that don't work, no new features are going into the XML serialization, but don't know what is going to HTML though</p>
+<p id=e465 class="phone s16"><cite>gpellegrino:</cite> ShadowDOM</p>
+<p id=e2bc class="phone s14"><cite>jyasskin:</cite> another question is is there something you can do in html but not xhtml? [this goes earluer]</p>
+<p id=17c5 class="phone s16"><cite>gpellegrino:</cite> it is an issue more with format than serialization</p>
+<p id=a27e class=irc><cite>&lt;Hadrien&gt;</cite> +1 to what gpellegrino just said, it's about UX/features/expectations tied to formats</p>
+<p id=9477 class="phone s11"><cite>ivan:</cite> what jyasskin said, I would turn it back to the TAG<br>
+<span id=a19c>… how serious is the concern that if we do not make this move, that we fall behind because the html world leaves us behind?</span><br>
+<span id=7697>… there is a negative feeling in whatwg to xhtml</span><br>
+<span id=f45c>… this evolution was a main trigger</span><br>
+<span id=98ea>… ifs the fear is overrated?</span><br>
+<span id=a60f>… I am not sure about jsdom and such. I don't think parsing is the main issue.</span><br>
+<span id=02be>… I think in the xhtml community, new apis are made by explicitly ignoring the xml versions</span></p>
+<p id=7784 class="phone s14"><cite>jyasskin:</cite> I doubt browsers will remove xhtml serialization<br>
+<span id=c821>… but if there are new features they will only be in html, so new features in parsing won't be in xhtml</span></p>
+<p id=7639 class="phone s01"><cite>wendyreid:</cite> I think the slowness is why we are discussing it now<br>
+<span id=515e>… there was some worry that we would switch, not add</span><br>
+<span id=9b25>… some tangible complaints are technical quirks like entities</span><br>
+<span id=837c>… common validator error is incorrect entity usage</span><br>
+<span id=d104>… the other area is around scripting</span><br>
+<span id=2699>… the current rec is don't script, but people really want to</span></p>
+<p id=c062 class="phone s17"><cite>danbri:</cite> I want to ask what this means for embedding things like SVG and mathml.</p>
+<p id=7949 class="phone s01"><cite>wendyreid:</cite> We don't really say much about that. Things have gotten better recently</p>
+<p id=08a4 class="phone s17"><cite>danbri:</cite> and html method would be ok?</p>
+<p id=2aff class="phone s01"><cite>wendyreid:</cite> yes</p>
+<p id=0d47 class=irc><cite>&lt;gpellegrino&gt;</cite> +1 to Hadrien</p>
+<p id=10008 class="phone s08"><cite>Hadrien:</cite> What people want from html is often different from what you would get from epub<br>
+<span id=3c1c>… so two formats can actually help make that clear</span><br>
+<span id=c651>… what is important is making clear what to expect</span><br>
+<span id=fb40>… switching to html won't make scripting better in epub</span><br>
+<span id=51c6>… I know this is a big sidestep, but I don't think mixing the two will work</span></p>
+<p id=03c7 class=irc><cite>&lt;jyasskin&gt;</cite> <a href="https://groups.google.com/a/chromium.org/g/loading-dev/c/abRvsaclp0Q/m/fjLyFZtqDAAJ:">https://<wbr>groups.google.com/<wbr>a/<wbr>chromium.org/<wbr>g/<wbr>loading-dev/<wbr>c/<wbr>abRvsaclp0Q/<wbr>m/<wbr>fjLyFZtqDAAJ:</a> &quot;we have decided that we cannot support the implementation of defer in XML documents at this time&quot;, in the SVG context</p>
+<p id=59ee class="phone s14"><cite>jyasskin:</cite> I did remember one feature where they decided not to add a feature to xhtml. It was about `defer`, but that probably doesn't apply to epub<br>
+<span id=d51e>… but browsers likely won't support them in xml</span></p>
+<p id=d9f1 class=irc><cite>&lt;Zakim&gt;</cite> wendyreid, you wanted to get to the part where we make a decision on this</p>
+<p id=72f5 class="phone s15"><cite>duga:</cite> Wanted to add one quick thing, many of the reading systems don't actually display XHTML, they display HTML, XHTML as though it is HTML, the stuff inbetween is a lot of XML parsers<br>
+<span id=f4ef>… new features would probably still work, some people have their own engines, but it may not be that big a deal</span></p>
+<p id=1fae class="phone s01"><cite>wendyreid:</cite> we have discussed this a lot over the years<br>
+<span id=99eb>… I went into this thinking we should add html. After looking at the results I have changed that opinion</span><br>
+<span id=7d14>… I think we should do that elsewhere. Not that we are  discussing pub manifest, maybe it is time to introduce a more modern web adjacent format</span><br>
+<span id=d75b>… pub manifest is probably the place to do it, and html is probably the tech to use</span><br>
+<span id=c3eb>… at the same time keep epub stable</span><br>
+<span id=3765>… I think it is time to go on a different pathway</span></p>
+<p id=8dd6 class="phone s18"><cite>hadleybeeman:</cite> Do you imagine the use cases evolving?</p>
+<p id=601f class="phone s01"><cite>wendyreid:</cite> </p>
+<p id=82cf class=summary>yes</p>
+<p id=82e7 class="phone s01"><cite>wendyreid:</cite> yes</p>
+<p id=5820 class="phone s18"><cite>hadleybeeman:</cite> how?</p>
+<p id=694e class="phone s01"><cite>wendyreid:</cite> There is a desire for more interactive content, linked content, offlineable<br>
+<span id=ecba>… so there is a lot of good things in epub, but there have been a lot of huge changes that we don't take advantage of given the older constraints</span><br>
+<span id=15dd>… it is time to revisit the use cases</span></p>
+<p id=889b class="phone s18"><cite>hadleybeeman:</cite> does that mean the dev base will grow?</p>
+<p id=87ef class="phone s01"><cite>wendyreid:</cite> yes</p>
+<p id=eb00 class="phone s18"><cite>hadleybeeman:</cite> So the people you talked to may not include them? That is important to remember</p>
+<p id=9bc7 class="phone s01"><cite>wendyreid:</cite> yes there would be new devs</p>
+<p id=c0a1 class="phone s18"><cite>hadleybeeman:</cite> You need to keep that in mind, you can grow the dev base</p>
+<p id=10009 class="phone s14"><cite>jyasskin:</cite> There is a bigger problem around scripting. Are you all talking about what scripts work?</p>
+<p id=81fa class="phone s01"><cite>wendyreid:</cite> No. People want that, though<br>
+<span id=1000a>… we need to be clearer, but we will never get to defining scripting</span></p>
+<p id=021c class="phone s14"><cite>jyasskin:</cite> I don't mean specific libraries, but rather what generally works</p>
+<p id=886a class=irc><cite>&lt;Zakim&gt;</cite> ivan, you wanted to make a final decision for the WG...</p>
+<p id=8c50 class="phone s11"><cite>ivan:</cite> we have to make a decision.</p>
+<p id=4544 class=irc><cite>&lt;jyasskin&gt;</cite> &quot;Yes&quot; or &quot;maybe later&quot;</p>
+<p id=6e16 class="phone s11"><cite>ivan:</cite> and we are running out of time (looking at the clock)<br>
+<span id=e858>… I agree with Wendy, I don't think we should change. It is futile to do it</span><br>
+<span id=7fb4>… the discsussion about the web manifest recalls web manifest, which was a disaster</span><br>
+<span id=b3c9>… looking back, one of the errors was to consider that the big publishers would jump on it</span><br>
+<span id=abaf>… that was a naive assumption</span><br>
+<span id=513c>… if we create a new version, the goal has to be different</span><br>
+<span id=e934>… big publishers are happy with epub, we maintain it and keep them happy, then find a new community that wants html</span></p>
+<p id=448c class="phone s06"><cite>mgarrish:</cite> If we do go to something else, and don't abandon epub 3, then we end up duplicating everything<br>
+<span id=a5d6>… The easiest way is probably to fiddle with the version numbers, but then we pull a lot of baggage forwar</span><br>
+<span id=8e0a>… at some point we have to make a decision. Otherwise we just spin in circles</span><br>
+<span id=55d2>… If we stay with xhtml we lose the html people</span></p>
+<p id=3ea6 class="phone s15"><cite>duga:</cite> I don't like the idea of messing with version numbers, if we have an EPUB4 &quot;that is the future&quot;, that doesn't have XHTML, people will be mad</p>
+<p id=a4ef class=irc><cite>&lt;ivan&gt;</cite> +1 to duga</p>
+<p id=7bef class="phone s15"><cite>duga:</cite> if we want to do something new or different, it should be a new spec, it shouldn't be EPUB4, I think we need to find an audience first</p>
+<p id=f41b class="phone s14"><cite>jyasskin:</cite> there is some interest in packaging from browsers<br>
+<span id=2a9d>… chrome has isolated web apps</span><br>
+<span id=275a>… that could be use for other things, but I don't know what the appetitie is</span></p>
+<p id=61a9 class="phone s18"><cite>hadleybeeman:</cite> If you put the html in a different spec, then you are clearly fragmenting<br>
+<span id=f44d>… then you add a lot of complexity</span><br>
+<span id=c916>… if you plan to do it, then do it at one go and don't have multiple specs</span></p>
+<p id=5fcd class="phone s14"><cite>jyasskin:</cite> I would say don't do that, don't have a new format</p>
+<p id=dea8 class="phone s01"><cite>wendyreid:</cite> I think the decision is we won't do html in epub 3.4</p>
+<p id=00e7 class=summary>PROPOSED: We will not add HTML serialization to EPUB 3.4</p>
+<p id=24b4 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=64b4 class=irc><cite>&lt;gpellegrino&gt;</cite> +1</p>
+<p id=a4b4 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=a4b5 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=a4b6 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=e4b4 class=irc><cite>&lt;LaurentLM&gt;</cite> +1</p>
+<p id=e4b5 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=e4b6 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=24b5 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=64b5 class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=e4b7 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=24b6 class=irc><cite>&lt;ikkwong&gt;</cite> +1</p>
+<p id=0d10 class=resolution><strong>RESOLUTION:</strong> We will not add HTML serialization to EPUB 3.4</p>
+<p id=b8e8 class="phone s11"><cite>ivan:</cite> we should communicate this somehow<br>
+<span id=d30b>… including the rationale for the decision</span></p>
+<p id=697d class="phone s01"><cite>wendyreid:</cite> Yes, we will blog post<br>
+<span id=bd1a>… and thanks to the TAG for proposing some questions</span></p>
+</section>
+
+<section>
+<h3 id=f730>Issue Clean-up</h3>
+<p id=d22b class=summary><a href="https://github.com/w3c/epub-specs/issues">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>issues</a></p>
+<p id=67f4 class="phone s01"><cite>wendyreid:</cite> However long we last we can review the issues<br>
+<span id=07c3>… just do some general cleanup since we have discussed a lot of these issues</span><br>
+<span id=7e4f>… Success would be covering all the rendition properties</span></p>
+<p id=55a6 class="phone s08"><cite>Hadrien:</cite> I also think the whole FXL with a reflowable alternative is worth discussing</p>
+<p id=074a class="phone s01"><cite>wendyreid:</cite> Where to start?</p>
+<p id=2a89 class="phone s08"><cite>Hadrien:</cite> I have a bunch of open issues</p>
+<p id=001e class="phone s01"><cite>wendyreid:</cite> Do we want to start with layout overrides?</p>
+<p id=9613 class="phone s08"><cite>Hadrien:</cite> That might be a hard one<br>
+<span id=7979>… I would start with the flow one.</span><br>
+<span id=add4>… maybe #2754 or #2750</span></p>
+<h4 id=c27c>rendition:flow issues #2750 and #2754</h4>
+<p id=46d8 class=summary><a href="https://github.com/w3c/epub-specs/issues/2750,">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>issues/<wbr>2750,</a> <a href="https://github.com/w3c/epub-specs/issues/2754">w3c/<wbr>epub-specs#2754</a></p>
+<p id=b4b4 class="phone s08"><cite>Hadrien:</cite> One thing we have now (for rendition flow) is to provide a hint how reflowable resources should be presented<br>
+<span id=83ea>… you can say auto, paginated, or scroll</span><br>
+<span id=f951>… this is problematic because authors shouldn't have control over it. And it shouldn't switch mid book. Also, no one does 2 types of scrolling</span><br>
+<span id=c5d1>… since these have been used in Japan, we have to be clear that the current undefined use should be documented as equivalent to roll.</span><br>
+<span id=9567>… but otherwise we should drop them</span><br>
+<span id=b309>… So once again this mean moving to deprecated, etc</span></p>
+<p id=2512 class="phone s11"><cite>ivan:</cite> I did the a different PR, the question of tests came up. Do we need deprecated tests, or just remove them?</p>
+<p id=9583 class="phone s01"><cite>wendyreid:</cite> I would say for the tests it might be appropriate to have a deprecated test suite as examples or demos<br>
+<span id=c92d>… so RSes can use those tests</span></p>
+<p id=3e0a class="phone s11"><cite>ivan:</cite> We would need to figure out how to do that, but that is for later</p>
+<p id=9e6b class="phone s08"><cite>Hadrien:</cite> I don't think this breaks any reading system, since it is so poorly implemented</p>
+<p id=ee7c class="phone s01"><cite>wendyreid:</cite> We actually had passing tests<br>
+<span id=5f21>… looks like it was for ignoring the property</span><br>
+<span id=7ed6>… scrolled doc and continuous both have passing tests</span><br>
+<span id=5f9b>… on collibrio, thorium etc</span></p>
+<p id=42d3 class="phone s08"><cite>Hadrien:</cite> I am surprised since thorium has no scrolled mode</p>
+<p id=ca90 class="phone s11"><cite>ivan:</cite> I remember reading some books that did scrolling per chapter<br>
+<span id=0499>… I remember having read it in Thorium, no idea how it was marked up</span><br>
+<span id=aadf>… but at least one example where scrolled-doc was used</span></p>
+<p id=c405 class="phone s08"><cite>Hadrien:</cite> Most reading systems let users paginate or scroll. Scroll is either per doc or continuous. So Ivan had a book that forced scrolled behavior even though he didn't set it</p>
+<p id=fd43 class="phone s11"><cite>ivan:</cite> Correct</p>
+<p id=461b class=summary>laurent and Hadrien: [Arguing over scrolling]</p>
+<p id=99e8 class="phone s11"><cite>ivan:</cite> Looking back it included a lot of code, which is often bad with pagination. So not wanting to paginate is better</p>
+<p id=b78d class="phone s01"><cite>wendyreid:</cite> Thorium 3 it no longer works, but it did in 2.2<br>
+<span id=7119>… the core question is do we deprecate the rendition flow at meta and item levels?</span></p>
+<p id=3592 class="phone s08"><cite>Hadrien:</cite> That is my opinion</p>
+<p id=448d class="phone s11"><cite>ivan:</cite> The reason we propose it, is it because it is wrong to do it, or because it is unused</p>
+<p id=b405 class="phone s08"><cite>Hadrien:</cite> It is both<br>
+<span id=b3c6>… If respected it can be harmful</span><br>
+<span id=2017>… forcing scrolling or paginated is not put at the top. It is bad on multiple levels.</span><br>
+<span id=b63c>… it is bad for UX and accessibility. And it is bad to have something we don't use</span></p>
+<p id=2b24 class="phone s15"><cite>duga:</cite> I remember when we added this, some people liked it, the point was to tell the user what the original thing was, this is the Torah, it was originally scrolled<br>
+<span id=183c>… a hint to the user</span><br>
+<span id=0d80>… I think we have now confused what it means to what it should switch to, this is how this content must be displayed, and that was not the intention</span><br>
+<span id=ca15>… add to the reasons to deprecate, confusion over what these properties mean</span><br>
+<span id=8d53>… at least, it is under specified</span></p>
+<p id=2a7d class="phone s01"><cite>wendyreid:</cite> I think, to duga4 when we added the renditions properties, was to allow the publishers to give hints to the RS<br>
+<span id=2321>… the problem being we never specified what that hint was supposed to look like</span><br>
+<span id=f0e5>… So RSes displayed it one way, then users wanted it different</span><br>
+<span id=fe87>… We now have hindsight and user information. Readers will tell us what they want, and how they want to read something</span><br>
+<span id=cbec>… if we want to allow publishers to provide these hints we need to explain to RSes what that means</span></p>
+<p id=60cf class="phone s11"><cite>ivan:</cite> It seems we have a more general thing than these properties. Personally I am more in favor making it clearer in the spec<br>
+<span id=5f35>… Make it clear this is a hint</span><br>
+<span id=3360>… just removing it is pretty heavy handed</span><br>
+<span id=e9a9>… which brings into question our decision from yesterday</span></p>
+<p id=ea61 class="phone s02"><cite>shiestyle:</cite> I don't know the use case for scrolled doc, but in ancient time in Asia we had the rolled document<br>
+<span id=ac92>… we don't have those now, but we use scrolled continuous for webtoons</span><br>
+<span id=25b1>… the current spec must ignore the scrolled continuous in fixed layout</span><br>
+<span id=5190>… I don't know what the use cases are for such scrolled properties in Japan</span></p>
+<p id=e0ea class="phone s08"><cite>Hadrien:</cite> So as ivan says, for consistency we should treat this the same way<br>
+<span id=d71b>… Even if we clarify it, there isn't really a way to properly support it</span><br>
+<span id=e4a2>… so no one will support both types of scrolled</span><br>
+<span id=66a7>… As to a hint, I think it is better to just write it in the book</span><br>
+<span id=c0e8>… that way there is no annoying UI</span><br>
+<span id=1000b>… One example is manga in the west, where it explains to read right to left</span></p>
+<p id=a843 class="phone s16"><cite>gpellegrino:</cite> To what Ivan said, orientation in FXL, most reading system doesn't allow the user to unlock, if its set, it can't be changed. With scrolled it is up to the user to change in the settings</p>
+<p id=9348 class="phone s01"><cite>wendyreid:</cite> to your point, in my experience, we would do the thing where we showed it initially, but if you turned the phone we would switch to portrait</p>
+<p id=0084 class="phone s08"><cite>Hadrien:</cite> and some RSes have one type of scroll, others have only the other type</p>
+<p id=b6fb class="phone s07"><cite>LaurentLM:</cite> only looking at w3c rules, it shouldn't be in the spec since it is under implemented<br>
+<span id=18da>… if it is not implemented by now, then it should go</span><br>
+<span id=568e>… and if it is a hint, then it really shouldn't be allowed as a spine override</span></p>
+<p id=81a9 class="phone s01"><cite>wendyreid:</cite> I think we set precedent with the orientation thing. Maybe we should decide what our philosophy is<br>
+<span id=9019>… is it the user and their on device prefs, or do we want to empower the publisher to provide their own guidance</span></p>
+<p id=3cdc class="phone s11"><cite>ivan:</cite> As co-editor, anything that makes the spec simpler is good for me</p>
+<p id=bacb class=irc><cite>&lt;shiestyle&gt;</cite> +1 to Ivan</p>
+<p id=a2b9 class="phone s11"><cite>ivan:</cite> I don't know how many properties that is<br>
+<span id=6065>… so it means deprecating quite a number of properties</span><br>
+<span id=fad2>… so smaller is better for me (simpler)</span><br>
+<span id=2c90>… As far as removing we have to leave them for backwards compat</span></p>
+<p id=615e class="phone s08"><cite>Hadrien:</cite> That's fine</p>
+<p id=b0df class="phone s11"><cite>ivan:</cite> A book with these should still be conformant</p>
+<p id=9ce4 class="phone s19"><cite>POLL:</cite> Do we think that EPUB should 1) Prioritize user reading preferences for content appearance and reading experience; OR 2) Continue to provide publishers with the rendition properties to declare initial rendering characteristics for books</p>
+<p id=1b0e class=irc><cite>&lt;wendy&gt;</cite> 1</p>
+<p id=1b0e class=irc><cite>&lt;duga&gt;</cite> 1</p>
+<p id=1b8e class=irc><cite>&lt;Hadrien&gt;</cite> 1</p>
+<p id=1c0e class=irc><cite>&lt;shiestyle&gt;</cite> 1</p>
+<p id=1d8e class=irc><cite>&lt;MasakazuKitahara&gt;</cite> 1</p>
+<p id=1e0e class=irc><cite>&lt;toshiakikoike&gt;</cite> 1</p>
+<p id=210f class=irc><cite>&lt;ivan&gt;</cite> 1</p>
+<p id=220e class=irc><cite>&lt;marisa&gt;</cite> 1</p>
+<p id=268e class=irc><cite>&lt;rdeltour&gt;</cite> 1</p>
+<p id=d11c class=resolution><strong>RESOLUTION:</strong> EPUB should prioritize user reading preferences for content appearance and reading experience</p>
+<p id=e6c9 class="phone s08"><cite>Hadrien:</cite> this will affect some other properties</p>
+<p id=ae3b class="phone s11"><cite>ivan:</cite> Instead of going through one at a time, can we have a list or such properties</p>
+<p id=b356 class="phone s08"><cite>Hadrien:</cite> Yeah, I would spreads in but not layout</p>
+<p id=4e7f class="phone s11"><cite>ivan:</cite> Just put in a separate all the items that should be closed from this decision?</p>
+<p id=f703 class="phone s08"><cite>Hadrien:</cite> Yes, I will take that as an action item</p>
+<p id=1000c class=action><strong>ACTION:</strong> Hadrien to open issue outlining which rendition properties need to be changed</p>
+<p id=562a class="phone s11"><cite>ivan:</cite> There is a pr I made yesterday. Maybe I should expand it or do a new big one</p>
+<p id=1407 class="phone s01"><cite>wendyreid:</cite> Expanding makes the most sense to me</p>
+<p id=43d3 class="phone s11"><cite>ivan:</cite> ok</p>
+<h4 id=465b>Layout Overrides - <a href="https://github.com/w3c/epub-specs/issues/2749">w3c/<wbr>epub-specs#2749</a></h4>
+<p id=b38a class="phone s01"><cite>wendyreid:</cite> Next is layout override<br>
+<span id=ea35>… this is how we can have mixed reflow and prepaginated</span><br>
+<span id=1000d>… this is a tricky one, because we have a solid set of use cases and idea</span><br>
+<span id=4cff>… There are reading systems that support it</span><br>
+<span id=303d>… there are a lot of RSes that can't/don't implement it</span><br>
+<span id=9d83>… there are probably better solutions</span></p>
+<p id=b9e0 class="phone s08"><cite>Hadrien:</cite> I think layout override is problematic as it can create complex UX problems, and it doesn't solve all the problems<br>
+<span id=4776>… I would keep this at the resource level, but not in the spine, and I would limit it to things outside of the spine</span><br>
+<span id=6d39>… so I could have a link to a reflowable from fixed or vice versa</span><br>
+<span id=f5cd>… I don't think we need mixed fixed and reflowable when going cover to cover</span><br>
+<span id=ca61>… this is what we need for magazines and textbooks</span><br>
+<span id=7e4d>… what we have no is problematic and we should explore other options</span></p>
+<p id=1f38 class="phone s02"><cite>shiestyle:</cite> We use this feature in e.g. light novels<br>
+<span id=1d6c>… There are often some pages that need to be fixed for precise layout</span><br>
+<span id=13ba>… at least kadokawa uses this feature</span></p>
+<p id=bb21 class="phone s11"><cite>ivan:</cite> shiestyle gave an example that I was thinking about. So something complex in the book that needs to be specified exactly</p>
+<p id=a0e3 class="phone s07"><cite>LaurentLM:</cite> I wonder in this case how RS ui can be consistent, particularly if the first part is paginated<br>
+<span id=8907>… so you will have one pagination, then you have something that is fixed, do you have to invent blank pages? How do you get a consistent reading experience?</span></p>
+<p id=bb80 class="phone s02"><cite>shiestyle:</cite> When the spread mode happens, we don't expect the reflow pages to be on the screen at the same time</p>
+<p id=55a5 class="phone s07"><cite>LaurentLM:</cite> So you have to finish one, then show the fixed page, then switch back</p>
+<p id=7776 class="phone s01"><cite>wendyreid:</cite> The question points to something interesting, and maybe we don't need to get rid of this entirely<br>
+<span id=a27f>… maybe they work better in one layout than the other</span><br>
+<span id=501b>… so going from fixed to reflow is hard, but going from reflow to fixed may be easier</span><br>
+<span id=fa50>… so can you go the other way?</span></p>
+<p id=5f93 class="phone s02"><cite>shiestyle:</cite> Yes, sometimes<br>
+<span id=3801>… sometimes split view is required</span></p>
+<p id=eab5 class="phone s07"><cite>LaurentLM:</cite> It would be interesting to see a sample, and it would be great to have a test donated to the w3c</p>
+<p id=5d60 class="phone s08"><cite>Hadrien:</cite> So LaurentLM thinks it is hard one way, but I think it is hard the other way. So say you have it set to scrolled, then you hit a fixed page, what do you do?<br>
+<span id=7b23>… the only use case so far is full bleed images</span><br>
+<span id=7c14>… is this the only way to do it? Or can we do it another way?</span><br>
+<span id=fdbf>… and finally we should do this at the manifest level, not spine</span><br>
+<span id=b253>… so I am very interested in exploring the move from spine to manifest</span></p>
+<p id=2092 class="phone s01"><cite>wendyreid:</cite> There is a test, mixed results<br>
+<span id=5c35>… not sure if we can decide today</span></p>
+<p id=d86f class="phone s15"><cite>duga:</cite> I agree</p>
+<p id=4444 class="phone s08"><cite>Hadrien:</cite> I did warn in advance<br>
+<span id=fe55>… maybe a resolution would be better spec language?</span></p>
+<p id=7082 class="phone s11"><cite>ivan:</cite> Yeah that is one way, another is more detail about moving to the manifest level<br>
+<span id=eaca>… so maybe deprecate this and move, though that may be a problem if it is currently in use</span><br>
+<span id=94aa>… maybe put in a proposal to move this to manifest</span></p>
+<p id=401e class=action><strong>ACTION:</strong> Hadrien to make a proposal about manifest level properties</p>
+<p id=d6b4 class="phone s08"><cite>Hadrien:</cite> So an action item to me?</p>
+<p id=38db class="phone s08"><cite>Hadrien:</cite> So move to manifest?</p>
+<p id=4ddf class="phone s01"><cite>wendyreid:</cite> Yes, and maybe perceived benefits</p>
+<p id=ad32 class="phone s08"><cite>Hadrien:</cite> Looking at the remaining things we are mostly done<br>
+<span id=c67c>… we could move to alternatives, or maybe to how to idenitify AI generated content</span></p>
+<p id=76c7 class="phone s11"><cite>ivan:</cite> Hadrien what is the status of roll? It is a pr? Pending on images in spine which is now resolved</p>
+<p id=631f class="phone s08"><cite>Hadrien:</cite> roll document was blocked, but now that we have an answer I can rework it to adopt the decision<br>
+<span id=9480>… so there is still work, but we are no longer blocked</span><br>
+<span id=ed44>… give me some time, as I am travelling for a few weeks</span></p>
+<h4 id=2ee0>AI contributions to ebooks</h4>
+<p id=1cd5 class="phone s01"><cite>wendyreid:</cite> Since it is pertinent, let's talk AI</p>
+<p id=4b3e class=summary><a href="https://www.editeur.org/files/ONIX%203/APPNOTE%20Aspects%20of%20AI%20in%20ONIX.pdf">ONIX numbers for this</a></p>
+<p id=2d95 class="phone s01"><cite>wendyreid:</cite> ONIX has AI contributor, you can say which parts are AI generated<br>
+<span id=a89f>… so for us we are talking epub metadata, we don't have to follow ONIX, but we can copy a bit</span></p>
+<p id=1000e class="phone s08"><cite>Hadrien:</cite> A lot of this is opf metadata, so we could just refine everywhare<br>
+<span id=02b1>… I don't think would work for alt text, though</span><br>
+<span id=5dde>… we might need something in the markup</span><br>
+<span id=44c7>… I don't know if we can just use OPF info. An image could be listed once in the OPF but appear multiple times with different alt text</span></p>
+<p id=88f1 class="phone s11"><cite>ivan:</cite> Speaking about markup, I would be very hesitant for us to do that<br>
+<span id=c669>… we need someone else to do it, then we just use it. We can ask for it, but we shouldn't do it ourselves</span><br>
+<span id=e9af>… I don't want to repeat epub:type</span><br>
+<span id=f8f3>… for the metadata, yes of course</span><br>
+<span id=1000f>… do we want to replicated, or just directly refer to onix?</span><br>
+<span id=c703>… why reinvent the wheel</span></p>
+<p id=6748 class="phone s01"><cite>wendyreid:</cite> I agree. if we think this is important enough, then we should discuss with AGWG<br>
+<span id=91d8>… I don't want to have it repeated that AI generated this all the time?</span></p>
+<p id=7aa8 class="phone s08"><cite>Hadrien:</cite> Could just be a one time warning</p>
+<p id=266f class="phone s01"><cite>wendyreid:</cite> Who is the intended audience?</p>
+<p id=75b5 class="phone s08"><cite>Hadrien:</cite> I think it is interesting for both. For production it can helpful to know if the desc was authored or generated<br>
+<span id=4db6>… so good to know if a particular entry was authored or generated, and whether it was checked</span><br>
+<span id=9d4c>… I think a lot of the publishing community is shooting itself in the foot</span><br>
+<span id=930d>… For instance, in the future it might be better to ignore the AI generated text as on-device becomes better</span><br>
+<span id=2d55>… and for users it is very important. This could impact my purchasing decision. I may not like AI voices, or I may just not like AI in general</span></p>
+<p id=96c3 class="phone s07"><cite>LaurentLM:</cite> About the production use case, for small publishers they don't have a big database, they just send it to a service. If it doesn't get saved in markup it will be lost</p>
+<p id=e98b class="phone s01"><cite>wendyreid:</cite> We could make a proposal, then share it around and see if people agree<br>
+<span id=9dd9>… we can address the reader metadata, but for the other side we need broader concensus</span></p>
+<p id=1956 class="phone s11"><cite>ivan:</cite> In a broader level you might want to talk to Dom or Roy as they are involved in AI</p>
+<p id=3eec class="phone s01"><cite>wendyreid:</cite> on the reader side, I might want to know when things are AI generated. For instance, some books have AI generated images that may be wrong.</p>
+<p id=dc2c class="phone s07"><cite>LaurentLM:</cite> Human generated content can also be wrong</p>
+<p id=c1a9 class="phone s08"><cite>Hadrien:</cite> The people who are doing that probably won't label it correctly</p>
+<p id=1d4f class="phone s16"><cite>gpellegrino:</cite> Just to say there is a movement in Europe to explicitly say when AI was used to generate content<br>
+<span id=9c13>… this may appear in 2026</span></p>
+<p id=4f60 class="phone s11"><cite>ivan:</cite> What is the status of this onix? Is it exploratory?</p>
+<p id=f61f class="phone s08"><cite>Hadrien:</cite> It is definitely used now in onix<br>
+<span id=bf44>… and several orgs recommend using those codes</span></p>
+<p id=58ea class="phone s11"><cite>ivan:</cite> Maybe we can informally reference this spec</p>
+<p id=ab75 class=summary><a href="https://ns.editeur.org/onix/en/19">https://<wbr>ns.editeur.org/<wbr>onix/<wbr>en/<wbr>19</a></p>
+<p id=1b0b class="phone s01"><cite>wendyreid:</cite> There is a list of unnamed persons that includes AI</p>
+<p id=cd4a class="phone s08"><cite>Hadrien:</cite> The concept of unnamed is interesting.<br>
+<span id=7d50>… but I always worry about pointing at onix since it is very foreign. It is very at odds with epub metadata</span></p>
+<p id=3c76 class="phone s11"><cite>ivan:</cite> Yeah, but we already do that</p>
+<p id=29d0 class="phone s08"><cite>Hadrien:</cite> Yes, but that is our least used metadata</p>
+<p id=d326 class="phone s11"><cite>ivan:</cite> The only other option is to come up with our own vocab</p>
+<p id=7c27 class="phone s08"><cite>Hadrien:</cite> Yes, that is also a problem</p>
+<p id=02f7 class="phone s01"><cite>wendyreid:</cite> We should open an issue for this<br>
+<span id=9086>… and then we can see if people want onix, or something custom, or something else</span></p>
+<p id=72cc class="phone s08"><cite>Hadrien:</cite> There have been synthesized voice issues<br>
+<span id=fd13>… we probably need to look back and create an umbrella issue</span></p>
+<p id=e83d class="phone s01"><cite>wendyreid:</cite> Ok, we will open an issue and go from there<br>
+<span id=12c6>… Thanks everyone for a very productive few days</span><br>
+<span id=668b>… we will follow up with our TODO items. No meeting next week, reconvene in two weeks</span></p>
+</section>
+</main>
+
+<div id=ActionSummary>
+<h2>Summary of action items</h2>
+<ol>
+<li><a href="#1000c">Hadrien to open issue outlining which rendition properties need to be changed</a></li>
+<li><a href="#401e">Hadrien to make a proposal about manifest level properties</a></li>
+</ol>
+</div>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#0d10">We will not add HTML serialization to EPUB 3.4</a></li>
+<li><a href="#d11c">EPUB should prioritize user reading preferences for content appearance and reading experience</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
