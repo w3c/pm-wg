@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 27 November 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>27 November 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Nov/0033.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/11/27-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, elizabeth, gautierchomel, gpellegrino, Hadrien, ivan, LaurentLM, magnus, makoto, mgarrish, shiestyle, wendyreid</dd>
+<dt>Regrets</dt><dd>charlesl, duga, masakazukitahara, toshiakikoike</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>mgarrish</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#17a7">Overview of TPAC</a></li>
+<li><a href="#c3b2">Parallel Content - https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2829</a></li>
+<li><a href="#08ae">Scheduling - https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2834</a></li>
+<li><a href="#1d5f">test suite changes - w3c/<wbr>epub-tests#309</a></li>
+<li><a href="#3f3d">Ways to identify inferred metadata</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=17a7>Overview of TPAC</h3>
+<p id=d2c9 class="phone s01"><cite>wendyreid:</cite> we had really good sessions on annotations and a lot of the ground work is done so now we need to start a draft proposal<br>
+<span id=1c84>… expect to see that in the next few weeks</span><br>
+<span id=2fa2>… a lot of time was spent on fixed layouts and comics</span><br>
+<span id=1204>… made good progress on what to do with the problematic rendition fxl properties</span><br>
+<span id=e133>… we are not going to add the html syntax - I am working on a blog post on this</span><br>
+<span id=9b05>… we're still working on what to do about submissions to iso</span><br>
+<span id=f890>… got an update on Japanese publishing</span><br>
+<span id=0857>… we have some info on the iso transition but the issue is the european commission and iso coordination</span></p>
+<p id=8212 class="phone s02"><cite>ivan:</cite> I had some disagreement about submission at the meeting but it seems that iso requires a document to be done as iso<br>
+<span id=9567>… the wcag group tried to convince them that this is not useful to do for wcag and iso accepted it</span><br>
+<span id=beef>… iso accepted their argument and wcag was submitted</span><br>
+<span id=c9bf>… I have asked for the argument on how to make this case for epub</span></p>
+<p id=abcd class="phone s02"><cite>ivan:</cite> we also discussed images in the spine at tpac</p>
+<p id=d635 class="phone s01"><cite>wendyreid:</cite> we intend to leave the spec requirements for this as they are</p>
+</section>
+
+<section>
+<h3 id=c3b2>Parallel Content - <a href="https://github.com/w3c/epub-specs/discussions/2829">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2829</a></h3>
+<p id=b232bis class="phone s01"><cite>wendyreid:</cite> https://github.com/w3c/epub-specs/issues/2670, https://github.com/w3c/epub-specs/issues/2825, https://github.com/w3c/epub-specs/issues/2773, https://github.com/w3c/epub-specs/issues/2806</p>
+<p id=b232 class="phone s01"><cite>wendyreid:</cite> we've had use cases for multiple versions of the content and tried to solve with multiple renditions<br>
+<span id=3015>… parallel content is where there are two or more parts that appear in conjunction with each other</span><br>
+<span id=fa32>… content in translation is an example where you might have a poem in two different languages on facing pages so you can review each line in each language</span><br>
+<span id=826c>… it also comes up in accessibility issues</span></p>
+<p id=590f class="phone s03"><cite>gautierchomel:</cite> currently there are different problematics like translated content, fixed and reflow, audio and text</p>
+<p id=9fd8 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.irccloud.com/pastebin/HohO22uS/">https://<wbr>www.irccloud.com/<wbr>pastebin/<wbr>HohO22uS/</a></p>
+<p id=5b2c class="phone s03"><cite>gautierchomel:</cite> up until now there have been separate discussions and proposals for each but we should try to find one way for all<br>
+<span id=bd71>… I don't have a preferred option for how to address this technically</span></p>
+<p id=6642 class="phone s02"><cite>ivan:</cite> it is an important use case and multiple renditions covers at least some of it<br>
+<span id=a547>… we don't have a technical solution yet so this group probably can't do it - it likely needs to be incubated in the community group</span><br>
+<span id=3980>… I expect the solution will be complicated and needs incubation to figure out what will work</span></p>
+<p id=6a3d class="phone s04"><cite>Hadrien:</cite> multiple renditions does have a mapping document to jump between the renditions - it's a lot like a navigation document<br>
+<span id=326c>… we need to be careful not to force everything together if they don't work well together</span><br>
+<span id=069f>… I think if we modify multiple renditions we could do some interesting use cases like magazines with fixed and reflowable layouts</span><br>
+<span id=6112>… we shouldn't reject all of multiple renditions but I agree we do need to look into it more</span><br>
+<span id=a9a7>… the way multiple renditions was defined was not ideal</span></p>
+<p id=2d65 class="phone s01"><cite>wendyreid:</cite> I agree we need incubation - we have bits and pieces of what we need<br>
+<span id=5ab7>… if I'm reading a book where one page is one language and another in another language you wouldn't want two separate documents but we don't have multiple reading orders</span><br>
+<span id=d417>… same is true for audio where the transcript might be in the same file</span><br>
+<span id=7536>… but reflow and fxl probably are always going to require separate documents</span></p>
+<p id=0057 class="phone s04"><cite>Hadrien:</cite> I think another option for multiple reading orders than multiple renditions and all it entails - a separate publication - we also have collections for alternate reading order<br>
+<span id=1a4c>… we wouldn't need to introduce anything new - is worth exploring</span></p>
+<p id=9962 class=irc><cite>&lt;MURATA&gt;</cite> Unfortunately, multiple renditions were never really used.  Right?</p>
+<p id=dd36 class="phone s04"><cite>Hadrien:</cite> I had this in mind at tpac but we didn't have time to discuss - once we're done with comics I'd like to explore it<br>
+<span id=8665>… we should consider a task force since we're in a revision cycle right now</span></p>
+<p id=0a0a class="phone s02"><cite>ivan:</cite> I have practical problems, namely whatever we do if we want to put it in the epub standard we need two implementations<br>
+<span id=c1ff>… I get that it's not multiple renditions and it has not been picked up - that's why we took it out and made it a note</span></p>
+<p id=6ccd class=irc><cite>&lt;MURATA&gt;</cite> If my memory is correct, I think that it is too difficult to use multiple publication documents per zip file.</p>
+<p id=bfb9 class="phone s02"><cite>ivan:</cite> I'm worried about putting something into the standard again before we know that there will be adoption</p>
+<p id=1789 class="phone s01"><cite>wendyreid:</cite> if we are to undertake this a big question is what stopped adoption of multiple renditions - there are some implementations but they are really platform base<br>
+<span id=ac6b>… I have a feeling I know why - people didn't know what to do with what we gave them</span></p>
+<p id=95af class="phone s04"><cite>Hadrien:</cite> what if we create a task force that does not attempt to introduce new things in the spec<br>
+<span id=be83>… based on the result of that task force we see whether there is any interest and then decide where to go</span><br>
+<span id=ba75>… if that fails then we can move it over to the CG to look into further</span></p>
+<p id=be20 class="phone s05"><cite>gpellegrino:</cite> we shouldn't work in the past but whether it is needed now - EAA is requiring publishers to now produce both fxl and reflow in the same package</p>
+<p id=dfa2 class="phone s06"><cite>shiestyle:</cite> I wonder if there is enough interest or demand for this - I think it needs more incubation</p>
+<p id=d28d class="phone s02"><cite>ivan:</cite> the working group is getting thin and we have existing task forces with a lot of work to do - we should be getting to CR within half a year - so I'm worried about this taking more time away from the revision</p>
+<p id=d17f class="phone s04"><cite>Hadrien:</cite> there is demand for textbooks and it is common for magazines - they are lacking the format to do it<br>
+<span id=a5ac>… there is scale now that didn't exist when we did multiple renditions</span><br>
+<span id=e2ad>… the interest is specialized though</span><br>
+<span id=7262>… and I agree with Ivan that we shouldn't do too many things at the same time - there is still work for comics but not as much as for annotations</span><br>
+<span id=320c>… I can't see doing both in parallel but if we can close comics soon and we get interest in this from other participants then we should at least explore what we can do</span></p>
+<p id=4dd2 class=irc><cite>&lt;ivan&gt;</cite> +1 to Hadrien</p>
+<p id=b962 class="phone s04"><cite>Hadrien:</cite> and if we can't add anything to the spec than it still leaves people with some ideas to work on</p>
+<p id=39c5 class="phone s03"><cite>gautierchomel:</cite> scholarly publishing does do multiple renditions but in a closed environment - they need to provide interoperable content<br>
+<span id=0990>… I understand the time and resource issues but this problem has been around for a long time and should be a priority to finally address</span><br>
+<span id=a683>… other solutions are being implemented and it makes it harder to standardize</span></p>
+<p id=86fb class="phone s01"><cite>wendyreid:</cite> we need to do some outreach to find out who is interested before we get to a task force<br>
+<span id=47d7>… it's easy to start a task force but we don't want to find out later that the work won't be implemented</span></p>
+<p id=7d7f class="phone s03"><cite>gautierchomel:</cite> I think it would be good to have this in the CG because we have more people with interest in this area</p>
+<p id=2a75 class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1, anyone can join CG</p>
+<p id=807d class="phone s04"><cite>Hadrien:</cite> we also have interest in EDRLab but they are not represented in this group</p>
+<p id=44e0 class="phone s01"><cite>wendyreid:</cite> for a next step we should start the conversation in the CG<br>
+<span id=e130>… nothing stops us from promoting the work into the WG later</span><br>
+<span id=7781>… doesn't require more work from this group to get it started</span></p>
+<p id=addf class="phone s03"><cite>gautierchomel:</cite> I can try by mid-January to have a call in the CG to start a task force</p>
+</section>
+
+<section>
+<h3 id=08ae>Scheduling - <a href="https://github.com/w3c/epub-specs/discussions/2834">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2834</a></h3>
+<p id=b681 class="phone s01"><cite>wendyreid:</cite> only other thing is meeting scheduling</p>
+<p id=800f class="phone s01"><cite>wendyreid:</cite> I've already seen some responses, but we had a question about our meeting scheduling because our one time slot is not ideal for the west coast of US, too early, or too late for those in Japan<br>
+<span id=e588>… wanted to find out if we could go back to a rotating schedule</span><br>
+<span id=8aa0>… no interest so far in starting even earlier but nothing negative about a rotating meeting time</span></p>
+<p id=b632 class="phone s02"><cite>ivan:</cite> I've done the rotating schedule here and in other groups and it never works well - it divides the community<br>
+<span id=89a7>… it's always been abandoned after a while</span></p>
+<p id=b7ee class="phone s07"><cite>AvneeshSingh:</cite> do we have enough agenda items to fill up four or five meetings a month or should we consider dropping the schedule from every week</p>
+<p id=db4b class="phone s01"><cite>wendyreid:</cite> if you haven't had a chance to respond please think about it and add a comment</p>
+</section>
+
+<section>
+<h3 id=1d5f>test suite changes - <a href="https://github.com/w3c/epub-tests/pull/309">w3c/<wbr>epub-tests#309</a></h3>
+<p id=7d11 class="phone s02"><cite>ivan:</cite> I made some changes to the test suite after the tpac meeting because we deprecated a property<br>
+<span id=fbbd>… (I still need a full list of what we'll deprecated, as an aside)</span><br>
+<span id=0b4c>… there is a pull request for the tests to separate the tests that are deprecated - new labelling like required vs. recommended</span><br>
+<span id=6b6c>… the other thing is more controversial - if someone currently creates a test they are expected to create a new zipped epub file</span><br>
+<span id=e3af>… this forces the tester to test the book they've created</span><br>
+<span id=e933>… but this has become a pain when you need to go back and make minor changes to existing tests</span><br>
+<span id=f78b>… the PR adds a github action to auto-generate all the epubs</span><br>
+<span id=35bb>… is this okay or should we keep people generating the epubs manually?</span></p>
+<p id=11e5 class="phone s04"><cite>Hadrien:</cite> I will get back to you soon about the other properties to deprecate</p>
+<p id=b0c0 class="phone s03"><cite>gautierchomel:</cite> if all the epub files are updated then you lose some information about when they were last changed</p>
+<p id=5389 class="phone s02"><cite>ivan:</cite> yes, but the metadata in the epub file will still be the same about the last modification date</p>
+<p id=7aea class="phone s03"><cite>gautierchomel:</cite> might be a problem for sorting, but not sure how big</p>
+<p id=195a class="phone s02"><cite>ivan:</cite> for reporting the date of the packaged epub is not used<br>
+<span id=8cab>… only the unpacked files are used</span></p>
+<p id=c572 class="phone s01"><cite>wendyreid:</cite> the last modification date only changes if you actually modify the test</p>
+<p id=8272 class="phone s02"><cite>ivan:</cite> if you have a lot of tests to work on then generating each one becomes a pain to do<br>
+<span id=e2c6>… I considered adding epubcheck validation but I'm not sure how to do that</span></p>
+<p id=dddf class="phone s03"><cite>gautierchomel:</cite> I can send you an example of how to call it into your workflow</p>
+<p id=110e class="phone s01"><cite>wendyreid:</cite> could have epubcheck as an action</p>
+<p id=2ddf class="phone s02"><cite>ivan:</cite> but a lot of tests that epubcheck would have to be started up and run on<br>
+<span id=7545>… is it okay if I merge as it is now?</span></p>
+<p id=0ae9 class="phone s01"><cite>wendyreid:</cite> yes</p>
+<p id=0b01 class="phone s03"><cite>gautierchomel:</cite> yes</p>
+</section>
+
+<section>
+<h3 id=3f3d>Ways to identify inferred metadata - <a
+    href="https://github.com/w3c/epub-specs/discussions/2830">w3c/epub-specs/<wbr>discussions/<wbr>2830</a></h3>
+<p id=bf93 class=irc><cite>&lt;wendyreid&gt;</cite> <a
+        href="https://github.com/w3c/epub-specs/issues/2833">w3c/<wbr>epub-specs#2833</a></p>
+<p id=d40e class="phone s03"><cite>gautierchomel:</cite> I have questions about ways to infer metadata<br>
+<span id=2e31>… people are starting to update their epubs and that comes with a lot of AI generated content</span></p>
+<p id=ec21 class="phone s03"><cite>gautierchomel:</cite> if we cannot differentiate what has been auto-answered it will become problematic</p>
+<p id=9d8f class="phone s04"><cite>Hadrien:</cite> I raised this during tpac - there could be legal reasons for identifying what is AI generated<br>
+<span id=1e8e>… might not be in our scope to do this for html</span><br>
+<span id=b508>… if there is work going on in this area it would be helpful to know where</span></p>
+<p id=a01e class="phone s02"><cite>ivan:</cite> w3c is still trying to find out what can be done about AI - there is a new interest group but not answer at this time<br>
+<span id=180d>… even if we are talking metadata this is not just an epub issue</span><br>
+<span id=de91>… coming up with our own metadata in isolation is not a good idea</span></p>
+<p id=477c class="phone s01"><cite>wendyreid:</cite> we might be overthinking the question - this is only epub metadata and what is generated automatically</p>
+<p id=ae06 class=irc><cite>&lt;Hadrien&gt;</cite> <a href="https://w3c.github.io/pm-wg/minutes/2025-11-11-f2f.html#2ee0">https://<wbr>w3c.github.io/<wbr>pm-wg/<wbr>minutes/<wbr>2025-11-11-f2f.html#2ee0</a></p>
+<p id=17af class="phone s01"><cite>wendyreid:</cite> how can you tell if a book contains AI-generated metadata<br>
+<span id=262c>… could we use something like the refines attribute to make statements about resources</span><br>
+<span id=d8a9>… all we are doing is putting an asterisk on resouce essentially</span></p>
+<p id=5084 class="phone s04"><cite>Hadrien:</cite> I think ivan's point still stands that we don't have the metadata to say anything - we're lacking the vocabulary and it's not in our scope to define that<br>
+<span id=742b>… could be schema.org or dublin core or someone else to define the metadata</span></p>
+<p id=be62 class="phone s01"><cite>wendyreid:</cite> if I have a million epubs in my database and some are quite old and I want to add accessibility metadata then I can try to infer things like whether they support some textual reading<br>
+<span id=7870>… but there should be a way to say that this metadata was automated so it is not compeletely trustworthy</span></p>
+<p id=0a55 class="phone s03"><cite>gautierchomel:</cite> the problem is bigger, but yes, that is what we need to capture first</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</div>
+</body>
+</html>
