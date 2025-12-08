@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>PMWG Accessibility TF – 04 December 2025</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt="W3C" border="0" height="60" width="60"></a></p>
+
+<h1>Accessibility task force - PMWG</h1>
+<h2>04 December 2025</h2>
+
+<nav id="links">
+<a href="https://www.w3.org/2025/12/04-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id="prelims">
+<div id="attendees">
+<h2>Attendees</h2>
+<dl class="intro">
+<dt>Present</dt><dd>AvneeshSingh, CharlesL1, CircularKen, DaleRogers, gpellegrino, Laura, mgarrish, SimonM, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>CharlesL1, wendyreid</dd>
+</dl>
+</div>
+
+<nav id="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#c4ff">What are short term goals for FXL accessibility which can have high impact?</a></li>
+<li><a href="#4360">Longer term plan for improving FXL accessibility.</a></li>
+<li><a href="#ddb6">Explainer document for establishing the need for semantics for extended descriptions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id="meeting" class="meeting">
+<h2>Meeting minutes</h2>
+<section><p id="e020" class="phone s01"><cite>AvneeshSingh:</cite> Background FixedLayout milestone.  How to bridge both TF's this Document for challenges and solutions is ready.<br>
+<span id="07f7">… merge the TFs so we can work on these issues together.</span></p>
+</section>
+
+<section>
+<h3 id="c4ff">What are short term goals for FXL accessibility which can have high impact?</h3>
+<p id="9df4" class="summary">[Introductions]</p>
+<p id="5637" class="phone s01"><cite>AvneeshSingh:</cite> short-term what is highest impact activity to improve lives with disabilities with Fixed layouts</p>
+<p id="4e77" class="phone s02"><cite>wendyreid:</cite> 2 docs, "Recommendations" and the other is a Techniques which is incomplete.  question: how do we do this...<br>
+<span id="c5e9">… can be easy but others very difficult.  Complex fixed layout, types of fixed layout content, some is relatively simple and can be made accessible, but the more complex it is the harder to make accessible.</span><br>
+<span id="b604">… Like Manga, Comics, really illustrated text books what does a11y mean?</span><br>
+<span id="d468">… we don't know, speech bubble detection, etc. Content that transforms reflow/fixed systems that can do this for you potentially.</span><br>
+<span id="2d87">… parralization of content, different languages, navigation etc.</span><br>
+<span id="95c1">… we are on the bleeding edge is some cases.</span></p>
+<p id="c858" class="phone s01"><cite>AvneeshSingh:</cite> Some things are promising but others require incubation.  some can be handled in short term. impact on end users. divide 2 buckets.  low hanging fruits in 1-2 years and other &gt;2 years provide more better solutions.<br>
+<span id="ff7c">… what are our ideas for short term?</span></p>
+<p id="432b" class="phone s03"><cite>George:</cite> 2 documents one that finished is a WG Note. Is that APA had comments / questions on?</p>
+<p id="6fb7" class="phone s02"><cite>wendyreid:</cite> Yes and we addressed those. and APA has signed off on.</p>
+<p id="b0bb" class="irc"><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/TR/epub-fxl-a11y/">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-fxl-a11y/</a></p>
+<p id="7366" class="phone s03"><cite>George:</cite> techniques is still in draft....ok</p>
+<p id="db14" class="irc"><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/epub-specs/wg-notes/fxl-a11y-tech/">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>wg-notes/<wbr>fxl-a11y-tech/</a></p>
+<p id="ffff" class="phone s04"><cite>CircularKen:</cite> short term: 2 top, image description, for larger images describe parts, regions etc. is possible.<br>
+<span id="b3f5">… reading order is harder, but necessary to understand the content. different tools to apply reading order but without text in correct order is as important as the text from image descriptions.</span></p>
+<p id="888f" class="phone s01"><cite>AvneeshSingh:</cite> reading order text on screen and there are workarounds and there is text behind the scene that is in the order but maybe not match exactly in the visible text. do we need to worry about the wcag issue where these should match?</p>
+<p id="a145" class="phone s04"><cite>CircularKen:</cite> for fixed layout you can have 50 items on one spread and its that order which might be scatterd around the page. that is the challenge.</p>
+<p id="f3c7" class="phone s02"><cite>wendyreid:</cite> Visual vs. logical reading order<br>
+<span id="77ba">… in note we say to follow the WCAG definition.</span></p>
+<p id="c9f0" class="phone s05"><cite>Laura:</cite> flow chart or you are able to describe parts of a complex image, it may go in a order but not be visually in the same order, so how to indicate paths of reading order that is something that is very important.<br>
+<span id="0d37">… visually you can choose which way to go.</span></p>
+<p id="7055" class="phone s04"><cite>CircularKen:</cite> its a design and editorial decision. some publishers do this on purpose and then someone needs to decide.</p>
+<p id="ea80" class="phone s01"><cite>AvneeshSingh:</cite> serial reading order may be different than visual perception.</p>
+<p id="52f5" class="phone s06"><cite>DaleRogers:</cite> author I can choose which order to read, but the audience might not interpret the page in the same way.  Equity vs. Equality.<br>
+<span id="af8d">… different media, printed page, animation, then audio file, / ALS, to make content more accessible.</span><br>
+<span id="e23e">… publisher point of view, they are not sure if you can put all of that into an inexpensive EPUB.  I would like to hear what is accessible and what legal requirements do we need to have EU / Title II requirements what are the must haves.</span></p>
+<p id="ec09" class="phone s07"><cite>CharlesL1:</cite> For image descriptions, we may need to define what is the text on the screen vs what is a description of the interactions, the background, what is happening<br>
+<span id="43a4">… for SR users vs someone using TTS when sighted, they have different needs</span><br>
+<span id="c948">… may want descriptions being spoken, may not</span><br>
+<span id="9f4c">… personalization</span><br>
+<span id="2b82">… if the text is not live, part of the image, how do you differentiate them</span></p>
+<p id="eb1b" class="irc"><cite>&lt;gpellegrino&gt;</cite> <a href="https://www.w3.org/TR/epub-a11y-eaa-mapping/">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-a11y-eaa-mapping/</a></p>
+<p id="c25f" class="phone s08"><cite>gpellegrino:</cite> having an accessible fixed layout we have epub 1.1 and WCAG 2.2 and the mapping and the EU requirements</p>
+<p id="22ea" class="summary">we have ARIA and EPUB 3.3, maybe what is missing is to have best practice on how to comply with specific WCAG requirements from a fixed layout point of view.<br>
+<span id="cd80">… we don't have to define new things for low hanging fruit just how to use these technologies.</span></p>
+<p id="d422" class="irc"><cite>&lt;Laura&gt;</cite> I have to drop for another meeting. Thank you all. Meet you again next time! But just in response to the comment about the philosophical question of what is accessible: letting people navigate in multiple ways through a layout that is non-linear feels very important. And I also like Charles’s point about differentiating between what is text that</p>
+<p id="ca4f" class="irc"><cite>&lt;Laura&gt;</cite> is on the screen vs. what is an explanation of what is on the screen; which not only applies to images but also to video and complex interactives and even just the layout of a fixed layout bit of content.</p>
+<p id="ca29" class="phone s02"><cite>wendyreid:</cite> next thing to do to have most impact is to finish the Techniques, but we were going very broad. Here are some essential fixed layout practices, putting alt text, context order is clear.</p>
+<p id="f85a" class="summary">Reading order of the pages do not have content across spreads, if you have a 2 page spread where you must bounce between both pages so notes to say "don't do this".<br>
+<span id="9e50">… here is the basics and in the background we can work on the more complex images, sound effects vs real text in comics for example.</span><br>
+<span id="b532">… some of these may not even exist in WCAG.</span></p>
+<p id="8b30" class="phone s01"><cite>AvneeshSingh:</cite> question what are the main topics we should handle first, logical reading order, alt text, etc.</p>
+<p id="e354" class="phone s09"><cite>SimonM:</cite> legislation does not give technical requirements. this is slightly difficult to achieve.</p>
+<p id="274f" class="phone s01"><cite>AvneeshSingh:</cite> make it clear when writing the best practices that this is not guaranty compliance with EAA for example.</p>
+<p id="14af" class="phone s04"><cite>CircularKen:</cite> semantic tags for headings, lists etc. they are useful/supported fundamental to put structure, page lists and landmarks.<br>
+<span id="fff3">… publishers using leading software can't do it currently and a lot of manual effort is still needed.</span></p>
+<p id="3490" class="phone s01"><cite>AvneeshSingh:</cite> best practices is the way to do this as its not a recommendation / standards. tools may not follow now but in 2-3 years they will start.<br>
+<span id="41e8">… market forces does work. slowly these will come.</span></p>
+<p id="98a1" class="phone s03"><cite>George:</cite> when we have Best practices / techniques then we can look at authoring tools and provide a path for those tools to use the techniques to comply.<br>
+<span id="5fa8">… I am interested in Reading order with Screen Reader or Read Aloud. We can't get the screen reader to make it accessible but Read Aloud will present it in the correct reading Order.  I would accept that. But what about low-vision. the Req. in WCAG is that you dont pan from left/right in order to read the content and why reflow is so good. But is the giant barrier for LV folks?</span><br>
+<span id="ac9c">… lots now use 3X reading glasses. is that idea of panning an accessible workaround.</span></p>
+<p id="b63e" class="phone s01"><cite>AvneeshSingh:</cite> that is a AA req.</p>
+<p id="10000" class="phone s08"><cite>gpellegrino:</cite> about authoring tools, w3c we don't mention authoring tools and all these best practices etc. don't mention these tools. techniques we tell how to make it by code and the community knew it wasn't possible with certain tools and they eventually will fix these issues.</p>
+<p id="2d38" class="phone s07"><cite>CharlesL1:</cite> For the LV piece George mentioned, there are exceptions right now like complex tables that require vertical and horizontal scrolling, because it's not possible to reflow without breaking</p>
+<p id="54fb" class="phone s06"><cite>DaleRogers:</cite> we always req. high contrast so anyone looking at our work could see the differences but dep. on the art work you may not want high contrast because thats part of the story.<br>
+<span id="2562">… there is a technical thing and a story telling which can be in conflict.</span></p>
+<p id="dae0" class="summary"><a href="https://w3c.github.io/epub-specs/wg-notes/fxl-a11y-tech/">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>wg-notes/<wbr>fxl-a11y-tech/</a></p>
+<p id="ffae" class="phone s02"><cite>wendyreid:</cite> I would encourage everyone to review this tech. document.<br>
+<span id="537d">… content a11y programmatic techniques (RO, images, Navigation, tables, interactivity) and Content Accessibility Visual: Color contrast, textual hierarchy font selection etc. and a section on A11y Metadata. Please read and flag issues using Github issues. and flag anything too complex to include in a basic best practices doc.</span></p>
+<p id="0833" class="phone s01"><cite>AvneeshSingh:</cite> thats everyone's homework.  Anyone want to take on a specific section?</p>
+<p id="3511" class="phone s04"><cite>CircularKen:</cite> when Gorge mentioned Read Aloud / Screen readers and perhaps Media overlays would have a different order?</p>
+<p id="076b" class="phone s03"><cite>George:</cite> PAAG call and Affinity was using Read Aloud reading a comic which was great. If I could get that same results with my Screen Reader, but what I got was pretty good but if Read Aloud and is following the same path as a Screen Reader that is fine.</p>
+<p id="6625" class="phone s01"><cite>AvneeshSingh:</cite> Screen Reader used with folks with visual disability, and Read Aloud used by a different user group, dyslexic user may not want to hear the image descriptions.</p>
+<p id="cab6" class="phone s03"><cite>George:</cite> should be an option to turn on/off the alt text.</p>
+<p id="6c02" class="phone s04"><cite>CircularKen:</cite> order of text? same?</p>
+<p id="564b" class="phone s02"><cite>wendyreid:</cite> a screen reader and TTS tools should parse the text the same but with a Screen reader has a lot more control, navigation tools etc. but most TTS don't give you any control just block level, no idea its a heading etc.</p>
+<p id="02e8" class="phone s04"><cite>CircularKen:</cite> it is possible to not follow the DOM order depending on how the SMIL files are sequence.</p>
+<p id="ad4d" class="phone s10"><cite>SimonM:</cite> TTS in a reading system (RS) or MO are not specifically disability features. you might not be able to switch on the voices inbuilt audio voices for example.</p>
+</section>
+
+<section>
+<h3 id="4360">Longer term plan for improving FXL accessibility.</h3>
+<p id="8413" class="phone s01"><cite>AvneeshSingh:</cite> dream for the A11y of Fixed Layout what are the most promising with recent discussions?</p>
+<p id="0b26" class="phone s08"><cite>gpellegrino:</cite> sync reflowable / FL some publishers in Europe are starting to do this. user can see side by side.<br>
+<span id="7fd3">… without any standardization so each publisher does it differently.</span><br>
+<span id="b032">… RS looking at a FL and turn it into a Reflowable document if its structured very well.</span><br>
+<span id="8fdb">… it should be relatively easy to do this. a lot of RS can't do this because how they do FXL completely separate than Reflow.  We need to define the expectations.</span></p>
+<p id="14cb" class="irc"><cite>&lt;CircularKen&gt;</cite> George the read aloud story extract (Harry Potter) you heard was Azure TTS in Colibrio Reader from an InDesign with region descriptions and reading order added and exported to FXL EPUB with CircularFLO</p>
+<p id="40e3" class="phone s08"><cite>gpellegrino:</cite> most promising parallelized content. If we can combine it and navigate through it would be huge.</p>
+<p id="6785" class="phone s06"><cite>DaleRogers:</cite> I have the first chapter the comic, the next poem is in Reflow. its a reinterpretation of the content. I am experimenting with AI. if it could take and EPUB and could do that interpretation for us.<br>
+<span id="5406">… wondering if the future might be AI to help us here.</span></p>
+<p id="d60c" class="phone s01"><cite>AvneeshSingh:</cite> You can do this to some degree with giving Gemini or chatGPT the EPUB then ask questions. But, EPUB is a business format, and market forces will decide its future.</p>
+</section>
+
+<section>
+<h3 id="ddb6">Explainer document for establishing the need for semantics for extended descriptions</h3>
+
+<p id="7b27" class="phone s01"><cite>AvneeshSingh:</cite> we have this explainer we are working on.</p>
+<p id="48cc" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/publ-a11y-extended-desc/pull/1">w3c/<wbr>publ-a11y-extended-desc#1</a></p>
+<p id="c4c7" class="phone s01"><cite>AvneeshSingh:</cite> once this gets to first working draft we will ask for feedback</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a href="https://w3c.github.io/scribe2/scribedoc.html">scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+
+
+</body>
