@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 11 December 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>11 December 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Dec/0012.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/12/11-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, brady, CharlesL, DaleRogers, duga, George, gpellegrino, Hadrien, ivan, MasakazuKitahara, mgarrish, rdeltour, shiestyle, SueNeu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>gautierchomel, laurentlm</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#59bf">Deprecate properties - w3c/<wbr>epub-specs#2841</a></li>
+<li><a href="#5a1f">Reorganized Layout Section - w3c/<wbr>epub-specs#2844</a></li>
+<li><a href="#6b52">Naming</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=59bf>Deprecate properties - <a href="https://github.com/w3c/epub-specs/issues/2841">w3c/<wbr>epub-specs#2841</a></h3>
+<p id=740d class="phone s01"><cite>wendyreid:</cite> This is to deprecate rendition orientation and the spine overrides, flow, and spread<br>
+<span id=9e6f>… in the case of spread there is some concern for the spine level overrides</span></p>
+<p id=4e43 class="phone s02"><cite>ivan:</cite> let us be precise - we would declare these as obsolete but not conformant, not deprecated.<br>
+<span id=d71c>… this will reduce the message level from epubcheck</span><br>
+<span id=9cd1>… we have heard from toshiakikoike that this is used widely in Japan and deprecating would be bad</span><br>
+<span id=b499>… so we should just say that these won't be used</span></p>
+<p id=d0bf class="phone s03"><cite>shiestyle:</cite> yes, if these are marked as errors it will be a big problem in Japan<br>
+<span id=814f>… so if we deprecate we have to consider epubcheck behavior</span></p>
+<p id=b3ee class="phone s04"><cite>rdeltour:</cite> If we want epubcheck to be more aggressive, then we deprecate some values but make the others obsolete</p>
+<p id=8b83 class="phone s05"><cite>mgarrish:</cite> The whole point of obsolete is to mark things as not used or supported, but we don't want to generate errors<br>
+<span id=5547>… The rendition viewport one should be deprecated, [deprecated???]</span></p>
+<p id=da4d class="phone s06"><cite>SueNeu:</cite> I have been doing fxl for a long time, some are other 10 years old<br>
+<span id=b3d3>… this will be a nightmare for them</span><br>
+<span id=9388>… I would vote for obsolete over deprecated</span></p>
+<p id=7f2f class="phone s02"><cite>ivan:</cite> I think we should make it clear that we meant obsolete<br>
+<span id=708c>… we just should not discuss deprecation</span><br>
+<span id=5e06>… are we ok putting all these in that category?</span></p>
+<p id=c8f7 class="phone s05"><cite>mgarrish:</cite> It is actually obsolete but conforming, not &quot;not conforming&quot;</p>
+<p id=bab4 class=summary>ivan + mgarrish: some discussion around language for obsolete</p>
+<p id=97c9 class="phone s01"><cite>wendyreid:</cite> I do agree with SueNeu, we cannot deprecate since we will suddenly get a lot of errors<br>
+<span id=d8fa>… so we should obsolete these</span><br>
+<span id=8633>… we did discuss obsolete with a path to deprecate</span><br>
+<span id=d56a>… we are in consensus with orientation and flow</span><br>
+<span id=1c37>… spread still has some nuance</span><br>
+<span id=e508>… package level makes sense to remove, but there is some question around spine level</span></p>
+<p id=b0c6 class="phone s07"><cite>Hadrien:</cite> spread settings are harmful, auto is only default, none is problematic<br>
+<span id=be7d>… landscape, like portrait makes no sense</span><br>
+<span id=adfb>… that leaves 'both' which is highly misused</span><br>
+<span id=4b74>… If you build a RS that follows this behavior you get very bad experience</span><br>
+<span id=b2ba>… All we need is &quot;this should be side by side&quot; or &quot;this shouldn't be side by side&quot;</span><br>
+<span id=764a>… we are sending the wrong message by combining all this information one big property</span><br>
+<span id=fc85>… So something like 'center' is better</span><br>
+<span id=a58e>… We obviously don't want to break everything, but addressing these separately is confusing</span></p>
+<p id=5efc class="phone s01"><cite>wendyreid:</cite> even I was incorrectly conflating placement, so we should clarify that section</p>
+<p id=5d9b class="phone s06"><cite>SueNeu:</cite> I am glad placement will still be there<br>
+<span id=717b>… I hope we test epubcheck with different types of fxl</span></p>
+<p id=21a6 class="phone s03"><cite>shiestyle:</cite> Regarding spread: none, we do use it in some cases, but it is the same as 'center'<br>
+<span id=7f08>… in some cases we say spine spread-none, so it would be bad for these to be errors</span></p>
+<p id=af60 class="phone s01"><cite>wendyreid:</cite> If we make it obsolete, epubcheck will only use INFO, so it won't be an error<br>
+<span id=4f0a>… at the very least this will be obsolete for now</span><br>
+<span id=4a5d>… so there will be a lot more INFO messages, but it shouldn't break toolchains</span></p>
+<p id=63ab class=irc><cite>&lt;wendyreid&gt;</cite> PROPOSED: rendition:spread, rendition:flow, and rendition:orientation will be made obsolete in EPUB 3.4 at the package and spine level, in EPUBCheck they will use INFO messages.</p>
+<p id=31ba class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=31bb class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=71ba class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=71bb class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=b1ba class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=b1bb class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=b1bc class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=f1ba class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=f1bb class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=31bc class=irc><cite>&lt;gpellegrino&gt;</cite> +1</p>
+<p id=31bd class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=71bc class=irc><cite>&lt;CharlesL1&gt;</cite> +1</p>
+<p id=71bd class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=2fea class=resolution><strong>RESOLUTION:</strong> rendition:spread, rendition:flow, and rendition:orientation will be made obsolete in EPUB 3.4 at the package and spine level, in EPUBCheck they will use INFO messages.</p>
+</section>
+
+<section>
+<h3 id=5a1f>Reorganized Layout Section - <a href="https://github.com/w3c/epub-specs/pull/2844">w3c/<wbr>epub-specs#2844</a></h3>
+<p id=a1ff class="phone s01"><cite>wendyreid:</cite> In working on the reorg PR, some questions have come up about moving some things to the fxl section<br>
+<span id=f87e>… like synthetic spreads</span><br>
+<span id=1652>… mgarrish are there others?</span></p>
+<p id=1cb3 class="phone s05"><cite>mgarrish:</cite> The biggest one is the one we just resolved<br>
+<span id=a489>… our previous big problem was it being spread over two specs, 3.3 glommed them together</span><br>
+<span id=3ae2>… I cleaned that up a lot</span><br>
+<span id=bfc9>… and Hadrien's roll is in it, a few other things</span><br>
+<span id=57ed>… some issues like where are spine overrides allowed</span><br>
+<span id=931c>… not sure if we want to get into that now</span></p>
+<p id=49b4 class="phone s02"><cite>ivan:</cite> The big question does spreads ever apply to flowing?<br>
+<span id=57aa>… strictly speaking today it is allowed, but the should we continue with that? Or reorg the doc to make that better</span></p>
+<p id=1819 class="phone s05"><cite>mgarrish:</cite> I introduced images in spine simply to acknowledge that they are fxl<br>
+<span id=2866>… just to make it clear</span><br>
+<span id=9090>… if those are ok, and if we are ok with spreads and reflow not going together?</span></p>
+<p id=cbc9 class="phone s06"><cite>SueNeu:</cite> I haven't seen a used case where it makes sense for spreads in reflow<br>
+<span id=749d>… but there is a need for mixed documents that have reflow and hybrid</span><br>
+<span id=a258>… I just want to make sure if we disallow spreads we aren't taking options away from some creators?</span></p>
+<p id=2631 class="phone s08"><cite>DaleRogers:</cite> I want to agree with SueNeu. In the epubs I create, I have mixed fxl/reflow<br>
+<span id=2db4>… I am learning that sometimes documents are treated as reflow or fxl as an entire epub</span><br>
+<span id=ab0e>… it would be nice to have that capability</span></p>
+<p id=6da6 class="phone s07"><cite>Hadrien:</cite> I don't think there is any impact<br>
+<span id=17a0>… the other thing is, no one knows how to implement this</span><br>
+<span id=9560>… or how we would even test this</span><br>
+<span id=9648>… and it is unused</span><br>
+<span id=8a53>… and it is hinted that it is for fxl</span><br>
+<span id=02df>… this just makes sense for clarity</span><br>
+<span id=3781>… as a top level section I think it causes confusion</span></p>
+<p id=c083 class="phone s01"><cite>wendyreid:</cite> If we move spread placement to fxl, it will be clearer since in practice it only works for fxl<br>
+<span id=6713>… You could use it on a reflow, but it doesn't really make sense</span></p>
+<p id=a72a class=irc><cite>&lt;shiestyle&gt;</cite> +1 to Wendy</p>
+<p id=61f5 class="phone s01"><cite>wendyreid:</cite> so we should say spread placement is only for fxl documents, whether they are complete epubs or hybrid</p>
+<p id=c893 class="phone s06"><cite>SueNeu:</cite> Thanks, that is helpful.<br>
+<span id=56bc>… I agree now, it is better to focus on fxl</span></p>
+<p id=229d class="phone s08"><cite>DaleRogers:</cite> For me it is more semantics. Does document mean an xhtml page or the epub?</p>
+<p id=3f63 class="phone s01"><cite>wendyreid:</cite> We mean content document</p>
+<p id=ffff class="phone s04"><cite>rdeltour:</cite> Just checking that the PR stays open for a few days, I have some comments<br>
+<span id=ab33>… one is about identifying fxl documents</span><br>
+<span id=5e6b>… we have some statements that are hard to test</span><br>
+<span id=e469>… so we say when the creator has this intent, but we can't test intent</span><br>
+<span id=6137>… if instead, we say a document is fxl BECAUSE it has a viewport (e.g.) then we can test</span></p>
+<p id=0a47 class="phone s05"><cite>mgarrish:</cite> It will definitely be open for a while<br>
+<span id=622f>… I need to do a proper clean up</span><br>
+<span id=e048>… so please comment on the PR</span></p>
+<p id=0f35 class="phone s02"><cite>ivan:</cite> we should do a proper resolution before we move on</p>
+<p id=d630 class=irc><cite>&lt;wendyreid&gt;</cite> PROPOSED: Move the spread placement section into the pre-paginated section of the specification.</p>
+<p id=71f9 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=b1f9 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=31fa class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=31fb class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=31fc class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=71fa class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=b1fa class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=f1fa class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=f1fb class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=31fd class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=71fb class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=b1fb class=irc><cite>&lt;kersc&gt;</cite> +1</p>
+<p id=f1fc class=irc><cite>&lt;CharlesL1&gt;</cite> +1</p>
+<p id=1e64 class=resolution><strong>RESOLUTION:</strong> Move the spread placement section into the pre-paginated section of the specification.</p>
+</section>
+
+<section>
+<h3 id=6b52>Naming</h3>
+<p id=b580 class="phone s01"><cite>wendyreid:</cite> Hadrien started this as a side comment, but it is worth discussing<br>
+<span id=b89e>… we have always called it pre-paginated, but everyone calls it fixed layout</span><br>
+<span id=1ffe>… Fortunately I have never seen that in the property itself</span><br>
+<span id=5e0b>… should we clarify in the spec that we are discussing fixed layout when we mention pre-paginated</span></p>
+<p id=5498 class="phone s02"><cite>ivan:</cite> Is 'roll' fixed layout or  not?</p>
+<p id=0407 class="phone s05"><cite>mgarrish:</cite> This came up in the PR<br>
+<span id=5cf7>… fixed-layout is the document, pre-paginated is the layout</span><br>
+<span id=a00f>… that is why I split out fixed layout, so fixed layout can apply to pre-paginated and roll</span><br>
+<span id=4e14>… just from a spec perspective the presentation should be split from the property</span></p>
+<p id=8a61 class="phone s03"><cite>shiestyle:</cite> 'roll' is for scrolled comics, which will be images, which will be fixed layout</p>
+<p id=10000 class="phone s06"><cite>SueNeu:</cite> fixed layout is clearer than pre-paginated<br>
+<span id=23e3>… all it meant to me was that pre-paginated meant all the page breaks were pre calculated, perhaps with hard page breaks</span></p>
+<p id=9a1e class="phone s01"><cite>wendyreid:</cite> the way I look at it, we have reflow and fixed, and within fixed we have pre-paginated and roll<br>
+<span id=10001>… they are both fxl, with the same restrictions (e.g. no font changes)</span><br>
+<span id=7c77>… I don't think we should remove pre-paginated, and it actually makes more sense now</span><br>
+<span id=7de7>… I wonder if we frame it that way</span></p>
+<p id=76c3 class=irc><cite>&lt;SueNeu&gt;</cite> wendyreid +1</p>
+<p id=b761 class="phone s01"><cite>wendyreid:</cite> so people know at it's core it is fxl with a different presentation</p>
+<p id=66fd class=irc><cite>&lt;ivan&gt;</cite> +1 to wendy's view of terms</p>
+<p id=9ef4 class="phone s08"><cite>DaleRogers:</cite> There is a difference in the way that book makers and technical people discuss things<br>
+<span id=6b81>… in html there is the pre tag, which means this is already formatted don't touch it</span><br>
+<span id=4651>… is there a way to make technical specs more human centered so we don't have to translate things?</span></p>
+<p id=b07d class="phone s05"><cite>mgarrish:</cite> So we could make a new fixed layout section with pre-paginated and roll together underneath</p>
+<p id=81f0 class=irc><cite>&lt;SueNeu&gt;</cite> mgarrish +1</p>
+<p id=db72 class="phone s01"><cite>wendyreid:</cite> Yes, that is exactly what I am thinking, and it makes things clearer</p>
+<p id=7690 class="phone s07"><cite>Hadrien:</cite> To go back to the previous resolution, we need to make sure syntehtic spreads are for pre-paginated only<br>
+<span id=0a56>… not for roll docs</span></p>
+<p id=5228 class="phone s02"><cite>ivan:</cite> We have to careful about [something] being applied to both types of fxl documents</p>
+<p id=6110 class=irc><cite>&lt;shiestyle&gt;</cite> Reflow or Fixed: font size changeable or not, Pre-paginated or Roll: spread usable or not</p>
+<p id=77ad class="phone s05"><cite>mgarrish:</cite> Yes, so images in spine will go in the higher level fixed layout section</p>
+<p id=10002 class="phone s07"><cite>Hadrien:</cite> Images in spine for fxl will be very common<br>
+<span id=5a9a>… for roll it may be the only thing that is used</span></p>
+<p id=7e07 class="phone s01"><cite>wendyreid:</cite> Homework - think about a better name for obsolete, and think about using the transcript for scribing</p>
+<p id=66a5 class="phone s05"><cite>mgarrish:</cite> We can just use outdated for obsolete<br>
+<span id=9cf7>… which seems just as good</span></p>
+<p id=baaf class=irc><cite>&lt;rdeltour&gt;</cite> HTML uses 'obsolete' for both, specifying whether it is conforming or non-conforming</p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#2fea">rendition:spread, rendition:flow, and rendition:orientation will be made obsolete in EPUB 3.4 at the package and spine level, in EPUBCheck they will use INFO messages.</a></li>
+<li><a href="#1e64">Move the spread placement section into the pre-paginated section of the specification.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body>
+</html>

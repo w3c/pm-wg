@@ -278,8 +278,7 @@
     {
         "nick": [
             "Hadrien",
-            "HadrienGardeur",
-            "hadrian"
+            "HadrienGardeur"
         ],
         "name": "Hadrien Gardeur",
         "github": "HadrienGardeur"
@@ -456,7 +455,8 @@
     },
     {
         "nick": [
-            "George"
+            "George",
+            "kersc"
         ],
         "name": "George Kerscher",
         "github": "georgekerscher"
