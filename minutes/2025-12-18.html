@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group &ndash; 18 December 2025</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group</h1>
+<h2>18 December 2025</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2025Dec/0021.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2025/12/18-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>CharlesL1, DaleRogers, duga, elizabeth, gautierchomel, GeorgeK, Hadrien, ivan, kimberg, LaurentLM, manucharian, MasakazuKitahara, mgarrish, rdeltour, shiestyle, SueNeu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>Avneeshsingh, gpellegrino</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>SueNeu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#a34b">align-x-center - w3c/<wbr>epub-specs#2847</a></li>
+<li><a href="#7000">introductionn of grigoriy</a></li>
+<li><a href="#0489">Reorganized layout section - w3c/<wbr>epub-specs#2844</a></li>
+<li><a href="#e150">AOB</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=a34b>align-x-center - <a href="https://github.com/w3c/epub-specs/issues/2847">w3c/<wbr>epub-specs#2847</a></h3>
+<p id=7abf class="phone s01"><cite>wendyreid:</cite> we want to talk about whether this is only for fixed layout</p>
+<p id=c34a class="phone s02"><cite>duga:</cite> literally everyone wants to obsolete this, can we take a resolution?</p>
+<p id=23a8 class="phone s03"><cite>mgarrish:</cite> I’ve heard two options, deprecating it or outdate it?</p>
+<p id=1c9c class="phone s04"><cite>shiestyle:</cite> I think property is regressive from Japan many years ago</p>
+<p id=1697 class=summary>only a few reading systems support it, publishers rarely use it<br>
+<span id=e8d3>… I propose to move to either status</span></p>
+<p id=f1a4 class="phone s05"><cite>ivan:</cite> the question is will any book that has this property be flagged with an error?</p>
+<p id=008e class="phone s04"><cite>shiestyle:</cite> I think this feature is rarely used, so it is OK to throw an error<br>
+<span id=dfd2>… deprecated is fine</span></p>
+<p id=aa1b class=summary>toshiakikoike, tanslated by shiestyle to English from Japanese<br>
+<span id=e6b3>… this property was proposed by Koike-san and Ishii-san many years ago</span><br>
+<span id=e961>… it is not a problem if this is deprecated</span></p>
+<p id=42e7 class="phone s01"><cite>wendyreid:</cite> I wonder if this will result in a flood of errors for legacy books</p>
+<p id=12a9 class="phone s05"><cite>ivan:</cite> it seems this is not a problem</p>
+<p id=7941 class=irc><cite>&lt;wendyreid&gt;</cite> PROPOSED: Deprecate 'align-x-center' in EPUB 3.4.</p>
+<p id=30f7 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=b0f7 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=b0f8 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=f0f7 class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=f0f8 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=f0f9 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=30f8 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=30f9 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=70f7 class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=b0f9 class=irc><cite>&lt;GeorgeK&gt;</cite> +1</p>
+<p id=30fa class=irc><cite>&lt;LaurentLM&gt;</cite> +1</p>
+<p id=30fb class=irc><cite>&lt;CharlesL1&gt;</cite> +1</p>
+<p id=70f8 class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=70f9 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=b0fa class=irc><cite>&lt;gautierchomel&gt;</cite> +1</p>
+<p id=0f4e class=resolution><strong>RESOLUTION:</strong> Deprecate 'align-x-center' in EPUB 3.4.</p>
+</section>
+
+<section>
+<h3 id=7000>introductionn of grigoriy</h3>
+<p id=7795 class="phone s01"><cite>wendyreid:</cite> I would like to invite [grigoriy] to introduce himself</p>
+<p id=828f class="phone s06"><cite>gman:</cite> I was invited by Gautier as a representative of French publishing<br>
+<span id=3a2a>… my specialty is educational texts and converting them to Ebooks</span></p>
+</section>
+
+<section>
+<h3 id=0489>Reorganized layout section - <a href="https://github.com/w3c/epub-specs/pull/2844">w3c/<wbr>epub-specs#2844</a></h3>
+<p id=1b69 class="phone s05"><cite>ivan:</cite> there are over 100 comments</p>
+<p id=90e5 class="phone s03"><cite>mgarrish:</cite> We were looking at the initial start page, what should happen when there is no spread placement on the first spine item<br>
+<span id=915e>… we decided we should display it centered in the viewscreen or slotting the page on its own however that best works</span><br>
+<span id=9077>… we have a note to make an equivalent in rolled layouts</span></p>
+<p id=b3b0 class="phone s07"><cite>Hadrien:</cite> There was a discussion also about the first resource when there isn’t spread information<br>
+<span id=a774>… there was a discussion with Roman about other things</span></p>
+<p id=33d8 class="phone s03"><cite>mgarrish:</cite> The issue with Roman was whether this should be a MUST<br>
+<span id=4a21>… this removes a normative requirement that was untestable</span><br>
+<span id=3797>… I think this works in this case because this is an authoring suggestion</span><br>
+<span id=5138>… it would be good to move forward since we have a lot of issues in the PR</span></p>
+<p id=5fcb class="phone s05"><cite>ivan:</cite> it should be merged as soon as possible</p>
+<p id=937a class=irc><cite>&lt;gman&gt;</cite> Hadrien my nickname is the first letter of my first name and 3 first letters of my last name, which makes a half-life reference, how blessed can one be :)</p>
+<p id=42b9 class="phone s05"><cite>ivan:</cite> we said we would add a not whereby it is possible to make this in an FXL</p>
+<p id=9f2f class="phone s03"><cite>mgarrish:</cite> it is in the discussion about fixed-layout documents<br>
+<span id=80ad>… and in the icb section it says if you are using these, then the reading system will pick it up</span></p>
+<p id=5e8f class="phone s05"><cite>ivan:</cite> this should be merged as soon as possible followed by a revamping of the test cases in the new year</p>
+<p id=3a6e class="phone s02"><cite>duga:</cite> we should submit this asap, there are 100 comments on the PR<br>
+<span id=03be>… many of them have nothing to do with reorganization</span><br>
+<span id=2140>… I don’t think this is a good workflow, we are doing real, unrelated editing in this PR</span><br>
+<span id=40d2>… if you see something in a PR that isn’t related to the PR, they should open a separate issue</span><br>
+<span id=4adb>… and I suggest mgarrish pushback on this</span><br>
+<span id=9f17>… obviously somethings would be easier to do at the same time,</span><br>
+<span id=b413>… but we’ve made so many normative changes in this PR I don’t think I’ve responded to them all</span><br>
+<span id=4b95>… but mgarrish should ask others to open the PR, not be responsible for that himself</span></p>
+<p id=96a6 class="phone s03"><cite>mgarrish:</cite> I agree this one got out of control</p>
+<p id=546c class="phone s01"><cite>wendyreid:</cite> noted for the future, don’t make mgarrish do so many things in one PR<br>
+<span id=58a5>… I think we are all agreed to merge this as soon as possilbe</span></p>
+<p id=a241 class=irc><cite>&lt;wendyreid&gt;</cite> PROPOSED: Merge PR <a href="https://github.com/w3c/epub-specs/issues/2844">#2844</a></p>
+<p id=71b2 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=f1b2 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=31b3 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=31b4 class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=71b3 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=71b4 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=b1b3 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=31b5 class=irc><cite>&lt;CharlesL1&gt;</cite> +1</p>
+<p id=31b6 class=irc><cite>&lt;gautierchomel&gt;</cite> +1</p>
+<p id=31b7 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=7a5e class="phone s04"><cite>shiestyle:</cite> thank you mgarrish for including a note for Japanese rolled comics</p>
+<p id=b1b4 class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=a2c6 class=resolution><strong>RESOLUTION:</strong> Merge PR <a href="https://github.com/w3c/epub-specs/issues/2844">#2844</a></p>
+<p id=b1b5 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=d0fe class="phone s01"><cite>wendyreid:</cite> the big task now will be the tests that need to be edited and renamed</p>
+<p id=0c3d class="phone s05"><cite>ivan:</cite> I have created a test file with images in the spine</p>
+<p id=7968 class="phone s07"><cite>Hadrien:</cite> thank you ivan for the example of images in the spine, I will create a few more<br>
+<span id=e0c6>… these will be used by engineers in Thorium to test presentation</span><br>
+<span id=c188>… we expect implementation on IOS and Readium Mobile</span></p>
+</section>
+
+<section>
+<h3 id=e150>AOB</h3>
+<p id=f886 class="phone s05"><cite>ivan:</cite> I was looking at the charter, and the only outstanding standardization issue is annotations<br>
+<span id=a64a>… we know that is going on. I have the impression that more small issues are going on</span><br>
+<span id=a18b>… so the next step would be to go to the candidate step</span><br>
+<span id=76ec>… that would begin the horizontal reviews.</span><br>
+<span id=f906>… we should organize ourselves to do these over the winter</span><br>
+<span id=8a61>… we need some volunteers to take parts of the spec to the relevant group</span></p>
+<p id=3f89 class="phone s07"><cite>Hadrien:</cite> on the comics side we have talked about thngs like group notes<br>
+<span id=eef6>… I still have an issue with the structural semantics</span><br>
+<span id=da70>… I don’t think these would block going forward</span></p>
+<p id=4468 class="phone s05"><cite>ivan:</cite> I was focusing on the normative parts<br>
+<span id=4e12>… the main question is who will do the horizontal reviews?</span></p>
+<p id=eb97 class="phone s01"><cite>wendyreid:</cite> we have to do horizontal reviews for security, privacy, internationalization, accessibility, TAG</p>
+<p id=9570 class="phone s05"><cite>ivan:</cite> there are forms we need to fill out<br>
+<span id=c801>… most of the time these reviews don’t result in changes</span><br>
+<span id=9c82>… it would be worth telling people what changes were made</span><br>
+<span id=481e>… maybe with a small wiki</span><br>
+<span id=ff54>… we didn’t do an enormous amount of normative changes</span><br>
+<span id=0254>… we deprecated a few things</span><br>
+<span id=29d3>… we could mention looking into html and deciding not to make that change</span></p>
+<p id=53a3 class="phone s01"><cite>wendyreid:</cite> we will need to add to the change log</p>
+<p id=81f7 class="phone s05"><cite>ivan:</cite> perhaps we should filter it out, some of those changes are editorial</p>
+<p id=f25f class="phone s03"><cite>mgarrish:</cite> we could filter the change log, and try to organize them by security, privacy, etc</p>
+<p id=7eae class="phone s05"><cite>ivan:</cite> my guess is that we didn’t make may changes that require review</p>
+<p id=62c9 class="phone s05"><cite>ivan:</cite> maybe web assembly will bring up security issue</p>
+<p id=4472 class=summary>Dale</p>
+<p id=cd6e class="phone s08"><cite>DaleRogers:</cite> is there a resource for learning more about horizontal reviews?</p>
+<p id=3b81 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/guide/documentreview/#how-to-get-horizontal-review">https://<wbr>www.w3.org/<wbr>guide/<wbr>documentreview/#how-to-get-horizontal-review</a></p>
+<p id=efb8 class="phone s03"><cite>mgarrish:</cite> basically there are experts within W3C who will look at what you’ve done to see if there are issues that come up<br>
+<span id=8636>… adding more checks and balances</span></p>
+<p id=4a0e class="phone s01"><cite>wendyreid:</cite> they are experts in security or privacy, not necessarily in EPUB<br>
+<span id=3d76>… the last time we did this we learned a lot</span></p>
+<p id=a0cc class="phone s09"><cite>CharlesL1:</cite> in accessibility we added in the date of the review</p>
+<p id=48f8 class="phone s01"><cite>wendyreid:</cite> I think this should be pretty straightforward since we’ve done this recently<br>
+<span id=19bf>… think about how we will do this over the holidays</span></p>
+<p id=af62 class=irc><cite>&lt;DaleRogers&gt;</cite> Sue: Last name is spelled Rogers. So the minutes pick it up.</p>
+<p id=127e class="phone s01"><cite>wendyreid:</cite> we are just looking for someone to own the process, you don’t have be an expert in the particular specialty</p>
+<p id=6e9d class=irc><cite>&lt;CharlesL1&gt;</cite> S/DaleRodgers/DaleRogers</p>
+<p id=8ed0 class="phone s10"><cite>GeorgeK1:</cite> I imagine the accessibility task force will manage the accessibility review</p>
+<p id=7f4c class="phone s02"><cite>duga:</cite> how does the new annotation spec figure into this?<br>
+<span id=3ddd>… it might have significant safety and privacy issues</span></p>
+<p id=7b92 class="phone s05"><cite>ivan:</cite> we agreed that we would move to a recommendation for annotation specs<br>
+<span id=9dd1>… we will eventually need to have that reviewed as welll</span><br>
+<span id=2165>… for now let’s set that aside. But that is different than the others</span><br>
+<span id=dc68>… as soon as there is a public working draft, we should reach out to the others</span><br>
+<span id=aeab>… it has to happen separately from the authoring spec and reading system</span><br>
+<span id=63a3>… the annotations will a big horizontal review</span></p>
+<p id=b365 class="phone s02"><cite>duga:</cite> if someone volunteers for something, are they volunteering for the easy stuff or the annotations?</p>
+<p id=c853 class="phone s11"><cite>LaurentLM:</cite> ivan, what happens when we talk about internationalization, etc when we talk about annotations?</p>
+<p id=5615 class="phone s05"><cite>ivan:</cite> in 3.3, we focused on things that are only EPUB specific</p>
+<p id=8839 class="phone s01"><cite>wendyreid:</cite> are there any other topics to bring up before we wrap up for the year?<br>
+<span id=c174>… our next meeting is January 8. I hope everyone has a lovely holiday season.</span><br>
+<span id=ad08>… see you in the new year</span></p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#0f4e">Deprecate 'align-x-center' in EPUB 3.4.</a></li>
+<li><a href="#a2c6">Merge PR #2844</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
