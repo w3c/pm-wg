@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>PMWG Accessibility TF – 08 January 2026</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt="W3C" border="0" height="60" width="60"></a></p>
+
+<h1>Accessibility task force - PMWG</h1>
+<h2>08 January 2026</h2>
+
+<nav id="links">
+<a href="https://www.w3.org/2026/01/08-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id="prelims">
+<div id="attendees">
+<h2>Attendees</h2>
+<dl class="intro">
+<dt>Present</dt><dd>AvneeshSingh, CharlesL1, Chris, CircularKen, gautierchomel_, GeorgeK, gpellegrino, Madeleine, mgarrish, Simon_M, WendyReid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>CharlesL1</dd>
+</dl>
+</div>
+
+<nav id="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#0611">Review of extended descriptions explainer:</a></li>
+<li><a href="#a52a">Work on low hanging fruits for FXL techniques</a></li>
+</ol>
+</nav>
+</div>
+
+<main id="meeting" class="meeting">
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id="0611">Review of extended descriptions explainer:</h3>
+<p id="d226" class="phone s01"><cite>AvneeshSingh:</cite> We are writing the explainer document to discuss with APA and TAG why we need semantics for extended descriptions.</p>
+<p id="41c3" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/publ-a11y-extended-desc/blob/main/README.md">https://<wbr>github.com/<wbr>w3c/<wbr>publ-a11y-extended-desc/<wbr>blob/<wbr>main/<wbr>README.md</a></p>
+<p id="5f94" class="phone s01"><cite>AvneeshSingh:</cite> added a PR to add: highlight HTML spec and ARIA principle that semantics should be able to be programmaticly determined.<br>
+<span id="6897">… its a shortcoming in specifications from the perspective of estabilished principles.</span></p>
+<p id="fe04" class="phone s02"><cite>GeorgeK:</cite> opened a PR and viewed Preview in Markdown.<br>
+<span id="390f">… uses: mathematical notation, we should remove this.</span><br>
+<span id="6113">… most cases MathML will be the way info is presented. there may be mathematical notation may be described but we want these extended descriptions, removing it should not diminish the strength of this explainer, and it will prevent a distraction.</span></p>
+<p id="d084" class="phone s03"><cite>Jonas:</cite> I need to look at the latest version, but in the last meeting this explainer only recognizes one technique for extended descriptions using a link with aria-details, but best practices for extended descriptions and the other technique having the desc. in the reading order in an aside or some other way. this explainer should acknowledge there is more than one way to add ext. desc.</p>
+<p id="67e4" class="phone s01"><cite>AvneeshSingh:</cite> the DAISY document is focused on best practices for ext desc. This document is to highlight more of the future standards work and semantics.</p>
+<p id="6a93" class="phone s03"><cite>Jonas:</cite> the way the future standards are formulated may be influenced by this document, and reading systems support for one model the other models may not get support that would be beneficial.</p>
+<p id="e089" class="phone s04"><cite>Simon_M:</cite> It is great reading this doc. real guidance and this is a logical way. any document about this but the alt retains gives enough information that the user may not need the ext. desc. the Patent example looks like its duplicated, and missing a close image tag.</p>
+<p id="73a2" class="irc"><cite>&lt;gpellegrino&gt;</cite> <a href="https://daisy.github.io/transitiontoepub/best-practices/extended-desc/">https://<wbr>daisy.github.io/<wbr>transitiontoepub/<wbr>best-practices/<wbr>extended-desc/</a></p>
+<p id="44b2" class="phone s02"><cite>GeorgeK:</cite> Purpose is to get support W3C to adding these ARIA attributes. the ext. desc. best practices which we will talk about in the next week TIES call has the aside and details approach explained.<br>
+<span id="86fd">… those should remain, and once we have a draft of ARIA with the new semantics we will update our best practices document to reflect this.</span><br>
+<span id="74df">… not sure when we could add this new semantics if ARIA new semantics is only in a draft state.</span></p>
+<p id="af73" class="phone s05"><cite>gpellegrino:</cite> there is some confusion with ext. desc. with two groups and this semantics could take years to arrive.  this is not already here. but the Daisy's Best Practice document and is how to implement ext. desc. Right now with currently approved valid techniques.</p>
+<p id="772e" class="phone s06"><cite>mgarrish:</cite> Don't jump the gun. we need confirmation first in ARIA so wait until it is solid and in a Rec track.</p>
+<p id="b3de" class="phone s03"><cite>Jonas:</cite> Good to hear if we get the semantics we can use it with different models/techniques/elements for the markup. since we use the aside model in the Nordic region.<br>
+<span id="c9c1">… we missing an option to hide / skip image descriptions if we don't have these semantics.</span></p>
+<p id="9b43" class="phone s05"><cite>gpellegrino:</cite> the overall Note is fine, but there are some small things. we can go through the list?  Maybe larger issues to discuss...<br>
+<span id="b8fd">… should we stress more in user section managing alt text we have a standardize way but we don't have this in the ext. desc. we may stress math more, We have this concept of ext. desc. but no standardize way to manage it?</span><br>
+<span id="3bf9">… technically we have no semantics for ext. desc. having the roles is what we need.</span></p>
+<p id="a5a1" class="phone s01"><cite>AvneeshSingh:</cite> this section is trying to say exactly that.  After Gautier has done the next revision, you can go through the text to try to highlight this more.</p>
+<p id="9933" class="phone s02"><cite>GeorgeK:</cite> after we merge gautierchomel_'s PR</p>
+<p id="1e6b" class="phone s03"><cite>Jonas:</cite> useful to mention the aria-details would point directly to an extended description and not only to a link.<br>
+<span id="5300">… which are the two main options in the best practices document.</span><br>
+<span id="fc3a">… i think it is worth pointing out.</span></p>
+<p id="c35a" class="phone s02"><cite>GeorgeK:</cite> I agree. if you are doing this on the web you will probably be pointing to a details element<br>
+<span id="71a2">… same tech. could be applied to an aside, we could use that in the DAISY world but might not be appropriate for the web.</span></p>
+<p id="ce47" class="phone s01"><cite>AvneeshSingh:</cite> lets incorporate this and work on the next revision.</p>
+</section>
+
+<section>
+<h3 id="a52a">Work on low hanging fruits for FXL techniques</h3>
+<p id="e761" class="phone s01"><cite>AvneeshSingh:</cite> Fixed layout doc. we broke it into 2, future and more practical work that we can do now.<br>
+<span id="34dc">… It would be good to know what we can do in the FXL Technique document, next steps.</span></p>
+<p id="0450" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://w3c.github.io/epub-specs/wg-notes/fxl-a11y-tech/">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>wg-notes/<wbr>fxl-a11y-tech/</a></p>
+<p id="56d4" class="phone s05"><cite>gpellegrino:</cite> I read these, showed screen. looking at Single A<br>
+<span id="d11a">… I don't see anything that is problematic for FXL. there may be some more explanations needed but is not really an issue.</span><br>
+<span id="ffff">… the SC that we need to explain, 1.1 Text Alts and especially images split on mult. pages. and 1.3.2 meaningful sequence and we have reading order across the fold etc. and SC 2.4.2 Page Title we may need to provide guidance on how to add meaningful title of these types of pages.</span><br>
+<span id="b01a">… req. to page breaks/nav we may need to give guidance on how to manage page breaks in FXL and some cases they may not be needed but needed in others.</span><br>
+<span id="10000">… if we look at Fixed Layout EPUB 1.1 WCAG 2.2 (Single A) not really problemantic, and we may need to add 5 additional guidance.</span><br>
+<span id="7647">… but if we go to AA there are more serious concerns which will be difficult for FXL.</span><br>
+<span id="c122">… there are 6 SC that are problematic, 1.3.4 Orientation (not block orientation in metadata) landscape. 1.4.4 Resize text is not possible in FXL. 1.4.5 images of text we have some info in the document, and 1.4.10 Reflow is also not possible, and 1.4.12 Text spacing is not possible in FXL, and if we want to get into 2.5.7 Dragging Movements is also an issue in FXL.</span><br>
+<span id="10001">… my proposal would be to reorganize the documents those SC that are problematic without retelling common things like we don't discuss how to tag headings, tables etc.</span></p>
+<p id="05f3" class="phone s05"><cite>gpellegrino:</cite> given this, question 1: which level of WCAG for this document A and AA or just A.<br>
+<span id="900b">… Question 2: main focus should be on content created with HTML/CSS, or SVG for Fixed Layout</span></p>
+<p id="31f7" class="irc"><cite>&lt;Charles:</cite> In our GCA a publisher had us review their fixed layout. Our focus was single A and we were able to get their title to pass.</p>
+<p id="e9b3" class="irc"><cite>&lt;GeorgeK&gt;</cite> The low hanging fruit would be single A</p>
+<p id="eaf4" class="irc"><cite>&lt;GeorgeK&gt;</cite> We should address AA at a future time.</p>
+<p id="10002" class="phone s07"><cite>Charles:</cite> GCA had a publisher Amazon who passed their Fixed Layout workflow at WCAG 2.2 A. I think we should focus on A only for this document.</p>
+<p id="31ab" class="phone s08"><cite>CircularKen:</cite> Target A+ close to AA as possible except for those that is impossible currently.<br>
+<span id="7704">… Its not an end user how to do it, this is how it could be archived, this is what we want to end up with.</span><br>
+<span id="d5d9">… I have solved some of these issues with my own software.</span></p>
+<p id="08bc" class="phone s09"><cite>wendyreid:</cite> We are under-estimating the number of WCAG AA. Reflow and Text spacing but the rest should be able to be met. There are a few that are possibly problematic ie. orientation.  Images of Text, not text contrast can be met.<br>
+<span id="3107">… We almost want to say you can does these with the exception of these small handful of AA requirements.</span></p>
+<p id="185a" class="phone s03"><cite>Jonas:</cite> the EAA requires AA, conformance to A wouldn't help our publishers. conformance to AA is normal in the world.</p>
+<p id="daba" class="phone s04"><cite>Simon_M:</cite> AA is often interpreted as a regulator req. we are here to maximize the a11y here.<br>
+<span id="f070">… paring this with a EAA req. ie. convert to Reflow.</span><br>
+<span id="c69e">… A+ as Ken said.</span></p>
+<p id="44df" class="phone s08"><cite>CircularKen:</cite> What about Fixed Layout AA?</p>
+<p id="c521" class="phone s02"><cite>GeorgeK:</cite> WCAG folks wouldn't like it.</p>
+<p id="505e" class="phone s01"><cite>AvneeshSingh:</cite> We want to have techniques for A and AA and for those AA where we can't meet the success criteria we clearly say this is a challenge. lets start with Level A and then start working on the AA. Restructuring the document to align with the EPUB 1.1 techniques. we structure it in a Success Criteria kind of layout. What are the thoughts on 2nd question, should we have HTML/CSS or should also have SVG options?</p>
+<p id="e850" class="phone s02"><cite>GeorgeK:</cite> targeting A and the AA which can be achieved. Not sure how we label that. we should solidly reach A and most of the AA. Does this get us into Manga/Comics.</p>
+<p id="f917" class="phone s05"><cite>gpellegrino:</cite> Comics and manga are only images one per page so another way which is nearly impossible to make accessible.</p>
+<p id="a93d" class="phone s01"><cite>AvneeshSingh:</cite> Level A + HTML/CSS can be achieved in the next step. We can then step into level AA. I want to move step wise and achieve some success, I Don'T want this to take 3 years to achieve.</p>
+<p id="f881" class="phone s08"><cite>CircularKen:</cite> We may also say this may be achieved in SVG but can set that for a future.</p>
+<p id="9457" class="phone s09"><cite>wendyreid:</cite> I think we could restructure that to align with the EPUB 1.1 techniques.</p>
+<p id="8f78" class="phone s01"><cite>AvneeshSingh:</cite> the EPUB accessibility 1.1 techniques quite a lot refer to the WCAG techniques, but we may need to work on some of these for FXL because WCAG focuses on reflowable. For example, there are PDF techniques for WCAG.  So we may need to add specific techniques for FXL for meeting WCAG SC (which WCAG techniques are already addressing for reflowable).</p>
+<p id="1e03" class="phone s04"><cite>Simon_M:</cite> Do we need to worry about WCAG3?</p>
+<p id="155a" class="phone s09"><cite>wendyreid:</cite> WCAG3 and their req. and guidelines there is a new draft coming out. Nothing has changed dramatically for EPUB. lot are similar / organized differently.</p>
+<p id="1c6f" class="phone s06"><cite>mgarrish:</cite> they are rewriting and the conformance model is still being spec'd out. WCAG 3 is years out.</p>
+<p id="3a7d" class="phone s04"><cite>Simon_M:</cite> If we keep this tuned to focus not specific to WCAG.</p>
+<p id="5ede" class="phone s06"><cite>mgarrish:</cite> Whats the best case / hope to achieve is our goal with this document.</p>
+<p id="e8c3" class="phone s01"><cite>AvneeshSingh:</cite> Wendy will start with this initial restructuring the document to align with the EPUB 1.1 techniques document and WCAG SC. We can review and provide feedback when first pass is done<br>
+<span id="b799">… Thanks all, great start to 2026</span></p>
+</section>
+</main>
+
+</body></html>
