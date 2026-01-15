@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 15 January 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>15 January 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Jan/0014.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/01/15-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>charles, CharlesL, dale, duga, elizabeth, gautierchomel, GeorgeK, gman, gpellegrino, Hadrien, ivan, kimberg, MasakazuKitahara, mgarrish, rdeltour, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#92d1">EPUB Blog Post</a></li>
+<li><a href="#2b4d">Annotations Vocabulary</a></li>
+<li><a href="#d961">&lt;img&gt; in SMIL -  w3c/<wbr>epub-specs#2883</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=92d1>EPUB Blog Post</h3>
+<p id=c701 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/blog/2026/epub-and-html-survey-results-and-next-steps/">https://<wbr>www.w3.org/<wbr>blog/<wbr>2026/<wbr>epub-and-html-survey-results-and-next-steps/</a></p>
+<p id=f2d1 class="phone s01"><cite>wendyreid:</cite> the blog post about HTML survey has been posted</p>
+<p id=78fd class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/zh-hans/blog/2026/epub-and-html-survey-results-and-next-steps/">https://<wbr>www.w3.org/<wbr>zh-hans/<wbr>blog/<wbr>2026/<wbr>epub-and-html-survey-results-and-next-steps/</a></p>
+<p id=60a3 class="phone s01"><cite>wendyreid:</cite> feel free to share it. There is a translation into Chinese, and a Japanese translation is coming</p>
+</section>
+
+<section>
+<h3 id=2b4d>Annotations Vocabulary</h3>
+<p id=84e4 class="phone s01"><cite>wendyreid:</cite> first up the annotations vocabulary</p>
+<p id=ffff class="phone s02"><cite>ivan:</cite> this is a technical thing we must do<br>
+<span id=1d6d>… the annotation work relies on the W3C annotation done in JSON LD</span><br>
+<span id=8afd>… any change we do on vocabulary we have to publish a proper vocabulary</span><br>
+<span id=8d68>… and define terms in a formal way</span><br>
+<span id=be05>… I have a tool to do that</span><br>
+<span id=4638>… we have put the vocabulary and tools in the repository</span><br>
+<span id=0ac8>… at some point we need to decide if this is published as a W3C note or leave it as a document on github</span><br>
+<span id=ff18>… publishing it as a note indicates stability and I am in favor of it</span></p>
+<p id=44bc class=irc><cite>&lt;ivan&gt;</cite> <a href="https://w3c.github.io/epub-specs/epub34/annotations-vocab/">current version of the vocabulary</a></p>
+<p id=44d0 class="phone s01"><cite>wendyreid:</cite> any thoughts?</p>
+<p id=b898 class="phone s03"><cite>GeorgeK:</cite> with the previous vocabulary from annotations, are we extending it?</p>
+<p id=72ac class="phone s04"><cite>@ivan:</cite> we are not changing the semantics, but we are creating some restrictions<br>
+<span id=c7ed>… when it comes to EPUB only certain values are permitted as sub properties</span><br>
+<span id=9ab1>… there is one new concept, the annotation set, that we have defined for ourselves</span></p>
+<p id=8afe class="phone s04"><cite>@ivan:</cite> is there anyone who opposes publishing this as a note when the time comes?</p>
+<p id=ddba class="phone s05"><cite>duga:</cite> just to clarify, what is the timing of the note?</p>
+<p id=7554 class="phone s04"><cite>@ivan:</cite> when we publish the first working draft, and both documents will evolve in parallel</p>
+<p id=d245 class="phone s04"><cite>@ivan:</cite> the official name will be a draft note</p>
+<p id=c9ed class="phone s06"><cite>gman:</cite> there are several segments of the text where it is explicitly stated that they are placeholders</p>
+<p id=925a class="phone s04"><cite>@ivan:</cite> those are there because in the current iteration of the spec they are not designed</p>
+</section>
+
+<section>
+<h3 id=d961>&lt;img&gt; in SMIL -  <a href="https://github.com/w3c/epub-specs/issues/2883">w3c/<wbr>epub-specs#2883</a></h3>
+<p id=6f04 class="phone s07"><cite>@Hadrien:</cite> SMIL allows references to text, audio, and video<br>
+<span id=69b2>… currently in epub we only use text. It references IDs. We also use the audio element without a time fragment</span></p>
+<p id=f955 class=irc><cite>&lt;ivan&gt;</cite> strictly speaking, 'img' and the others are defined as &quot;alias&quot; of 'ref'</p>
+<p id=e6eb class="phone s07"><cite>@Hadrien:</cite> a number of specialized libraries have experimented with narrated comics using pre recorded audio<br>
+<span id=05d9>… the current spec doesn't provide a good way to do this, so the current experiments are in proprietary formats</span><br>
+<span id=6a9b>… I have been investigating how much work it would be to support this in EPUB</span><br>
+<span id=2d2c>… we would need a way to specify a fragment of an image</span><br>
+<span id=4e10>… we can either use regions or spacial fragments, which I think is much easier</span><br>
+<span id=5020>… we already use this in a few other pages</span><br>
+<span id=ccf6>… there is interest for this, there is no format to do this either in DAISY or EPUB</span><br>
+<span id=de97>… it is a pretty small gap to allow this feature in EPUB</span></p>
+<p id=b1fe class="phone s04"><cite>@ivan:</cite> for the record, the SMIL specification predates the specification for media fragments<br>
+<span id=b4fd>… I agree that in 2025 we should use media fragments</span><br>
+<span id=594a>… are there any prospects of real epub readers that would implement this</span><br>
+<span id=8c5d>… we need two independent implementations for a new feature</span></p>
+<p id=6e20 class="phone s05"><cite>duga:</cite> I think there were RS that were offering implementations</p>
+<p id=2d08 class="phone s08"><cite>Hadrien:</cite> there is support in readium to support this, once it is in the Readium toolkit it is pretty easy to support<br>
+<span id=34aa>… Thorium will support this</span><br>
+<span id=8270>… I have asked the maintainer of StoryTeller to support this also</span><br>
+<span id=6442>… it is mostly used by people who do this on their own, who offer this to their library patrons</span><br>
+<span id=b4f6>… I cannot commit on the timeline for Storyteller but Thorium will support it this year</span></p>
+<p id=c172 class="phone s04"><cite>@ivan:</cite> Thorium is clear, Storyteller, from the official point of view, the AC would ask for an EPUB Reader like Thorium<br>
+<span id=0620>… to really implement and use this</span><br>
+<span id=9b56>… Colibrio would be fine, it doesn't need to a big player</span></p>
+<p id=d9fa class="phone s08"><cite>Hadrien:</cite> I expect specialized libraries to use this</p>
+<p id=6abf class="phone s04"><cite>@ivan:</cite> if I have an EPUB that uses this, I should be able to read it in another system</p>
+<p id=a53a class="phone s05"><cite>duga:</cite> what are the implications for existing implementations for Read Aloud?<br>
+<span id=4ae1>… could a publisher just reference portions of an image and not have the audio overlay? The image would then be the synced media?</span><br>
+<span id=62bb>… is that a potential use here? are we worried about it</span></p>
+<p id=e7e8 class="phone s08"><cite>Hadrien:</cite> I don't think it would be a good thing to overload text<br>
+<span id=f5a4>… wrapping an image in text is a bad thing for accessibility</span><br>
+<span id=8e79>… the benefit of having image, is opening the door to image based content</span><br>
+<span id=700a>… it also opens the door to something highly visual in nature, plus audio, and a textural element</span><br>
+<span id=b41d>… it opens the door to more things without negatively impacting the current system</span><br>
+<span id=4668>… media support in EPUB remains more limited than we wish</span><br>
+<span id=8cda>… even with the current take on media overlays things could be better with RS support</span></p>
+<p id=d281 class="phone s03"><cite>GeorgeK:</cite> …read aloud means to me, taking the text and playing it into the system, different than audio overlays<br>
+<span id=fa95>… if we have a fixed image, and there are four audio clips in parallel with that image</span><br>
+<span id=b906>… the media fragment shifts focus on the image, would you have something like</span><br>
+<span id=9ba1>… two people in an image, a focus on one person, then a shift to the other person like a conversation</span></p>
+<p id=38a3 class="phone s08"><cite>Hadrien:</cite> that is one way you could implement it<br>
+<span id=e171>… currently they can zoom into a panel and play the audio from that panel</span></p>
+<p id=9d94 class="phone s09"><cite>CharlesL:</cite> about implementation concerns, I don't think we need explicitly two reading system implementations<br>
+<span id=73b4>… just two implementations of the technology so a tool would be fine</span><br>
+<span id=3c71>… if you had a screen reader enabled, and you have the textural part overlayed on audio, I'm trying to understand</span></p>
+<p id=1389 class="phone s03"><cite>GeorgeK:</cite> I think the SMIL implementation would play and the screen reader would be silent<br>
+<span id=460b>… if you pause the screen reader</span></p>
+<p id=306c class="phone s05"><cite>duga:</cite> when I said Read Aloud I meant reading the included audio<br>
+<span id=c84c>… to Hadrien 's point, we have a flow for children's books</span><br>
+<span id=d92b>… the publisher adds audio to existing images/media</span><br>
+<span id=4f4e>… the reading system then takes that and plays it</span><br>
+<span id=a3fa>… is it expected now that Reading Systems must synchronize the audio?</span><br>
+<span id=da79>… are we breaking children's books by enabling this?</span></p>
+<p id=ff1d class="phone s08"><cite>Hadrien:</cite> I don't think this is very likely. Producing an audio layer is much more work than including text<br>
+<span id=23f0>… the kind of org that will produce this media overlay is one that cares deeply about accessibility</span><br>
+<span id=b286>… the cost is much higher to produce them</span></p>
+<p id=19ef class="phone s05"><cite>duga:</cite> these are not text to speech books, but with media overlays</p>
+<p id=a2ef class="phone s10"><cite>DaleRogers:</cite> I wonder if there would be a smooth transition from one image fragment to another?</p>
+<p id=4547 class="phone s08"><cite>Hadrien:</cite> this is not about controlling visual presentation. A lot of movement can be hard for people with certain sensitivities</p>
+<p id=2775 class=irc><cite>&lt;Zakim&gt;</cite> wendyreid, you wanted to react to DaleRogers</p>
+<p id=cd97 class="phone s11"><cite>wendreid:</cite> for example, a lot of RS have settings for page turn behavior. I think this would fall in that same class<br>
+<span id=8056>… especially on mobile, where you can have multiple page turns actions</span></p>
+<p id=a68e class="phone s04"><cite>@ivan:</cite> we may be getting into areas that are not covered by this proposal<br>
+<span id=232b>… the original SMIL spec refers only to the ref element</span><br>
+<span id=d7b6>… the spec doesn't say anything about transitions</span><br>
+<span id=d950>… it is always a trick discussion about the AC and how they accept implementation reports</span><br>
+<span id=177b>… I think beyond the legal terminology for the process, they ask</span><br>
+<span id=8e00>… if I create a book with this feature, am I stuck with only one reading system?</span><br>
+<span id=577a>… if we decide to put this in the spec, we mark it as an at risk feature</span><br>
+<span id=9149>… so if we don't get enough implementation we can easily remove it at the end without triggering reviews</span></p>
+<p id=9015 class="phone s12"><cite>mgarrish:</cite> you want to see two similar implementations, like two Reading Systems and two authoring systems<br>
+<span id=902e>… is this incubation material? Where are we going with this?</span><br>
+<span id=6978>… is it at the point we want to implement this?</span><br>
+<span id=2b52>… what are the knock on implications? I'd like to be sure of this before we add this to the implementation at the end of the process</span><br>
+<span id=3f2d>… maybe the at risk implementation or a cg note would be the way to do this</span></p>
+<p id=b7b2 class="phone s03"><cite>GeorgeK:</cite> what is the relationship of this technique to other ways to make comics?<br>
+<span id=1860>… it seems like an alternative to other developments for comics</span></p>
+<p id=d2cf class="phone s08"><cite>Hadrien:</cite> this is directly a response to a number of specialized libraries have implemented especially in Northern Europe</p>
+<p id=369d class=irc><cite>&lt;gman&gt;</cite> Hadrien the proprietary use cases in Scandinavia are comics only?</p>
+<p id=6bc6 class="phone s08"><cite>Hadrien:</cite> they have produced files that do this, and everyone does it slightly differently<br>
+<span id=f5d8>… I look at what people are using, and what people need</span><br>
+<span id=7922>… this is quite specialized, mostly about adaptive content, but it is missing</span><br>
+<span id=10000>… this is different than adding something no one asked for</span></p>
+<p id=dce0 class="phone s03"><cite>GeorgeK:</cite> I have seen the US Library of Congress dabbling with this too</p>
+<p id=f86a class="phone s08"><cite>Hadrien:</cite> this is one way we can support this</p>
+<p id=1114 class="phone s04"><cite>@ivan:</cite> I don't see this as an incubation matter because we don't have to create new vocabulary<br>
+<span id=239c>… we are just allowing a tiny bit of what is already in SMIL in EPUB</span><br>
+<span id=2cd3>… it is defined already, we just allow it here</span></p>
+<p id=a033 class="phone s09"><cite>CharlesL:</cite> I get your point about two implementations on one side or another, and the<br>
+<span id=201e>… Readium implementation could go out to multiple readers</span><br>
+<span id=f4b2>… in a comic, could you have it read each panel in the correct order</span><br>
+<span id=7065>… if you click a Read button in the RS, would it do that? Is this a potential use case</span></p>
+<p id=85fc class="phone s08"><cite>Hadrien:</cite> yes, you could have a panel with a textural and/or an audio equivalent</p>
+<p id=2fad class="phone s06"><cite>gman:</cite> another potential use case is language acquisition/application. Having two audio setups in a Manga</p>
+<p id=c4a8 class="phone s06"><cite>gman:</cite> you could switch between the translations<br>
+<span id=4e12>… this kind of use case could be studied a bit further</span></p>
+<p id=468a class="phone s08"><cite>Hadrien:</cite> I think this is different. You are talking about having two images in two languages?</p>
+<p id=9613 class="phone s06"><cite>gman:</cite> SMIL doesn't support multiple track?</p>
+<p id=fd94 class="phone s08"><cite>Hadrien:</cite> not as we use it, no</p>
+<p id=7d87 class="phone s01"><cite>wendyreid:</cite> that gets into something we are also discussing, parallelized content<br>
+<span id=ed60>… we may have an open Issue about that where we do want to talk about language acquisition</span></p>
+<p id=2f2a class=irc><cite>&lt;gautierchomel&gt;</cite> Parallels content is a discussion at <a href="https://github.com/w3c/epub-specs/discussions/2829">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>discussions/<wbr>2829</a></p>
+<p id=c41e class="phone s01"><cite>wendyreid:</cite> this is where text to speech might be better than SMIL so they can choose their narration voice<br>
+<span id=3dd9>… SMIL is fixed, referencing specific content</span><br>
+<span id=3ee0>… it sounds to me like we want to keep exploring this</span><br>
+<span id=10001>… it might not be a huge change to the spec</span><br>
+<span id=215f>… the major question is if we have the right amount of implementations</span><br>
+<span id=d012>… I'm concerned about industry uptake, if it will be supported by most major reading systems</span><br>
+<span id=29b5>… we need to make sure that there is more than one reading platform available</span><br>
+<span id=a7ce>… just for the sake of user choice</span></p>
+<p id=f15e class="phone s05"><cite>duga:</cite> I'm not convinced, I'm still worried about breaking existing workflows.<br>
+<span id=b89f>… there is nothing tying this to specific content, and I would need more reassurance that people</span><br>
+<span id=f831>… won't start making children's books that would break on current reading systems</span></p>
+<p id=a8c5 class="phone s11"><cite>wendreid:</cite> we have a greenlight to keep studying this. Can we get sample files to study?</p>
+<p id=3489 class="phone s08"><cite>Hadrien:</cite> Nota has public examples. We might get the files in JSON</p>
+<p id=6b7d class="phone s04"><cite>@ivan:</cite> I'd like to explore what it means editiorialy, can Hadrien do a draft PR for the author and RS specs?</p>
+<p id=7f42 class="phone s08"><cite>Hadrien:</cite> I can do this, but not immediately, maybe in February</p>
+<p id=45c5 class=irc><cite>&lt;gman&gt;</cite> Hadrien on one of these sleepless nights</p>
+<p id=f1ae class="phone s01"><cite>wendyreid:</cite> we will carry over our last topic, selectors, next week</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body>
+</html>
