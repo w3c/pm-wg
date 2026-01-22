@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 22 January 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>22 January 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Jan/0031.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/01/22-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, AvneeshSingh, brady, charles, CharlesL, DaleRogers, duga, gman, gpellegrino, Hadrien, ivan, LaurentLM, MasakazuKitahara, mgarrish, rdeltour, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>sueneu, wendy</dd>
+<dt>Scribe</dt><dd>duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#526b">JXL in EPUB - w3c/<wbr>epub-specs#2896</a></li>
+<li><a href="#7e88">Selectors for Annotations - w3c/<wbr>epub-specs#2892</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=51b4 class="phone s01"><cite>wendyreid:</cite> Please associate github with w3c accounts<br>
+<span id=02eb>… you can do it at github, so we can tag you</span></p>
+</section>
+
+<section>
+<h3 id=526b>JXL in EPUB - <a href="https://github.com/w3c/epub-specs/issues/2896">w3c/<wbr>epub-specs#2896</a></h3>
+<p id=54b7 class="phone s01"><cite>wendyreid:</cite> JXL is a new JPEG thing</p>
+<p id=de77 class="phone s02"><cite>ivan:</cite> Yes, a new JPEG, it's more compact, etc. I am not an expert<br>
+<span id=a910>… It is an ISO standard, so we can refer to it</span><br>
+<span id=b9f6>… Chrome has it now behind a flag</span><br>
+<span id=7a7f>… firefox too. So it will be in major browsers soon</span><br>
+<span id=40dd>… authoring tools should be able to support it within the year</span><br>
+<span id=2f2e>… so the question is, should we make it a core type?</span><br>
+<span id=ffff>… this brings us to around 7 image formats</span><br>
+<span id=d46b>… there was a long discussion around implementations</span><br>
+<span id=ad1c>… there are some</span><br>
+<span id=e971>… shiestyle brings up that reading systems must understand that media type</span><br>
+<span id=4b35>… if true that may be a problem for some reading systems</span><br>
+<span id=bba3>… but they also don't support webp which is also in the list</span></p>
+<p id=5a4b class="phone s03"><cite>AvneeshSingh:</cite> Recalling opus, etc, the decision was to put it into the spec. If at the last minute we find there are no implementations we can pull it<br>
+<span id=ece2>… this gives a warning that it is coming even if it isn't in the spec release</span></p>
+<p id=ccd1 class="phone s02"><cite>ivan:</cite> At this moment the tests pass at least 2 implementations<br>
+<span id=afff>… which is the required number</span></p>
+<p id=fb1a class="phone s03"><cite>AvneeshSingh:</cite> I was talking broader industry support</p>
+<p id=3222 class="phone s01"><cite>wendyreid:</cite> We haven't mentioned webkit/safari<br>
+<span id=2f72>… Some ereaders use webkit</span><br>
+<span id=b3bb>… we ran into this with webp</span><br>
+<span id=dfc6>… should we have the list of well supported media types</span></p>
+<p id=e96a class=irc><cite>&lt;sueneu&gt;</cite> the can i use for fxl on the web <a href="https://caniuse.com/?search=jxl">https://<wbr>caniuse.com/?search=jxl</a></p>
+<p id=de80 class="phone s01"><cite>wendyreid:</cite> should we have something like emerging media types? These would be flagged as not yet fully supported</p>
+<p id=10000 class="phone s04"><cite>Hadrien:</cite> JXL has an interesting feature set for images<br>
+<span id=dbc6>… it makes sense to have it</span><br>
+<span id=c204>… there has been a battle over this, between AVIF and jxl</span><br>
+<span id=01c9>… we have core media for images, but not audio or video</span><br>
+<span id=3a5b>… I am not really sure how whitelisting even helps</span><br>
+<span id=9d98>… the big question is should we keep track?</span></p>
+<p id=dbd8 class="phone s05"><cite>mgarrish:</cite> Core media type mainly means you don't need a fallback<br>
+<span id=c7d5>… so technically it is a new requirement to support it</span><br>
+<span id=8879>… to the other question, core media types made sense for 3.0</span><br>
+<span id=d1c2>… but once you start adding to it, it doesn't make sense</span><br>
+<span id=9c54>… So you either have to pick between broad support and new features</span><br>
+<span id=08a1>… so I think media types doesn't make a lot of sense for general resources, just for spine items</span><br>
+<span id=af92>… even if it is emerging, it will never be supported in old reading systems</span></p>
+<p id=1d9e class="phone s06"><cite>DaleRogers:</cite> The issues seem to be around media types, core media types and support types<br>
+<span id=cb9f>… so if we are trying to align with the web it makes sense</span><br>
+<span id=863b>… as an author if JXL has the features we want, shouldn't we just use it with a fallback?</span></p>
+<p id=261c class="phone s07"><cite>LaurentLM:</cite> we has this discussion with webp<br>
+<span id=8308>… people using webp and jxl don't want to add a fallback if they know it is supported</span><br>
+<span id=a9ce>… so we have core and extended core and it is a mess of our making</span></p>
+<p id=bc2d class=irc><cite>&lt;ivan&gt;</cite> +1 to LaurentLM</p>
+<p id=f8ac class="phone s07"><cite>LaurentLM:</cite> so maybe we have a note that these are added after 3.0, so if you are worried you should add  a fallback</p>
+<p id=7380 class="phone s08"><cite>shiestyle:</cite> if we can do a better solution, 2 lists<br>
+<span id=6562>… one is RS MUST support, no fallback needed</span><br>
+<span id=dc05>… and one is RS SHOULD support and fallbacks SHOULD be used</span><br>
+<span id=bc73>… webp is not broadly supported in Japan</span><br>
+<span id=a0d2>… jxl is still pretty new to add</span></p>
+<p id=bc01 class="phone s09"><cite>sueneu:</cite> would we make jxl a foreign resource?<br>
+<span id=e56f>… which requires a fallback</span></p>
+<p id=f45f class="phone s10"><cite>duga:</cite> One point, the concept of core media types goes back to the start<br>
+<span id=9dfc>… early days we had discussions on whether to use GIF or JPEG, even though browsers didn't support, but we got lucky and the world went that way</span><br>
+<span id=9eb0>… it does feel a bit ridiculous to keep adding to this list</span></p>
+<p id=9cea class=irc><cite>&lt;sueneu&gt;</cite> +1 duga</p>
+<p id=9449 class="phone s10"><cite>duga:</cite> this is guidance to authors, if we keep adding things that aren't fully supported, it's not helping authors<br>
+<span id=62b7>… webp was probably a mistake. We should be aiming for broad support</span><br>
+<span id=10001>… the list of core media types was to give confidence, and if we want to allow people to use new media types without fallbacks, we could alternately just allow that</span><br>
+<span id=3acd>… people know they are using the wrong type of image, but they aren't forbidden</span><br>
+<span id=c019>… putting a fallback in for webp or jxl is silly because the point is size</span><br>
+<span id=7b93>… we need a different solution that just adding to core media types</span></p>
+<p id=d901 class=irc><cite>&lt;wendyreid&gt;</cite> +1 brady</p>
+<p id=5f46 class="phone s04"><cite>Hadrien:</cite> I want to go back to how this works on the web<br>
+<span id=5999>… on the web you store the formats, and something else or generate it on the fly</span><br>
+<span id=e3b6>… the tendency on the web is to go for the latest and greatest and provide the older format when needed</span><br>
+<span id=c464>… epub isn't like that, we can't generate it</span><br>
+<span id=5453>… but also we can't never advance because of old formats</span><br>
+<span id=745b>… I disagree with shiestyle - multiple reading systems support avif and webp</span><br>
+<span id=2554>… they just convert</span><br>
+<span id=93cd>… manga with jpeg is much bigger than the newer formats</span></p>
+<p id=e9cb class="phone s05"><cite>mgarrish:</cite> in terms of authoring, a note makes more sense. Warnings are a problem for some authors and will require fallbacks anyway<br>
+<span id=0717>… how bad is it that old reading systems don't support this?</span></p>
+<p id=75e6 class=irc><cite>&lt;ivan&gt;</cite> +1 to mgarrish</p>
+<p id=8386 class="phone s11"><cite>gman:</cite> The usage is important. webp is good, but usage is only 12%<br>
+<span id=8d7a>… so despite this, people still prefer what they know</span></p>
+<p id=c5fc class=irc><cite>&lt;Hadrien&gt;</cite> +1 for having a note about support instead of core media + fallback</p>
+<p id=069b class="phone s11"><cite>gman:</cite> we need to understand where this is used</p>
+<p id=2074 class="phone s01"><cite>wendyreid:</cite> I agree that the current state is a problem<br>
+<span id=6b52>… I understand the a reading systems can convert to another format, but that is more likely to work within an ecosystem</span><br>
+<span id=5e4e>… not when I just open a downloaded epub</span><br>
+<span id=1029>… And we still have to consider offline</span><br>
+<span id=8723>… we don't want to inundate people with warnings, but people look to us for a set of rules</span><br>
+<span id=bb69>… so if we don't mention JXL people will assume you can't use it</span><br>
+<span id=15af>… I think we may have jumped the gun with webp</span><br>
+<span id=cd5e>… so we need to say there are other formats, but they might be under implemented</span><br>
+<span id=b78e>… so we need to say &quot;here are the known to work&quot; types, and here are some that might not be as well implemented</span></p>
+<p id=a2ad class="phone s08"><cite>shiestyle:</cite> SOme stores in Japan use webp<br>
+<span id=252a>… it is very complicated in Japan</span><br>
+<span id=577b>… having a format in core that publishers can't use isn't a good situation</span></p>
+<p id=9ccc class="phone s06"><cite>DaleRogers:</cite> I am hearing some formats are more or less popular<br>
+<span id=211f>… as an author, I will use what works</span><br>
+<span id=6c4e>… but something has to move the spec forward</span><br>
+<span id=a313>… what eventually gets the publishers attention to support a particular format?</span><br>
+<span id=b864>… what gets the reading systems attention to decide to implement?</span></p>
+<p id=645f class="phone s01"><cite>wendyreid:</cite> We don't seem to be converging, so we need to move to the next one soon</p>
+<p id=c402 class="phone s02"><cite>ivan:</cite> if we do nothing, and they want the quality of JXL ,then they need fallbacks<br>
+<span id=64be>… if they use without fallbacks epubcheck complains</span><br>
+<span id=fc1c>… I would prefer to have it in the document</span><br>
+<span id=9326>… knowing that it may not work</span><br>
+<span id=f79e>… my favorite option is to put in a note to say these formats are new and may not work everywhere</span><br>
+<span id=2be5>… this is not a unique thing in the spec</span></p>
+<p id=10002 class="phone s05"><cite>mgarrish:</cite> I agree, note is best. If we want to allow use without fallback we need to add to core<br>
+<span id=baad>… I don't want to confuse things by adding a new type</span><br>
+<span id=177d>… maybe also make foreign types not so scary</span></p>
+</section>
+
+<section>
+<h3 id=7e88>Selectors for Annotations - <a href="https://github.com/w3c/epub-specs/pull/2892">w3c/<wbr>epub-specs#2892</a></h3>
+<p id=30f4 class="phone s07"><cite>LaurentLM:</cite> [sharing screen]<br>
+<span id=577c>… in an annotation there is a target</span><br>
+<span id=453a>… the src references the epub</span><br>
+<span id=73aa>… the file in the epub</span><br>
+<span id=780d>… the selector just deals with the exact points in the book that are part of the annotation</span><br>
+<span id=e819>… [walking through example]</span><br>
+<span id=d05c>… in an annotation there can be multiple selectors, but they must point at the same place</span><br>
+<span id=0d3a>… our first selector is text fragment</span><br>
+<span id=bafb>… this is from a community group, not a proper standard</span><br>
+<span id=0d36>… we will need to make TextFragmentSelector, as it isn't in webannotations</span><br>
+<span id=b17c>… the format is easy for that selector, it can be made a little trickier</span><br>
+<span id=8786>… some notes in the annotation doc</span><br>
+<span id=00bf>… 1. we don't need to percent encode since it isn't in a url</span><br>
+<span id=95ce>… if there is a constrained on copied characters, you should use it with care</span><br>
+<span id=8f5b>… don't put too much text!</span><br>
+<span id=0740>… in the original model there was a text quote selector</span><br>
+<span id=4a2d>… we can consider this new one as a modernized version of that selector</span><br>
+<span id=cb1e>… one negative is there is no API currently in scripting, and no good polyfills</span><br>
+<span id=64e2>… so you have to manually walk the DOM</span><br>
+<span id=b9e8>… also 1 question - should we add url fragment syntax? I didn't as I wanted to keep it short, and the static text doesn't seem necessary</span><br>
+<span id=5574>… so should we add the static text</span></p>
+<p id=cad2 class=irc><cite>&lt;sueneu&gt;</cite> ack: ivan</p>
+<p id=b544 class="phone s02"><cite>ivan:</cite> It is a CG document, but it is also the topic of active work in HTML<br>
+<span id=155c>… I understand the argument with encoding</span><br>
+<span id=baa9>… but isn't this hiding the underlying URL fragment?</span><br>
+<span id=ec35>… since that is how it will be done in HTML</span><br>
+<span id=e07f>… that avoids parallel specing</span></p>
+<p id=10003 class=irc><cite>&lt;Hadrien&gt;</cite> +1 for what ivan just said, we should use FragmentSelector + conformsTo instead of creating TextFragmentSelector</p>
+<p id=f48b class="phone s02"><cite>ivan:</cite> and the last thing is, if I select a text, and some is in an html element, how is that handled</p>
+<p id=7bc9 class="phone s07"><cite>LaurentLM:</cite> You just keep the text and ignore the elemenrs</p>
+<p id=2253 class=irc><cite>&lt;sueneu&gt;</cite> ack: duga</p>
+<p id=534f class=irc><cite>&lt;sueneu&gt;</cite> duga: How well is the processing model for this group developed?</p>
+<p id=6bc1 class=irc><cite>&lt;sueneu&gt;</cite> …is the detail about how to do this specified somewhere?</p>
+<p id=9091 class=irc><cite>&lt;sueneu&gt;</cite> @ivan: it is being considered in the HTML group</p>
+<p id=ca2e class=irc><cite>&lt;Hadrien&gt;</cite> Old document about this: <a href="https://wicg.github.io/scroll-to-text-fragment/">https://<wbr>wicg.github.io/<wbr>scroll-to-text-fragment/</a></p>
+<p id=0a38 class=irc><cite>&lt;sueneu&gt;</cite> duga: then it is scary to me to put this in our spec</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
