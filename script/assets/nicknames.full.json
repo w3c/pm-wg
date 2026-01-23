@@ -481,6 +481,13 @@
     },
     {
         "nick": [
+            "mia",
+            "miia"
+        ],
+        "name": "Miia Kirsi"
+    },
+    {
+        "nick": [
             "MasakazuKitahara",
             "Masakazu_Kitahara"
         ],
@@ -553,6 +560,12 @@
         ],
         "name": "Vladimir Levantovsky",
         "github": "vlevantovsky"
+    },
+    {
+        "nick": [
+            "Jonas"
+        ],
+        "name": "Jonas Lillqvist"
     },
     {
         "nick": [
