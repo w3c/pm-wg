@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>PMWG Accessibility TF – 22 January 2026</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt="W3C" border="0" height="60" width="60"></a></p>
+
+<h1>Accessibility task force - PMWG</h1>
+<h2>22 January 2026</h2>
+
+<nav id="links">
+<a href="https://www.w3.org/2026/01/22-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id="prelims">
+<div id="attendees">
+<h2>Attendees</h2>
+<dl class="intro">
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, gautierchomel_, gpellegrino, Jonas, Madeleine, wendyreid, muntxi, Mia, mgarrish	</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>wendyreid, CharlesL</dd>
+</dl>
+</div>
+
+<nav id="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#00fb">Review of PR for restructuring FXL techniques.</a></li>
+<li><a href="#da54">Review of PR: Add aural rendering and tts sections</a></li>
+<li><a href="#bab0">Review of extended descriptions explainer:</a></li>
+<li><a href="#dpub">DPUB ARIA roles proposed/discussed by us in past</a></li>
+</ol>
+</nav>
+</div>
+<main id="meeting" class="meeting">
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id="00fb">Review of PR for restructuring FXL techniques.</h3>
+<p id="e07b" class="phone s01"><cite>AvneeshSingh:</cite> Wendy created a PR for the new structure of the FXL techniques; feedback is welcome.</p>
+<p id="2097" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2878">w3c/<wbr>epub-specs#2878</a></p>
+<p id="799e" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://htmlpreview.github.io/?https://github.com/w3c/epub-specs/blob/fxl-a11y-tech-restructure/wg-notes/fxl-a11y-tech/index.html">https://<wbr>htmlpreview.github.io/?https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>blob/<wbr>fxl-a11y-tech-restructure/<wbr>wg-notes/<wbr>fxl-a11y-tech/<wbr>index.html</a></p>
+<p id="8704" class="phone s02"><cite>wendyreid:</cite> Changes match the EPUB accessibility techniques doc as much as possible. No dramatic changes.<br>
+<span id="e727">… any existing content was put into the right place.</span><br>
+<span id="c0c0">… maybe it could be placed differently.</span><br>
+<span id="315b">… I added some placeholders where it makes sense. I may have missed some.</span><br>
+<span id="bd69">… some sections may not make as much sense now with this restructuring.</span><br>
+<span id="ef7e">… reading order may be one area that needs to be discussed.</span></p>
+<p id="c0d8" class="phone s03"><cite>CharlesL:</cite> Was looking at this, halfway down, WCAG techniques for FXL, three headings; they are empty. Is that what you're looking for?<br>
+<span id="f0fd">… ensure meaningful order, should be a heading?</span></p>
+<p id="b1a9" class="phone s02"><cite>wendyreid:</cite> Yes</p>
+<p id="2a6e" class="phone s03"><cite>CharlesL:</cite> Might be some formatting issues.</p>
+<p id="e207" class="phone s04"><cite>gpellegrino:</cite> I didn't have time to look, but thanks Wendy for rearranging. Leave the PR open until the next call and give some more time for proper review.</p>
+<p id="7a11" class="phone s03"><cite>CharlesL:</cite> Just wanted to mention when you first sent out the preview links there was an issue with GitHub's SSL certificate and it wasn't working, so review wasn't possible, but it seems to be working now.</p>
+<p id="3d2e" class="phone s01"><cite>AvneeshSingh:</cite> We can keep it open for another week.</p>
+</section>
+
+<section>
+<h3 id="da54">Review of PR: Add aural rendering and TTS sections</h3>
+<p id="cb0a" class="summary"><a href="https://github.com/w3c/epub-specs/pull/2873#issuecomment-3773784853">w3c/<wbr>epub-specs#2873 (comment)</a></p>
+<p id="35f9" class="phone s05"><cite>mgarrish:</cite> This came from Rick Johnson, mentioning we'd lost mention of TTS from the core spec.<br>
+<span id="8441">… we'd created a TTS note, since things like CSS Speech and PLS and SSML lexicons weren't supported and wouldn't make it through the rec process for 3.3.</span><br>
+<span id="716a">… we have nothing stated in the core spec. Rick asked to create an aural rendering section, that TTS was important even if we didn't have specific requirements.</span><br>
+<span id="b100">… this PR restructures the media overlays section to include this.</span><br>
+<span id="7848">… I mention the original intentions, the TTS note, what technologies were out there; there's discussion about CSS Speech, there might be more work out there.</span><br>
+<span id="c8a7">… at this point we don't have guidance aside from content structure and alternative text.</span><br>
+<span id="bd46">… mostly informative.</span><br>
+<span id="b68c">… my question is about the RS side: what should we say about how RSs should implement TTS?</span><br>
+<span id="a969">… optional feature with recommended features based on the DAISY work: pause, play, restart.</span><br>
+<span id="947f">… pointing to other implementations, but create a distinction from media overlays since it is different.</span><br>
+<span id="7a52">… reading systems don't need to become assistive technology.</span><br>
+<span id="714a">… would like some feedback on this.</span><br>
+<span id="fadf">… want to make sure people are paying attention to this.</span></p>
+<p id="85f9" class="phone s01"><cite>AvneeshSingh:</cite> I was also wondering about the same questions; are people ok with so much detail?<br>
+<span id="5fd1">… do people in mainstream standards appreciate such precise guidance?</span></p>
+<p id="9fa7" class="phone s05"><cite>mgarrish:</cite> It's an optional feature; these are recommendations.<br>
+<span id="27f9">… maybe later on we can be more direct and require some, but not for now.</span></p>
+<p id="8610" class="phone s01"><cite>AvneeshSingh:</cite> The complete section is optional.</p>
+<p id="d45e" class="phone s04"><cite>gpellegrino:</cite> TTS is underspecified. I think we've discussed having guidance on TTS, a note or something like that.<br>
+<span id="4ee4">… Hadrien from EDRLab was working on this.</span><br>
+<span id="6d2d">… guidance on who has to implement TTS, and how.</span><br>
+<span id="c66b">… do I have to read the alt text, MathML, do I need to include the semantics?</span><br>
+<span id="6c41">… for developers who are unaware, it's new; the expectations for end users are unclear.</span><br>
+<span id="79a2">… given all this, and we don't have consensus, I'm wondering if this section becomes the starting point for this.</span><br>
+<span id="2d00">… two issues: this might be too much for the EPUB spec, and if we want this to be from the community, we need broader consensus.</span></p>
+<p id="07de" class="phone s03"><cite>CharlesL:</cite> Do we make it clear what we mean by TTS?<br>
+<span id="fec1">… I think a lot of folks confuse it with assistive technology.</span><br>
+<span id="8aff">… having a screen reader vs. a reading system self-voicing.</span><br>
+<span id="121c">… does that need to be made clearer?</span></p>
+<p id="9d13" class="phone s01"><cite>AvneeshSingh:</cite> Matt added something.</p>
+<p id="b3e6" class="phone s05"><cite>mgarrish:</cite> There's a new introduction. I haven't gone into implementation on the RS side; there's no information on technologies right now for RS.<br>
+<span id="9dc3">… there's limitations on that; there's no universal way to TTS HTML content. Will people agree to do it the same way when they have existing implementations?</span><br>
+<span id="8f1d">… have tried to limit it to basic features and what they would be, not the implementation.</span></p>
+<p id="ffff" class="phone s01"><cite>AvneeshSingh:</cite> Too low level.<br>
+<span id="77cd">… maybe Matt can have a look to make it clearer, higher-level.</span><br>
+<span id="f62b">… we'll get the feedback from the community.</span></p>
+<p id="10000" class="phone s02"><cite>wendyreid:</cite> I will add my comments. One challenge is the confusion thing that Charles mentioned: TTS vs. screen readers vs. audio/media overlays, etc.<br>
+<span id="ff3f">… this is not just an EPUB problem; browser content platforms could have a TTS implementation.</span><br>
+<span id="61b3">… news websites: listen to audio version, etc., but we don't know who should specify.</span></p>
+<p id="6bfa" class="phone s05"><cite>mgarrish:</cite> That's the big challenge. I understand the desire for information; we just aren't at a place to get recommendations on authoring or implementation because there's no information or standards out there.<br>
+<span id="0fb9">… what should TTS be able to do? We can cover basic functionality. I don't know how much value it has, but if we want to spell some stuff out, maybe this is the way to do it.</span><br>
+<span id="4a55">… I'm open to alternatives.</span></p>
+<p id="003f" class="phone s01"><cite>AvneeshSingh:</cite> Traditionally, did we provide this kind of guidance for Media Overlays?<br>
+<span id="7fc2">… stop and start from the same position.</span><br>
+<span id="4265">… did we give that specificity?</span></p>
+<p id="f44a" class="phone s05"><cite>mgarrish:</cite> I can't remember off the top of my head.<br>
+<span id="0d6e">… I can take a look and try and match it up.</span><br>
+<span id="1301">… some of the same stuff for MO.</span></p>
+<p id="a9a1" class="phone s01"><cite>AvneeshSingh:</cite> That would be helpful.<br>
+<span id="3594">… keeping it high level would be nice. If we want to have a proper guidance document, reading systems guidelines like from DAISY, that's huge detail; we need to think about a different document for engineering level.</span></p>
+<p id="9082" class="phone s05"><cite>mgarrish:</cite> I'll check it and try to make it match up, make sure we aren't adding in features.</p>
+<p id="76fe" class="phone s01"><cite>AvneeshSingh:</cite> Good discussion, didn't expect the details; we spotted some important details.</p>
+<p id="4633" class="phone s05"><cite>mgarrish:</cite> I was hoping for this feedback.</p>
+</section>
+
+<section>
+<h3 id="bab0">Review of extended descriptions explainer:</h3>
+<p id="3d2f" class="irc"><cite>&lt;gautierchomel_&gt;</cite> <a href="https://github.com/w3c/publ-a11y-extended-desc">w3c/<wbr>publ-a11y-extended-desc</a></p>
+<p id="a535" class="phone s06"><cite>gautierchomel_:</cite> On extended descriptions, I think I addressed all of the comments in my PR. As it is, I think we can start a new review.<br>
+<span id="bf27">… [shares link to document]</span></p>
+<p id="6f23" class="irc"><cite>&lt;gautierchomel_&gt;</cite> <a href="https://w3c.github.io/publ-a11y-extended-desc/">https://<wbr>w3c.github.io/<wbr>publ-a11y-extended-desc/</a></p>
+<p id="b120" class="phone s01"><cite>AvneeshSingh:</cite> It was a readme; I was able to read it.</p>
+<p id="616b" class="phone s06"><cite>gautierchomel_:</cite> No questions on my side. Image links are broken and I will fix that. I'm waiting for feedback.</p>
+<p id="2c4d" class="phone s01"><cite>AvneeshSingh:</cite> Please share your comments.</p>
+<p id="1970" class="phone s03"><cite>CharlesL:</cite> The link you've shared, it's going to a GitHub page; the explainer is in the readme?</p>
+<p id="e9ea" class="phone s06"><cite>gautierchomel_:</cite> The second link is the content as an HTML page.</p>
+<p id="71e8" class="phone s03"><cite>CharlesL:</cite> It's the same as the first link?<br>
+<span id="418f">… and the image links work.</span></p>
+<p id="7166" class="phone s06"><cite>gautierchomel_:</cite> They work on the readme and not the page, probably a path issue.</p>
+<p id="be9d" class="phone s03"><cite>CharlesL:</cite> Just looking for feedback on this? Is there an issue to collect it?</p>
+<p id="4526" class="phone s06"><cite>gautierchomel_:</cite> You can add issues in an issue I'll create in the tracker.</p>
+<p id="d297" class="phone s01"><cite>AvneeshSingh:</cite> If we're ok with the current state, we can share it with APA, at least the chairs.<br>
+<span id="26a9">… Matthew mentioned he'd like to help; or should we wait?</span></p>
+<p id="8319" class="phone s07"><cite>Jonas:</cite> I'm a bit confused. Has anything changed since we discussed it last week?<br>
+<span id="f3ee">… Gautier, has it been updated?</span><br>
+<span id="6496">… I read the version in the agenda link, and I didn't see any changes.</span></p>
+<p id="e359" class="phone s06"><cite>gautierchomel_:</cite> The changes were in a PR; I just merged it, and it's changed now. You can see a diff in the closed PR.</p>
+<p id="ddf8" class="phone s07"><cite>Jonas:</cite> Ok, it's hard to review that during the meeting.<br>
+<span id="006d">… which link?</span></p>
+<p id="2de2" class="irc"><cite>&lt;gautierchomel_&gt;</cite> <a href="https://github.com/w3c/publ-a11y-extended-desc/pull/4/files">https://<wbr>github.com/<wbr>w3c/<wbr>publ-a11y-extended-desc/<wbr>pull/<wbr>4/<wbr>files</a></p>
+<p id="225c" class="phone s06"><cite>gautierchomel_:</cite> I think we need one more week to review before pushing to APA.</p>
+<p id="7292" class="phone s01"><cite>AvneeshSingh:</cite> We'll wait for a week and review. In early Feb I'll ask APA chairs to review and give feedback.</p>
+<p id="ea0c" class="phone s04"><cite>gpellegrino:</cite> Editorial question: do we have time to move this to the HTML format?<br>
+<span id="4709">… we started from a model suggested by APA.</span></p>
+<p id="b844" class="phone s01"><cite>AvneeshSingh:</cite> HTML or Markdown?</p>
+<p id="5215" class="phone s04"><cite>gpellegrino:</cite> I thought it was HTML with ReSpec.</p>
+<p id="3376" class="phone s02"><cite>wendyreid:</cite> You can use Markdown with ReSpec.</p>
+<p id="6d66" class="phone s01"><cite>AvneeshSingh:</cite> How was the original structured?</p>
+<p id="3434" class="phone s06"><cite>gautierchomel_:</cite> I don't remember. I think we kept with Markdown to keep it simple.<br>
+<span id="5fff">… to get the feedback, pushed as readme, the first version is HTML, so we moved from HTML to Markdown. I can go back and check.</span></p>
+<p id="a072" class="phone s01"><cite>AvneeshSingh:</cite> I think we moved to Markdown but can't remember why.</p>
+<p id="dd02" class="phone s06"><cite>gautierchomel_:</cite> Mainly to ease the editorial process.<br>
+<span id="1085">… since it's just an explainer.</span><br>
+<span id="4f13">… people can figure out what we want to do; people can take action.</span><br>
+<span id="1c17">… we have explainers in the epub-spec repo.</span></p>
+<p id="f874" class="phone s02"><cite>wendyreid:</cite> [explains ReSpec in Markdown]</p>
+<p id="9036" class="phone s01"><cite>AvneeshSingh:</cite> Maybe we move it to HTML then.</p>
+<p id="76b3" class="phone s06"><cite>gautierchomel_:</cite> The W3C explainer template is in Markdown.</p>
+<p id="2251" class="phone s05"><cite>mgarrish:</cite> I thought it was just going to live as a page in the repo; does it need to be ReSpec?<br>
+<span id="4ff3">… if it's just an explainer doc, does it need ReSpec?</span><br>
+<span id="ed5d">… no requirement for it.</span><br>
+<span id="de58">… lots of other explainers and their samples are in Markdown in repos.</span></p>
+<p id="2920" class="phone s01"><cite>AvneeshSingh:</cite> The ReSpec page looks more formal as well, gives an impression of a specification, but this is an explainer. The image can matter.</p>
+<p id="da16" class="phone s05"><cite>mgarrish:</cite> There was a template we were given; we should just use that.</p>
+<p id="e0e1" class="phone s02"><cite>wendyreid:</cite> ReSpec thing might be my fault; I wasn't sure if this was going to be published or not.</p>
+<p id="8303" class="phone s01"><cite>AvneeshSingh:</cite> There's a lot of discussion; where should this proposal go?</p>
+<p id="8ba9" class="phone s07"><cite>Jonas:</cite> I had a look at the PR. It seems like it still doesn't mention the possibility of aria-details having a direct reference to the image description instead of referencing it through a link,<br>
+<span id="4e9c">… which would be important, I think, to mention.</span><br>
+<span id="a749">… there are techniques both for EPUB and the web where you would not put the extended description on a separate page and link to it.</span><br>
+<span id="32b1">… also, I feel that the document is not explicitly about EPUB publications only, but the technique mentioned is mostly for EPUB. On the web you'd probably use details, or some other element on the same page as the image.</span><br>
+<span id="fa1b">… it doesn't make sense to create a separate page for the descriptions.</span><br>
+<span id="4112">… something that we touched upon in the TIES meeting earlier this week was that one possible use case in reading systems for this semantic markup would be to have functionality for hiding or skipping extended descriptions in the main text flow,</span><br>
+<span id="221e">… because the option of having extended descriptions in the main text flow isn't mentioned, that is a gap.</span></p>
+<p id="79a1" class="phone s03"><cite>CharlesL:</cite> We referenced skippability and escapability; visually you may also want to do the same thing, linked or within the document, to be able to hide those and not interact. It would impact TTS or MO interactions.<br>
+<span id="e98e">… that use case is important to show because it's hard without these semantics.</span></p>
+<p id="80b1" class="phone s01"><cite>AvneeshSingh:</cite> The document is created to emphasize the need for these semantics.<br>
+<span id="5893">… as to the other comment about aria-details pointing to the same page:</span><br>
+<span id="2d68">… how does it highlight the need?</span></p>
+<p id="fc69" class="phone s03"><cite>CharlesL:</cite> I think it does.<br>
+<span id="1df7">… it's the same thing; it's just another option that publishers want to use, to have the extended description by the image, in something like an aside. But you need to be able to do the same processing on the same page or a different document.</span><br>
+<span id="10001">… we don't want to prevent the publisher or force them into one way of doing things.</span><br>
+<span id="d779">… we want the same functionality and features for all use cases.</span><br>
+<span id="b689">… we don't need to limit it if it's on the page or not.</span></p>
+<p id="48e8" class="phone s05"><cite>mgarrish:</cite> This is sort of the challenge when we go to ARIA. They may only take the extended description on the main page as an ARIA property; they may not like the linking.<br>
+<span id="97d0">… depends on what they see as a viable approach.</span></p>
+<p id="fc18" class="phone s03"><cite>CharlesL:</cite> Let's not give them an excuse to dismiss the idea.</p>
+<p id="d192" class="phone s05"><cite>mgarrish:</cite> Ultimately we're presenting the EPUB need, not the web, but we'll see.</p>
+<p id="7351" class="phone s01"><cite>AvneeshSingh:</cite> All of us are alluding towards allowing aria-details pointing within the document as well as outside.</p>
+<p id="9936" class="phone s05"><cite>mgarrish:</cite> Gives them something they might understand, friendlier to their way of thinking.</p>
+<p id="8dd7" class="phone s06"><cite>gautierchomel_:</cite> I'm not sure I caught everything. I understand that we should not speak about external files?</p>
+<p id="8e65" class="phone s01"><cite>AvneeshSingh:</cite> I don't think we're removing that approach; we are including the same-file approach.</p>
+<p id="b772" class="phone s03"><cite>CharlesL:</cite> Adding to, not removing.</p>
+<p id="a2b4" class="phone s06"><cite>gautierchomel_:</cite> The sample pattern has an extended description file; need to update.<br>
+<span id="1376">… I'll open an issue with what I understand and people can contribute to that.</span><br>
+<span id="c117">… easier for me to understand that.</span></p>
+<p id="efaf" class="phone s01"><cite>AvneeshSingh:</cite> We'll add to the issue.<br>
+<span id="d3e6">… anything else?</span></p>
+</section>
+<section>
+<H3 id="dpub">DPUB ARIA roles proposed/discussed by us in past</h3>
+<p id="7804" class="phone s01"><cite>AvneeshSingh:</cite> Discussion of DPUB-ARIA roles of the past: we've not taken actions for that.<br>
+<span id="b0c1">… are there other DPUB-ARIA roles that we need to do something about?</span></p>
+<p id="44f3" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/publ-a11y/issues/740">w3c/<wbr>publ-a11y#740</a></p>
+<p id="5506" class="irc"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/dpub-aria/issues/">https://<wbr>github.com/<wbr>w3c/<wbr>dpub-aria/<wbr>issues/</a></p>
+<p id="ec7b" class="phone s04"><cite>gpellegrino:</cite> One was about questions and answers.<br>
+<span id="8e9f">… since we worked with educational publishers, we had some troubles identifying interactive exercises in publications.</span><br>
+<span id="ce4c">… it was raised in the past; there was some pushback.</span><br>
+<span id="b3ae">… no way to identify an item that is an interactive exercise, might be problematic.</span></p>
+<p id="afd9" class="phone s05"><cite>mgarrish:</cite> That's going back 10 years. It was something we brought up when we did the initial DPUB-ARIA work; it was shot down.<br>
+<span id="6859">… didn't see the need for it.</span><br>
+<span id="3d70">… not specific enough.</span><br>
+<span id="18af">… if we're going to make a foray into education, it's more than EPUB.</span><br>
+<span id="39bb">… we shouldn't create stuff in the DPUB space that isn't exclusive to EPUB.</span><br>
+<span id="931d">… there is lots of stuff on the web in the education space outside of EPUB; I don't know how we get there without looking at an educational module.</span><br>
+<span id="cb00">… or support from educational publishers more generally.</span><br>
+<span id="af40">… or backing from industry.</span><br>
+<span id="ddcc">… it looks like we're just trying to add things. I see a lot of problems; it's not something you'd associate with book structure.</span><br>
+<span id="cf56">… we can try again, but I have reservations.</span></p>
+<p id="acbc" class="phone s02"><cite>wendyreid:</cite> I have the same reservations. What is the point of semantics like this?<br>
+<span id="03a2">… what do we want that ARIA semantics doesn't already have? Is this a metadata play?</span><br>
+<span id="5cb8">… if you are to have doc-qna, what does that mean?</span></p>
+<p id="2fd8" class="phone s04"><cite>gpellegrino:</cite> I agree it is not something related to digital publications, but maybe we can raise it to the broader ARIA group and get publisher support.<br>
+<span id="5180">… what is the goal? In digital publications, exercises are noted graphically, easy to identify visually, not as easy to find with AT.</span></p>
+<p id="ca14" class="phone s04"><cite>gpellegrino:</cite> The use case is to make the content discoverable, but maybe forms or another element could serve this purpose.</p>
+<p id="797d" class="phone s01"><cite>AvneeshSingh:</cite> We need to consider how we can persuade ARIA; we need to have strong explanations.<br>
+<span id="e9c8">… we need to do some homework before we go to ARIA.</span></p>
+<p id="ac42" class="phone s03"><cite>CharlesL:</cite> I was going to agree with gpellegrino.</p>
+<p id="1e2e" class="phone s01"><cite>AvneeshSingh:</cite> I'm worried about these going simultaneously. We have extended descriptions, and interactivity roles, but we need to weigh it.</p>
+<p id="cf98" class="summary">Another use case would be to print out a list of questions, possibly :)</p>
+<p id="a654" class="phone s01"><cite>AvneeshSingh:</cite> Thanks everyone; please give your feedback on the open PRs.</p>
+<p id="b203" class="irc"><cite>&lt;muntxi&gt;</cite> Thank you for the interesting discussions!</p>
+</section>
+</main>
+
+<address>Minutes manually created (not a transcript), formatted by <a href="https://w3c.github.io/scribe2/scribedoc.html">scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body></html>
