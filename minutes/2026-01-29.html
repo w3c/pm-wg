@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 29 January 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>29 January 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Jan/0038.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/01/29-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, CharlesL, duga, gautierchomel_, gman, Hadrien, ivan, kimberg, laurent, MasakazuKitahara, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>avneeshsingh</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>Dale</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#5400">Selectors in Annotations - w3c/<wbr>epub-specs#2892</a></li>
+<li><a href="#b122">JXL in EPUB</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=5400>Selectors in Annotations - <a href="https://github.com/w3c/epub-specs/pull/2892">w3c/<wbr>epub-specs#2892</a></h3>
+<p id=c01c class="phone s01"><cite>Laurent:</cite> Providing overview of selectors<br>
+<span id=ffff>… page being explained is <a href="https://www.w3.org/TR/annotation-model/">https://<wbr>www.w3.org/<wbr>TR/<wbr>annotation-model/</a></span></p>
+<p id=10000 class="phone s02"><cite>duga:</cite> model syntax is referring to a spine item not a manifest item. A manifest item is not necessarily in the spine.<br>
+<span id=19f7>… referring to an item in the Spine is easier than referring to an item in the manifest.</span></p>
+<p id=8e3c class="phone s01"><cite>Laurent:</cite> Showing examples of selectors.</p>
+<p id=2699 class="phone s03"><cite>ivan:</cite> The text selector was designed for a URL not HTML<br>
+<span id=bc31>… before this will go to the recommendation it will be looked at by other groups.</span><br>
+<span id=accc>… I would prefer to use the work done by the web development group, rather than define the definition of the selector in the Working Group</span></p>
+<p id=23e0 class="phone s02"><cite>duga:</cite> What is our fallback position if we propose solution that has not been defined by another group?</p>
+<p id=12b6 class="phone s01"><cite>Laurent:</cite> There is a different fallback solution.</p>
+<p id=22b1 class="phone s03"><cite>ivan:</cite> The Text Fragment selector is the preferred solution. but if it is not specified, then there is another solution already proposed.</p>
+<p id=59e9 class="phone s01"><cite>Laurent:</cite> The Spatial selector will solve problems.</p>
+<p id=e17c class="phone s04"><cite>Hadrien:</cite> I would rather reference solutions from other groups, than have to define something so technical in this group.</p>
+<p id=7d05 class=irc><cite>&lt;sueneu&gt;</cite> +1 Hadrien</p>
+<p id=5d2b class="phone s03"><cite>ivan:</cite> We will be in contact with that group before this proposal goes for recommendation. So we will be able to adjust the proposal before hand.</p>
+<p id=3bf6 class="phone s01"><cite>Laurent:</cite> The CSS selector is an alternate solution to the Text Fragment selector</p>
+<p id=d8f8 class="phone s05"><cite>sueneu:</cite> Do I need to identify an element in HTML in order to find it a CSS selector?</p>
+<p id=10001 class="phone s01"><cite>Laurent:</cite> No, CSS selectors will find content even if it is not specifically identified with an attribute.</p>
+<p id=b67e class="phone s04"><cite>Hadrien:</cite> Do we want this to be general enough that it will work in different applications than EPUB? What is the scope?</p>
+<p id=3229 class="phone s06"><cite>wendyreid:</cite> EPUBs are rendered on different types of devices. Our solutions need to be aware of the limitation is processing capability of older reading systems.<br>
+<span id=7f77>… it depends on the inner structure on how data is loaded in an older reading system. The backwards compatibility is an issue.</span></p>
+<p id=8c12 class="phone s04"><cite>Hadrien:</cite> Reading systems will optimize their approach.</p>
+<p id=3e00 class="phone s02"><cite>duga:</cite> Do we focus on resiliency over performance? +1 for CSS.</p>
+<p id=313b class="phone s03"><cite>ivan:</cite> We have run into this technical hurdle before. CFI?<br>
+<span id=7484>… let's use the technology CSS provides rather than trying to define something ourselves.</span></p>
+<p id=9f1f class=irc><cite>&lt;ivan&gt;</cite> +1 wendy</p>
+<p id=84f6 class="phone s06"><cite>wendyreid:</cite> Having run into problems with bookmarks in the past, we need a robust solution.</p>
+<p id=6948 class="phone s02"><cite>duga:</cite> We need to keep the number of selectors small: Text, spatial, audio. We need a solution that will be actually implemented. Don't provide too many options for solving the same problem.</p>
+<p id=702c class="phone s05"><cite>sueneu:</cite> Would the solutions work with older EPUBS?</p>
+<p id=9b9d class="phone s04"><cite>Hadrien:</cite> It depends.</p>
+<p id=26f8 class="phone s03"><cite>ivan:</cite> Based on today's discussion. Laurent will come up with different
+    wording.</p>
+</section>
+
+<section>
+<h3 id=b122>JXL in EPUB</h3>
+<p id=3c67 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2899">w3c/<wbr>epub-specs#2899</a>, <a href="https://github.com/w3c/epub-specs/issues/2896">w3c/<wbr>epub-spec#2896</a></p>
+<p id=fc47 class="phone s02"><cite>duga:</cite> We need to fix the table that references media types regarding FXL</p>
+<p id=0808 class="phone s05"><cite>sueneu:</cite> I recommend we merge the PR and make a note to fix the table.</p>
+<p id=e3bc class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: Merge PR 2899, adding JXL support and information on EPUB version for core media types.</p>
+<p id=32bb class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=32bc class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=32bd class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=32be class=irc><cite>&lt;Dale&gt;</cite> +1</p>
+<p id=de9a class=irc><cite>&lt;duga&gt;</cite> 0</p>
+<p id=32bf class=irc><cite>&lt;gautierchomel_&gt;</cite> +1</p>
+<p id=32c0 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=32c1 class=irc><cite>&lt;sueneu&gt;</cite> +1</p>
+<p id=72bb class=irc><cite>&lt;gman&gt;</cite> +1</p>
+<p id=72bc class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=32c2 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=38dc class=resolution><strong>RESOLUTION:</strong> Merge PR 2899, adding JXL support and information on EPUB version for core media types.</p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#38dc">Merge PR 2899, adding JXL support and information on EPUB version for core media types.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body>
+</html>
