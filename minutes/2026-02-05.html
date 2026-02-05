@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 05 February 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>05 February 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Feb/0003.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/02/05-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, brady, charles, dale, duga, elizabeth, gautierchomel_, gman, Hadrien, hadriengardeur, ivan, kimberg, MasakazuKitahara, mgarrish, shiestyle, SueNeu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>avneeshsingh</dd>
+<dt>Chair</dt><dd>susan</dd>
+<dt>Scribe</dt><dd>wendyreid, SueNeu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#4667">SMIL images</a></li>
+<li><a href="#f106">Closing issues</a>
+<ol>
+<li><a href="#0dfb">w3c/<wbr>epub-specs#2879</a></li>
+<li><a href="#fd4f">w3c/<wbr>epub-specs#2828</a></li>
+</ol>
+</li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+
+
+<section>
+<h3 id=4667>SMIL images</h3>
+<p id=45c7 class=summary><a href="https://github.com/w3c/epub-specs/issues/2883">w3c/<wbr>epub-specs#2883</a></p>
+<p id=f532 class="phone s01"><cite>SueNeu:</cite> Hadrien, do you want to tell us what is happening in this issue so far?</p>
+<p id=ffff class="phone s02"><cite>Hadrien:</cite> Just a headsup that I opened another SMIL-related issue, not directly related but of interest<br>
+<span id=db3c>… SMIL for images is something we've discussed, I proposed this as I think it's a missing feature</span><br>
+<span id=9365>… we lack the ability to reference an image or fragment of an image and link that to text or audio for that fragment</span><br>
+<span id=f46b>… and role, so we can identify the fragment</span><br>
+<span id=73d9>… I've shared examples, one from Bibliotheque Simon Roland(?), human recorded audio for the captions and speech bubbles of a comic</span><br>
+<span id=9b11>… they had to use the text element, wasn't ideal</span><br>
+<span id=03f3>… because they used text, they couldn't also provide the textual alternative</span><br>
+<span id=dabf>… audio equivalent of handwritten text</span><br>
+<span id=d0b1>… it demonstrates what Brady might be concerned about, but if its possible today, it may not change things</span><br>
+<span id=b991>… if they're doing it already today, it's as a way to  make this work where there's a gap</span><br>
+<span id=739d>… there is interest from other groups as well</span><br>
+<span id=2e37>… there is a paper published by a French university, where they generated a script for comics using computer vision, genAI, they can generate a description and extract the text</span><br>
+<span id=0785>… create fragments, they generate text, then audio based on the text</span><br>
+<span id=4a86>… shows what more modern tools can do</span><br>
+<span id=ab51>… not everyone, there's huge interest from DAISY, and there's a technical conference after the DAISY meeting in June</span><br>
+<span id=80d8>… there's interest, but it's currently missing</span><br>
+<span id=5225>… pointed out one way to do it, adding an existing SMIL feature to our subset</span><br>
+<span id=d83f>… discussion with Ivan, do we put it in the spec and we're not sure if it gets adopted</span><br>
+<span id=85a0>… MO is not well supported across the board, but it could also be a missed opportunity</span><br>
+<span id=50f1>… where there are gaps, people will invent their own formats</span><br>
+<span id=95ed>… we could consider writing a note or just allowing EPUBCheck to not flag it</span></p>
+<p id=e95b class="phone s02"><cite>Hadrien:</cite> there are many ways to do something about it, doing nothing would be a waste</p>
+<p id=992a class="phone s03"><cite>ivan:</cite> I will also repeat a bit of what was discussed on the issue, I don't think it is worth spending our time on the technical value and usefulness<br>
+<span id=639e>… as far as I'm concerned, this is a useful feature</span><br>
+<span id=70f5>… that's not a question, in my memory, Brady raised issues that are not necessarily technical problems, but what do we do with a feature that wasn't in the charter, which came in and we have no idea whether big publishers will be interested</span><br>
+<span id=bafb>… how will it distort the market?</span></p>
+<p id=c71c class="phone s03"><cite>ivan:</cite> This is what we need to discuss<br>
+<span id=d186>… it's not about the technical value, it's an easy extension</span><br>
+<span id=10000>… there's no disagreement there, the bigger question is the &quot;market&quot;</span></p>
+<p id=1f5e class="phone s04"><cite>duga:</cite> To elaborate more on my concern, we have an existing ecosystem of children's books using SMIL, the way that wordflow works is taking an image-only book, add a text layer, get word by work highlighting</p>
+<p id=f0f9 class="phone s04"><cite>duga:</cite> If we add this, it's a new flow for generating children's books<br>
+<span id=e977>… it's true you can make bad content, you can avoid putting text in the divs you're highlighting, there's a lot of features built into the text layer, it works.</span><br>
+<span id=7e12>… we're saying that by making this change you can just do images with attached audio</span><br>
+<span id=0f13>… most of the children's books aren't good for accessibility for other reasons</span><br>
+<span id=249b>… my worry is we're saying you can do either audio or text, and someone comes to the spec and sees two options</span><br>
+<span id=1d32>… an author can come along and see &quot;oh I can do this with images only&quot;, but platforms like Play Books won't support that</span><br>
+<span id=389f>… we should at least be upfront about the new way of doing the books, is that something you want to see in this version</span><br>
+<span id=c089>… I'm not disagreeing that this is a good feature, but we have a method, and an ecosystem built around that method, there could be an impact</span></p>
+<p id=56a1 class=irc><cite>&lt;SueNeu&gt;</cite> ack: Hadrien</p>
+<p id=17cc class="phone s02"><cite>Hadrien:</cite> Going back to Ivan's question and Brady, we focus way too much on a few players, and the ecosystem is much bigger than just a few companies<br>
+<span id=5e76>… we have orgs moving off DAISY and going to EPUB with MO</span><br>
+<span id=8fd8>… reflow files with MO, which isn't even supported in Apple Books.</span><br>
+<span id=0b8a>… focusing on just a few players that don't do these things, and missing that there are players that are doing this work, and making these advances</span><br>
+<span id=ab60>… we are seeing passionate users building tools and platforms that support these new things</span><br>
+<span id=ba15>… instead of focusing on big players, should we also support the more specialized libraries, specialized use cases</span></p>
+<p id=5a4b class="phone s05"><cite>wendyreid:</cite> We need to start having some discussions about who are we concerned with?<br>
+<span id=10001>… there are more niche or smaller players in the EPub market that want advancement of the spec</span><br>
+<span id=73f4>… using web technologies. They do not have the same use cases</span><br>
+<span id=a339>… that we have been focusing on. Because we are primarily focused on larger vendors</span><br>
+<span id=3551>… most of the innovation is coming from smaller platforms and specialized libraries</span><br>
+<span id=5be3>… including regional use cases, like web comics</span><br>
+<span id=8d7e>… we need to look more closely at these smaller players</span><br>
+<span id=ac11>… even if we don't expect the bigger players to adopt it quickly</span><br>
+<span id=7c25>… if there is a reading system, say in Sweden, that would benefit from this we should do it</span></p>
+<p id=6edd class=irc><cite>&lt;ivan&gt;</cite> s/ack wendyreid//</p>
+<p id=52ec class="phone s05"><cite>wendyreid:</cite> to @duga 's point, we do need to reach out and create more best practices around it</p>
+<p id=ae8e class="phone s06"><cite>ack:</cite> mgarrish</p>
+<p id=36a3 class="phone s07"><cite>mgarrish:</cite> It's important to take everyone's concerns, my concern has been expressed by Ivan and Brady, we might be squeezing this in right before CR<br>
+<span id=5c66>… yes it's part of SMIL, there's a number of details to work out, it's not that this doesn't have value, but is this the right time</span><br>
+<span id=babb>… or is this a case where we do this through EPUBCheck and notes, so bigger players have a chance to voice this</span><br>
+<span id=ef81>… this wasn't in the charter, there was no &quot;notice&quot; of this change, everyone agrees this is good, are we doing it the right way</span></p>
+<p id=829c class="phone s02"><cite>Hadrien:</cite> I'd have to read the charter again, but I think we had accessibility and comics, so this might fit, the work on annotations is bigger than this<br>
+<span id=b9ba>… I'm not advocating to push this in the spec, we can do a note, a future revision, as long as it doesn't get flagged in EPUBCheck</span><br>
+<span id=92a6>… it raises questions about how we handle revisions, we don't know if there will be a charter after this one</span><br>
+<span id=89cf>… the window for doing anything feels narrow, sometimes we know things in advance, and other times we talk to people and learn something</span> bring those things back to the spec</p>
+<p id=e2fa class=irc><cite>&lt;ivan&gt;</cite> quoting from the charter: &quot;Finally, the Working Group will also
+    incubate issues without necessarily aiming at the creation of final Recommendations during the lifetime of this
+    charter. &quot;</p>
+<p id=a0b5 class="phone s08"><cite>DaleRogers:</cite> I'm listening to this and it makes me wonder, what is the purpose of a spec? I guess it goes back to the charter<br>
+<span id=5333>… I take it as we said we'd do this, and we're telling people &quot;this is how you should do it&quot; not that &quot;you must do this&quot;</span></p>
+<p id=d080 class="phone s07"><cite>mgarrish:</cite> Don't want to veer too far off course, when we do revisions, we need to be sure up front what we're doing. We should talk to people, but we need to do it more in advance, we need some guardrails<br>
+<span id=3ab1>… we're already looking at doing horizontal reviews, but now we're looking at a significant change, we need a plan for these things</span><br>
+<span id=bb5b>… it's not a critique of bringing this up, just that this always seems to happen and we try to accommodate where we want, but we need some organization in the future</span></p>
+<p id=5986 class="phone s03"><cite>ivan:</cite> Putting on my staff contact hat, I was looking at the charter, we do these things, but we also incubate things without necessarily committing them to the final version of the rec<br>
+<span id=cb11>… we gave ourselves an escape hatch</span><br>
+<span id=bb43>… I would personally, staff contact hat off, I'd be happy to add it with a warning, I agree it's not a major work, not like the layout issue</span><br>
+<span id=000b>… we can put it in as at risk, it doesn't mean it has to be implemented, we use the remaining year to reach out to learn about the community's reaction to it</span><br>
+<span id=5cd5>… if we get positive feedback, we leave it in, if we don't, we can remove it.</span><br>
+<span id=6561>… that's do-able, we have the ability to roll back</span></p>
+<p id=a536 class="phone s01"><cite>SueNeu:</cite> People see the utility of this, concerns about process, whether this is in scope, the current proposal are to add this to the spec with a warning, removeable if needed, or just add a note and change EPUBCheck to allow this.</p>
+<p id=ad22 class="phone s03"><cite>ivan:</cite> What I think is to produce a separate note describing this feature</p>
+<p id=9381 class="phone s02"><cite>Hadrien:</cite> Correct, a separate document</p>
+<p id=60d0 class="phone s03"><cite>ivan:</cite> If the feedback from the community comes out negative, we can remove from the spec and create a note, so it doesn't disappear</p>
+<p id=6bff class="phone s02"><cite>Hadrien:</cite> This sounds like a good process to me</p>
+<p id=b442 class=summary>Proposed: We will add SMIL in images to EPUB 3,4 spec as at risk, and then move it to a note if it comes out of the final spec?</p>
+<p id=71d1 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=71d2 class=irc><cite>&lt;SueNeu&gt;</cite> +1</p>
+<p id=b1d1 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=b1d2 class=irc><cite>&lt;gman&gt;</cite> +1</p>
+<p id=f1d1 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=31d2 class=irc><cite>&lt;gautierchomel_&gt;</cite> +1</p>
+<p id=71d3 class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=9399 class=irc><cite>&lt;shiestyle&gt;</cite> 0</p>
+<p id=939a class=irc><cite>&lt;duga&gt;</cite> 0</p>
+<p id=31d3 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=9219 class=irc><cite>&lt;ivan&gt;</cite> +</p>
+<p id=71d4 class=irc><cite>&lt;ajellinek&gt;</cite> +1</p>
+<p id=31d4 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=8564 class=resolution><strong>RESOLUTION:</strong> We will add SMIL in images to EPUB 3,4 spec as at risk, and then move it to a note if it comes out of the final spec</p>
+<p id=920e class="phone s03"><cite>ivan:</cite> No good thing goes unpunished, it would be good if you produced the PR to add this into the document</p>
+<p id=991c class="phone s02"><cite>Hadrien:</cite> Each element has its own subsection, so one for images?</p>
+<p id=7da2 class="phone s03"><cite>ivan:</cite> Yes, and we'll support editorially</p>
+<p id=5a42 class="phone s04"><cite>duga:</cite> And the RS spec for behaviour</p>
+<p id=9bed class="phone s02"><cite>Hadrien:</cite> I'll look it up and figure out where things need to go</p>
+</section>
+
+<section>
+<h3 id=f106>Closing issues</h3>
+<p id=10002 class=summary> <a href="https://github.com/w3c/epub-specs/issues?q=is%3Aissue%20state%3Aopen%20label%3Apropose-closing">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>issues?q=is%3Aissue%20state%3Aopen%20label%3Apropose-closing</a></p>
+<p id=acb7 class="phone s01"><cite>SueNeu:</cite> We wanted to discuss some issues to propose closing</p>
+<p id=03e3 class="phone s07"><cite>mgarrish:</cite> Ivan marked these as propose closing, I just created the link</p>
+<p id=d146 class=summary><a href="https://github.com/w3c/epub-specs/issues/2879">w3c/<wbr>epub-specs#2879</a></p>
+<h4 id=0dfb><a href="https://github.com/w3c/epub-specs/issues/2879">w3c/<wbr>epub-specs#2879</a></h4>
+<p id=41eb class="phone s01"><cite>SueNeu:</cite> One is an issue on the section on encryption files being too brief<br>
+<span id=2e49>… does anyone want to keep this issue open?</span></p>
+<p id=ef94 class="phone s07"><cite>mgarrish:</cite> Do we need a recap? Briefly, it was questioned about the XML encryption standard is much bigger, does everything apply or should we provide a subset, I don't think it's critical for us to define something<br>
+<span id=06ef>… Ivan and I discussed this with the original requester, no one has raised this as an issue. If people are encrypting, it's the vendor and they know what they are doing</span><br>
+<span id=177a>… I don't think it's worth us wading into</span></p>
+<p id=cb0b class="phone s03"><cite>ivan:</cite> I would even say it more strongly, we don't have the knowledge or experience or contact to relevant communities to comment on encryption, so we should not touch it</p>
+<p id=6d8b class="phone s09"><cite>shiestyle:</cite> In Japan, each reading system has its own DRM for encryption, so we shouldn't define anything</p>
+<h4 id=fd4f><a href="https://github.com/w3c/epub-specs/issues/2828">w3c/<wbr>epub-specs#2828</a></h4>
+<p id=c080 class="phone s01"><cite>SueNeu:</cite> Clarifying multiple renditions, can anyone summarize that one?</p>
+<p id=4b09 class="phone s03"><cite>ivan:</cite> An evergreen, always there issue<br>
+<span id=10003>… let's put it this way, we've decided to push it aside as a note, there's been no new evidence that requires us to take another look at it</span></p>
+<p id=31ee class=irc><cite>&lt;gautierchomel_&gt;</cite> +1</p>
+<p id=0d2d class="phone s07"><cite>mgarrish:</cite> We took it out as not implemented, this is a request to pull it back in, but there is no desire to have multiple renditions in this form, we can move on</p>
+<p id=1e3a class="phone s10"><cite>gautierchomel_:</cite> I don't disagree, I did want to mention that the problem of having two contents that are similar and need to be displayed together, the problem is still here, but multiple renditions is not the way<br>
+<span id=bcca>… educational publishers are trying to do this in strange ways, the documentation doesn't have information on how to handle this case, but it needs to be investigated further</span><br>
+<span id=0b72>… I agree we can close this, but I would like to see a discussion on parallel content being taken seriously</span></p>
+<p id=ca69 class="phone s03"><cite>ivan:</cite> At this moment, this is typically the kind of issue that should be done as incubation, as part of the CG, it's look at the whole problem again, knowing that multiple rendition didn't work, understanding why, taking a fresh look<br>
+<span id=52d2>… it's not something the WG is chartered for, the CG can explore and raise it in a future charter</span><br>
+<span id=2cf6>… and I want to see this happen, but we need that incubation</span></p>
+<p id=83b6 class="phone s02"><cite>Hadrien:</cite> I agree with Ivan, this needs incubation, I would like to look into it, but I'm lacking in time, I'm already opening issues for fun. I think it's possible with what is in the spec but underused<br>
+<span id=be24>… I don't know how much would need to come from multiple renditions, but it's probably possible to use things that have been previously under-utilized to achieve what we want</span><br>
+<span id=c11a>… it means no addition to the spec, but things that haven't been used or implemented properly</span><br>
+<span id=b65e>… not sure how to feel about it. Incubation is the right term, even if it doesn't result in normative changes</span></p>
+<p id=ee48 class="phone s01"><cite>SueNeu:</cite> This is not the place to look at this issue now, we want to refer it back to the community group<br>
+<span id=292f>… would our next move be to tell the original poster, and ask if they want to present it to the community group</span><br>
+<span id=643e>… just closing it doesn't reflect our feelings on it</span></p>
+<p id=40eb class="phone s03"><cite>ivan:</cite> The minutes will tell, but we can also add an additional comment on incubation<br>
+<span id=a044>… I can do that before closing</span></p>
+<p id=0ebe class="phone s10"><cite>gautierchomel_:</cite> I think it's been back and forth between the groups, the reality is that there hasn't been a response, a player will do it themselves, so they don't care about standardization<br>
+<span id=fdab>… brings me to the question at the beginning of the meeting, what is possible in the charter</span><br>
+<span id=7b09>… I'm concerned about too many things not being considered, so they do it on their own</span></p>
+<p id=2f96 class="phone s05"><cite>wendyreid:</cite> I am also concerned, we hear about these things<br>
+<span id=457c>… the people who need this feature aren't coming to us</span><br>
+<span id=75b1>… we would love it if they came to us with a use case, and a problem</span><br>
+<span id=9e25>… we get posts with new ideas, but not use cases</span><br>
+<span id=aaae>… we don't want people going off and doing their own thing</span><br>
+<span id=5c34>… but we don't always get to hear about what people want to do</span><br>
+<span id=6861>… if people have things they want they can reach out to us anytime</span><br>
+<span id=92e3>… we do sometimes rush things at the end because something comes up</span><br>
+<span id=c095>… and we want to be seen as responsive</span></p>
+<p id=6002 class="phone s02"><cite>Hadrien:</cite> We kind of underestimate how intimidating it is to interact with us, not that we are scary, but the idea of influencing a specification inspires fear, and we encourage people and they are nervous<br>
+<span id=bafc>… it's not easy to get feedback</span></p>
+<p id=6695 class="phone s02"><cite>Hadrien:</cite> I keep an eye on things, and I make the case to people, and our efforts have changed minds in the community<br>
+<span id=b0eb>… it takes a lot of work</span><br>
+<span id=c4e6>… maybe we need to do more community outreach, but changing people's minds is difficult</span><br>
+<span id=b2bf>… they can't imagine they have the technical capability to change any of this</span></p>
+<p id=0a48 class="phone s07"><cite>mgarrish:</cite> There's great value to incubation, we don't spend time on it as much as we should, we should engage more earlier. In IDPF, the most successful extension was FXL, but many of the other specs never went anywhere, if we don't have a foundation before implementing it fails<br>
+<span id=5b91>… I think this is why people go off too, it feels like things are set in stone in the standard when we are really open to revision, but we also need to get an idea of what is wanted before we get there is much more helpful</span></p>
+<p id=b390 class=summary>mgarrish +1</p>
+<p id=f003 class="phone s07"><cite>mgarrish:</cite> having implementation before we add to the spec instead of trying to get adoption</p>
+<p id=4e9d class="phone s03"><cite>ivan:</cite> Along the same lines as Matt, when IDPF merged with W3C, we formed the BG, CG, and WG, the idea that the BG would collect and react on business needs, the CG would incubate, and the WG comes in when the ideas are clear and can be implemented<br>
+<span id=699a>… they can dot the i's and cross the t's. This is what happened with roll, I don't remember when we began to discuss, but it took place over a long time.</span><br>
+<span id=b863>… the multiple renditions stuff has been whispered about, we have gotten feedback, but we hear &quot;just figure it out&quot; and that's not what we do</span><br>
+<span id=4586>… we've had many examples of WGs did all the technical work on rough ideas, and the standard then didn't go anywhere, IDPF did the same, that's why we talk about incubation</span></p>
+<p id=ae69 class="phone s01"><cite>SueNeu:</cite> Close this issue, start a discussion about process</p>
+<p id=99f0 class="phone s10"><cite>gautierchomel_:</cite> Close the issue, and discussion about parallel content needs to be moved to the CG.</p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#8564">We will add SMIL in images to EPUB 3,4 spec as at risk, and then move it to a note if it comes out of the final spec</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
