@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 12 February 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>12 February 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Feb/0011.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/02/12-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>avneeshsingh, CharlesL, DaleRogers, duga, george, GeorgeK, gman, Hadrien, ivan, kimberg, LaurentLM, MasakazuKitahara, mgarrish, MURATA, rdeltour, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#9fc1">Annotations</a></li>
+<li><a href="#dcb9">Multi-granularity highlighting in media overlays</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=9fc1>Annotations</h3>
+<p id=9ddb class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2912">w3c/<wbr>epub-specs#2912</a></p>
+<p id=6129 class="phone s01"><cite>wendyreid:</cite> and if everyone is good with that, then we can move on to talking about the first public working draft</p>
+<p id=8f99 class="phone s02"><cite>ivan:</cite> I'm picking up this PR for Laurent who is on vacation. This PR makes the old one obsolete<br>
+<span id=eb70>… I recorded the list of selectors we agreed on two weeks ago</span><br>
+<span id=ef64>… there are two issues for discussion</span><br>
+<span id=68f4>… we discussed one last time, how to handle the text fragment</span><br>
+<span id=5600>… we didn't agree on how to do that</span><br>
+<span id=0ac3>… so I added two approaches, it would be best to remove one of them</span><br>
+<span id=35e6>… I removed some of the selectors from our table, and added text fragment selector</span><br>
+<span id=744b>… it has two downsides, it is not yet a standard, and we don't know when it will be</span><br>
+<span id=d7ea>… we don't know if the syntax will stay on or if it will change</span><br>
+<span id=faec>… causing issues</span><br>
+<span id=effa>… if it is a URL it has to be encoded, which would make the text fragment pretty much unreadable</span><br>
+<span id=2dd8>… we have a quote selector in the original text</span><br>
+<span id=3c90>… I added that with a note that it is up to the implementers to decide if they want to use it and how</span><br>
+<span id=d2e5>… there are two advantages to leaving this to the implementers</span><br>
+<span id=f149>… the person quoting can set the quote</span><br>
+<span id=1018>… and we don't have to worry about the syntax change</span><br>
+<span id=84cf>… but we are pushing this into the reading system's court</span><br>
+<span id=52f3>… the second problem: we discussed the text position selector</span><br>
+<span id=73d0>… which counts characters and selects the text between two integers.</span><br>
+<span id=8cbf>… how do we do this in HTML</span><br>
+<span id=c753>… the text position selector was intended for pure text files</span><br>
+<span id=89e7>… there is normative text that would work and is applied to a different selector and doesn't apply here</span><br>
+<span id=e6dc>… all other things are editorial and don't need discussion</span></p>
+<p id=b34e class="phone s03"><cite>LaurentLM:</cite> The text must be selected before using the text position selector<br>
+<span id=722b>… when I read the two sections, quote selector, and text position selector</span><br>
+<span id=35ac>… there is a conditional approach, if you have to work with copyrighted protected contents, use the text position selector, otherwise use the quote selector</span></p>
+<p id=715d class="phone s02"><cite>ivan:</cite> I understand now, my comments are withdrawn</p>
+<p id=4013 class="phone s04"><cite>duga:</cite> the normalization is ugly, but its OK, because that's what the original text says<br>
+<span id=c811>… but its not clear where the text stream starts</span><br>
+<span id=6562>… where do I get the position for the overall text</span></p>
+<p id=6d8d class="phone s03"><cite>LaurentLM:</cite> I agree that we should specify the text origin</p>
+<p id=cb89 class="phone s04"><cite>duga:</cite> perhaps it is the inner text of the closest element that we are talikng about, if it there isn't one then it is body.</p>
+<p id=4442 class="phone s05"><cite>Hadrien:</cite> I don't want to do the second option, I don't want to have to process all of the text before I start<br>
+<span id=a054>… the risk of the syntax changing for text fragment isn't very big</span><br>
+<span id=2010>… it is widely used, and the people working on this know that</span></p>
+<p id=4025 class="phone s06"><cite>wendreid:</cite> where does this leave us?</p>
+<p id=5fa6 class="phone s02"><cite>ivan:</cite> we have a three way answer for this<br>
+<span id=e3e7>… 1. we keep it as it is in the PR</span></p>
+<p id=379f class=irc><cite>&lt;ivan&gt;</cite> 1. We keep text fragments in both places</p>
+<p id=dce1 class=irc><cite>&lt;ivan&gt;</cite> 2. remove it from the fragment selector</p>
+<p id=291e class="phone s07"><cite>Laurent:</cite> In both cases you have the string you want to use</p>
+<p id=2603 class=irc><cite>&lt;ivan&gt;</cite> 3. we remove it from the text quote selector</p>
+<p id=3911 class="phone s03"><cite>LaurentLM:</cite> with the text fragment selector you can keep just the begining and the end<br>
+<span id=e94b>… the choice we've got is not between different models, it is</span><br>
+<span id=bd66>… between a syntax that is within the specification but not widely known</span><br>
+<span id=3644>… and with one that is widely known but not part of the specifcation</span></p>
+<p id=22dc class="phone s04"><cite>duga:</cite> I think we should choose one, and keep in mind we might need to switch</p>
+<p id=0c5c class="phone s02"><cite>ivan:</cite> I almost agree with Brady, it is safer to keep the text quote selector<br>
+<span id=174c>… we push the specification out of the problem</span></p>
+<p id=37f6 class="phone s04"><cite>duga:</cite> as long as we pick one I'm happy</p>
+<p id=10cf class="phone s02"><cite>ivan:</cite> the annotation standard we develop is for exchanging annotations between systems<br>
+<span id=9216>… it is not about the styling, and the text quote selector will be much more readable</span></p>
+<p id=b557 class="phone s04"><cite>duga:</cite> the text fragment selector is probably better defined<br>
+<span id=4bfb>… having a well defined algorithm is important, but that is a guess</span></p>
+<p id=ba21 class="phone s03"><cite>LaurentLM:</cite> I agree with Brady, the text fragment selector seems well written<br>
+<span id=1eab>… but the quote selector is not</span><br>
+<span id=03b4>… in the text fragment selector you can leave the middle unsaid</span></p>
+<p id=3f61 class="phone s04"><cite>duga:</cite> that is a huge difference when we talk about copyright.<br>
+<span id=73ec>… some systems use precentage of the book for copyright</span><br>
+<span id=79f3>… with the fragment selector, we wouldn't be using up so much of the text</span></p>
+<p id=2e3e class="phone s02"><cite>ivan:</cite> readability is not an option in the HTML spec</p>
+<p id=f906 class="phone s02"><cite>ivan:</cite> I change my vote, and propose we remove the quote selector from our spec</p>
+<p id=285c class="phone s03"><cite>LaurentLM:</cite> at the time we want to close the recommendation if there is not standard, should we plan now for what we will do?</p>
+<p id=2d46 class="phone s08"><cite>GeorgeK:</cite> publishers in education use both EPUB reading systems and HTML reading systems. Using quote selector would bridge those systems</p>
+<p id=835d class="phone s05"><cite>Hadrien:</cite> I think we shouldn't publish this if the syntax isn't final. I think it is fine to wait a bit more, there is no reason to rush</p>
+<p id=c5c2 class="phone s02"><cite>ivan:</cite> I'm not sure I understand what Hardrien said</p>
+<p id=4e8c class="phone s05"><cite>Hadrien:</cite> I am responding to LaurentLM's question</p>
+<p id=1e4b class="phone s02"><cite>ivan:</cite> we can make a note in the spec now about the possible fallback<br>
+<span id=841c>… today we should try to publish a spec that is as close as we can to what we want for its final form</span></p>
+<p id=2dec class="phone s03"><cite>LaurentLM:</cite> if the text fragment syntax isn't finalized, I think we should still publish at the end of the year</p>
+<p id=b88b class="phone s05"><cite>Hadrien:</cite> but it doesn't need to be normative</p>
+<p id=503b class="phone s01"><cite>wendyreid:</cite> we could leave the annotation spec in the same state as the text fragment spec, as a working group note</p>
+<p id=ee40 class="phone s04"><cite>duga:</cite> when should we worry about this? we should wait until it was an issue<br>
+<span id=fd15>… rather than solving all possible outcomes</span><br>
+<span id=5043>… I think it is too early to worry about it</span></p>
+<p id=75f6 class="phone s02"><cite>ivan:</cite> we should move on publishing to the first working draft<br>
+<span id=4efe>… we get the horizontal reviews</span><br>
+<span id=2630>… at some point we can say that we suspend the work because we are waiting on a dependent spec</span><br>
+<span id=3b3d>… for the time being we should move ahead believing that the syntax will be resolved</span></p>
+<p id=b1c5 class="phone s01"><cite>wendyreid:</cite> our next step is to decide we can announce this as a first draft<br>
+<span id=c2fa>… we can still make changes</span><br>
+<span id=2c8e>… this is a good time to publish the first draft and invite feedback</span><br>
+<span id=2661>… is there any opposition to publishing this?</span></p>
+<p id=4bb2 class="phone s02"><cite>ivan:</cite> I don't oppose this. There are two more documents that we may want to publish at some point<br>
+<span id=0823>… 1. the use case document</span><br>
+<span id=c2c6>… we might want to publish this at the same time</span></p>
+<p id=baf7 class=irc><cite>&lt;ivan&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2922">vocab</a></p>
+<p id=204a class="phone s02"><cite>ivan:</cite> the other one is<br>
+<span id=0766>… I have been developing the vocabulary in parallel</span><br>
+<span id=b5c1>… it might be good to publish this together because the annotation has references to it</span><br>
+<span id=8e98>… and to make the links live properly, we would need to have the vocabulary document live</span></p>
+<p id=40f1 class="phone s01"><cite>wendyreid:</cite> is the vocabulary a note?<br>
+<span id=6033>… we have to publish this as a working draft, and develop a short name</span></p>
+<p id=ef3a class="phone s03"><cite>LaurentLM:</cite> is the a problem with &quot;ann&quot;</p>
+<p id=4c4c class="phone s04"><cite>duga:</cite> it looks alot like &quot;announcements&quot;</p>
+<p id=1947 class="phone s03"><cite>LaurentLM:</cite> &quot;annot&quot;? is less confusing?</p>
+<p id=998a class="phone s02"><cite>ivan:</cite> i would go with epub-anno</p>
+<p id=6d46 class="phone s01"><cite>wendyreid:</cite> that would be consistent with our pattern</p>
+<p id=1c32 class="phone s02"><cite>ivan:</cite> there is one more question, do we want to add a version number?<br>
+<span id=e47f>… if so, 1.0 or 3.4?</span></p>
+<p id=fe2e class="phone s03"><cite>LaurentLM:</cite> I would go with 3.4 since it is related to EPUB 3.4</p>
+<p id=649c class="phone s02"><cite>ivan:</cite> the version number would go in the title</p>
+<p id=e0ac class="phone s09"><cite>shinya:</cite> since the accessibility is 1.2, 1.0 is good</p>
+<p id=41d7 class="phone s10"><cite>magarrish:</cite> if this is revision bound with 3.4 then I have no problem with it</p>
+<p id=dc1a class=irc><cite>&lt;AvneeshSingh&gt;</cite> EPUB accessibility is independent of EPUB 3 version.</p>
+<p id=8160 class="phone s03"><cite>LaurentLM:</cite> if we don't modify epub, why would we push annotations changes</p>
+<p id=0e1a class=irc><cite>&lt;shiestyle&gt;</cite> +1 to duga</p>
+<p id=8db3 class="phone s04"><cite>duga:</cite> it seems like 1.0 makes more sense, then we can update annotations without updating EPUB specs</p>
+<p id=592b class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: Publish EPUB Annotations 1.0 as a FPWD, with the shortname epub-anno</p>
+<p id=b1f8 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=b1f9 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=31f9 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=31fa class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=31fb class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=71f9 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=71fa class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=71fb class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=71fc class=irc><cite>&lt;LaurentLM&gt;</cite> +1</p>
+<p id=b1fa class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=31fc class=irc><cite>&lt;sueneu&gt;</cite> +1</p>
+<p id=31fd class=irc><cite>&lt;gman&gt;</cite> +1</p>
+<p id=71fd class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=b1fb class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1</p>
+<p id=f1f9 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=ffff class=resolution><strong>RESOLUTION:</strong> Publish EPUB Annotations 1.0 as a FPWD, with the shortname epub-anno</p>
+<p id=f1fa class=irc><cite>&lt;GeorgeK&gt;</cite> +1</p>
+<p id=f508 class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: Publish the EPUB Annotations Vocabulary as a draft note, with the shortname epub-anno-vocab</p>
+<p id=f1fc class=irc><cite>&lt;GeorgeK&gt;</cite> +1</p>
+<p id=71fe class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=71ff class=irc><cite>&lt;sueneu&gt;</cite> +1</p>
+<p id=7200 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=7201 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=b1fc class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=f1fd class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=f1fe class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=31fe class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=7202 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=7203 class=irc><cite>&lt;gman&gt;</cite> +1</p>
+<p id=b1fd class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=f1ff class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1</p>
+<p id=f200 class=irc><cite>&lt;LaurentLM&gt;</cite> +1</p>
+<p id=7204 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=b1fe class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=9b2e class=resolution><strong>RESOLUTION:</strong> Publish the EPUB Annotations Vocabulary as a draft note, with the shortname epub-anno-vocab</p>
+<p id=7afd class="phone s02"><cite>ivan:</cite> is the use UCR ready to publish?</p>
+<p id=7363 class="phone s03"><cite>LaurentLM:</cite> yes it is stable</p>
+<p id=f6b7 class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: Publish the EPUB Annotations Use Cases document as a working group note, with the shortname epub-anno-ucr</p>
+<p id=f202 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=f203 class=irc><cite>&lt;mgarrish&gt;</cite> +1</p>
+<p id=7205 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=7206 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=b202 class=irc><cite>&lt;LaurentLM&gt;</cite> +1</p>
+<p id=b203 class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=f282 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=f283 class=irc><cite>&lt;gman&gt;</cite> +1</p>
+<p id=f284 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=f285 class=irc><cite>&lt;rdeltour&gt;</cite> +1</p>
+<p id=f286 class=irc><cite>&lt;sueneu&gt;</cite> +1</p>
+<p id=7282 class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=f287 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=f288 class=irc><cite>&lt;GeorgeK&gt;</cite> +1</p>
+<p id=f289 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=b283 class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1</p>
+<p id=83f2 class=resolution><strong>RESOLUTION:</strong> Publish the EPUB Annotations Use Cases document as a working group note, with the shortname epub-anno-ucr</p>
+</section>
+
+<section>
+<h3 id=dcb9>Multi-granularity highlighting in media overlays</h3>
+<p id=bcb4 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2917">w3c/<wbr>epub-specs#2917</a></p>
+<p id=b75f class="phone s05"><cite>Hadrien:</cite> a number of specialized libraries are moving away from Daisy<br>
+<span id=8066>… they are using media overlays with human or computer audio</span><br>
+<span id=b7e8>… they are using tools that can generate a media overlay with open source voices</span><br>
+<span id=1fe4>… audiobook publishers are interested in this technology too</span><br>
+<span id=903b>… usually we just talk about media overlays in kids books</span></p>
+<p id=090e class=summary>but there is a wider use<br>
+<span id=0333>… the technologies are using different levels of highlighting and aligning</span><br>
+<span id=9192>… you may want to choose the level of alignment</span><br>
+<span id=bbd7>… it wouldn't take very much to do this</span><br>
+<span id=370a>… we would need additional roles in epub type that identify structures</span><br>
+<span id=ebb5>… I use &quot;utterance&quot;</span><br>
+<span id=4e6a>… thanks to the use of seq plus [?] plus epub type it would be easy to do</span><br>
+<span id=466e>… it would be a non normative change in that it only adds vocabulary</span><br>
+<span id=4dda>… and would be backward compaitible</span><br>
+<span id=7542>… for reading systems that are aware of this, it could allow users to make a choice between word by word or other anchoring</span><br>
+<span id=da39>… we would probably see tools and reading systems capable of this in the short term</span><br>
+<span id=9ad0>… this will add value, is compatible with existing implementations, and we have commitments for reading system support and production</span></p>
+<p id=10000 class="phone s01"><cite>wendyreid:</cite> I've seen this. I am concern about the nesting required<br>
+<span id=4ef8>… is that feasible in a media overlay file?</span><br>
+<span id=52b9>… the other concern is does this need to be a production concern?</span><br>
+<span id=2de9>… can reading systems detect this? Can they identify a part of a document as a paragraph, say?</span><br>
+<span id=465a>… a third concern is internationalization, since not all languages have the same word boundaries as, say, English</span></p>
+<p id=77a6 class="phone s05"><cite>Hadrien:</cite> about production: many files already wrap words and containers for utterance<br>
+<span id=035f>… what is missing is the role in SMIL</span><br>
+<span id=db55>… it is completely automatable</span><br>
+<span id=5db7>… the second question: it would be challenging to do this on the reading system side</span><br>
+<span id=eace>… for instance tts is not always acurate</span></p>
+<p id=eabb class="phone s05"><cite>Hadrien:</cite> we don't need to worry about internationalization if we use something like utterance which is pretty open</p>
+<p id=653d class="phone s02"><cite>ivan:</cite> a formal question: you are asking for new values for the role</p>
+<p id=cee6 class=irc><cite>&lt;shiestyle&gt;</cite> shiestyle: let's continue this topic next week</p>
+<p id=289c class="phone s11"><cite>shiestyle:</cite> we are out of time, we can continue this discussion</p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#ffff">Publish EPUB Annotations 1.0 as a FPWD, with the shortname epub-anno</a></li>
+<li><a href="#9b2e">Publish the EPUB Annotations Vocabulary as a draft note, with the shortname epub-anno-vocab</a></li>
+<li><a href="#83f2">Publish the EPUB Annotations Use Cases document as a working group note, with the shortname epub-anno-ucr</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body>
+</html>
