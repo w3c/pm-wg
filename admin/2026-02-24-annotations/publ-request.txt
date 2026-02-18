@@ -1,6 +1,6 @@
 To: webmaster
-CC: pm chairs, laurent, comm team, coralie
-Subject: publication request for an FPWD for EPUB Annotations, and two related notes
+CC: pm chairs, laurent, matt
+Subject: publication request for a FPWD for EPUB Annotations and two related notes
 
 Denis,
 
@@ -8,22 +8,22 @@ This is an official publication request for the publication of the following doc
 They are all published by the Publishing Maintenance (PM) Working Group.
 
 EPUB Annotations 1.0, WG First Public Working Draft
-    - https://www.w3.org/TR/2026/WD-epub-anno-20260224/
+    - https://www.w3.org/TR/2026/WD-epub-anno-10-20260224/
     - short name: epub-anno
       The transition has been approved in:
-      https://github.com/w3c/transitions/issues/775
+      https://github.com/w3c/transitions/issues/775#issuecomment-3914818136
 
 EPUB Annotations Vocabulary 1.0, WG Draft Note
-    - https://www.w3.org/TR/2026/DNOTE-epub-anno-vocab-20260224/
+    - https://www.w3.org/TR/2026/DNOTE-epub-anno-vocab-10-20260224/
     - short name: epub-anno-vocab
     - The transition has been approved in:
-      https://github.com/w3c/transitions/issues/776
+      https://github.com/w3c/transitions/issues/776#issuecomment-3914821508
 
 EPUB Annotations Use Cases and Requirements, WG Note
     - https://www.w3.org/TR/2026/NOTE-epub-anno-ucr-20260224/
     - short name: epub-anno-ucr
     - The transition has been approved in:
-      https://github.com/w3c/transitions/issues/777
+      https://github.com/w3c/transitions/issues/777#issuecomment-3914823289
 
 All documents are already in place. They pass pubrules' check.
 
@@ -40,13 +40,14 @@ these will take care of themselves. Additionally:
 
 - For the EPUB Annotations Vocabulary DNOTE:
 
-  - There is a reference to missing links in /ns/epub-anno.jsonld: this will be a separate
+  - There is a reference to missing links in /ns/epub-anno.jsonld: this will be the subject of a separate
     PR on /ns to establish this redirection link once the publications are done. It will refer to
-    https://www.w3.org/TR/epub-anno-vocab/index.context.jsonld which is part of this publication.
+    https://www.w3.org/TR/epub-anno-vocab-10/index.context.jsonld, which is part of this publication.
 
-  - A number of fragment links refer to https://www.w3.org/ns/oa. That URL is a reference to RDF files,
+  - A number of fragment links refer to https://www.w3.org/ns/oa. That URL is a reference to RDF files
     in Turtle or in JSON-LD (with conneg), which have their own semantics for the fragment ID-s,
-    probably not understood by the link checker.
+    probably not understood by the link checker. Those files have been set up, years ago, by the
+    Web Annotations Working Group.
 
 
 Thanks!
