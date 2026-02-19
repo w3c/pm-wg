@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - '**.html'
+  # Allows workflow to be triggered manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   minutes_to_gh:
