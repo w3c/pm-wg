@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 19 February 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>19 February 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Feb/0016.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/02/19-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, AvneeshSingh, CharlesL, DaleRogers, duga, elizabeth, gautierchomel, george, GeorgeK, gman, gpellegrino, Hadrien, ivan, kimberg, MasakazuKitahara, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga, sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#171d">Horizontal Reviews</a></li>
+<li><a href="#b525">Supporting multi-granularity highlighting - w3c/<wbr>epub-specs#2917</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=171d>Horizontal Reviews</h3>
+<p id=f812 class="phone s01"><cite>wendyreid:</cite> We did some preliminary stuff, and have started the i18n review, that is underway<br>
+<span id=69a0>… leave a11y, security and privacy, and TAG review</span><br>
+<span id=092f>… AvneeshSingh has volunteered for a11y</span><br>
+<span id=ee0b>… toshiakikoike has volunteered for TAG</span><br>
+<span id=68ad>… that leaves security and privacy</span><br>
+<span id=02ae>… each review comes with a questionaire we just need to update it for the current core specs</span><br>
+<span id=3b1f>… it does not include annotations</span></p>
+<p id=04e2 class="phone s02"><cite>ivan:</cite> Maybe. in i18n they have said they want a new one<br>
+<span id=1975>… so for that I copied it and reviewed, then added some intro text about new things/changes</span><br>
+<span id=62df>… it is a question of whether the target groups will accept this approach</span></p>
+<p id=ba4a class="phone s01"><cite>wendyreid:</cite> In that case, they have changed the process. They didn't have the self questionnaire</p>
+<p id=ff57 class="phone s02"><cite>ivan:</cite> They did</p>
+<p id=e273 class="phone s01"><cite>wendyreid:</cite> Yes, but it just needs to be updated</p>
+<p id=9bdb class="phone s02"><cite>ivan:</cite> They are also looking for an overview/explainer to describe the spec<br>
+<span id=dcec>… we have an overview with 3.3, which I have updated (PR coming)</span><br>
+<span id=4167>… That is a good reference if they ask for it</span></p>
+<p id=4704 class="phone s03"><cite>AvneeshSingh:</cite> Timeline? When is CR?</p>
+<p id=7c1e class="phone s02"><cite>ivan:</cite> This is a vicious circle. We can go to CR when reviews are done<br>
+<span id=7042>… Unless things change with today's discussion</span></p>
+<p id=0d10 class=irc><cite>&lt;sueneu&gt;</cite> +1 Avneesh</p>
+<p id=6a78 class="phone s03"><cite>AvneeshSingh:</cite> Can we pick a date?</p>
+<p id=a383 class="phone s02"><cite>ivan:</cite> I would say June 1</p>
+<p id=0de8 class="phone s04"><cite>duga:</cite> I volunteer to have one assigned to me</p>
+<p id=66f0 class="phone s05"><cite>gautierchomel:</cite> I will do one</p>
+<p id=3a63 class="phone s01"><cite>wendyreid:</cite> Security or privacy?</p>
+<p id=9a48 class="phone s05"><cite>gautierchomel:</cite> I will take privacy</p>
+<p id=e7d9 class="phone s01"><cite>wendyreid:</cite> Ok, great, that is all we needed</p>
+<p id=93bb class="phone s02"><cite>ivan:</cite> Please reach out to me and wendyreid for details</p>
+</section>
+
+<section>
+<h3 id=b525>Supporting multi-granularity highlighting - <a href="https://github.com/w3c/epub-specs/issues/2917">w3c/<wbr>epub-specs#2917</a></h3>
+<p id=da7b class="phone s01"><cite>wendyreid:</cite> There has been of a lot of discussion on the issue<br>
+<span id=8d9d>… does anyone have a summary?</span></p>
+<p id=ed0e class=irc><cite>&lt;Hadrien&gt;</cite> <a href="https://www.audible.com/about/newsroom/audible-launches-immersion-reading-for-deeper-engagement-with-books">https://<wbr>www.audible.com/<wbr>about/<wbr>newsroom/<wbr>audible-launches-immersion-reading-for-deeper-engagement-with-books</a></p>
+<p id=695d class="phone s06"><cite>Hadrien:</cite> I can, first some news<br>
+<span id=1e7a>… audible allowing basically media overlays</span><br>
+<span id=e4ee>… we are very focused on trade</span><br>
+<span id=c52b>… but specialty libraries are largely adopting epub</span><br>
+<span id=6d87>… even in the more classic retail apps we are seeing this more</span><br>
+<span id=0937>… we haven't really looked at this the right way until now</span><br>
+<span id=ffff>… we need to allow users to puck granularity</span><br>
+<span id=8a8f>… it would be great for users to control this</span><br>
+<span id=352d>… so e.g. sentence plus word</span><br>
+<span id=b0fc>… or maybe just sentence because word is distracting</span><br>
+<span id=f56d>… it is possible now with TTS but not media overlays</span><br>
+<span id=64ca>… we don't need much for that feature</span><br>
+<span id=4cc3>… we have all the tools we need from a techincal level (epub:type, etc)</span><br>
+<span id=a748>… what we don't have is the epub:types</span><br>
+<span id=203d>… we don't need word, most of the discussion has been over bikeshedding names</span><br>
+<span id=eb9d>… What I care about is number of options.</span><br>
+<span id=706d>… We want to limit the number for reading systems, and P, sentence and word are most used in TTS</span><br>
+<span id=47df>… At the end of the day the user can't determine what is in the SMIL, so if these are not used perfectly it doesn't matter to the user</span><br>
+<span id=56ad>… they will just get whatever 3 things the author chose to mark uo</span><br>
+<span id=3271>… so we can either bike shed forever, or pick three suboptimal terms</span></p>
+<p id=6bcd class="phone s07"><cite>GeorgeK:</cite> We need a requirement to turn off the highlighting, as it can trigger epilepsy<br>
+<span id=d334>… that has been implemented in several RSes, but we need to note that</span></p>
+<p id=736e class=irc><cite>&lt;Hadrien&gt;</cite> +1 to what GeorgeK said, the ability to turn off or customize highlighting is key</p>
+<p id=b44c class="phone s01"><cite>wendyreid:</cite> we should also discuss, we are pushing away from epub:type, and this leans into it</p>
+<p id=9994 class="phone s06"><cite>Hadrien:</cite> Do we have anything else for SMIL?</p>
+<p id=10000 class="phone s02"><cite>ivan:</cite> Now that we are xhtml only it isn't much of a problem<br>
+<span id=bb4c>… epub:type is here to stay</span></p>
+<p id=2476 class="phone s03"><cite>AvneeshSingh:</cite> FYI GeorgeK and I have proposed a topicin the June DAISY roundtable<br>
+<span id=a8c1>… what we are hearing from specialist libraries is diverse</span><br>
+<span id=1d40>… some are saying media overlays are too expensive</span><br>
+<span id=a01d>… others think having so many levels is hard</span><br>
+<span id=10001>… many are just going to AI to generate the overlay content</span><br>
+<span id=5df0>… so we thought it would be a good to discuss at the roundtable</span></p>
+<p id=3634 class="phone s08"><cite>CharlesL:</cite> On the bike shedding topic, we can just small/med/large it</p>
+<p id=5e74 class="phone s06"><cite>Hadrien:</cite> Yeah, we can call it something general. We just need to call it something. It has to make sense for the UI<br>
+<span id=6fe0>… I don't really care, I just want it to be usable</span><br>
+<span id=0ef3>… for production, we are seeing tools that do this automatically</span><br>
+<span id=c77a>… there are whole communities around it, so cost isn't really a problem</span><br>
+<span id=3f91>… I don't think the TTS issue is valid</span><br>
+<span id=085f>… even the best models need to be online and paid</span><br>
+<span id=bc64>… There are some that can be used on device, but they are limited</span><br>
+<span id=242b>… so if you don't pre-generate you will be stuck with what is on device</span><br>
+<span id=180f>… I don't think this is one or the other</span><br>
+<span id=f477>… Audible is doing the alignment early</span></p>
+<p id=6ced class="phone s01"><cite>wendyreid:</cite> Both things are true about TTS<br>
+<span id=7fd4>… some people are currently using computer generated audio in audiobooks</span><br>
+<span id=4550>… mostly for front matter</span><br>
+<span id=3a1f>… for audible, it is some sort if internal alignment, not media overlays</span><br>
+<span id=6e28>… you need to do a lot of smart things to align the text and audio</span><br>
+<span id=17db>… on to CharlesL, I like small/.medium/large</span><br>
+<span id=4f05>… I wonder if the RS should be allowed to combine and group?</span><br>
+<span id=eb69>… e.g. line-by-line that can't be embedded in the epub as it depends on viewport etc</span><br>
+<span id=8148>… so I am not sure about embedding, but could go either way</span></p>
+<p id=d6d7 class="phone s07"><cite>GeorgeK:</cite> Do we have an example we can show at the Oslo event [DAISY roundtable]</p>
+<p id=d2ad class="phone s06"><cite>Hadrien:</cite> Yes, we will have something that works in thorium mobile for Oslo<br>
+<span id=ba55>… the problem is no files</span><br>
+<span id=37b3>… in the issue we have tools authors saying they will do it, regardless of what we decide</span><br>
+<span id=02c9>… they would prefer to have us define it, but they will do their own thing if they need to</span><br>
+<span id=5303>… but we can certainly demo this</span><br>
+<span id=503f>… I know at least one retailer that really wants to do this with media overlays</span><br>
+<span id=8b60>… so an audiobook and ebook could be bundled and synced</span><br>
+<span id=e000>… I can't name or give timelines, but there is interest</span><br>
+<span id=9210>… (this is a platform)</span><br>
+<span id=4f47>… we have people chiming in to say &quot;no, we can't do it on device&quot;</span><br>
+<span id=e60d>… so for now it needs to be authored</span><br>
+<span id=5030>… not a very big additoon to the spec</span></p>
+<p id=9ae0 class="phone s04"><cite>duga:</cite> this is a lot of markup authors will have to do<br>
+<span id=438e>… its a lot of tagging</span><br>
+<span id=1998>… aren't there accessibility issues on readaloud when</span><br>
+<span id=1cae>… there is a lot of arbitrary markup around words and sentences?</span><br>
+<span id=4bd2>… are there other issues that might come up with searching, for instance</span></p>
+<p id=ced1 class=irc><cite>&lt;Zakim&gt;</cite> wendyreid, you wanted to react to duga</p>
+<p id=10002 class="phone s04"><cite>duga:</cite> when you start tagging every word in a book, problems may arise</p>
+<p id=86be class="phone s01"><cite>wendyreid:</cite> yes, there are potential problems<br>
+<span id=a86d>… a lot of those engines are doing better, sometimes screen readers have issues with a lot of spans</span><br>
+<span id=dfec>… like too much pausing, but that is also smoothing out since there is a lot of that on the web</span><br>
+<span id=84d2>… so this comes down to robust testing</span><br>
+<span id=8a84>… If it is too bad you might want to have multiple versions</span><br>
+<span id=c0c1>… it is a valid concern but it is going away</span></p>
+<p id=aae4 class="phone s09"><cite>shiestyle:</cite> If we add this to epub, publishers or authors can specify this level of granularity<br>
+<span id=2f35>… but I don't understand why they would</span><br>
+<span id=b64e>… if RSes can allow you to select, that is fine, but I don't see why pubs need this</span></p>
+<p id=5961 class="phone s06"><cite>Hadrien:</cite> You are assuming this happens at prod time but it often happens later<br>
+<span id=1702>… eg at a specialist library</span><br>
+<span id=3208>… you are both assuming this happens at prod time, which is wrong</span><br>
+<span id=bb5e>… to duga, this is already being done</span></p>
+<p id=5a57 class=irc><cite>&lt;Hadrien&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2934">w3c/<wbr>epub-specs#2934</a></p>
+<p id=b8a7 class="phone s06"><cite>Hadrien:</cite> I agree that divs and spans is not ideal<br>
+<span id=bd6a>… I have suggested something for discussion at another time that would avoid the tag soup</span><br>
+<span id=bf1d>… to shiestyle, this can't be done only by the RS, this has to be done beforehand</span><br>
+<span id=e5d3>… probably by specialist libraries</span></p>
+<p id=49b9 class="phone s08"><cite>CharlesL:</cite> This reminds me of another reader that uses difference colors for highlighting, which changes as you read along<br>
+<span id=e764>… initially they did it with char by char, and it made screen readers stutter</span><br>
+<span id=9230>… so they did something to fix it</span></p>
+<p id=4d88 class=irc><cite>&lt;Zakim&gt;</cite> wendyreid, you wanted to ask about whether we need flags to RS to determine what levels are available</p>
+<p id=a853 class="phone s01"><cite>wendyreid:</cite> Traditionally media overlay is just play/pause<br>
+<span id=f1e6>… this has a lot of other options</span><br>
+<span id=2190>… how do we signal the different levels of granularity being there? I assume we don't want to force parsing of SMIL to figure out what is available</span></p>
+<p id=8937 class="phone s06"><cite>Hadrien:</cite> We don't want 2 affordance for TTS and media overlay<br>
+<span id=3dea>… so just &quot;give me audio&quot;. For this we will do our best to give what the user wants for both kinds</span><br>
+<span id=fba5>… if the info is missing there isn't much we can do, but I think that is ok</span><br>
+<span id=bb44>… It is better to treat this as a pref for audio, instead of explaining what media overlay is</span></p>
+<p id=ef5e class="phone s01"><cite>wendyreid:</cite> That makes sense<br>
+<span id=3991>… especially if you bought the book</span></p>
+<p id=4921 class="phone s04"><cite>duga:</cite> I am have already ignored the marker you put in for granular media overlays because I know you did it wrogn<br>
+<span id=6ea8>… I do not believe publishers are going to change this for every book</span><br>
+<span id=431e>… the only way to be sure about this is to parse the SMIL</span></p>
+<p id=a70a class="phone s01"><cite>wendyreid:</cite> vibe check<br>
+<span id=9ec0>… I like s/m/l, or some other similar name. But yes to 3 tiers</span></p>
+<p id=1a48 class="phone s06"><cite>Hadrien:</cite> We just need 2 new ones<br>
+<span id=eaca>… the third isn't needed for processing</span></p>
+<p id=d758 class="phone s02"><cite>ivan:</cite> Don't you need zero?</p>
+<p id=47fc class="phone s06"><cite>Hadrien:</cite> &lt;par&gt; with nothing is zero</p>
+<p id=60e9 class=irc><cite>&lt;sueneu&gt;</cite> +1 to s/m/l or just s/l</p>
+<p id=52c1 class="phone s01"><cite>wendyreid:</cite> with MO people mark up every word? Is that required or just what people do?<br>
+<span id=4cbd>… can someone now pick a different base unit? e.g. sentence</span></p>
+<p id=6b0e class="phone s06"><cite>Hadrien:</cite> We don't know right now<br>
+<span id=5bed>… books targeting kids use word, adults use sentence</span><br>
+<span id=c9a9>… if you use more types with a container you are giving an intent</span></p>
+<p id=8cdc class="phone s10"><cite>DaleRogers:</cite> From a text based Eng point of view, how does this relate to other langs, e.g. Japanese?</p>
+<p id=25bf class="phone s06"><cite>Hadrien:</cite> That is where word gets fuzzy, but we don't care since it isn't named<br>
+<span id=981b>… sentence is a little fuzzy but not too bad</span></p>
+<p id=aa74 class="phone s02"><cite>ivan:</cite> This is why the proposal to ignore linguistic notions has been made</p>
+<p id=aa02 class=irc><cite>&lt;wendyreid&gt;</cite> unit/segment/section?</p>
+<p id=ce1f class="phone s08"><cite>CharlesL:</cite> I am struggling to understand why we don't need 3? Don't we need them all? Is small default?</p>
+<p id=8ba3 class="phone s06"><cite>Hadrien:</cite> It is not word, it is just the smallest, and you know that because it is contained by the other types</p>
+<p id=5cea class="phone s08"><cite>CharlesL:</cite> Does that help with tag soup?</p>
+<p id=c8c9 class="phone s06"><cite>Hadrien:</cite> No, you still need it, just no epub:type for small<br>
+<span id=0a71>… I don't care about the name</span></p>
+<p id=d449 class="phone s01"><cite>wendyreid:</cite> We are at time, maybe discuss in the issue<br>
+<span id=022b>… and we can finalize next time</span></p>
+<p id=b6a6 class="phone s02"><cite>ivan:</cite> Maybe vote now on direction</p>
+<p id=1d50 class="phone s01"><cite>wendyreid:</cite> sorry, at time!</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+
+</body>
+</html>
