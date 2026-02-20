@@ -1,6 +1,6 @@
 <div>
 
-[![W3C](https://www.w3.org/StyleSheets/TR/2016/logos/W3C)](https://www.w3.org/)
+<a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width=100></a>
 
 </div>
 
