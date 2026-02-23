@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>PMWG Accessibility TF – 19 February 2026</title>
+<meta content="width=device-width" name="viewport"/>
+<link href="https://www.w3.org/StyleSheets/scribe2/public.css" rel="stylesheet" title="2018" type="text/css"/>
+<link href="https://www.w3.org/StyleSheets/base.css" rel="alternate stylesheet" title="2004" type="text/css"/>
+<link href="https://www.w3.org/StyleSheets/public.css" rel="alternate stylesheet" title="2004" type="text/css"/>
+<link href="https://www.w3.org/2004/02/minutes-style.css" rel="alternate stylesheet" title="2004" type="text/css"/>
+<link href="https://www.w3.org/StyleSheets/scribe2/fancy.css" rel="alternate stylesheet" title="Fancy" type="text/css"/>
+<link href="https://www.w3.org/StyleSheets/scribe2/tt-member.css" rel="alternate stylesheet" title="Typewriter" type="text/css"/>
+</head>
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img alt="W3C" border="0" height="60" src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" width="60"/></a></p>
+<h1>Accessibility task force - PMWG</h1>
+<h2>19 February 2026</h2>
+<nav id="links">
+<a href="https://www.w3.org/2026/01/22-pmwg-a11y-irc"><img alt="IRC log." src="https://www.w3.org/StyleSheets/scribe2/text-plain.png" title="IRC log"/></a>
+</nav>
+</header>
+<div id="prelims">
+<div id="attendees">
+<h2>Attendees</h2>
+<dl class="intro">
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, DaleRogers, gautierchomel, GeorgeK, gpellegrino, Jonas Lillqvist, Miia K, Chris Sainer</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>DaleRogers, CharlesL</dd>
+</dl>
+</div>
+<nav id="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#f635">Review of PR for restructuring FXL techniques.</a></li>
+<li><a href="#d4c0">Review of extended descriptions explainer:</a></li>
+<li><a href="#d773">Review of PR for restructuring FXL techniques.</a></li>
+<li><a href="#5dc5">Review of extended descriptions explainer:</a></li>
+<li class="app"><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+<main class="meeting" id="meeting">
+<h2>Meeting minutes</h2>
+<section></section>
+<section>
+<h3 id="f635">Review of PR for restructuring FXL techniques.</h3>
+<p class="irc" id="4d68"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2878">w3c/<wbr/>epub-specs#2878</a></p>
+<p class="irc" id="e4e1"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2908">w3c/<wbr/>epub-specs#2908</a></p>
+<p class="summary" id="e282">Gregorio P. provided an overview of PR 2878 and issue 2908.<br/><span id="ceb8">… This section has generic references to various documents.</span><br/><span id="fe54">… Now we have a package metadata document, so we should place a reference to this package metadata document here.</span></p><p class="phone s04"><cite>AvneeshSingh:</cite> Charles L. can take an action item to review this section and make an appropriate decision about referencing the correct section of the package metadata document.</p>
+<p class="irc" id="853d"><cite>&lt;gpellegrino&gt;</cite> <a href="https://w3c.github.io/epub-specs/wg-notes/fxl-a11y-tech/">https://<wbr/>w3c.github.io/<wbr/>epub-specs/<wbr/>wg-notes/<wbr/>fxl-a11y-tech/</a></p>
+<p class="irc" id="747c"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2909">w3c/<wbr/>epub-specs#2909</a></p>
+<p class="summary" id="1f1f">CharlesL These techniques should be in the EPUB accessibility techniques document</p>
+<p class="phone s01" id="e740"><cite>Charles L.:</cite> Decision: Synchronize names of this heading of EPUB Accessibility and fixed layout techniques, refer to EPUB Accessibility Techniques 1.2, and then decide whether specific guidance is needed for spreads in fixed layout techniques, while remaining technology-independent.</p>
+<p class="irc" id="ff0b"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2911">w3c/<wbr/>epub-specs#2911</a></p>
+<p class="phone s02" id="16b7"><cite>DaleRogers:</cite> why would any xhtml doc not have a title.<br/>
+<span id="f882">… its a required element.</span></p>
+<p class="phone s03" id="2a7d"><cite>gpellegrino:</cite> fixed layout each page is and xhtml file and each file has to have a title.<br/>
+<span id="7909">… page 2 is page after title page usually blank or illistration.</span><br/>
+<span id="20e0">… what do we tell the publishers what is the title of page 2 thats blank?</span><br/>
+<span id="7018">… title of story, what do you put for the 2nd page title.</span></p>
+<p class="phone s02" id="f4bd"><cite>DaleRogers:</cite> right need guidelines.<br/></p>
+<p class="phone s04"><cite>AvneeshSingh:</cite> Refer to the title section of EPUB Accessibility Techniques 1.2 and determine what specific guidance we want to provide for fixed layout techniques.</p>
+<p class="irc" id="27e5"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2913">w3c/<wbr/>epub-specs#2913</a></p>
+<p class="phone s03" id="9330"><cite>Gregorio P.:</cite><span id="9330a">… We should refer to EPUB Accessibility Techniques 1.1 because it is a stable document.</span><br/><span id="9330b">… Challenges include discussion of reading order.</span><br/><span id="9330c">… We need to determine which document will address reading order techniques.</span></p>
+<p class="phone s04" id="8939"><cite>AvneeshSingh:</cite> Do we have relevant WCAG techniques that we can link here?</p><p class="phone s03"><cite>Gregorio P.:</cite> Yes, EPUB Accessibility Techniques point to some WCAG guidance.</p><p class="phone s04"><cite>AvneeshSingh:</cite> So, we should refer to EPUB Accessibility Techniques 1.2 and it already includes links to WCAG guidance.</p>
+<p class="irc" id="65bf"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2915">w3c/<wbr/>epub-specs#2915</a></p>
+<p class="phone s03" id="c6c2"><cite>gpellegrino:</cite> in fixed layout some tables get exported as images.<br/>
+<span id="d1ce">… we don't have specific things about tables in EPUB Accessibility techniques 1.1 we don't have tables have to be made as tables in HTML.</span></p>
+<p class="phone s04" id="9dff"><cite>AvneeshSingh:</cite> is there a WCAG section we can point to?</p>
+<p class="phone s03" id="396c"><cite>gpellegrino:</cite> yes.</p>
+<p class="phone s04" id="a00c"><cite>AvneeshSingh:</cite> We can state: Use proper HTML table markup and include a reference link to WCAG techniques.</p>
+<p class="irc" id="6f9b"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2910">w3c/<wbr/>epub-specs#2910</a></p>
+<p class="phone s03" id="ffff"><cite>gpellegrino:</cite> sometimes you can't control the reading order and was the order when you add element to the page for authoring tools.<br/>
+<span id="ce6f">… may give guidance using css for visual order with z index</span></p>
+<p class="phone s04" id="10000"><cite>AvneeshSingh:</cite> stacking order problem issue with some production tools. we need to make the decision at the principal level.<br/>
+<span id="ad9a">… Should we have production tools specific guidance in this document, or should we consider separate document for specific production tools if community really need it?</span></p>
+<p class="phone s03" id="78b7"><cite>gpellegrino:</cite> authoring tools change a lot over time.<br/>
+<span id="d082">… hard to keep up</span><br/>
+<span id="624b">… fair to ref. to HTML / CSS code to be generated and those tools need to adapt. this has always been our approach.</span><br/>
+<span id="093b">… for this case we have a section authoring the reading order which discusses CSS / HTML with things with different orders visually / programatically</span></p>
+<p class="phone s02" id="2d99"><cite>DaleRogers:</cite> I agree</p>
+<p class="irc" id="8946"><cite>&lt;AvneeshSingh&gt;</cite> proposed: We should have production/authoring tools independent techniques in fixed layout techniques document, if there is a strong demand from community to have production tool specific guidance, then we can consider a separate document.</p>
+<p class="irc" id="75b9"><cite>&lt;gpellegrino&gt;</cite> +1</p>
+<p class="irc" id="f5b9"><cite>&lt;GeorgeK&gt;</cite> +1</p>
+<p class="irc" id="35b9"><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p class="irc" id="35ba"><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p class="irc" id="b5b9"><cite>&lt;Jonas&gt;</cite> +1</p>
+<p class="irc" id="f5ba"><cite>&lt;gautierchomel&gt;</cite> +1</p>
+<p class="irc" id="b5ba"><cite>&lt;MiiaK&gt;</cite> +1</p>
+<p class="resolution" id="b4e6"><strong>RESOLUTION:</strong> We should have production/authoring tools independent techniques in fixed layout techniques document, if there is a strong demand from community to have production tool specific guidance, then we can consider a separate document.</p>
+<p class="irc" id="c42b"><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2914">w3c/<wbr/>epub-specs#2914</a></p>
+<p class="phone s04" id="b307"><cite>AvneeshSingh:</cite> This section is pointing to old IDPF spec.</p>
+<p class="phone s03" id="3023"><cite>gpellegrino:</cite> region based spec was defined 11years ago.<br/>
+<span id="a27b">… especially to fixed layout, zooming in/out and combo with media overlays</span><br/>
+<span id="9a14">… is this an active spec? is it still valid, can we reference it?</span></p>
+<p class="phone s04" id="679b"><cite>AvneeshSingh:</cite> its quite risky to reference to the IDPF page and it hasn't migrated to W3C space.</p>
+<p class="phone s05" id="10001"><cite>CharlesL:</cite> there is a case maybe to moving it over to W3C?</p>
+<p class="phone s06" id="e1fe"><cite>GeorgeK:</cite> I agree if we are going to ref it it should be moved over and vetted.</p>
+<p class="phone s04" id="c38b"><cite>AvneeshSingh:</cite> do we really need it, if so we will ask Matt/Ivan to move it.</p>
+<p class="phone s04" id="dd96"><cite>AvneeshSingh:</cite> yes lets ask Matt to review it</p>
+</section>
+<section>
+<h3 id="5dc5">Review of extended descriptions explainer:</h3>
+<p class="phone s07" id="dad0"><cite>gautierchomel:</cite> I addressed all issues<br/>
+<span id="0fe0">… the document is fine, thorium reader is not possible in an imaging window to put something with styles.</span><br/>
+<span id="9f24">… maybe a missunderstanding what they will display is like footnotes. ext. desc. can not be styled. can not display HTML the RS needs to rebuild the HTML, to have image desc. in separate file.</span></p>
+<p class="phone s04" id="c61d"><cite>AvneeshSingh:</cite> The main objective of this document is to put forward the case to provide semantic information.</p>
+<p class="phone s07" id="4c4b"><cite>gautierchomel:</cite> maybe not keep the footnote precedent?<br/>
+<span id="9974">… not possible to implement a specific ux</span></p>
+<p class="phone s03" id="553a"><cite>gpellegrino:</cite> I think that example charles was in a separate HTML then you bring up an iframe but if the extended description in the same file this gets complicated.<br/>
+<span id="2d34">… for foot notes they remove all the css but this might not be possible for extended descriptions since CSS is inter-dependant.</span></p>
+<p class="phone s03" id="c870"><cite>gpellegrino:</cite> displaying the ex. description in a popup is just one solution but could be other UI solutions.</p>
+<p class="phone s04" id="68cc"><cite>AvneeshSingh:</cite> are we ready to invite APA to review</p>
+<p class="phone s07" id="4142"><cite>gautierchomel:</cite> should I close this issue or keep it open.<br/>
+<span id="b735">… good to let people know this limitation.</span></p>
+<p class="phone s01" id="c119"><cite>Charles L.:</cite> Why couldn't there be an extendedDescription CSS class for all extended descriptions? We did some successful experiments for displaying descriptions in pop-ups some years ago.</p>
+<p class="phone s07" id="c04d"><cite>gautierchomel:</cite> there may be push back by RS wanting the same CSS for all pages not certain ones.</p>
+<p class="phone s04" id="612d"><cite>AvneeshSingh:</cite> footnote is just and example and we want to have the roles for extended descriptions in a similar way. we need to add to the issue.</p>
+<p class="phone s07" id="ec5b"><cite>gautierchomel:</cite> I like keeping the issue open so RS dev. point of view maybe different solutions.</p>
+<p class="phone s06" id="5c73"><cite>GeorgeK:</cite> good to get this explainer in front of people maybe CSUN?</p>
+<p class="phone s04" id="7f6c"><cite>AvneeshSingh:</cite> I will invite Janina and Mathew.</p>
+</section>
+</main>
+<div id="ResolutionSummary">
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#b4e6">We should have production/authoring tools independent techniques in fixed layout techniques document, if there is a strong demand from community to have production tool specific guidance, then we can consider a separate document.</a></li>
+</ol>
+</div>
+</body></html>
