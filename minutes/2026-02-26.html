@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 26 February 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>26 February 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Feb/0024.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/02/26-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>CharlesL, DaleRogers, gautierchomel, GeorgeK, gman, Hadrien, ivan, kimberg, LaurentLM, MasakazuKitahara, mgarrish, rdeltour, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>CharlesL, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#65f8">Multi-granularity highlighting in Media overlays</a></li>
+<li><a href="#0d05">&lt;img&gt; in SMIL</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=65f8>Multi-granularity highlighting in Media overlays</h3>
+<p id=acdd class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2917">w3c/<wbr>epub-specs#2917</a></p>
+<p id=35d6 class="phone s01"><cite>GeorgeK:</cite> looking at 3 names? (word, sentence, and paragraph), or something else? span around each word? for word level sync?</p>
+<p id=ed54 class="phone s02"><cite>wendyreid:</cite> depends on how it is authored. we have an established pattern for wrapping and might be a word or sentence. now introducing nesting.<br>
+<span id=6f9f>… we need to only define 2 bigger levels.</span></p>
+<p id=15f7 class="phone s01"><cite>GeorgeK:</cite> paragraph then sentence inside the paragraph and word inside sentence. do you need id's on the words?</p>
+<p id=edde class="phone s03"><cite>Hadrien:</cite> first &quot;sec&quot; element equivalent of paragraph 2nd &quot;sec&quot; element we will call it &quot;sentence&quot; for now. and we don't need an epub type a the word level. you  need id's for all of the levels.</p>
+<p id=1cf5 class=irc><cite>&lt;Hadrien&gt;</cite> Authoring Media Overlay with text fragments instead of an ID: <a href="https://github.com/w3c/epub-specs/issues/2934">w3c/<wbr>epub-specs#2934</a></p>
+<p id=6df6 class="phone s02"><cite>wendyreid:</cite> proposals are: chunk-large/small text-granularity-large/small<br>
+<span id=11d7>… internationally &quot;chunk&quot; is maybe ok.</span></p>
+<p id=8e42 class="phone s03"><cite>Hadrien:</cite> &quot;text-chunk&quot;</p>
+<p id=0e9b class="phone s01"><cite>GeorgeK:</cite> what about &quot;paragraph&quot; and &quot;word&quot; group?</p>
+<p id=93e2 class="phone s03"><cite>Hadrien:</cite> we discussed those but we don't like this due to it might not be a paragraph or sentence.<br>
+<span id=2a27>… we want something more generic? but understandable.</span></p>
+<p id=0f4f class="phone s04"><cite>ivan:</cite> adding 2 terms to a non-normative so we can change it if its wrong so no problem if we need to change it.  I would just pick one of them and move on.</p>
+<p id=f1df class="phone s05"><cite>CharlesL:</cite> I like &quot;text-chunk&quot; myself, it probably makes the most sense, followed by small/large</p>
+<p id=495c class="phone s03"><cite>Hadrien:</cite> this would be used &quot;common language&quot;<br>
+<span id=544b>… concept of chunked encoding in http.</span><br>
+<span id=99a0>… few words or one word. Not a big issue to be used here for something similar.</span></p>
+<p id=e899 class="phone s04"><cite>ivan:</cite> this is something used by humans not only by machines. I tried to translate chunk into a few other languages. so I am not sure how to translate it to Hungarian thats why I like text-granularity myself.</p>
+<p id=82e4 class="phone s06"><cite>sueneu:</cite> text-chunking is a concept in how to teaching people to read, which makes it appropriate in a reading context but worried about translations.</p>
+<p id=ae91 class="phone s07"><cite>shiestyle:</cite> Japanese is complicated language character base, word, sentence and paragraph so 4 degrees. so difficult. so i think small and large is fine.</p>
+<p id=5427 class="phone s08"><cite>mgarrish:</cite> tagging this what is it for words, sentence, paragraphs, can it be different things for small, or large, but wonder if it is a better approach than word, sentence, paragraph vs. a generic. I worry that it might not work in the end.</p>
+<p id=6659 class="phone s09"><cite>DaleRogers:</cite> instructional/web design chunking is categorical. if a computer needs to sift through content, chunking doesn't resolve to a number. if a computer needs to resolve to a number.</p>
+<p id=4b8d class="phone s06"><cite>sueneu:</cite> can we trust Reading Systems that we author in and RS can localize it for their readers?</p>
+<p id=e1e5 class="phone s03"><cite>Hadrien:</cite> RS will need to localize it to something their customers understand<br>
+<span id=1c31>… depends on how its structured, it will b a bit vague, we just need to agree on something.</span></p>
+<p id=627f class="phone s02"><cite>wendyreid:</cite> by giving this a name, if I am a dev. and I want to group/chunk my content how should I do it / extent. To avoid phrase or clause, and paragraph is more universal. &quot;section&quot; could be a chapter, we don't want a MO for a large group of text like chapter, encourage authors to make them smaller so my proposal is &quot;phrase&quot; and &quot;paragraph&quot;</p>
+<p id=f5b7 class="phone s03"><cite>Hadrien:</cite> best to make it more understandable or more vague. we just need to name it at this point.</p>
+<p id=8619 class="phone s09"><cite>DaleRogers:</cite> &quot;group&quot; we use in industrial design maybe instead of &quot;chunk&quot;</p>
+<p id=efc4 class="phone s03"><cite>Hadrien:</cite> if you don't say anything about &quot;text&quot; it could be not understood. phrase, paragraph, sentence, but we need to make sure this is for text and there are sizes.</p>
+<p id=23f9 class="phone s04"><cite>ivan:</cite> lets move ahead text-granularity small/large<br>
+<span id=e368>… term we can all live with?</span></p>
+<p id=75ce class="phone s02"><cite>wendyreid:</cite> maybe offline?</p>
+<p id=c152 class="phone s04"><cite>ivan:</cite> didn't lead anywhere</p>
+<p id=73f7 class="phone s06"><cite>sueneu:</cite> granularity is what I have problems with.<br>
+<span id=b762>… what about &quot;range&quot; instead</span></p>
+<p id=fe97 class="phone s03"><cite>Hadrien:</cite> I am fine with range</p>
+<p id=6e68 class="phone s04"><cite>ivan:</cite> I am fine as well.</p>
+<p id=4db0 class="phone s01"><cite>GeorgeK:</cite> text-group or text-range is good for me.</p>
+<p id=60af class="phone s04"><cite>ivan:</cite> text-range small/large? works?</p>
+<p id=d26d class="phone s02"><cite>wendyreid:</cite> opposition?</p>
+<p id=3959 class=summary>Proposed: Name the text granularity options &quot;text-range-small&quot; or &quot;text-range-large&quot;</p>
+<p id=71be class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=31bf class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=71bf class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=f1bf class=irc><cite>&lt;gautierchomel&gt;</cite> +1</p>
+<p id=f1c0 class=irc><cite>&lt;sueneu&gt;</cite> +1</p>
+<p id=31c0 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=71c0 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=f1c1 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=f1c2 class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=f1c3 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=1199 class=irc><cite>&lt;mgarrish&gt;</cite> 0</p>
+<p id=1ae0 class=resolution><strong>RESOLUTION:</strong> Name the text granularity options &quot;text-range-small&quot; or &quot;text-range-large&quot;</p>
+<p id=95c7 class="phone s08"><cite>mgarrish:</cite> no paragraph then in this proposal? so is large paragraph? ok for now.</p>
+</section>
+
+<section>
+<h3 id=0d05>&lt;img&gt; in SMIL</h3>
+<p id=2c8e class=summary><a href="https://github.com/w3c/epub-specs/issues/2883,">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>issues/<wbr>2883,</a> <a href="https://github.com/w3c/epub-specs/pull/2919">w3c/<wbr>epub-specs#2919</a></p>
+<p id=8456 class="phone s03"><cite>Hadrien:</cite> Summary: provided examples we need something like this or based on this. move fwd with &quot;At Risk&quot;<br>
+<span id=9850>… working on a PR</span><br>
+<span id=e333>… need full examples</span><br>
+<span id=9688>… created a CC comic 8 pages full script full audio we have panels and textual / audio descriptions speech bubbles etc.</span><br>
+<span id=b0a7>… accessible comic at this point.</span><br>
+<span id=f8dc>… epubCheck or in Spec. the more I dig into the spec the more I found issues in MO in general. images in spine I am not worried about the rest is what is concerning the content model.</span><br>
+<span id=ac45>… image in SMIL, at EDRLab iOS implementation for MO so I see this also to implement this in general. I am worried, about the current spec than the PR. ref. to the issues filed.</span><br>
+<span id=fed6>… PR 1 text element with 0,1 audio element.</span><br>
+<span id=cf36>… 2 combos text or text/audio now you can have text/audio, text/image, text/audio/image so 2 new additions.</span><br>
+<span id=80c5>… in Comic you can have descriptions of a panel or speech bubble.</span><br>
+<span id=ba5e>… image/audio/text so you can have pre-recorded audio.</span><br>
+<span id=8d18>… braille tablet could use the text. or you can use TTS using the text.</span><br>
+<span id=b1d9>… 2 issues from epubCheck image is not authorized which is expected. in my example would work best to keep script &quot;text&quot; eq. as a separate file and it shouts at me cause I am using MO on an image.</span><br>
+<span id=1431>… one is expected the other less so.</span><br>
+<span id=ffff>… maybe without images in spine but that would be weird then script in same page and try to hide it. what I have done is more accessible than trying to hide things using css</span><br>
+<span id=fb63>… I opened them in multiple RS, thorium Apple books, very few that support MO anyways.</span><br>
+<span id=4b8a>… Reading Systems I am not worried about that spec.</span><br>
+<span id=fc6c>… now I have 4 examples, image text/audio, image with text equivalent. single script in a single file, and Media overlays in a spread.</span><br>
+<span id=c0b5>… general impression we wrote the spec with FXL in mind but we forgot about spreads or content drawn across spreads, Reflowable with MO.</span><br>
+<span id=6110>… matt you were worried about this in Reading System spec, I am not worried myself.</span></p>
+<p id=baae class="phone s08"><cite>mgarrish:</cite> I haven't gotten a chance to look at this again. sure we can put an element, but what additional authoring req. say for split screen, not sure how it will work yet. roles needed where you have things in the spine etc.<br>
+<span id=5db3>… I don't have strong opinions on your other issues. Daniel and Marisa were the ones at DAISY taking charge on this work.</span><br>
+<span id=4e8a>… very focused on XHTML document and need pros need to be reworked and implications with SVGs etc.</span></p>
+<p id=10000 class="phone s03"><cite>Hadrien:</cite> timing issue unrelated to this PR. bigger issue with timing if you don't have audio what does it mean. introducing images doesn't affect timing issues.<br>
+<span id=7c77>… I haven't changed the content model for text.</span><br>
+<span id=fe46>… I don't think we can include duration and text and I don't think this PR makes it worse its already there.</span><br>
+<span id=8cbc>… the spec is very open, doesn't limit fragment ID any fragment if you use any other fragment it is unclear.</span><br>
+<span id=fa6d>… compatibility the current RS are broken, spreads are broken, desktop gets into a loop.</span></p>
+<p id=f68f class="phone s08"><cite>mgarrish:</cite> without TTS, time to show the text is problematic if there is no TTS. if we prerecord the TTS and have the RS do the TTS instead of the pre-recorded. We need some timing base. WHat happens when there is no audio. user needs to hit fwd to make the content move.<br>
+<span id=ab38>… images on there own can be problematic here.</span></p>
+<p id=793a class="phone s03"><cite>Hadrien:</cite> in the PR you can't just have images alone.<br>
+<span id=7988>… timing I don't see the usefulness of the duration of each SMIL file as a RS will throw away. TTS on Text this PR makes a case for it.</span><br>
+<span id=1970>… comic with textual equivalent can be displayed or sent to SR or Braille Tablet, using TTS with the text element this PR is a much stronger use case.</span></p>
+<p id=831b class="phone s02"><cite>wendyreid:</cite> all good points.<br>
+<span id=daa6>… we need to reach out to Daniel and Marisa's take on this. as our MO Expert</span><br>
+<span id=e7c8>… she has enhanced synchronized content. I will reach out to her.</span></p>
+<p id=6306 class="phone s04"><cite>ivan:</cite> My question / worry the problems you found in MO is it problems in SMIL original spec or how we took SML into EPUB?<br>
+<span id=8618>… that spec is mainly used in EPUB. we don't own that SMIL spec. there is a problem there I see if there is a real problem with SML then we need to break the ties and implement independently.</span></p>
+<p id=e9c4 class="phone s03"><cite>Hadrien:</cite> the latter, there only one case where issue there is content across the spread we may be limited by the SMIL syntax, all the other issues are in our spec.<br>
+<span id=6dd6>… we may be able to tackle that another way, submitted an issue for that.</span><br>
+<span id=81f9>… there is a lot of interest in this space. this is part of our spec we haven't touched for a while. Serving the community I think doing additional work for that part of the spec will help everyone.</span></p>
+<p id=691f class="phone s06"><cite>sueneu:</cite> I know CSS is pushing into audio, can we use that in addition to SMIL?</p>
+<p id=0edd class="phone s03"><cite>Hadrien:</cite> not really thats more for TTS and is a very complex discussion.</p>
+<p id=1b8a class="phone s02"><cite>wendyreid:</cite> we need more review on this.</p>
+<p id=f429 class="phone s03"><cite>Hadrien:</cite> last question, what should I do next?<br>
+<span id=2fc3>… I can work on the PR to handle the remaining things or documenting things I am finding. open question.</span><br>
+<span id=1375>… I wasn't expecting to open all these issues initially.</span></p>
+<p id=049e class="phone s02"><cite>wendyreid:</cite> we will go through the issues. so document things as you run into them. we need review from Marisa on the PR / issues filed.<br>
+<span id=8cd5>… and Daniel.</span></p>
+<p id=5e58 class="phone s04"><cite>ivan:</cite> biyearly issues with Time change 3 week timezone changes.<br>
+<span id=75ad>… Europe this means 1 hour earlier. Japan 1 hour earlier as well.</span><br>
+<span id=0a9c>… March 12 1 hour earlier, 2nd April goes back to normal.</span><br>
+<span id=129a>… emails in the agenda will flag it.</span></p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#1ae0">Name the text granularity options &quot;text-range-small&quot; or &quot;text-range-large&quot;</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
