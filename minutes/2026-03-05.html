@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 05 March 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>05 March 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Mar/0000.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/03/05-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, CharlesL, DaleRogers, duga, gautierchomel_, george, gman, gpellegrino, Hadrien, ivan, LaurentLM, MasakazuKitahara, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>gman</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#4020">Annotations - model to add audiovisual comments</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=4020>Annotations - model to add audiovisual comments</h3>
+<p id=699d class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2925">w3c/<wbr>epub-specs#2925</a></p>
+<p id=6746 class="phone s01"><cite>LaurentLM:</cite> the question is about audio/images annotations<br>
+<span id=ce48>… ... Ivan tried to modernize the body format property annotation which go beyond text e.g. audio</span><br>
+<span id=f103>… yet another problem: where to start?</span><br>
+<span id=2664>… after segmenting and sending to the system, the epub export make problems to emerge</span></p>
+<p id=3941 class="phone s02"><cite>ivan:</cite> is it realistic to transfer an ebook model for export/import?</p>
+<p id=ed3e class="phone s01"><cite>LaurentLM:</cite> the audio annotations storage solution will not be in the epub itself</p>
+<p id=5624 class="phone s02"><cite>Ivan:</cite> when exporting annotations, the zip is exported with json+audio, which works</p>
+<p id=cb5e class="phone s01"><cite>LaurentLM:</cite> which implies an internal structure inside zip<br>
+<span id=f5b5>… the use case i'm worried about the annotations exposrted as part of the file</span></p>
+<p id=38be class="phone s03"><cite>Hadrien:</cite> open domain content will not arise issues and the file sharing is ok<br>
+<span id=9fbe>… authors writing their own annotations is a possibility hence making this solution a standalone is not the best, having both is the best</span></p>
+<p id=3c33 class="phone s04"><cite>duga:</cite> adding audio etc is not new and feasable<br>
+<span id=0097>… relative urls are already present, zipping the annotation will change the input format requirement, and might be confusing</span><br>
+<span id=8e2d>… zip content should be transparent, if json is there it must be clearly stated</span></p>
+<p id=da51 class="phone s01"><cite>LaurentLM:</cite> the issue is that the section 6 of current draft state a singe file usage</p>
+<p id=65b3 class="phone s03"><cite>Hadrien:</cite> OPF shouldn't be touched, by principle</p>
+<p id=0c72 class="phone s03">... it will be wierd if multiple things are able to be exported/imported, zip at least open up an extension possibility, which is nice</p>
+<p id=96c3 class="phone s05"><cite>wendyreid:</cite> packaging up and embedding into epub, beyond OPF, do we run up into valdiation issues?<br>
+<span id=7e8d>… otherwise, outside of meta, should we target another new location?</span></p>
+<p id=59de class="phone s01"><cite>LaurentLM:</cite> not sure if another folder can be put into meta</p>
+<p id=8c43 class="phone s03"><cite>Hadrien:</cite> audio and other files in the back of epub is more part of an export action process</p>
+<p id=801f class="phone s01"><cite>LaurentLM:</cite> the wording would be extended then</p>
+<p id=0fde class="phone s02"><cite>ivan:</cite> nothing in there forbids creation of a subdir for annotation<br>
+<span id=2d37>… with nothing inside, a flat tree structure</span><br>
+<span id=77e5>… on the other hand, the complications are overruled by user cases</span></p>
+<p id=5063 class="phone s06"><cite>CharlesL:</cite> the security is not to be overlooked<br>
+<span id=1569>… the injection disguised as annotation is a posibility</span></p>
+<p id=ecf8 class=irc><cite>&lt;sueneu&gt;</cite> +1 CharlesL</p>
+<p id=2d77 class="phone s01"><cite>LaurentLM:</cite> it's true</p>
+<p id=0e47 class="phone s02"><cite>ivan:</cite> the scope of accepted base media files should stay the same</p>
+<p id=6faf class="phone s04"><cite>duga:</cite> anything appropriate for epub must be definition be acceptable fo epub</p>
+<p id=3f25 class="phone s05"><cite>wendyreid:</cite> there are reading system out there that support images not matching the dimensions showing screenshot of annotation in case of problem</p>
+<p id=6c3e class="phone s03"><cite>Hadrien:</cite> I'm more worried about images than audio, sure mic needed etc<br>
+<span id=6e0c>… but for example the text layout can be changed completely, the view too, the interoeprable fashion setting might not work as a result</span></p>
+<p id=72f3 class="phone s07"><cite>GeorgeK:</cite> the annotation access for future use must be exportable too</p>
+<p id=2036 class="phone s05"><cite>wendyreid:</cite> export of annotation only or export of the whole book annotated co-exist</p>
+<p id=5dd6 class="phone s02"><cite>ivan:</cite> from specing POV, meta and data handling is not of our problem</p>
+<p id=ffff class="phone s01"><cite>LaurentLM:</cite> even if only text annotations exist, we export a zip, with json structure</p>
+<p id=9dda class="phone s08"><cite>ajellinek:</cite> zip works with export and import as it's widely used</p>
+<p id=6dcd class="phone s05"><cite>wendyreid:</cite> there's a consensus, strcutre is to be defined</p>
+<p id=2dd4 class="phone s01"><cite>LaurentLM:</cite> once data is stored inside epub, the encryption poses a problem</p>
+<p id=315b class="phone s03"><cite>Hadrien:</cite> in case of authored annotations, they must be encrypted</p>
+<p id=8505 class="phone s09"><cite>seuneu:</cite> +1 for authored annotations encrypted<br>
+<span id=b952>… namely for copyright reasons, if though it might not be our problem</span></p>
+<p id=a8e6 class="phone s06"><cite>CharlesL:</cite> what about the superposition problem, i.e. annotation on annotation problem?</p>
+<p id=10000 class="phone s02"><cite>ivan:</cite> it's for the future given the can of worms this discussion opens up<br>
+<span id=af47>… the publishers allows for export of annotations importable by the peers, which just gives the authorization</span><br>
+<span id=399f>… a single file without a book containing annotations is ok</span></p>
+<p id=b1d6 class="phone s04"><cite>duga:</cite> DRM annotation: exportable or not exportable? that is the question</p>
+<p id=750b class="phone s06"><cite>CharlesL:</cite> the other point: multiple students in front of the same book, does this situation produces a set of subdirs?</p>
+<p id=c4c5 class="phone s03"><cite>Hadrien:</cite> the attribution becomes a tricky issue now, should we open the Pandora's box?</p>
+<p id=ee2f class="phone s05"><cite>wendyreid:</cite> the difference between new annotations and responding to existing ones are two different problems<br>
+<span id=5a5d>… the recursivity of annotations is not a topic for now for the current model</span></p>
+<p id=5187 class="phone s01"><cite>LaurentLM:</cite> to be clear, each annotation has its own author<br>
+<span id=b96c>… all the annotations, whatever the author, are thrown into one universal bag</span><br>
+<span id=83be>… i have a bigger cocnern with authored annotation in a DRM context because the encryption key makes the annotations intrinsic to the book itself</span></p>
+<p id=e0b2 class="phone s09"><cite>seuneu:</cite> authored annotations must be processed differently from non authored ones?</p>
+<p id=b991 class="phone s01"><cite>LaurentLM:</cite> Yes</p>
+<p id=f0b5 class="phone s05"><cite>wendyreid:</cite> annotated editions encapsualte annotations (i.e. they are part of the book by definition, by essence), thus are treating the annotations as integral to the book as a feature?</p>
+<p id=0ad8 class=irc><cite>&lt;ivan&gt;</cite> +1 to what wendyreid said</p>
+<p id=7858 class="phone s04"><cite>duga:</cite> annotation mechanism should not be used in a DRM context</p>
+<p id=921c class=irc><cite>&lt;gpellegrino&gt;</cite> +1 to duga</p>
+<p id=bc18 class=irc><cite>&lt;GeorgeK&gt;</cite> +1 to what Brady is saying</p>
+<p id=938c class=irc><cite>&lt;ivan&gt;</cite> +1 to duga</p>
+<p id=93cf class=irc><cite>&lt;sueneu&gt;</cite> +1 to duga</p>
+<p id=bf0d class="phone s04"><cite>duga:</cite> annotations that are part of the content is not a valid use case here<br>
+<span id=9f2e>… if we ignore it, the DRM problem goes away</span></p>
+<p id=8e8e class="phone s03"><cite>Hadrien:</cite> mixed feelings here<br>
+<span id=8288>… footnotes are horrible</span><br>
+<span id=e5ae>… media overlay via authored audio is possible too</span><br>
+<span id=163d>… people's creativity is without boundaries, thus we must be careful in our spec</span></p>
+<p id=35e3 class="phone s05"><cite>wendyreid:</cite> i don't disagree, but the line must be drawn somewhere<br>
+<span id=8ea3>… and it's : Authorized (created by author feat. publisher) vs Unauthorized (the other use cases)</span></p>
+<p id=b5ad class="phone s09"><cite>seuneu:</cite> agree with Authorized vs Unauthorized idea<br>
+<span id=cf85>… but with improvements of already existing features</span></p>
+<p id=5c9a class="phone s10"><cite>shiestyle:</cite> the old footnnote feature and this annotation feature are two distinct things</p>
+<p id=39b1 class="phone s01"><cite>LaurentLM:</cite> improving footnotes with the annotation methodology is complex<br>
+<span id=1482>… reading systems capabilities are dictated by the market</span><br>
+<span id=90f4>… and annotations can be DRM protected just in case</span></p>
+<p id=5b0e class="phone s05"><cite>wendyreid:</cite> the thing to figure out: where to store these annotations, inside or outside?</p>
+<p id=dc71 class="phone s02"><cite>ivan:</cite> my feeling -- this issue is PR-ready<br>
+<span id=b0ca>… that's the next step</span></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
