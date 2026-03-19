@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 19 March 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>19 March 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Mar/0010.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/03/19-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>charles, duga, GeorgeK, gman, gpellegrino, hadrien, ivan, LaurentLM, MasakazuKitahara, mgarrish, shiestyle, sueneu, wendyreid</dd>
+<dt>Regrets</dt><dd>DaleRogers, avneeshsingh</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>sueneu, duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#12f9">SMIL TF?</a></li>
+<li><a href="#997a">F2F at TPAC?</a></li>
+<li><a href="#89bd">Use JSON-LD keywords for language and direction - w3c/<wbr>epub-specs#2950</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=12f9>SMIL TF?</h3>
+<p id=d59e class="phone s01"><cite>wendyreid:</cite> Should there be a SMIL taskforce?<br>
+<span id=4855>… SMIL needs attention but  might need some room to breathe</span></p>
+<p id=3067 class="phone s02"><cite>Hadrien:</cite> since I made most of the issues, should I lead the task force?</p>
+<p id=f58c class="phone s01"><cite>wendyreid:</cite> we can invite members of the community group<br>
+<span id=f5ad>… in this matter, there are people outside the group who have been implementing SMIL for years</span></p>
+<p id=77bc class="phone s02"><cite>Hadrien:</cite> I am OK to do this, we need to fix the spec, we cannot do what is currently in the spec<br>
+<span id=0952>… how many people from this group would want to join?</span><br>
+<span id=a93f>… would we have good discussions on regular calls?</span></p>
+<p id=54ba class="phone s03"><cite>GeorgeK:</cite> What is the goal? Do we want to modify it and bring it forward?<br>
+<span id=c569>… would we be updating the whole specification? or make a subset of SMIL?</span></p>
+<p id=cf0e class="phone s04"><cite>ivan:</cite> I know we are not allowed to touch the original SMIL spec<br>
+<span id=dd9b>… another group should be chartered to do that</span><br>
+<span id=8a54>… the SMIL spec we are referring to is a subset of the big SMIL set</span><br>
+<span id=c161>… that is part of EPUB. We can change the subset</span><br>
+<span id=142b>… I didn't see anything in what Hadrien said that would require changing the SMIL spec</span></p>
+<p id=34e5 class="phone s02"><cite>Hadrien:</cite> like what @ivan said, our issues are more about how we use SMIL<br>
+<span id=4753>… and not the specification itself</span><br>
+<span id=0fb2>… the cross-resources issue might be an exception</span><br>
+<span id=c035>… where text goes across the left/right of a spread or through a roll publication</span><br>
+<span id=6f7b>… we should be fine not changing SMIL</span></p>
+<p id=cb3f class="phone s01"><cite>wendyreid:</cite> If we don't have to change SMIL, it is just about EPUB</p>
+<p id=e32a class="phone s03"><cite>GeorgeK:</cite> Can we add video to what is in the [par?]</p>
+<p id=c463 class="phone s04"><cite>ivan:</cite> the original spec had a video element</p>
+<p id=8350 class="phone s02"><cite>Hadrien:</cite> and we have a PR for adding image support<br>
+<span id=23b0>… who in this group would like to participate in the TF?</span></p>
+<p id=3c26 class="phone s05"><cite>LaurentLM:</cite> I would. I deal more with desktop Thorium, while Hadrien deals with mobile<br>
+<span id=f9d4>… Hadrien is now discovering things we didn't work on with the desktop implementation</span></p>
+<p id=8a14 class="phone s01"><cite>wendyreid:</cite> We may have to send out an email since some of the folks who might be interested are not here</p>
+<p id=95f6 class="phone s06"><cite>duga:</cite> I don't see Google or Apple here, it would be interesting to reach out to them to participate</p>
+<p id=ffff class="phone s02"><cite>Hadrien:</cite> Outside of this group, people might be interested but may not have time to contribute<br>
+<span id=cd0e>… we have the lead developer of Storyteller, who has experience with production and reading systems</span><br>
+<span id=224d>… specialized libraries will have an interest in this topic</span><br>
+<span id=3ec9>… there might be people in DAISY who are interested in this topic</span><br>
+<span id=f948>… and people on larger platforms who are following our discussions</span></p>
+<p id=13be class="phone s06"><cite>duga:</cite> If we don't form a joint task for with the working group, we guarantee that most of those people won't be involved.<br>
+<span id=0212>… since they will have to join the community group</span><br>
+<span id=7361>… it might be nice to get some new blood</span></p>
+<p id=9896 class="phone s04"><cite>ivan:</cite> at this point, a task force in the community group would be easy to set up<br>
+<span id=0f69>… it is a good workflow to have the community group incubate the ideas and then pass them to us</span><br>
+<span id=d689>… we have enough people in this WG to complete the standards update</span><br>
+<span id=1f71>… we might end up with a whole series of invited experts and that could cause problems</span><br>
+<span id=341a>… gautier has said he cannot join us because of schedule conflict</span><br>
+<span id=ebe1>… this is a discussion we should have with him because he is co chair of the CG</span></p>
+<p id=10000 class="phone s02"><cite>Hadrien:</cite> some of this work is very central to the spec.<br>
+<span id=fe26>… some of these issues are not raising new features, but changing the spec</span></p>
+<p id=e9ba class="phone s04"><cite>ivan:</cite> the CG is completely free to choose its own work</p>
+<p id=48db class="phone s02"><cite>Hadrien:</cite> do we imagine the CG would create PRs?</p>
+<p id=b650 class="phone s04"><cite>ivan:</cite> the CG would develop work that should be put in the PR by someone who is also in this group</p>
+<p id=b093 class="phone s02"><cite>Hadrien:</cite> some of the issues have lots of dicussion, and people may not feel the need for more discussion.<br>
+<span id=3173>… like text fragments. The people involved are ready to move to PR</span><br>
+<span id=f657>… I should be the one to set up the PR</span></p>
+<p id=957c class="phone s04"><cite>ivan:</cite> that is no problem because you are a member of the Working Group</p>
+<p id=03cb class="phone s01"><cite>wendyreid:</cite> We've made progress. It doesn't have to be a formal task force and it can run asynchronisly</p>
+<p id=374a class="phone s02"><cite>Hadrien:</cite> I might just ask people to put things in writing on GitHub</p>
+</section>
+
+<section>
+<h3 id=997a>F2F at TPAC?</h3>
+<p id=f5d0 class="phone s01"><cite>wendyreid:</cite> and that's fine</p>
+<p id=9dc0 class=irc><cite>&lt;Hadrien&gt;</cite> +1 for having a F2F meeting in Dublin</p>
+<p id=e6ec class="phone s01"><cite>wendyreid:</cite> TPAC is in Dublin, easy for the European and East coast members, not so much for Asian and West coast members</p>
+<p id=1c04 class="phone s04"><cite>ivan:</cite> the TPAC is the 26th of October</p>
+<p id=902e class=irc><cite>&lt;ivan&gt;</cite> +1 for a f2f</p>
+<p id=05bf class="phone s01"><cite>wendyreid:</cite> I'll keep an eye out for further information after the AC meeting</p>
+<p id=43c9 class="phone s07"><cite>@ivan:</cite> @hadrien that did come up</p>
+<p id=470c class="phone s01"><cite>wendyreid:</cite> maybe we can have a virtual face to face?<br>
+<span id=48dc>… I'm not sure any of us have the energy to plan a face to face before October</span></p>
+<p id=bc6d class="phone s01"><cite>wendyreid:</cite> I<br>
+<span id=0caf>… I'll keep an eye out for when to ask for time at TPAC</span></p>
+</section>
+
+<section>
+<h3 id=89bd>Use JSON-LD keywords for language and direction - <a href="https://github.com/w3c/epub-specs/pull/2950">w3c/<wbr>epub-specs#2950</a></h3>
+<p id=86dd class=irc><cite>&lt;ivan&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2854">w3c/<wbr>epub-specs#2854</a></p>
+<p id=a11c class="phone s01"><cite>wendyreid:</cite> ivan, can you explain this topic?</p>
+<p id=0606 class="phone s04"><cite>ivan:</cite> we have to talk about language and language direction in strings in annotations</p>
+<p id=0d65 class=irc><cite>&lt;LaurentLM&gt;</cite> link to the body language and textDirection: <a href="https://w3c.github.io/epub-specs/epub34/annotations/#body">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub34/<wbr>annotations/#body</a></p>
+<p id=0441 class="phone s04"><cite>ivan:</cite> the current draft has a field for text direction that has two problems.<br>
+<span id=3871>… it is only for the body and doesn't solve other text, like titles and descriptions</span><br>
+<span id=4287>… json LD now has a built-in feature to set language and direction</span><br>
+<span id=70ad>… my original issue is that we should use what we get in jsonLD</span><br>
+<span id=0d32>… and not duplicate things. It would solve the missing setting for other natural language text fields</span><br>
+<span id=6da2>… I've defined the solution and written a PR that we use JSON LD</span><br>
+<span id=471a>… I described part of the JSON LD that are usable in my view in annotaitons</span><br>
+<span id=d17a>… i dont want to go into detail in the syntax</span><br>
+<span id=a71f>… if we set another block we can use JSON LD to set the language and direction</span><br>
+<span id=8699>… it would then apply to everything in the tree underneath</span><br>
+<span id=916b>… you can still have local overrides</span><br>
+<span id=fde1>… two open questions that need a decision</span><br>
+<span id=38cb>… there is a way in the JSON LD syntax to set the language and direction in a single text field</span><br>
+<span id=a297>… which uses a different syntax and can be confusing</span><br>
+<span id=6118>… we may not have to specify values for single strings</span><br>
+<span id=97be>… I don't think we need to add this to the spec</span><br>
+<span id=c105>… I would like some feedback on this</span><br>
+<span id=8615>… is it a must to add language and direction?</span><br>
+<span id=1c4e>… or is it a should? We should do the same for the annotations spec</span><br>
+<span id=49a6>… this has a slight effect on the vocabulary so we should make a decision</span></p>
+<p id=e163 class="phone s08"><cite>mgarrish:</cite> we don't have a requirement in the package document, but it is required for accessibility<br>
+<span id=958f>… setting the language of the publication is required, but not setting the language of the HTML</span></p>
+<p id=86b6 class="phone s04"><cite>ivan:</cite> in the pacakge doc, if we say it is a must to specify the DC language, the we should do the same for the annotations spec</p>
+<p id=10001 class="phone s05"><cite>LaurentLM:</cite> web annotations are based on JSON LD<br>
+<span id=1c82>… programmers work with JSON not JSON LD</span><br>
+<span id=335a>… to go too far with JSON LD is dangerous for developers</span><br>
+<span id=de9c>… using language direction is a small improvement for annotaitons</span><br>
+<span id=fee9>… I would like to see that use case for adding language and language direction before we implement this</span><br>
+<span id=33b8>… we had this same discussion with web publications. The outcome was to</span><br>
+<span id=ec55>… web publication spec can give us some continuity</span></p>
+<p id=11a6 class=irc><cite>&lt;LaurentLM&gt;</cite> Readium Web Publications: <a href="https://readium.org/webpub-manifest/contexts/default/#title">https://<wbr>readium.org/<wbr>webpub-manifest/<wbr>contexts/<wbr>default/#title</a></p>
+<p id=b4a1 class="phone s05"><cite>LaurentLM:</cite> readium web publications have chosen another path<br>
+<span id=5157>… if you want multiple languages you use the language code, language is mapping to JSON LD</span></p>
+<p id=8fb2 class=irc><cite>&lt;LaurentLM&gt;</cite> W3C WEb Publications: <a href="https://www.w3.org/TR/pub-manifest/#manifest-lang-dir-local">https://<wbr>www.w3.org/<wbr>TR/<wbr>pub-manifest/#manifest-lang-dir-local</a></p>
+<p id=7589 class="phone s05"><cite>LaurentLM:</cite> this seems easier to master than the example in the web publication W3C spec</p>
+<p id=367a class="phone s04"><cite>ivan:</cite> I realized while doing this, that what we have in web publications is buggy<br>
+<span id=557e>… you cannot use the alias within the context</span></p>
+<p id=9a8a class="phone s05"><cite>LaurentLM:</cite> having the abilty specify language locally is important<br>
+<span id=0e86>… to have it at the top, and setting the direction, at the top makes sense</span></p>
+<p id=48f5 class="phone s04"><cite>ivan:</cite> it is clear that we cannot use language and direction in the body that the way it is now<br>
+<span id=e4b1>… it is not now the JSON LD specification, you cannot specify the language and have it be recognized</span><br>
+<span id=d50a>… the mapping you have in Readium is valid JSON LD and can be used</span><br>
+<span id=298c>… but since it doesn't handle direction we might have problems with internationalization</span><br>
+<span id=76f0>… we rarely have a case where we want to express the same thing with 3 different languages</span></p>
+<p id=4b53 class="phone s09"><cite>sueneu:</cite> Use cases are rare where you want to say things in different languages<br>
+<span id=b675>… but I do this all the time</span></p>
+<p id=d93e class="phone s04"><cite>ivan:</cite> In general that is true, but the question is does this happen in annotations</p>
+<p id=04fb class="phone s09"><cite>sueneu:</cite> Absolutely. This could be very helpful<br>
+<span id=4cf4>… you could have English annotations</span></p>
+<p id=3bb1 class="phone s04"><cite>ivan:</cite> that is not really what we are talking about. We need to specify the language you made the annotation in</p>
+<p id=c4ab class=summary>@laurentLM it looks like this needs more discussion</p>
+<p id=eebd class="phone s10"><cite>@gman:</cite> I think there is a use case here, which could be annotation of a translation and discussion that could take place in two languages</p>
+<p id=22df class="phone s01"><cite>wendyreid:</cite> this could be more about the accessiblity issue where if the language isn't marked up properly screen readers can lead to some interesting publications<br>
+<span id=f110>… in theory, I could add a word in a second language within an annotation</span></p>
+<p id=2bad class="phone s04"><cite>ivan:</cite> which leads us to the discussion of HTML in annotations<br>
+<span id=d8af>… if we can use markdown in the body, like the markdown in github</span><br>
+<span id=63bf>… that does allow some HTML, so you could manually set a span with the correct language tag, it would cover that issue</span><br>
+<span id=e951>… if we really what to mix the language inside the body, we could use multiple bodies</span></p>
+<p id=9304 class="phone s06"><cite>duga:</cite> Github technically doesn't support HTML but doesn't strip them out<br>
+<span id=f850>… so it displays correctly in a browser</span><br>
+<span id=fa0d>… I don't know if there is a version of Markdown that allows Ruby</span><br>
+<span id=fcd1>… I'm not even sure markdown will make it through rec</span></p>
+<p id=c974 class="phone s07"><cite>@ivan:</cite> for those issues, we will have face an international review,<br>
+<span id=de2b>… if we cannot set the language and direction in the right place, we will not get the sign off</span></p>
+<p id=eb9c class="phone s01"><cite>wendyreid:</cite> Let's leave it at that, we have more to do on the language question<br>
+<span id=c26b>… otherwise, thank you everyone for a great meeting. See you all next week</span></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body>
+</html>
