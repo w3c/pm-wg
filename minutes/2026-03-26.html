@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 26 March 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>26 March 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Mar/0019.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/03/26-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, AvneeshSingh, CharlesL, DaleRogers, duga, george, GeorgeK, gman, gpellegrino, Hadrien, ivan, kimberg, MasakazuKitahara, shiestyle, sueneu, wendyreid</dd>
+<dt>Regrets</dt><dd>laurent, ToshiakiKoike</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>sueneu, duga</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#fe44">Annotations - adding Markdown as an annotation body format - w3c/<wbr>epub-specs#2942</a></li>
+<li><a href="#10bf">SMIL TF</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<p id=5ed5 class="phone s01"><cite>wendyreid:</cite> More on annotations, starting with markdown as a supported body format</p>
+</section>
+
+<section>
+<h3 id=fe44>Annotations - adding Markdown as an annotation body format - <a href="https://github.com/w3c/epub-specs/issues/2942">w3c/<wbr>epub-specs#2942</a></h3>
+<p id=6f29 class="phone s02"><cite>ivan:</cite> Originally it was about HTML not markdown, but I don't want to repeat that discussion<br>
+<span id=a6de>… I expect internationalization review will have comments, which is I why I mentioned html</span><br>
+<span id=4853>… we had a long discussion on it, and the consensus was it would not be supported</span><br>
+<span id=17dd>… but we still need something for i13n</span><br>
+<span id=2519>… so I changed to markdown</span><br>
+<span id=55fa>… the spec already allows markdown</span><br>
+<span id=8720>… so we have to agree to support it</span><br>
+<span id=4a1a>… and explain how it relates to i13n</span><br>
+<span id=b6e4>… markdown generally allows adding html tags for certain things i13n related</span><br>
+<span id=63b3>… but there are a lot of markdown implementations and levels</span><br>
+<span id=9d2a>… so we need to spec it specifically</span><br>
+<span id=3d5d>… there were also some voices that said we shouldn't have markdown either</span><br>
+<span id=8e85>… one practical thing - the way the impls work is by converting to html, that is how tag inclusion works</span><br>
+<span id=9710>… that would be a security issue, so we would need to use the sanitizer to clean that up</span></p>
+<p id=3fb3 class="phone s03"><cite>Hadrien:</cite> I have less of an issue with markdown than html<br>
+<span id=cba2>… I do have a concern about using it to sneakily add html</span><br>
+<span id=959f>… simple styling is fine (bold, etc) and it is easy to type</span><br>
+<span id=4eab>… if we are using it to pull in html I an concerned, and I think most people will just sanitize it out</span><br>
+<span id=851a>… markdown is good because it is easy to enter</span></p>
+<p id=750f class="phone s02"><cite>ivan:</cite> I agree the main reason is the styling<br>
+<span id=b4c6>… but html will be important for i18n</span><br>
+<span id=7637>… so we can get past that review by pointing to the html support of markdown</span></p>
+<p id=9274 class="phone s03"><cite>Hadrien:</cite> I think most implementations will just remove all html</p>
+<p id=03dd class="phone s04"><cite>duga:</cite> I worry about support for annotation styling<br>
+<span id=fff3>… markdown should be noted as at risk</span><br>
+<span id=50c2>… markdown has a good fall down to plain text</span><br>
+<span id=09ba>… using HTML tags as a back door is lying to get through the review</span><br>
+<span id=ff5e>… outside of web readers you're putting annotations in a system level box</span><br>
+<span id=5b96>… it will simply appear as HTML with tags</span><br>
+<span id=8f8b>… no one is writing HTML fields</span><br>
+<span id=ffc9>… I don't think this is a real way to get annotations in</span></p>
+<p id=1ea7 class="phone s05"><cite>ajelinek:</cite> we already store annotations as html<br>
+<span id=f39c>… my main concern is markdown isn't very standardized</span><br>
+<span id=6f74>… it is no more secure than html</span><br>
+<span id=0299>… the dom sanitizer is not supported everywhere</span><br>
+<span id=dcb4>… so as an implementor I don't want to see markdown in the standard</span><br>
+<span id=f4dc>… I don't want to be in the business of saying what tags are allowed</span><br>
+<span id=b786>… markdown is essentially a superset of html</span></p>
+<p id=8b41 class="phone s06"><cite>sueneu:</cite> ajellinek, do you support i18n? vertical, rtl</p>
+<p id=521b class="phone s07"><cite>ajellinek:</cite> rtl where it is supported, not vertical</p>
+<p id=fc30 class="phone s01"><cite>wendyreid:</cite> So there is no one true markdown</p>
+<p id=0af9 class="phone s02"><cite>ivan:</cite> let's separate these things<br>
+<span id=6dc8>… first is markdown, yes or no?</span><br>
+<span id=e70a>… outside of that, the only 18n we have is unicode</span></p>
+<p id=79a8 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.rfc-editor.org/rfc/rfc7763">https://<wbr>www.rfc-editor.org/<wbr>rfc/<wbr>rfc7763</a></p>
+<p id=4ffa class="phone s02"><cite>ivan:</cite> is our message to say we don't offer anything else?<br>
+<span id=5225>… I have heard competing things</span></p>
+<p id=e429 class="phone s07"><cite>ajellinek:</cite> I appreciate that we could help with i18n with markdown, but I don't think it is worth the security risk<br>
+<span id=5b8a>… and it forces implementors to add a lot of support for a feature that might be risky</span></p>
+<p id=cd27 class="phone s06"><cite>sueneu:</cite> I did find the rfc markdown</p>
+<p id=ffff class="phone s08"><cite>shiestyle:</cite> markdown or html will have issues with vertical text<br>
+<span id=354b>… I discussed with Japanese publishers</span><br>
+<span id=ef98>… Makoto has discussed this as needed, but the publishers don't seem to care</span><br>
+<span id=adf9>… I find plain text is just fine</span></p>
+<p id=eaf1 class="phone s04"><cite>duga:</cite> Makoto raised the issue that some people prefer to read vertically<br>
+<span id=4324>… while some prefer to read horizontally</span><br>
+<span id=d3c1>… and he noted that HTML is bad at that</span><br>
+<span id=99ba>… plain text is actually the most accessible thing we can do</span><br>
+<span id=feeb>… I don't think anyone in Japan has implemented vertical text in annotations</span><br>
+<span id=3a80>… I don't think the vertical horizontal switching is a reason to support</span><br>
+<span id=12a2>… either HTML or Markdown</span></p>
+<p id=207b class="phone s01"><cite>wendyreid:</cite> markdown is nice, because it is readable without the styles<br>
+<span id=0f69>… it doesn't stop you from being able to read it</span><br>
+<span id=908d>… if I want to use markdown syntax in plain text, I can, it just won't become styled. But maybe if my RS supports it, it will be fine. Otherwise it just stays plaintext, and is transfered as such</span><br>
+<span id=1c87>… reading between the comments, we shouldn't officially support markdown, but reading systems can decide to add support if they want</span></p>
+<p id=e17d class="phone s02"><cite>ivan:</cite> is the proposal to remove the reference to markdown?<br>
+<span id=fc6d>… so the format must be plaintext, full stop</span></p>
+<p id=cf96 class="phone s01"><cite>wendyreid:</cite> Yes<br>
+<span id=1077>… when someone reads the spec people may wonder why, so we may need to add a note explaining the choice</span></p>
+<p id=7c7c class="phone s02"><cite>ivan:</cite> These days they like an i18n section<br>
+<span id=0821>… so we should explain that in practice html won't work here</span><br>
+<span id=93bc>… I am happy to go that way and see what the powers that be say</span></p>
+<p id=5ea5 class="phone s01"><cite>wendyreid:</cite> We could include markdown as MAY</p>
+<p id=256a class="phone s02"><cite>ivan:</cite> we are defining interchange, it doesn't make sense to say MAY, since that basically says nothing<br>
+<span id=e4f2>… we don't define what the RS does with these</span></p>
+<p id=7e91 class="phone s01"><cite>wendyreid:</cite> EPUB is also interchange, and we have found people like it when we tell them what to do</p>
+<p id=9210 class="phone s08"><cite>shiestyle:</cite> RSes should delete the markdown to export</p>
+<p id=a939 class="phone s02"><cite>ivan:</cite> The export is all we are standardizing, so it doesn't make sense to say that</p>
+<p id=865a class="phone s09"><cite>CharlesL:</cite> On export the RS would have to convert to plain text</p>
+<p id=da71 class="phone s01"><cite>wendyreid:</cite> That is why saying plaintext is a must implies that markdown is fine but may look funny</p>
+<p id=2798 class="phone s06"><cite>sueneu:</cite> supporting markdown is a legitimate feature of RSes, so staying neutral is a good idea</p>
+<p id=f334 class="phone s09"><cite>CharlesL:</cite> For a11y side, markdown gives structure, then a screen reader could utilize it</p>
+<p id=ca6d class="phone s10"><cite>DaleRogers:</cite> I am hearing reluctance, can the spec kick the can down the road and tell people to check reading system support?</p>
+<p id=6c4a class="phone s07"><cite>ajellinek:</cite> If we did that we would want to tag the text as markdown, so we don't confuse plain text and markdown</p>
+<p id=cdc0 class="phone s01"><cite>wendyreid:</cite> We can always kick things down the road!</p>
+<p id=10000 class="phone s11"><cite>GeorgeK:</cite> If somebody put in markdown, then the rs would have to strip it out on export<br>
+<span id=bda8>… then if someone put in markdown, it would just go in as markdown in the plain text</span><br>
+<span id=6bf0>… On the a11y side, most people understand plain text, I am not sure how much regular people know about markdown</span><br>
+<span id=79e4>… they also tend to be short, so they don't need as much help (the length of annotations)</span></p>
+<p id=8c59 class="phone s07"><cite>ajellinek:</cite> The RS could use WYSIWYG editing, so they may not know anything about markdown to use it</p>
+<p id=dacf class=irc><cite>&lt;ivan&gt;</cite> +1 to ajellinek</p>
+<p id=3eb6 class="phone s01"><cite>wendyreid:</cite> I think we have consensus in plaintext as the default for annotation bodies<br>
+<span id=515e>… we know people will use markdown in annotations. Lots of tools support it</span><br>
+<span id=849b>… but we also know there are multple types of markdown</span><br>
+<span id=fae4>… the question for us is, do we want to say MAY use markdown, or just say plaintext only with a note about the decision</span></p>
+<p id=c3b3 class=irc><cite>&lt;ivan&gt;</cite> +1 to wendyreid</p>
+<p id=d386 class="phone s04"><cite>duga:</cite> Do we want to say that rs MAY use markdown<br>
+<span id=c9b9>… doesn't solve the problem of which markdown we support</span></p>
+<p id=2158 class="phone s02"><cite>ivan:</cite> I agree. I don't think MAY helps<br>
+<span id=247d>… let us try to make a resolution for plain text as the normative part, with a note about markdown (no single makrdown, not many implementations in RSes)</span></p>
+<p id=9453 class=irc><cite>&lt;wendyreid&gt;</cite> Proposed: For annotation bodies, plain text will be the interchange format.</p>
+<p id=b09a class=irc><cite>&lt;sueneu&gt;</cite> +1</p>
+<p id=b09b class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=f09a class=irc><cite>&lt;ajellinek&gt;</cite> +1</p>
+<p id=309a class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=309b class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=309c class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=309d class=irc><cite>&lt;kimberg&gt;</cite> +1</p>
+<p id=309e class=irc><cite>&lt;sethd&gt;</cite> +1</p>
+<p id=709a class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=b09c class=irc><cite>&lt;gman&gt;</cite> +1</p>
+<p id=f09b class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=f09c class=irc><cite>&lt;gpellegrino&gt;</cite> +1</p>
+<p id=b09d class=irc><cite>&lt;CharlesL&gt;</cite> +1</p>
+<p id=f09d class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=0088 class=resolution><strong>RESOLUTION:</strong> For annotation bodies, plain text will be the interchange format.</p>
+<p id=f09e class=irc><cite>&lt;GeorgeK&gt;</cite> +1</p>
+<p id=1213 class="phone s02"><cite>ivan:</cite> We will have to do a PR to remove it</p>
+</section>
+
+<section>
+<h3 id=10bf>SMIL TF</h3>
+<p id=e0b8 class="phone s03"><cite>Hadrien:</cite> I discussed with laurent and gautier, we think a task force makes sense<br>
+<span id=558f>… the TF may not need regular calls, we can work async on many topics</span><br>
+<span id=f8c7>… the issues have been very popular</span><br>
+<span id=da3c>… we think most people will be interested in chiming in in issues</span><br>
+<span id=53b6>… so calls won't be the standard work mode</span></p>
+<p id=8a5b class="phone s01"><cite>wendyreid:</cite> That is fine<br>
+<span id=0df6>… more participation is great</span></p>
+<p id=0194 class="phone s02"><cite>ivan:</cite> Do you need any resources?</p>
+<p id=8137 class="phone s03"><cite>Hadrien:</cite> Not really. we just need an official task force so it shows up<br>
+<span id=5841>… we will probably use discord or slack</span></p>
+<p id=5c10 class="phone s02"><cite>ivan:</cite> Just make sure to properly label the issues as for the TF</p>
+<p id=4e6b class="phone s03"><cite>Hadrien:</cite> can I set the labels?</p>
+<p id=ae89 class="phone s02"><cite>ivan:</cite> yes</p>
+<p id=8cbd class="phone s01"><cite>wendyreid:</cite> and if you need new ones, let us know</p>
+<p id=e74f class="phone s11"><cite>GeorgeK:</cite> So this is pm only not joint cg/wg</p>
+<p id=84ec class="phone s03"><cite>Hadrien:</cite> Yes, we thought it made sense since we are making normative changes</p>
+<p id=524d class="phone s01"><cite>wendyreid:</cite> Yes, anyone can participate in the github issues<br>
+<span id=f986>… so if that get's people interested, that is great</span><br>
+<span id=4575>… we can get people in as guests for short term</span><br>
+<span id=4f73>… when needed</span></p>
+<p id=2521 class="phone s01"><cite>wendyreid:</cite> Any other topics?</p>
+<p id=e485 class="phone s04"><cite>duga:</cite> Are we doing tpac?</p>
+<p id=bba9 class="phone s01"><cite>wendyreid:</cite> yes</p>
+<p id=9ef0 class="phone s12"><cite>sethd:</cite> There is a lot to be said for async. Meetings are hard to make<br>
+<span id=6a46>… github is very permanent, our slack is entirely unused</span><br>
+<span id=a414>… slack seems like a good place to discuss things</span></p>
+<p id=5fd3 class="phone s02"><cite>ivan:</cite> It depends on the channel<br>
+<span id=c4ef>… for instance the chairs and editors use it a lot</span><br>
+<span id=3acf>… it is possible to set up a channel for SMIL</span></p>
+<p id=200d class="phone s12"><cite>sethd:</cite> I meant more generally<br>
+<span id=df9e>… nothing progresses because we don't have time</span></p>
+<p id=36b2 class="phone s08"><cite>shiestyle:</cite> slack deletes comments on the w3c slack</p>
+<p id=731a class="phone s03"><cite>Hadrien:</cite> I think you may be able to get slack for free</p>
+<p id=c986 class="phone s02"><cite>ivan:</cite> it didn't work out</p>
+<p id=7285 class="phone s03"><cite>Hadrien:</cite> Do we have influence on early in the week? I prefer early to avoid conflict</p>
+<p id=4048 class="phone s01"><cite>wendyreid:</cite> We always request MT, we will hopefully get that again</p>
+<p id=c8a8 class="phone s10"><cite>DaleRogers:</cite> response to Seth  about informal places to chat<br>
+<span id=dda7>… we discussed discussions</span></p>
+<p id=739b class="phone s04"><cite>duga:</cite> saying things are available are great, if we aren't specific about using it<br>
+<span id=00fd>… it won't get used.</span><br>
+<span id=dc5b>… it would be nice to have someplace to ask a quick question that</span><br>
+<span id=19e5>… doesn't get saved in the archive</span><br>
+<span id=f748>… it might be nice to mandate something like that</span></p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#0088">For annotation bodies, plain text will be the interchange format.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
