@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 02 April 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>02 April 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Mar/0027.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/04/02-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, AvneeshSingh, CharlesL, DaleRogers, elizabeth, gautierchomel, george, GeorgeK, gpellegrino, ivan, kimberg, laurentlm, MasakazuKitahara, rdeltour, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>brady, matt</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>gautierchomel, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#21ec">Privacy and Security Review</a></li>
+<li><a href="#47e4">Annotations Progress Check</a></li>
+<li><a href="#5267">Aligning text-style properties - w3c/<wbr>epub-specs#2971</a></li>
+<li><a href="#cfc2">AOB?</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=21ec>Privacy and Security Review</h3>
+<p id=ab1d class="phone s01"><cite>wendyreid:</cite> privacy and security review have been merged and submitted.</p>
+<p id=e077 class="phone s02"><cite>ivan:</cite> note to ourself,we have done what we are supposed to, wait for comments from other groups</p>
+</section>
+
+<section>
+<h3 id=47e4>Annotations Progress Check</h3>
+<p id=fd0a class="phone s01"><cite>wendyreid:</cite> we've made a lot of progress, but there are still some gaps before sending to review.</p>
+<p id=f4f1 class="phone s01"><cite>wendyreid:</cite> we should plan two months not more if we want to achieve review by the end of our charter.</p>
+<p id=97ae class="phone s01"><cite>wendyreid:</cite> privacy and security for annotation will be a burden, accessibility too probably, the topic comes with high complexity.</p>
+<p id=5a6a class="phone s03"><cite>laurentLM:</cite> I see no difficulty to solve open issues in the next month.  We've discussed language and text direction so internationalisation should be ok. We use json so I am not worried.</p>
+<p id=ffff class="phone s02"><cite>ivan:</cite> less optimistic by nature. There are terms and objects not defined, not complicated ones but to be defined. Json schema is an empty section. We can try to say this is json so privacy security and accesisbility are covered by this spec. But we might be asked to give some reading suystem considerations on safe and robust implementation.</p>
+<p id=3ac2 class="phone s02"><cite>ivan:</cite> we may want to add asecurity section, even non normative, it's often done this way.</p>
+<p id=e2ff class="phone s04"><cite>gautierchomel:</cite> Are we talking about having the document ready for security/privacy review by end of May or everything by end of May?</p>
+<p id=588e class="phone s01"><cite>wendyreid:</cite> draft of the document by end of may so we can start the review process.</p>
+<p id=bfaa class="phone s01"><cite>wendyreid:</cite> for EPUB, we did a risk assesment, I would suggest to follow that path. That's a way to raise questions . What happen is someone use anotations for injection? What about an EPUB silently leaking infos? We may have no response but at least knowing the risks and informing them.</p>
+<p id=7974 class="phone s02"><cite>ivan:</cite> two timelines: may to start the review and all testings done before january.  We need to think about how to test, that would be complexer than for EPUB. At the moment I am not sure how to test annotations.</p>
+<p id=adf8 class="phone s04"><cite>gautierchomel:</cite> I think that I would be happy to start the risk assessment for annotations, we have some experience since we implemented in Thorium, I can propose some first draft, should I do it in an issue or elsewhere?<br>
+<span id=9526>… I have some ideas about how to test</span><br>
+<span id=cb79>… we've tested them for Thorium desktop, I have some ideas</span></p>
+<p id=41bc class="phone s01"><cite>wendyreid:</cite> in terms of testing, we need individual tests, as well as exemples embedded in an EPUB vs separate file</p>
+<p id=2d4d class="phone s03"><cite>laurentLM:</cite> this sounds like testing the RS, not the spec.</p>
+<p id=024c class="phone s01"><cite>wendyreid:</cite> short reminder, for each MUST in the spec we need a test. Two implementations to pass. We create the files, RS are invited to test.</p>
+<p id=2b4a class="phone s02"><cite>ivan:</cite> an ebook for each MUST statement is a mean, we can work differently and asses different parts with one file. One important feature, is the interchange format, we do not define how RS do that, we have to proof that a RS can export the annotations in the format we specify and that a RS can import it.</p>
+<p id=64f2 class="phone s02"><cite>ivan:</cite> we should concentrate on the interexchange</p>
+<p id=e712 class="phone s03"><cite>LaurentLM:</cite> I agree with that, one annotation file with different types inside might be sufficient to proove we can import and export it.</p>
+<p id=848a class="phone s03"><cite>LaurentLM:</cite> let's solve issues one by one to make sure we have a good draft. There are 10 plus a PR. I have also to add  a section on metadata. I will do that before the weekend.</p>
+<p id=68a8 class="phone s05"><cite>sueneu:</cite> happy to help if there something I can do to share pressure.</p>
+<p id=4195 class="phone s03"><cite>LaurentLM:</cite> having implementations would be great! even from this beta. It's a few steps to align Thorium and Readium implementations but we definitely want other RS to jump in.</p>
+</section>
+
+<section>
+<h3 id=5267>Aligning text-style properties - <a href="https://github.com/w3c/epub-specs/issues/2971">w3c/<wbr>epub-specs#2971</a></h3>
+<p id=fe3e class="phone s01"><cite>wendyreid:</cite> RS have to deal with dark mode, color contrast, high contrast, etc. i feel we should clarify that &quot;yelow&quot; note does not mean the note must use Yellow CSS color.</p>
+<p id=a073 class="phone s03"><cite>LaurentLM:</cite> Agree, I will add this as a clear statement.</p>
+<p id=780a class="phone s05"><cite>sueneu:</cite> may we use IDs instead of color names ?</p>
+<p id=8f28 class="phone s02"><cite>ivan:</cite> maybe we should use different wording, let's say &quot;yellowish&quot; instead of &quot;yellow&quot; to avoid confusions.</p>
+<p id=5f50 class="phone s03"><cite>LaurentLM:</cite> I don't see a clash, yellow is not a term invented by css, they just use it to qualify a color code. We don't do HTML, we do JSON, so I would prefer to use normal color, witha note that it is defining a range of colors. In our review, all RS use similar colors, yellow, blue, magenta, a set of meaningfull color.  Let's not reword but instead have a clear statement. Yellow existed before css.</p>
+<p id=3da0 class="phone s02"><cite>ivan:</cite> agree not to use HEX color codes, it's a name, acting like an ID, we don't specify what color should a RS apply to Yellow.</p>
+<p id=31a0 class="phone s01"><cite>wendyreid:</cite> also we don't want to test exact color code used by RS, we cannot impose them a color pattern that may not fit in theyre designs. The name acts as a group or a tag.</p>
+<p id=ad03 class="phone s06"><cite>GeorgeK:</cite> redlining is a publishing use case,  stroke and red usually means a correction to do. We understand that with words.  All of us in the industry.</p>
+<p id=02df class=irc><cite>&lt;sueneu&gt;</cite> GeorgeK +1</p>
+<p id=8332 class="phone s03"><cite>LaurentLM:</cite> that's it, color name is a semantic, the appearence of it has not to be defined at a standard level.</p>
+<p id=ac9c class="phone s02"><cite>ivan:</cite> let's see how we word that in a PR.</p>
+</section>
+
+<section>
+<h3 id=cfc2>AOB?</h3>
+<p id=e0d4 class=summary><a href="https://github.com/w3c/epub-specs/pull/2972">w3c/<wbr>epub-specs#2972</a></p>
+<p id=94e8 class="phone s03"><cite>LaurentLM:</cite> I have some comments, I'll do them in the PR.</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body>
+</html>
