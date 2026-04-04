@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>PMWG Accessibility TF – 2 April 2026</title>
+<meta content="width=device-width" name="viewport"/>
+<link href="https://www.w3.org/StyleSheets/scribe2/public.css" rel="stylesheet" title="2018" type="text/css"/>
+<link href="https://www.w3.org/StyleSheets/base.css" rel="alternate stylesheet" title="2004" type="text/css"/>
+<link href="https://www.w3.org/StyleSheets/public.css" rel="alternate stylesheet" title="2004" type="text/css"/>
+<link href="https://www.w3.org/2004/02/minutes-style.css" rel="alternate stylesheet" title="2004" type="text/css"/>
+<link href="https://www.w3.org/StyleSheets/scribe2/fancy.css" rel="alternate stylesheet" title="Fancy" type="text/css"/>
+<link href="https://www.w3.org/StyleSheets/scribe2/tt-member.css" rel="alternate stylesheet" title="Typewriter" type="text/css"/>
+</head>
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt="W3C" border="0" height="60" width="60"></a></p>
+
+<h1>Accessibility task force - PMWG</h1>
+<h2>02 April 2026</h2>
+
+<nav id="links">
+<a href="https://www.w3.org/2026/04/02-pmwg-a11y-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id="prelims">
+<div id="attendees">
+<h2>Attendees</h2>
+<dl class="intro">
+<dt>Present</dt><dd>Avneesh Singh, Charles L., CircularKen, George K., Gregorio P., Jonas Lillqvist, Wendy Reid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>AvneeshSingh</dd>
+<dt>Scribe</dt><dd>Gregorio P., Charles L.</dd>
+</dl>
+</div>
+
+<nav id="toc">
+<h2>Contents</h2>
+<ol>
+<li><a href="#0d96">Continue refinement of FXL accessibility documents.</a></li>
+<li><a href="#1ef1">Issue 2968: WCAG 3.2.3 Consistent Navigation in reflowable EPUB?</a></li>
+</ol>
+</nav>
+</div>
+
+<main id="meeting" class="meeting">
+<h2>Meeting minutes</h2>
+<section></section>
+
+
+<section>
+<h3 id="0d96">Continue refinement of FXL accessibility documents.</h3>
+<p id="718b" class="phone s01"><cite>Avneesh Singh:</cite> Continuing the refinement of the FXL document.</p>
+<p id="c9a0" class="irc"><cite>&lt;Avneesh Singh&gt;</cite> PR: <a href="https://github.com/w3c/epub-specs/pull/2948">w3c/<wbr>epub-specs#2948</a></p>
+<p id="60ce" class="phone s02"><cite>Gregorio P.:</cite> Wendy created this PR.</p>
+<p id="bcd1" class="summary"><a href="https://github.com/w3c/epub-specs/pull/2948">w3c/<wbr>epub-specs#2948</a></p>
+<p id="00f0" class="phone s02"><cite>Gregorio P.:</cite> The PR touches the FXL accessibility document and techniques.<br>
+<span id="b57a">… related to two issues.</span><br>
+<span id="e0b4">… moving discovery metadata to the techniques section.</span><br>
+<span id="6a75">… addressing other missing accessibility hazards in examples.</span><br>
+<span id="2068">… from myself and Charles.</span><br>
+<span id="8169">… Wendy made changes; I identified two issues to be fixed.</span><br>
+<span id="a6cd">… the techniques document uses manifest fallbacks, which are currently under discovery metadata, but that is not the correct section for fallbacks.</span><br>
+<span id="b494">… second point: metadata references WCAG 2.1 and should be updated to 2.2.</span><br>
+<span id="e357">… then we can merge once fixed.</span><br>
+<span id="8898">… I was not one of the original reviewers.</span></p>
+<p id="c2ab" class="phone s03"><cite>Charles L.:</cite> I agree with the comments.<br>
+<span id="b07c">… not sure about the fallbacks, but okay with the WCAG 2.2 update.</span></p>
+<p id="7f47" class="phone s04"><cite>Jonas Lillqvist:</cite> I have a comment about the metadata examples: there is an example about accessibility metadata for children's books with media overlays.<br>
+<span id="6497">… it lists "auditory" as an access mode, which is not aligned with the new best practices defined in the metadata authoring guide.</span><br>
+<span id="682f">… the same applies to access mode sufficient.</span></p>
+<p id="5387" class="phone s01"><cite>Avneesh Singh:</cite> Do we want to go into details now, or merge first and address small fixes afterward?</p>
+<p id="d728" class="phone s05"><cite>George K.:</cite> I understand the issues with "auditory" for access mode and access mode sufficient. I think it depends on how much the media overlays cover the full text of the book.</p>
+<p id="69de" class="phone s04"><cite>Jonas Lillqvist:</cite> Yes, I agree, but in Matt's proposal for the metadata authoring guide I saw a different suggestion.<br>
+<span id="f8a4">… but I agree we should not go too deep into details right now.</span></p>
+<p id="ffff" class="phone s06"><cite>CircularKen:</cite> For children's books, you would expect many images, so media overlays could cover both image descriptions and text.</p>
+<p id="a4bd" class="phone s03"><cite>Charles L.:</cite> I think we need Matt to discuss these points.<br>
+<span id="ef48">… in the PR there is also a comment from Susan about linking to EPUB 3.4.</span><br>
+<span id="b016">… I think we can merge the document and create separate issues for Gregorio's comments.</span></p>
+<p id="bab8" class="phone s02"><cite>Gregorio P.:</cite> Fine with me.</p>
+<p id="be07" class="phone s07"><cite>Wendy Reid:</cite> I agree with the comments.<br>
+<span id="8e95">… but it may be simpler to merge and then create a separate issue and PR.</span><br>
+<span id="e559">… I would leave references to EPUB 3.3 for now.</span><br>
+<span id="9b66">… since the goal is to publish this document soon.</span></p>
+<p id="bab3" class="phone s01"><cite>Avneesh Singh:</cite> With a new document, we may have additional points to discuss.</p>
+</section>
+
+<section>
+<h3 id="1ef1">Issue 2968: WCAG 3.2.3 Consistent Navigation in reflowable EPUB?</h3>
+
+<p id="8d18" class="irc"><cite>&lt;Avneesh Singh&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2968">w3c/<wbr>epub-specs#2968</a></p>
+<p id="e6f1" class="phone s02"><cite>Gregorio P.:</cite> Some success criteria are difficult to map to the EPUB context.</p>
+<p id="408d" class="summary">In Accessibility 1.1 and 1.2 we have clarifications on WCAG in EPUB, which differs from web pages, although the content is expected to conform to WCAG.<br>
+<span id="437a">… SC 3.2.3 (Consistent Navigation) states that navigation mechanisms repeated across multiple pages should appear in the same order unless changed by the user. This includes skip controls, menus, submenus, headers, footers, and page numbering.</span><br>
+<span id="0de7">… this is difficult to interpret for reflowable EPUB. If there is no navigation other than the TOC, this SC may pass without additional checks.</span><br>
+<span id="d7a5">… this warrants further discussion; perhaps we should draft text and request feedback from the Accessibility Guidelines (AG) group. Publishers may struggle with this SC.</span></p>
+<p id="cd13" class="phone s07"><cite>Wendy Reid:</cite> I think this is a success criterion where the reading system plays an important role.<br>
+<span id="6fc8">… the EPUB creator must do their part.</span><br>
+<span id="773a">… mainly ensuring the TOC and spine are properly structured.</span><br>
+<span id="10ff">… then it becomes the responsibility of the reading system to ensure the SC is met.</span></p>
+<p id="604b" class="phone s03"><cite>Charles L.:</cite> Yes, the page list is another way to achieve this.<br>
+<span id="3d95">… the same applies to lists of tables and figures.</span></p>
+<p id="5116" class="phone s05"><cite>George K.:</cite> I agree that the spine and navigation document fulfill the requirements.<br>
+<span id="a859">… we should not push publishers to add content that is not present in the book (e.g., indexes).</span></p>
+<p id="e822" class="phone s01"><cite>Avneesh Singh:</cite> Some clarification would be helpful.</p>
+<p id="2dbe" class="phone s02"><cite>Gregorio P.:</cite> Looking at the current document, there are references to multiple approaches.<br>
+<span id="91c9">… something could be added in the techniques.</span><br>
+<span id="cb69">… there is currently no mention of this specific criterion.</span><br>
+<span id="ed1d">… 1.3.2 (Reading Order) is particularly relevant, especially for FXL.</span><br>
+<span id="7f7c">… 2.4.5 (Multiple Ways) is covered, but nothing for SC 3.2.3; adding a paragraph may be useful.</span><br>
+<span id="62c3">… Makoto may identify additional WCAG criteria that are not applicable (e.g., Accessible Authentication), which are outside EPUB scope.</span></p>
+<p id="32fa" class="phone s03"><cite>Charles L.:</cite> I think Matt has already done some work for SMART.<br>
+<span id="bc7a">… we can review that work to identify SC that do not apply.</span><br>
+<span id="199c">… I can compile that list.</span></p>
+<p id="48e3" class="summary">I have updated the issue title: WCAG Success Criteria That Don't Apply to EPUB #2968.</p>
+<p id="34eb" class="irc"><cite>&lt;Wendy Reid&gt;</cite> The PR has also been merged :)</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a href="https://w3c.github.io/scribe2/scribedoc.html">scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+
+</body></html>
