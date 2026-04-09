@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 09 April 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>09 April 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Apr/0006.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/04/09-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, charles, duga, elizabeth, george, GeorgeK, gman, Hadrien, ivan, kimberg, LaurentLM, MasakazuKitahara, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>duga, sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#fecd">PR #2973</a></li>
+<li><a href="#92c6">Annotations - Adding a replying function</a></li>
+<li><a href="#c7d7">Annotations - Different Terms for the Same notion</a></li>
+<li><a href="#45b5">Text Style Properties</a></li>
+<li><a href="#1397">Best practices or requirements?</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=8060 class="phone s01"><cite>ivan:</cite> Some groups are looking at automatic scribe mechanisms</p>
+<p id=9852 class="phone s02"><cite>sueneu:</cite> How does an auto scribe get proofread?</p>
+<p id=6c82 class="phone s01"><cite>ivan:</cite> currently it generates the minutes, then members can review it<br>
+<span id=cca8>… but it is up to the working group</span></p>
+<p id=8c54 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/TR/2026/NOTE-llms-standards-20260324/">https://<wbr>www.w3.org/<wbr>TR/<wbr>2026/<wbr>NOTE-llms-standards-20260324/</a></p>
+<p id=2783 class="phone s03"><cite>AvneeshSingh:</cite> Some group makes it the responsibility of the group for the corectness of the minutes, regardless of source</p>
+<p id=732d class="phone s04"><cite>wendyreid:</cite> I have done this another group I chair. There are challenges, like Zoom requires AI companion. There are also accuracy issues<br>
+<span id=f27e>… strong accents and non-English names are problems</span></p>
+<p id=4f0a class="phone s01"><cite>ivan:</cite> One experiment has the info reflected directly in to IRC, so it all looks the same as now</p>
+<p id=d0c6 class="phone s04"><cite>wendyreid:</cite> None of the tools allow live editing when testing for the AB<br>
+<span id=16a3>… but that would be ideal</span><br>
+<span id=b1f3>… who is building that?</span></p>
+<p id=34fd class="phone s01"><cite>ivan:</cite> Co chair of the DID wg</p>
+<p id=ffff class="phone s04"><cite>wendyreid:</cite> Are they looking for test subjects?</p>
+<p id=81bd class="phone s01"><cite>ivan:</cite> Not ready for that yet. Too much lag still</p>
+<p id=8b6c class="phone s04"><cite>wendyreid:</cite> LaurentLM do you want to start with your PR?</p>
+</section>
+
+<section>
+<h3 id=fecd>PR #2973</h3>
+<p id=74ea class="phone s05"><cite>LaurentLM:</cite> 2973 now allows A/V bodies, in two main sections<br>
+<span id=8918>… 3.4 body now allows an id so you can specify a relative url</span></p>
+<p id=fccd class=irc><cite>&lt;ivan&gt;</cite> <a href="https://github.com/w3c/epub-specs/pull/2973">w3c/<wbr>epub-specs#2973</a></p>
+<p id=e02b class="phone s05"><cite>LaurentLM:</cite> you can use id when it is image, sound, or video (names from the original spec)<br>
+<span id=e8aa>… so you now either need the value or an id that is a relative URL, depending on media</span><br>
+<span id=10000>… And I added a zip container that contains the annotations and the files</span><br>
+<span id=a83a>… otherwise if it is in the epub then it needs to reference the json file in the meta-inf and all the binary files</span><br>
+<span id=3118>… there are some issues raised by ivan</span></p>
+<p id=3d95 class="phone s06"><cite>duga:</cite> why don't we only use zip? then we only have one file format and one set of directions for getting it out?</p>
+<p id=ae13 class="phone s05"><cite>LaurentLM:</cite> I didn'y think about that<br>
+<span id=5daf>… zip in zip is not ideal</span><br>
+<span id=f602>… when you unpack you usually put it somewhere</span></p>
+<p id=f229 class="phone s01"><cite>ivan:</cite> I don't see a problem with that<br>
+<span id=1dd8>… but there is one comment that worries me</span><br>
+<span id=80b3>… when you import from the outside, but you already have annotations, the two sets have their own metadata</span><br>
+<span id=1fbd>… how do you merge these two? For instance the generator - does it get lost?</span></p>
+<p id=fde9 class="phone s05"><cite>LaurentLM:</cite> yes</p>
+<p id=a151 class="phone s01"><cite>ivan:</cite> then why have it in the first place?</p>
+<p id=8fd0 class="phone s05"><cite>LaurentLM:</cite> This is really a technical log during development<br>
+<span id=b4ee>… if we know something is coming from a specific RS, maybe we can adapt to support their quirks</span><br>
+<span id=e04e>… it is really administrative. We don't need to keep it</span></p>
+<p id=cc6b class="phone s01"><cite>ivan:</cite> Generator is one thing, but what about other metadata?<br>
+<span id=1663>… For instance, the book. Since they are the same book, do you check to see if they are the same</span><br>
+<span id=5db7>… So we have to explain what normatively what happens on import</span></p>
+<p id=b67b class="phone s05"><cite>LaurentLM:</cite> If an annotation item is tied to a book, but import to a different book, what do we do?</p>
+<p id=9a4f class="phone s01"><cite>ivan:</cite> I propose we merge this PR, but then look at the processing issue separately</p>
+<p id=8167 class="phone s05"><cite>LaurentLM:</cite> Agree</p>
+<p id=204c class="phone s04"><cite>wendyreid:</cite> Editorial comment - we use sound, shouldn't we use audio?</p>
+<p id=38ba class="phone s05"><cite>LaurentLM:</cite> Yes, but then we depart from the W3C annotations spec. It is sound there</p>
+<p id=3e4f class="phone s04"><cite>wendyreid:</cite> Can we file a bug?!</p>
+<p id=52fc class="phone s01"><cite>ivan:</cite> Sure, but there is no group<br>
+<span id=ba51>… maybe we can alias audio to sound</span></p>
+<p id=60b8 class="phone s04"><cite>wendyreid:</cite> It feels odd to call text textualBody, when there is sound, video, etc<br>
+<span id=3968>… why not 'text'?</span></p>
+<p id=10001 class="phone s05"><cite>LaurentLM:</cite> Same answer, the original spec</p>
+<p id=ee98 class="phone s01"><cite>ivan:</cite> isn't there text already?</p>
+<p id=a997 class="phone s05"><cite>LaurentLM:</cite> Yes, but that is for remote text</p>
+<p id=5042 class="phone s04"><cite>wendyreid:</cite> Sometime you don't find bugs until you implement them</p>
+<p id=6acd class="phone s05"><cite>LaurentLM:</cite> I am ok with changing things for modernization</p>
+<p id=0f24 class="phone s04"><cite>wendyreid:</cite> Can we do that? Unless it is too hard</p>
+<p id=808c class="phone s01"><cite>ivan:</cite> Audio is easy, but text is harder since it already exists<br>
+<span id=6adb>… Do we allow someone to add an audio URL? No, it is always relative. But this difference makes sense now [ed note: may not have captured that]</span></p>
+<p id=bfbe class="phone s02"><cite>sueneu:</cite> Do you need to consult the original to use this spec?</p>
+<p id=1841 class="phone s05"><cite>LaurentLM:</cite> No it is written so this is completely self contained</p>
+<p id=35a2 class="phone s01"><cite>ivan:</cite> For implementor no, but we have to define terms etc. I hesitate to go down the route where we abandon the predecessor</p>
+</section>
+
+<section>
+<h3 id=92c6>Annotations - Adding a replying function</h3>
+<p id=ba9c class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2926">w3c/<wbr>epub-specs#2926</a></p>
+<p id=e712 class="phone s04"><cite>wendyreid:</cite> I have a proposal - don't do it in v1</p>
+<p id=3895 class=irc><cite>&lt;LaurentLM&gt;</cite> +1 to wendy</p>
+<p id=d568 class=irc><cite>&lt;Hadrien&gt;</cite> +1 as well</p>
+<p id=efe8 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=efe9 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=6fe9 class=irc><cite>&lt;sueneu&gt;</cite> +1</p>
+<p id=efea class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=afe9 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=10002 class="phone s04"><cite>wendyreid:</cite> there are lots of issues it raises<br>
+<span id=c26e>… so defer it, or close it?</span></p>
+<p id=5a21 class="phone s05"><cite>LaurentLM:</cite> I think close and reopen if we want<br>
+<span id=86b2>… we just need to make sure nothing in our implementation prevents it</span><br>
+<span id=d5f8>… which it doesn't</span></p>
+<p id=4d1c class="phone s01"><cite>ivan:</cite> So when the minutes are generated I can close the issue</p>
+</section>
+
+<section>
+<h3 id=c7d7>Annotations - Different Terms for the Same notion</h3>
+<p id=0a30 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2929">w3c/<wbr>epub-specs#2929</a></p>
+<p id=bdae class="phone s04"><cite>wendyreid:</cite> No disagreement</p>
+<p id=c9a7 class="phone s04"><cite>wendyreid:</cite> We have name and title in the spec, they are very similar</p>
+<p id=11a8 class="phone s01"><cite>ivan:</cite> They are used the same way</p>
+<p id=1e93 class="phone s04"><cite>wendyreid:</cite> We have title and name, both are human readable ids. title is for set, name is for the annotation</p>
+<p id=76a1 class="phone s02"><cite>sueneu:</cite> I see nuance - title is often a work, name is often person place or thing</p>
+<p id=45c9 class="phone s05"><cite>LaurentLM:</cite> I don't mind renaming it. It is transient.<br>
+<span id=5f74>… The optional name is useful to for display purposes, but I don't care if it is name or title</span></p>
+<p id=784b class="phone s07"><cite>Hadrien:</cite> Why do we even have title?<br>
+<span id=bc44>… we have metadata about the book. I don't know when we will display it</span><br>
+<span id=c636>… I am cautious about adding stuff that I don't understand</span></p>
+<p id=6aab class="phone s07"><cite>Hadrien:</cite> Why do we need it?</p>
+<p id=d2ff class="phone s05"><cite>LaurentLM:</cite> It is a name for the file</p>
+<p id=7648 class="phone s07"><cite>Hadrien:</cite> Yeah, but you can do whatever you want for naming</p>
+<p id=bad1 class="phone s02"><cite>sueneu:</cite> What about multiple sets imported?</p>
+<p id=87b0 class="phone s01"><cite>ivan:</cite> That is a separate issue</p>
+<p id=6038 class="phone s05"><cite>LaurentLM:</cite> It is a standard so we need to support everyone<br>
+<span id=d2bc>… I don't see a reason to keep it, that is fine</span><br>
+<span id=dd28>… people can add a title if they want</span></p>
+<p id=26a4 class=irc><cite>&lt;gman&gt;</cite> simplicity is divine</p>
+<p id=39d8 class="phone s01"><cite>ivan:</cite> Can we remove it in this pr?</p>
+<p id=8489 class="phone s05"><cite>LaurentLM:</cite> yes</p>
+</section>
+
+<section>
+<h3 id=45b5>Text Style Properties</h3>
+<p id=4ed1 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2971">w3c/<wbr>epub-specs#2971</a></p>
+<p id=fca7 class=irc><cite>&lt;wendyreid&gt;</cite> See also <a href="https://github.com/w3c/epub-specs/issues/2971#issuecomment-4189360802">w3c/<wbr>epub-specs#2971 (comment)</a></p>
+<p id=d492 class="phone s04"><cite>wendyreid:</cite> There was a comment about implementing this in a plugin<br>
+<span id=db44>… there will need to be a mapping for colors</span><br>
+<span id=efb2>… his issue is, who creates that mapping?</span><br>
+<span id=c4cb>… it's a good implementation question</span></p>
+<p id=f88f class="phone s05"><cite>LaurentLM:</cite> I don't really understand<br>
+<span id=29bc>… looking at the LUA now</span></p>
+<p id=7efb class="phone s07"><cite>Hadrien:</cite> There are whole discords for this plugin where they share their UIs<br>
+<span id=82e7>… in some cases there may be large numbers of colors</span><br>
+<span id=8e2a>… and his question is how do I handle it</span><br>
+<span id=189d>… this is the least problem for that plug in, as they handle annotations in a different way</span><br>
+<span id=1744>… I think we just need extensibility</span><br>
+<span id=feec>… on another note I saw and Android app for eink, and it is specific for eink because the standard colors don't work on eink</span><br>
+<span id=10003>… so you will need to adapt to your own reading system, we can't really do it</span></p>
+<p id=45a1 class="phone s05"><cite>LaurentLM:</cite> He wants to know if he can add additional metadata<br>
+<span id=5479>… and the answer is yes, we just have to make sure in the json.ld it is correct</span><br>
+<span id=a38b>… and he wants to add new words for values</span><br>
+<span id=53b4>… e.g. inverted</span></p>
+<p id=1486 class="phone s07"><cite>Hadrien:</cite> They are both customizations<br>
+<span id=d957>… for instance, they use a hash for the volume</span><br>
+<span id=6032>… There are differences in the extensibility, properties and values</span></p>
+<p id=d7d0 class="phone s05"><cite>LaurentLM:</cite> Properties aren't a problem, and we can be more specific<br>
+<span id=46a0>… but new values needs new text</span><br>
+<span id=7554>… I wrote something about this, if the RS doesn't understand the color it should pick something else</span><br>
+<span id=7a24>… which should solve the problem</span></p>
+<p id=9b27 class="phone s01"><cite>ivan:</cite> Going back to the original, how do we answer, and what do we do in the spec to avoid this coming up?<br>
+<span id=4e22>… for colors we need to make it clear that these can be adapted</span><br>
+<span id=86a2>… and they are really to make sets of annotations</span></p>
+<p id=6d89 class="phone s07"><cite>Hadrien:</cite> I disagree, extensibility informs the model<br>
+<span id=f511>… if we don't consider it, then it will mess up when people extend</span><br>
+<span id=06b1>… in this case, there will be no rgb colors in our properties, if they want that they should use a new property</span><br>
+<span id=7e5d>… extensibility does not need to conflict with interop</span></p>
+<p id=8232 class=irc><cite>&lt;gman&gt;</cite> +1 will just need a list of all possible values</p>
+<p id=f4db class="phone s02"><cite>sueneu:</cite> So it sound like extensilibilty won't impact interop</p>
+<p id=5b45 class="phone s01"><cite>ivan:</cite> The fact that the model can be extended goes back to the original spec<br>
+<span id=4836>… we should add this comment to the data model section</span><br>
+<span id=1bb0>… beyond that, say for extensions to color, we shouldn't do that. We should just follow the original extension mechanism</span></p>
+<p id=5f45 class=irc><cite>&lt;Hadrien&gt;</cite> +1 for that, I wasn't suggesting that we provide guidance on how to extend our model with specific properties/values</p>
+<p id=4a4c class="phone s01"><cite>ivan:</cite> For colors, we add a note that says we are not talking about CSS colors</p>
+<p id=4355 class="phone s04"><cite>wendyreid:</cite> We don't have time for the last issue</p>
+</section>
+
+<section>
+<h3 id=1397>Best practices or requirements?</h3>
+<p id=6e28 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2976">w3c/<wbr>epub-specs#2976</a></p>
+<p id=8a30 class="phone s04"><cite>wendyreid:</cite> but maybe people can comment on it<br>
+<span id=d8bf>… in best practices we use normative language</span><br>
+<span id=87c0>… some of them would be very good requirements</span><br>
+<span id=c3e6>… do we need a new section for RS requirements in addition to best practices?</span><br>
+<span id=211a>… just want to open the conversation</span></p>
+<p id=2880 class="phone s01"><cite>ivan:</cite> Staff hat on - any MUST will need a test<br>
+<span id=ea47>… just want to make sure people understand the consequences</span></p>
+<p id=82c0 class="phone s02"><cite>sueneu:</cite> for creators, interop is huge<br>
+<span id=a267>… so yes there is more work, but it is in service of the wider community</span></p>
+<p id=d3df class="phone s01"><cite>ivan:</cite> I do not disagree</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
