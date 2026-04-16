@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 16 April 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>16 April 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Apr/0010.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/04/16-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, charles, CharlesL, dale, DaleRogers, duga, gpellegrino, hadrien, ivan, kimberg, mgarrish, rdeltour, shiestyle, toshiakikoike, wendy</dd>
+<dt>Regrets</dt><dd>George, suneu</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>mgarrish, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#1552">Playback model for media overlays - w3c/<wbr>epub-specs#2943</a></li>
+<li><a href="#2b57">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=da88 class="phone s01"><cite>wendyreid:</cite> looks like there is the possibility of making some decisions on smil issues</p>
+</section>
+
+<section>
+<h3 id=1552>Playback model for media overlays - <a href="https://github.com/w3c/epub-specs/issues/2943">w3c/<wbr>epub-specs#2943</a></h3>
+<p id=f792 class="phone s02"><cite>Hadrien:</cite> a bit of context - I started reading media overlays when we voted to add rolls - and we're implementing this in readium swift implementation<br>
+<span id=744a>… there are a number of issues in the spec that is not completely clear and can be problematic</span><br>
+<span id=ffc7>… we have a discord channel where we are discussing some of the issues</span><br>
+<span id=554c>… looking at this first issue there is very little text about what a  reading system should be doing</span><br>
+<span id=7b5f>… one question is what happens when you follow a smil document when it moves around in the reading order between spine items</span><br>
+<span id=5208>… the spec only says to play the next document after finishing</span><br>
+<span id=7b60>… a bigger question is that the specs says to load the next content document - in some cases this can get you stuck in a loop</span><br>
+<span id=7a80>… I've written about the problems in the issue including an alternate way to handle it</span><br>
+<span id=cb4d>… in the discord channel we got into where do you start playback and how do you navigate within the publication once it's started</span><br>
+<span id=005f>… we are only focusing on the second issue here - the current approach is spine-centric</span><br>
+<span id=56e4>… media overlays are quite different from the spec - you can move around out of reading order as they are not linear</span><br>
+<span id=71db>… what I'm proposing is another way - to make a media overlays order different from the spec/spine</span><br>
+<span id=4de8>… it could avoid the cases of being stuck in loops</span><br>
+<span id=1606>… people who have implemented media overlays in reflowable have done it differently from each other and from the spec</span><br>
+<span id=fe01>… the other issue is about how to handle audio playback</span></p>
+<p id=27d7 class="phone s03"><cite>duga:</cite> I suspect you are right and we didn't look at the spec when we implemented for play books and we figured it out for ourselves<br>
+<span id=4929>… but the question is whether we can find a playback model that suits everyone - children's books may be optimized and have audio be primary</span><br>
+<span id=902f>… it is a hard question to solve and all the spec has is a &quot;should&quot; - maybe we should remove that line and just leave it to implementers</span></p>
+<p id=efdd class="phone s02"><cite>Hadrien:</cite> I don't think it is problematic for the use cases you define<br>
+<span id=59fc>… audio might be more problematic - you can have smil files without audio</span><br>
+<span id=465b>… so what is the reading order and does the smil or spine define the order</span></p>
+<p id=92b8 class="phone s01"><cite>wendyreid:</cite> I think the problems are real but in working on accessibility and spreads one of the things we covered is content across spreads - there are smil cases for this - but I worry about not going too far about moving around with user control<br>
+<span id=3507>… media overlays often advance without user control - what happens to the user experience when you get moved all over the book</span><br>
+<span id=2c73>… there are ways to manage that - like a warning - do we need guardrails like having user interaction before this happens</span></p>
+<p id=0b72 class="phone s02"><cite>Hadrien:</cite> there are no guardrails today - the current spec language doesn't handle the cases we've talked about so far<br>
+<span id=faba>… it's common to go across spreads more than jumping around the book - the spec is not clear on how to handle spreads</span><br>
+<span id=ffff>… if we drop what we have and don't replace we won't have interop</span></p>
+<p id=5758 class="phone s01"><cite>wendyreid:</cite> do we have a proposal for how we would present the smil reading order?</p>
+<p id=18f1 class="phone s02"><cite>Hadrien:</cite> I propose walking the spine and creating a set of the smil documents referenced - it's detailed in the issue<br>
+<span id=48f0>… it's not a complex way of compiling the order</span></p>
+<p id=009a class=irc><cite>&lt;Hadrien&gt;</cite> <a href="https://github.com/w3c/epub-specs/issues/2943#issuecomment-3994259158">w3c/<wbr>epub-specs#2943 (comment)</a></p>
+<p id=09ef class="phone s02"><cite>Hadrien:</cite> the link is to use cases and examples</p>
+<p id=b37a class="phone s04"><cite>AvneeshSingh:</cite> I think this is more of an implementation guideline - one way would be to make this a note - but do we really need to change the spec?<br>
+<span id=9892>… what change is required?</span></p>
+<p id=5461 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/epub-specs/epub34/rs/#sec-behaviors-loading">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub34/<wbr>rs/#sec-behaviors-loading</a></p>
+<p id=e044 class="phone s02"><cite>Hadrien:</cite> we need to change the reading systems spec<br>
+<span id=f4a3>… this is more than an implementation detail - it's core logic</span></p>
+<p id=9281 class="phone s05"><cite>DaleRogers:</cite> my understanding in epub is that the markup document is the primary source of information and smil documents are subservient - they are called by the markup file<br>
+<span id=a244>… so can a smil file be standalone and call what it wants?</span></p>
+<p id=dbc7 class="phone s02"><cite>Hadrien:</cite> yes, the smil has par elements that indicate the content and audio to load<br>
+<span id=fe18>… this is a technical issue but also why we have a technical spec for reading systems</span></p>
+<p id=dcbc class="phone s06"><cite>ivan:</cite> I'm suprised the original smil spec doesn't say anything about this - it defines par, etc.</p>
+<p id=f891 class="phone s02"><cite>Hadrien:</cite> the problem isn't within one document but that we use multiple documents and tie them to the spine - it's how epub uses smil</p>
+<p id=b101 class="phone s01"><cite>wendyreid:</cite> smil was probably also architected more with the web in mind</p>
+<p id=1f15 class="phone s06"><cite>ivan:</cite> no, smil allows several html document - the html documents are part of the structure but here they are adjacent</p>
+<p id=bd4f class="phone s02"><cite>Hadrien:</cite> what we're saying is that smil is designed to drive the whole thing but the spec doesn't cover this</p>
+<p id=cdc3 class="phone s06"><cite>ivan:</cite> isn't it possible to go the whole way and let smil be the boss?</p>
+<p id=d753 class="phone s02"><cite>Hadrien:</cite> yes, I think it works better this way</p>
+<p id=a164 class="phone s06"><cite>ivan:</cite> the problem is the spec is from 2008 and we don't know how much testing it has gone through</p>
+<p id=e5af class="phone s02"><cite>Hadrien:</cite> no matter what we use we'll have the same issues</p>
+<p id=513f class="phone s04"><cite>AvneeshSingh:</cite> one thing I'm worried about is changing the architecture of the spec late and not being able to anticipate what new issues we'll encounter<br>
+<span id=0cb9>… the spine gives the reading order and smil goes back to the spine when it completes</span></p>
+<p id=a4ee class="phone s02"><cite>Hadrien:</cite> I think the spec is broken and everyone has a different implementation - going back to spine won't solve it</p>
+<p id=4d18 class="phone s01"><cite>wendyreid:</cite> hard to get my head around what this will look like<br>
+<span id=8ea3>… both in spec language and reading order</span><br>
+<span id=b339>… we do not tell reading systems how to do their interface - what would readium look like for example if we changed the language</span><br>
+<span id=a348>… there are reading systems that care about this more than others</span></p>
+<p id=295d class="phone s06"><cite>ivan:</cite> putting on my staff contact hat - do you have any idea of the amount and depth of work to make this happen?</p>
+<p id=718c class="phone s02"><cite>Hadrien:</cite> right now it's a single paragraph but would need expanding - limited to the RS specification</p>
+<p id=e855 class="phone s06"><cite>ivan:</cite> more generally about all the issues you have raised</p>
+<p id=0922 class="phone s02"><cite>Hadrien:</cite> these two issues are mostly about reading systems</p>
+<p id=1e08 class="phone s06"><cite>ivan:</cite> I'm looking at the charter and these are features that will have to be reviewed - will it require adding a year to our charter to handle all this<br>
+<span id=615d>… our charter ends in less than a year and I want to avoid problems with this going on too long</span></p>
+<p id=2ef4 class="phone s02"><cite>Hadrien:</cite> I don't think it's big changes but I understand the time issue - it is a departure from the current spec</p>
+<p id=9d64 class="phone s01"><cite>wendyreid:</cite> if we want to do this well we should do it right<br>
+<span id=26e6>… there is no denying this is a problem and that overlays are a powerful tool</span><br>
+<span id=f553>… I don't want to push in small fixes in the hopes it scaffolds to a better experience</span><br>
+<span id=07de>… I wonder if we should recharter with a specific focus on smil - push out 3.4 and then do this as a 3.4.1</span></p>
+<p id=c64f class="phone s07"><cite>mgarrish:</cite> You covered most of what I wanted to say. Everyone has implemented, but everyone has different ideas<br>
+<span id=9d07>… there will be implementations that won't conform if we change now. I worry about doing this in the current charter, we need to make sure everyone is on board</span><br>
+<span id=3ba2>… don't want to reach a point where we make the change and someone comes and finds they don't conform</span><br>
+<span id=66e6>… I'm happy to make the changes around variable bit rates and smaller fixes, but this bigger change is worrying to me</span><br>
+<span id=7adc>… I do think this needs to be addressed, but worry about where it leads</span></p>
+<p id=89d8 class="phone s02"><cite>Hadrien:</cite> one of the struggles we'll have if we do another dot release is that many people who have knowledge will not be participating in this group<br>
+<span id=4fda>… we need to think about how to get more people involved - there is a lot of interest between EAA and audiobooks taking off</span><br>
+<span id=dc5f>… the line between audio and text is blurring - people want to implement this asap and waiting on chartering and new specs leaves people unsure what to do</span><br>
+<span id=8b14>… it wasn't on my radar, either, but I keep hearing about it from people</span></p>
+<p id=463a class="phone s05"><cite>DaleRogers:</cite> I just wonder if this is a bug fix or a new feature</p>
+<p id=b99d class="phone s06"><cite>ivan:</cite> I don't think anyone wants to push this under the carpet but we need to optimize our manpower to get this right<br>
+<span id=093c>… we don't have to suspend our work on this even if we move this to the next release - maybe getting 3.4 out should be a higher priority so we can start again quickly</span><br>
+<span id=7d73>… we could get a quick recharter if we get 3.4 out</span></p>
+<p id=10000 class="phone s01"><cite>wendyreid:</cite> I want to echo the same - by rechartering with this as a second track of work it gives us time to do the outreach<br>
+<span id=b092>… we can talk to some of the larger platforms we don't have feedback from yet</span><br>
+<span id=00de>… there might be other issues that we'll find out if we have more time to engage people</span><br>
+<span id=9ac0>… we also have the community group to get ahold of people - discord can also be useful</span><br>
+<span id=6f6b>… we can also improve the future spec language if people are incubating solutions to these problems</span><br>
+<span id=568d>… once 3.4 is out of the way we can focus more of our attention</span></p>
+<p id=61e0 class="phone s04"><cite>AvneeshSingh:</cite> the scope is larger - there are a lot of people in the daisy community who would like improvements but we haven't brought in because the scope of this revision seemed more limited<br>
+<span id=b444>… if we have a more flexible charter to tackle media overlays that will be positive for daisy members</span></p>
+<p id=006c class="phone s02"><cite>Hadrien:</cite> if we recharter sooner than later I will be more comfortable - we can't push this back a few years considering the state of the spec<br>
+<span id=198c>… we have three groups of issues - the granularity issue is being done, the audio format and vbr can be tackled, the content model and reading system side, and final are the readin system issues</span><br>
+<span id=c11f>… if we can get the minor changes in 3.4 and the other issues in a future revision that would work but we need to keep people engaged</span><br>
+<span id=27ce>… we wrote specs without being sure about how implementations will work and we need to fix those problems now</span></p>
+<p id=6c55 class="phone s06"><cite>ivan:</cite> I agree that the small issues are the ones we should settle in 3.4 - in parallel we should try to get a call with W3C folks to deal with the administration of whether to recharter or update our current charter<br>
+<span id=5fed>… if we do this, we have to have a hard look at what to do with annotations because we are behind on it - 3.4 is practically ready for CR absent it</span></p>
+<p id=ca43 class="phone s02"><cite>Hadrien:</cite> we know that some parts are problematic - should we add a warning?</p>
+<p id=b9fd class="phone s06"><cite>ivan:</cite> that should be okay - identifying underimplemented or unclear features is fine</p>
+<p id=f165 class="phone s01"><cite>wendyreid:</cite> yes, we've done this before with links to issues</p>
+<p id=c1ad class="phone s02"><cite>Hadrien:</cite> I've also seen a recent issue with full-bleed images that is going to be problematic to solve</p>
+</section>
+
+<section>
+<h3 id=2b57>AOB</h3>
+<p id=73f9 class=summary><a href="https://github.com/w3c/webai-roadmap/issues/30">w3c/<wbr>webai-roadmap#30</a></p>
+<p id=677a class="phone s01"><cite>wendyreid:</cite> we have been asked by the web and ai interest group for feedback on how ai technologies and llm have impacted on our group/epub<br>
+<span id=1905>… we'll discuss this on the next call</span></p>
+<p id=14f9 class="phone s06"><cite>ivan:</cite> we have got some feedback about ISO and seems that the obstacles are gone and we can go through the PAS process to publish our documents</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
