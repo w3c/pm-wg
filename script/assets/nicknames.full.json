@@ -70,6 +70,13 @@
         "name": "Nick Brown"
     },
     {
+        "name": "Francis Cave",
+        "nick": [
+            "FrancisCave",
+            "Francis_Cave"
+        ]
+    },
+    {
         "nick": [
             "yanni"
         ],
@@ -587,9 +594,9 @@
     {
         "name": "Grigorily Manucharian",
         "nick": [
+            "gman",
             "grigorily",
-            "manucharian",
-            "gman"
+            "manucharian"
         ]
     },
     {
@@ -947,6 +954,12 @@
         ],
         "name": "Daniel Weck",
         "github": "danielweck"
+    },
+    {
+        "name": "Rigo Wenning",
+        "nick": [
+            "rigo"
+        ]
     },
     {
         "nick": [
