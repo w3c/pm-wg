@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 21 May 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>21 May 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026May/0019.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/05/21-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, charles, DaleRogers, gman, hadrien, ivan, LaurentLM, MasakazuKitahara, mgarrish, shiestyle, sueneu</dd>
+<dt>Regrets</dt><dd>brady, gautier, gpellegrino, toshiakikoike, wendyreid</dd>
+<dt>Chair</dt><dd>shiestyle, sueneu</dd>
+<dt>Scribe</dt><dd>sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#63eb">Do we need the concept of Annotation Sets? https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>issues</a></li>
+<li><a href="#6b56">Proposing a text on merging [annotations]  w3c/<wbr>epub-specs#3001</a></li>
+<li><a href="#adf3">Add some context to the use of the term Segment in the Target section w3c/<wbr>epub-specs#2990</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=63eb>Do we need the concept of Annotation Sets? <a href="https://github.com/w3c/epub-specs/issues/3000">https://<wbr>github.com/<wbr>w3c/<wbr>epub-specs/<wbr>issues/<wbr>3000</a></h3>
+<p id=bd7d class="phone s01"><cite>laurent:</cite> do we replace the annotation structure with a zip that could contain any annotation type plus any information about the book</p>
+<p id=1865 class="phone s02"><cite>LaurentLM:</cite> it makes sense to have information about the book outside of the structure<br>
+<span id=1e0b>… what shape should this take</span></p>
+<p id=210f class="phone s03"><cite>Hadrien:</cite> even if we have a zip we want a way of grouping the annotations together<br>
+<span id=ffff>… the concept of the set will continue to exist. we want to have a well known location</span><br>
+<span id=f08c>… we've agreed that there is a usefulness but a limited one for metadata</span><br>
+<span id=b60d>… mostly for services that need the metadata and for matching but this might not be so useful</span><br>
+<span id=627e>… only when we have to present the metadata outside of the book</span><br>
+<span id=a491>… so we should have few pieces of metadata</span><br>
+<span id=fea4>… citation styles would be a useful influence on the kinds of metadata we present</span></p>
+<p id=4f73 class="phone s04"><cite>ivan:</cite> we are talking about standardizing the interchange format<br>
+<span id=f256>… at that level, the set creates one single file for import and export</span><br>
+<span id=e2df>… when we accepted images, etc. we decided that zip is the format</span><br>
+<span id=3b80>… then later we decided that zip is the only accepted format</span><br>
+<span id=bad2>… we do not need the grouping function, one file that lists all the annotations is not needed</span><br>
+<span id=7d20>… if the annotations sets role is to have collective metadata, there are two things there,</span><br>
+<span id=3b42>… information about the generator and the publication</span></p>
+<p id=d223 class=irc><cite>&lt;LaurentLM&gt;</cite> current ebook metadata relative to the book: <a href="https://w3c.github.io/epub-specs/epub34/annotations/#about">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub34/<wbr>annotations/#about</a></p>
+<p id=8458 class="phone s04"><cite>ivan:</cite> the generator isn't a necessary item in the interchange format<br>
+<span id=c4d0>… the metadata for the publication, is mostly copies of data in the package document</span><br>
+<span id=d311>… so we are repeating those values.</span><br>
+<span id=a0a1>… which seems superfluous</span><br>
+<span id=a9a8>… my conclusion is that the simplest way to do this is to make the metadata package include a copy of the metadata in the publication</span></p>
+<p id=af0c class="phone s05"><cite>LaurentM:</cite> there will be import and export of files plus push and pull of sets of annotaions in the rest API<br>
+<span id=9b2f>… I don't think there is an issue choosing zip as a container</span><br>
+<span id=0396>… it is also possible that our format should support this</span><br>
+<span id=b8b8>… about the generator, many files include this kind of information, though I don't suggest including the date</span><br>
+<span id=e79d>… this can be useful to differentiate annotations that don't conform to the specifcations</span><br>
+<span id=e4fc>… I would be worried about totally tieing our format to epub by using the opf in annotations</span><br>
+<span id=0545>… and it mixes xml and json which is never great</span><br>
+<span id=ddf4>… we just need descriptive information about the book, and no list of annotations</span><br>
+<span id=1e16>… just title, author, etc or something that links the annotation to the book</span></p>
+<p id=ce98 class="phone s03"><cite>Hadrien:</cite> we recently released Thorium on IOS and we have academic users<br>
+<span id=728c>… we have almost 40% of everything that is read is in PDF</span><br>
+<span id=8fc9>… so when we implement the highlight feature we will be asked to do it for PDF as well.</span><br>
+<span id=3240>… if we want to implement this feature, it has to work for more than epub</span><br>
+<span id=5209>… we need something as format agnostic as we can</span><br>
+<span id=4f4c>… when we look at what we have for interchange, de-paged annotations, we define that we use a zip, that we have an extension and profile, and a list in .json</span><br>
+<span id=f567>… so we have one document in which we have a list of all documentations even if we have a set</span><br>
+<span id=257a>… by definition we need a set if we have mulitiple files</span><br>
+<span id=1b92>… now I think we have too much data, do we need dc date, dc creator?</span><br>
+<span id=e434>… at a minimum we need something to identify annotations when they are separate from the book</span></p>
+<p id=6f2b class="phone s04"><cite>ivan:</cite> we have currently a json structure for the set. I feel an itemized list isn't necessary<br>
+<span id=4a57>… we can have a sub directory for organizing the files</span><br>
+<span id=1c59>… coming back to metadata, we have never formalized that this should work outside of epub</span><br>
+<span id=10000>… assuming this is a requirement now, it becomes a different discussion</span><br>
+<span id=c7a9>… we should have a new issue about which metadata is necessary</span><br>
+<span id=20ab>… we must make clear how the identifiers are related to each other</span><br>
+<span id=97ee>… we cannot be silent about how this is related to the epub version</span><br>
+<span id=f6fa>… I propose a pr that removes the itemized data from the annotation set/metadata</span><br>
+<span id=3cee>… we can discuss the exact name later, and we can further discuss it in the pr</span></p>
+<p id=84ae class="phone s05"><cite>LaurentM:</cite> you will open a PR on the metadata? and we will leave the generator for now</p>
+<p id=6880 class="phone s03"><cite>Hadrien:</cite> I think having one file will all the information is more efficient<br>
+<span id=3d86>… I think there is a utility in having it all in one place</span><br>
+<span id=dc0b>… that means if you look at annotation sets, we have metadata including items</span><br>
+<span id=bc74>… which is necessary because you need names in json</span><br>
+<span id=85b3>… i'm not sure we need type, generator, etc</span><br>
+<span id=adc6>… we need a minimal set of metadata</span><br>
+<span id=8ce6>… I would go for a light weight approach but keep the set</span></p>
+<p id=6d64 class="phone s04"><cite>ivan:</cite> we have a clear difference in opinion; then I will hold off on the PR for now</p>
+<p id=ead0 class="phone s05"><cite>LaurentM:</cite> it would be useful to have the advice of other reading systems. I will try to get some feedback</p>
+</section>
+
+<section>
+<h3 id=6b56>Proposing a text on merging [annotations]  <a href="https://github.com/w3c/epub-specs/pull/3001">w3c/<wbr>epub-specs#3001</a></h3>
+<p id=10001 class="phone s04"><cite>ivan:</cite> I have a question about when annotaions are merged. What can we describe normatively<br>
+<span id=da97>… it turns out there is not much consistency in book metadata so we have to rely on the heuristics in the rs</span><br>
+<span id=34a9>… so we need a paragraph to make clear to readers what they can expect on import</span><br>
+<span id=a2bd>… if I am a user and not an implementor, I may never see it</span><br>
+<span id=3557>… I don't want to hide the text from reading systems either</span><br>
+<span id=e2e5>… if we are able to separate the information into implementer and user sections, then this text should go into the user part</span></p>
+<p id=e485 class="phone s05"><cite>LaurentM:</cite> most of section six is about what a user can expect<br>
+<span id=1994>… there are sentences that are aimed at developers</span><br>
+<span id=5fa6>… we can change the language to make it clear that implementers should pay attention to</span><br>
+<span id=3636>… rather than duplicating information</span></p>
+<p id=3a65 class="phone s06"><cite>DaleRogers:</cite> I notice section 6 is called &quot;best practices for reading systems&quot; we could in each section say what audience a section is aimed at</p>
+<p id=6c22 class="phone s05"><cite>LaurentM:</cite> the risk is duplication and being unclear<br>
+<span id=35d4>… developers know how to deal with a use case, if we reorient this section more like use cases we can avoid splitting and duplicating</span></p>
+<p id=8d44 class="phone s04"><cite>ivan:</cite> perhaps we could rewrite the section as use cases, and then have other sections or notes for implementors<br>
+<span id=9284>… most of the sections would be use case oriented</span><br>
+<span id=b953>… editorially, the simplest thing is to merge the PR and then we will move it during rewriting</span></p>
+<p id=1971 class="phone s05"><cite>LaurentM:</cite> I can take a run on rewriting it, I'll show you the branch before the PR</p>
+<p id=cf0c class="phone s07"><cite>sueneu:</cite> Do users look at the reading system spec? I expect not, so rewriting it with a use case framing makes sense</p>
+<p id=4a8d class="phone s05"><cite>LaurentM:</cite> I think users won't read the spec but there is an interim party, people who make articles and usage notes who would need this information<br>
+<span id=e928>… and they will pick up on this vocabulary</span></p>
+</section>
+
+<section>
+<h3 id=adf3>Add some context to the use of the term Segment in the Target section <a href="https://github.com/w3c/epub-specs/pull/2990">w3c/<wbr>epub-specs#2990</a></h3>
+<p id=6fad class="phone s05"><cite>LaurentM:</cite> we know we can create bookmarks and annotations. A bookmark is a placeholder in a text or image but not so precise for a user<br>
+<span id=fdab>… an annotation is a highlight of text or other media, and has some range in the content</span><br>
+<span id=e7c8>… the selectors we define can isolate a range even for a bookmark, since there is no specific marker for a book mark</span><br>
+<span id=fd22>… will we accept that the selector of a bookmark can be a range or must be a single point?</span></p>
+<p id=1c54 class="phone s03"><cite>Hadrien:</cite> reading systems usually have a specific affordance for bookmarks<br>
+<span id=59c2>… like an icon on the corner of the page, we look at what is currently displayed to the users</span><br>
+<span id=d4bb>… and check if there is a bookmark there</span><br>
+<span id=d6c1>… if there is a superlong range, the text could be displayed across many screens and cause problematic behavior</span><br>
+<span id=e925>… i suspect rs will want to define a bookmark that won't cross the boundary of multiple screens</span></p>
+<p id=5d76 class="phone s04"><cite>ivan:</cite> this is related to the previous discussion because th choice of selectors is done behind the scenes by the rs<br>
+<span id=dbc5>… so this is a matter of the affordance that LaurentM was talking about. So the situation you describe won't happen</span><br>
+<span id=1afe>… so reading systems should do this properly. We should say if a readers intent is to set a bookmark, we should use a single selector</span></p>
+<p id=39a0 class="phone s05"><cite>LaurentM:</cite> a text position selector has a beginning and end, and is a range<br>
+<span id=39cb>… do you agree that a bookmark should be a single location we should add that to the spec</span></p>
+<p id=cec0 class="phone s02"><cite>LaurentLM:</cite> if reading system A generates a bookmark, it will still work on reading system A, but export that annotation to reading system B and B handles bookmarks differently, we could have problems<br>
+<span id=32fd>… even if we include a specification, reading system B will have a sanitisation process</span><br>
+<span id=b57a>… that will then decide if the bookmark would be at the beginning or end of a range</span><br>
+<span id=6e63>… we can try to force whatever and people will do what they want</span><br>
+<span id=9ad1>… I don't think we will be able to control what people will do</span><br>
+<span id=1893>… it might be good to have some recommendations but reading systems shouldn't expect it</span></p>
+<p id=8c2e class="phone s06"><cite>DaleRogers:</cite> a reading system can do what it wants with our declarations, and we can make those declarations</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body>
+</html>
