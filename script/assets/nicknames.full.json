@@ -469,8 +469,8 @@
     {
         "nick": [
             "George",
-            "kersc",
-            "georgek"
+            "georgek",
+            "kersc"
         ],
         "name": "George Kerscher",
         "github": "georgekerscher"
@@ -529,9 +529,9 @@
     },
     {
         "nick": [
-            "charles",
             "CharlesL",
             "CharlesL1",
+            "charles",
             "clapierre",
             "clapierre1"
         ],
@@ -564,6 +564,14 @@
         "github": "llemeurfr"
     },
     {
+        "name": "Amanda Lee",
+        "nick": [
+            "Amanda_at_eBOUND",
+            "amanda",
+            "lee"
+        ]
+    },
+    {
         "nick": [
             "Vlad"
         ],
@@ -588,8 +596,8 @@
     {
         "nick": [
             "makoto",
-            "murata",
-            "makotomurata"
+            "makotomurata",
+            "murata"
         ],
         "name": "Murata Makoto",
         "github": "murata2makoto"
