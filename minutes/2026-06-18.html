@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 18 June 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>18 June 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Jun/0008.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/06/18-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>amanda, AvneeshSingh, CharlesL, DaleRogers, ivan, mgarrish, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>gautier, shiestyle, susan</dd>
+<dt>Chair</dt><dd>wendy</dd>
+<dt>Scribe</dt><dd>wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#fd1c">Watermarking in EPUB - w3c/<wbr>epub-specs#3021</a></li>
+<li><a href="#8028">CR</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=fd1c>Watermarking in EPUB - <a href="https://github.com/w3c/epub-specs/issues/3021">w3c/<wbr>epub-specs#3021</a></h3>
+<p id=ffff class="phone s01"><cite>ivan:</cite> We got this as a comment from the Privacy Review, it comes from them but they made it clear it's not a blocker for the horizontal review.<br>
+<span id=dee2>… essentially the question is do we address the issue of watermarking in the privacy section of the document</span><br>
+<span id=d251>… I haven't looked, can we add anything?</span><br>
+<span id=77a5>… we discussed this in the chair's call and it does come close to DRM so we usually avoid it</span></p>
+<p id=78f9 class="phone s02"><cite>mgarrish:</cite> Was going to say the same, we could tie it up with DRM itself and leave the section alone to just what we already have for DRM, just add watermarking, I started drafting something<br>
+<span id=7aca>… addition of one sentence to add watermarking</span></p>
+<p id=8b81 class=irc><cite>&lt;CharlesL&gt;</cite> +1 to Matt's suggestion, just add Watermarking &amp; DRM.</p>
+<p id=c73a class="phone s02"><cite>mgarrish:</cite> it's close to DRM and can be applied to an EPUB but isn't part of the spec itself<br>
+<span id=ddd8>… nothing we need to do in the standard itself, we know people do it, but that's as far as we should go</span></p>
+<p id=cb71 class="phone s01"><cite>ivan:</cite> I agree, but for the sake of discussion, from a privacy view, DRM and watermarking are different, watermarking automatically takes a piece of information and makes it visible<br>
+<span id=ce92>… DRM is in the background and obfuscated, to Nick's question, they are different</span></p>
+<p id=86be class="phone s03"><cite>CharlesL:</cite> Benetech and Bookshare uses watermarking on the EPUBs, there's two kinds, one that uses the user's name or ID in the metadata, or attached to a boilerplate copyright notice added to the book<br>
+<span id=9b02>… the other type is hidden, it just adds spaces or different characters in the publication you wouldn't notice unless you had the algorithm to find them, and in that case it can be the person's name or ID</span><br>
+<span id=9923>… public vs private watermarking</span><br>
+<span id=48a1>… wanted to point out these options</span></p>
+<p id=89f2 class="phone s02"><cite>mgarrish:</cite> I was going to add, we don't say anything specific about DRM right now, all we say is it could reveal personal information about the reader, similar to what watermarking does based on Charles' comments<br>
+<span id=f404>… you could get some of this information from the book metadata as well</span><br>
+<span id=03e5>… we can tack this on very easily, I can open the PR with what I have, and see if we think it makes sense</span></p>
+<p id=e91b class="phone s01"><cite>ivan:</cite> Let's do that</p>
+<p id=df56 class="phone s04"><cite>wendyreid:</cite> Good to note the PDF shared by Nick in the issue, we should follow practices</p>
+<p id=57ab class="phone s02"><cite>mgarrish:</cite> Agreed, the PDF does a good job of explaining it, better than we can, we reference it<br>
+<span id=e54f>… don't want to deal with it more than we have to, show some best practices</span></p>
+</section>
+
+<section>
+<h3 id=8028>CR</h3>
+<p id=fa38 class="phone s05"><cite>AvneeshSingh:</cite> Update on accessibility horizontal review, Matthew himself is reviewing, he is hoping to complete it this week</p>
+<p id=3eb5 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/a11y-request/issues/164">w3c/<wbr>a11y-request#164</a></p>
+<p id=c518 class="phone s01"><cite>ivan:</cite> If my memory is correct, what we don't have is the security response, if the a11y review is coming in a few days<br>
+<span id=8a7e>… I met with Simone and raised the security review, explained what had changed, he sort of agreed, he said he would look at it</span><br>
+<span id=89f4>… still waiting on it</span><br>
+<span id=9e16>… my proposal would be once we have a11y sign off, we go to CR, essentially we start the CR transition process</span><br>
+<span id=bb25>… we'll need to have a resolution, can't do it today as we don't have enough people</span><br>
+<span id=49b2>… we have to pass a resolution, then we should start the process, time out for security</span><br>
+<span id=038c>… we have the right to do it, we feel we've done what we had to do. We are not required to wait years to get a response</span><br>
+<span id=cb83>… my recommendation for the process</span><br>
+<span id=e3ec>… to be clear, we're talking about EPUB 3.4 , EPUB RS 3.4, and EPUB A11y 1.2</span><br>
+<span id=4721>… everyone is in agreement?</span></p>
+<p id=f966 class="phone s03"><cite>CharlesL:</cite> No opposition, did we get i18n review?<br>
+<span id=b899>… do we need a TAG review?</span></p>
+<p id=37fa class="phone s01"><cite>ivan:</cite> We got i18n approval and TAG didn't see a need to review since there wasn't big changes<br>
+<span id=0642>… now that we have privacy and A11y soon, security is the only missing one</span></p>
+<p id=734c class="phone s02"><cite>mgarrish:</cite> Did we have this problem last time?</p>
+<p id=1f6b class="phone s01"><cite>ivan:</cite> We got a security review last time, a big one</p>
+<p id=127f class="phone s04"><cite>wendyreid:</cite> It was one review last time, two this time</p>
+<p id=5c01 class="phone s02"><cite>mgarrish:</cite> May be thinking of DPUB ARIA as well</p>
+<p id=f5e1 class="phone s01"><cite>ivan:</cite> There will be practical things for timing I'll work with Matt on, and a publication moratorium in July, once we have a resolution, Matt and I can work on this directly</p>
+<p id=a446 class="phone s02"><cite>mgarrish:</cite> We have the understanding document<br>
+<span id=cd38>… Understanding A11y 1.2, wanted to have it published at least as a draft note</span><br>
+<span id=c0a0>… want to have it more official</span></p>
+<p id=0ffd class="phone s04"><cite>wendyreid:</cite> I wouldn't want to ask people to vote on a doc they know nothing about</p>
+<p id=242d class="phone s02"><cite>mgarrish:</cite> I'm just worried about the publishing moratorium<br>
+<span id=5bc0>… is next week cutting it too close?</span></p>
+<p id=b2be class="phone s01"><cite>ivan:</cite> Moratorium starts July 3 until the 13th, and I'm on vacation most of that time<br>
+<span id=0192>… if we pass a resolution today its doable, but I leave that to Wendy</span></p>
+<p id=0847 class="phone s02"><cite>mgarrish:</cite> Just a draft note, not a spec</p>
+<p id=3abf class="phone s01"><cite>ivan:</cite> Still a first public draft note</p>
+<p id=7920 class="phone s02"><cite>mgarrish:</cite> Don't want people to think we're going down rec track</p>
+<p id=a585 class="phone s05"><cite>AvneeshSingh:</cite> Should we send an email to do this instead? So people have a chance to review, but we need a URL and publication for it, we haven't had it in the agenda but we can give people time.</p>
+<p id=a2ef class=summary>[admin things]</p>
+<p id=6856 class="phone s01"><cite>ivan:</cite> We'll need to close the PRs before going to CR</p>
+<p id=7adb class=summary><a href="https://github.com/w3c/epub-specs/pull/3026">w3c/<wbr>epub-specs#3026</a></p>
+<p id=64bf class="phone s02"><cite>mgarrish:</cite> We might want Nick's comment</p>
+<p id=7ced class="phone s01"><cite>ivan:</cite> CfC should be on a document with no upcoming changes</p>
+<p id=359b class="phone s02"><cite>mgarrish:</cite> We've done approvals contingent on certain decisions<br>
+<span id=55ee>… we can mention it in the CR</span></p>
+<p id=c8b4 class="phone s05"><cite>AvneeshSingh:</cite> Do we need to do CR email today or on Monday/<br>
+<span id=2a08>… to Monday we will have time to do this and then we might have a11y review completion</span><br>
+<span id=9d03>… today we can do the draft note and the PR, then we can put the call out on monday for the CR</span></p>
+<p id=cdb7 class="phone s01"><cite>ivan:</cite> Just to avoid confusion, make them separate</p>
+<p id=7975 class=irc><cite>&lt;mgarrish&gt;</cite> <a href="https://w3c.github.io/epub-specs/epub34/a11y-understand/">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub34/<wbr>a11y-understand/</a></p>
+<p id=0a6f class=summary>[more admin things]</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+</body>
+</html>
