@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 25 June 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>25 June 2026</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/mid/BE2CCCB8-78A5-4DB1-BBAE-48E2A15AFAB3@neustudio.com"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/06/25-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, DaleRogers, duga, gautierchomel_, gman, gpellegrino, Hadrien, Makoto, MasakazuKitahara, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>gautier</dd>
+<dt>Chair</dt><dd>susan, wendy</dd>
+<dt>Scribe</dt><dd>duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#e769">EPUB 3.4 CR</a></li>
+<li class=app><a href="#ResolutionSummary">Summary of resolutions</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=d77f class=irc><cite>&lt;ivan&gt;</cite> pesent+</p>
+</section>
+
+<section>
+<h3 id=e769>EPUB 3.4 CR</h3>
+<p id=0918 class="phone s01"><cite>wendyreid:</cite> Should we go to CR with 3.4. But what does that mean?</p>
+<p id=8c26 class="phone s02"><cite>ivan:</cite> Without the details, the group declares we are done with the technical work and we consider the technical work done<br>
+<span id=965a>… this is just a declaration of that</span><br>
+<span id=9e49>… but we can't make further technical changes unless they are clear errors</span><br>
+<span id=074f>… we need to be at CR for some amount of time before we can go to rec</span><br>
+<span id=fca1>… the main goal would then be testing</span><br>
+<span id=1dc7>… we already have about 100 or 150 tests in the form of books</span><br>
+<span id=e4ea>… so a RS should run all those books to verify they pass</span></p>
+<p id=b690 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/epub-tests/">https://<wbr>w3c.github.io/<wbr>epub-tests/</a></p>
+<p id=5c61 class="phone s02"><cite>ivan:</cite> We have to show that at least every test has 2 passes</p>
+<p id=3b6c class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/epub-tests/results">https://<wbr>w3c.github.io/<wbr>epub-tests/<wbr>results</a></p>
+<p id=ffff class="phone s02"><cite>ivan:</cite> And they should be independent<br>
+<span id=5ebd>… So we need at least 2, but 4 or 5 would be great</span><br>
+<span id=4602>… Once all tests have passed and no technical errors have been found, then we can go to rec</span><br>
+<span id=9af5>… There are more details on the specifics, but Matt and I can handle those</span><br>
+<span id=8a1a>… we will need all horizontal reviews done</span><br>
+<span id=ef9e>… They are all done except security, in other conversations we have discussed and feel we can continue without it</span><br>
+<span id=d342>… we can just call time on it, since there aren't many changes</span><br>
+<span id=a2ac>… We have discussed with ISO, they will informally review the document to see if there are any hurdles for publishing at ISO</span></p>
+<p id=628c class="phone s03"><cite>Hadrien:</cite> Some questions on open issues<br>
+<span id=2bba>… There was an issue on multigranularity that applies to structural semantics - is that doc covered?</span></p>
+<p id=8ea5 class="phone s02"><cite>ivan:</cite> No</p>
+<p id=8019 class="phone s03"><cite>Hadrien:</cite> We also have informative text that could impact the core spec<br>
+<span id=a2d1>… I also did not open an issue on light novels</span><br>
+<span id=08c4>… But I am doubtful that mixed layout has 2 implementations in the wild</span><br>
+<span id=b0ac>… I haven't double checked the tests for 3.4, but I don't think it is there</span><br>
+<span id=a72b>… If we were to add testing for it, I doubt we would pass</span></p>
+<p id=e690 class="phone s02"><cite>ivan:</cite> One releveant item - if a feature doesn't pass tests, then that feature should be removed<br>
+<span id=2d89>… In our case we are special, so we use one of our specialized labels but leave it in</span></p>
+<p id=0277 class="phone s04"><cite>DaleRogers:</cite> Is there a time limit on CR? Since we are depending on other people<br>
+<span id=90da>… Is the testing done by third parties or is  it this group?</span></p>
+<p id=b033 class="phone s02"><cite>ivan:</cite> For the first, there is no limit. Some groups stay in CR for yearsa<br>
+<span id=fa69>… As for the testing, good question</span><br>
+<span id=077c>… Previously, we said anyone can do it</span><br>
+<span id=3ef3>… But it looks better if the company self tests</span><br>
+<span id=4b91>… Because the tests can be used by the reading systems to identify their own problems</span></p>
+<p id=901e class="phone s05"><cite>duga:</cite> on the mixed format publications, we've sort of known its been an issue, certainly not new now<br>
+<span id=e115>… there's reading systems that pass each, but nothing requiring a combination, ideally we should, but if we do it, and fail, we'll need to rewrite a lot of the spec, but it's not one feature</span><br>
+<span id=10000>… we'd need to introduce the concepts of a just fixed or just flowing document, it may be worthwhile, but we should be prepared for work</span><br>
+<span id=ec93>… but if we want to do it, we need to undertake it as a project</span><br>
+<span id=d25a>… decide on it now</span></p>
+<p id=f762 class="phone s01"><cite>wendyreid:</cite> I am interceding as chair<br>
+<span id=a813>… this is in the charter for 3.5, and I agree this is a big project</span><br>
+<span id=f156>… I think we need to be more research, etc. I don't think it is worth hinging CR on it as we need to spend more time on it</span><br>
+<span id=6e99>… and it isn't in the charter for 3.4, but it is for 3.5</span></p>
+<p id=26cc class="phone s06"><cite>sueneu:</cite> Are there consequences for the security review?</p>
+<p id=5381 class="phone s01"><cite>wendyreid:</cite> We did security for 3.3, very thorough. We expect minimal things if anything</p>
+<p id=1f16 class="phone s05"><cite>duga:</cite> I did look through the security reviews repo, there are multiple open reviews with no activity, lots of groups in the same position, this is a W3C problem<br>
+<span id=83e3>… we're not to blame for this</span></p>
+<p id=0ac1 class="phone s03"><cite>Hadrien:</cite> On mixed layout, the work we have done makes it easier. It is a single feature<br>
+<span id=232d>… there are not that many references to it, so I am not convinced that it will be that hard to remove</span><br>
+<span id=76e2>… I disagree with pushing this off. Is it responsible of us to keep pushing this off?</span></p>
+<p id=a6fd class="phone s02"><cite>ivan:</cite> I don't have all the facts, so I would like to see what it means to remove it. I would like to see a PR of what needs to be done to remove it</p>
+<p id=366c class="phone s01"><cite>wendyreid:</cite> To clarify, from out of the blue, I mean that this was never discussed as something we want to handle in 3.4<br>
+<span id=0751>… EPUB 3.4 came out of problems found in 3.3, we are seeing that again - 3.5 is intended to address the things that came out of 3.4</span><br>
+<span id=0dc2>… I think this deserves the time and consideration, and shouldn't be hurried in now</span><br>
+<span id=2acf>… And we can make it part of new features, like full bleed images</span><br>
+<span id=f249>… we aren't pushing it out that far</span><br>
+<span id=f5fe>… since we are discussing recharter now</span></p>
+<p id=a27c class="phone s03"><cite>Hadrien:</cite> I am not saying we should work on a solution now, but we should warn people about it and test it properly</p>
+<p id=bb4f class="phone s01"><cite>wendyreid:</cite> We will have tests for this feature</p>
+<p id=80ff class="phone s03"><cite>Hadrien:</cite> So if we fail, then we need to remove it</p>
+<p id=2e10 class="phone s07"><cite>shiestyle:</cite> I agree with moving it to 3.5. The situation hasn't changed, and we should take the time to address it</p>
+<p id=c2b9 class="phone s05"><cite>duga:</cite> So we will have tests for mixed documents, if we don't get 2 implementations, will we deprecate the issue?</p>
+<p id=8a74 class="phone s02"><cite>ivan:</cite> We have to check something, but the current suite is an extension of 3.3<br>
+<span id=21a3>… So we are adding tests on top of 3.3</span><br>
+<span id=4a7e>… We need to check to see if this was tested at 3.3</span><br>
+<span id=f95f>… so I don't really have all the info</span></p>
+<p id=9275 class="phone s08"><cite>gpellegrino:</cite> For the tests, how do you test if it passes or not?<br>
+<span id=b433>… if you open a mixed doc the cotent displays</span></p>
+<p id=2ce7 class="phone s01"><cite>wendyreid:</cite> we have 2 up to date tests, and we have older tests</p>
+<p id=b3c7 class="phone s02"><cite>ivan:</cite> we have some test results from the previous run<br>
+<span id=cedc>… We have JSON file with the test results</span><br>
+<span id=2a8d>… What do we do with the results this time?</span><br>
+<span id=3633>… do we have everyone re-run all the tests, or just the new ones?</span></p>
+<p id=10001 class="phone s05"><cite>duga:</cite> I disagree with Gregorio, there are specific rendering guidelines for FXL, something displaying doesn't necessarily pass the test</p>
+<p id=b14b class=irc><cite>&lt;sueneu&gt;</cite> +1 brady</p>
+<p id=c0b2 class="phone s09"><cite>AvneeshSingh:</cite> We have one implementation<br>
+<span id=8763>… We had a similar issue, we didn't remove it but we just made it non-normative</span></p>
+<p id=6fff class="phone s04"><cite>DaleRogers:</cite> It sounds like the process is more than just passing epubcheck<br>
+<span id=cccc>… there is a rubric, so who makes that?</span></p>
+<p id=ab83 class=summary><a href="https://w3c.github.io/epub-tests/results">https://<wbr>w3c.github.io/<wbr>epub-tests/<wbr>results</a></p>
+<p id=10002 class="phone s02"><cite>ivan:</cite> If you look at tests, the first page explains what you should see<br>
+<span id=88d6>… so the rubric is in the book itself for each test</span><br>
+<span id=d635>… AvneeshSingh, you are both right and wrong</span><br>
+<span id=7b5b>… epubcheck is separate, and it is not part of this testing</span><br>
+<span id=1b3e>… there is work to do to make epubcheck work with 3.4 , but that is ongoing</span><br>
+<span id=975c>… The charter does require a new epubcheck with 3.4, but it separate from the traditional CR testing</span></p>
+<p id=ae3f class="phone s01"><cite>wendyreid:</cite> We had a process for backwards compatibility, we can mark a feature as at risk<br>
+<span id=0bd1>… This isn't just a single feature, we don't really call it out. We could add a note at the spine override</span><br>
+<span id=7525>… But I would like to worry about this later</span><br>
+<span id=cc2a>… we may actually have the 2 passes</span><br>
+<span id=bd64>… We actually have 4 passes on similar tests</span><br>
+<span id=5dd6>… If we decide we have to solve it we may need an immediate re-charter</span></p>
+<p id=3b75 class="phone s03"><cite>Hadrien:</cite> I can point where it is referenced - 6.2 and 6.3.1<br>
+<span id=6798>… The are short, then there are some examples</span><br>
+<span id=c9d0>… so it is pretty narrow</span><br>
+<span id=649c>… when it comes to specialized reading systems, it requires very precise conditions to work, they are not the general case we expect</span><br>
+<span id=f64a>… so it is fine to wait until the test fails, we just need to make sure the test is accurate</span><br>
+<span id=a077>… so the documents have to have real HTML in them</span><br>
+<span id=43e5>… so we just need to be extra careful about what we mean with specialized reading systems</span></p>
+<p id=62bc class="phone s01"><cite>wendyreid:</cite> That is a completely valid implementation of that feature. We don't tell people what to put in their content<br>
+<span id=edc9>… so while it is narrow, it is valid</span></p>
+<p id=10003 class="phone s03"><cite>Hadrien:</cite> What I described is a partial implementation<br>
+<span id=7788>… but moving to CR is fine, assuming we have tests</span></p>
+<p id=7a60 class="phone s02"><cite>ivan:</cite> I would ask that someone add that test who is knowledgable on the topic<br>
+<span id=ab03>… we shouldn't wait for this to go to CR, we can deprecate later if we need to</span></p>
+<p id=2e1c class="phone s07"><cite>shiestyle:</cite> If some features are only in Japanese reading systems, and we deprecate those features, we would have to object<br>
+<span id=ebab>… So if 2 or more implementations exist it is valid</span></p>
+<p id=2b4d class="phone s02"><cite>ivan:</cite> The source of the implementation (e.g. country) is irrelevant for CR<br>
+<span id=254f>… so if there are 2 Japanese implementations, that is fine. It is considered passed</span></p>
+<p id=c3dd class="phone s01"><cite>wendyreid:</cite> For that reason I don't even want to add an at risk to this<br>
+<span id=9bad>… so we may not have enough implementations to be comfortable, but we would still pass CR so shouldn't use at-risk</span></p>
+<p id=7f8c class="phone s02"><cite>ivan:</cite> The goal of CR is to show a feature can be implemented. That is why we have the low bar of 2. It just shows it is possible to do, not that everyone does it</p>
+<p id=8e38 class="phone s03"><cite>Hadrien:</cite> To clarify, if we have 2 implementations then it isn't an issue. I just want to make sure the scope of the tests is correct<br>
+<span id=e5f0>… We need to test the spec, and not design the tests for the reading systems</span></p>
+<p id=e71e class="phone s01"><cite>wendyreid:</cite> I will take an action item to review the tests in that section<br>
+<span id=f138>… we will have a more robust set of tests</span></p>
+<p id=a1fe class=summary>PROPOSED: Progress EPUB 3.4, EPUB Reading Systems 3.4, and EPUB Accessibility 1.2 to Candidate Recommendation.</p>
+<p id=f0c0 class=irc><cite>&lt;shiestyle&gt;</cite> +1</p>
+<p id=30c0 class=irc><cite>&lt;duga&gt;</cite> +1</p>
+<p id=30c1 class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=b0c0 class=irc><cite>&lt;toshiakikoike&gt;</cite> +1</p>
+<p id=b0c1 class=irc><cite>&lt;gman&gt;</cite> +1</p>
+<p id=b0c2 class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1</p>
+<p id=b0c3 class=irc><cite>&lt;sueneu&gt;</cite> +1</p>
+<p id=b0c4 class=irc><cite>&lt;wendyreid&gt;</cite> +1</p>
+<p id=30c2 class=irc><cite>&lt;MasakazuKitahara&gt;</cite> +1</p>
+<p id=f0c1 class=irc><cite>&lt;gautierchomel_&gt;</cite> +1</p>
+<p id=f0c2 class=irc><cite>&lt;DaleRogers&gt;</cite> +1</p>
+<p id=30c3 class=irc><cite>&lt;Makoto&gt;</cite> +1</p>
+<p id=b0c5 class=irc><cite>&lt;Hadrien&gt;</cite> +1</p>
+<p id=46dd class=resolution><strong>RESOLUTION:</strong> Progress EPUB 3.4, EPUB Reading Systems 3.4, and EPUB Accessibility 1.2 to Candidate Recommendation.</p>
+<p id=30c4 class=irc><cite>&lt;gpellegrino&gt;</cite> +1</p>
+<p id=834a class="phone s02"><cite>ivan:</cite> Procedurally, this becomes valid in 1 week, so people not on the call can object if they want<br>
+<span id=cb11>… and we may not get the actual CR until end of July</span></p>
+<p id=3e6f class="phone s10"><cite>Makoto:</cite> Can SC34 distribute the text before our meeting in August [SC34 meeting]?</p>
+<p id=c8a3 class=summary>ivan; The text is public</p>
+<p id=f436 class="phone s10"><cite>Makoto:</cite> So it will be available at the beginning of August?</p>
+<p id=9fb5 class=summary><a href="https://w3.org/TR/epub-34">https://<wbr>w3.org/<wbr>TR/<wbr>epub-34</a></p>
+<p id=0ac2 class="phone s02"><cite>ivan:</cite> Yes, but the format will change so that isn't final</p>
+<p id=dadc class="phone s10"><cite>Makoto:</cite> But I shouldn't say it is CR now, I should wait a week</p>
+<p id=cb01 class="phone s01"><cite>wendyreid:</cite> Yes</p>
+</section>
+</main>
+
+<div id=ResolutionSummary>
+<h2>Summary of resolutions</h2>
+<ol>
+<li><a href="#46dd">Progress EPUB 3.4, EPUB Reading Systems 3.4, and EPUB Accessibility 1.2 to Candidate Recommendation.</a></li>
+</ol>
+</div>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
