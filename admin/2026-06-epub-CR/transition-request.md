@@ -111,4 +111,4 @@ What this means that the usual CR approach, whereby if a feature does not get th
 
 ---
 
-Cc @sueneu @mattgarrish @shiestyle @wareid
+Cc @sueneu @mattgarrish @shiestyle @reidmore-online
