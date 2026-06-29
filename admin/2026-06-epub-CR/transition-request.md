@@ -67,7 +67,7 @@ For horizontal reviews:
 - Security: [link](https://github.com/w3c/security-request/issues/130) (2026-04-10), _declaring timeout_
 - TAG: [link](https://github.com/w3ctag/design-reviews/issues/1216) (2026-04-01) [resolution (2026-04-16)](https://github.com/w3ctag/design-reviews/issues/1216#issuecomment-4224209028)
 
-The horizontal reviews lead to a number of minor or editorial updates, see the aforementioned change logs.
+The horizontal reviews led to a number of minor or editorial updates, see the aforementioned change logs.
 
 # Issues addressed
 
