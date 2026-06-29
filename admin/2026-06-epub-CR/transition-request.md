@@ -75,7 +75,7 @@ The horizontal reviews led to a number of minor or editorial updates, see the af
 - https://github.com/w3c/epub-specs/issues?q=is%3Aissue%20label%3ASpec-ReadingSystems
 - https://github.com/w3c/epub-specs/issues?q=is%3Aissue%20label%3ASpec-Accessibility
 
-Several technical issues remain unresolved, primarily concerning multiple renditions and media overlays. These are beyond the current charter and will be the topic of a new charter, which is currently under discussion.
+Several technical issues remain unresolved, primarily concerning alternative presentations with media overlays. These are beyond the current charter and will be the topic of a new charter, which is currently under discussion.
 
 # Formal Objections
 
