@@ -88,7 +88,7 @@ The exit criteria of the Working Group are described in:
 
 - https://w3c.github.io/epub-specs/epub34/reports/exit_criteria.html
 
-with links to the report documents that will, eventually, contain the results of testing. There are a number of [tests](https://w3c.github.io/epub-tests/index.html) available (most of them inherited from EPUB 3.3, but new ones have been added for EPUB 3.4 features), new are being added.
+with links to the results of testing. There are a number of [tests](https://w3c.github.io/epub-tests/index.html) available. Most of them inherited from EPUB 3.3, and new ones have been added for EPUB 3.4 features.
 
 There are numerous EPUB 3 Reading System implementations on the market, some major ones are also represented on the Working Group (Google, Apple, Kobo, EDRLab, Colibrio, Kadokawa, Voyager, etc.). Many have already contributed tests results for EPUB 3.3 (which are, technically, valid though incomplete test results for EPUB 3.4). We expect most of these will contribute to the test results to include results on the new features.
 
