@@ -67,7 +67,7 @@ For horizontal reviews:
 - Security: [link](https://github.com/w3c/security-request/issues/130) (2026-04-10), _declaring timeout_
 - TAG: [link](https://github.com/w3ctag/design-reviews/issues/1216) (2026-04-01) [resolution (2026-04-16)](https://github.com/w3ctag/design-reviews/issues/1216#issuecomment-4224209028)
 
-The horizontal reviews lead to a number of resulted minor or editorial updates, see the aforementioned change logs.
+The horizontal reviews lead to a number of minor or editorial updates, see the aforementioned change logs.
 
 # Issues addressed
 
@@ -90,9 +90,9 @@ The exit criteria of the Working Group are described in:
 
 with links to the results of testing. There are a number of [tests](https://w3c.github.io/epub-tests/index.html) available. Most of them inherited from EPUB 3.3, and new ones have been added for EPUB 3.4 features.
 
-There are numerous EPUB 3 Reading System implementations on the market, some major ones are also represented on the Working Group (Google, Apple, Kobo, EDRLab, Colibrio, Kadokawa, Voyager, etc.). Many have already contributed tests results for EPUB 3.3 (which are, technically, valid though incomplete test results for EPUB 3.4). We expect most of these will contribute to the test results to include results on the new features.
+There are multiple current EPUB 3 reading system implementations. Developers represented within the Working Group include Apple, Colibrio, EDRLab, Google, Kadokawa, Kobo, and Voyager. Several of these organizations have contributed test results for EPUB 3.3. These existing results remain valid. However, additional testing is required to verify implementation of EPUB 3.4 features. The Working Group aims to secure testing contributions for these new features from all participating reading systems.
 
-There is a strong cooperation between the Working Group and the developers of [epubcheck](https://www.w3.org/publishing/epubcheck/), that already has a beta version of an EPUB 3.4 checker. This is particularly important, because epubcheck is used by virtually all publishers before releasing a new publication.
+There is a strong cooperation between the Working Group and the developers of [epubcheck](https://www.w3.org/publishing/epubcheck/). There is already a beta version of an EPUB 3.4 checker. This is particularly important, because epubcheck is used by virtually all publishers before releasing a new publication.
 
 The minimal CR period goes until 2026-10-19.
 
@@ -107,7 +107,7 @@ The [Working Group's charter](https://www.w3.org/2020/12/epub3-wg-charter.html) 
 
 > It is a primary goal of the new EPUB version to remain backward compatible with EPUB 3.3 (i.e., existing conformant EPUB 3.3 would remain conformant EPUB 3.4 documents).
 
-What this means that the usual CR approach, whereby if a feature does not get the right number of implementation per the exit criteria must be removed from the specification, cannot be applied in this case, except for features that did not exist prior to EPUB 3.3 (e.g., roll layout). Instead, the specification includes a separate section  on [obsolete features](https://www.w3.org/TR/epub-34/#app-obsolete).
+Consequently, the standard Candidate Recommendation (CR) process—which requires the removal of features that fail to meet the minimum implementation criteria—cannot be applied to legacy features. This exception does not apply to features introduced after EPUB 3.3 (for example, the roll layout type). To preserve backward compatibility, legacy features that lack the required number of implementations are retained and listed in a dedicated annex on [obsolete features](https://www.w3.org/TR/epub-34/#app-obsolete). 
 
 ---
 
