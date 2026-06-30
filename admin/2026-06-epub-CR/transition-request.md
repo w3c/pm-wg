@@ -71,18 +71,25 @@ The horizontal reviews led to a number of minor or editorial updates, see the af
 
 # Issues addressed
 
+All issues filtered by specs:
+
 - https://github.com/w3c/epub-specs/issues?q=is%3Aissue%20label%3ASpec-EPUB3
 - https://github.com/w3c/epub-specs/issues?q=is%3Aissue%20label%3ASpec-ReadingSystems
 - https://github.com/w3c/epub-specs/issues?q=is%3Aissue%20label%3ASpec-Accessibility
 
-Several technical issues remain unresolved, primarily concerning alternative presentations with media overlays. These are beyond the current charter and will be the topic of a new charter, which is currently under discussion.
+
+Several technical issues remain unresolved, primarily concerning alternative presentations with media overlays. These are beyond the current charter and will be the topic of a new charter, which is currently under discussion; marked all with the `Status-Deferred` label. Non-deferred open issues filtered by specs:
+
+- https://github.com/w3c/epub-specs/issues?q=is%3Aissue%20state%3Aopen%20label%3ASpec-EPUB3%20-label%3AStatus-Deferred
+- https://github.com/w3c/epub-specs/issues?q=is%3Aissue%20state%3Aopen%20-label%3AStatus-Deferred%20label%3ASpec-ReadingSystems
+- https://github.com/w3c/epub-specs/issues?q=is%3Aissue%20label%3ASpec-Accessibility%20state%3Aopen%20-label%3AStatus-Deferred
+
 
 # Formal Objections
 
 None.
 
 # Implementation
-[TODO: any preliminary implementation information? exit criteria? minimum CR duration?]
 
 The exit criteria of the Working Group are described in:
 
@@ -107,7 +114,7 @@ The [Working Group's charter](https://www.w3.org/2020/12/epub3-wg-charter.html) 
 
 > It is a primary goal of the new EPUB version to remain backward compatible with EPUB 3.3 (i.e., existing conformant EPUB 3.3 would remain conformant EPUB 3.4 documents).
 
-Consequently, the standard Candidate Recommendation (CR) process—which requires the removal of features that fail to meet the minimum implementation criteria—cannot be applied to legacy features. This exception does not apply to features introduced after EPUB 3.3 (for example, the roll layout type). To preserve backward compatibility, legacy features that lack the required number of implementations are retained and listed in a dedicated annex on [obsolete features](https://www.w3.org/TR/epub-34/#app-obsolete). 
+Consequently, the standard Candidate Recommendation (CR) process—which requires the removal of features that fail to meet the minimum implementation criteria—cannot be applied to legacy features. This exception does not apply to features introduced after EPUB 3.3 (for example, the roll layout type). To preserve backward compatibility, legacy features that lack the required number of implementations are retained and listed in a dedicated annex on [obsolete features](https://www.w3.org/TR/epub-34/#app-obsolete).
 
 ---
 
