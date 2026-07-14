@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group &ndash; 09 July 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group</h1>
+<h2>09 July 2026</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2026/07/09-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, DaleRogers, duga, gautierchomel_, GeorgeK, Hadrien, kimberg, Makoto, MasakazuKitahara, mgarrish, rdeltour, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendyreid</dd>
+<dt>Scribe</dt><dd>gautierchomel_, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#4cca">Sync Media and Process Discussion</a></li>
+<li><a href="#2224">Understanding EPUB A11y - https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub34/<wbr>a11y-understand/</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=3ab5 class=irc><cite>&lt;wendyreid&gt;</cite> date: 2026-07-09</p>
+</section>
+
+<section>
+<h3 id=4cca>Sync Media and Process Discussion</h3>
+<p id=5c0f class=irc><cite>&lt;AvneeshSingh&gt;</cite> Accessible sync media: <a href="https://www.w3.org/community/accessible-syncmedia-pub/">https://<wbr>www.w3.org/<wbr>community/<wbr>accessible-syncmedia-pub/</a></p>
+<p id=8f52 class="phone s01"><cite>wendyreid:</cite> some of us met to discuss this topic. we suggest to pause rechartering and retake that discussion by q4 when we'll better know what we want to put in this charter.</p>
+<p id=a671 class="phone s01"><cite>wendyreid:</cite> a cg for sync media have been created to get more feedback.</p>
+<p id=0fbb class=irc><cite>&lt;AvneeshSingh&gt;</cite> First meeting of sync media to give idea of discussions: <a href="https://w3c-cg.github.io/accessible-syncmedia-pub/minutes/2026-06-26.html#minutes">https://<wbr>w3c-cg.github.io/<wbr>accessible-syncmedia-pub/<wbr>minutes/<wbr>2026-06-26.html#minutes</a></p>
+<p id=2945 class="phone s01"><cite>wendyreid:</cite> one of open questions is how to collect wide feedback. Maybe a survey like the html one which worked well.</p>
+<p id=6f8d class=irc><cite>&lt;Makoto&gt;</cite> +1</p>
+<p id=633e class=irc><cite>&lt;Makoto&gt;</cite> FYI: CBT people appear to provide dynamic TTS (with Karaoke) without special SMIL-like markup.</p>
+<p id=6725 class="phone s02"><cite>GeorgeK:</cite> we recognise that a lot of techs have evolved since MO was introduced in EPUB. Syncing and generating are part of those. Because of that the use cases have evolved and doing a new use cases analysis is important for the discussion.</p>
+<p id=9ae6 class="phone s03"><cite>Hadrien:</cite> looking at issues tagged MO, i don't think thta there is one that would break backward compatibility. The problem now is that we ara missing interoperability.</p>
+<p id=c314 class=irc><cite>&lt;Makoto&gt;</cite> Computer-based testing</p>
+<p id=16ea class="phone s04"><cite>Makoto:</cite> Daisy people in Japan heavily use MO because TTS is not sufficient. The production process is painfull, we have only one solution and it's a challenge to syncronise.</p>
+<p id=62ea class="phone s05"><cite>AvneeshSingh:</cite> Hiroshi is representing Daisy Japan in the sync media cg. We have faith in capturing japanese usecases.</p>
+<p id=ffff class="phone s03"><cite>Hadrien:</cite> MO, readaloud, sync, those are different features, sometimes mixed in people mind. It's important to help clear understanding.</p>
+<p id=2ef5 class="phone s03"><cite>Hadrien:</cite> at EDRLab, we are building Readium speech to ease TTS cross apps. We are planning a speech playground to  test and explore how the DOM should be processed and rendered. There are quite a few steps, how to extract semantics, how to represent the information and then what are user powers (settings). A lot of this done at production time makes MO stronger today. By those experiments we hope to make the RS rendering more efficient.</p>
+<p id=d647 class="phone s03"><cite>Hadrien:</cite> still, TTS is in my mind a different discussion than MO.</p>
+<p id=0750 class="phone s05"><cite>AvneeshSingh:</cite> MO is an authoring format, event if it can rely on TTS generated speech.</p>
+<p id=3d9b class="phone s05"><cite>AvneeshSingh:</cite> we have started to work on user expectations of what a RS generating speech experience. To explore what is expected and procide some guidance.</p>
+<p id=991d class="phone s02"><cite>GeorgeK:</cite> at epubtest.org we've been testing readaloud for years. But pretty basic, we don't go in sophisticated things. I agree a lot of work need to be done to improve the readaloud expereince. Also related to position and syncronisation at diferent levels (letters, words, etc.) it's a tiroirs topics, what semantics, what language changing, etc.</p>
+<p id=4994 class=irc><cite>&lt;Hadrien&gt;</cite> Right now, Readium Speech handles voice selection and audio playback: <a href="https://readium.org/speech/demo/">https://<wbr>readium.org/<wbr>speech/<wbr>demo/</a></p>
+<p id=737e class="phone s03"><cite>Hadrien:</cite> I started to work on this some years ago, it's now entirely triggered by EDRLab. to help the implementation in our reading tools.</p>
+<p id=ab3a class=irc><cite>&lt;Hadrien&gt;</cite> The playground would be a much more exhaustive version of something like this: <a href="https://github.com/readium/guided-navigation/tree/main/examples/read-aloud#pagebreaks">https://<wbr>github.com/<wbr>readium/<wbr>guided-navigation/<wbr>tree/<wbr>main/<wbr>examples/<wbr>read-aloud#pagebreaks</a></p>
+<p id=ba70 class=irc><cite>&lt;Makoto&gt;</cite> How about video containing sign language?</p>
+<p id=d9dd class="phone s02"><cite>GeorgeK:</cite> In the sync media group, we have both use cases in mind, authored and reading system on the fly production.</p>
+<p id=42f6 class="phone s01"><cite>wendyreid:</cite> this is a challenge, anything TTS is of interest for our group but we are not the only group impacted, so need a lot of coordination.</p>
+<p id=be36 class="phone s01"><cite>wendyreid:</cite> a lot of spec are out of date, but ownership is not defined</p>
+<p id=6a91 class="phone s02"><cite>GeorgeK:</cite> we don't want to write an ebook specification that would be used by airport anouncements. We can learn from other use cases but our topic is ebooks. and that's already a big topic.</p>
+<p id=b6d1 class="phone s03"><cite>Hadrien:</cite> webspeech api is accepted responsability of audio WG.</p>
+<p id=10000 class="phone s03"><cite>Hadrien:</cite> I think we should do nothing at this point regarding TTS, contratly to MO where there is a need because it does not work.</p>
+<p id=a14a class=irc><cite>&lt;sueneu&gt;</cite> +1 Hadrien</p>
+<p id=a71c class="phone s05"><cite>AvneeshSingh:</cite> the plan os this accessible sync media cg is to be permanent in time, we think there will be need for long term work. First priority is EPUB 3.5, but there will be future needs. It's our vision.</p>
+</section>
+
+<section>
+<h3 id=2224>Understanding EPUB A11y - <a href="https://w3c.github.io/epub-specs/epub34/a11y-understand/">https://<wbr>w3c.github.io/<wbr>epub-specs/<wbr>epub34/<wbr>a11y-understand/</a></h3>
+<p id=56cd class="phone s04"><cite>Makoto:</cite> great work, one concern regarding the title which I think is to wide and does not represent the content. It looks more important than other documents while it is not, it is different. This one focus on relation between wcag and epub, or how to interpret wcag for EPUB. I would like to make sure the title represent exactly the content.</p>
+<p id=d539 class=irc><cite>&lt;sueneu&gt;</cite> s/represnet/represent/</p>
+<p id=7528 class="phone s06"><cite>mgarrish:</cite> we previously had understanding sections in each documents, this one groups all understandings at the same place.  It's 50/50 existing texts and new contents.  This is not a finale note, it's a draft to get more feedbacks, more people involved.<br>
+<span id=0719>… it's a step in continuing developing the document.</span></p>
+<p id=d5ce class="phone s01"><cite>wendyreid:</cite> I agree with both concerns.  We may add clear mention we are looking for feddback.</p>
+<p id=b6a2 class=irc><cite>&lt;sueneu&gt;</cite> +1 wendyreid putting requests for feedback in draft document</p>
+<p id=2cb5 class="phone s01"><cite>wendyreid:</cite> understanding is a known word in wcag world.</p>
+<p id=4fc1 class="phone s04"><cite>Makoto:</cite> Understanding wcag is not a note or anything, just a webpage. Also it covers everything in wcag.</p>
+<p id=6954 class="phone s07"><cite>shiestyle:</cite> wg and cg can produce notes, that may lead to misunderstandings.</p>
+<p id=7df8 class="phone s08"><cite>duga:</cite> it's in github, there's been a lot of back and forth. This is a minor step to publish it as a draft. We probably need it published as a draft, title might change and that may come with confusion, but that's part of the process.</p>
+<p id=91fa class="phone s09"><cite>sueneu:</cite> as a pruducer what document should I check, how many documents should I check? I agree we should publish and get feedback.</p>
+<p id=e91d class="phone s10"><cite>gautierchomel_:</cite> Just to make sure, once published as a draft, any issue related to the document will appear in the document as a note, in the case of Makoto's issue it's about the title, would there be a block there or am I misunderstanding?</p>
+<p id=ef81 class=summary>[discussion of editorial practice]</p>
+<p id=f727 class="phone s01"><cite>wendyreid:</cite> those issue blocks are human authored, not automatised.</p>
+<p id=2d22 class="phone s04"><cite>Makoto:</cite> I suggest two changing, one is a mention about relation between this document and the ones related to metadata. the second change i suggest is a title modification to avoid confusion with wcag understanding of &quot;understanding&quot;.</p>
+<p id=e9d9 class="phone s11"><cite>Dale:</cite> i am not sure who the audience of this document is</p>
+<p id=1edb class=irc><cite>&lt;Makoto&gt;</cite> I don't agree</p>
+<p id=8644 class="phone s06"><cite>mgarrish:</cite> this isn't a technical document, this is a general understanding document, higher level for people not in technics.</p>
+<p id=1b4d class=irc><cite>&lt;Makoto&gt;</cite> Abstract</p>
+<p id=b16c class=irc><cite>&lt;Makoto&gt;</cite> The Understanding EPUB Accessibility 1.2 guide provides information on how to evaluate the accessible content conformance requirements of EPUB Accessibility 1.2 [epub-a11y-12] against reflowable EPUB publications.</p>
+<p id=9053 class=irc><cite>&lt;sueneu&gt;</cite> +1 wendyreid about the number and discoverability of documents</p>
+<p id=0bdf class="phone s10"><cite>gautierchomel_:</cite> I would like to see Makoto's proposals, having issues to discuss, we should review the proposals</p>
+<p id=54a1 class="phone s02"><cite>GeorgeK:</cite> I need this ressource on my activities, as soon as i get it, i will use it.</p>
+<p id=a565 class="phone s01"><cite>wendyreid:</cite> we need a map of documents anyway. We have a lot.</p>
+<p id=a050 class=irc><cite>&lt;Hadrien&gt;</cite> +1 we need an index at least for all of our documents</p>
+<p id=dabd class="phone s05"><cite>AvneeshSingh:</cite> I've seen such an index years ago, but it's not very easy to use either.</p>
+<p id=27d2 class=irc><cite>&lt;DaleRogers&gt;</cite> +1 for an index. This is one I know. <a href="https://www.w3.org/groups/wg/pm/publications/">https://<wbr>www.w3.org/<wbr>groups/<wbr>wg/<wbr>pm/<wbr>publications/</a></p>
+<p id=87a0 class=irc><cite>&lt;mgarrish&gt;</cite> <a href="https://www.w3.org/TR/?filter-tr-name=&amp;tags%5B%5D=dpub">https://<wbr>www.w3.org/<wbr>TR/?filter-tr-name=&amp;tags%5B%5D=dpub</a></p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+
+</body>
+</html>

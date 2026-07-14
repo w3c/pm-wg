@@ -1,0 +1,115 @@
+to: Xueyuan
+cc: comm, denis
+
+[Draft] EPUB 3.4, EPUB 3.4 Reading Systems, EPUB Accessibility 1.2 are now Candidate Recommendation (Call for Implementations)
+
+
+Dear Advisory Committee Representative,
+[This announcement will be forwarded to W3C group chairs]
+
+I am pleased to announce that the following documents are now a W3C
+Candidate Recommendation Snapshot:
+
+-  EPUB 3.4
+   W3C Candidate Recommendation Snapshot 21 July 2026
+   https://www.w3.org/TR/2026/CR-epub-34-20260721/
+
+-  EPUB 3.4 Reading Systems
+   W3C Candidate Recommendation Snapshot 21 July 2026
+   https://www.w3.org/TR/2026/CR-epub-rs-34-20260721/
+
+-  EPUB Accessibility 1.2
+   W3C Candidate Recommendation Snapshot 21 July 2026
+   https://www.w3.org/TR/2026/CR-epub-a11y-12-20260721/
+
+
+The approval and publication are in response to this transition request:
+   https://github.com/w3c/transitions/issues/816
+
+Please provide feedback by 19 October 2026 as GitHub issues:
+   https://github.com/w3c/epub-specs/issues/
+
+Patent disclosures relevant to this specification may be found on the
+Internationalization Working Group's patent disclosure page in
+conformance with W3C policy:
+   https://www.w3.org/groups/wg/pm/ipr
+
+This Call for Implementations follows section 6.3.7 "Transitioning to
+Candidate Recommendation" of the W3C Process Document:
+  https://www.w3.org/policies/process/20250818/#transition-cr
+
+Thank you,
+
+For Philippe le Hégaret, VP, Technical Strategy,
+Ivan Herman, Publishing Maintenance Working Group Staff Contact;
+Xueyuan Jia, Manager, Member Communications
+
+==============================================
+Quoting from
+
+EPUB 3.4
+W3C Candidate Recommendation Snapshot, 21 July 2026
+
+This Version:
+   https://www.w3.org/TR/2026/CR-epub-34-20260721/
+Latest Published Version:
+   https://www.w3.org/TR/epub-34/
+
+Abstract:
+   EPUB® 3 defines a distribution and interchange format for digital
+   publications and documents. The EPUB format provides a means of
+   representing, packaging, and encoding structured and semantically
+   enhanced web content — including HTML, CSS, SVG, and other
+   resources — for distribution in a single-file container.
+
+   This specification defines the authoring requirements for EPUB
+   publications and represents the fourth major revision of the standard.
+
+Status of This document:
+  https://www.w3.org/TR/2026/CR-epub-34-20260721/#sotd
+
+==============================================
+
+EPUB 3.4 Reading Systems
+W3C Candidate Recommendation Snapshot, 21 July 2026
+
+This Version:
+   https://www.w3.org/TR/2026/CR-epub-rs-34-20260721/
+Latest Published Version:
+   https://www.w3.org/TR/epub-rs-34/
+
+Abstract:
+   EPUB® 3 defines a distribution and interchange format for digital
+   publications and documents. The EPUB format provides a means of
+   representing, packaging, and encoding structured and semantically
+   enhanced web content — including HTML, CSS, SVG and other
+   resources — for distribution in a single-file container.
+
+    This specification defines the conformance requirements for
+    EPUB 3 reading systems — the user agents that render EPUB publications.
+
+Status of This document:
+  https://www.w3.org/TR/2026/CR-epub-rs-34-20260721/#sotd
+
+==============================================
+
+EPUB Accessibility 1.2
+W3C Candidate Recommendation Snapshot, 21 July 2026
+
+This Version:
+   https://www.w3.org/TR/2026/CR-epub-a11y-12-20260721/
+Latest Published Version:
+   https://www.w3.org/TR/epub-a11y-12/
+
+Abstract:
+   This specification specifies content conformance requirements
+   for verifying the accessibility of EPUB® Publications.
+   It also specifies accessibility metadata requirements for
+   the discoverability of EPUB publications.
+
+Status of This document:
+  https://www.w3.org/TR/2026/CR-epub-a11y-12-20260721/#sotd
+
+  ==============================================
+
+

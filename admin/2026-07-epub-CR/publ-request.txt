@@ -1,0 +1,31 @@
+To: webmaster
+CC: pm chairs, matt, comm
+Subject: Publication request for a CR for EPUB 3.4, EPUB Reading System 3.4, and EPUB Accessibility 1.2, 21st July 2026
+
+Denis,
+
+This is an official publication request for the publication of the following documents, all for the 21st of July, 2026.
+They are all published by the Publishing Maintenance (PM) Working Group.
+
+- EPUB 3.4
+    - Long URL: https://www.w3.org/TR/2026/CR-epub-34-20260721/
+    - Short name: epub-34
+    - Transition approval: https://github.com/w3c/transitions/issues/816#issuecomment-4876880155
+- EPUB 3.4 Reading Systems
+    - Long URL: https://www.w3.org/TR/2026/CR-epub-rs-34-20260721/
+    - Short name: epub-rs-34
+    - Transition approval: https://github.com/w3c/transitions/issues/816#issuecomment-4876880155
+- EPUB Accessibility 1.2
+    - Long URL: https://www.w3.org/TR/2026/CR-epub-a11y-12-20260721/
+    - Short name: epub-a11y-12
+    - Transition approval: https://github.com/w3c/transitions/issues/816#issuecomment-4876880155
+
+All documents are already in place. They pass pubrules' check. Link checker has the usual problems (like TR URLs that do not exist yet) but they otherwise pass.
+
+Thanks!
+
+Ivan
+
+PS Xueyuan, I will send you a draft AC announcement in a separate mail.
+
+
