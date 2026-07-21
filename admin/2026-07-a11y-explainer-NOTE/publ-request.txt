@@ -1,0 +1,16 @@
+To: webmaster, Cc: Matt, PM WG Chairs, comm team
+
+Denis,
+
+This is an official publication request for the publication of the following document on 2026-07-30. It is published by the Publishing Maintenance (PM) Working Group.
+
+EPUB Accessibility 1.2 Explainer, Draft Note
+	Full URL: https://www.w3.org/TR/2026/DNOTE-epub-a11y-explain-12-20260730/
+    Short name: epub-a11y-explain-12
+    Transition approval: https://github.com/w3c/transitions/issues/819#issuecomment-5023309400
+
+The document is already in place and went through pubrules' checkers. Link checker has the usual problems (like TR URLs that do not exist yet) but it otherwise passes.
+
+Thanks!
+
+Ivan
