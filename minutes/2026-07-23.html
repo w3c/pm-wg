@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 23 July 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>23 July 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Jul/0012.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/07/23-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, Dale, duga, gautierchomel_, GeorgeK, gpellegrino, Hadrien, ivan, kimberg, MasakazuKitahara, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>susan, wendy</dd>
+<dt>Scribe</dt><dd>duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#8153">CFIs</a></li>
+<li><a href="#61ef">EPUB 3.4 is now in CR</a></li>
+<li><a href="#2817">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=8153>CFIs</h3>
+<p id=473a class="phone s01"><cite>GeorgeK:</cite> Lars talked to me at a meeting telling me how great CFI are and that he has an open source implementation<br>
+<span id=1398>… and I am trying to understand the relationship between CFI and EPUB</span><br>
+<span id=934a>… are CFI in 3.4? Are they referenced by epub? what is the w3c status</span></p>
+<p id=d52a class="phone s02"><cite>ivan:</cite> The answers are no, no, and no<br>
+<span id=0f9f>… they are not even a w3c note, and it is not referenced from 3.4</span><br>
+<span id=0301>… in the EPUB WG, duga and I looked at it, it seems half baked</span><br>
+<span id=7a77>… e.g. there is no processing model</span><br>
+<span id=7fa9>… we talked about what to do about it, and at the time we let it alone</span><br>
+<span id=8df6>… we could change our mind now, that is just where we are</span><br>
+<span id=6a1c>… CFI is very bound to xml, so we may be in a better position,  since we previously had html serialization as a posibility</span><br>
+<span id=43d5>… but that has changed, we have decided on xml</span><br>
+<span id=28cd>… I think a discussion with an eye on annotations</span><br>
+<span id=acd3>… is a good topic. Let's not discuss now, but in the future we could</span></p>
+<p id=9405 class="phone s03"><cite>wendyreid:</cite> Chairs have discussed in relation to annotations<br>
+<span id=423f>… so we likely have more to discuss</span></p>
+<p id=69c9 class="phone s01"><cite>GeorgeK:</cite> Given that there is an open source impl, if two epub impls use it, does that count as two?</p>
+<p id=5b70 class="phone s04"><cite>AvneeshSingh:</cite> Since it isn't in the spec, the 2 implementation threshold doesn't exist<br>
+<span id=8ebf>… some reading system people are very into CFI. At the same time, some people hate it</span></p>
+<p id=31b2 class="phone s02"><cite>ivan:</cite> I agree with AvneeshSingh, but the answer to GeorgeK's question is no, we would need another implementation<br>
+<span id=195f>… but we need a separate full discussion on this topic</span></p>
+</section>
+
+<section>
+<h3 id=61ef>EPUB 3.4 is now in CR</h3>
+<p id=ffff class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/TR/epub-34/">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-34/</a></p>
+<p id=59d3 class="phone s03"><cite>wendyreid:</cite> We are in CR! (3.4 that is)</p>
+<p id=33b9 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/epub-tests/contributing">https://<wbr>w3c.github.io/<wbr>epub-tests/<wbr>contributing</a></p>
+<p id=790b class="phone s03"><cite>wendyreid:</cite> time to talk testing</p>
+<p id=99f0 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/epub-tests/results">https://<wbr>w3c.github.io/<wbr>epub-tests/<wbr>results</a></p>
+<p id=1090 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/epub-tests/reports/xx-template.json">https://<wbr>w3c.github.io/<wbr>epub-tests/<wbr>reports/<wbr>xx-template.json</a></p>
+<p id=7e92 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://w3c.github.io/epub-tests/">https://<wbr>w3c.github.io/<wbr>epub-tests/</a></p>
+<p id=f64f class="phone s03"><cite>wendyreid:</cite> the test suite is complete, I believe<br>
+<span id=1595>… we added scrolled layouts, there are mixed layouts recently added</span><br>
+<span id=d3e6>… anything else?</span></p>
+<p id=abc1 class="phone s02"><cite>ivan:</cite> Not that I know, but if someone would check that it would be helpful<br>
+<span id=3f37>… we have 175 tests, inheriting old ones and adding some new ones</span></p>
+<p id=b9c2 class="phone s03"><cite>wendyreid:</cite> We still have the 3.3 test results. We have some new tests for 3.4, and some of the old tests have changed<br>
+<span id=4fb8>… it was hard to get all the tests run last time, and now we have even more</span><br>
+<span id=9b61>… ideally, we would have everyone run all the tests, but if that is too hard what should we ask for</span><br>
+<span id=b524>… ? Maybe just new tests, or not all platforms, etc</span></p>
+<p id=c8cf class="phone s02"><cite>ivan:</cite> There were a number of tests we had to rename, so the old results don't match up</p>
+<p id=177f class=irc><cite>&lt;wendyreid&gt;</cite> ak gpellegrino</p>
+<p id=1bbb class="phone s02"><cite>ivan:</cite> We may want to manually update those</p>
+<p id=c18f class="phone s05"><cite>gpellegrino:</cite> 3 or 4 years has past since the last test round. I think the testing was very useful for the community, so I think a full run is very useful (regression checking, etc)</p>
+<p id=de3d class=irc><cite>&lt;ivan&gt;</cite> +1 to gpellegrino</p>
+<p id=15be class="phone s05"><cite>gpellegrino:</cite> We did do some of this at TPAC last time, maybe we can do it again</p>
+<p id=567a class="phone s06"><cite>gautierchomel_:</cite> I agree. I will be testing all the tests on our engines (reader and mobile). Even though these are the same engines, there have been forks<br>
+<span id=133f>… Maybe we can mark the old passing tests that have not been rerun should be marked as outdated (or something)</span><br>
+<span id=10000>… In terms of timing, I plan to test on thorium by dec, is that too late</span></p>
+<p id=3411 class="phone s02"><cite>ivan:</cite> We only have a minimum deadline. We said we will not go to rec until Sept, but we can go later<br>
+<span id=359e>… our charter ends in Feb, so if we get the results in Dec, we can vote in Jan, and go to rec before Feb</span><br>
+<span id=e083>… and that leaves a lot of time for others as well</span></p>
+<p id=36ea class="phone s07"><cite>shiestyle:</cite> we plan to test new and modified tests before tpac. If we need all the tests, we will need to discuss. I don't know how long that would take</p>
+<p id=1e21 class="phone s03"><cite>wendyreid:</cite> We have reading platforms (ios, android, web, etc), and a rendering engine. We should clarify if the engine is the same, you probably don't need to retest on all platforms<br>
+<span id=a70e>… so that might take some pressure off</span></p>
+<p id=86a3 class="phone s08"><cite>duga:</cite> I have a question on process, we have EPUB 3.3, it has tests, we have 2 implementations for all of those features, in EPUB 3.4, what do we need to test to get out the door for W3C's requirements?<br>
+<span id=a79a>… do we only need to test the new features?</span></p>
+<p id=8c64 class="phone s02"><cite>ivan:</cite> Formally, we have to do the whole thing<br>
+<span id=b892>… we could hand wave, but technically this is not a delta spec, so we should do the whole thing</span></p>
+<p id=22c2 class="phone s09"><cite>Dale:</cite> You mention that a lot of systems use the same engine. My understanding is that on the Mac, everyone uses the same engine</p>
+<p id=8062 class="phone s02"><cite>ivan:</cite> The Mac comment isn't correct. On iOS it is, but not on the Mac<br>
+<span id=ea1e>… We never really broke out a matrix like that</span><br>
+<span id=b9ad>… This is not an authority that verifies things - we just believe what the reading system tells us</span><br>
+<span id=1e33>… We do make it clear that if two implementations use the same engine they should not both report success</span></p>
+<p id=5c6f class="phone s09"><cite>Dale:</cite> Do we not test the reading systems then?</p>
+<p id=9345 class="phone s02"><cite>ivan:</cite> No, we can do the test ourselves if we want<br>
+<span id=9417>… last time we thought it was cleaner and more fair if the authors of the RS do it</span></p>
+<p id=f2e8 class="phone s03"><cite>wendyreid:</cite> We have about 3 layers we need to test<br>
+<span id=0460>… many reading systems use a browser engine underneath, we don't (and really can't) test that</span><br>
+<span id=b075>… But they still have a rendering engine on top of that which does epub</span><br>
+<span id=d514>… and then there may be an app layer</span><br>
+<span id=5337>… So Kobo had a number of platforms, but the engine was shared</span></p>
+<p id=72ba class="phone s10"><cite>sueneu:</cite> MobileReads has some forums for developers<br>
+<span id=0160>… do we want to reach out to them</span></p>
+<p id=3e85 class="phone s08"><cite>duga:</cite> I do not have an answer for Susan, but I wanted to talk about letting implementers do the testing<br>
+<span id=ee48>… outsiders may not know how the system works</span><br>
+<span id=4504>… sideloading may be possible but it may run differently</span><br>
+<span id=9ff0>… there's two different pathways, or more, so it's important to have the reading systems provide the information</span><br>
+<span id=86a6>… you also don't know about the engines or quirks, no idea what code may be shared, some may not be, and won't know</span><br>
+<span id=1f60>… it's difficult for anyone except the implementor</span></p>
+<p id=c386 class="phone s02"><cite>ivan:</cite> Two more things - still on the matter of the same engine on different platforms<br>
+<span id=4322>… So we added the ability for the same company to report multiple platforms results (android, ios, web, etc)</span><br>
+<span id=d3a8>… and the report shows the individual platforms (e.g. 3) and also a single report that shows the `or` of the reports</span><br>
+<span id=1bcd>… and also we generate the OPDS for the entire test suite</span><br>
+<span id=da37>… which could help any reading system that supports that</span></p>
+<p id=4eaf class="phone s11"><cite>Hadrien:</cite> Yes, very useful here, and widely implemented</p>
+<p id=5f28 class="phone s02"><cite>ivan:</cite> and my answer to sueneu is, where anywhere we have possible help, adding to tests is the best thing they could do to help</p>
+<p id=cfa3 class="phone s10"><cite>sueneu:</cite> Thanks, that makes sense. On the other side of things, most of our books go to Kindle<br>
+<span id=fd71>… is it possible for someone else to do that?</span></p>
+<p id=ca11 class="phone s02"><cite>ivan:</cite> We have failed over 10 years to get them on the group<br>
+<span id=5345>… I would take just about any results for Kindle</span></p>
+<p id=b7d7 class=irc><cite>&lt;AvneeshSingh&gt;</cite> Is Kindle considered as EPUB 3 implementation formally?</p>
+<p id=1712 class="phone s09"><cite>Dale:</cite> There is a question about what is behind the scenes vs what is available to users<br>
+<span id=dbe7>… I would think we want to test what people can actually see</span></p>
+<p id=d363 class="phone s08"><cite>duga:</cite> It's not hidden behind a wall, there are certain publishers that can do certain things, like fixed layout, there are rules about FXL, only certain pathways are enabled for certain pipelines<br>
+<span id=8259>… different entities might experience different pipeline, readers don't really see the differences in the end experience</span></p>
+<p id=6936 class="phone s02"><cite>ivan:</cite> We also have to understand, we are testing the spec, not implementation<br>
+<span id=285f>… s So we care whether the spec can be implemented. So we don't care whether it is visible to end users, from a w3c CR process, it just matters that it can be dome</span></p>
+<p id=675c class="phone s11"><cite>Hadrien:</cite> Back to Kindle, we know they don't work with epub directly. I think that isn't really a problem, and a lot of apps also do the same thing, even though they are cosidered epub reading systems<br>
+<span id=2537>… Also, I am collecting requirements for comics stuff. It turns out that if Amazon requires something, a lot of books follow that for all books</span><br>
+<span id=0773>… they have an outsize influence</span><br>
+<span id=cc96>… We could set up testing for Kindle easily, and since we won't get the tests from Amazon, I think it would be interesting</span></p>
+<p id=88a3 class="phone s05"><cite>gpellegrino:</cite> I agree with Hadrien regarding epub as b2b<br>
+<span id=6a1d>… There are often lots of changes made to epub for each platform. For instance, kindle uses mathjax for mathml</span><br>
+<span id=a807>… so sideloading may give different results</span></p>
+<p id=abb0 class="phone s02"><cite>ivan:</cite> The reason I would be unhappy to do it ourselves is that it is ideal to have the implementor do it. But since Amazon won't we will have to settle for second best<br>
+<span id=7056>… I am unhappy we have to do it, but that is where we are</span></p>
+<p id=495e class="phone s10"><cite>sueneu:</cite> Amazon doesn't like side loading for testing, they prefer an emulator they provide</p>
+<p id=6e09 class="phone s03"><cite>wendyreid:</cite> One other reason we stongly prefer platforms do the testing - in the case that side loading doesn't work the same way as other ingestion methods, we might make it look like there is a bug or missing feature in the platform<br>
+<span id=782f>… so reading system testing is best, but we take what we can get</span><br>
+<span id=2bac>… But even just ingesting all the books would be good</span><br>
+<span id=2e34>… and if they are visible we can test them</span></p>
+<p id=3576 class="phone s11"><cite>Hadrien:</cite> Back to what Ivan said, there is more than just the spec testing, Amazon has other requirements that are being implemented by authors</p>
+<p id=719f class="phone s02"><cite>ivan:</cite> At the moment the results are the old results. I propose that we remove those results, so the tables would all be empty<br>
+<span id=67f3>… old results will still be archived. Objections?</span></p>
+<p id=d08c class="phone s10"><cite>sueneu:</cite> Makes sense, just so long as there is a link somewhere to see the old results</p>
+<p id=f68f class="phone s02"><cite>ivan:</cite> Ok, it is there, but there is no link. But I could add a link for old tests</p>
+<p id=3187 class="phone s10"><cite>sueneu:</cite> That works</p>
+<p id=1f5d class="phone s06"><cite>gautierchomel_:</cite> Do we have a field to say who ran the test? For instance, was the tester from the same org as the reading system</p>
+<p id=2bee class="phone s02"><cite>ivan:</cite> So we can add it, but what do we do with that data? I don't think we should say who ran the test<br>
+<span id=0748>… I am not sure if we should display a name</span></p>
+<p id=f0d8 class="phone s03"><cite>wendyreid:</cite> we don't need to show it, but we could store it</p>
+<p id=6063 class="phone s08"><cite>duga:</cite> It seems like we could just simply say &quot;is representative of company&quot; boolean? We just need to know platform a's tests were done by someone else, platform b was done by an employee</p>
+<p id=6ada class="phone s06"><cite>gautierchomel_:</cite> Agree with duga.</p>
+<p id=f6fb class="phone s02"><cite>ivan:</cite> Should I add a flag that is official test or not?</p>
+<p id=4e49 class="phone s03"><cite>wendyreid:</cite> Something like that</p>
+<p id=c144 class="phone s02"><cite>ivan:</cite> I will do a PR, we can discuss there</p>
+</section>
+
+<section>
+<h3 id=2817>AOB</h3>
+<p id=bd6d class=summary><a href="https://www.w3.org/news-events/tpac/2026/registration/">https://<wbr>www.w3.org/<wbr>news-events/<wbr>tpac/<wbr>2026/<wbr>registration/</a></p>
+<p id=4a92 class="phone s03"><cite>wendyreid:</cite> reminder - tpac registration<br>
+<span id=78da>… early bird ends soon. Invited expert don't pay, and there are fee waivers if needed</span><br>
+<span id=4b42>… Also, some people have vacations coming up - should we reduce meeting cadence?</span></p>
+<p id=68d4 class="phone s10"><cite>sueneu:</cite> Can we do this in slack?</p>
+<p id=6002 class="phone s03"><cite>wendyreid:</cite> maybe I will do a poll</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+
+</body>
+</html>
