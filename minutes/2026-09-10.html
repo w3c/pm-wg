@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 10 September 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>Publishing Maintenance Working Group Telco</h1>
+<h2>10 September 2026</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/mid/410CF6A4-3B67-468C-B984-64B941787C2A@neustudio.com"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/09/10-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>avneesh, CharlesL, DaleRogers, duga, gautierchomel, GeorgeK, gpellegrino, Hadrien, ivan, kimberg, laurent, LaurentLM, MasakazuKitahara, shiestyle, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>susan, wendy</dd>
+<dt>Scribe</dt><dd>sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#ce6d">Annotations</a>
+<ol>
+<li><a href="#5a31">w3c/<wbr>epub-specs#2852</a></li>
+<li><a href="#78e3">w3c/<wbr>epub-specs#2884</a></li>
+<li><a href="#f536">w3c/<wbr>epub-specs#3009</a></li>
+</ol>
+</li>
+<li><a href="#376f">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=ce6d>Annotations</h3>
+<p id=8f15 class="phone s01"><cite>Laurent:</cite> This is where we left off for the summer, but there are some issues we can tackle…<br>
+<span id=ae01>… I'm still looking for implementers, Thorium will get annotations in 3.6 in 2 months as a test</span><br>
+<span id=b8ce>… I hope someone from Readwise or colibrio will do also</span></p>
+<h4 id=5a31><a href="https://github.com/w3c/epub-specs/issues/2852">w3c/<wbr>epub-specs#2852</a></h4>
+<p id=fd6a class="phone s01"><cite>Laurent:</cite> This issue was offering breadcrumbs to the reading system to get back to the origin</p>
+<p id=af8c class=irc><cite>&lt;ivan&gt;</cite> +1</p>
+<p id=3f5b class="phone s01"><cite>Laurent:</cite> since no one expressed a need for this I propose we remove issue 2852</p>
+<p id=8d00 class="phone s02"><cite>Hadren:</cite> we have the body, and this would block other contextual elements, there wouldn't be any human readable code left if we drop this</p>
+<p id=7c69 class="phone s01"><cite>Laurent:</cite> If you drop the HTML you would still have something you could export from the locator, like the publisher and the book</p>
+<p id=6f75 class="phone s03"><cite>Hadrien:</cite> I am not a fan of having something specific, a general text can be most useful. It could be a title, something from the TOC<br>
+<span id=09d5>… what I'm describing is a little different than what you have here. You could resolve it is a few ways</span><br>
+<span id=9dc1>… when you have access to the file it is possible to extract the information, but when you have only the extraction, it could be come a problem. We could use something broader in scope</span></p>
+<p id=2b4e class="phone s04"><cite>ivan:</cite> are we talking about the same thing? On the annotation set there is an about object, and the issue isn't about this. The meta object was created on the target which means something undefined</p>
+<p id=e55e class="phone s03"><cite>Hadrien:</cite> I was talking about an annotation that is not on the annotation set level<br>
+<span id=21d3>… basically I'd like to make sure annotations are useful even when I don't have access to the original publication</span></p>
+<p id=7f5c class="phone s01"><cite>Laurent:</cite> If we want that it means replacing the structure with a string giving context, like chapter title or page. It would be up to the reading system to decide what that is</p>
+<p id=d27b class="phone s05"><cite>duga:</cite> I agree with Hadrien, but is this something I need to do for version 1 of the spec. It feels useful, but it will take some work to figure out the right way to do it.<br>
+<span id=2e19>… if we're not specific, this could be too obscure to be used. If we don't want to do this for 1.0 we should remove it</span></p>
+<p id=53e8 class=irc><cite>&lt;DaleRogers&gt;</cite> s/same thing./same thing?</p>
+<p id=7b14 class="phone s03"><cite>Hadrien:</cite> we work with the publication timeline, like at all times I have a header or a progress bar, so I know where I am in a publication. Also useful in a search<br>
+<span id=ffff>… a publication timeline is easy to generate with prepaginated media, and audio or video. Its more complex with a reflowable ebook but it is useful. And helpful for the user.</span></p>
+<p id=103d class=irc><cite>&lt;DaleRogers&gt;</cite> s/same thing./same thing?/</p>
+<p id=2ca6 class="phone s03"><cite>Hadrien:</cite> this string would be similar to what we would generate for a timeline. Each reading system does it their own way</p>
+<p id=2b2d class="phone s04"><cite>ivan:</cite> to be practical. even though we haven't talked about a timeline, I don't think this specification will make it to recommendation by the end of this working group (February '26). Se we can extend the timeline and come up with a proper set of attributes.<br>
+<span id=95b3>… we should acknowledge that this is open and needs more work. Someone could take on finding more specific properties.</span></p>
+<p id=a102 class="phone s01"><cite>Laurent:</cite> I am OK with this proposal</p>
+<h4 id=78e3><a href="https://github.com/w3c/epub-specs/issues/2884">w3c/<wbr>epub-specs#2884</a></h4>
+<p id=776d class="phone s06"><cite>LaurentLM:</cite> The target may not be a specific segment in the document unless we consider that the whole document can be a specific segment<br>
+<span id=b8ea>… the problem comes from the word &quot;segment&quot; and what can be the size of the target. We know if can be a video or audio. The term segment comes from the W3C model itself.</span><br>
+<span id=8bd0>… I proposed a change of working to &quot;segment of interest&quot; I'm looking for ideas to rewrite that</span></p>
+<p id=f8d5 class="phone s03"><cite>Hadrien:</cite> by segment do you mean fragment?</p>
+<p id=9935 class="phone s06"><cite>LaurentLM:</cite> perhaps we should remove the sentence, we should just say what it is. There are restraints in our annotation beyond what is in the W3C annotations</p>
+<p id=251d class="phone s05"><cite>Duga:</cite> There are nuances here, and we can delete this sentence. We just have to explain how things are different.</p>
+<h4 id=f536><a href="https://github.com/w3c/epub-specs/issues/3009">w3c/<wbr>epub-specs#3009</a></h4>
+<p id=fcbb class="phone s04"><cite>Ivan:</cite> This is a general thing, what should be listed as metadata for an annotation set. What we have now is not much</p>
+<p id=d322 class="phone s06"><cite>LaurentLM:</cite> you prefer we remove &quot;generator&quot; it was part of the W3C model, I see it as a useful tool<br>
+<span id=8599>… you also propose to remove the DC format, because we shouldn't speak about format in this specification</span><br>
+<span id=659d>… the properties retained are identifier, format, title, publisher, creator, date of release. These are common properties to find in epub</span><br>
+<span id=2f9d>… you propose to remove format, why?</span></p>
+<p id=e807 class="phone s04"><cite>ivan:</cite> my  question about generator, is to define what it should be, I don't know how I would debug this and what I would see.</p>
+<p id=eaf7 class="phone s06"><cite>LaurentLM:</cite> I see, I agree</p>
+<p id=f0b0 class="phone s05"><cite>Duga:</cite> I am against putting debugging information in any export format, it doesn't belong in the spec it is a privacy issue</p>
+<p id=35d8 class="phone s04"><cite>Ivan:</cite> that is in line with what I'm saying, put in a URL.</p>
+<p id=3b16 class="phone s05"><cite>Duga:</cite> If I use a screen reader, I may not export that information to everyone</p>
+<p id=6238 class="phone s04"><cite>Ivan:</cite> about the format issue, it is a question we should answer ourselves<br>
+<span id=ec41>… I have no idea how PDF works, if all the things we define are usable in PDF and we are not able to confirm this. PDF is irrelevant unless we go through the whole document and add PDF specifications</span><br>
+<span id=097c>… that's why format isn't useful, because the only value would be EPUB</span></p>
+<p id=2cc8 class="phone s07"><cite>gautierchomel:</cite> I might need to know the format of the output for use case 5,3 Annotations used in the publishing workflow</p>
+<p id=481a class="phone s03"><cite>Hadrien:</cite> I don't think we can trust all the metadata that we have, we probably need less. I'm OK with title and time stamp. DC date seems weird, we may not have this information in a reliable place.</p>
+<p id=be98 class="phone s08"><cite>wendyreid:</cite> I agree with Hadrien, there are contexts inwhich ID is important, these may be context specific, this information may be less reliable outside of that rs<br>
+<span id=9fa3>… I see what you are saying gautierchomel, I think some of what you mention could be inferred from the file itself, and other information might escape</span></p>
+<p id=2db5 class="phone s04"><cite>ivan:</cite> we are talking about all this in isolation, when I export information, these metadata values will be in the exported package, we need to say that these must be a copy of the values use in the document<br>
+<span id=d59d>… and this is testable for conformance</span><br>
+<span id=68e1>… the question is whether the importing system can trust it, and maybe not, but it provides information</span></p>
+<p id=422c class="phone s06"><cite>LaurentLM:</cite> I agree there is an advantage to exporting information about the document in the annotation set<br>
+<span id=bd36>… when I am importing annotations from one system into the same title on another system, the information would be helpful. Especially if a human can make the decsion</span></p>
+<p id=e012 class="phone s03"><cite>Hadrien:</cite> we know unique identifiers are not always unique. I think this will fail. I expect the real use case will be that people will import annotations for a particular book. I don't expect annotations to translate well from one system to another.</p>
+<p id=10000 class="phone s05"><cite>Duga:</cite> I agree with Hadrien about the identifier, and also that there might be information useful to the user, we may want to be able to give the user information about the annotations before they import them.<br>
+<span id=fb17>… some of the information is useful, but DC identifier is useless</span></p>
+<p id=83ad class="phone s04"><cite>ivan:</cite> what if I take an identifier like a hash of the whole package document, then I can check if the origin of the annotations and the current document are the same</p>
+<p id=3220 class="phone s05"><cite>Duga:</cite> I don't know how well that will work in practice</p>
+<p id=4435 class="phone s08"><cite>wendyreid:</cite> I agree knowing dc identifier is unreliable, the uuid can be too specific, but that can be updated per edition, what if we identify the publication through multiple parts of the metadata in a decsending order.<br>
+<span id=10001>… ultimately we have something that is useful to show the reader before they import it. We can use title, publisher, and more information from the reading system like related titles.</span></p>
+<p id=d960 class="phone s03"><cite>Hadrien:</cite> We've seen examples of people trying to use hash and it fails. One example is KO reader sync, they send a hash and a path or two paths. Whenever you do anything with the file the hash changes.<br>
+<span id=ad8f>… hash is a brittle thing to use, like a house of cards. I like Dugas suggestion of using the minimum information</span></p>
+<p id=c79d class="phone s09"><cite>GeorgeK:</cite> are we going to have enough information to create a bibliographic reference?<br>
+<span id=1279>… there is more information needed than the dc:title</span></p>
+<p id=a0b6 class="phone s08"><cite>wendyreid:</cite> we are limited to what's in the package document, not all publishers put in good data</p>
+<p id=1829 class="phone s03"><cite>Hadrien:</cite> if we are talking about citation references, there are many styles, and it is unlikely that we would get all that data in an epub file.</p>
+<p id=e6c7 class="phone s06"><cite>LaurentLM:</cite> if we take the baseline, then we include only title and creator in the metadata</p>
+<p id=059b class="phone s08"><cite>wendyreid:</cite> maybe publisher</p>
+<p id=bfc1 class="phone s06"><cite>LaurentLM:</cite> publisher doesn't seem useful to the user. Even if there are two books with the same title the creator will help differentiate</p>
+<p id=1ff1 class=irc><cite>&lt;sueneu&gt;</cite> +1 wendyreid</p>
+<p id=17af class="phone s10"><cite>DaleRogers:</cite> from an annotation point of view, knowing which book information to put into an annotation set, does a reading system have to check the incoming information against an existing title. Is the issue at the software level or the user's level?</p>
+<p id=31e3 class="phone s06"><cite>LaurentLM:</cite> a good use case: I am a user and I want to associate annotations with a certain book. I select the epub, select the annotations, then the reading system checks the title, and if there is a discrepancy, it alerts the reader. A human choice aided by the machine</p>
+<p id=46b2 class="phone s05"><cite>Duga:</cite> I don't know enough about dc:publisher in ebooks if it is useful or not. As a reader I don't care who published my book. But it might be important to other readers. Since this isn't usually exposed to the user, and if the data isn't good, it could be confusing. I lean toward not including it but could be talked out of it</p>
+<p id=2591 class="phone s04"><cite>ivan:</cite> I am worried about the way we go into this discussion. We want to be sure none of the information can be misinterpreted. But then it doesn't get used because we are worried. In a large number of cases, if I know author, publication, year, etc. It will give me enough information to find it. We are throwing away everything because there are some cases where it doesn't work.<br>
+<span id=0b5c>… I think we should make it clear to publishers that the package document information should be there, even if in practice these things can go wrong. Let's not throw away the information because sometimes it can go wrong.</span></p>
+<p id=61c7 class="phone s07"><cite>gautierchomel:</cite> we should encourage good practices in publishing and not punishing the ones who do it right</p>
+<p id=c4be class="phone s06"><cite>LaurentLM:</cite> I made a mistake in the dc:date, it should be the date the Ebook is published</p>
+<p id=81d6 class="phone s10"><cite>DaleRogers:</cite> for an ebook we would tell our students where to get the book. I know everyone would get the same epub, same date, etc. So outputing the annotations in a classroom situation would work well. But could get more complicated in other use cases.</p>
+<p id=7326 class="phone s09"><cite>GeorgeK:</cite> students will many times not like the school reading system environment and get the book from bookshare or another place and use the reading system that works for them. Happily if the publisher provided the title to bookshare the metadata should be the same.</p>
+</section>
+
+<section>
+<h3 id=376f>AOB</h3>
+<p id=1999 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://docs.google.com/document/d/1FfUjiK8PrKfqeVCAnjpgZ_rpq7ZSAziloyLT5AkZKjQ/edit?tab=t.0#heading=h.v52yw3mb2h7">https://<wbr>docs.google.com/<wbr>document/<wbr>d/<wbr>1FfUjiK8PrKfqeVCAnjpgZ_rpq7ZSAziloyLT5AkZKjQ/<wbr>edit?tab=t.0#heading=h.v52yw3mb2h7</a></p>
+<p id=10002 class="phone s08"><cite>wendyreid:</cite> we will talk about this more, here is a link to the TPAC agenda for you to review.</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
