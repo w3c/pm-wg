@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 24 September 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group Telco</h1>
+<h2>24 September 2026</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/mid/26445619-4A31-4270-BDDA-E7AB083BB580@neustudio.com"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/09/24-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>abe, AvneeshSingh, charlesl1, Duga, gpellegrino, Hadrien, ivan, kimberg, Laurent, MasakazuKitahara, shiestyle, sueneu, wendyreid</dd>
+<dt>Regrets</dt><dd>toshiakikoike</dd>
+<dt>Chair</dt><dd>susan, wendy</dd>
+<dt>Scribe</dt><dd>sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#9bdc">w3c/<wbr>epub-specs#3076</a></li>
+<li><a href="#6ee8">w3c/<wbr>epub-specs#3002</a></li>
+<li><a href="#8a1a">w3c/<wbr>epub-specs#3072</a></li>
+<li><a href="#2947">AOB</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section></section>
+
+<section>
+<h3 id=9bdc><a href="https://github.com/w3c/epub-specs/issues/3076">w3c/<wbr>epub-specs#3076</a></h3>
+<p id=e34c class="phone s01"><cite>Duga:</cite> How annotations should work with manifest fallbacks, I can summarize it<br>
+<span id=4346>… the issue here is if we restrict annotations to a spine item, and I have jpg 1 in the spine, put a book mark on it, and it has an html fallback, how does it look to an rs that is displaying the fallback?</span></p>
+<p id=f4e3 class="phone s02"><cite>LaurentLM:</cite> I propose that as the bookmark is one of the top level elements, if there is a fallback, the bookmark is not displayed when the rs is showing the fallback<br>
+<span id=e7d2>… reading system A puts a bookmark on the image, reading system B hides the bookmark, since you cannot necessarily highlight the fallback</span></p>
+
+<p id=9923 class="phone s01"><cite>Duga:</cite> I propose an RS should do its best to display the annotation in the fallback. That should work in the real world 99% of the time. Most of the time this will be a bookmark in manga. If it is a drawn annotation, it should be pixel perfect to display in both.<br>
+<span id=2ed1>… in theory this could break. A ChemML document that fallsback to a jpg could break. But some effort should be made to display it anyway so that there are not invisible annotations that can't be deleted.</span><br>
+<span id=cca0>… what happens if we are looking at an inline annotation? How would that work in a jpg.</span><br>
+<span id=5319>… things could fallback, and even a reading system wouldn't know it was there</span></p>
+<p id=e08a class="phone s03"><cite>Hadrien:</cite> I dislike the idea of hiding things. Like when a book is updated, we might have a bookmark with a note, having access to that is important<br>
+<span id=364d>… in general it is best to show something even if you can't resolve it. That's why having enough information in an annotation is importan</span><br>
+<span id=450d>… we've just implemented fallbacks in readium mobile. We are trying to support fixed layout. We exposed and API where a creator can use the html or the image. Because we support progression and other types of implementation, we can smoothly move between the two. At the spine level.</span><br>
+<span id=90d9>… we knew there would be variations among systems. Yes, you can't really bookmark something that isn't in the spine isn't that difficult. You can use the image URL for instance</span></p>
+<p id=cdc3 class="phone s04"><cite>CharlesL1:</cite> I agree it shouldn't be hidden, although if the target of the annotation isn't there it might make no sense, so some indication of what the orphaned annotation is referring to would be good.</p>
+<p id=7489 class="phone s02"><cite>LaurentLM:</cite> My issue is about an image with html fallback, a highlight rectangle on the image itself. How would you solve that?</p>
+<p id=0e65 class="phone s03"><cite>Hadrien:</cite> if this is a fixed layout, that is no problem</p>
+<p id=ffff class="phone s01"><cite>Duga:</cite> you can do a mix of fallbacks and reflowable fallback but that isn't a common usage. Playbooks does do this. It has an image mode and a text mode. Literally pictures of books that map to the reflowable text. It can map an annotation on the image to the reflowable.<br>
+<span id=f0b2>… but most often the content we have is Manga</span></p>
+<p id=d1ac class="phone s03"><cite>Hadrien:</cite> Manga and light novels. LNs are essentially relowable layouts with random fixed layout elements. Sometimes a spread, sometimes a single page</p>
+<p id=95a8 class="phone s02"><cite>LaurentLM:</cite> we can say that there is a best effort requested to map the annotation from a top level document to its fallback when necessary. We should add that to the reading system expectations.<br>
+<span id=dd3f>… we a few sections where this might fit, should we put it in one of those? Or make a new section? We can discuss this in the github issue</span></p>
+<p id=797d class="phone s05"><cite>@ivan:</cite> I thought this might be the answer, to put an indication in the RS recommendations, since fallbacks are often messy, it should have its own section. Without an all caps &quot;should&quot;</p>
+</section>
+
+<section>
+<h3 id=6ee8><a href="https://github.com/w3c/epub-specs/issues/3002">w3c/<wbr>epub-specs#3002</a></h3>
+<p id=812b class="phone s02"><cite>LaurentLM:</cite> I will add that to the next PR</p>
+<p id=4f1a class="phone s06"><cite>ivan:</cite> this gets into another problem, that an annotation in a specific book with a specific author should have a unique identification</p>
+<p id=6731 class="phone s02"><cite>LaurentLM:</cite> we can still link annotations</p>
+<p id=2fba class="phone s06"><cite>ivan:</cite> If an annotation is unique within a book that is one thing, but when you import an annotation that could clash</p>
+<p id=b0cf class="phone s02"><cite>LaurentLM:</cite> we could impose a UUID</p>
+<p id=f204 class="phone s03"><cite>Hadrien:</cite> in practice this will be done as an external function and RS won't trust them. I understood this was out of scope for this</p>
+<p id=10000 class="phone s01"><cite>Duga:</cite> this could be rat's nest. What if I allow people to edit an annotation? Should it get a new identifier because it was modified? Should the reference include the original annotation? I don't want to go down this path.<br>
+<span id=85f2>… let's us the UU ID and see what the industry does</span></p>
+<p id=7f90 class=irc><cite>&lt;Hadrien&gt;</cite> +1 for what @Duga said, pretty much my thoughts as well</p>
+<p id=b4be class=irc><cite>&lt;ivan&gt;</cite> +1 to move it to future versions</p>
+<p id=f0fa class="phone s02"><cite>LaurentLM:</cite> I agree this should be out of scope for now.</p>
+<p id=3d8a class="phone s06"><cite>Ivan:</cite> we may have a label that says &quot;future&quot; or &quot;postponed&quot;</p>
+<p id=10001 class="phone s07"><cite>wendyreid:</cite> could we add a note that we are considering this?</p>
+<p id=d4c1 class="phone s02"><cite>LaurentLM:</cite> we could use &quot;status deferred&quot;</p>
+<p id=1dcf class="phone s07"><cite>wendyreid:</cite> not everyone sees our github repository</p>
+</section>
+
+<section>
+<h3 id=8a1a><a href="https://github.com/w3c/epub-specs/pull/3072">w3c/<wbr>epub-specs#3072</a></h3>
+<p id=6c83 class="phone s07"><cite>wendyreid:</cite> I'm asking that we have a pointer to it</p>
+<p id=cf1f class="phone s02"><cite>LaurentLM:</cite> this is from a previous meeting, there are several small modifications that we previously agreed on.<br>
+<span id=4257>… looking at the modifications, I removed the generator object, changed the note at the beginning</span></p>
+<p id=59d6 class="phone s01"><cite>Duga:</cite> we raised the issue here because of the comment thread, do we require the values of the metadata field to match those of the metadata in the Ebook?<br>
+<span id=2881>… one argument is to make it &quot;dumb&quot; and match just what is in the EPUB</span><br>
+<span id=499e>… another is that there is sometimes better information from external sources. Like if a user types in a more accurate title. We know that internal EPUB data can be inaccurate</span></p>
+<p id=0bd3 class="phone s06"><cite>Ivan:</cite> unless we provide an annotation on the package document, so the author can make a comment or change the metadata, then I don't see why we should let the reader invent new metadata</p>
+<p id=2c7f class="phone s07"><cite>wendyreid:</cite> I think we probably should have a way for metadata to be edited. I've opened books where I needed to modify or fill in the blanks in the metadata. Especially in an academic setting. If I need to provide the city of publication, which is almost never provided in an Ebook, I have to add it manual<br>
+<span id=dbfe>… there is a necessary need for that editing</span></p>
+<p id=b6fb class="phone s06"><cite>ivan:</cite> that raises another issue. The about object and all the fields there are filled in by the rs, and readers can annotation the about object, then why would the rs use anything other than the metadata in the ebook.<br>
+<span id=900a>… for now in the specification, it is the rs that does something with metadata</span></p>
+<p id=f8f9 class="phone s01"><cite>Duga:</cite> in Playbooks I think none of the implementers know the metadata title of an ebook. Publishers can edit that at many points. These get overwritten. The user/reader sees the title the reading system provides. They will be completely surprised when they see the title from the metadata, which could be something obscure like &quot;mob_dick_v2&quot;<br>
+<span id=f5aa>… we know the data in the epub is the worst data. We are asking reading systems to work harder to display bad data</span></p>
+<p id=3a0f class="phone s07"><cite>wendyreid:</cite> I think ivan and I are closer in concept. I can totally see that some reading systems will allow readers to edit the metadata, like a Vital Source having these features, so we can leave this in the hands of implementers.<br>
+<span id=1c31>… if implementers hear from their users they can respond. Series data is an example of that, users always want the ability to update that</span></p>
+<p id=6836 class="phone s02"><cite>LaurentLM:</cite> it is largely requested for users to change the title, etc. within the publication. We don't implement that now, but people will expect to see their title, not the one from the metadata</p>
+<p id=9395 class="phone s03"><cite>Hadrien:</cite> there are 2 types of reading systems, some of them provide ability to edit metadata or even bring in 3rd party data. These types get better data from PDS<br>
+<span id=021c>… another type is libraries and institutions, where all the metadata are coming from ONIX or similar services.</span><br>
+<span id=ef45>… for category two, it is odd to expect users to change the metadata. It is more common for category one, where users have more time to catalog their own files.</span><br>
+<span id=a1ac>… so it is hard to come up with one recommendation for both. It will be hard to convince type 2 to change their ways.</span></p>
+<p id=7b81 class="phone s06"><cite>ivan:</cite> it is clearly a clash between theory and practice. I have to accept that the practice is much messier. For this issue, I yield to the practice. But none of the problems we have talked about here are addressed in our recommendations<br>
+<span id=06b7>… perhaps we should come back to this in the charter. But here we should include a note about why we don't take into account the package metadata.</span><br>
+<span id=9fb6>… because this might seem illogical</span></p>
+<p id=a242 class="phone s07"><cite>wendyreid:</cite> this is probably a good EPUB 3.5 conversation. We really do have two very different types of users and use cases. We have focused more on the ecosystem publisher/distributor/end user pipeline. Where gaps are shored up by ONIX<br>
+<span id=d528>… there is a very large community that consumes EPUB outside of that system, even if the use it sometimes. They be managing their own metadata. That community talks about annotations more. Like the Calibre community. Where people are customizing their library, even writing their own reading software. We should probably document it better</span></p>
+<p id=10002 class="phone s03"><cite>Hadrien:</cite> this group is unrepresented here. I'm in touch with them because they all use OPDS. They do sometimes contribute to Github issues. Right now we are not connected to that community and it is huge.<br>
+<span id=a393>… do we want to serve this community and how do we want to reach out. They want to move fast and test things. They know a lot about what goes wrong in EPUB production in general.</span><br>
+<span id=0eb9>… this is a bit off topic but we should come back to this as WG and decide if we want to serve them and how we reach out</span></p>
+<p id=396f class="phone s07"><cite>wendyreid:</cite> we should add this to charter talks?</p>
+<p id=72c0 class="phone s06"><cite>ivan:</cite> Yes, but should we add something about not allowing metadata in the annotations?</p>
+<p id=1ee7 class="phone s02"><cite>LaurentLM:</cite> I can change the metadata source to something more generic, like &quot;that is used by the reading system&quot; with a caveat that this may vary from one rs to the next.</p>
+<p id=9d69 class=summary>Thanks, Hadrien</p>
+<p id=9b0a class="phone s02"><cite>LaurentLM:</cite> I had an ai help me review this for security issues and it found few things to fix</p>
+<p id=10003 class="phone s06"><cite>ivan:</cite> the W3C is leaning toward making threat models, and it is a lot of work. The emphasis of the threat model is on processing operations. Our situation might be simpler.<br>
+<span id=eb08>… I propose that you put what you have in the spec, and when we send it for horizontal review, we will see if they want the new proceedure</span></p>
+<p id=3dc6 class="phone s07"><cite>wendyreid:</cite> we did a threat model for 3.3?</p>
+<p id=8002 class="phone s06"><cite>ivan:</cite> these threat models are new. We should have a discussion in Dublin.</p>
+<p id=6362 class="phone s01"><cite>Duga:</cite> I sent a few comments on the privacy section, and I didn't read the security section because I thought it might be re-written, but I can take some time to read it.</p>
+<p id=e038 class=summary>Are we OK with this PR, or do we need others?</p>
+<p id=b6ea class="phone s02"><cite>LaurentLM:</cite> I will wait for Duga to have a look by Monday</p>
+</section>
+
+<section>
+<h3 id=2947>AOB</h3>
+<p id=f8d0 class="phone s06"><cite>ivan:</cite> A big open issue for me is annotations is how will we test this? I expect this will be a long discussion. It doesn't fit the kind of testing we do for EPUB itself.</p>
+<p id=e5e0 class="phone s07"><cite>wendyreid:</cite> we should open an issue for it.</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 248 (Mon Oct 27 20:04:16 2025 UTC).</address>
+
+
+</body>
+</html>
