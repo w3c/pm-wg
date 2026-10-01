@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group Telco &ndash; 01 October 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt=W3C border=0 height=48 width=72></a></p>
+
+<h1>Publishing Maintenance Working Group Telco</h1>
+<h2>01 October 2026</h2>
+
+<nav id=links>
+<a href="https://lists.w3.org/Archives/Public/public-pm-wg/2026Sep/0030.html"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/10/01-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, CharlesL1, DaleRogers, duga, gautierchomel_, GeorgeK, gpellegrino, Hadrien, LaurentLM, MasakazuKitahara, mgarrish, motoisuzuki, shiestyle, shintarofukushima, sueneu, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>susan, wendy</dd>
+<dt>Scribe</dt><dd>duga, sueneu</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#56c3">Extended Descriptions - https://<wbr>github.com/<wbr>w3c/<wbr>publ-a11y-extended-desc/<wbr>blob/<wbr>main/<wbr>README.md</a></li>
+<li><a href="#2c37">w3c/<wbr>epub-specs#3079</a></li>
+<li><a href="#9268">w3c/<wbr>epub-specs#3078</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=6290 class="phone s01"><cite>wendyreid:</cite> APA meeting is next week</p>
+</section>
+
+<section>
+<h3 id=56c3>Extended Descriptions - <a href="https://github.com/w3c/publ-a11y-extended-desc/blob/main/README.md">https://<wbr>github.com/<wbr>w3c/<wbr>publ-a11y-extended-desc/<wbr>blob/<wbr>main/<wbr>README.md</a></h3>
+<p id=db79 class="phone s01"><cite>wendyreid:</cite> so we should discuss the proposed Extended Descs</p>
+<p id=ce95 class="phone s02"><cite>GeorgeK:</cite> Trying to get new values into ARIA is difficult<br>
+<span id=345a>… we have been working on 2 attributes that identify extended descriptions</span><br>
+<span id=19f8>… Gautier is the author of the proposal</span><br>
+<span id=8130>… APA came back with comments, and we added them to the explainer</span><br>
+<span id=ed90>… this technique identifies 2 options. For EPUB we suggest a link after the thing that needs an extended desc</span><br>
+<span id=5938>… likely to the end matter that is out of spine</span><br>
+<span id=5fd3>… there the image is replicated and there is a back link</span><br>
+<span id=5867>… For the web, you can use a details element that expands and collapses. We know that can be a problem in EPUB</span><br>
+<span id=93e4>… You could also place it directly underneath the image, but that doesn't work as well for mainstream uses</span><br>
+<span id=f40b>… There is an ARIA details that can point to things on page, in this case it would point to the link</span><br>
+<span id=f759>… Also when people encounter this link there is no agreed upon way to identify the link or the content once you follow it</span></p>
+<p id=afef class=irc><cite>&lt;CharlesL1&gt;</cite> role=&quot;extendeddescriptionref&quot; to mark the forward link (the anchor in the primary content that points to the extended description).</p>
+<p id=3dc0 class=irc><cite>&lt;CharlesL1&gt;</cite> role=&quot;extendeddescription&quot; to mark the container that holds the extended description (which can be in the same document or in an external resource).</p>
+<p id=a99f class="phone s02"><cite>GeorgeK:</cite> we propose two attributes to solve this called [???] and [???]</p>
+<p id=c663 class="phone s03"><cite>mgarrish:</cite> This is bigger than dpub ARIA, extended desc is bigger than epub. That is why we are talking to APA and not just ARIA</p>
+<p id=6e6b class="phone s02"><cite>GeorgeK:</cite> gautierchomel_ and gpellegrino won't be able to attend next week, but I and mgarrish will be in attendance</p>
+<p id=4a21 class="phone s01"><cite>wendyreid:</cite> I know how resistant ARIA is to adding new roles. I wonder about roles when there isn't a specific semantic behavior</p>
+<p id=e384 class=summary>welcome colleagues from dpfj : )</p>
+<p id=655a class="phone s01"><cite>wendyreid:</cite> adding more semantics when there isn't a known behavior can be a problem<br>
+<span id=303a>… I think I am on the side of ARIA. What is the benefit of new semantics?</span></p>
+<p id=a284 class=irc><cite>&lt;gpellegrino&gt;</cite> <a href="https://daisy.github.io/transitiontoepub/best-practices/extended-desc/ExtendedDescriptionsBestPractices.html">https://<wbr>daisy.github.io/<wbr>transitiontoepub/<wbr>best-practices/<wbr>extended-desc/<wbr>ExtendedDescriptionsBestPractices.html</a></p>
+<p id=0ecd class="phone s04"><cite>gpellegrino:</cite> We already have guideline for these semantics.<br>
+<span id=c687>… We have checked with RS devs and they prefer a more declarative way</span><br>
+<span id=4c40>… with ARIA details you have to walk the DOM, sometimes in different files</span><br>
+<span id=b3a4>… For the expected behavior we have some suggestions in the explainer</span><br>
+<span id=e80b>… This could be in a sidebar or popup, etc. So we expect behavior</span></p>
+<p id=5201 class="phone s03"><cite>mgarrish:</cite> I raised this previously. And this is why we are bringing it to APA first<br>
+<span id=7135>… they have concerns</span><br>
+<span id=8e48>… so we are in the process of presenting at this point. The meeting next week will help flesh out the proposal from both sides</span><br>
+<span id=2706>… this is just the beginning of the conversation</span></p>
+<p id=ffff class="phone s05"><cite>Hadrien:</cite> I mentioned in email, but we have already impolemented extended desc in our iOS app<br>
+<span id=9eeb>… We have an image viewer that allows you to manipulate the view of the image (zoom, rotate)</span><br>
+<span id=38d9>… And there we have an extended desc</span><br>
+<span id=6c82>… We have mostly kept the algorithm, though slightly simplified. You get the extended desc there</span><br>
+<span id=69d1>… this is done via button, with the label taken from the link</span><br>
+<span id=4fd1>… there can even be multiple</span><br>
+<span id=f415>… it works. I don't like the use of non linear resources, but otherwise the affordance works</span><br>
+<span id=ac37>… We do see some bad descriptions, which are content problems. But when they are good the experience is really nice</span><br>
+<span id=9ca3>… There are some questions about read aloud, and whether to use extended desc</span><br>
+<span id=b48b>… so we are interested in guidance there. It is a little too verbose</span><br>
+<span id=cde4>… You can try it now on the Apple ecosystem</span></p>
+<p id=5a3d class="phone s02"><cite>GeorgeK:</cite> Accessible name and desc. I assume desc is the alt text?</p>
+<p id=d231 class="phone s05"><cite>Hadrien:</cite> It's more complicated than that. Alt text is one thing to use, but the algorithm calls for other things  that are more important<br>
+<span id=d915>… so we kept to the spirit of it</span></p>
+<p id=96db class=irc><cite>&lt;gpellegrino&gt;</cite> <a href="https://www.w3.org/TR/accname-1.2/">https://<wbr>www.w3.org/<wbr>TR/<wbr>accname-1.2/</a></p>
+<p id=de21 class="phone s02"><cite>GeorgeK:</cite> I am not familiar with it</p>
+<p id=6a2b class="phone s04"><cite>gpellegrino:</cite> Sending the link now</p>
+<p id=c5e4 class="phone s05"><cite>Hadrien:</cite> This is now in the toolkit so other apps can use it</p>
+<p id=7a67 class="phone s02"><cite>GeorgeK:</cite> Today we don't know what the link is to<br>
+<span id=5e73>… down the road I think a lot if pubs will want to use an icon as the link</span><br>
+<span id=0347>… a standard icon could help in identifying it</span></p>
+<p id=10000 class="phone s01"><cite>wendyreid:</cite> I think the use case is very clear<br>
+<span id=27c6>… the way we are saying to do this in EPUB makes sense, but we have to make the case for the web in general</span><br>
+<span id=1809>… things are different in epub</span><br>
+<span id=147a>… extended desc being a separate file makes perfect sense for EPUB. it isn't as clear for the web in general</span></p>
+<p id=9396 class="phone s03"><cite>mgarrish:</cite> That is why we want to go to APA first<br>
+<span id=19e5>… we don't want to start in dpub-aria to avoid surprising people</span><br>
+<span id=5279>… we just want everyone to get involved to see, we don't want to do it in isolation</span><br>
+<span id=4d53>… I agree if it doesn't work for the web, that is fine</span></p>
+<p id=fd5d class="phone s06"><cite>duga:</cite> where did this document come from?</p>
+<p id=5add class="phone s04"><cite>gpellegrino:</cite> the joint TF</p>
+<p id=27b8 class="phone s07"><cite>gautierchomel_:</cite> I want to add a use case around 1 file per chapter [I missed the first bit]<br>
+<span id=c6cf>… we have been working in this for a while, sent the first version to APA. I suggested we do the same for the web use case (open an issue, etc)</span></p>
+<p id=797f class="phone s08"><cite>CharlesL1:</cite> side note to Hadrien non-linear comment<br>
+<span id=586e>… I don't think we are hard and fast on that</span><br>
+<span id=370f>… pubs don't want to see extended desc at the end of the book</span><br>
+<span id=ddbc>… it is up the to the publisher</span></p>
+<p id=ed34 class="phone s09"><cite>sueneu:</cite> gautierchomel_ said we should develop a use case for the web<br>
+<span id=5e21>… is that outside our role?</span></p>
+<p id=6501 class="phone s01"><cite>wendyreid:</cite> There are areas of publishing that have browser experiences that are still publishing scenarios</p>
+<p id=290f class="phone s02"><cite>GeorgeK:</cite> Publisher use of LMS is extensive<br>
+<span id=aa9a>… if they choose to use details under an image it is still useful to know what it is</span><br>
+<span id=27eb>… as opposed to something that is frequently use for details (e.g. answers)</span><br>
+<span id=9aa3>… so this would clarify what the content of the details is</span></p>
+<p id=3630 class="phone s01"><cite>wendyreid:</cite> We are meeting with APA next week, plus some things they are bringing to us</p>
+</section>
+
+<section>
+<h3 id=2c37><a href="https://github.com/w3c/epub-specs/issues/3079">w3c/<wbr>epub-specs#3079</a></h3>
+<p id=6c69 class="phone s06"><cite>duga:</cite> This has come up a few times recently, that we don't have a processing model<br>
+<span id=b078>… the question is that we don't say what reading systems should do when they ingest one of the documents</span><br>
+<span id=447d>… what if it is missing a resource? what if it isn't jsonld?</span><br>
+<span id=1bbd>… what do you do if there is a target that isn't in the document</span><br>
+<span id=37ac>… I think we need to make sure that these solutions are interoperable because these things will be common</span><br>
+<span id=b58a>… we should tell reading systems what they should do when they encounter this</span></p>
+<p id=6817 class="phone s10"><cite>LaurentLM:</cite> we have an expectations section<br>
+<span id=50d0>… to create a real processing model we need some thing that is normatice</span><br>
+<span id=3be5>… one about the shape of the model, one about the processing, one non-normative expectations of reading systems</span><br>
+<span id=bb6d>… we can add more to a non normative section, but we can't call it a processing model</span></p>
+<p id=84dd class="phone s11"><cite>ivan:</cite> I am in favor of doing that normatively<br>
+<span id=741c>… I wonder if there are similar issues coming up from the other end</span><br>
+<span id=01a2>… and there is also the writing end</span></p>
+<p id=1f9b class="phone s06"><cite>duga:</cite> That is true, too. Right now, we talk about implementers but don't make it clear if we are talking about reading or writing<br>
+<span id=fe29>… we say that implementers should support the other kind do we say that they should output the other as well?</span><br>
+<span id=a2dc>… we should clarify that the output should be this, but you are allowed to read other things</span><br>
+<span id=11eb>… html makes similar things clear, like improper nesting of tags. We need to clarify when we talk about implementers if we are talking about reading or writing</span></p>
+<p id=a51c class="phone s11"><cite>ivan:</cite> To step back, we say we do not define how the implementation works in the epub. We only define export<br>
+<span id=a017>… we are only standardizing the export, not the import</span></p>
+<p id=6569 class="phone s10"><cite>LaurentLM:</cite> duga you are talking about collections, we should maybe remove it<br>
+<span id=59f5>… once stable we will create a json schema</span><br>
+<span id=6b45>… so that will be part of the judge</span><br>
+<span id=20aa>… so anything that doesn't fit the schema will be rejected</span><br>
+<span id=48dc>… so it must match the schema</span><br>
+<span id=7b00>… it doesn't solve everything, like if the anchor is missing</span></p>
+<p id=2895 class="phone s06"><cite>duga:</cite> To respond to ivan, I don't read that section of the spec the same way, we don't want to define what happens inside the reading system<br>
+<span id=7b87>… but import is still covered here. We should say &quot;you SHOULD reject&quot; or you &quot;MUST reject&quot; an import that doesn't match the schema</span></p>
+<p id=6a47 class="phone s05"><cite>Hadrien:</cite> It sounds tricky to do strong requirements</p>
+<p id=495a class="phone s06"><cite>duga:</cite> we should come up with a way to specify what should happen if an annotation doesn't match a file like &quot;chapter1.html&quot; but is still relevant, like if the annotations are traded between a &quot;Moby Dick&quot; from Standard Ebooks and another from Project Gutenberg</p>
+<p id=a5ce class="phone s05"><cite>Hadrien:</cite> you could theoretically find the annotation if it is text fragment<br>
+<span id=9c96>… I also think un-anchored is fine, but not everyone will. So I don't think we need hard requirements</span><br>
+<span id=12cc>… it is a balancing act</span></p>
+<p id=1d53 class="phone s06"><cite>duga:</cite> I'm not proposing any specific text right now, I like leaving things open. Maybe we should require that any annotation should be shown. But a reading system might not want to do that. So we shouldn't be too specific<br>
+<span id=740f>… but maybe people haven't thought of this. We could use &quot;SHOULD&quot; because if makes sense to try and find a text fragment even if the target content document is lost.</span><br>
+<span id=2530>… we can't make it precise, but we should add more than is there</span><br>
+<span id=f1ab>… I can raise individual issues on all the things I have listed, or do we want someone to take a crack at it for now</span></p>
+<p id=ae95 class="phone s11"><cite>ivan:</cite> We should this out. I will prefer to see the format fully fleshed out first<br>
+<span id=6c18>… and I would like to see the skeleton of a section for this</span><br>
+<span id=c613>… it makes it easier to do PRs</span></p>
+<p id=fe59 class="phone s10"><cite>LaurentLM:</cite> My only question now is, if we want something normative and we say to reject, can we say that if the external schema is non-normative?</p>
+<p id=af8e class="phone s11"><cite>ivan:</cite> We can make the schema normative. It is stable enough now<br>
+<span id=fbbc>… we can at least try</span><br>
+<span id=24c5>… so the schema will be part of the spec, perhaps indirectly</span><br>
+<span id=8381>… It won't be easy to produce</span></p>
+<p id=7a04 class="phone s01"><cite>wendyreid:</cite> Next steps?</p>
+</section>
+
+<section>
+<h3 id=9268><a href="https://github.com/w3c/epub-specs/issues/3078">w3c/<wbr>epub-specs#3078</a></h3>
+<p id=1978 class="phone s01"><cite>wendyreid:</cite> Something to think about for two weeks out<br>
+<span id=a1f0>… writing tests</span><br>
+<span id=8b5e>… it is different than epub</span><br>
+<span id=fc7d>… So please think of ideas</span></p>
+<p id=4d23 class="phone s06"><cite>duga:</cite> we only test normative rfc2119 statements? There aren't that many in the spec<br>
+<span id=3c36>… one of the reasons for the processing model is that there are normative statements that are missing</span></p>
+<p id=10001 class="phone s10"><cite>LaurentLM:</cite> The files you mention are good for import, but we also need to test export<br>
+<span id=075b>… so we need a single epub with a set of annotations to make</span></p>
+<p id=24bf class="phone s01"><cite>wendyreid:</cite> Right, so we need export and import tests, so we will need a canonical epub<br>
+<span id=683c>… we might be able to automate some of this, like the export</span></p>
+<p id=eaf1 class="phone s11"><cite>ivan:</cite> The problem is, if I want to annotate I can't choose the right selector<br>
+<span id=3fba>… the RS will choose. There might be two different selectors for the same things</span></p>
+<p id=0bd7 class="phone s06"><cite>duga:</cite> we can automate some</p>
+<p id=0c31 class="phone s11"><cite>ivan:</cite> so auto testing that the selectors id the same thing is hard</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 244 (Thu Feb 27 01:23:09 2025 UTC).</address>
+
+</body>
+</html>
