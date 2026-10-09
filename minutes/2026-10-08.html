@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group &ndash; 08 October 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group</h1>
+<h2>08 October 2026</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2026/10/08-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>AvneeshSingh, CharlesL, DaleRogers, duga, fudao, GeorgeK, janina, JeffAdams-UN, MasakazuKitahara, matatk, mgarrish, shiestyle, toshiakikoike, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>-</dd>
+<dt>Scribe</dt><dd>duga, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#c5d8">Extended Descriptions</a></li>
+<li><a href="#2c2d">Sync Media</a></li>
+<li><a href="#11a9">AI Content</a></li>
+<li><a href="#325f">Symbols Demo</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=ed8b class="phone s01"><cite>wendyreid:</cite> We wanted to discuss extended descriptions</p>
+</section>
+
+<section>
+<h3 id=c5d8>Extended Descriptions</h3>
+<p id=e45d class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/publ-a11y-extended-desc/blob/main/README.md">https://<wbr>github.com/<wbr>w3c/<wbr>publ-a11y-extended-desc/<wbr>blob/<wbr>main/<wbr>README.md</a></p>
+<p id=1e6f class="phone s02"><cite>AvneeshSingh:</cite> We have your feedback from extended desc</p>
+<p id=6725 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c/publ-a11y-extended-desc/issues?q=is%3Aissue%20state%3Aclosed%20label%3A%22APA%20Feedback%22">https://<wbr>github.com/<wbr>w3c/<wbr>publ-a11y-extended-desc/<wbr>issues?q=is%3Aissue%20state%3Aclosed%20label%3A%22APA%20Feedback%22</a></p>
+<p id=e57c class="phone s02"><cite>AvneeshSingh:</cite> We have improved the doc with your feedback<br>
+<span id=97b5>… there is a list of things that came from APA and our response</span></p>
+<p id=4db2 class="phone s03"><cite>matatk:</cite> We have people that want to make comments that aren't here today<br>
+<span id=9e11>… I see many things are addressed, I am just now seeing the list of closed things, very helpful</span><br>
+<span id=22b6>… Is it true anything that may affect the layout can't be done, that is why you can't do e.g. details?</span></p>
+<p id=5d9d class="phone s02"><cite>AvneeshSingh:</cite> Yes. toggling open something completely changes the page layout that you can't really do<br>
+<span id=69d3>… so it is fine for the web, but it is very broken for books</span></p>
+<p id=8a24 class="phone s03"><cite>matatk:</cite> One big question is plans for future revisions<br>
+<span id=ffff>… is there a plan to change the way details work in reading systems? E.g. by using a popup</span><br>
+<span id=552e>… is there a way to use standard elements but with different rendering?</span></p>
+<p id=1d1b class="phone s02"><cite>AvneeshSingh:</cite> People want to make content that works in most reading systems. So we would need a critical mass of reading systems</p>
+<p id=f97b class="phone s01"><cite>wendyreid:</cite> The best other example is footnotes<br>
+<span id=246f>… reding systems agreed this was a good idea</span><br>
+<span id=6284>… but getting there was fraut</span><br>
+<span id=5aba>… setting up the logic was hard. Details might be easier</span><br>
+<span id=927e>… it would have to be very well defined</span><br>
+<span id=b397>… This can also cause a repaint on eink</span></p>
+<p id=3a41 class="phone s04"><cite>duga:</cite> To address popups, it's not a silver bullet, it may not work<br>
+<span id=dfb6>… most reading systems discard the HTML/CSS of what they popup, since it's not well defined in HTML what to do with a fragment of a document</span><br>
+<span id=4452>… most reading systems don't bring up a full new webview in popups, almost all of them discard the styling</span><br>
+<span id=c682>… the popups for footnotes and definitions don't often have styling</span><br>
+<span id=3ab7>… reading systems won't want to create a new webview but that's my experience</span></p>
+<p id=a548 class="phone s05"><cite>GeorgeK:</cite> If someone wanted to do this as a popup, you would still need to know that this was an extended desc vs some other kind of content<br>
+<span id=1331>… so you still need the semantics</span></p>
+<p id=2b72 class="phone s02"><cite>AvneeshSingh:</cite> Agreed<br>
+<span id=83e6>… you still need to be able to identify it</span></p>
+<p id=10000 class="phone s06"><cite>CharlesL:</cite> You can also have those details expanded by default which means they may auto pop-up</p>
+<p id=ad3c class="phone s03"><cite>matatk:</cite> We will keep the slot at tpac and provide more feedback there<br>
+<span id=0abb>… In terms of semantics, you would still need it, but maybe there is another way</span><br>
+<span id=b7bf>… You could use aria described-by</span><br>
+<span id=c2e9>… Maybe we can think of some lower level thing. And maybe we can look more at the footnotes implementations</span></p>
+<p id=10001 class="phone s05"><cite>GeorgeK:</cite> One thing we want to consider is there are a lot of people with disabilities who do not use screen readers<br>
+<span id=3b3d>… Having a visible element that shows this is an extended desc is helpful. Would be great to have an standard icon for extended desc</span></p>
+<p id=3aee class=irc><cite>&lt;matatk&gt;</cite> +1 GeorgeK - that's a great point; need to ensure it's accessible for a wide range of people. Interesting suggestion about icons, too.</p>
+<p id=aaa7 class="phone s06"><cite>CharlesL:</cite> I am thinking if the ongoing symbols work, maybe there is something in there we could use</p>
+</section>
+
+<section>
+<h3 id=2c2d>Sync Media</h3>
+<p id=c356 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://github.com/w3c-cg/accessible-syncmedia-pub/">w3c-cg/<wbr>accessible-syncmedia-pub</a></p>
+<p id=2317 class="phone s02"><cite>AvneeshSingh:</cite> We also want to discuss sync media</p>
+<p id=01c2 class=irc><cite>&lt;AvneeshSingh&gt;</cite> <a href="https://www.w3.org/community/accessible-syncmedia-pub/">https://<wbr>www.w3.org/<wbr>community/<wbr>accessible-syncmedia-pub/</a></p>
+<p id=2df0 class="phone s02"><cite>AvneeshSingh:</cite> we need to align on long term scopes<br>
+<span id=1e52>… some things will be in the 3.5 charter</span><br>
+<span id=2fec>… Some tools esp on windows loose the alignment of playback</span><br>
+<span id=f681>… so the [???] should always be visible to the assistive tech</span><br>
+<span id=2c76>… We also need different sync levels to current media overlays</span><br>
+<span id=8ccd>… we want sync at various levels</span><br>
+<span id=a96e>… word, para, etc</span><br>
+<span id=4538>… this is the high level view if what want from media CG</span><br>
+<span id=c403>… so we want to mention this work has started</span></p>
+<p id=2afe class=irc><cite>&lt;matatk&gt;</cite> Digital Accessibility User Requirements: <a href="https://www.w3.org/WAI/research/user-requirements/">https://<wbr>www.w3.org/<wbr>WAI/<wbr>research/<wbr>user-requirements/</a></p>
+<p id=8dda class=irc><cite>&lt;matatk&gt;</cite> Specifically, synchronization: <a href="https://www.w3.org/TR/saur/">https://<wbr>www.w3.org/<wbr>TR/<wbr>saur/</a></p>
+<p id=19cf class="phone s03"><cite>matatk:</cite> That sounds great. Some people at APA have suggested similar work<br>
+<span id=19df>… There are lots of docs on synch (see links)</span><br>
+<span id=cde2>… this would be of use on the web as well</span><br>
+<span id=634a>… there is also a markup language we are considering joint work on</span><br>
+<span id=5925>… it would be good to explore what has been done and where we can share work</span><br>
+<span id=50d0>… I will ask around in that group as well</span><br>
+<span id=293f>… aria may also need to be involved</span><br>
+<span id=72d4>… we can discuss over the next few weeks</span></p>
+<p id=9035 class="phone s02"><cite>AvneeshSingh:</cite> Marissa already did some tests with webvtt<br>
+<span id=cdca>… in 3.5 we may need to do it with SMIL</span><br>
+<span id=2d3d>… Marissa may be able to connect at TPAC</span></p>
+<p id=a4c7 class="phone s06"><cite>CharlesL:</cite> We are currently collecting requirements in Marissa's group, so that work is already ongoing<br>
+<span id=1bf5>… so these will all become technical requirements eventually</span></p>
+<p id=82f2 class="phone s05"><cite>GeorgeK:</cite> Just so you know, the text reading level of native sign language users is very low<br>
+<span id=8f0d>… that has gotten better, but it is important to understand</span><br>
+<span id=afbe>… sign language is not a 1:1 to text</span><br>
+<span id=f494>… so aligning a video with the text is tricky</span></p>
+<p id=8375 class="phone s07"><cite>shiestyle:</cite> Is the sync media group for speech or just recorded media?</p>
+<p id=4542 class="phone s02"><cite>AvneeshSingh:</cite> Recorded media is the current focus</p>
+<p id=c177 class="phone s08"><cite>DaleRogers:</cite> Back in 2017 we had a poet and we wanted to approach their work from different points of view<br>
+<span id=6212>… so we have a web page that had different ways of consuming the poetry</span><br>
+<span id=8bdd>… when I think about how people consume content, from a design viewpoint is it better to specify a different way to display content</span></p>
+<p id=c0aa class=irc><cite>&lt;DaleRogers&gt;</cite> <a href="https://honeybunch.dalerogers.me/">https://<wbr>honeybunch.dalerogers.me/</a></p>
+<p id=95e9 class="phone s08"><cite>DaleRogers:</cite> I will put up a link about what i am talking about</p>
+<p id=ba93 class="phone s03"><cite>matatk:</cite> That is an important point, I will look at the research project<br>
+<span id=e7e5>… I think sometimes we want sync, and sometimes we want something totally different</span></p>
+</section>
+
+<section>
+<h3 id=11a9>AI Content</h3>
+<p id=8742 class="phone s02"><cite>AvneeshSingh:</cite> last topic - framework triggered<br>
+<span id=10002>… it should be identifiable in the content and in machine readable MD</span><br>
+<span id=19d2>… we realized this was a generic problem with a generic solution for epub</span><br>
+<span id=4ec4>… and maybe the same is true for the web</span><br>
+<span id=5645>… this is something were we might want to work together</span></p>
+<p id=10003 class="phone s03"><cite>matatk:</cite> First, whatever is the law we have to facilitate<br>
+<span id=f8ba>… there was a discussion about this precise issue. Should we have an indicator from text that this was generated by a machine</span><br>
+<span id=805b>… What is the most important thing about the alt text? Not who made it, but whether it is good</span><br>
+<span id=b965>… telling a user that it was AI generated doesn't really help the end use</span><br>
+<span id=3900>… r</span><br>
+<span id=6dd3>… There is a genuine problem with e.g. hallucinations, but I am not sure this is the solution</span><br>
+<span id=ae47>… I will find the issue so you can add comments</span><br>
+<span id=d4de>… You might suggest a minimum level of conformance is a machine made it, then a level up is a human reviewer, then a human editor, etc</span><br>
+<span id=c497>… so it may be useful when making it to know this info</span><br>
+<span id=7eed>… and if there is a legal requirement then that is another thing</span><br>
+<span id=6522>… I will find the original thread and see where it goes</span></p>
+<p id=8fbd class="phone s06"><cite>CharlesL:</cite> I Knowing that it was AI generated is one thing, but which model may also be a huge difference<br>
+<span id=7adc>… so knowing the model in use can help trustability</span></p>
+<p id=a450 class="phone s09"><cite>JeffAdams-UN:</cite> I am thinking about this as an author., and this shows up in books a lot<br>
+<span id=a9af>… so maybe this goes into the metadata. Thinking of info asked about books on upload, Amazon has a list of levels</span><br>
+<span id=efe4>… so readers could decide to surface this, and it won't interfere with the content itself since it is in the broader book metadata</span></p>
+<p id=7d20 class="phone s03"><cite>matatk:</cite> This is a great discussion. With no animosity let me flip the question<br>
+<span id=634b>… you would have to be pretty involved in this stuff. But won't there be an explosion of metadata?</span><br>
+<span id=3674>… and for a human, should we ask how busy they were that day? Quality is a general problem</span></p>
+<p id=fcae class="phone s08"><cite>DaleRogers:</cite> The alliance for independent authors discusses this alot, including AI generated vs AI assisted</p>
+<p id=0bd0 class=irc><cite>&lt;matatk&gt;</cite> +1 DaleRogers - using it at authoring time as opposed to runtime changes the game</p>
+<p id=4c31 class="phone s08"><cite>DaleRogers:</cite> so I may create a description via AI for a comic, but I review it and edit. So that is assisted, and good to know</p>
+<p id=e9c1 class="phone s10"><cite>mgarrish:</cite> The idea from JeffAdams-UN is interesting, just adding it to metadata, and schema.org may have something to help<br>
+<span id=2128>… not sure what EAA requires</span></p>
+<p id=10004 class="phone s11"><cite>janina:</cite> We discussed in the research questions TF a lot<br>
+<span id=10af>… pushing back on CharlesL I am not convinced all that info will help. The quality depends on how you prompted and followed up</span><br>
+<span id=7293>… I think assisted vs generated is really useful</span><br>
+<span id=4a93>… who cares what tools a human used, as long as it was human generated (e.g. spell checkers)</span><br>
+<span id=5ea2>… So what we want to know was there a human in the loop?</span></p>
+<p id=b58c class="phone s03"><cite>matatk:</cite> Of 3 things on APA, there is 3.5 , pronunciations, and symbols stuff. we have 7 minutes left, do you want a symbols demo?<br>
+<span id=242d>… we can also do a demo at tpac</span></p>
+<p id=d862 class="phone s09"><cite>JeffAdams-UN:</cite> One quick though, we discussed EAA. There are also fingerprinting requirements<br>
+<span id=72a9>… a sentence may not get a fingerprint, but longer text would, and we need to consider that</span></p>
+<p id=3b86 class="phone s01"><cite>wendyreid:</cite> There has also been some drama around bad AI claims</p>
+</section>
+
+<section>
+<h3 id=325f>Symbols Demo</h3>
+<p id=9712 class="phone s03"><cite>matatk:</cite> Background - this is a long running project<br>
+<span id=1524>… about 10 years at this point</span><br>
+<span id=33eb>… some people use AAC symbols to understand text</span><br>
+<span id=ee24>… symbols help people understand what the text is about</span><br>
+<span id=46b4>… you can't just add them to the page, as there are a lot of symbols</span><br>
+<span id=67a5>… We have teemed up with Bliss for their dictionary of symbols (we don't use their full language)</span><br>
+<span id=5715>… [demo ongoing]</span><br>
+<span id=a519>… can choose which set of symbols to use</span><br>
+<span id=db44>… this uses ruby and fonts</span><br>
+<span id=7de8>… so each symbol is the unicode value for it in the Bliss language</span><br>
+<span id=23b1>… we are hoping this is a sound approach</span></p>
+<p id=0a8b class="phone s06"><cite>CharlesL:</cite> That is awesome congrats<br>
+<span id=07bd>… I am happy to see this using ruby and unicode</span></p>
+<p id=503a class=irc><cite>&lt;matatk&gt;</cite> Special acknowedgement to Russell Galvin from Bliss who made the fonts for the demo.</p>
+<p id=bcba class="phone s02"><cite>AvneeshSingh:</cite> There are no decisions being made at the tpac meeting, it is just for discussion</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 249 (Tue Sep 29 16:09:09 2026 UTC).</address>
+
+</body>
+</html>
