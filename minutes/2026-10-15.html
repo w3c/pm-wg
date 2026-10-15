@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Publishing Maintenance Working Group &ndash; 15 October 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+Publishing Maintenance Working Group</h1>
+<h2>15 October 2026</h2>
+
+<nav id=links>
+<a href="https://www.w3.org/2026/10/15-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd>ajellinek, CharlesL, DaleRogers, duga, gautierchomel_, GeorgeK, Hadrien, kimberg, LaurentLM, shiestyle, sueneu, wendyreid</dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>wendyreid</dd>
+<dt>Scribe</dt><dd>sueneu, wendyreid</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#7edf">w3c/<wbr>epub-specs#3071</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+
+
+<section>
+<h3 id=7edf><a href="https://github.com/w3c/epub-specs/issues/3071">w3c/<wbr>epub-specs#3071</a></h3>
+<p id=3674 class="phone s01"><cite>wendyreid:</cite> this is &quot;offer a human readable way to identify the annotation&quot;<br>
+<span id=8769>… we talked about this a few weeks ago, about providing breadcrumbs and hierarchy to find the target of the annotation</span></p>
+<p id=6bbc class="phone s02"><cite>LaurentM:</cite> proposed adding two new pieces of metadata to help people find the target</p>
+<p id=3c26 class="phone s02"><cite>LaurentM:</cite> we have two solutions there, as strings, one which will be different from one rs to another<br>
+<span id=311b>… the second one will be more structured and is a little harder to define. Should it be a page? or a locator?</span><br>
+<span id=edba>… I recommend we keep a single label and let the reading system make the magic</span></p>
+<p id=8ca2 class="phone s03"><cite>Hadrien:</cite> What is this for? If we're talking about display in an RS, it probably isn't needed. The main use would be when you don't have access to the book<br>
+<span id=1568>… in that case, some kind of label which may not always be useful, progression in the book might be the best we can do. I don't recommend using page or page list because they are not reliable</span></p>
+<p id=f7a4 class="phone s01"><cite>wendyreid:</cite> I agree progression is challenging, and page list isn't reliable. I know there are a lot of books without page lists and this is a challenge. Maybe percentage plus the headings would be sufficient<br>
+<span id=95f0>… in the context of a reading system it might not be needed, but when it is exported to another tool, or the exported results themselves, when you look at annotations as an export, you need context to know what you are looking at. It's not adequate to see just the note</span></p>
+<p id=92cb class="phone s04"><cite>duga:</cite> I understand why we might want these, page in the current proposal is only for fixed layout, which might be not annotated very often. We should figure out an answer, we might not want to create new strings. We have had problems with strings in the package before by allowing raw strings with no markup. Internationalization will make this more<br>
+<span id=c1a4>… complex. If we're starting to introduce new strings that will be displayed with no markup, it may not be properly represented</span></p>
+<p id=8576 class="phone s03"><cite>Hadrien:</cite> I hear you Brady, I feel like there is not much we can do about this. Whenever we try to use HTML it is useless, and usually converted back to a string. We need to find a way to do this with unicode but that isn't our problem to solve. We keep going back to this, but I think it is a unicode problem and not ours.</p>
+<p id=3c47 class="phone s01"><cite>wendyreid:</cite> where does that leave us?</p>
+<p id=74f3 class="phone s04"><cite>duga:</cite> we put this on the agenda because it didn't get much traction. And that is happening here. Do we have someone who really champions this? Is it really needed?<br>
+<span id=c55c>… do we want to throw it out there and see if it works?</span></p>
+<p id=7306 class="phone s05"><cite>LaurentLM:</cite> As we have seen I think this feature ins't about the interchange between reading systems, more about exporting them to something that is human readable. We know that human readable export from a reading system may be something like HTML and used for things like citations.<br>
+<span id=7e9f>… since we have decided not to conflate annotations with citations maybe we don't need this</span></p>
+<p id=04db class="phone s01"><cite>wendyreid:</cite> Just exporting annotations essential raw, and import it into HTML or Markdown, all I will get is which book its attached to, a locator that isn't human readable, and I'll know if it is a highlight or a note. That is not enough to be usable. We see that in how platforms current export annotations. We need at least some human readable<br>
+<span id=373d>… parts. Kobo mentions the chapter and that gives me a chance to find the target</span></p>
+<p id=f87a class="phone s03"><cite>Hadrien:</cite> This has to do with whether you can present this outside a reading system or not? Do we want the format to be merely interchange or do we want it to be useful outside RS? If this is just about exchange we don't need any of this. What's the goal? When we answer that, it becomes easier to decide.</p>
+<p id=a289 class="phone s06"><cite>Laurent:</cite> When we started designing the export mechanism, I pictured it as a source for creating a human readable output in PDF or HTML. I realize that the reading system is capable of doing this. Kobo has multiple file formats on export, including ones that are human readable. We could leave this to the reading system to decide.</p>
+<p id=a6e8 class="phone s01"><cite>wendyreid:</cite> Hadrien has asked an important question. What is the primary use case we are targeting. They are not mutually exclusive, but what are we leaning into more? We want a usable format, there has been a request for this for a long time. What are their goals? Exporting or interoperability?</p>
+<p id=217c class="phone s07"><cite>sueneu:</cite> I worry a little about leaving export to reading systems, if our goal is interchangability, reading systems might be tempted not to export things in a human readable way<br>
+<span id=5bbe>… or not to other systems, just to try to maintain their business model</span><br>
+<span id=6a72>… if we leave it to the reading system we may not get what we want to get</span></p>
+<p id=0044 class="phone s04"><cite>duga:</cite> the suggestion isn't to leave it up to the reading system, but to leave the options up to the user. You can choose HTML, PDF or something like .annotation(machine readable)<br>
+<span id=885d>… we need to think about the people who read books, if we are targeting regular people we have lost everyone with JSON LD. Most people will look for a program to open it with. If we want a human readable format, we need to go back to basics. We need a clear separation between human and machine readable</span></p>
+<p id=a599 class="phone s03"><cite>Hadrien:</cite> we won't get human and machine readable in the same format. The bigger question is &quot;Can I generate something human readable from the machine readable file&quot;? A reading system has all it take to generate either.<br>
+<span id=ffff>… however if I want to aggregate all my bookmarks and notes somewhere else, how can I do that. It is difficult to answer what users want, it is hard to answer because we don't even have a machine readable file now. We are just guessing if this is needed.</span></p>
+<p id=013a class="phone s08"><cite>GeorgeK:</cite> I'm concerned with complexity for the end user. I know students want to be able to save these for study purposes, and it can be done to day with different programs. If I want to do something different, like moving annotations to another reading system, that's more complicated now. But it has to be human readable</p>
+<p id=15fa class="phone s05"><cite>LaurentLM:</cite> We guarantee that with our format that you can transfer your annotations from one RS to another as long as you have the same book in each. What we do not warranty is that without having the book that you will be able to make meaningful use of the annotations. You will have not context for what the annotation is about. Can this format be<br>
+<span id=e17b>… changed into something human readable without the help of another application</span></p>
+<p id=fbd8 class="phone s01"><cite>wendyreid:</cite> Do we have something in the annotations system that would allow us to take .annotations file and make it into something human readable. There will always be an app involved. Do we have the metadata that will make that possible. We can't allow for all publications, but we should be able to make this possible. The question is is this<br>
+<span id=9b51>… metadata valuable enough to be in the package</span></p>
+<p id=7b6a class="phone s05"><cite>LaurentLM:</cite> If I read in Thorium, and I have the same book in Zotero, and I export my annotations from Thorium, now I see my book and notations in Zotero, now I can export both the annotations and the citations.</p>
+<p id=0adc class="phone s03"><cite>Hadrien:</cite> If I am reading a book this DRM, and it expires, and I try to bring it in to another system with the same book, I may not be able to use the annotations. If I don't have access to the file, I may not be able to make a human readable version</p>
+<p id=59dd class="phone s08"><cite>GeorgeK:</cite> If I make a set of annotations and the reading system gives me the option to exchange with other RS or save to MSW for example, that is doable? That ability to get the human readable piece out of it would be essential</p>
+<p id=a791 class="phone s04"><cite>duga:</cite> does the current spec have the text of the book in the current annotation&quot;</p>
+<p id=7050 class="phone s05"><cite>LaurentLM:</cite> Not necessarily, it depends on the selector</p>
+<p id=7fc8 class="phone s04"><cite>duga:</cite> that is text before and after, right?</p>
+<p id=2702 class="phone s05"><cite>LaurentLM:</cite> yes, but we have a caution about protected text</p>
+<p id=ba46 class="phone s04"><cite>duga:</cite> if I make a blue highlight on page 3 of chapter 2, I can know that there is blue text, but without the text it is useless. If we want to do this, we will have to include the text. Or the human readable output would look kind of silly</p>
+<p id=436b class="phone s09"><cite>CharlesL:</cite> Couldn't a person annotate a whole chapter, export it and the publisher object?</p>
+<p id=050b class="phone s04"><cite>duga:</cite> we don't discuss DRM here, that is between the Reading System and their DRM provider. It means that certain books you cannot reconstruct your annotations because of choices made by the rights holder</p>
+<p id=0f56 class="phone s01"><cite>wendyreid:</cite> There are systems where there is a limit on exporting content. You can select it, but all you get is something like 600 characters. Based on an agreement between the RS and the publisher.</p>
+<p id=8b50 class="phone s05"><cite>LaurentLM:</cite> We will not create something that makes protecting books with a DRM impossible. We don't talk about copyright protection, but we don't do anything to make it impossible</p>
+<p id=24c2 class="phone s03"><cite>Hadrien:</cite> You're saying that in most reading systems that I can export 600 characters at a time? If we can do that over and over again we could answer Brady's question<br>
+<span id=25c7>… 600 is enough to find an annotation target</span></p>
+<p id=688b class="phone s04"><cite>duga:</cite> I know systems that have a quota for the percentage of the book and every time you copy or export from a DRM book. It could be painful in this situation, if you mark  up a lot. It doesn't come up in non fiction. I suspect the limit is around 20% Most systems won't let you select more than one page at a time. There are easier ways to steal<br>
+<span id=cbfe>… content.</span></p>
+<p id=74e9 class="phone s03"><cite>Hadrien:</cite> 20% is often the limit for previews, If I have the 50 first and last characters and an elipses between or whatever, that is already enough. It is doable for something that is human readable if we use the right selectors. It is nice to have the headers, but the text is more important.<br>
+<span id=51c7>… we still haven't answered the initial question, do we want to make something human readable?</span></p>
+<p id=b753 class="phone s05"><cite>LaurentLM:</cite> Use case 6, generating citations, either we remove this use case because a User can export this easily from the reading system or we implement it.</p>
+<p id=2251 class="phone s01"><cite>wendyreid:</cite> this is a philosophical question, what do we want from annotations?</p>
+<p id=9256 class="phone s05"><cite>LaurentLM:</cite> I propose that we focus on exchange for now, and leave it open to future versions</p>
+<p id=6885 class="phone s03"><cite>Hadrien:</cite> Is interchange the most important use case? We know people will use human readable export because they already do it</p>
+<p id=c5c0 class="phone s05"><cite>LaurentLM:</cite> If this fails, if no one uses it, it won't be because we make human readable content also</p>
+<p id=7c8e class="phone s03"><cite>Hadrien:</cite> I disagree, if my main use is Zotero, and I can't do that, then it is useless to me</p>
+<p id=5068 class="phone s10"><cite>gautierchomel_:</cite> if we don't include this we might end up with something messy</p>
+<p id=a9fa class="phone s05"><cite>LaurentLM:</cite> If we remove this will will simply have to change our specs</p>
+<p id=10000 class="phone s11"><cite>ajellinek:</cite> people ask for human readable output all the time, we've added some support for other readers, its not ideal as we are parsing their native formats. One of the advantages of Zotero is that the annotations are separate from the books on our server and are portable.</p>
+<p id=36d7 class="phone s01"><cite>wendyreid:</cite> is display part of the interchange?</p>
+<p id=ff37 class="phone s11"><cite>ajellinek:</cite> Yes, but not as often<br>
+<span id=dd69>… what people have is annotations on another RS and they want them on Zotero, we will have them as machine readable formats, and display is another issue</span></p>
+<p id=52aa class="phone s03"><cite>Hadrien:</cite> You need information to make the display. I ask what is the point of doing something if I can't get anything out of it? When you aggregate something from Kindle do you get enough information to show the user a list and provide something human readable? Why?<br>
+<span id=7daf>… what makes an annotation format usable enough that you can show them the annotation and make it human readable?</span></p>
+<p id=10001 class="phone s11"><cite>ajellinek:</cite> the bare minimum is a text snippet, we get into issues if we expect that to be all. We use whatever the RS considers its native locator. What Kindle generates right now is almost unusable, last I checked its a txt file with page numbers, quotes and comments in human readable format. KOReader uses a weird take on XPath for CFI, Calibre uses compliant CFI and it makes import easier</p>
+<p id=cdd2 class="phone s01"><cite>wendyreid:</cite> ajellinek that was incredible helpful thank you!</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 249 (Tue Sep 29 16:09:09 2026 UTC).</address>
+
+
+</body>
+</html>
