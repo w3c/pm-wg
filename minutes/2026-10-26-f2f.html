@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>PM Working Group F2F @ TPAC 2026, Dublin, 1st Day &ndash; 26 October 2026</title>
+<meta name=viewport content="width=device-width">
+<link rel="stylesheet" type="text/css" title="2018" href="https://www.w3.org/StyleSheets/scribe2/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/base.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/StyleSheets/public.css">
+<link rel="alternate stylesheet" type="text/css" title="2004" href="https://www.w3.org/2004/02/minutes-style.css">
+<link rel="alternate stylesheet" type="text/css" title="Fancy" href="https://www.w3.org/StyleSheets/scribe2/fancy.css">
+<link rel="alternate stylesheet" type="text/css" title="Typewriter" href="https://www.w3.org/StyleSheets/scribe2/tt-member.css">
+</head>
+
+<body>
+<header>
+<p><a href="https://www.w3.org/"><img src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c-white.svg" alt=W3C border=0 height=60 width=60></a></p>
+
+<h1>
+PM Working Group F2F @ TPAC 2026, Dublin, 1st Day</h1>
+<h2>26 October 2026</h2>
+
+<nav id=links>
+<a href="https://docs.google.com/document/d/1FfUjiK8PrKfqeVCAnjpgZ_rpq7ZSAziloyLT5AkZKjQ/edit?tab=t.0#heading=h.v52yw3mb2h7"><img alt="Agenda." title="Agenda" src="https://www.w3.org/StyleSheets/scribe2/chronometer.png"></a>
+<a href="https://www.w3.org/2026/10/26-pmwg-irc"><img alt="IRC log." title="IRC log" src="https://www.w3.org/StyleSheets/scribe2/text-plain.png"></a>
+</nav>
+</header>
+
+<div id=prelims>
+<div id=attendees>
+<h2>Attendees</h2>
+<dl class=intro>
+<dt>Present</dt><dd><details><summary>AvneeshSingh,</summary> bigbluehat, brady, CharlesL, Daihei, DaleRogers, DanielWeck, duga, gautier, gautierchomel, gautierchomel_, gendler, george, GeorgeK, giorgiopellegrino, gpellegrino, Hadrien, ivan, jkamata, laurent, marisa, marisa_, MasakazuKitahara, mgarrish, naomi, rdeltour, Samuel, shiestyle, sueneu, susan, Tomoaki_Mizushima, toshiakikoike, wendy</details></dd>
+<dt>Regrets</dt><dd>-</dd>
+<dt>Chair</dt><dd>shinya, susan, wendy</dd>
+<dt>Scribe</dt><dd>duga, wendyreid, sueneu, gpellegrino</dd>
+</dl>
+</div>
+
+<nav id=toc>
+<h2>Contents</h2>
+<ol>
+<li><a href="#c590">EPUB 3.4 Testing and Documentation</a>
+<ol>
+<li><a href="#bc1e">Documentation</a></li>
+</ol>
+</li>
+<li><a href="#3e07">Annotations</a></li>
+<li><a href="#aee4">LUNCH</a></li>
+<li><a href="#3355">Sync Media and Media Overlays</a></li>
+<li><a href="#cfba">Accessibility for Manga</a></li>
+</ol>
+</nav>
+</div>
+
+<main id=meeting class=meeting>
+<h2>Meeting minutes</h2>
+<section><p id=bd29 class=irc><cite>&lt;wendyreid&gt;</cite> /w3c.zoom.us/j/88131559816?pwd=KGwOotiwS2iBagzxHeCxK0zUHEEjf4.1///docs.google.com/document/d/1FfUjiK8PrKfqeVCAnjpgZ_rpq7ZSAziloyLT5AkZKjQ/edit?tab=t.0</p>
+</section>
+
+<section>
+<h3 id=c590>EPUB 3.4 Testing and Documentation</h3>
+<p id=a99c class=summary>We are in a good place, except we haven't received many test results</p>
+<p id=2e54 class="phone s01"><cite>wendyreid:</cite> We are in a good place, except we haven't received many test results<br>
+<span id=febe>… we will probably have to do our own testing</span><br>
+<span id=e111>… and we can now flag that as third party vs implementer</span><br>
+<span id=74fe>… If we get to the point where we need to do it, we will inform them that we have done the tests and give the a chance to add their own</span></p>
+<p id=048c class="phone s02"><cite>ivan:</cite> Good news - the big challenge was the roll feature, since that was the only new thing. And we have already received 2 tests, so that is done<br>
+<span id=cde5>… The other thing, for non-roll we have old tests (some have changed names), maybe we could take them over</span><br>
+<span id=2d03>… Fresh tests would be nicer, but it is an option</span><br>
+<span id=8fbc>… Charter ends Feb, so we really want to get the tests in and voting done by end of January</span><br>
+<span id=fa1e>… I would prefer tests in by beginning of Dec</span></p>
+<p id=eac8 class="phone s01"><cite>wendyreid:</cite> So please get any results in by end of Nov</p>
+<p id=7baf class="phone s03"><cite>gautierchomel_:</cite> I am planning the tests in Dec</p>
+<p id=46fc class="phone s02"><cite>ivan:</cite> We may have to wait then</p>
+<p id=4f31 class="phone s01"><cite>wendyreid:</cite> Mid December may be ok, we only need 28 days for the AC vote</p>
+<p id=2eab class="phone s04"><cite>duga:</cite> Trying to understand who I need to bug about testing<br>
+<span id=1fc8>… it takes a while and is a lot of work and people are busy</span><br>
+<span id=d317>… is it better for us to let people use the old tests and move on?</span><br>
+<span id=f651>… do we need fresh tests</span></p>
+<p id=8bd0 class="phone s02"><cite>ivan:</cite> For things like Apple/Google there haven't been many changes, so we can probably reuse<br>
+<span id=4d86>… the reason I am putting gautierchomel_ aside is the Thorium has changed a lot</span><br>
+<span id=cce2>… so if we have Apple/Google then I am fine using the old tests</span><br>
+<span id=3fdd>… but we still have to figure out what tests changed names</span><br>
+<span id=cedb>… so I agree we could take at least these two</span><br>
+<span id=0970>… and we have some Voyager that are older, and we have some new ones, we could merge them.</span></p>
+<p id=79b0 class="phone s05"><cite>sueneu:</cite> I talked to production people and there was enthusiasm for participation. But this is very reading system focused.<br>
+<span id=3a0e>… maybe for the future we could open this up to production side people</span></p>
+<p id=8cca class="phone s03"><cite>gautierchomel_:</cite> I think it is concerning that there hasn't been much evolution in readers<br>
+<span id=5c56>… And I agree that having producers involved would be good</span></p>
+<p id=b05e class="phone s01"><cite>wendyreid:</cite> Maybe the better way to put it is the big players are quite stable, and not much has changed<br>
+<span id=cc04>… I don't want to give the impression they aren't evolving, it is just that they favor stability</span></p>
+<p id=e38c class="phone s06"><cite>Hadrien:</cite> On our side with readium toolkits on iOS. We have added support for images in spine, with and without fallback, mixed layouts (iOS only), still not to roll, but it does impact some tests<br>
+<span id=8c27>… There were some Readium systems that were tested, but Swift, iOS, and Kotlin are different right now</span><br>
+<span id=99b2>… we plan to move it to Kotlin next year, but that is too late. We aren't really unique, adding features takes time</span><br>
+<span id=ffff>… in general this can be a problem (timing), since we won't have everything done when the spec releases (e.g. roll)</span></p>
+<p id=9e67 class="phone s01"><cite>wendyreid:</cite> That segues to tools being part of the test process. And we will need to do something about that in Annotations (are the proper annotations produced)<br>
+<span id=d2c6>… For annotations there are two sides, testing the result of export and testing that import works</span></p>
+<p id=0fbb class="phone s02"><cite>ivan:</cite> I don't know how we test that - do we describe scenarios?<br>
+<span id=a0ae>… so how do we provide that description?</span></p>
+<p id=4534 class="phone s04"><cite>duga:</cite> We do need to look, we only need to test the RFC 2119 statements, they are much more specific and clear<br>
+<span id=ab61>… should we describe what you must do and allow</span><br>
+<span id=e4cb>… we don't have conformance statements for these behaviours, we don't even say a human has to do anything</span><br>
+<span id=de0a>… a LLM could do it all</span><br>
+<span id=5f59>… we have to be careful about what we're testing</span><br>
+<span id=285f>… currently we don't have many conformance statements</span></p>
+<p id=a025 class="phone s02"><cite>ivan:</cite> Which was very intentional, as we only have an interchange format</p>
+<p id=264e class="phone s01"><cite>wendyreid:</cite> Though we are still figuring it out. I expect we will add a lot more. Perhaps understanding what needs testing will help direct the spec<br>
+<span id=02c2>… what do we want to test?</span></p>
+<p id=38be class=irc><cite>&lt;ivan&gt;</cite>  /join #tpac-chat</p>
+<p id=8822 class="phone s07"><cite>LaurentLM:</cite> First we must test the spec, not the RS<br>
+<span id=4aa3>… most of the tests will be driven by that</span><br>
+<span id=7fef>… I don't think we want heavy conformance statements on reading systems</span><br>
+<span id=fc66>… We have 3 points:</span></p>
+<p id=2175 class=irc><cite>&lt;shiestyle&gt;</cite> /w3c.zoom.us/j/8603454797?pwd=PXWIgtQr0SCEtRI53FtSDEbeg4nV5X.1///w3c.zoom.us/j/88131559816?pwd=KGwOotiwS2iBagzxHeCxK0zUHEEjf4.1</p>
+<p id=342f class="phone s07"><cite>LaurentLM:</cite> [preparing to present slides]<br>
+<span id=5478>… First test is can our samples be imported</span><br>
+<span id=be28>… using different selectors and refinements</span><br>
+<span id=1ffa>… we will need about 5 sets to do that</span><br>
+<span id=9ad6>… we also need to have changed epubs to make sure they still work (for some selectors)</span><br>
+<span id=7397>… we need to make sure they produce valid json, which is easy once we have the schema</span></p>
+<p id=90e3 class="phone s06"><cite>Hadrien:</cite> This doesn't handle selectors</p>
+<p id=25a6 class="phone s07"><cite>LaurentLM:</cite> Yes, that is still an issue<br>
+<span id=9a0d>… and we need to make sure orphans degrade well</span></p>
+<p id=91d1 class="phone s02"><cite>ivan:</cite> we need to make sure the interchange works</p>
+<p id=4151 class="phone s07"><cite>LaurentLM:</cite> For that we will need 2 reading systems<br>
+<span id=9955>… currently at the table we have thorium and zotero. Others are interested but can't do it soon</span></p>
+<p id=0c92 class="phone s02"><cite>ivan:</cite> Annotation will be in the next charter, so we have some time</p>
+<p id=5c07 class="phone s07"><cite>LaurentLM:</cite> We do have 2 thorium implementations that are completely different</p>
+<p id=2a2b class="phone s02"><cite>ivan:</cite> AC review might be an issue, so they may want proof</p>
+<p id=950d class="phone s07"><cite>LaurentLM:</cite> Not a problem. Also we need someone else to implement it</p>
+<p id=d27a class="phone s06"><cite>hadrien:</cite> we need to reach out to some more people. We often talk to the same set of people, which is a problem</p>
+<p id=4786 class="phone s05"><cite>sueneu:</cite> Will we provide the slightly changed document as well?</p>
+<p id=cb9c class="phone s07"><cite>LaurentLM:</cite> Yes, we will provide that</p>
+<p id=3b53 class="phone s06"><cite>Hadrien:</cite> Some implement KO reader sync. It is not the same thing, but they kind of support annotations<br>
+<span id=1e3c>… So there are a lot of reading systems that support this, but they do it with sync instead of export</span><br>
+<span id=dbf3>… and lots of people are annoyed at KO sync. So there are a lot of people interested in this, but doing it as a protocol</span><br>
+<span id=ca99>… There is an active community that is interested in self hosting, which hasn't been on our radar</span></p>
+<p id=a591 class="phone s01"><cite>wendyreid:</cite> There is KO, there is also Calibre annotations, so off the top we have 2 communities to reach out to<br>
+<span id=9457>… They don't participate here, but they are enthusiastic implementers</span><br>
+<span id=f5f3>… colibrio is another reader we should connect with</span><br>
+<span id=8685>… We do want to do more outreach with the next charter</span></p>
+<p id=3875 class="phone s02"><cite>ivan:</cite> We are in an interesting position, the features we are discussing for the next charter are more for these communities than the traditional ones we have connected with in the past</p>
+<p id=969f class="phone s01"><cite>wendyreid:</cite> Any other testing topics that aren't part of the charter?<br>
+<span id=0243>… When we designed the epub test site, we did it with 3.3 in mind. We might need to consider how we change things for new versions (let's never change names again)</span><br>
+<span id=321a>… should we have a central test repo for all the tests, including annotations?</span></p>
+<p id=03ef class="phone s02"><cite>ivan:</cite> No, that will be a mess. It will make it too confusing, so we should have a new repo for annotations</p>
+<p id=ac40 class="phone s01"><cite>wendyreid:</cite> But we do want a central home for all the tests from a documentation standpoint</p>
+<p id=5bdf class="phone s02"><cite>ivan:</cite> Repos are cheap, and I don't like the old IDPF way of a giant repo<br>
+<span id=9ac8>… some groups have lots of repos</span></p>
+<p id=29b0 class="phone s01"><cite>wendyreid:</cite> Readers of the spec don't care about github repos<br>
+<span id=5763>… we can have multiple repos, but do we have one home?</span><br>
+<span id=95cf>… So the tests tells us what works in epub, having one place to see them makes sense</span></p>
+<p id=978e class=irc><cite>&lt;ivan&gt;</cite> <a href="https://github.com/w3c/epub">w3c/<wbr>epub</a></p>
+<p id=f8c1 class=irc><cite>&lt;ivan&gt;</cite> <a href="https://github.com/w3c/epub">w3c/<wbr>epub</a></p>
+<p id=47cd class=irc><cite>&lt;ivan&gt;</cite> <a href="https://w3c.github.io/epub/">https://<wbr>w3c.github.io/<wbr>epub/</a></p>
+<p id=8081 class="phone s02"><cite>ivan:</cite> We had a repo set up as a response to this request<br>
+<span id=6c56>… we could make it an entry point for epub in general</span><br>
+<span id=4178>… people try to get to one place called &quot;epub&quot; so we set this up as a place to go</span><br>
+<span id=f872>… but it needs work.</span></p>
+<h4 id=bc1e>Documentation</h4>
+<p id=3c0a class="phone s03"><cite>gautierchomel_:</cite> Documentation has come up in the CG as well<br>
+<span id=e30d>… People are looking at MDN, etc for epub info</span><br>
+<span id=3a30>… we also have the DAISY knowledge base, which focuses on a11y.</span><br>
+<span id=6075>… do we want something similar for the full spec? It is all a big question</span><br>
+<span id=f181>… we had a TF for documention, but they left no documentation</span><br>
+<span id=f124>… Maybe this is a good thing for the CG</span></p>
+<p id=187b class=irc><cite>&lt;CharlesL&gt;</cite> <a href="https://kb.daisy.org/publishing/docs/">https://<wbr>kb.daisy.org/<wbr>publishing/<wbr>docs/</a></p>
+<p id=99c3 class="phone s03"><cite>gautierchomel_:</cite> I love the idea of the epub repo to do that, even if it just gets exported elsewhere. People need an entry point for EPUB<br>
+<span id=4571>… I propose we take this to the CG</span></p>
+<p id=9dcc class="phone s05"><cite>sueneu:</cite> I was thinking about this a few months ago and created a sheet of all the documents we already have</p>
+<p id=10000 class=irc><cite>&lt;sueneu&gt;</cite> <a href="https://docs.google.com/spreadsheets/d/18AQLoiyn3qzMCWC8bLFnoOlzITjdRalIPBO5PuVXGIc/edit?gid=0#gid=0">https://<wbr>docs.google.com/<wbr>spreadsheets/<wbr>d/<wbr>18AQLoiyn3qzMCWC8bLFnoOlzITjdRalIPBO5PuVXGIc/<wbr>edit?gid=0#gid=0</a></p>
+<p id=570c class="phone s05"><cite>sueneu:</cite> if you think of anything I can add you as an editor to the sheet<br>
+<span id=9b3a>… but we might need multiple entry points (e.g. reading system dev vs indie author)</span></p>
+<p id=8f68 class="phone s02"><cite>ivan:</cite> At some point someone (Tzviya? Dan?) was trying to get us set up with MDN<br>
+<span id=4f69>… I just don't think an MDN branch for epub is realistic</span><br>
+<span id=ca93>… Moving docs to CG is a great idea if we have the manpower</span><br>
+<span id=1356>… which group is secondary to who will actually do the work</span></p>
+<p id=cbb0 class="phone s01"><cite>wendyreid:</cite> There are 2 sides to the project. We have always had the question of MDN for epub.<br>
+<span id=8511>… MDN is always very open to it if we provide the info</span><br>
+<span id=6fd2>… we have terrible organization for the existing docs</span><br>
+<span id=10ef>… Searches for some topics come up for IDPF sites</span><br>
+<span id=1980>… A fantastic first effort would be to use the repo as a landing page with links to all the normative and informative documents</span><br>
+<span id=52de>… once we have a home for that, then maybe we can add new documentation</span><br>
+<span id=a038>… but a great start would be to organize what we have now</span><br>
+<span id=580e>… this would be a good CG topic</span></p>
+<p id=5af8 class=irc><cite>&lt;CharlesL&gt;</cite> EPUB Official Documentation Search Engine (Created by Brady)</p>
+<p id=2546 class=irc><cite>&lt;CharlesL&gt;</cite> <a href="https://bduga.github.io/epub-search/">https://<wbr>bduga.github.io/<wbr>epub-search/</a></p>
+<p id=9d9a class="phone s08"><cite>CharlesL:</cite> Right now the best way to find things is the search engine</p>
+<p id=02cd class="phone s03"><cite>gautierchomel_:</cite> There is manpower that will be happy to contribute<br>
+<span id=c207>… we have to clearly define a strategy. Once we have that we can find the people to help with the actual work</span><br>
+<span id=f9fa>… a lot of people are building their own docs, let's get them building it for official docs instead</span><br>
+<span id=7467>… But github can be scary for some people so we may want to accept contributions without needing github knowledge</span><br>
+<span id=b47e>… so we should have a group that can discuss strategy</span></p>
+<p id=4dc8 class="phone s02"><cite>ivan:</cite> CG is the best thing to do, but we should have it on our agenda in the WG to report/cross-pollinated<br>
+<span id=34a5>… so the first point is we need more people. 3 or 4 who want to work on docs.</span></p>
+<p id=c161 class="phone s01"><cite>wendyreid:</cite> It is essentially joint. So we want people with knowledge, but we also want people from the other side who want to help us improve<br>
+<span id=342d>… In the WG we become numb because we know the repos to hunt through</span><br>
+<span id=353c>… I like a joint thing</span><br>
+<span id=10001>… sometimes we have gotten too ambitious, everything is written somewhere, we just need to collect it</span><br>
+<span id=1229>… there is the KB, there are blog posts, etc</span></p>
+<p id=b864 class="phone s04"><cite>duga:</cite> One issue I found looking for things, was links to pages of links of presentations, that took you somewhere unrelated<br>
+<span id=357c>… the original document was lost, we have lost a lot, it will be a task to find the content and eliminate old stale, links</span></p>
+<p id=6967 class="phone s09"><cite>shiestyle:</cite> We have notes from CG and WG, should we distinguish these?</p>
+<p id=82ea class="phone s02"><cite>ivan:</cite> It isn't clear to me why some are WG and some are CG<br>
+<span id=b344>… when we started, several notes were created by pulling from IDPF specs or documents. A lot of those ended up in WG.</span><br>
+<span id=ebd5>… Then the CG has done some work which they published as notes</span><br>
+<span id=8a32>… There is no systemic content reason for it, it is just historical oddity</span><br>
+<span id=6e08>… CG notes have been recently reorganized by Matt for a11y documents</span></p>
+<p id=0674 class="phone s10"><cite>gpellegrino:</cite> There are a lot of things on stack overflow that are just wrong<br>
+<span id=9ac7>… Just a warning. I think the effort will be important</span><br>
+<span id=33d4>… in terms of notes, the WG requires being formal members, so some notes went to the CG for better community contributions</span></p>
+<p id=02db class="phone s01"><cite>wendyreid:</cite> It matters a lot to us, but not the community. WG Note or CG final report is the same to everyone else in the world<br>
+<span id=f123>… we have to very important docs as CG reports (eg a11y ux report)</span><br>
+<span id=46c7>… some of these might want to be WG notes</span><br>
+<span id=8d78>… we might want to consider a pipeline for this</span><br>
+<span id=bf90>… There are probably a lot of documents meet this criteria. Fine to do the work in CG, then elevate to WG note</span><br>
+<span id=81be>… There has been some consolidation</span></p>
+<p id=2b90 class="phone s05"><cite>sueneu:</cite> We have discussed taking down the IDPF site, since it is out of date<br>
+<span id=a5f8>… do we want to forward? 301 rediirect? Just 404?</span></p>
+<p id=e1f6 class="phone s08"><cite>CharlesL:</cite> I was going to suggest the same thing - a path to move from CG to WG<br>
+<span id=e7c7>… Some of this has to happen in the CG, but it gives it some weight to be in the WG</span><br>
+<span id=ffa7>… we do have to think about how we still allow CG contrbutions</span><br>
+<span id=0433>… As to IDPF, some information may get lost</span><br>
+<span id=ef80>… we don't control that</span></p>
+<p id=f2f3 class="phone s11"><cite>various:</cite> Not true, we own the IDPF website</p>
+<p id=8dab class="phone s02"><cite>ivan:</cite> It is off to the side and kept so it isn't lost. There is limited access to it. We should see if we can do something with it<br>
+<span id=5593>… So we could just add a redirect to homepages, but we can leave deep links</span><br>
+<span id=2d77>… originally I was going to disagree with CG and WG</span></p>
+<p id=ea21 class=summary><a href="https://www.w3.org/community/reports/publishingcg/CG-FINAL-a11y-display-guidelines-20251222/">https://<wbr>www.w3.org/<wbr>community/<wbr>reports/<wbr>publishingcg/<wbr>CG-FINAL-a11y-display-guidelines-20251222/</a></p>
+<p id=147b class="phone s02"><cite>ivan:</cite> We just add to the confusion of having a report duplicated into the WG. The community doesn't really care, and having two copies is terrible. So it adds no value to the community</p>
+<p id=8831 class="phone s06"><cite>Hadrien:</cite> I don't think the community has any idea of what we are talking about. CG, WG, note, spec, they don't know the difference. Keep that out of the way for.<br>
+<span id=c25b>… we also have a bunch of old useless notes in the WG from old IDPF days, but then we have notes from the CG that are more important than specs in some cases</span><br>
+<span id=a584>… We have to think about this in a more practical sense - which are important, not the track they are on</span><br>
+<span id=ed83>… I use the old IDPF site to tell what the changes are</span><br>
+<span id=f6c4>… removing them would be painful for me</span></p>
+<p id=8be9 class="phone s02"><cite>ivan:</cite> We can't remove them</p>
+<p id=67ec class="phone s06"><cite>Hadrien:</cite> I would be careful with redirect. A big red banner pointing to the new version would be fine</p>
+<p id=4ab8 class=irc><cite>&lt;ivan&gt;</cite> qq</p>
+<p id=6713 class="phone s06"><cite>Hadrien:</cite> But the old specs are very important, especially for us</p>
+<p id=776b class="phone s01"><cite>wendyreid:</cite> I think the latest proposal was a banner</p>
+<p id=743f class="phone s03"><cite>gautierchomel_:</cite> First we need a clear epub web page<br>
+<span id=d6fb>… A11y display guide is one that has been very quickly adopted</span><br>
+<span id=058d>… partly because of legal reasons, but we had a lot of people working on it, so the process was very good</span><br>
+<span id=da77>… Next step migh to discusss with duga and sueneu about launching a TF</span></p>
+<p id=d79a class="phone s01"><cite>wendyreid:</cite> I agree with Hadrien. A lot of this is exposing our quirks to the outside world, who do not care about our quirks<br>
+<span id=4315>… The display guide is a great example. It is really important and heavily used, but it lives in a weird place. Having a stable URL is really important for it</span></p>
+<p id=2fda class="phone s08"><cite>CharlesL:</cite> When we do a final report in the CG, is there a WG vote?</p>
+<p id=89c6 class="phone s11"><cite>various:</cite> no</p>
+<p id=8486 class="phone s08"><cite>CharlesL:</cite> Can we? Some of these reports never make it to the WG, they never see it</p>
+<p id=7dd3 class="phone s02"><cite>ivan:</cite> Process wise they are entirely unrelated. To bring it to the WG, we would have to make it a WG note, go through a transition request, get a URL, etc. It's too much<br>
+<span id=6467>… informally, we could agree with the CG that the WG would give it a nod to say &quot;yes we saw it&quot;</span></p>
+<p id=9fdf class="phone s02"><cite>ivan:</cite> W3C is very picky about not removing things from the web<br>
+<span id=ccb6>… so We will not remove 3.0.1</span></p>
+<p id=f425 class="phone s01"><cite>wendyreid:</cite> We wanted to take a moment to recognize Avneesh<br>
+<span id=f196>… For the Digital Publishing award at the Frankfurt book fair</span></p>
+<p id=3d07 class="phone s12"><cite>AvneeshSingh:</cite> I would thank Bill K and Cristina for. And DAISY, and of course my wife who made it all possible</p>
+<p id=37c6 class="phone s01"><cite>wendyreid:</cite> [Break]</p>
+</section>
+
+<section>
+<h3 id=3e07>Annotations</h3>
+<p id=4285 class="phone s07"><cite>LaurentLM:</cite> (shares screen) here is the status<br>
+<span id=c33c>… we started 3 years ago, implemented it on Thorium desktop</span><br>
+<span id=7168>… focus on EPUB, multimodal applications, removed CFI selector, text selector instead, less publication metadata</span><br>
+<span id=173d>… we have a stable draft now, with a few issues about wording</span><br>
+<span id=35f3>… we can discuss the issues that are more structural</span><br>
+<span id=8044>… first, which publication metadata is most useful?</span><br>
+<span id=0966>… how to order annotations by reading system?</span><br>
+<span id=050f>… which detailed processing model at export?</span><br>
+<span id=2946>… should annotations be human readable?</span><br>
+<span id=8a78>… how to test?</span><br>
+<span id=cf7e>… most important is the human readable question</span><br>
+<span id=6975>… use case, if I push annotations to a website, and I want access to my annotations, but the website doesn't have the original publication. If I want to see these, we would need some context in the annotations</span><br>
+<span id=ed34>… the next usecase— if I export annotations, and  then lose access to the book. but I would like to turn the annotations into human readable citations.</span><br>
+<span id=63a9>… should annotations be transformable into human readable annotations?</span><br>
+<span id=1fc9>… to give context to the human, we need to export the annotated text, and their may be copyright or other issues</span><br>
+<span id=4e75>… this would require more information about the context like chapter, page, position</span><br>
+<span id=4dd2>… why would we want to convert json to human readable when the RS can already do that?</span></p>
+<p id=7fd3 class="phone s13"><cite>gpelligrino:</cite> another use case is users with dyslexia, who may need to export annotations and be able to rearrange or reformat them including the original text</p>
+<p id=10002 class="phone s02"><cite>ivan:</cite> an annotation is the combination of the note and the annotated text itself. Do you translate the annotation selector into something a human understands, as opposed to CSS<br>
+<span id=bf31>… we agreed previously that this would be text only, with no formatting. What exactly does it mean to transform this to human readable?</span></p>
+<p id=a186 class="phone s07"><cite>LaurentLM:</cite> (shows slide with kindle and annotations output)<br>
+<span id=10003>… you get the annotation book name, the page and location text, date, and your note</span></p>
+<p id=0514 class="phone s02"><cite>ivan:</cite> we have another spec for identification, which is json. Another discussion is render methods. It is very complicated. There are so many approaches. Even starting with the transformation engine and the html display.<br>
+<span id=37fb>… I am worried about introducing this here</span></p>
+<p id=3684 class="phone s06"><cite>Hadrien:</cite> we have not looked enough about how this is done elsewhere<br>
+<span id=74d1>… a lot of the big RS are fine with having some of the original content in the export</span><br>
+<span id=4296>… you can have a selector that is useful for the machine but not the human</span><br>
+<span id=be56>… KO Reading and Calibre both include the whole text</span><br>
+<span id=4184>… we could have a requirement for that. This discussion is important and would have big impact on users</span><br>
+<span id=3602>… secondly about Kindle, they don't have original content or a relation to the table of contents</span><br>
+<span id=d081>… in colibre they have a reference to the TOC, like &quot;chapter 1, section 1&quot;</span><br>
+<span id=a290>… a lot of formats do this. We could probably provide a bit more guidance to align with what is already out there.</span><br>
+<span id=5aac>… I'm not a fan of location numbers, since everyone does that a bit differently.</span></p>
+<p id=608a class="phone s04"><cite>duga:</cite> ivan mentioned the complexity in rendering, where is the complexity you are worried about</p>
+<p id=2f91 class="phone s02"><cite>ivan:</cite> in both the formatting and the export<br>
+<span id=a978>… is this really something we have to standardized? Or can the individual reading systems ready to provide this? what do we have to standardize?</span></p>
+<p id=6f5d class="phone s04"><cite>duga:</cite> just for a basic display, Playbooks includes the chapter title, and that's something we have to standardize. We would need access to the book to know that.<br>
+<span id=02b0>… we don't want to make something broken from the start, we could just say this isn't a usecase that works in 1.0</span><br>
+<span id=d2b3>… or we could say, here's a thing you could use, we don't know how, but it is up to the RS to figure out. This could also cause problems</span></p>
+<p id=1f0e class=irc><cite>&lt;Zakim&gt;</cite> wendyreid, you wanted to add some complication to what can be exported by reading systems with text</p>
+<p id=54cb class="phone s01"><cite>wendyreid:</cite> For a lot of RS and publishers, there is an agreed upon number of characters that can be exported. If the publisher doesn't allow that, we can make annotations, but we cannot export them. You just get a message that the publisher doesn't allow this<br>
+<span id=f3a7>… this poses an opportunity for a fix for this. Perhaps if you share your annotation, even without prohibited text copied, we could still share it. The next user could find the annotation in the book based on the locator.</span></p>
+<p id=b70b class=irc><cite>&lt;Zakim&gt;</cite> bigbluehat, you wanted to ask about when this export comes into being</p>
+<p id=ef7e class=summary>benjamin (observer): with the amazon example and the location number mismatch, its kind of on them to fix that. I think you've got pieces already, and you'll be affected by limitations, maybe you are OK</p>
+<p id=85b9 class="phone s07"><cite>LaurentLM:</cite> It depends on what we want to do and who wants to go there</p>
+<p id=8169 class="phone s14"><cite>benjamin:</cite> maybe you could take chunks of metadata and put it into something like YAML LD</p>
+<p id=51dc class="phone s06"><cite>Hadrien:</cite> About metadata, in KO readers they have an option to include other metadata, saying we don't use it, but it might be useful to someone else.<br>
+<span id=1981>… Colibre keeps this in the database, but hasn't really solved the problem.</span><br>
+<span id=63cb>… KO reader has basically the title and the author</span><br>
+<span id=5aec>… with selectors it is usually the highlighted text plus another selector. The second selector isn't consistent across systems.</span><br>
+<span id=7f01>… there is quite a bit to learn by looking at what has been done</span></p>
+<p id=9796 class="phone s04"><cite>duga:</cite> when we originally talked about the annotations, we talked about the text people type in, which is pretty basic. But as we talked about exporting this in a human readable way, I don't think we can ignore markup.</p>
+<p id=e176 class="phone s07"><cite>LaurentLM:</cite> It is good to have some proposals—<br>
+<span id=02b7>… here is something in between doing nothing and being too prescriptive</span><br>
+<span id=d129>… (shows slide) this includes the fragment selector, like the beginning and end of selected text.</span><br>
+<span id=0763>… I've added two things, one is context, where you can include Chapter, section or page#</span><br>
+<span id=b274>… and &quot;progression&quot; which is a float, and can represent the progress in the book, like 20%</span><br>
+<span id=5ac6>… we may change the name from context to avoid confusion</span><br>
+<span id=8c70>… these new things will give the reading systems some options</span></p>
+<p id=aeb0 class="phone s08"><cite>CharlesL:</cite> did we decide if we support annotating images that don't have any text</p>
+<p id=10004 class="phone s07"><cite>LaurentLM:</cite> the context cannot be as accurate but we can annotate images<br>
+<span id=09b5>… perhaps you could provide the alt text</span></p>
+<p id=10005 class="phone s06"><cite>Hadrien:</cite> since the plain text discussion was based on what the user can put into a note, some system does have support for HTML markdown.<br>
+<span id=3f7f>… sometimes the metadata changes by the type of publication, for fixed layout and PDF they use page numbers, for audiobooks they use timestamp. It gets tricky with reflowable</span><br>
+<span id=b24e>… progression could be useful and pretty transferable. Probably the scroll position on the y access. Sometimes it is difficult to calculate but could be still be useful. Media overlays will have an id or timestamp</span><br>
+<span id=99d4>… to include the original text if possible it is most useful. Especially if someone loses access to the initial publication.</span></p>
+<p id=f236 class="phone s15"><cite>GeorgeK:</cite> As a student reading stem content, will I be able to annotate tables and math ML</p>
+<p id=6d51 class="phone s06"><cite>Hadrien:</cite> yes, but it will be trickier if you lose access to the book</p>
+<p id=fa56 class="phone s01"><cite>wendyreid:</cite> I agree we should change &quot;context&quot; to avoid confusion with &quot;@context&quot;<br>
+<span id=a1ee>… about progression, I think different systems calculate that differently</span></p>
+<p id=c611 class="phone s07"><cite>LaurentLM:</cite> with other information, the progression will be useful</p>
+<p id=e0dc class="phone s02"><cite>ivan:</cite> will we specify what progression is?</p>
+<p id=589e class="phone s07"><cite>LaurentLM:</cite> we will leave that to the reading system</p>
+<p id=6f80 class="phone s02"><cite>ivan:</cite> before we adopt this, we will have to go back to the contacts we have who are already doing this, and see if this makes sense to them.</p>
+<p id=5063 class="phone s14"><cite>Benjamin:</cite> I'm curious about your use of the fragment selector</p>
+<p id=7efe class="phone s07"><cite>LaurentLM:</cite> this is a new idea, we explicitly state that we hope this will become a standard.<br>
+<span id=de90>… this is a new way to do what the text selector was supposed to do 10 years ago</span></p>
+<p id=9f52 class="phone s14"><cite>benjamin:</cite> If you want to display the start and end of your quote you'll have to separate them.</p>
+<p id=dd9e class="phone s02"><cite>ivan:</cite> since this isn't already standard, we are kind of off the hook, but browsers already do this</p>
+<p id=fed5 class="phone s06"><cite>Hadrien:</cite> we decided to use this because there are complexities, and this isn't ours to solve, since these are inherent in HTML. It's heavily used even if it is under specified. We didn't want to be struggling with unicode and white space. We though it is safer if others do that</p>
+<p id=354b class="phone s02"><cite>ivan:</cite> we can only signal that this is needed, and there are open issues in the HTML working group. We can hope. Practically all the browsers provide a way to use this</p>
+<p id=ffc5 class="phone s14"><cite>benjamin:</cite> that is encoding the selector, but not the display, and it may break when you hit emojiis</p>
+<p id=864f class="phone s01"><cite>wendyreid:</cite> we should also consider, are we demanding that they must use this selector, but we are offering it an option. There are other selectors you can use. Like CFI</p>
+<p id=74b6 class="phone s02"><cite>ivan:</cite> we will talk about that tommorrow</p>
+<p id=10006 class="phone s01"><cite>wendyreid:</cite> people will ask if we don't include it<br>
+<span id=401a>… is what LaurentLM has proposed enough that we can start getting some feedback from people outside the group?</span></p>
+<p id=017e class="phone s08"><cite>CharlesL:</cite> In addition to the selector itself, why couldn't we add another text block with whatever markdown we want. The machine can read what it can read, and humans can read this part.</p>
+<p id=a74d class="phone s06"><cite>Hadrien:</cite> that was my point, we've been arguing about this for ever, with text fragments, etc. It might not be a bad thing to have both human and machine readable. Maybe text only</p>
+<p id=35c9 class="phone s16"><cite>bigbluehat:</cite> you could include the annotation creator, an @id, a valid version of the identifier, and you'd still get the version you want</p>
+<p id=ebae class="phone s07"><cite>LaurentLM:</cite> the text will be transformed before display, you make it base 64, you can show it as html.</p>
+<p id=f72f class="phone s02"><cite>ivan:</cite> will that make it unnecessarily complicated?</p>
+<p id=f1a5 class="phone s07"><cite>LaurentLM:</cite> the detailed process model (shows slide) Normative? or are we OK with going with the current Expectations of reading systems<br>
+<span id=7983>… do we have to do this normative work and what would it look like</span></p>
+<p id=06c6 class="phone s04"><cite>duga:</cite> those are extremes, perhaps we can do some simple things. What if I get an annotations file that isn't json LD, should I try to process it? Do we clarify if someone is right or wrong? Should we offer some guidance about things that don't match or throw errors. If we don't handle these edge cases, we will get inconsistent results. We should<br>
+<span id=b8cb>… have some clarity about what to expect.</span><br>
+<span id=9636>… there is a consistent processing model in css for handling a &quot;//&quot; even if it is broken, everyone knows what to do with it</span></p>
+<p id=68c8 class="phone s07"><cite>LaurentLM:</cite> I'm not sure there is a practical difference here. In both cases there will be good and bad citizens</p>
+<p id=8156 class="phone s02"><cite>ivan:</cite> the difference is if we have to test it or not<br>
+<span id=bac0>… what this also shows, is that this goes beyond what we describe as an exchange format but addresses what the reading system does with it</span><br>
+<span id=ec70>… we should specify what to do if things go wrong. We need at least some levels of guidance for failures</span></p>
+<p id=9df7 class=irc><cite>&lt;wendyreid&gt;</cite> <a href="https://www.w3.org/TR/epub-rs-34/#rs-conf-error-handling">https://<wbr>www.w3.org/<wbr>TR/<wbr>epub-rs-34/#rs-conf-error-handling</a></p>
+<p id=8cc0 class="phone s01"><cite>wendyreid:</cite> I've shared the link from epub reading systems section about error handling<br>
+<span id=ef29>… it might be as simple as this, we can say</span></p>
+<p id=e728 class=summary>&quot;you are not required to display invalid content&quot; and leave it up to the RS to decide how far to go with broken content and display.<br>
+<span id=10007>… I could see annotation being similar, there will be situations where the annotations are garbled, or simply incorrect color</span></p>
+<p id=acb7 class="phone s02"><cite>ivan:</cite> this is consistent with our standard</p>
+<p id=9415 class="phone s08"><cite>CharlesL:</cite> how concerned are we about security?</p>
+<p id=77d4 class="phone s07"><cite>LaurentLM:</cite> there is a section in the draft about privacy and security</p>
+<p id=07a8 class="phone s04"><cite>duga:</cite> we're in a different situation with EPUB. A lot of EPUBs get rejected by publishers. With annotations its more like CSS and HTML, there will be more variation, and you can't go back to the original annotator for a new file in the same way. HTML has a well-defined error model, so we could give them some guide, a complete model, or just let<br>
+<span id=9216>… them work it out</span></p>
+<p id=65a7 class="phone s02"><cite>ivan:</cite> the person creating the annotations is not the one creating the exchange file. The reading system where the annotation is created is required to produce something valid</p>
+<p id=1034 class="phone s17"><cite>marisa:</cite> is there a place to say which reading system made the file</p>
+<p id=e06c class="phone s04"><cite>duga:</cite> we took that out</p>
+<p id=eb81 class="phone s01"><cite>wendyreid:</cite> we removed it for security and privacy reasons</p>
+<p id=1ec1 class="phone s01"><cite>wendyreid:</cite> this is tricky, I don't want to give people nothing about error handling, but in this case we probably don't want a bad user experience, but we have a relatively set structure.<br>
+<span id=3531>… we could brainstorm some of the error situations, like the locators are not present in this book…</span></p>
+<p id=ebb3 class="phone s04"><cite>duga:</cite> some of the errors are expected, and we should say something about what to do. Other things may come up, like if someone uses a selector that is not used in our spec?<br>
+<span id=4d1c>… what happens if there is a missing break in the json?</span></p>
+<p id=8f5d class="phone s01"><cite>wendyreid:</cite> if the json isn't working, can we go look at the json LD processing model</p>
+<p id=6f2a class="phone s16"><cite>bigbluehat:</cite> with malformed json LD the system will output what it can<br>
+<span id=d7dd>… there is incentive for doing json processing especially if you're using multiple languages</span></p>
+<p id=be64 class="phone s07"><cite>LaurentLM:</cite> a reading system will use the &quot;open json&quot; command and if it isn't right it won't display<br>
+<span id=b6e9>… like duga said, perhaps we could have a small set of rules</span></p>
+<p id=3d27 class="phone s18"><cite>niklasl:</cite> on the LD side of things you can read the partial stuff</p>
+<p id=a8b7 class="phone s08"><cite>CharlesL:</cite> are we considering creating something similar to EPUB check for validation?</p>
+<p id=a508 class="phone s07"><cite>LaurentLM:</cite> yes, it would be based on the json schema. And include more than semantics, we could have something that would check the book, but the CSS selector may or may not provide the right text</p>
+<p id=8fbf class="phone s04"><cite>duga:</cite> we may not even know what is wrong, the URI may not even exist in another edition of the same book. I think in practice people can always use text selectors because it's easy to search</p>
+<p id=6248 class="phone s08"><cite>CharlesL:</cite> it might be useful to have the checker, to make sure it validates on LD, and we might be able to say that a text selector is correct, but that might be out of scope.</p>
+<p id=f1f4 class="phone s01"><cite>wendyreid:</cite> we agree would like some kind of model, maybe something light weight.</p>
+<p id=be82 class="phone s02"><cite>ivan:</cite> we still have to agree on the name of the annotation file</p>
+<p id=7959 class=irc><cite>&lt;bigbluehat&gt;</cite> <a href="https://gist.github.com/BigBlueHat/22fac5551c6ad9a68978cbecd8eca07d">https://<wbr>gist.github.com/<wbr>BigBlueHat/<wbr>22fac5551c6ad9a68978cbecd8eca07d</a></p>
+<p id=f530 class="phone s16"><cite>bigbluehat:</cite> I added a link about the use</p>
+</section>
+
+<section>
+<h3 id=aee4>LUNCH</h3>
+<p id=27c0 class="phone s01"><cite>wendyreid:</cite> with that we could break for lunch</p>
+</section>
+
+<section>
+<h3 id=3355>Sync Media and Media Overlays</h3>
+<p id=e88d class="phone s17"><cite>marisa:</cite> We have a new community group is called the...</p>
+<p id=e16d class=irc><cite>&lt;marisa&gt;</cite> Accessible Synchronized Multimedia for Publishing</p>
+<p id=55c6 class="phone s17"><cite>marisa:</cite> the idea is to have an open place to discussion the revision on media overlay for publishing and the web<br>
+<span id=c4dd>… we're meeting every two weeks, we're using GitHub and issue trackers</span></p>
+<p id=bd34 class=irc><cite>&lt;gautierchomel&gt;</cite> <a href="https://github.com/w3c-cg/accessible-syncmedia-pub">w3c-cg/<wbr>accessible-syncmedia-pub</a></p>
+<p id=16a1 class="phone s17"><cite>marisa:</cite> we have 14 use cases till now<br>
+<span id=3570>… from use cased we create user requirements, out of user requirements we make technical requirements</span><br>
+<span id=8c14>… a new topic is synchronized video in EPUB</span><br>
+<span id=521a>… another topic is multiple granularities</span><br>
+<span id=cfa5>… it's the first major revision of media overlays, maybe this work may go in EPUB 3.5</span></p>
+<p id=10008 class=irc><cite>&lt;CharlesL&gt;</cite> use cases: <a href="https://github.com/w3c-cg/accessible-syncmedia-pub/issues?q=is%3Aissue+state%3Aopen+label%3A%22use+case%22">https://<wbr>github.com/<wbr>w3c-cg/<wbr>accessible-syncmedia-pub/<wbr>issues?q=is%3Aissue+state%3Aopen+label%3A%22use+case%22</a></p>
+<p id=cef7 class="phone s17"><cite>marisa:</cite> another topic is metadata for multi tracks publications<br>
+<span id=089e>… another topic is to maintain assistive technologies access to the content</span><br>
+<span id=f2af>… like someone is listing a narrated audiobook, and they want to dive deeper, and they want to switch to screenreader</span><br>
+<span id=2509>… usually the screenreader is not synced with the narrated audio</span></p>
+<p id=1792 class=irc><cite>&lt;marisa&gt;</cite> <a href="https://github.com/w3c-cg/accessible-syncmedia-pub/issues/5">w3c-cg/<wbr>accessible-syncmedia-pub#5</a></p>
+<p id=5d73 class=irc><cite>&lt;marisa&gt;</cite> <a href="https://github.com/w3c-cg/accessible-syncmedia-pub/issues/10">w3c-cg/<wbr>accessible-syncmedia-pub#10</a></p>
+<p id=8158 class="phone s17"><cite>marisa:</cite> I think that having it in EPUB 3.5 is important, we will not change the whole spec, but we'll make some refinements</p>
+<p id=4ded class=summary>Use case: Life-critical public information for residents with disabilities in a nuclear emergency planning zone (<a href="https://github.com/w3c-cg/accessible-syncmedia-pub/issues/5">w3c-cg/<wbr>accessible-syncmedia-pub#5</a>)</p>
+<p id=9f2f class=summary>(reading the description of the use case available at the posted link)<br>
+<span id=5232>… this is a very rich use case</span></p>
+<p id=d31d class=summary>Use case: A publication that ages with its reader — deafblind reading across a sensory trajectory (<a href="https://github.com/w3c-cg/accessible-syncmedia-pub/issues/10">w3c-cg/<wbr>accessible-syncmedia-pub#10</a>)</p>
+<p id=e712 class=summary>(reading the description of the use case available at the posted link)<br>
+<span id=10009>… maybe we'll not cover all these use cases in EPUB 3.5</span></p>
+<p id=5d6b class="phone s06"><cite>Hadrien:</cite> my own perspective in working with media overlays<br>
+<span id=3162>… I'm really interested in accessibility for manga</span><br>
+<span id=60db>… I've spoken with several specialized libraries who have produced accessible comics</span><br>
+<span id=f87c>… they made them using pre-recorded audio</span><br>
+<span id=96bc>… what they did worked in some special reading solutions, not standardized</span><br>
+<span id=1fe6>… since the object model defined by media overlays in EPUB, they had to reference to text elements (even when they were referencing images)</span><br>
+<span id=55dd>… so I opened an issue to suggest to enable the possibility to sync audio with images (and potentially portions of images)</span><br>
+<span id=3947>… I was discussing it because I was working on releasing the iOS Thorium version</span><br>
+<span id=f308>… digging into the spec I've found out that every reading system was implementing the spec differently</span><br>
+<span id=bfbb>… and here is where we are: we don't have interoperability in media overlays</span><br>
+<span id=f1eb>… most of the work was based on Apple implementation for fixed layout content</span><br>
+<span id=9e5e>… but most of specialized libraries are interested in reflow content with media overlay</span><br>
+<span id=8d4d>… that's why I think we should make a big effort to defining the roots of media overlays</span><br>
+<span id=0168>… with interoperability in mind</span></p>
+<p id=7cb1 class=irc><cite>&lt;Zakim&gt;</cite> duga, you wanted to ask about sign language and integration</p>
+<p id=9ddb class="phone s06"><cite>Hadrien:</cite> not sure how much we can test in the EPUB 3.4 test run, but we'll find differences</p>
+<p id=1d29 class="phone s04"><cite>duga:</cite> the way media overlays are implemented are different from how were designed<br>
+<span id=2760>… a lot of this work was made retro-engineering a specific publication</span><br>
+<span id=0db6>… I think we need to have both sides of the people at the table: the content creator and the reading solutions</span><br>
+<span id=49b7>… may you explain the sign language use case?</span></p>
+<p id=4f16 class="phone s17"><cite>marisa:</cite> we have an ebook with audio, and we want to synchronize a sign language video</p>
+<p id=0de7 class="phone s04"><cite>duga:</cite> is this the sign language version of the audio, or is it the sign language version of the text?</p>
+<p id=ee4e class="phone s17"><cite>marisa:</cite> both</p>
+<p id=d4d5 class="phone s04"><cite>duga:</cite> for the community group: how do you see the collaboration with the Publishing Maintenance Working Group?</p>
+<p id=c6ab class="phone s17"><cite>marisa:</cite> it's something to discuss today</p>
+<p id=9450 class="phone s17"><cite>marisa:</cite> originally media overlays came from DAISY books that were always reflowable<br>
+<span id=3b57>… it was implemented on fixed layout because of difficulties in implementing it in reading systems</span></p>
+<p id=e035 class="phone s15"><cite>GeorgeK:</cite> when Steve Jobs announced the iPad, when EPUB 3 was coming out, they see a big market for audio narrated children books</p>
+<p id=68aa class="phone s02"><cite>ivan:</cite> I'm trying to understand the direction: take what we have and add some SMIL spec and add it to EPUB<br>
+<span id=1bda>… another possibility is to use another technology instead of SMIL (without deprecating SMIL)</span><br>
+<span id=b3e1>… another possibility is to use SMIL syntaxt but to define our processing specification</span><br>
+<span id=28e6>… we have all the possibilities with the new charter</span></p>
+<p id=692e class="phone s17"><cite>marisa:</cite> I don't know what we'll do...<br>
+<span id=42a1>… but I agree it's time to look at all the requirements, and then decide which path to take</span></p>
+<p id=83c4 class="phone s02"><cite>ivan:</cite> the bad news is that we have to define the charter before Dicember</p>
+<p id=f631 class="phone s06"><cite>Hadrien:</cite> for all the issues I've opened, SMIL is never the problem, it's the way we adopted SMIL in EPUB<br>
+<span id=883a>… speaking with creators (like MTM) who produced a lot of EPUBs with Media Overlays</span><br>
+<span id=7317>… it's clear that the ecosystem is lacking</span><br>
+<span id=99ec>… I think we can just take what we have and implement it, instead of being too ambitious</span></p>
+<p id=048f class="phone s17"><cite>marisa:</cite> I think we should make the implementation not difficult (complex)<br>
+<span id=1e5c>… I think we made an issue following too strict the rules of SMIL</span><br>
+<span id=c934>… that makes it difficult to be implemented</span></p>
+<p id=d551 class="phone s02"><cite>ivan:</cite> please elaborate more</p>
+<p id=1a8c class="phone s17"><cite>marisa:</cite> we've put a lot of restrictions on our &quot;profile&quot; of SMIL<br>
+<span id=45e8>… like you always have to have a text element</span><br>
+<span id=fc94>… or having a single audio track</span><br>
+<span id=85c0>… there are other specs that are simpler like web VTT</span><br>
+<span id=4cdf>… it's not a perfect solution, but may be worth to explore</span></p>
+<p id=1ebc class="phone s02"><cite>ivan:</cite> we adopted around 10% of SMIL</p>
+<p id=b057 class="phone s17"><cite>marisa:</cite> it was defined before HTML 5 and media support in browsers</p>
+<p id=a8d6 class="phone s07"><cite>LaurentLM:</cite> Using the XML structure in SMIL is an issue, but the strength is to being able to map fragments in one content, to fragments in another content<br>
+<span id=c298>… this is powerful for the use cases we have</span><br>
+<span id=1000a>… I think VTT is less powerful in this mutual sync</span><br>
+<span id=5eef>… I think that get rid of SMIL is wrong</span><br>
+<span id=98ba>… also to have another technology along with SMIL would create a mess</span><br>
+<span id=e142>… I agree to improve the supporto of SMIL in EPUB</span><br>
+<span id=1000b>… like support other types of references to the content (apart from IDs)</span></p>
+<p id=1a1e class="phone s17"><cite>marisa:</cite> I don't disagree</p>
+<p id=4d5e class="phone s01"><cite>wendyreid:</cite> EPUB is around 15 years old, SMIL is 20<br>
+<span id=d2df>… in a perfect group we may ask to the WG maintaining SMIL to update it</span><br>
+<span id=ebb2>… but I think there is no one</span><br>
+<span id=d4a6>… the question is: how can we profile SMIL to work better?</span><br>
+<span id=188f>… because the spec itself will not be updated</span></p>
+<p id=6c49 class="phone s05"><cite>sueneu:</cite> why do we have to express a direction in the charter?</p>
+<p id=caf0 class="phone s02"><cite>ivan:</cite> there is a tendency to be specific in charters, so to have some direction</p>
+<p id=2711 class="phone s17"><cite>marisa:</cite> something that we'll never resolve is if we're trying to refine SMIL<br>
+<span id=1000c>… instead of get rid of SMIL</span></p>
+<p id=d0b2 class="phone s07"><cite>LaurentLM:</cite> in the use cases I didn't see any requirements that may not be supported by SMIL at the current status</p>
+<p id=dfee class="phone s17"><cite>marisa:</cite> the SMIL in EPUB is divergent from SMIL 3<br>
+<span id=c829>… like the way we defined the text elements</span><br>
+<span id=ea33>… we intend references, in SMIL they put the text directly</span></p>
+<p id=b2a1 class="phone s02"><cite>ivan:</cite> looking at the RS specification and EPUB specification<br>
+<span id=355a>… the dependences to SMIL specification is really weak</span><br>
+<span id=995e>… we can even say in the spec that we were &quot;inspired&quot; by SMIL</span></p>
+<p id=df2e class="phone s06"><cite>Hadrien:</cite> I don't think SMIL is the issue, I think what we wrote in the spec is the issue...<br>
+<span id=29b3>… because the use case was narrated children books</span><br>
+<span id=b272>… what I see is people that want to use SMIL in EPUB</span><br>
+<span id=9954>… but they're now able</span><br>
+<span id=ae67>… I want that people that want to make accessible comics can make it</span><br>
+<span id=a8b3>… my idea is to get back to SMIL spec and understand what we need to adopt to make the situation better</span></p>
+<p id=cc5c class="phone s19"><cite>Samuel:</cite> I'm specialized in manga and comics, speaking about UI/UX use case<br>
+<span id=57a8>… I share some slides to display different needs for different types of disabilities</span><br>
+<span id=47bb>… you need different ways of accessing and navigating the content, for different types of disabilities</span><br>
+<span id=f024>… displaying a demo of a reading application with panel by panel navigation</span><br>
+<span id=2aa2>… to make this user experiences we're using a lot of AI to understand the context, not only the text (emotions, background, main text, characters)</span><br>
+<span id=8cfa>… I'm not sure if SMIL is enough</span><br>
+<span id=0945>… in comics we need sound, visual effects, panel navigation, etc.</span><br>
+<span id=65df>… and we need them all to have an accessible experience with comics</span><br>
+<span id=9284>… while respecting the creativity of the author/publisher, having the possibility to offer multiple way to access the content</span></p>
+<p id=d03a class="phone s06"><cite>Hadrien:</cite> the example I've build supports most of the things you showed<br>
+<span id=d81f>… the only thing missing is variants of images</span><br>
+<span id=4ea8>… same thing for variants of text</span></p>
+<p id=a0e1 class="phone s19"><cite>Samuel:</cite> in Japan there is a publisher making alternative versions of comics for users with disabilities<br>
+<span id=ecce>… another possibility is to click on a bubble and to listen the audio only of that bubble</span></p>
+<p id=5824 class="phone s06"><cite>Hadrien:</cite> the problem we had with variants is related to what we had with multiple renditions<br>
+<span id=874f>… I think this is bigger than media overlays</span><br>
+<span id=dab9>… I propose to split che requirements/expectations</span></p>
+<p id=f5b9 class="phone s01"><cite>wendyreid:</cite> the complication of different accommodations and to have a single EPUB to fit them all is challenging<br>
+<span id=b2aa>… I think this research goes in the &quot;accessibility experiments&quot; in the charter</span><br>
+<span id=ac11>… where we try to test new things</span><br>
+<span id=f0ac>… I think we should split into different requirements for SMIL, for EPUB, etc.</span></p>
+<p id=b5cb class="phone s02"><cite>ivan:</cite> do we have to reopen the multiple renditions?</p>
+<p id=132c class="phone s20"><cite>all:</cite> noooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo</p>
+<p id=1000d class="phone s06"><cite>Hadrien:</cite> synchronizing two media together works (audio - text, video - text, etc.)<br>
+<span id=82d0>… this is possible with the specs we have</span><br>
+<span id=7d98>… what we cannot do at the moment is to have multiple variations of the same content (example simplified version, gray scale version, etc.)</span><br>
+<span id=f047>… I think we can dream in steps, one step at a time</span></p>
+<p id=630b class="phone s19"><cite>Samuel:</cite> we're building a software for creating accessible comics<br>
+<span id=e6d8>… but we need the spec to support everything</span></p>
+<p id=1000e class="phone s17"><cite>marisa:</cite> the use case we have is not about synchronizing media with text, like having the EPUB and the eBraille version<br>
+<span id=1c0d>… to being able to switch from braille display (eBraille) to screenreader (EPUB)</span></p>
+<p id=0e4c class="phone s02"><cite>ivan:</cite> I think that having some kind of multiple alternatives for content it's something that would be useful</p>
+<p id=2d30 class="phone s06"><cite>Hadrien:</cite> I took part of the specification of multiple renditions<br>
+<span id=6079>… the key concept is to have multiple reading orders for the same content (fxl vs reflow, french vs english)</span><br>
+<span id=61fd>… the other concept is to map equivalent resources</span><br>
+<span id=7c3f>… I agree that we don't need multiple OPFs to manage it</span><br>
+<span id=f403>… but it's a long journey</span></p>
+<p id=1da8 class="phone s02"><cite>ivan:</cite> if we have to discuss it, it's now</p>
+<p id=1661 class="phone s08"><cite>CharlesL:</cite> I don't see problems: we're synchronizing video, with audio, with text, with eBraille (potentially)</p>
+<p id=d25a class="phone s02"><cite>ivan:</cite> but it doesn't cover the same language</p>
+<p id=16c5 class=irc><cite>&lt;gautierchomel&gt;</cite> just a quick reminder that PCG proposed a simplified MR guide <a href="https://w3c-cg.github.io/publishingcg/Incubation/representation-mapping/multiple-rendition-simplification-explainer">https://<wbr>w3c-cg.github.io/<wbr>publishingcg/<wbr>Incubation/<wbr>representation-mapping/<wbr>multiple-rendition-simplification-explainer</a></p>
+<p id=d8b6 class="phone s12"><cite>AvneeshSingh:</cite> the other usecase is the one from Janina (APA)<br>
+<span id=316b>… speaking about SMIL: if we want to do something about SMIL, we should have a limited scope</span><br>
+<span id=c15b>… at the same time the Sync Media CG continues as a research project</span><br>
+<span id=bec0>… and maybe we'll adopt something in the future</span><br>
+<span id=2366>… so I propose to use limited SMIL for the moment, and at the same time look for another solution</span></p>
+<p id=ce51 class=summary>[BREAK TIME!]</p>
+</section>
+
+<section>
+<h3 id=cfba>Accessibility for Manga</h3>
+<p id=5afb class="phone s09"><cite>shiestyle:</cite> DPFJ is an organization of publishers who has prepared a presenation for us</p>
+<p id=a59e class="phone s21"><cite>Suzuki:</cite> Thank you for having us, accessibility for Manga<br>
+<span id=7f5a>… [shares slides]</span><br>
+<span id=fa0f>… introduction, from the chairman, and from the agency for cultural affairs</span><br>
+<span id=f42a>… technical issues by shiestyle</span><br>
+<span id=762b>… content issues with demostration presented by Kodansha</span><br>
+<span id=59c5>… DPFJ.manga industry shared framework for manga accessibility developed with government, publishers, and RS developers</span><br>
+<span id=a47b>… DPFJ mission is to share Japan's culture globally</span><br>
+<span id=51e9>… 67 member companies</span><br>
+<span id=7f3a>… in July we launched a dedicated term for ebook accessibility</span><br>
+<span id=4337>… ensure readers around the world can fully enjoy japanese content without barriers</span><br>
+<span id=ba36>… short term focus is manga</span><br>
+<span id=eed0>… digital manga, developing a proof of concept to explore transforming complex visual storytelling</span><br>
+<span id=8e43>… into accessible format</span><br>
+<span id=3fcd>… goal here is to share our approach, and make this a reality</span><br>
+<span id=e9c0>… head of the working team is Nobuhiro Oga, president of Shogakukan, one of the leading publishers</span><br>
+<span id=ec59>… committed to producing accessible content that preserves content integrity</span><br>
+<span id=d21f>… [video from Oga-san]</span></p>
+<p id=d295 class="phone s21"><cite>Suzuki:</cite> Next video is from Ito Gakuji, 24th commissioner for cultural affairs<br>
+<span id=0164>… [video]</span><br>
+<span id=5235>… shiestyle will present on technical issues</span></p>
+<p id=fd5d class="phone s09"><cite>shiestyle:</cite> Technical issues for manga accessibility<br>
+<span id=0c82>… issues in current EPUB spec, only one hour today, so we plan to have a breakout session later this week</span><br>
+<span id=2e55>… alternative text for roll and spread</span><br>
+<span id=e110>… comic XHTML, we use SVG wrapped image in EPUB files</span><br>
+<span id=a160>… almost no reading system can handle these SVG alternative text</span><br>
+<span id=9fb8>… no alt attribute for SVG</span></p>
+<p id=2201 class="phone s09"><cite>shiestyle:</cite> Alternative text for roll comics, and in the same manner of EPUB fxl comics, images split, and sometimes speech bubbles are split over images<br>
+<span id=4033>… another challenge</span><br>
+<span id=3e83>… and challenges with explaining the content on a page-by-page basis</span><br>
+<span id=323e>… left speech balloon is spoken by the character on the right page</span><br>
+<span id=eb25>… difficult to understand</span><br>
+<span id=a3f3>… another spread layout issue, inconsistencies in speech bubble order</span><br>
+<span id=31ca>… content passes over both sides of the spread, the first is on the right, but the second is on the left page, and third is back on the right</span><br>
+<span id=7023>… difficult to embed the correct reading order</span><br>
+<span id=4fdd>… supplementary text to provide background information</span><br>
+<span id=8b87>… is text based content explanation sufficient, is the combination of text and image enough, but EPUB can include alt for text or images</span><br>
+<span id=7775>… maybe supplementary text, like the introduction or of characters, when added in the EPUB file, we don't have specs for this</span></p>
+<p id=5721 class="phone s02"><cite>ivan:</cite> One of the first slides, SVG, I realize the syntax is weird, but you can add metadata to SVG</p>
+<p id=8026 class="phone s02"><cite>ivan:</cite> You could add metadata that describes the image the way alt would in HTML, it doesn't impede the visual content, not sure if people  use</p>
+<p id=3dfc class="phone s10"><cite>gpellegrino:</cite> Not sure it's supported by assistive technologies</p>
+<p id=2f7d class="phone s02"><cite>ivan:</cite> Which is strange</p>
+<p id=f43a class="phone s09"><cite>shiestyle:</cite> AG's best practice is &quot;title&quot; or &quot;desc&quot;</p>
+<p id=0bb8 class="phone s06"><cite>Hadrien:</cite> A few things you mention in the slides, align with our discussions on best practices<br>
+<span id=6214>… true spreads or cosmetic spreads, cosmetic where each page is independent, but true spread where both sides are necessary</span><br>
+<span id=541c>… if we don't take into account accessibility, it's a challenge because if you read in a scrolled way, you have the same problem, it's partly an authoring issue</span><br>
+<span id=28e2>… because content is always separated into 2 images, it can create issues for people who don't need accessibility features</span><br>
+<span id=4e61>… we haven't spoken much about roll, but similar problem where images are the same height, but if you had variable images you could avoid cutting off bubbles or parts of the page</span><br>
+<span id=425f>… and the two discussions could be merged across groups, globally</span></p>
+<p id=82fc class="phone s22"><cite>gendler:</cite> Overly basic question maybe, in the true spreads scenario, is there any indication that there is more on the second page that explains the content, is there a signal to the reader?</p>
+<p id=6036 class="phone s06"><cite>Hadrien:</cite> Spread placement exists, attempts before were misued</p>
+<p id=e42c class="phone s22"><cite>gendler:</cite> It's been explored in the past but not used in the standard</p>
+<p id=f14a class=irc><cite>&lt;Zakim&gt;</cite> wendyreid, you wanted to react to gendler</p>
+<p id=f7b5 class=irc><cite>&lt;duga&gt;</cite> wendyreid: We are talking about signals to the reading system</p>
+<p id=2a8b class=irc><cite>&lt;duga&gt;</cite> ... We don't want the bounce between two pages readig experience. Spec way we have is left and right, with you must to do this with a spread</p>
+<p id=6f53 class=irc><cite>&lt;duga&gt;</cite> ... But that may be overriden. And we don't have a good way of forcing two together</p>
+<p id=5da6 class=irc><cite>&lt;duga&gt;</cite> ... That was the original intent (or might have been)</p>
+<p id=1db7 class="phone s22"><cite>gendler:</cite> More from the reader perspective, to clarify, when I asked, I don't necessarily think it lives in the standard, different publishers want to do different things, I wanted to know in practice if thst happens</p>
+<p id=7628 class="phone s04"><cite>duga:</cite> I implemented something like this, we implemented something that forced what we thought was a true spread, even if the publisher didn't tell us to put them together<br>
+<span id=c588>… if we could detect, we would</span><br>
+<span id=6a57>… in the sense of implemetation, it's possible and works well</span><br>
+<span id=f071>… even bubble by bubble navigation</span><br>
+<span id=5375>… you have to do it in the reading system, no affordance in the spec, but you can figure it out</span><br>
+<span id=c279>… my real reason, the title or ARIA, is there an issue of we have text and the description, those might be separate, might want one or the other, what are you thoughts on affordances for combining those</span><br>
+<span id=fe05>… making it more of a narrative experience</span></p>
+<p id=808c class="phone s09"><cite>shiestyle:</cite> Maybe possible, but for publishers technically challenging</p>
+<p id=bc04 class="phone s10"><cite>gpellegrino:</cite> Just to be clear, with the current stack of technology it's not feasible to have accessible comics<br>
+<span id=854b>… it may pass checkers, it may be technically compliant, but then its not usable by users</span><br>
+<span id=c894>… what is the point of super-long alt text that describes the entire page</span></p>
+<p id=b459 class=irc><cite>&lt;AvneeshSingh&gt;</cite> +1 Gregorio</p>
+<p id=c2b3 class="phone s10"><cite>gpellegrino:</cite> in the EAA, this kind of content must be as accessible as technology allows, and we know we don't have ways currently<br>
+<span id=456e>… even with SMIL, we can't jump from two pages</span></p>
+<p id=1ed1 class="phone s06"><cite>Hadrien:</cite> You can</p>
+<p id=79ee class="phone s10"><cite>gpellegrino:</cite> That may be one solution, some of these issues were addressed in FXL guidelines, one suggestion was to not split spreads<br>
+<span id=6109>… but everything in alt text would not work</span><br>
+<span id=0bfa>… technically you can put aria-label and long text, but the result would not be good</span></p>
+<p id=1000f class="phone s19"><cite>Samuel:</cite> To spreads, in terms of implementation, even we have challenges, we do it manually when publishers don't<br>
+<span id=ad8d>… we make panel detection, something interesting about that</span><br>
+<span id=0be5>… a proposal from Hadrien, the proposal to implement reading ordewr</span><br>
+<span id=e608>… you can understand there is a two page spread if you have a reading order that spans</span><br>
+<span id=8a11>… there is a clean way to understand the double page, by injecting panel ordering</span><br>
+<span id=87d2>… would help all reading platforms</span><br>
+<span id=2329>… would solve a lot of issues</span><br>
+<span id=e1e2>… there are some extreme cases when bubbles are connected or overused</span><br>
+<span id=131b>… one page can be one image, or many slices of many images</span><br>
+<span id=bb6c>… we need to ignore that to present a semantic presentation of the page</span><br>
+<span id=1976>… we've seen all sorts of layouts and designs that machines can't understand, we need to separate the graphical and semantic presentation</span></p>
+<p id=fa4e class="phone s09"><cite>shiestyle:</cite> Next part of the slides<br>
+<span id=c5e1>… how can we make manga accessible?</span></p>
+<p id=000d class="phone s23"><cite>Tomikura-san:</cite> AI generated alt text for manga, human-generated is time consuming<br>
+<span id=1e56>… we have been experimenting, but many only describe panels line by line</span><br>
+<span id=0213>… we are trying to ensure the content is communicated properly,</span><br>
+<span id=0e50>… understanding unique japanese manga conventions, and user needs</span><br>
+<span id=0b8b>… first requirement, manga has its own visual grammar, we must provide context, reading order, objectivity, stay true to the original, respect copyright, and instruct AI to check visual cues, and context limits</span><br>
+<span id=e82d>… second requirement, we conducted over 20 experts and users with disabilities, and learned</span><br>
+<span id=f397>… multi-speaker TTS is essential, and we must focus on the story, not just the details, keep only what moves the plot forward</span><br>
+<span id=5aca>… based on the readers, we set more prompting rules</span><br>
+<span id=94b4>… transcribed all dialog, conveyed natual context, kept things concise</span><br>
+<span id=7780>… how did we put this into practice</span><br>
+<span id=d3a3>… generated the transcipts and then audio using multispeaker TTS</span><br>
+<span id=40fc>… and different genres have different alt needs</span><br>
+<span id=aaae>… we'll explore this on the breakout session, but here are the samples</span><br>
+<span id=6a5e>… first example is The Drops of God</span><br>
+<span id=0165>… [video]</span><br>
+<span id=54c5>… there are notes in the sample, this is where AI gets confused</span><br>
+<span id=12e6>… next example is One Piece</span><br>
+<span id=2451>… translating fast paced action and adventure into words</span><br>
+<span id=0166>… [video]</span><br>
+<span id=8b9f>… next sample is The Level 999 Villager, from the isekai genre</span><br>
+<span id=0167>… [video]</span><br>
+<span id=87fb>… next example is First Love Honey</span><br>
+<span id=6b7e>… romance genre</span><br>
+<span id=0169>… [video]</span><br>
+<span id=4028>… to wrap up, we've faced 5 major challenges, we have no universal TTS tags</span><br>
+<span id=ae50>… multispeaker audio is necessary but we can't tag it</span><br>
+<span id=0215>… AI makes mistakes, and humans need to review</span><br>
+<span id=3201>… authorial integrity vs practicality</span><br>
+<span id=af4c>… it's impossible for authors to review every line</span><br>
+<span id=9aa2>… implementation into reading systems, and who pays for AI costs?</span><br>
+<span id=9aa8>… who should bear the costs?</span></p>
+<p id=e1df class="phone s10"><cite>gpellegrino:</cite> What you showed us is media overlays in the end, TTS engines can handle multiple voices on the device, it might be easier to handle as multi track audio<br>
+<span id=9d55>… as Hadrien mentioned</span></p>
+<p id=2421 class="phone s21"><cite>Suzuki:</cite> [something to Daihei in Japanese]</p>
+<p id=13d1 class="phone s24"><cite>Daihei:</cite> Repeat the question</p>
+<p id=0c11 class="phone s10"><cite>gpellegrino:</cite> In EPUB 3.5, synchronizing the audio with media overlays instead of TTS<br>
+<span id=e720>… might be easier than relying on the device</span></p>
+<p id=ded6 class="phone s24"><cite>Daihei:</cite> [something in Japanese]</p>
+<p id=a99d class="phone s23"><cite>Tomikura-san:</cite> making the audio files is too much for the publishers</p>
+<p id=03a4 class="phone s09"><cite>shiestyle:</cite> It's different from publishers, we're using TTS to make manga accessible</p>
+<p id=1a94 class="phone s19"><cite>Samuel:</cite> I'm sharing authoring software to make accessible content<br>
+<span id=9382>… showing manga with extracted audio and different voices, emotions</span></p>
+<p id=a88f class="phone s09"><cite>shiestyle:</cite> Shorter explanation might be better, from our reseach</p>
+<p id=5532 class="phone s06"><cite>Hadrien:</cite> As a general comment, I find it convincing not just for accessibility but in general use<br>
+<span id=9c6c>… I take the subway a lot, it would be nice to have this for everyone, many people could enjoy consuming manga like this</span><br>
+<span id=2432>… I think the balance of not too long but pleasant</span><br>
+<span id=492c>… as you said, there are exemptiosn that apply, but what is important, there are specialized libraries that can do this work, and they need to do it</span><br>
+<span id=b451>… and we need to make the tools for them to do it</span><br>
+<span id=52db>… the first gap we should be solving</span><br>
+<span id=0bc2>… solving this for adapted content</span><br>
+<span id=5cca>… what you have shown is interesting, we don't have a good way to point to panels</span><br>
+<span id=76f4>… it's possible, the example I have, it's consistent with one exception, I also included text, text is very important</span><br>
+<span id=612a>… if people rely on braille or other means, text is essential</span><br>
+<span id=231d>… very convincing</span></p>
+<p id=10010 class="phone s24"><cite>Daihei:</cite> [japanese again]<br>
+<span id=3986>… [translation of what Hadrien said]</span></p>
+<p id=a2eb class=summary>Dahei Intelligence :)</p>
+<p id=3457 class="phone s04"><cite>duga:</cite> You dismissed using media overlays because of publishers, I would hate to see many users hit Gemini to get this content, I think media overlays is a way to do it, then if we can figure out the tech<br>
+<span id=bd7a>… if we can cache it once somehow, there is more to do</span></p>
+<p id=7d59 class="phone s21"><cite>Suzuki:</cite> Mention during the breakout session</p>
+<p id=68b5 class="phone s01"><cite>wendyreid:</cite> The thing I wanted to mention is what has been demoed is the ideal, and the ideal is challenging to achieve at scale. What might be more realistic is content that consistently has the text and semantics to enable other systems to build these high quality TTS experiences or even other</p>
+<p id=adba class="phone s07"><cite>LaurentLM:</cite> Wendy said what I wanted to say. There is no problem making an alliance between media overlays and content so we can make voices change<br>
+<span id=997b>… simple evolutions</span><br>
+<span id=b431>… to solve minimal problems of publishers and maximal problems of specialist libraries</span></p>
+<p id=b425 class="phone s06"><cite>Hadrien:</cite> Question of what is possible today is quickly evolving<br>
+<span id=6e98>… more and more that are open weight, open source, run on device and very good</span><br>
+<span id=b3af>… and some you can run on your phone are capable of doing voice cloning or generating based on a prompt</span><br>
+<span id=62d6>… the issue is having information in the file to do this</span><br>
+<span id=da74>… TTS is mostly solved now or will be soon</span><br>
+<span id=162d>… question becomes what do we do</span><br>
+<span id=cb37>… don't go directly to the very best, background music and so on, but if we had the script, it could just be a single voice</span><br>
+<span id=b61d>… just having that, is already valuable</span><br>
+<span id=4c7e>… and if we want to go beyond, being able to uniquely identify characters, who is speakign when</span><br>
+<span id=a097>… those bring us to multi-voice TTS</span><br>
+<span id=7e45>… its more of an us problem if we want to tackle it</span><br>
+<span id=8c1d>… there is a cost question of course, it's quite a bit of work, it's out of the equation for libraries</span><br>
+<span id=3527>… if we do things step by step, instead of trying to go to the end, a marathon not a sprint</span></p>
+<p id=3bce class="phone s17"><cite>marisa:</cite> One thing that comes to mind with synchonized audio, text, images, is having a situation where text is only in MO<br>
+<span id=da1d>… if they want to read in a screenreader, in a reading system that doesn't have MO, they'd have no access</span><br>
+<span id=6ac5>… something to keep in mind</span></p>
+<p id=8b36 class="phone s08"><cite>CharlesL:</cite> Quick note, this can go beyond manga and comics, even in books, who is speaking, TTS could change voices, could go far</p>
+<p id=e22b class="phone s09"><cite>shiestyle:</cite> Manga is the culture of Japan and we want to lead this area, along with accessibility people. thank you for the session.</p>
+<p id=2c19 class=summary><a href="https://maps.app.goo.gl/6nauiWvkWamSEdzq6">https://<wbr>maps.app.goo.gl/<wbr>6nauiWvkWamSEdzq6</a></p>
+<p id=e4b5 class="phone s07"><cite>LaurentLM:</cite> Wendy said what I wanted to say. There is no problem making an alliance between</p>
+<p id=bfc1 class="phone s01"><cite>wendyreid:</cite> The thing I wanted to mention is what has been demoed is the ideal, and the ideal is challenging to achieve at scale. What might be more realistic is content that consistently has the text and semantics to enable other systems to build these high quality TTS experiences or even other accessibility features based on the text and metadata.</p>
+<p id=577f class=summary>accessibility features based on the text and metadata./</p>
+<p id=7c0f class=summary>media overlays and content so we can make voices change/</p>
+<p id=b6d9 class=irc><cite>&lt;wendyreid&gt;</cite> i/... accessibility features based on the text and metadata./LaurentLM: Wendy said what I wanted to say. There is no problem making an alliance between media overlays and content so we can make voices change/</p>
+</section>
+</main>
+
+
+<address>Minutes manually created (not a transcript), formatted by <a
+href="https://w3c.github.io/scribe2/scribedoc.html"
+>scribe.perl</a> version 250 (Wed Oct 21 13:34:09 2026 UTC).</address>
+
+
+</body>
+</html>

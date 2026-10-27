@@ -1079,5 +1079,21 @@
             "brent",
             "brentz"
         ]
-    }
+    },
+	{
+		"name": "Samuel Petit",
+		"nick": [
+			"samuel"
+		]
+	},
+	{
+		"name": "Niklas Lindström",
+		"nick" : [
+			"niklas"
+		]
+	},
+	{
+		"name": "Max Gendler",
+		"nick" : ["gendler"]
+	}
 ]
